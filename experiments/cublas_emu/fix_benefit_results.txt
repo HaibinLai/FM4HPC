@@ -1,0 +1,12 @@
+zero_gap32 n=4096: model bits paper=4248 fixed=54
+   native         bits=   -2    207.7 ms  sampled comp=1.01 >k=0 wrong=0
+   emu_eager      bits= 4248    239.2 ms  sampled comp=1.01 >k=0 wrong=0
+   emu_fixed54    bits=   54     26.7 ms  sampled comp=0.0315 >k=0 wrong=0
+tri_s0 n=4096: model bits paper=4248 fixed=68
+   native         bits=   -2    211.4 ms  sampled comp=1.44 >k=0 wrong=0
+   emu_eager      bits= 4248    228.6 ms  sampled comp=1.44 >k=0 wrong=0
+   emu_fixed68    bits=   68     36.8 ms  sampled comp=0.955 >k=0 wrong=0
+tri_s60 n=2048: model bits paper=4308 fixed=177
+   native         bits=   -2     27.3 ms  sampled comp=8.54 >k=0 wrong=0
+   emu_eager      bits= 4308     32.6 ms  sampled comp=8.54 >k=0 wrong=0
+   emu_fixed177   bits=  177     24.8 ms  sampled comp=8.65 >k=0 wrong=0

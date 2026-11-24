@@ -1,0 +1,52 @@
+model: BLK=64 L=-4195 K=54 denormals=true
+rand_s0              measured=   60 predicted=   60 with-fix=   55
+rand_s30             measured=   86 predicted=   86 with-fix=   82
+rand_s60             measured=  116 predicted=  116 with-fix=  114
+rand_s200            measured=  257 predicted=  257 with-fix=  252
+gram_pos             measured=   54 predicted=   54 with-fix=   54
+avg_hides            measured=  154 predicted=  154 with-fix=  154
+zero_lane0           measured= 4278 predicted= 4278 with-fix=  100
+tri_s60              measured= 4308 predicted= 4308 with-fix=  180
+wide_row0            measured=   67 predicted=   67 with-fix=   67
+cancel_row0          measured=   67 predicted=   67 with-fix=   57
+big511               measured=   61 predicted=   61 with-fix=   56
+bigB515              measured=   60 predicted=   60 with-fix=   57
+big1000              measured=   60 predicted=   60 with-fix=   56
+tinyA600             measured=   61 predicted=   61 with-fix=   56
+tinyA1000            measured=   61 predicted=   61 with-fix=   57
+denormA              measured=   62 predicted=   62 with-fix=   57
+negzero              measured=   54 predicted=   54 with-fix=   54
+E1 n=1024 gap=0      measured=   59 predicted=   59 with-fix=   55
+E1 n=1024 gap=16     measured= 4248 predicted= 4248 with-fix=   56
+E1 n=1024 gap=32     measured= 4248 predicted= 4248 with-fix=   56
+E1 n=1024 gap=64     measured= 4248 predicted= 4248 with-fix=   56
+E1 n=1024 gap=128    measured=   60 predicted=   60 with-fix=   55
+E1 n=1024 gap=256    measured=   60 predicted=   60 with-fix=   55
+E1 n=1024 gap=512    measured=   59 predicted=   59 with-fix=   55
+E1 n=2048 gap=0      measured=   59 predicted=   59 with-fix=   54
+E1 n=2048 gap=16     measured= 4248 predicted= 4248 with-fix=   55
+E1 n=2048 gap=32     measured= 4248 predicted= 4248 with-fix=   55
+E1 n=2048 gap=64     measured= 4248 predicted= 4248 with-fix=   55
+E1 n=2048 gap=128    measured=   60 predicted=   60 with-fix=   54
+E1 n=2048 gap=256    measured=   59 predicted=   59 with-fix=   54
+E1 n=2048 gap=512    measured=   59 predicted=   59 with-fix=   54
+E2 rand_s0           measured=   59 predicted=   59 with-fix=   54
+E2 rand_s60          measured=  115 predicted=  115 with-fix=   97
+E2 avg_hides         measured=  154 predicted=  154 with-fix=  154
+E2 wide_row0         measured=   62 predicted=   62 with-fix=   62
+E2 tri_s60           measured= 4308 predicted= 4308 with-fix=  173
+E2 big_row0          measured=   59 predicted=   59 with-fix=   54
+E2 cancel_heavy      measured=   73 predicted=   73 with-fix=   54
+38/38 match
+denormA measured 62 true-exp 62 field-exp 54
+tinyA1000 measured 61 true-exp 61 field-exp 61
+rand_s0 measured 60 true-exp 60 field-exp 60
+BLK 32 [58, 4248, 4248, 58, 58, 58, 58] measured [59, 4248, 4248, 4248, 60, 60, 59]
+BLK 64 [59, 4248, 4248, 4248, 60, 60, 59] measured [59, 4248, 4248, 4248, 60, 60, 59]
+BLK 128 [62, 4248, 4248, 4248, 4248, 62, 62] measured [59, 4248, 4248, 4248, 60, 60, 59]
+tri_s60 exact-z need 121
+zero_lane0 exact-z need 63
+rand_s60 exact-z need 67
+rand_s0 exact-z need 54
+S1 zero_denorm         predicted bits: fitted L=-4195 -> 1054, unsafe L=-1075 -> 69
+S2 zero_denorm_mild    predicted bits: fitted L=-4195 -> 114, unsafe L=-1075 -> 114

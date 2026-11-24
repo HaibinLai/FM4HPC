@@ -1,0 +1,44 @@
+make: Entering directory '/home/haibin/lean4hpc-fp16/ozblas/src/cuda'
+g++ -O2 -std=c++17 -I/usr/include -include cuda_fp16.h -o cuozblas.o -c cuozblas.cpp -I/usr/include -I/home/haibin/local/include
+/usr/bin/nvcc  -O2 -std=c++17 -arch=sm_70 --expt-relaxed-constexpr -include cuda_fp16.h -o cuozblas_blas_wrapper.o -c cuozblas_blas_wrapper.cu -I/home/haibin/local/include
+/usr/bin/nvcc  -O2 -std=c++17 -arch=sm_70 --expt-relaxed-constexpr -include cuda_fp16.h -o cuozblas_split.o -c cuozblas_split.cu -I/home/haibin/local/include
+/usr/bin/nvcc  -O2 -std=c++17 -arch=sm_70 --expt-relaxed-constexpr -include cuda_fp16.h -o cuozblas_sum.o -c cuozblas_sum.cu -I/home/haibin/local/include
+/usr/bin/nvcc  -O2 -std=c++17 -arch=sm_70 --expt-relaxed-constexpr -include cuda_fp16.h -o cuozblas_aux.o -c cuozblas_aux.cu -I/home/haibin/local/include
+/usr/bin/nvcc  -O2 -std=c++17 -arch=sm_70 --expt-relaxed-constexpr -include cuda_fp16.h -o blas/myblas_gemm.o -c blas/myblas_gemm.cu -I/home/haibin/local/include
+/usr/bin/nvcc  -O2 -std=c++17 -arch=sm_70 --expt-relaxed-constexpr -include cuda_fp16.h -o blas/myblas_dot.o -c blas/myblas_dot.cu -I/home/haibin/local/include
+/usr/bin/nvcc  -O2 -std=c++17 -arch=sm_70 --expt-relaxed-constexpr -include cuda_fp16.h -o cuozblas_gemm.o -c cuozblas_gemm.cu -I/home/haibin/local/include
+blas/myblas_dot.cu: In instantiation of ‘int32_t blasRgemmSkinny_x2(cuozblasHandle_t*, char, char, size_t, size_t, size_t, TYPE2, const TYPE1*, size_t, const TYPE1*, size_t, TYPE2, TYPE2*, size_t) [with TYPE1 = double; TYPE2 = double; int32_t = int; size_t = long unsigned int]’:
+blas/myblas_dot.cu:142:303:   required from here
+blas/myblas_dot.cu:94:31: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
+   94 |                 fprintf (OUTPUT, "OzBLAS error: GemmSkinny (m,n > 6) is not implemented (m=%d, n=%d).\n", m, n);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~
+      |                                                                                                        |
+      |                                                                                                        long unsigned int
+blas/myblas_dot.cu:94:31: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘long unsigned int’ [-Wformat=]
+   94 |                 fprintf (OUTPUT, "OzBLAS error: GemmSkinny (m,n > 6) is not implemented (m=%d, n=%d).\n", m, n);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     ~
+      |                                                                                                           |
+      |                                                                                                           long unsigned int
+blas/myblas_dot.cu: In instantiation of ‘int32_t blasRgemmSkinny_x2(cuozblasHandle_t*, char, char, size_t, size_t, size_t, TYPE2, const TYPE1*, size_t, const TYPE1*, size_t, TYPE2, TYPE2*, size_t) [with TYPE1 = float; TYPE2 = float; int32_t = int; size_t = long unsigned int]’:
+blas/myblas_dot.cu:143:296:   required from here
+blas/myblas_dot.cu:94:31: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
+   94 |                 fprintf (OUTPUT, "OzBLAS error: GemmSkinny (m,n > 6) is not implemented (m=%d, n=%d).\n", m, n);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~
+      |                                                                                                        |
+      |                                                                                                        long unsigned int
+blas/myblas_dot.cu:94:31: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘long unsigned int’ [-Wformat=]
+   94 |                 fprintf (OUTPUT, "OzBLAS error: GemmSkinny (m,n > 6) is not implemented (m=%d, n=%d).\n", m, n);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     ~
+      |                                                                                                           |
+      |                                                                                                           long unsigned int
+ar rv ../../lib/libcuozblas.a cuozblas.o cuozblas_blas_wrapper.o cuozblas_split.o cuozblas_sum.o cuozblas_aux.o blas/myblas_gemm.o blas/myblas_dot.o cuozblas_gemm.o 
+ar: creating ../../lib/libcuozblas.a
+a - cuozblas.o
+a - cuozblas_blas_wrapper.o
+a - cuozblas_split.o
+a - cuozblas_sum.o
+a - cuozblas_aux.o
+a - blas/myblas_gemm.o
+a - blas/myblas_dot.o
+a - cuozblas_gemm.o
+make: Leaving directory '/home/haibin/lean4hpc-fp16/ozblas/src/cuda'

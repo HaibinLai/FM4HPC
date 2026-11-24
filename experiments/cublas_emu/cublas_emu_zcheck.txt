@@ -1,0 +1,8 @@
+gap=  0 emu_perf    bits=   59 bitwise_equal_native=False differs_in=993186 entries  sampled comp=0.0903 >k=0
+gap=  0 emu_eager   bits=   59 bitwise_equal_native=False differs_in=993186 entries  sampled comp=0.101 >k=0
+gap=  0 emu_fixed55 bits=   55 bitwise_equal_native=False differs_in=993186 entries  sampled comp=0.113 >k=0
+gap=  0 native      sampled comp=1.73
+gap= 32 emu_perf    bits= 4248 bitwise_equal_native=True differs_in=0 entries  sampled comp=2.07 >k=0
+gap= 32 emu_eager   bits= 4248 bitwise_equal_native=True differs_in=0 entries  sampled comp=1.31 >k=0
+gap= 32 emu_fixed55 bits=   55 bitwise_equal_native=False differs_in=992623 entries  sampled comp=0.162 >k=0
+gap= 32 native      sampled comp=0.892

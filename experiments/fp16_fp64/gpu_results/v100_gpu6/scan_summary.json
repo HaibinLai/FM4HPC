@@ -1,0 +1,894 @@
+[
+  {
+    "shape": [
+      128,
+      128,
+      16
+    ],
+    "name": "s_128x128x16",
+    "splits_A": 5,
+    "splits_B": 5,
+    "partial_gemms": 25,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 25,
+        "name": "volta_s884gemm_fp16_64x64_ldg8_tn"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 16384,
+      "total": 16384,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      128,
+      128,
+      64
+    ],
+    "name": "s_128x128x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true
+  },
+  {
+    "shape": [
+      128,
+      2,
+      64
+    ],
+    "name": "s_128x2x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 36,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=2, int=2, bool=1, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      128,
+      3,
+      64
+    ],
+    "name": "s_128x3x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 36,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=4, int=4, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 384,
+      "total": 384,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      12,
+      12,
+      64
+    ],
+    "name": "s_12x12x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 36,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=6, int=7, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 144,
+      "total": 144,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      16,
+      16,
+      1
+    ],
+    "name": "s_16x16x1",
+    "splits_A": 5,
+    "splits_B": 5,
+    "partial_gemms": 25,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 25,
+        "name": "void gemmk1_kernel<int, float, int=256, int=5, bool=1, bool=0, bool=0, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBatch"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      16,
+      16,
+      1024
+    ],
+    "name": "s_16x16x1024",
+    "splits_A": 7,
+    "splits_B": 7,
+    "partial_gemms": 49,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 49,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      16,
+      16,
+      16
+    ],
+    "name": "s_16x16x16",
+    "splits_A": 5,
+    "splits_B": 5,
+    "partial_gemms": 25,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 25,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      16,
+      16,
+      17
+    ],
+    "name": "s_16x16x17",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 36,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=8, int=9, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      16,
+      16,
+      2
+    ],
+    "name": "s_16x16x2",
+    "splits_A": 5,
+    "splits_B": 5,
+    "partial_gemms": 25,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 25,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=8, int=9, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      16,
+      16,
+      256
+    ],
+    "name": "s_16x16x256",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      16,
+      16,
+      3
+    ],
+    "name": "s_16x16x3",
+    "splits_A": 5,
+    "splits_B": 5,
+    "partial_gemms": 25,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 25,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=8, int=9, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      16,
+      16,
+      4096
+    ],
+    "name": "s_16x16x4096",
+    "splits_A": 8,
+    "splits_B": 8,
+    "partial_gemms": 64,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 64,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true
+  },
+  {
+    "shape": [
+      16,
+      16,
+      64
+    ],
+    "name": "s_16x16x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      24,
+      24,
+      64
+    ],
+    "name": "s_24x24x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "volta_s884gemm_fp16_64x64_ldg8_tn"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 576,
+      "total": 576,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      2,
+      128,
+      64
+    ],
+    "name": "s_2x128x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align2>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align2Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 256,
+      "total": 256,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      2,
+      2,
+      64
+    ],
+    "name": "s_2x2x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align2>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align2Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 4,
+      "total": 4,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      32,
+      32,
+      64
+    ],
+    "name": "s_32x32x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "volta_s884gemm_fp16_64x64_ldg8_tn"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 1024,
+      "total": 1024,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      3,
+      128,
+      64
+    ],
+    "name": "s_3x128x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align1>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align1Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 384,
+      "total": 384,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      3,
+      3,
+      64
+    ],
+    "name": "s_3x3x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 36,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=4, int=4, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 9,
+      "total": 9,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      48,
+      48,
+      64
+    ],
+    "name": "s_48x48x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 2304,
+      "total": 2304,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      4,
+      4,
+      64
+    ],
+    "name": "s_4x4x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align2>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align2Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 16,
+      "total": 16,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      5,
+      5,
+      64
+    ],
+    "name": "s_5x5x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 36,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=6, int=7, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 25,
+      "total": 25,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      64,
+      64,
+      4096
+    ],
+    "name": "s_64x64x4096",
+    "splits_A": 8,
+    "splits_B": 8,
+    "partial_gemms": 64,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 64,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true
+  },
+  {
+    "shape": [
+      64,
+      64,
+      64
+    ],
+    "name": "s_64x64x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 4096,
+      "total": 4096,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      64,
+      7,
+      64
+    ],
+    "name": "s_64x7x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 448,
+      "total": 448,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      6,
+      6,
+      64
+    ],
+    "name": "s_6x6x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 36,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=6, int=7, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 36,
+      "total": 36,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      7,
+      64,
+      64
+    ],
+    "name": "s_7x64x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align1>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align1Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 448,
+      "total": 448,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      7,
+      7,
+      64
+    ],
+    "name": "s_7x7x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 36,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=8, int=9, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStridedBa"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 49,
+      "total": 49,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      8,
+      8,
+      4096
+    ],
+    "name": "s_8x8x4096",
+    "splits_A": 8,
+    "splits_B": 8,
+    "partial_gemms": 64,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 64,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 64,
+      "total": 64,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      8,
+      8,
+      64
+    ],
+    "name": "s_8x8x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 64,
+      "total": 64,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  },
+  {
+    "shape": [
+      96,
+      96,
+      64
+    ],
+    "name": "s_96x96x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "tensor_core",
+        "calls": 36,
+        "name": "void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)"
+      }
+    ],
+    "half_gemm_class": "tensor_core",
+    "ran": true
+  },
+  {
+    "shape": [
+      9,
+      9,
+      64
+    ],
+    "name": "s_9x9x64",
+    "splits_A": 6,
+    "splits_B": 6,
+    "partial_gemms": 36,
+    "gemm_kernels": [
+      {
+        "class": "cuda_core",
+        "calls": 36,
+        "name": "void gemmSN_TN_kernel<float, int=128, int=16, int=2, int=4, int=10, int=11, bool=0, cublasGemvTensorStridedBatched<__half const >, cublasGemvTensorStridedBatched<float const >, cublasGemvTensorStrided"
+      }
+    ],
+    "half_gemm_class": "cuda_core",
+    "ran": true,
+    "align": {
+      "forward_bit_identical": 81,
+      "total": 81,
+      "forward_max_ulp": 0,
+      "matching_variants": [
+        "forward"
+      ]
+    }
+  }
+]

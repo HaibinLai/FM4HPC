@@ -1,0 +1,17 @@
+cuSOLVER version 12401, CUDA runtime 13040, cusolver64_12.dll, n = 1024
+cusolverDnDDgesv   scale 2^0   status=0 info=0 iter=   1  backward error / documented threshold =    0.0109   max rel. error of x =  5.02e-14
+cusolverDnDDgesv   scale 2^20  status=0 info=0 iter=   1  backward error / documented threshold =    0.0109   max rel. error of x =  5.02e-14
+cusolverDnDDgesv   scale 2^40  status=0 info=0 iter=   1  backward error / documented threshold =    0.0109   max rel. error of x =  5.02e-14
+cusolverDnDDgesv   scale 2^-60 status=0 info=0 iter=   0  backward error / documented threshold =     0.623   max rel. error of x =  1.82e-12
+cusolverDnDSgesv   scale 2^0   status=0 info=0 iter=   4  backward error / documented threshold =    0.0115   max rel. error of x =  6.71e-14
+cusolverDnDSgesv   scale 2^20  status=0 info=0 iter=   2  backward error / documented threshold =      3.66   max rel. error of x =  8.86e-12
+cusolverDnDSgesv   scale 2^40  status=0 info=0 iter=   1  backward error / documented threshold =  1.23e+05   max rel. error of x =  5.26e-08
+cusolverDnDSgesv   scale 2^-60 status=0 info=0 iter=   0  backward error / documented threshold =  3.75e+08   max rel. error of x =   0.00131
+cusolverDnDXgesv   scale 2^0   status=0 info=0 iter=  10  backward error / documented threshold =     0.135   max rel. error of x =  8.67e-14
+cusolverDnDXgesv   scale 2^20  status=0 info=0 iter=   6  backward error / documented threshold =  2.42e+04   max rel. error of x =  2.06e-08
+cusolverDnDXgesv   scale 2^40  status=0 info=0 iter=   1  backward error / documented threshold =  3.68e+10   max rel. error of x =    0.0409
+cusolverDnDXgesv   scale 2^-60 status=0 info=0 iter= -50  backward error / documented threshold =     0.623   max rel. error of x =  1.82e-12
+cusolverDnDBgesv   scale 2^0   status=0 info=0 iter=  23  backward error / documented threshold =      1.42   max rel. error of x =   3.4e-12
+cusolverDnDBgesv   scale 2^20  status=0 info=0 iter=  14  backward error / documented threshold =  1.19e+06   max rel. error of x =  4.71e-06
+cusolverDnDBgesv   scale 2^40  status=0 info=0 iter=   1  backward error / documented threshold =  4.13e+11   max rel. error of x =     0.933
+cusolverDnDBgesv   scale 2^-60 status=0 info=0 iter= -50  backward error / documented threshold =     0.623   max rel. error of x =  1.82e-12

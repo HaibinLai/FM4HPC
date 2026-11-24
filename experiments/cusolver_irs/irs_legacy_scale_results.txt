@@ -1,0 +1,65 @@
+cuSOLVER 12401; legacy API, default settings
+n=1024 cusolverDnDHgesv k=   0 niters=  10 info=0 eta/thr=    0.271 fwd_err= 4.72e-13
+n=1024 cusolverDnDHgesv k=  10 niters=   8 info=0 eta/thr=     92.8 fwd_err= 2.02e-10   <-- converged, eta > thr
+n=1024 cusolverDnDBgesv k=-100 niters=   0 info=0 eta/thr= 7.19e+11 fwd_err=     3.79   <-- converged but WRONG
+n=1024 cusolverDnDBgesv k= -60 niters= -50 info=0 eta/thr=    0.699 fwd_err= 3.42e-12
+n=1024 cusolverDnDBgesv k= -40 niters= -50 info=0 eta/thr=    0.699 fwd_err= 3.42e-12
+n=1024 cusolverDnDBgesv k= -20 niters= -50 info=0 eta/thr=    0.699 fwd_err= 3.42e-12
+n=1024 cusolverDnDBgesv k=   0 niters=  24 info=0 eta/thr=     3.32 fwd_err= 2.37e-12   <-- converged, eta > thr
+n=1024 cusolverDnDBgesv k=  10 niters=  19 info=0 eta/thr=  4.7e+03 fwd_err= 1.02e-08   <-- converged, eta > thr
+n=1024 cusolverDnDBgesv k=  20 niters=  14 info=0 eta/thr= 5.55e+06 fwd_err=  1.4e-05   <-- converged but WRONG
+n=1024 cusolverDnDBgesv k=  40 niters=   1 info=0 eta/thr= 8.31e+11 fwd_err=     3.25   <-- converged but WRONG
+n=1024 cusolverDnDBgesv k=  60 niters=   1 info=0 eta/thr= 8.31e+11 fwd_err=     3.25   <-- converged but WRONG
+n=1024 cusolverDnDBgesv k= 100 niters=   1 info=0 eta/thr= 8.31e+11 fwd_err=     3.25   <-- converged but WRONG
+n=1024 cusolverDnDSgesv k=-100 niters=   0 info=0 eta/thr= 3.24e+08 fwd_err=  0.00108   <-- converged but WRONG
+n=1024 cusolverDnDSgesv k= -60 niters=   0 info=0 eta/thr= 3.24e+08 fwd_err=  0.00108   <-- converged but WRONG
+n=1024 cusolverDnDSgesv k= -40 niters= -50 info=0 eta/thr=    0.699 fwd_err= 3.42e-12
+n=1024 cusolverDnDSgesv k= -20 niters= -50 info=0 eta/thr=    0.699 fwd_err= 3.42e-12
+n=1024 cusolverDnDSgesv k=   0 niters=   3 info=0 eta/thr=   0.0102 fwd_err= 4.47e-14
+n=1024 cusolverDnDSgesv k=  10 niters=   3 info=0 eta/thr=   0.0102 fwd_err= 4.47e-14
+n=1024 cusolverDnDSgesv k=  20 niters=   2 info=0 eta/thr=     6.13 fwd_err= 5.13e-12   <-- converged, eta > thr
+n=1024 cusolverDnDSgesv k=  40 niters=   1 info=0 eta/thr= 7.33e+04 fwd_err= 9.08e-08   <-- converged, eta > thr
+n=1024 cusolverDnDSgesv k=  60 niters=   1 info=0 eta/thr= 7.33e+04 fwd_err= 9.08e-08   <-- converged, eta > thr
+n=1024 cusolverDnDSgesv k= 100 niters=   1 info=0 eta/thr= 7.33e+04 fwd_err= 9.08e-08   <-- converged, eta > thr
+n=1024 cusolverDnDXgesv k=-100 niters=   0 info=0 eta/thr= 1.38e+11 fwd_err=    0.999   <-- converged but WRONG
+n=1024 cusolverDnDXgesv k= -60 niters= -50 info=0 eta/thr=    0.699 fwd_err= 3.42e-12
+n=1024 cusolverDnDXgesv k= -40 niters= -50 info=0 eta/thr=    0.699 fwd_err= 3.42e-12
+n=1024 cusolverDnDXgesv k= -20 niters= -50 info=0 eta/thr=    0.699 fwd_err= 3.42e-12
+n=1024 cusolverDnDXgesv k=   0 niters=  11 info=0 eta/thr=   0.0236 fwd_err= 4.55e-14
+n=1024 cusolverDnDXgesv k=  10 niters=   8 info=0 eta/thr=      415 fwd_err= 1.31e-09   <-- converged, eta > thr
+n=1024 cusolverDnDXgesv k=  20 niters=   6 info=0 eta/thr= 1.39e+05 fwd_err= 5.05e-07   <-- converged, eta > thr
+n=1024 cusolverDnDXgesv k=  40 niters=   1 info=0 eta/thr= 7.48e+10 fwd_err=    0.149   <-- converged but WRONG
+n=1024 cusolverDnDXgesv k=  60 niters=   1 info=0 eta/thr= 7.48e+10 fwd_err=    0.149   <-- converged but WRONG
+n=1024 cusolverDnDXgesv k= 100 niters=   1 info=0 eta/thr= 7.48e+10 fwd_err=    0.149   <-- converged but WRONG
+n=4096 cusolverDnDHgesv k=   0 niters=  17 info=0 eta/thr=     3.08 fwd_err= 4.33e-11   <-- converged, eta > thr
+n=4096 cusolverDnDHgesv k=  10 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDBgesv k=-100 niters=   0 info=0 eta/thr=  5.5e+11 fwd_err=       22   <-- converged but WRONG
+n=4096 cusolverDnDBgesv k= -60 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDBgesv k= -40 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDBgesv k= -20 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDBgesv k=   0 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDBgesv k=  10 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDBgesv k=  20 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDBgesv k=  40 niters=   1 info=0 eta/thr= 5.16e+11 fwd_err=     23.1   <-- converged but WRONG
+n=4096 cusolverDnDBgesv k=  60 niters=   1 info=0 eta/thr= 5.16e+11 fwd_err=     23.1   <-- converged but WRONG
+n=4096 cusolverDnDBgesv k= 100 niters=   1 info=0 eta/thr= 5.16e+11 fwd_err=     23.1   <-- converged but WRONG
+n=4096 cusolverDnDSgesv k=-100 niters=   0 info=0 eta/thr= 5.85e+08 fwd_err=  0.00345   <-- converged but WRONG
+n=4096 cusolverDnDSgesv k= -60 niters=   0 info=0 eta/thr= 5.85e+08 fwd_err=  0.00345   <-- converged but WRONG
+n=4096 cusolverDnDSgesv k= -40 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDSgesv k= -20 niters=  11 info=0 eta/thr=  0.00419 fwd_err=  9.5e-14
+n=4096 cusolverDnDSgesv k=   0 niters=   4 info=0 eta/thr=  0.00451 fwd_err=  9.5e-14
+n=4096 cusolverDnDSgesv k=  10 niters=   3 info=0 eta/thr=   0.0656 fwd_err= 3.16e-13
+n=4096 cusolverDnDSgesv k=  20 niters=   2 info=0 eta/thr=      281 fwd_err= 6.04e-10   <-- converged, eta > thr
+n=4096 cusolverDnDSgesv k=  40 niters=   1 info=0 eta/thr=  4.8e+05 fwd_err= 1.86e-06   <-- converged but WRONG
+n=4096 cusolverDnDSgesv k=  60 niters=   1 info=0 eta/thr=  4.8e+05 fwd_err= 1.86e-06   <-- converged but WRONG
+n=4096 cusolverDnDSgesv k= 100 niters=   1 info=0 eta/thr=  4.8e+05 fwd_err= 1.86e-06   <-- converged but WRONG
+n=4096 cusolverDnDXgesv k=-100 niters=   0 info=0 eta/thr= 1.01e+11 fwd_err=     2.97   <-- converged but WRONG
+n=4096 cusolverDnDXgesv k= -60 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDXgesv k= -40 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDXgesv k= -20 niters= -50 info=0 eta/thr=     1.33 fwd_err= 1.23e-11
+n=4096 cusolverDnDXgesv k=   0 niters=  17 info=0 eta/thr=     1.03 fwd_err=  5.6e-12   <-- converged, eta > thr
+n=4096 cusolverDnDXgesv k=  10 niters=  13 info=0 eta/thr= 3.04e+03 fwd_err=  1.4e-08   <-- converged, eta > thr
+n=4096 cusolverDnDXgesv k=  20 niters=   9 info=0 eta/thr= 6.02e+06 fwd_err= 4.97e-05   <-- converged but WRONG
+n=4096 cusolverDnDXgesv k=  40 niters=   1 info=0 eta/thr= 3.96e+10 fwd_err=     2.06   <-- converged but WRONG
+n=4096 cusolverDnDXgesv k=  60 niters=   1 info=0 eta/thr= 3.96e+10 fwd_err=     2.06   <-- converged but WRONG
+n=4096 cusolverDnDXgesv k= 100 niters=   1 info=0 eta/thr= 3.96e+10 fwd_err=     2.06   <-- converged but WRONG

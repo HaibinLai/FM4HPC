@@ -1,0 +1,23 @@
+{
+  "library": "warner-benjamin/optimi",
+  "commit": "17a3d5422f3e41bb8973e1e4c9b39206c0d93b6d",
+  "lean": "Lean (version 4.36.0, arm64-apple-darwin24.6.0, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)",
+  "lean_toolchain_dir": ".toolchain/elan (about 3 GB; exclude from archives)",
+  "lean_status": "Kahan.lean (564 lines) checks with no sorry; includes fast2sum_bf16 and the violation-case bounds; axioms: propext, Classical.choice, Quot.sound only",
+  "python_env_note": "validation used a scratch venv (torch 2.15.0, numpy 2.5.5) under the session scratchpad; not persisted",
+  "files": {
+    "lean/OptimiKahan/Kahan.lean": "07369480c44a93b3ec6981ebf49c899357569619a0d2bbc7662f558f40fb6719",
+    "lean/OptimiKahan/lean-toolchain": "582a63f8f9c5128067b688778c1051cf1464c3ca9d57b9325025c051c29b774a",
+    "lean/OptimiKahan/check_log.txt": "9428e30021708efef2d0ed1a33d8b717939736dc03c5aa184f9ed820114e38e6",
+    "experiments/optimi/kahan_model.py": "43eee9e41af9daa726a64e8b93bd8692423f6fb036298fec887548f81e25a8e4",
+    "experiments/optimi/validate_kahan_model.py": "d2028631ae8622b26d628963aecee7acdcf878a733ec687a97e118d5b9772e66",
+    "experiments/optimi/kahan_experiments.py": "9246e6fd6310c7cc18abce32a06536d5bd53b83225607544a1d4f3da29f6df89",
+    "experiments/optimi/kahan_violation.py": "e574f9662c1eaa38233bdf08b2fd66ffec3d06e141ab6cc25e1e9f797065eca1",
+    "experiments/optimi/fast2sum_exhaustive.py": "1447cfc3272cceecbc5958ac687496096e77d512f62a50b57a03de8a7ec9af06",
+    "operators/vendor/optimi/PINNED_COMMIT.txt": "236db29f447831326e32b37c15225a8caff8bed65db80fe9c1c6b096b69d95a1",
+    "operators/vendor/optimi/optimi/adam.py": "264ced4dc7a5908edfca96a78697b0778908e0abf19ad41bb5e5f6b408518086",
+    "operators/REVIEW2.md": "c007b11d7a4b3b2079373502bb1bed9ff9e5945ceee7160c49b64539e34458ce",
+    "experiments/optimi/fast2sum_crosscheck.py": "049928531a1bfd514fd16b944a77078706745daff40f86a048d9d02c2d4b24a4",
+    "experiments/optimi/violation_bound_check.py": "bf86b5cdf3f69f55cdf4ae66656d6a567e029380d4b069b3f7331ede793a96d5"
+  }
+}

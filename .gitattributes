@@ -1,0 +1,4 @@
+# cluster connection details are replaced by placeholders in the committed copy (local files unchanged)
+HANDOFF.md filter=redact
+experiments/fp16_fp64/manifest.json filter=redact
+experiments/fp16_fp64/gpubatch.py filter=redact

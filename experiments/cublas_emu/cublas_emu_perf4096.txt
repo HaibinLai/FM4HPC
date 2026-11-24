@@ -1,0 +1,7 @@
+rand_s0     | native: bits=   -2   207.6ms | emu_perf: bits=   58    39.3ms | emu_eager: bits=   58    38.2ms
+zero_gap32  | native: bits=   -2   209.8ms | emu_perf: bits= 4248   232.5ms | emu_eager: bits= 4248   229.7ms
+tri_s0      | native: bits=   -2   210.3ms | emu_perf: bits= 4248   235.0ms | emu_eager: bits= 4248   230.0ms
+rand_s20    | native: bits=   -2   207.6ms | emu_perf: bits=   75    39.7ms | emu_eager: bits=   75    40.9ms
+rand_s40    | native: bits=   -2   207.5ms | emu_perf: bits=   94    40.6ms | emu_eager: bits=   94    43.4ms
+rand_s60    | native: bits=   -2   207.9ms | emu_perf: bits=  114   235.4ms | emu_eager: bits=  114   229.8ms
+rand_s80    | native: bits=   -2   208.4ms | emu_perf: bits=  134   231.4ms | emu_eager: bits=  134   231.1ms

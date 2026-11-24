@@ -1,0 +1,78 @@
+
+W(10)*2^10 growth 2^19
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/10 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=   -31 info=   0  nonfinite=   0/10 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=     2 info=   0  nonfinite=   0/10 max|x-1|(finite)=1.11e-12  x[0]=1 x[n-1]=1
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=     2 info=   0  nonfinite=   0/10 max|x-1|(finite)=1.11e-12  x[0]=1 x[n-1]=1
+
+W(20)*2^0 growth 2^19
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/20 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     0 info=   0  nonfinite=   0/20 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=     4 info=   0  nonfinite=   0/20 max|x-1|(finite)=8.88e-16  x[0]=1 x[n-1]=1
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=     4 info=   0  nonfinite=   0/20 max|x-1|(finite)=8.88e-16  x[0]=1 x[n-1]=1
+
+W(40)*2^0 growth 2^39
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/40 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     1 info=   0  nonfinite=   0/40 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=    20 info=   0  nonfinite=   0/40 max|x-1|(finite)=1.55e-13  x[0]=1 x[n-1]=1
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=    20 info=   0  nonfinite=   0/40 max|x-1|(finite)=1.55e-13  x[0]=1 x[n-1]=1
+
+W(16)*2^0 growth 2^15
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/16 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     0 info=   0  nonfinite=   0/16 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=     3 info=   0  nonfinite=   0/16 max|x-1|(finite)=1.97e-14  x[0]=1 x[n-1]=1
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=     3 info=   0  nonfinite=   0/16 max|x-1|(finite)=1.97e-14  x[0]=1 x[n-1]=1
+
+W(40)*2^80 growth 2^119
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/40 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     1 info=   0  nonfinite=   0/40 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=     1 info=   0  nonfinite=   0/40 max|x-1|(finite)=14.9  x[0]=-0.119595 x[n-1]=-0.119595
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=     1 info=   0  nonfinite=   0/40 max|x-1|(finite)=14.9  x[0]=-0.119595 x[n-1]=-0.119595
+
+W(40)*2^100 growth 2^139
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/40 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     1 info=   0  nonfinite=   0/40 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=    40 info=   0  nonfinite=  40/40 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=    40 info=   0  nonfinite=  40/40 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+
+W(30)*2^120 growth 2^149
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/30 max|x-1|(finite)=0  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     0 info=   0  nonfinite=  30/30 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+  magma_dsgesv_iteref_gpu            iter=    30 info=   0  nonfinite=  30/30 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=    30 info=   0  nonfinite=  30/30 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+
+random diag-dominant 256
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/256 max|x-1|(finite)=2.22e-15  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     2 info=   0  nonfinite=   0/256 max|x-1|(finite)=2e-15  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=     2 info=   0  nonfinite=   0/256 max|x-1|(finite)=1.46e-12  x[0]=1 x[n-1]=1
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=     2 info=   0  nonfinite=   0/256 max|x-1|(finite)=1.46e-12  x[0]=1 x[n-1]=1
+
+random 256 with b[0]=NaN
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite= 256/256 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+  magma_dsgesv_gpu (FP32 IR)         iter=     0 info=   0  nonfinite= 256/256 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+  magma_dsgesv_iteref_gpu            iter=   256 info=   0  nonfinite= 256/256 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=   256 info=   0  nonfinite= 256/256 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+
+R only n=1024
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/1024 max|x-1|(finite)=8.22e-15  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     2 info=   0  nonfinite=   0/1024 max|x-1|(finite)=5.11e-15  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=     2 info=   0  nonfinite=   0/1024 max|x-1|(finite)=1.87e-12  x[0]=1 x[n-1]=1
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=     2 info=   0  nonfinite=   0/1024 max|x-1|(finite)=1.96e-12  x[0]=1 x[n-1]=1
+
+diag(W(20)*2^0, R) n=1024
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/1024 max|x-1|(finite)=5.33e-15  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     2 info=   0  nonfinite=   0/1024 max|x-1|(finite)=5.33e-15  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=     2 info=   0  nonfinite=   0/1024 max|x-1|(finite)=5.3e-10  x[0]=1 x[n-1]=1
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=     2 info=   0  nonfinite=   0/1024 max|x-1|(finite)=5.83e-11  x[0]=1 x[n-1]=1
+
+diag(W(40)*2^0, R) n=1024
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/1024 max|x-1|(finite)=6.22e-15  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     2 info=   0  nonfinite=   0/1024 max|x-1|(finite)=6.22e-15  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=     4 info=   0  nonfinite=   0/1024 max|x-1|(finite)=6.27e-11  x[0]=1 x[n-1]=1
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=     4 info=   0  nonfinite=   0/1024 max|x-1|(finite)=1.34e-10  x[0]=1 x[n-1]=1
+
+diag(W(40)*2^100, R) n=1024
+  magma_dgesv_gpu (FP64)             iter=     0 info=   0  nonfinite=   0/1024 max|x-1|(finite)=6.22e-15  x[0]=1 x[n-1]=1
+  magma_dsgesv_gpu (FP32 IR)         iter=     1 info=   0  nonfinite=   0/1024 max|x-1|(finite)=1.25e-12  x[0]=1 x[n-1]=1
+  magma_dsgesv_iteref_gpu            iter=   500 info=   0  nonfinite=1024/1024 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan
+  magma_dhgesv_iteref_gpu (FP16-TC)  iter=   500 info=   0  nonfinite=1024/1024 max|x-1|(finite)=0  x[0]=nan x[n-1]=nan

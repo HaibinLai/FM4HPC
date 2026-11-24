@@ -1,0 +1,118 @@
+--- orig/dgmres_plu_gpu.cpp	2026-11-23 20:56:25
++++ patched/dgmres_plu_gpu.cpp	2026-11-23 20:56:25
+@@ -15,9 +15,14 @@
+ #endif
+ 
+ #include "magma_internal.h"
++#include <cstdio>
++#include <cstdlib>
++// --- lean4HPC trace instrumentation (only active when MAGMA_TRACE is set) ---
++#define MTRACE(...) do { if (getenv("MAGMA_TRACE")) { fprintf(stderr, "MTRACE " __VA_ARGS__); fputc('\n', stderr); } } while (0)
+ 
+ 
+ 
++
+ #define IDX2C(i,j,ld) (((i)*(ld))+(j))
+ #define WARP      32
+ #define HALFWARP  16
+@@ -150,8 +155,10 @@
+ 
+ 	    ro = magma_ddot(n, d_VV, 1, d_VV, 1, queue);
+ 	    ro = sqrt(ro);
++	    MTRACE("OUTER_START iters=%lld ro=%a is_inner=%lld", (long long) iters, ro, (long long) is_inner);
+ 
+ 	    if (fabs(ro-ZERO) <= EPSILON) {
++		MTRACE("EARLY_BREAK ro=%a", ro);
+ 		out_flag = FALSE;
+ 		break;
+ 	    }   
+@@ -162,6 +169,7 @@
+ 		*rnorm0 = ro;
+ 		MAGMA_PRINTF("Initial Residual: %e\n", ro);
+ 		eps1 = tol*ro;      
++		MTRACE("EPS1 tol=%a ro0=%a eps1=%a maxiter=%lld restrt=%lld", tol, ro, eps1, (long long) maxiter, (long long) restrt);
+ 	    }
+ 
+ 	    rs[0] = ro;
+@@ -259,6 +267,7 @@
+       
+ 		HH[IDX2C(i,i,restrt+1)] = c[i]*Hii + s[i]*Hii1;
+ 		ro = fabs(rs[i+1]);
++		MTRACE("STEP i=%lld iters=%lld Hii=%a Hii1=%a gam=%a s=%a ro=%a", (long long) i, (long long) iters, Hii, Hii1, gam, s[i], ro);
+ 
+ 		if (PRINT2 && is_inner){
+ 		    MAGMA_PRINTF("     %s_GPU_GMRES_INNER_ITER %5lld     %8.2E\n", algoname, (long long) iters, ro);
+@@ -273,6 +282,7 @@
+ 		    in_flag = FALSE;
+ 	
+ 	    } /* end of inner loop */
++	    MTRACE("INNER_EXIT i=%lld iters=%lld ro=%a", (long long) i, (long long) iters, ro);
+               
+ 	    rs[i] = rs[i]/HH[IDX2C(i,i,restrt+1)];
+ 	    for (ii=2; ii<=i+1; ii++)
+@@ -292,9 +302,11 @@
+ 	    /* test solution */
+ 	    if ( ro<=eps1 || iters >= maxiter)
+ 		out_flag = FALSE;
++	    MTRACE("OUTER_TEST out_flag=%lld", (long long) out_flag);
+ 	} /* end of outer loop */
+ 
+     *niters = tot_inner_iter > 0 ? tot_inner_iter : iters; 
++    MTRACE("RETURN niters=%lld iters=%lld", (long long) *niters, (long long) iters);
+     if(!is_inner)
+     {    
+         snprintf(algoname_outer, sizeof(algoname_outer),"%s_outer_niter",algoname);
+--- orig/dxgesv_gmres_gpu.cpp	2026-11-23 20:56:25
++++ patched/dxgesv_gmres_gpu.cpp	2026-11-23 20:56:25
+@@ -13,6 +13,11 @@
+ #endif
+ 
+ #include "magma_internal.h"
++#include <cstdio>
++#include <cstdlib>
++// --- lean4HPC trace instrumentation (only active when MAGMA_TRACE is set) ---
++#define MTRACE(...) do { if (getenv("MAGMA_TRACE")) { fprintf(stderr, "MTRACE " __VA_ARGS__); fputc('\n', stderr); } } while (0)
++
+ //#define MAGMA_PRINTF printf
+ #define MAGMA_PRINTF(...)
+ // Azzam: external functions definition for internal debugging purpose
+@@ -405,6 +410,7 @@
+         }
+         magmablas_dlag2s( n, n, dA, ldda, dA_sprec, lddasp, queue, info );
+         if (*info != 0) {
++            MTRACE("DLAG2S_OVERFLOW info=%lld", (long long) *info);
+             *iter = -2;
+             goto fallback;
+         }
+@@ -491,6 +497,7 @@
+         Anrm = magmablas_dlange( MagmaInfNorm, n, n, dA, ldda, (double*)dworkd, n*nrhs, queue );
+         cte  = Anrm * eps * magma_dsqrt( (double) n ) * BWDMAX;
+         gmtol = cte;
++        MTRACE("CTE n=%lld Anrm=%a eps=%a cte=%a gmtol=%a solver_outer_itermax=%lld solver_type=%lld facto_type=%lld", (long long) n, Anrm, eps, cte, gmtol, (long long) solver_outer_itermax, (long long) solver_type, (long long) facto_type);
+ #else
+         fp32_eps  = lapackf77_slamch("Epsilon");
+         fp32_Anrm = magmablas_slange( MagmaInfNorm, n, n, dA_sprec, lddasp, (float*)dworkd, n*nrhs, queue );
+@@ -568,6 +575,7 @@
+         #if defined (USE_GMRES_GPU)
+             // FGMRES  GPU need that X is initialized to "0"
+             magmablas_dlaset(MagmaFull, n, nrhs, 0.0, 0.0, dX, lddx, queue);
++            MTRACE("X0_ZERO");
+             magma_dfgmres_plu_gpu(trans, n, nrhs, dA, ldda,
+                     dA_sprec, lddasp, dA_dprec, lddadp,
+                     ipiv, dipiv, dB, lddb, dX, lddx, dSX,
+@@ -597,6 +605,7 @@
+                     facto_type, solver_type, algoname, queue);
+             #endif
+         #endif
++        MTRACE("GMSTRS_RETURN iter=%lld info=%lld", (long long) *iter, (long long) *info);
+         goto cleanup;
+     }
+     //==============================
+@@ -799,6 +808,7 @@
+     }
+ 
+ fallback:
++    MTRACE("FALLBACK iter=%lld info=%lld", (long long) *iter, (long long) *info);
+     /* Single-precision iterative refinement failed to converge to a
+      * satisfactory solution, so we resort to double precision. */
+     //printf("FALLBACK DISABLED FOR TESTING\n");

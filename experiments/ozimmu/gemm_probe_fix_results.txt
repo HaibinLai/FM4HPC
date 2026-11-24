@@ -1,0 +1,341 @@
+threshold=1.500   errors in units of u=2^-53 relative to (|A||B|)_ij; DGEMM a-priori bound ~ k
+
+bug_dgemm  m=8 n=8 k=64 bits/slice=7  replica=dgemm  library auto_mode_select=dgemm
+  ref C00 = 3.982730e-59  |A||B|_00 = 3.982730e-59
+  auto     worst err/(u|A||B|) = 0            C00 = 3.982730e-59  (no error)
+  dgemm    worst err/(u|A||B|) = 0            C00 = 3.982730e-59  (no error)
+  int8_3   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_5   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_8   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_10  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_11  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_13  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_15  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_18  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+
+avg_hides  m=64 n=64 k=64 bits/slice=7  replica=fp64_int8_8  library auto_mode_select=fp64_int8_8
+  ref C00 = 5.048710e-29  |A||B|_00 = 5.048710e-29
+  auto     worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  dgemm    worst err/(u|A||B|) = 2.233        C00 = 5.048710e-29  (no error)
+  int8_3   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_5   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_8   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_10  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_11  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_13  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_15  worst err/(u|A||B|) = 2.686        C00 = 5.048710e-29  (no error)
+  int8_18  worst err/(u|A||B|) = 2.686        C00 = 5.048710e-29  (no error)
+
+zero_lane0 m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_11  library auto_mode_select=fp64_int8_11
+  ref C00 = 7.468849e+16  |A||B|_00 = 3.524221e+17
+  auto     worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  dgemm    worst err/(u|A||B|) = 9.252        C00 = 7.468849e+16  (no error)
+  int8_3   worst err/(u|A||B|) = 8.453e+12    C00 = 7.469295e+16  (no error)
+  int8_5   worst err/(u|A||B|) = 1.213e+09    C00 = 7.468849e+16  (no error)
+  int8_8   worst err/(u|A||B|) = 2396         C00 = 7.468849e+16  (no error)
+  int8_10  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  int8_11  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  int8_13  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  int8_15  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  int8_18  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+
+sparse30   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_11  library auto_mode_select=fp64_int8_11
+  ref C00 = -1.021936e+17  |A||B|_00 = 1.336934e+17
+  auto     worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  dgemm    worst err/(u|A||B|) = 8.462        C00 = -1.021936e+17  (no error)
+  int8_3   worst err/(u|A||B|) = 9.708e+13    C00 = -1.021964e+17  (no error)
+  int8_5   worst err/(u|A||B|) = 1.271e+10    C00 = -1.021936e+17  (no error)
+  int8_8   worst err/(u|A||B|) = 1.693e+04    C00 = -1.021936e+17  (no error)
+  int8_10  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  int8_11  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  int8_13  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  int8_15  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  int8_18  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+
+tri_s30    m=256 n=256 k=256 bits/slice=7  replica=fp64_int8_11  library auto_mode_select=fp64_int8_11
+  ref C00 = -1.796096e+17  |A||B|_00 = 2.719052e+17
+  auto     worst err/(u|A||B|) = 5541         C00 = -1.796096e+17  (no error)
+  dgemm    worst err/(u|A||B|) = 14.64        C00 = -1.796096e+17  (no error)
+  int8_3   worst err/(u|A||B|) = 9.007e+15    C00 = -1.796166e+17  (no error)
+  int8_5   worst err/(u|A||B|) = 4.455e+15    C00 = -1.796096e+17  (no error)
+  int8_8   worst err/(u|A||B|) = 6.022e+09    C00 = -1.796096e+17  (no error)
+  int8_10  worst err/(u|A||B|) = 6.071e+05    C00 = -1.796096e+17  (no error)
+  int8_11  worst err/(u|A||B|) = 5541         C00 = -1.796096e+17  (no error)
+  int8_13  worst err/(u|A||B|) = 11.78        C00 = -1.796096e+17  (no error)
+  int8_15  worst err/(u|A||B|) = 11.78        C00 = -1.796096e+17  (no error)
+  int8_18  worst err/(u|A||B|) = 11.78        C00 = -1.796096e+17  (no error)
+
+tri_s60    m=256 n=256 k=256 bits/slice=7  replica=fp64_int8_14  library auto_mode_select=fp64_int8_14
+  ref C00 = 3.743384e+34  |A||B|_00 = 3.802223e+34
+  auto     worst err/(u|A||B|) = 2.071e+06    C00 = 3.743384e+34  (no error)
+  dgemm    worst err/(u|A||B|) = 9.006        C00 = 3.743384e+34  (no error)
+  int8_3   worst err/(u|A||B|) = 9.007e+15    C00 = 3.742602e+34  (no error)
+  int8_5   worst err/(u|A||B|) = 9.007e+15    C00 = 3.743384e+34  (no error)
+  int8_8   worst err/(u|A||B|) = 9.007e+15    C00 = 3.743384e+34  (no error)
+  int8_10  worst err/(u|A||B|) = 3.012e+14    C00 = 3.743384e+34  (no error)
+  int8_11  worst err/(u|A||B|) = 3.683e+12    C00 = 3.743384e+34  (no error)
+  int8_13  worst err/(u|A||B|) = 1.635e+08    C00 = 3.743384e+34  (no error)
+  int8_15  worst err/(u|A||B|) = 2.051e+04    C00 = 3.743384e+34  (no error)
+  int8_18  worst err/(u|A||B|) = 9.521        C00 = 3.743384e+34  (no error)
+
+rand_s0    m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_8  library auto_mode_select=fp64_int8_8
+  ref C00 = -2.805019e+00  |A||B|_00 = 6.272431e+01
+  auto     worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  dgemm    worst err/(u|A||B|) = 1.095        C00 = -2.805019e+00  (no error)
+  int8_3   worst err/(u|A||B|) = 1.315e+10    C00 = -2.804996e+00  (no error)
+  int8_5   worst err/(u|A||B|) = 1.238e+06    C00 = -2.805019e+00  (no error)
+  int8_8   worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_10  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_11  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_13  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_15  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_18  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+
+rand_s10   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_9  library auto_mode_select=fp64_int8_9
+  ref C00 = -5.555160e+05  |A||B|_00 = 2.056638e+06
+  auto     worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  dgemm    worst err/(u|A||B|) = 4.972        C00 = -5.555160e+05  (no error)
+  int8_3   worst err/(u|A||B|) = 2.94e+11     C00 = -5.555045e+05  (no error)
+  int8_5   worst err/(u|A||B|) = 3.975e+07    C00 = -5.555160e+05  (no error)
+  int8_8   worst err/(u|A||B|) = 33.2         C00 = -5.555160e+05  (no error)
+  int8_10  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  int8_11  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  int8_13  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  int8_15  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  int8_18  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+
+rand_s20   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_10  library auto_mode_select=fp64_int8_10
+  ref C00 = 2.847361e+11  |A||B|_00 = 4.017378e+11
+  auto     worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  dgemm    worst err/(u|A||B|) = 8.285        C00 = 2.847361e+11  (no error)
+  int8_3   worst err/(u|A||B|) = 1.536e+12    C00 = 2.847365e+11  (no error)
+  int8_5   worst err/(u|A||B|) = 2.526e+08    C00 = 2.847361e+11  (no error)
+  int8_8   worst err/(u|A||B|) = 301          C00 = 2.847361e+11  (no error)
+  int8_10  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  int8_11  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  int8_13  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  int8_15  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  int8_18  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+
+rand_s30   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_11  library auto_mode_select=fp64_int8_11
+  ref C00 = 3.113084e+16  |A||B|_00 = 3.267187e+17
+  auto     worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  dgemm    worst err/(u|A||B|) = 10.18        C00 = 3.113084e+16  (no error)
+  int8_3   worst err/(u|A||B|) = 7.797e+12    C00 = 3.113224e+16  (no error)
+  int8_5   worst err/(u|A||B|) = 1.253e+09    C00 = 3.113084e+16  (no error)
+  int8_8   worst err/(u|A||B|) = 1314         C00 = 3.113084e+16  (no error)
+  int8_10  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  int8_11  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  int8_13  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  int8_15  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  int8_18  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+
+rand_s40   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_13  library auto_mode_select=fp64_int8_13
+  ref C00 = -7.764712e+20  |A||B|_00 = 3.397560e+22
+  auto     worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  dgemm    worst err/(u|A||B|) = 10.1         C00 = -7.764712e+20  (no error)
+  int8_3   worst err/(u|A||B|) = 2.509e+13    C00 = -7.828337e+20  (no error)
+  int8_5   worst err/(u|A||B|) = 6.839e+09    C00 = -7.764720e+20  (no error)
+  int8_8   worst err/(u|A||B|) = 1.531e+04    C00 = -7.764712e+20  (no error)
+  int8_10  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  int8_11  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  int8_13  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  int8_15  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  int8_18  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+
+rand_s60   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_15  library auto_mode_select=fp64_int8_15
+  ref C00 = -2.917990e+33  |A||B|_00 = 2.768517e+34
+  auto     worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+  dgemm    worst err/(u|A||B|) = 7.576        C00 = -2.917990e+33  (no error)
+  int8_3   worst err/(u|A||B|) = 6.375e+14    C00 = -2.919003e+33  (no error)
+  int8_5   worst err/(u|A||B|) = 1.018e+11    C00 = -2.917990e+33  (no error)
+  int8_8   worst err/(u|A||B|) = 1.495e+05    C00 = -2.917990e+33  (no error)
+  int8_10  worst err/(u|A||B|) = 19.99        C00 = -2.917990e+33  (no error)
+  int8_11  worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+  int8_13  worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+  int8_15  worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+  int8_18  worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+
+rand_s80   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_18  library auto_mode_select=fp64_int8_18
+  ref C00 = 4.964772e+45  |A||B|_00 = 9.500030e+45
+  auto     worst err/(u|A||B|) = 8.842        C00 = 4.964772e+45  (no error)
+  dgemm    worst err/(u|A||B|) = 8.19         C00 = 4.964772e+45  (no error)
+  int8_3   worst err/(u|A||B|) = 2.927e+15    C00 = 4.967273e+45  (no error)
+  int8_5   worst err/(u|A||B|) = 1.086e+12    C00 = 4.964772e+45  (no error)
+  int8_8   worst err/(u|A||B|) = 1.136e+06    C00 = 4.964772e+45  (no error)
+  int8_10  worst err/(u|A||B|) = 151.7        C00 = 4.964772e+45  (no error)
+  int8_11  worst err/(u|A||B|) = 8.842        C00 = 4.964772e+45  (no error)
+  int8_13  worst err/(u|A||B|) = 8.842        C00 = 4.964772e+45  (no error)
+  int8_15  worst err/(u|A||B|) = 8.842        C00 = 4.964772e+45  (no error)
+  int8_18  worst err/(u|A||B|) = 8.842        C00 = 4.964772e+45  (no error)
+=====THRESHOLD0
+threshold=0.000   errors in units of u=2^-53 relative to (|A||B|)_ij; DGEMM a-priori bound ~ k
+
+bug_dgemm  m=8 n=8 k=64 bits/slice=7  replica=dgemm  library auto_mode_select=dgemm
+  ref C00 = 3.982730e-59  |A||B|_00 = 3.982730e-59
+  auto     worst err/(u|A||B|) = 0            C00 = 3.982730e-59  (no error)
+  dgemm    worst err/(u|A||B|) = 0            C00 = 3.982730e-59  (no error)
+  int8_3   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_5   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_8   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_10  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_11  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_13  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_15  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_18  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+
+avg_hides  m=64 n=64 k=64 bits/slice=7  replica=dgemm  library auto_mode_select=dgemm
+  ref C00 = 5.048710e-29  |A||B|_00 = 5.048710e-29
+  auto     worst err/(u|A||B|) = 2.233        C00 = 5.048710e-29  (no error)
+  dgemm    worst err/(u|A||B|) = 2.233        C00 = 5.048710e-29  (no error)
+  int8_3   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_5   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_8   worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_10  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_11  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_13  worst err/(u|A||B|) = 9.007e+15    C00 = 0.000000e+00  (no error)
+  int8_15  worst err/(u|A||B|) = 2.686        C00 = 5.048710e-29  (no error)
+  int8_18  worst err/(u|A||B|) = 2.686        C00 = 5.048710e-29  (no error)
+
+zero_lane0 m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_14  library auto_mode_select=fp64_int8_14
+  ref C00 = 7.468849e+16  |A||B|_00 = 3.524221e+17
+  auto     worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  dgemm    worst err/(u|A||B|) = 9.252        C00 = 7.468849e+16  (no error)
+  int8_3   worst err/(u|A||B|) = 8.453e+12    C00 = 7.469295e+16  (no error)
+  int8_5   worst err/(u|A||B|) = 1.213e+09    C00 = 7.468849e+16  (no error)
+  int8_8   worst err/(u|A||B|) = 2396         C00 = 7.468849e+16  (no error)
+  int8_10  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  int8_11  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  int8_13  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  int8_15  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+  int8_18  worst err/(u|A||B|) = 5.935        C00 = 7.468849e+16  (no error)
+
+sparse30   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_14  library auto_mode_select=fp64_int8_14
+  ref C00 = -1.021936e+17  |A||B|_00 = 1.336934e+17
+  auto     worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  dgemm    worst err/(u|A||B|) = 8.462        C00 = -1.021936e+17  (no error)
+  int8_3   worst err/(u|A||B|) = 9.708e+13    C00 = -1.021964e+17  (no error)
+  int8_5   worst err/(u|A||B|) = 1.271e+10    C00 = -1.021936e+17  (no error)
+  int8_8   worst err/(u|A||B|) = 1.693e+04    C00 = -1.021936e+17  (no error)
+  int8_10  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  int8_11  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  int8_13  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  int8_15  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+  int8_18  worst err/(u|A||B|) = 6.994        C00 = -1.021936e+17  (no error)
+
+tri_s30    m=256 n=256 k=256 bits/slice=7  replica=fp64_int8_14  library auto_mode_select=fp64_int8_14
+  ref C00 = -1.796096e+17  |A||B|_00 = 2.719052e+17
+  auto     worst err/(u|A||B|) = 11.78        C00 = -1.796096e+17  (no error)
+  dgemm    worst err/(u|A||B|) = 14.64        C00 = -1.796096e+17  (no error)
+  int8_3   worst err/(u|A||B|) = 9.007e+15    C00 = -1.796166e+17  (no error)
+  int8_5   worst err/(u|A||B|) = 4.455e+15    C00 = -1.796096e+17  (no error)
+  int8_8   worst err/(u|A||B|) = 6.022e+09    C00 = -1.796096e+17  (no error)
+  int8_10  worst err/(u|A||B|) = 6.071e+05    C00 = -1.796096e+17  (no error)
+  int8_11  worst err/(u|A||B|) = 5541         C00 = -1.796096e+17  (no error)
+  int8_13  worst err/(u|A||B|) = 11.78        C00 = -1.796096e+17  (no error)
+  int8_15  worst err/(u|A||B|) = 11.78        C00 = -1.796096e+17  (no error)
+  int8_18  worst err/(u|A||B|) = 11.78        C00 = -1.796096e+17  (no error)
+
+tri_s60    m=256 n=256 k=256 bits/slice=7  replica=fp64_int8_18  library auto_mode_select=fp64_int8_18
+  ref C00 = 3.743384e+34  |A||B|_00 = 3.802223e+34
+  auto     worst err/(u|A||B|) = 9.521        C00 = 3.743384e+34  (no error)
+  dgemm    worst err/(u|A||B|) = 9.006        C00 = 3.743384e+34  (no error)
+  int8_3   worst err/(u|A||B|) = 9.007e+15    C00 = 3.742602e+34  (no error)
+  int8_5   worst err/(u|A||B|) = 9.007e+15    C00 = 3.743384e+34  (no error)
+  int8_8   worst err/(u|A||B|) = 9.007e+15    C00 = 3.743384e+34  (no error)
+  int8_10  worst err/(u|A||B|) = 3.012e+14    C00 = 3.743384e+34  (no error)
+  int8_11  worst err/(u|A||B|) = 3.683e+12    C00 = 3.743384e+34  (no error)
+  int8_13  worst err/(u|A||B|) = 1.635e+08    C00 = 3.743384e+34  (no error)
+  int8_15  worst err/(u|A||B|) = 2.051e+04    C00 = 3.743384e+34  (no error)
+  int8_18  worst err/(u|A||B|) = 9.521        C00 = 3.743384e+34  (no error)
+
+rand_s0    m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_10  library auto_mode_select=fp64_int8_10
+  ref C00 = -2.805019e+00  |A||B|_00 = 6.272431e+01
+  auto     worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  dgemm    worst err/(u|A||B|) = 1.095        C00 = -2.805019e+00  (no error)
+  int8_3   worst err/(u|A||B|) = 1.315e+10    C00 = -2.804996e+00  (no error)
+  int8_5   worst err/(u|A||B|) = 1.238e+06    C00 = -2.805019e+00  (no error)
+  int8_8   worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_10  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_11  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_13  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_15  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+  int8_18  worst err/(u|A||B|) = 1.291        C00 = -2.805019e+00  (no error)
+
+rand_s10   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_11  library auto_mode_select=fp64_int8_11
+  ref C00 = -5.555160e+05  |A||B|_00 = 2.056638e+06
+  auto     worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  dgemm    worst err/(u|A||B|) = 4.972        C00 = -5.555160e+05  (no error)
+  int8_3   worst err/(u|A||B|) = 2.94e+11     C00 = -5.555045e+05  (no error)
+  int8_5   worst err/(u|A||B|) = 3.975e+07    C00 = -5.555160e+05  (no error)
+  int8_8   worst err/(u|A||B|) = 33.2         C00 = -5.555160e+05  (no error)
+  int8_10  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  int8_11  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  int8_13  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  int8_15  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+  int8_18  worst err/(u|A||B|) = 4.059        C00 = -5.555160e+05  (no error)
+
+rand_s20   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_13  library auto_mode_select=fp64_int8_13
+  ref C00 = 2.847361e+11  |A||B|_00 = 4.017378e+11
+  auto     worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  dgemm    worst err/(u|A||B|) = 8.285        C00 = 2.847361e+11  (no error)
+  int8_3   worst err/(u|A||B|) = 1.536e+12    C00 = 2.847365e+11  (no error)
+  int8_5   worst err/(u|A||B|) = 2.526e+08    C00 = 2.847361e+11  (no error)
+  int8_8   worst err/(u|A||B|) = 301          C00 = 2.847361e+11  (no error)
+  int8_10  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  int8_11  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  int8_13  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  int8_15  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+  int8_18  worst err/(u|A||B|) = 5.849        C00 = 2.847361e+11  (no error)
+
+rand_s30   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_14  library auto_mode_select=fp64_int8_14
+  ref C00 = 3.113084e+16  |A||B|_00 = 3.267187e+17
+  auto     worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  dgemm    worst err/(u|A||B|) = 10.18        C00 = 3.113084e+16  (no error)
+  int8_3   worst err/(u|A||B|) = 7.797e+12    C00 = 3.113224e+16  (no error)
+  int8_5   worst err/(u|A||B|) = 1.253e+09    C00 = 3.113084e+16  (no error)
+  int8_8   worst err/(u|A||B|) = 1314         C00 = 3.113084e+16  (no error)
+  int8_10  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  int8_11  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  int8_13  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  int8_15  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+  int8_18  worst err/(u|A||B|) = 6.233        C00 = 3.113084e+16  (no error)
+
+rand_s40   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_16  library auto_mode_select=fp64_int8_16
+  ref C00 = -7.764712e+20  |A||B|_00 = 3.397560e+22
+  auto     worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  dgemm    worst err/(u|A||B|) = 10.1         C00 = -7.764712e+20  (no error)
+  int8_3   worst err/(u|A||B|) = 2.509e+13    C00 = -7.828337e+20  (no error)
+  int8_5   worst err/(u|A||B|) = 6.839e+09    C00 = -7.764720e+20  (no error)
+  int8_8   worst err/(u|A||B|) = 1.531e+04    C00 = -7.764712e+20  (no error)
+  int8_10  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  int8_11  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  int8_13  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  int8_15  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+  int8_18  worst err/(u|A||B|) = 6.203        C00 = -7.764712e+20  (no error)
+
+rand_s60   m=64 n=64 k=256 bits/slice=7  replica=fp64_int8_18  library auto_mode_select=fp64_int8_18
+  ref C00 = -2.917990e+33  |A||B|_00 = 2.768517e+34
+  auto     worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+  dgemm    worst err/(u|A||B|) = 7.576        C00 = -2.917990e+33  (no error)
+  int8_3   worst err/(u|A||B|) = 6.375e+14    C00 = -2.919003e+33  (no error)
+  int8_5   worst err/(u|A||B|) = 1.018e+11    C00 = -2.917990e+33  (no error)
+  int8_8   worst err/(u|A||B|) = 1.495e+05    C00 = -2.917990e+33  (no error)
+  int8_10  worst err/(u|A||B|) = 19.99        C00 = -2.917990e+33  (no error)
+  int8_11  worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+  int8_13  worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+  int8_15  worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+  int8_18  worst err/(u|A||B|) = 9.685        C00 = -2.917990e+33  (no error)
+
+rand_s80   m=64 n=64 k=256 bits/slice=7  replica=dgemm  library auto_mode_select=dgemm
+  ref C00 = 4.964772e+45  |A||B|_00 = 9.500030e+45
+  auto     worst err/(u|A||B|) = 8.19         C00 = 4.964772e+45  (no error)
+  dgemm    worst err/(u|A||B|) = 8.19         C00 = 4.964772e+45  (no error)
+  int8_3   worst err/(u|A||B|) = 2.927e+15    C00 = 4.967273e+45  (no error)
+  int8_5   worst err/(u|A||B|) = 1.086e+12    C00 = 4.964772e+45  (no error)
+  int8_8   worst err/(u|A||B|) = 1.136e+06    C00 = 4.964772e+45  (no error)
+  int8_10  worst err/(u|A||B|) = 151.7        C00 = 4.964772e+45  (no error)
+  int8_11  worst err/(u|A||B|) = 8.842        C00 = 4.964772e+45  (no error)
+  int8_13  worst err/(u|A||B|) = 8.842        C00 = 4.964772e+45  (no error)
+  int8_15  worst err/(u|A||B|) = 8.842        C00 = 4.964772e+45  (no error)
+  int8_18  worst err/(u|A||B|) = 8.842        C00 = 4.964772e+45  (no error)

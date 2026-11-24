@@ -1,0 +1,8 @@
+# 2026-11-23T13:02:03Z  lean Lean (version 4.36.0, arm64-apple-darwin24.6.0, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)  file Gemmul8Range.lean (200 lines)
+'Gemmul8Range.fast_range' depends on axioms: [propext, Quot.sound]
+'Gemmul8Range.accu_range' depends on axioms: [propext, Quot.sound]
+'Gemmul8Range.crt_unique' depends on axioms: [propext, Quot.sound]
+'Gemmul8Range.dvd_prod_of_pairwise' depends on axioms: [propext, Quot.sound]
+'Gemmul8Range.crt_exact' depends on axioms: [propext, Quot.sound]
+'Gemmul8Range.fast_crt_exact' depends on axioms: [propext, Quot.sound]
+exit=0

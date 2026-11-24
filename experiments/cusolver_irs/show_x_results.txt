@@ -1,0 +1,12 @@
+x_true[0:5]           [-0.4458560992 -0.283844782   0.4480339059 -0.9904771754 -0.3404419292]
+numpy FP64 solve      [-0.4458560992 -0.283844782   0.4480339059 -0.9904771754 -0.3404419292]  max rel err 4.5e-13
+cusolverDnDBgesv 2^0   iter= 23  x[0:5] = [-0.4458560992 -0.283844782   0.4480339059 -0.9904771754 -0.3404419292]
+      worst component i=609: x=0.8142299303 true=0.8142299303   correct digits: min 11.5, median 12.2
+cusolverDnDBgesv 2^40  iter=  1  x[0:5] = [-0.4326144366  0.0697269218  0.3993406084 -1.0883766171 -0.5688216427]
+      worst component i=485: x=-1.3745866806 true=-0.4414517361   correct digits: min 0.0, median 0.8
+cusolverDnDXgesv 2^40  iter=  1  x[0:5] = [-0.4395593988 -0.2900477364  0.4463572053 -0.9985434329 -0.3179859821]
+      worst component i=618: x=0.1727797703 true=0.1319441771   correct digits: min 1.4, median 2.1
+cusolverDnDSgesv 2^40  iter=  1  x[0:5] = [-0.4458561038 -0.28384482    0.4480339005 -0.99047719   -0.3404419187]
+      worst component i=137: x=-0.5080549106 true=-0.5080548580   correct digits: min 7.3, median 7.9
+cusolverDnDSgesv 2^-60 iter=  0  x[0:5] = [-0.4454382658 -0.2842041254  0.4480184317 -0.9901416898 -0.3397958875]
+      worst component i=609: x=0.8129218221 true=0.8142299303   correct digits: min 2.9, median 3.6

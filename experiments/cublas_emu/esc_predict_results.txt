@@ -1,0 +1,13 @@
+P1: zero every 32 along k, n=1024, mode emu_eager
+  A*2^0     B*2^0     bits= 4248  change=   +0  predicted change=   +0  OK   (dense, no zeros: bits=59)
+  A*2^100   B*2^0     bits= 4248  change=   +0  predicted change=   +0  OK   (dense, no zeros: bits=59)
+  A*2^-100  B*2^0     bits= 4148  change= -100  predicted change= -100  OK   (dense, no zeros: bits=59)
+  A*2^100   B*2^100   bits= 4348  change= +100  predicted change= +100  OK   (dense, no zeros: bits=59)
+  A*2^100   B*2^-100  bits= 4148  change= -100  predicted change= -100  OK   (dense, no zeros: bits=59)
+  A*2^-300  B*2^-300  bits= 3948  change= -300  predicted change= -300  OK   (dense, no zeros: bits=59)
+  A*2^0     B*2^200   bits= 4248  change=   +0  predicted change=   +0  OK   (dense, no zeros: bits=59)
+P2: boundary block, m=n=k=64
+  predicted reported bits about 3212 (fallback), result exact
+  native       bits=   -2  entries equal to 2^-1035: 4096/4096  C00=np.float64(2.716154612436e-312)
+  emu_eager    bits= 3214  entries equal to 2^-1035: 4096/4096  C00=np.float64(2.716154612436e-312)
+  emu_fixed55  bits=   55  entries equal to 2^-1035: 0/4096  C00=np.float64(0.0)

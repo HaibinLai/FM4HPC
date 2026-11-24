@@ -1,0 +1,17 @@
+name, uuid, driver_version
+Tesla V100-PCIE-32GB, GPU-7961f273-980c-646b-b98e-7b4b259c6e09, 580.178.04
+Tesla V100-PCIE-32GB, GPU-e1ca399b-2d91-7baf-afdd-1489f1956aa8, 580.178.04
+Tesla V100-PCIE-32GB, GPU-a86f28ab-cc75-0ac8-f4d0-641c7024eef1, 580.178.04
+Tesla V100-PCIE-32GB, GPU-2c293e3b-cd4c-a5e1-4a11-b12605ba4543, 580.178.04
+Tesla V100-PCIE-32GB, GPU-2c7c135c-2394-ce83-0623-a756e07458be, 580.178.04
+Tesla V100-PCIE-32GB, GPU-0e52ee0a-380d-0e5b-c979-dcce72f98398, 580.178.04
+Tesla V100-PCIE-32GB, GPU-fabcf9ba-da72-4882-4bd0-aaef74989638, 580.178.04
+Tesla V100-PCIE-32GB, GPU-5b0bb1a8-3629-7114-0eb1-04edd56a0682, 580.178.04
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2023 NVIDIA Corporation
+Built on Fri_Jan__6_16:45:21_PST_2023
+Cuda compilation tools, release 12.0, V12.0.140
+Build cuda_12.0.r12.0/compiler.32267302_0
+a6f6198bc7af6cf288607ef867693f991cf48862
+1f3e62f3fc314c44ea3a45023f9b4d8b35de13c4430996edca56004f21ef82bb  /home/haibin/lean4hpc-fp16/results/uniform_k16.exe
+fa5baea78d74b762a29cb87175f9d3b090ca8103b3b6e5d63fb34e56dc737e93  exp/uniform_k16.bin

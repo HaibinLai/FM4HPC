@@ -1,0 +1,29 @@
+n = 256; documented condition decided exactly; ratio = ||r||_inf / (sqrt(n) eps ||A|| ||x||) (< 1 = holds)
+
+FP32 LU (dsgesv_iteref)
+  k= -80 | orig : iter=   0 returned         ratio=      inf fwd=       1 VIOLATES | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+  k= -70 | orig : iter=   0 returned         ratio=      inf fwd=       1 VIOLATES | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+  k= -60 | orig : iter= 256 returned         ratio=    0.355 fwd= 3.2e-13 ok       | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+  k= -20 | orig : iter= 256 returned         ratio=    0.355 fwd= 3.2e-13 ok       | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+  k=   0 | orig : iter=   3 returned         ratio=   0.0815 fwd= 7.4e-14 ok       | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+  k=  10 | orig : iter=   2 returned         ratio= 4.66e+03 fwd= 2.2e-09 VIOLATES | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+  k=  20 | orig : iter=   2 returned         ratio= 4.66e+03 fwd= 2.2e-09 VIOLATES | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+  k=  30 | orig : iter=   1 returned         ratio= 1.11e+08 fwd= 9.1e-05 VIOLATES | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+  k=  40 | orig : iter=   1 returned         ratio= 1.11e+08 fwd= 9.1e-05 VIOLATES | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+  k=  60 | orig : iter=   1 returned         ratio= 1.11e+08 fwd= 9.1e-05 VIOLATES | fixed: iter=   3 certified        ratio=   0.0815 fwd= 7.4e-14 ok       |
+
+FP16 LU (stand-in for dhgesv_iteref)
+  k= -80 | orig : iter=   0 returned         ratio=      inf fwd=       1 VIOLATES | fixed: iter=-257 fallback(check)  ratio=     0.34 fwd= 4.8e-14 ok       |
+  k= -70 | orig : iter=   0 returned         ratio=      inf fwd=       1 VIOLATES | fixed: iter=-257 fallback(check)  ratio=     0.34 fwd= 4.8e-14 ok       |
+  k= -60 | orig : iter= 256 returned         ratio=      inf fwd=     nan VIOLATES | fixed: iter=-257 fallback(check)  ratio=     0.34 fwd= 4.8e-14 ok       |
+  k= -20 | orig : iter= 256 returned         ratio=      inf fwd=     nan VIOLATES | fixed: iter=-257 fallback(check)  ratio=     0.34 fwd= 4.8e-14 ok       |
+  k=   0 | orig : iter=  11 returned         ratio=     5.45 fwd= 3.5e-12 VIOLATES | fixed: iter=  13 certified        ratio=   0.0146 fwd= 5.4e-15 ok       |
+  k=  10 | orig : iter=   9 returned         ratio= 3.66e+03 fwd= 7.9e-10 VIOLATES | fixed: iter=  13 certified        ratio=   0.0203 fwd= 3.7e-15 ok       |
+/Users/haibin/Documents/Codex/2026-11-22/new-chat/lean4HPC/experiments/magma_fgmres/fix/port_fixed.py:28: RuntimeWarning: overflow encountered in cast
+  LU = A.astype(dtype).copy()
+  k=  20 | orig : iter= 256 returned         ratio=      inf fwd=     nan VIOLATES | fixed: iter=  -2 fallback(range)  ratio=     0.34 fwd= 4.8e-14 ok       |
+  k=  30 | orig : iter= 256 returned         ratio=      inf fwd=     nan VIOLATES | fixed: iter=  -2 fallback(range)  ratio=     0.34 fwd= 4.8e-14 ok       |
+  k=  40 | orig : iter= 256 returned         ratio=      inf fwd=     nan VIOLATES | fixed: iter=  -2 fallback(range)  ratio=     0.34 fwd= 4.8e-14 ok       |
+  k=  60 | orig : iter= 256 returned         ratio=      inf fwd=     nan VIOLATES | fixed: iter=  -2 fallback(range)  ratio=     0.34 fwd= 4.8e-14 ok       |
+
+returned with iter >= 0 but violating the documented condition: original 17, fixed 0

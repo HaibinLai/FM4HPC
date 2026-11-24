@@ -1,0 +1,177 @@
+cuSOLVER 12401; round R1
+seed= 1 cusolverDnDHgesv 2^0    niters=  11 info=0 st=0 eta/thr=    0.189 fwd=  6.1e-13 ok
+seed= 1 cusolverDnDHgesv 2^4    niters=  10 info=0 st=0 eta/thr=     3.57 fwd= 1.91e-10 ok
+seed= 1 cusolverDnDHgesv 2^4    niters=  10 info=0 st=0 eta/thr=     3.57 fwd= 1.91e-10 ok
+seed= 1 cusolverDnDHgesv 2^4    niters=  10 info=0 st=0 eta/thr=     3.57 fwd= 1.91e-10 ok
+seed= 1 cusolverDnDBgesv 2^0    niters=  25 info=0 st=0 eta/thr=      5.4 fwd= 7.45e-11 ok
+seed= 1 cusolverDnDBgesv 2^20   niters=  16 info=0 st=0 eta/thr= 4.96e+06 fwd= 6.23e-05 WRONG
+seed= 1 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr= 3.34e+11 fwd=     10.9 WRONG
+seed= 1 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.636 fwd= 1.53e-11 ok
+seed= 1 cusolverDnDXgesv 2^0    niters=  11 info=0 st=0 eta/thr=    0.137 fwd= 4.14e-12 ok
+seed= 1 cusolverDnDXgesv 2^20   niters=   7 info=0 st=0 eta/thr= 6.77e+04 fwd= 9.54e-07 VIOLATES
+seed= 1 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 2.31e+10 fwd=     2.66 WRONG
+seed= 1 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.636 fwd= 1.53e-11 ok
+seed= 1 cusolverDnDSgesv 2^0    niters=   4 info=0 st=0 eta/thr=   0.0141 fwd= 1.98e-13 ok
+seed= 1 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=      107 fwd= 4.71e-11 VIOLATES
+seed= 1 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr= 1.96e+05 fwd= 1.41e-06 WRONG
+seed= 1 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 3.31e+08 fwd=  0.00259 WRONG
+seed= 2 cusolverDnDHgesv 2^0    niters=  10 info=0 st=0 eta/thr=   0.0533 fwd=  1.8e-13 ok
+seed= 2 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     2.23 fwd= 3.37e-12 ok
+seed= 2 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     2.23 fwd= 3.37e-12 ok
+seed= 2 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     2.23 fwd= 3.37e-12 ok
+seed= 2 cusolverDnDBgesv 2^0    niters=  23 info=0 st=0 eta/thr=     4.55 fwd= 4.43e-12 ok
+seed= 2 cusolverDnDBgesv 2^20   niters=  14 info=0 st=0 eta/thr= 2.61e+06 fwd= 4.75e-06 WRONG
+seed= 2 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr= 8.84e+11 fwd=     1.49 WRONG
+seed= 2 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.735 fwd= 1.66e-12 ok
+seed= 2 cusolverDnDXgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.418 fwd= 1.41e-12 ok
+seed= 2 cusolverDnDXgesv 2^20   niters=   6 info=0 st=0 eta/thr=  5.6e+04 fwd= 3.78e-08 VIOLATES
+seed= 2 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 5.01e+10 fwd=    0.453 WRONG
+seed= 2 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.735 fwd= 1.66e-12 ok
+seed= 2 cusolverDnDSgesv 2^0    niters=   4 info=0 st=0 eta/thr=   0.0128 fwd= 1.78e-14 ok
+seed= 2 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=     13.1 fwd= 5.15e-11 ok
+seed= 2 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr= 3.35e+04 fwd= 1.93e-07 VIOLATES
+seed= 2 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 3.59e+08 fwd=  0.00052 WRONG
+seed= 3 cusolverDnDHgesv 2^0    niters=  10 info=0 st=0 eta/thr=   0.0755 fwd= 1.23e-13 ok
+seed= 3 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=    0.722 fwd= 4.94e-12 ok
+seed= 3 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=    0.722 fwd= 4.94e-12 ok
+seed= 3 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=    0.722 fwd= 4.94e-12 ok
+seed= 3 cusolverDnDBgesv 2^0    niters=  23 info=0 st=0 eta/thr=      6.6 fwd=  2.7e-11 ok
+seed= 3 cusolverDnDBgesv 2^20   niters=  13 info=0 st=0 eta/thr=  7.6e+06 fwd= 2.49e-05 WRONG
+seed= 3 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr= 1.04e+12 fwd=     1.46 WRONG
+seed= 3 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.676 fwd= 1.25e-12 ok
+seed= 3 cusolverDnDXgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.207 fwd= 2.74e-13 ok
+seed= 3 cusolverDnDXgesv 2^20   niters=   6 info=0 st=0 eta/thr= 9.28e+04 fwd= 1.15e-07 VIOLATES
+seed= 3 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 3.24e+10 fwd=    0.144 WRONG
+seed= 3 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.676 fwd= 1.25e-12 ok
+seed= 3 cusolverDnDSgesv 2^0    niters=   3 info=0 st=0 eta/thr=   0.0128 fwd= 1.68e-14 ok
+seed= 3 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=     2.54 fwd= 2.85e-12 ok
+seed= 3 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr= 2.89e+04 fwd=    3e-08 VIOLATES
+seed= 3 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 3.11e+08 fwd= 0.000409 WRONG
+seed= 4 cusolverDnDHgesv 2^0    niters=  11 info=0 st=0 eta/thr=   0.0587 fwd= 9.84e-13 ok
+seed= 4 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     8.92 fwd= 2.49e-11 ok
+seed= 4 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     8.92 fwd= 2.49e-11 ok
+seed= 4 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     8.92 fwd= 2.49e-11 ok
+seed= 4 cusolverDnDBgesv 2^0    niters=  24 info=0 st=0 eta/thr=     4.45 fwd= 9.01e-11 ok
+seed= 4 cusolverDnDBgesv 2^20   niters=  15 info=0 st=0 eta/thr= 4.52e+06 fwd= 7.96e-05 WRONG
+seed= 4 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr=  2.9e+11 fwd=     2.13 WRONG
+seed= 4 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.622 fwd= 1.06e-11 ok
+seed= 4 cusolverDnDXgesv 2^0    niters=  11 info=0 st=0 eta/thr=     0.14 fwd= 2.65e-12 ok
+seed= 4 cusolverDnDXgesv 2^20   niters=   6 info=0 st=0 eta/thr= 5.41e+05 fwd= 1.66e-05 WRONG
+seed= 4 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 2.65e+10 fwd=     3.92 WRONG
+seed= 4 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.622 fwd= 1.06e-11 ok
+seed= 4 cusolverDnDSgesv 2^0    niters=   4 info=0 st=0 eta/thr=   0.0112 fwd=  3.5e-13 ok
+seed= 4 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=     9.56 fwd= 2.98e-11 ok
+seed= 4 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr= 1.54e+04 fwd=  1.5e-07 VIOLATES
+seed= 4 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 3.42e+08 fwd= 0.000238 WRONG
+seed= 5 cusolverDnDHgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.515 fwd= 9.92e-13 ok
+seed= 5 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     7.72 fwd= 1.38e-11 ok
+seed= 5 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     7.72 fwd= 1.38e-11 ok
+seed= 5 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     7.72 fwd= 1.38e-11 ok
+seed= 5 cusolverDnDBgesv 2^0    niters=  24 info=0 st=0 eta/thr=      5.8 fwd= 1.79e-11 ok
+seed= 5 cusolverDnDBgesv 2^20   niters=  15 info=0 st=0 eta/thr= 3.83e+06 fwd=  5.1e-06 WRONG
+seed= 5 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr= 7.31e+11 fwd=     7.32 WRONG
+seed= 5 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.609 fwd= 5.37e-13 ok
+seed= 5 cusolverDnDXgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.401 fwd=  1.3e-12 ok
+seed= 5 cusolverDnDXgesv 2^20   niters=   6 info=0 st=0 eta/thr= 7.89e+04 fwd= 2.44e-07 VIOLATES
+seed= 5 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 2.26e+10 fwd=   0.0147 WRONG
+seed= 5 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.609 fwd= 5.37e-13 ok
+seed= 5 cusolverDnDSgesv 2^0    niters=   4 info=0 st=0 eta/thr=   0.0102 fwd= 6.01e-14 ok
+seed= 5 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=     10.1 fwd=  1.6e-11 ok
+seed= 5 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr= 2.08e+05 fwd= 9.98e-08 VIOLATES
+seed= 5 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 3.13e+08 fwd=  0.00176 WRONG
+seed= 6 cusolverDnDHgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.109 fwd= 2.82e-13 ok
+seed= 6 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     2.53 fwd= 2.26e-12 ok
+seed= 6 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     2.53 fwd= 2.26e-12 ok
+seed= 6 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     2.53 fwd= 2.26e-12 ok
+seed= 6 cusolverDnDBgesv 2^0    niters=  24 info=0 st=0 eta/thr=    0.996 fwd= 1.36e-12 ok
+seed= 6 cusolverDnDBgesv 2^20   niters=  14 info=0 st=0 eta/thr= 3.32e+06 fwd= 5.05e-06 WRONG
+seed= 6 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr= 5.75e+11 fwd=    0.797 WRONG
+seed= 6 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.662 fwd= 8.07e-13 ok
+seed= 6 cusolverDnDXgesv 2^0    niters=  10 info=0 st=0 eta/thr=   0.0794 fwd=  1.6e-13 ok
+seed= 6 cusolverDnDXgesv 2^20   niters=   5 info=0 st=0 eta/thr= 2.54e+05 fwd= 2.59e-07 VIOLATES
+seed= 6 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 3.41e+10 fwd=   0.0459 WRONG
+seed= 6 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.662 fwd= 8.07e-13 ok
+seed= 6 cusolverDnDSgesv 2^0    niters=   3 info=0 st=0 eta/thr=   0.0147 fwd= 1.98e-14 ok
+seed= 6 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=     1.82 fwd= 1.92e-12 ok
+seed= 6 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr= 2.18e+04 fwd= 2.07e-08 VIOLATES
+seed= 6 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 3.92e+08 fwd= 0.000307 WRONG
+seed= 7 cusolverDnDHgesv 2^0    niters=  11 info=0 st=0 eta/thr=   0.0256 fwd= 1.47e-13 ok
+seed= 7 cusolverDnDHgesv 2^4    niters=  10 info=0 st=0 eta/thr=    0.743 fwd= 1.22e-12 ok
+seed= 7 cusolverDnDHgesv 2^4    niters=  10 info=0 st=0 eta/thr=    0.743 fwd= 1.22e-12 ok
+seed= 7 cusolverDnDHgesv 2^4    niters=  10 info=0 st=0 eta/thr=    0.743 fwd= 1.22e-12 ok
+seed= 7 cusolverDnDBgesv 2^0    niters=  24 info=0 st=0 eta/thr=     9.31 fwd= 4.24e-11 ok
+seed= 7 cusolverDnDBgesv 2^20   niters=  15 info=0 st=0 eta/thr=  4.2e+06 fwd= 6.12e-06 WRONG
+seed= 7 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr= 5.87e+11 fwd=     1.64 WRONG
+seed= 7 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.636 fwd= 1.33e-12 ok
+seed= 7 cusolverDnDXgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.098 fwd= 2.54e-13 ok
+seed= 7 cusolverDnDXgesv 2^20   niters=   5 info=0 st=0 eta/thr= 3.86e+05 fwd= 5.26e-07 VIOLATES
+seed= 7 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 2.24e+10 fwd=   0.0439 WRONG
+seed= 7 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.636 fwd= 1.33e-12 ok
+seed= 7 cusolverDnDSgesv 2^0    niters=   4 info=0 st=0 eta/thr=   0.0141 fwd= 4.24e-14 ok
+seed= 7 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=     38.9 fwd= 1.02e-10 ok
+seed= 7 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr= 9.19e+04 fwd= 3.76e-07 VIOLATES
+seed= 7 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 3.23e+08 fwd= 0.000959 WRONG
+seed= 8 cusolverDnDHgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.183 fwd= 3.23e-13 ok
+seed= 8 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     2.17 fwd= 2.87e-12 ok
+seed= 8 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     2.17 fwd= 2.87e-12 ok
+seed= 8 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     2.17 fwd= 2.87e-12 ok
+seed= 8 cusolverDnDBgesv 2^0    niters=  23 info=0 st=0 eta/thr=     23.6 fwd= 5.82e-11 ok
+seed= 8 cusolverDnDBgesv 2^20   niters=  13 info=0 st=0 eta/thr= 2.53e+07 fwd= 3.45e-05 WRONG
+seed= 8 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr= 7.24e+11 fwd=     1.75 WRONG
+seed= 8 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.756 fwd= 1.14e-12 ok
+seed= 8 cusolverDnDXgesv 2^0    niters=  10 info=0 st=0 eta/thr=   0.0916 fwd= 1.91e-13 ok
+seed= 8 cusolverDnDXgesv 2^20   niters=   5 info=0 st=0 eta/thr= 4.79e+05 fwd= 4.91e-07 VIOLATES
+seed= 8 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 2.87e+10 fwd=   0.0326 WRONG
+seed= 8 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.756 fwd= 1.14e-12 ok
+seed= 8 cusolverDnDSgesv 2^0    niters=   3 info=0 st=0 eta/thr=    0.014 fwd= 2.31e-14 ok
+seed= 8 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=     1.23 fwd= 1.52e-12 ok
+seed= 8 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr=    2e+04 fwd= 1.59e-08 VIOLATES
+seed= 8 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 3.84e+08 fwd= 0.000202 WRONG
+seed= 9 cusolverDnDHgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.137 fwd= 2.15e-13 ok
+seed= 9 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     3.47 fwd= 6.84e-12 ok
+seed= 9 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     3.47 fwd= 6.84e-12 ok
+seed= 9 cusolverDnDHgesv 2^4    niters=   9 info=0 st=0 eta/thr=     3.47 fwd= 6.84e-12 ok
+seed= 9 cusolverDnDBgesv 2^0    niters=  23 info=0 st=0 eta/thr=     9.81 fwd= 9.29e-12 ok
+seed= 9 cusolverDnDBgesv 2^20   niters=  14 info=0 st=0 eta/thr= 6.12e+06 fwd= 6.33e-06 WRONG
+seed= 9 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr= 7.44e+11 fwd=     1.98 WRONG
+seed= 9 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.702 fwd= 1.93e-12 ok
+seed= 9 cusolverDnDXgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.145 fwd= 2.24e-13 ok
+seed= 9 cusolverDnDXgesv 2^20   niters=   6 info=0 st=0 eta/thr= 7.14e+04 fwd= 7.96e-08 VIOLATES
+seed= 9 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 5.57e+10 fwd=   0.0628 WRONG
+seed= 9 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.702 fwd= 1.93e-12 ok
+seed= 9 cusolverDnDSgesv 2^0    niters=   3 info=0 st=0 eta/thr=   0.0128 fwd= 4.81e-14 ok
+seed= 9 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=      7.8 fwd= 4.86e-12 ok
+seed= 9 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr= 9.02e+04 fwd= 8.85e-08 VIOLATES
+seed= 9 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 2.71e+08 fwd= 0.000774 WRONG
+seed=10 cusolverDnDHgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.417 fwd= 7.74e-13 ok
+seed=10 cusolverDnDHgesv 2^4    niters=  10 info=0 st=0 eta/thr=    0.426 fwd= 7.77e-13 ok
+seed=10 cusolverDnDHgesv 2^4    niters=  10 info=0 st=0 eta/thr=    0.426 fwd= 7.77e-13 ok
+seed=10 cusolverDnDHgesv 2^4    niters=  10 info=0 st=0 eta/thr=    0.426 fwd= 7.77e-13 ok
+seed=10 cusolverDnDBgesv 2^0    niters=  22 info=0 st=0 eta/thr=     19.6 fwd= 6.46e-11 ok
+seed=10 cusolverDnDBgesv 2^20   niters=  12 info=0 st=0 eta/thr= 2.37e+07 fwd= 6.92e-05 WRONG
+seed=10 cusolverDnDBgesv 2^40   niters=   1 info=0 st=0 eta/thr= 5.67e+11 fwd=     2.96 WRONG
+seed=10 cusolverDnDBgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.603 fwd= 2.73e-12 ok
+seed=10 cusolverDnDXgesv 2^0    niters=  10 info=0 st=0 eta/thr=    0.451 fwd= 9.22e-13 ok
+seed=10 cusolverDnDXgesv 2^20   niters=   6 info=0 st=0 eta/thr= 1.06e+05 fwd= 5.04e-07 VIOLATES
+seed=10 cusolverDnDXgesv 2^40   niters=   1 info=0 st=0 eta/thr= 6.76e+10 fwd=    0.241 WRONG
+seed=10 cusolverDnDXgesv 2^-60  niters= -50 info=0 st=0 eta/thr=    0.603 fwd= 2.73e-12 ok
+seed=10 cusolverDnDSgesv 2^0    niters=   3 info=0 st=0 eta/thr=   0.0115 fwd= 2.81e-14 ok
+seed=10 cusolverDnDSgesv 2^20   niters=   2 info=0 st=0 eta/thr=      2.8 fwd= 3.68e-12 ok
+seed=10 cusolverDnDSgesv 2^40   niters=   1 info=0 st=0 eta/thr= 3.59e+04 fwd= 3.35e-08 VIOLATES
+seed=10 cusolverDnDSgesv 2^-60  niters=   0 info=0 st=0 eta/thr= 3.02e+08 fwd= 0.000427 WRONG
+
+R1 tally (10 seeds per line):
+   cusolverDnDHgesv 2^0 WRONG=  0 VIOLATES=  0 ok= 10
+   cusolverDnDHgesv 2^4 WRONG=  0 VIOLATES=  0 ok= 30
+   cusolverDnDBgesv 2^0 WRONG=  0 VIOLATES=  0 ok= 10
+   cusolverDnDBgesv 2^20 WRONG= 10 VIOLATES=  0 ok=  0
+   cusolverDnDBgesv 2^40 WRONG= 10 VIOLATES=  0 ok=  0
+   cusolverDnDBgesv 2^-60 WRONG=  0 VIOLATES=  0 ok= 10
+   cusolverDnDXgesv 2^0 WRONG=  0 VIOLATES=  0 ok= 10
+   cusolverDnDXgesv 2^20 WRONG=  1 VIOLATES=  9 ok=  0
+   cusolverDnDXgesv 2^40 WRONG= 10 VIOLATES=  0 ok=  0
+   cusolverDnDXgesv 2^-60 WRONG=  0 VIOLATES=  0 ok= 10
+   cusolverDnDSgesv 2^0 WRONG=  0 VIOLATES=  0 ok= 10
+   cusolverDnDSgesv 2^20 WRONG=  0 VIOLATES=  1 ok=  9
+   cusolverDnDSgesv 2^40 WRONG=  1 VIOLATES=  9 ok=  0
+   cusolverDnDSgesv 2^-60 WRONG= 10 VIOLATES=  0 ok=  0

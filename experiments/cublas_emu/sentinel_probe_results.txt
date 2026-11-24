@@ -1,0 +1,2 @@
+S1 zero_denorm         exact C00=3.1e-322 | native: bits=-2 C00=3.1e-322 relerr00=0 comp=1.56e+15 wrong=1 | emu_perf: bits=1054 C00=3.1e-322 relerr00=0 comp=1.56e+15 wrong=1 | emu_eager: bits=1054 C00=3.1e-322 relerr00=0 comp=1.56e+15 wrong=1
+S2 zero_denorm_mild    exact C00=5.879560796570279e-300 | native: bits=-2 C00=5.879560796570279e-300 relerr00=0 comp=1.55 wrong=0 | emu_perf: bits=114 C00=5.879560796570279e-300 relerr00=0 comp=1.55 wrong=0 | emu_eager: bits=114 C00=5.879560796570279e-300 relerr00=0 comp=1.55 wrong=0

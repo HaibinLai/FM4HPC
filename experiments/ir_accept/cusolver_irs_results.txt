@@ -1,0 +1,63 @@
+cuSOLVER version 12401
+
+W(10)*2^10  growth 2^19
+  FP64 (IRS 64/64)           iter=    0 info=  0  nonfinite=  0/10 max|x-x_true|=0
+  FP16 factor                iter=    0 info=  0  nonfinite=  0/10 max|x-x_true|=0
+  FP32 factor                iter=    0 info=  0  nonfinite=  0/10 max|x-x_true|=0
+  FP16 factor, no fallback   iter=    0 info=  0  nonfinite=  0/10 max|x-x_true|=0
+  FP32 factor, no fallback   iter=    0 info=  0  nonfinite=  0/10 max|x-x_true|=0
+
+W(20)*2^0  growth 2^19
+  FP64 (IRS 64/64)           iter=    0 info=  0  nonfinite=  0/20 max|x-x_true|=0
+  FP16 factor                iter=    0 info=  0  nonfinite=  0/20 max|x-x_true|=0
+  FP32 factor                iter=    0 info=  0  nonfinite=  0/20 max|x-x_true|=0
+  FP16 factor, no fallback   iter=    0 info=  0  nonfinite=  0/20 max|x-x_true|=0
+  FP32 factor, no fallback   iter=    0 info=  0  nonfinite=  0/20 max|x-x_true|=0
+
+W(40)*2^0  growth 2^39
+  FP64 (IRS 64/64)           iter=    0 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP16 factor                iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP32 factor                iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP16 factor, no fallback   iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP32 factor, no fallback   iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+
+W(16)*2^0  growth 2^15
+  FP64 (IRS 64/64)           iter=    0 info=  0  nonfinite=  0/16 max|x-x_true|=0
+  FP16 factor                iter=    0 info=  0  nonfinite=  0/16 max|x-x_true|=0
+  FP32 factor                iter=    0 info=  0  nonfinite=  0/16 max|x-x_true|=0
+  FP16 factor, no fallback   iter=    0 info=  0  nonfinite=  0/16 max|x-x_true|=0
+  FP32 factor, no fallback   iter=    0 info=  0  nonfinite=  0/16 max|x-x_true|=0
+
+W(40)*2^80 growth 2^119
+  FP64 (IRS 64/64)           iter=    0 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP16 factor                iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP32 factor                iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP16 factor, no fallback   iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP32 factor, no fallback   iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+
+W(40)*2^100 growth 2^139
+  FP64 (IRS 64/64)           iter=    0 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP16 factor                iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP32 factor                iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP16 factor, no fallback   iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+  FP32 factor, no fallback   iter=    1 info=  0  nonfinite=  0/40 max|x-x_true|=0
+
+W(30)*2^120 growth 2^149
+  FP64 (IRS 64/64)           iter=    0 info=  0  nonfinite=  0/30 max|x-x_true|=0
+  FP16 factor                iter=    1 info=  0  nonfinite=  0/30 max|x-x_true|=0
+  FP32 factor                iter=    1 info=  0  nonfinite=  0/30 max|x-x_true|=0
+  FP16 factor, no fallback   iter=    1 info=  0  nonfinite=  0/30 max|x-x_true|=0
+  FP32 factor, no fallback   iter=    1 info=  0  nonfinite=  0/30 max|x-x_true|=0
+
+random diag-dominant 256
+  FP64 (IRS 64/64)           iter=    0 info=  0  nonfinite=  0/256 max|x-x_true|=2.44e-15
+  FP16 factor                iter=    2 info=  0  nonfinite=  0/256 max|x-x_true|=1.11e-15
+  FP32 factor                iter=    2 info=  0  nonfinite=  0/256 max|x-x_true|=1.11e-15
+  FP16 factor, no fallback   iter=    2 info=  0  nonfinite=  0/256 max|x-x_true|=1.22e-15
+  FP32 factor, no fallback   iter=    2 info=  0  nonfinite=  0/256 max|x-x_true|=1.22e-15
+
+random 256 with b[0] = NaN
+  D   fallback=True  iter=   -5 info=  0  nonfinite=256/256
+  DH  fallback=True  iter=   -5 info=  0  nonfinite=256/256
+  DS  fallback=True  iter=   -5 info=  0  nonfinite=256/256
+  DS  fallback=False iter=   -5 info=  0  nonfinite=256/256

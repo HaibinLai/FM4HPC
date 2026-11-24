@@ -1,0 +1,58 @@
+cuSOLVER 12401; n=2048; A entries +-[0.5,1); x_true uniform; threshold sqrt(n)*eps
+
+16F/GM:
+   k=  -12 niters=  17 eta/thr=  0.00817 fwd_err_vs_xtrue= 4.86e-13  168.2 ms
+   k=   -8 niters=  16 eta/thr=   0.0156 fwd_err_vs_xtrue= 2.28e-12   14.2 ms
+   k=   -4 niters=  15 eta/thr=   0.0392 fwd_err_vs_xtrue=  1.5e-12   14.1 ms
+   k=   -2 niters=  14 eta/thr=    0.199 fwd_err_vs_xtrue= 7.15e-13   12.9 ms
+   k=    0 niters=  14 eta/thr=    0.353 fwd_err_vs_xtrue= 1.73e-11   12.4 ms
+   k=    2 niters=  13 eta/thr=     3.09 fwd_err_vs_xtrue= 6.56e-11   11.2 ms  x DIFFERS from k=0
+   k=    4 niters=  12 eta/thr=     55.3 fwd_err_vs_xtrue= 8.65e-10   11.6 ms  x DIFFERS from k=0
+   k=    8 niters=  11 eta/thr=      601 fwd_err_vs_xtrue= 4.24e-09   10.2 ms  x DIFFERS from k=0
+   k=   12 niters= -50 eta/thr=    0.859 fwd_err_vs_xtrue=  1.2e-11   93.1 ms  x DIFFERS from k=0
+   k=   15 niters= -50 eta/thr=    0.859 fwd_err_vs_xtrue=  1.2e-11   84.4 ms  x DIFFERS from k=0
+   (recheck k=-12) x DIFFERS from k=0
+   (recheck k=-8) x DIFFERS from k=0
+   (recheck k=-4) x DIFFERS from k=0
+   (recheck k=-2) x DIFFERS from k=0
+
+16F/CL:
+   k=  -12 niters= -50 eta/thr=    0.859 fwd_err_vs_xtrue=  1.2e-11   36.8 ms
+   k=   -4 niters=  43 eta/thr=    0.799 fwd_err_vs_xtrue=  1.2e-11   14.7 ms
+   k=    0 niters=  34 eta/thr=    0.993 fwd_err_vs_xtrue= 1.41e-11   13.5 ms
+   k=    4 niters= -50 eta/thr=    0.859 fwd_err_vs_xtrue=  1.2e-11   36.6 ms  x DIFFERS from k=0
+   k=   12 niters=  -5 eta/thr=    0.859 fwd_err_vs_xtrue=  1.2e-11   27.0 ms  x DIFFERS from k=0
+   (recheck k=-12) x DIFFERS from k=0
+   (recheck k=-4) x DIFFERS from k=0
+
+16BF/GM:
+   k= -100 niters=   0 eta/thr= 7.15e+11 fwd_err_vs_xtrue=     14.3   37.7 ms
+   k=  -40 niters= -50 eta/thr=    0.859 fwd_err_vs_xtrue=  1.2e-11   81.4 ms
+   k=  -12 niters=  48 eta/thr=   0.0191 fwd_err_vs_xtrue= 1.36e-13   57.8 ms
+   k=   -4 niters=  43 eta/thr=      2.4 fwd_err_vs_xtrue= 6.79e-12   48.6 ms
+   k=    0 niters=  40 eta/thr=     60.2 fwd_err_vs_xtrue=    5e-09   43.2 ms
+   k=    4 niters=  38 eta/thr=      562 fwd_err_vs_xtrue= 2.51e-08   41.5 ms  x DIFFERS from k=0
+   k=   12 niters=  32 eta/thr= 1.83e+05 fwd_err_vs_xtrue= 1.76e-06   30.6 ms  x DIFFERS from k=0
+   k=   40 niters=   1 eta/thr= 6.84e+11 fwd_err_vs_xtrue=      5.4    4.8 ms  x DIFFERS from k=0
+   k=  100 niters=   1 eta/thr= 6.84e+11 fwd_err_vs_xtrue=      5.4    4.9 ms  x DIFFERS from k=0
+   (recheck k=-100) x DIFFERS from k=0
+   (recheck k=-40) x DIFFERS from k=0
+   (recheck k=-12) x DIFFERS from k=0
+   (recheck k=-4) x DIFFERS from k=0
+
+32F/GM:
+   k= -100 niters=   0 eta/thr= 4.35e+08 fwd_err_vs_xtrue=   0.0168    4.1 ms
+   k=  -12 niters=   5 eta/thr=  0.00771 fwd_err_vs_xtrue= 6.72e-13    6.5 ms
+   k=    0 niters=   4 eta/thr=  0.00817 fwd_err_vs_xtrue= 6.66e-13    5.4 ms
+   k=   12 niters=   3 eta/thr=    0.664 fwd_err_vs_xtrue= 3.86e-12    4.9 ms  x DIFFERS from k=0
+   k=  100 niters=   1 eta/thr= 1.78e+06 fwd_err_vs_xtrue= 2.34e-06    4.2 ms  x DIFFERS from k=0
+   (recheck k=-100) x DIFFERS from k=0
+   (recheck k=-12) x DIFFERS from k=0
+
+legacy API (default settings), k = 0 and k = 12:
+   cusolverDnDHgesv k=  0 niters=  14 info=0 status=0 eta/thr=    0.353 fwd_err= 1.73e-11
+   cusolverDnDHgesv k= 12 niters= -50 info=0 status=0 eta/thr=    0.859 fwd_err=  1.2e-11
+   cusolverDnDBgesv k=  0 niters=  40 info=0 status=0 eta/thr=     60.2 fwd_err=    5e-09
+   cusolverDnDBgesv k= 12 niters=  32 info=0 status=0 eta/thr= 1.83e+05 fwd_err= 1.76e-06
+
+exact check n=512 16F/GM k=12: niters=18 eta/thr(FP64 residual)=1.277e+05 eta/thr(exact residual)=1.277e+05

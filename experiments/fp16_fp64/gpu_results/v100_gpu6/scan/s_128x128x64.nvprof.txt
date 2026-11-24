@@ -1,0 +1,16 @@
+==2611275== NVPROF is profiling process 2611275, command: ./results/uniform_k16.exe scan_in/s_128x128x64.bin scan_out/s_128x128x64.out.bin
+{"device":"Tesla V100-PCIE-32GB","sm":70,"cuda_runtime":12000,"cuda_driver":13000,"cublas":120002,"splits_A":6,"splits_B":6,"partial_gemms":36,"sumMode":2,"backend":"double_half_float","tensor_core_execution_confirmed":false}
+==2611275== Profiling application: ./results/uniform_k16.exe scan_in/s_128x128x64.bin scan_out/s_128x128x64.out.bin
+==2611275== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   29.94%  138.43us        36  3.8450us  3.5830us  8.9590us  void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)
+                   17.52%  80.994us        12  6.7490us  6.4000us  6.9130us  void cuozblasSplitCKernel<double, __half>(int, int, int, double const *, int, double*, int, __half*, int, short*, double*, int)
+                   16.99%  78.557us        36  2.1820us  2.0470us  3.9360us  void cuozblasLocalFsumKernel<double, float>(int, int, short const *, short const *, float const *, int, double*, int, int)
+                   11.57%  53.471us        14  3.8190us  1.3750us  18.367us  [CUDA memcpy DtoH]
+                   11.39%  52.637us        24  2.1930us  2.1120us  2.4640us  void asum_kernel<int, double, double>(cublasAsumParams<double, double>)
+                    4.93%  22.784us         1  22.784us  22.784us  22.784us  volta_dgemm_64x64_nn
+                    3.83%  17.696us         2  8.8480us  8.8320us  8.8640us  [CUDA memcpy HtoD]
+                    1.34%  6.1760us         2  3.0880us  3.0720us  3.1040us  void cuozblasFindMaxCKernel<double>(int, int, double const *, int, double*)
+                    0.89%  4.1280us         2  2.0640us  1.8880us  2.2400us  [CUDA memset]
+                    0.86%  3.9680us         1  3.9680us  3.9680us  3.9680us  void transpose_readWrite_alignment_kernel<double, double, int=1, bool=0, int=6, int=4, int=4>(cublasTransposeParams<double>, double const *, double*, double const *)
+                    0.75%  3.4880us         1  3.4880us  3.4880us  3.4880us  void cuozblasAxpbyKernel<double>(int, int, double const *, int, double*, int, double, double)

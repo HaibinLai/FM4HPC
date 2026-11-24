@@ -1,0 +1,1 @@
+{"device":"Tesla V100-PCIE-32GB","sm":70,"cuda_runtime":12000,"cuda_driver":13000,"cublas":120002,"splits_A":6,"splits_B":6,"partial_gemms":36,"sumMode":2,"backend":"double_half_float","tensor_core_execution_confirmed":false}

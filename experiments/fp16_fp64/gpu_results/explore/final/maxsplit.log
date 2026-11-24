@@ -1,0 +1,19 @@
+maxsplit: 192 jobs, device 0
+GPU done in 26s; outputs 192/192
+analysis done in 27s
+--- by family
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+f16                          48    48/48          48/48       48/48              0          0           0   48/48         0     0
+gaussian                     48    30/48          48/48       48/48              7          0           0   48/48         0     0
+spread100                    48    48/48          48/48       48/48              0          0           0   48/48         0     0
+uniform                      48    48/48          48/48       48/48              0          0           0   48/48         0     0
+--- by shape/ta-tb/maxsplit
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+((16, 16, 64), 'NN', 1)      24    24/24          24/24       24/24              0          0           0   24/24         0     0
+((16, 16, 64), 'NN', 12)     24    18/24          24/24       24/24              1          0           0   24/24         0     0
+((16, 16, 64), 'NN', 2)      24    24/24          24/24       24/24              0          0           0   24/24         0     0
+((16, 16, 64), 'NN', 3)      24    24/24          24/24       24/24              0          0           0   24/24         0     0
+((16, 16, 64), 'NN', 4)      24    24/24          24/24       24/24              0          0           0   24/24         0     0
+((16, 16, 64), 'NN', 5)      24    24/24          24/24       24/24              0          0           0   24/24         0     0
+((16, 16, 64), 'NN', 6)      24    18/24          24/24       24/24              7          0           0   24/24         0     0
+((16, 16, 64), 'NN', 8)      24    18/24          24/24       24/24              1          0           0   24/24         0     0

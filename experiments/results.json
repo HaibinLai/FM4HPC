@@ -1,0 +1,557 @@
+{
+  "scope": "CPU source-guided arithmetic model, NOT CUDA execution or Lean proof",
+  "source_commit": "08eea9231729d54dbfd92955f2cbfc21ec236856",
+  "seed": 20261122,
+  "python": "3.9.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "numpy": "2.0.2",
+  "numpy_config": "{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"clang\",\n      \"linker\": \"ld64\",\n      \"version\": \"15.0.0\",\n      \"commands\": \"cc\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.0.11\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"clang\",\n      \"linker\": \"ld64\",\n      \"version\": \"15.0.0\",\n      \"commands\": \"c++\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"aarch64\",\n      \"family\": \"aarch64\",\n      \"endian\": \"little\",\n      \"system\": \"darwin\"\n    },\n    \"build\": {\n      \"cpu\": \"aarch64\",\n      \"family\": \"aarch64\",\n      \"endian\": \"little\",\n      \"system\": \"darwin\"\n    }\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"accelerate\",\n      \"found\": true,\n      \"version\": \"unknown\",\n      \"detection method\": \"system\",\n      \"include directory\": \"unknown\",\n      \"lib directory\": \"unknown\",\n      \"openblas configuration\": \"unknown\",\n      \"pc file directory\": \"unknown\"\n    },\n    \"lapack\": {\n      \"name\": \"accelerate\",\n      \"found\": true,\n      \"version\": \"unknown\",\n      \"detection method\": \"system\",\n      \"include directory\": \"unknown\",\n      \"lib directory\": \"unknown\",\n      \"openblas configuration\": \"unknown\",\n      \"pc file directory\": \"unknown\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/private/var/folders/4d/0gnh84wj53j7wyk695q0tc_80000gn/T/build-env-kq4kuj35/bin/python\",\n    \"version\": \"3.9\"\n  },\n  \"SIMD Extensions\": {\n    \"baseline\": [\n      \"NEON\",\n      \"NEON_FP16\",\n      \"NEON_VFPV4\",\n      \"ASIMD\"\n    ],\n    \"found\": [\n      \"ASIMDHP\"\n    ],\n    \"not found\": [\n      \"ASIMDFHM\"\n    ]\n  }\n}\n",
+  "rows": [
+    {
+      "case": "uniform_k3",
+      "method": "numpy_fp64",
+      "shape": [
+        4,
+        3,
+        4
+      ],
+      "max_abs_error": 1.4850775489510342e-16,
+      "max_error_over_max_exact": 1.1315576076728864e-16,
+      "different_from_correctly_rounded": 4,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k3",
+      "method": "ozimmu_cpu_s3",
+      "bits_per_slice": 7,
+      "max_int_dot": 15706,
+      "different_from_numpy": 16,
+      "max_abs_error": 4.816678500819013e-06,
+      "max_error_over_max_exact": 3.6700771654422845e-06,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k3",
+      "method": "ozimmu_cpu_s6",
+      "bits_per_slice": 7,
+      "max_int_dot": 24139,
+      "different_from_numpy": 16,
+      "max_abs_error": 3.9822214815755414e-12,
+      "max_error_over_max_exact": 3.034261083603367e-12,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k3",
+      "method": "ozimmu_cpu_s9",
+      "bits_per_slice": 7,
+      "max_int_dot": 24355,
+      "different_from_numpy": 10,
+      "max_abs_error": 3.7712090748249225e-16,
+      "max_error_over_max_exact": 2.873479786801269e-16,
+      "different_from_correctly_rounded": 10,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k3",
+      "method": "ozimmu_cpu_s12",
+      "bits_per_slice": 7,
+      "max_int_dot": 33361,
+      "different_from_numpy": 10,
+      "max_abs_error": 3.7712090748249225e-16,
+      "max_error_over_max_exact": 2.873479786801269e-16,
+      "different_from_correctly_rounded": 10,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k3",
+      "method": "ozimmu_cpu_s18",
+      "bits_per_slice": 7,
+      "max_int_dot": 33361,
+      "different_from_numpy": 10,
+      "max_abs_error": 3.7712090748249225e-16,
+      "max_error_over_max_exact": 2.873479786801269e-16,
+      "different_from_correctly_rounded": 10,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k16",
+      "method": "numpy_fp64",
+      "shape": [
+        4,
+        16,
+        4
+      ],
+      "max_abs_error": 2.6649583027042113e-16,
+      "max_error_over_max_exact": 1.4086754505376238e-16,
+      "different_from_correctly_rounded": 8,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k16",
+      "method": "ozimmu_cpu_s3",
+      "bits_per_slice": 7,
+      "max_int_dot": 30737,
+      "different_from_numpy": 16,
+      "max_abs_error": 1.0900024693950973e-05,
+      "max_error_over_max_exact": 5.761665081604411e-06,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k16",
+      "method": "ozimmu_cpu_s6",
+      "bits_per_slice": 7,
+      "max_int_dot": 45256,
+      "different_from_numpy": 16,
+      "max_abs_error": 1.0668356599699486e-11,
+      "max_error_over_max_exact": 5.639207196723528e-12,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k16",
+      "method": "ozimmu_cpu_s9",
+      "bits_per_slice": 7,
+      "max_int_dot": 50859,
+      "different_from_numpy": 11,
+      "max_abs_error": 4.738056968956952e-16,
+      "max_error_over_max_exact": 2.5044986740113974e-16,
+      "different_from_correctly_rounded": 12,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k16",
+      "method": "ozimmu_cpu_s12",
+      "bits_per_slice": 7,
+      "max_int_dot": 50859,
+      "different_from_numpy": 11,
+      "max_abs_error": 4.738056968956952e-16,
+      "max_error_over_max_exact": 2.5044986740113974e-16,
+      "different_from_correctly_rounded": 12,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k16",
+      "method": "ozimmu_cpu_s18",
+      "bits_per_slice": 7,
+      "max_int_dot": 50859,
+      "different_from_numpy": 11,
+      "max_abs_error": 4.738056968956952e-16,
+      "max_error_over_max_exact": 2.5044986740113974e-16,
+      "different_from_correctly_rounded": 12,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k64",
+      "method": "numpy_fp64",
+      "shape": [
+        4,
+        64,
+        4
+      ],
+      "max_abs_error": 1.3447875636118809e-15,
+      "max_error_over_max_exact": 1.9212901667973522e-16,
+      "different_from_correctly_rounded": 14,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k64",
+      "method": "ozimmu_cpu_s3",
+      "bits_per_slice": 7,
+      "max_int_dot": 95357,
+      "different_from_numpy": 16,
+      "max_abs_error": 3.0090950588466728e-05,
+      "max_error_over_max_exact": 4.299076600614047e-06,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k64",
+      "method": "ozimmu_cpu_s6",
+      "bits_per_slice": 7,
+      "max_int_dot": 134722,
+      "different_from_numpy": 16,
+      "max_abs_error": 3.1640788380249256e-11,
+      "max_error_over_max_exact": 4.52050102407355e-12,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k64",
+      "method": "ozimmu_cpu_s9",
+      "bits_per_slice": 7,
+      "max_int_dot": 137798,
+      "different_from_numpy": 14,
+      "max_abs_error": 3.1211444030121313e-15,
+      "max_error_over_max_exact": 4.459160846606762e-16,
+      "different_from_correctly_rounded": 13,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k64",
+      "method": "ozimmu_cpu_s12",
+      "bits_per_slice": 7,
+      "max_int_dot": 137798,
+      "different_from_numpy": 14,
+      "max_abs_error": 3.1211444030121313e-15,
+      "max_error_over_max_exact": 4.459160846606762e-16,
+      "different_from_correctly_rounded": 13,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k64",
+      "method": "ozimmu_cpu_s18",
+      "bits_per_slice": 7,
+      "max_int_dot": 137798,
+      "different_from_numpy": 14,
+      "max_abs_error": 3.1211444030121313e-15,
+      "max_error_over_max_exact": 4.459160846606762e-16,
+      "different_from_correctly_rounded": 13,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k256",
+      "method": "numpy_fp64",
+      "shape": [
+        4,
+        256,
+        4
+      ],
+      "max_abs_error": 5.397522776131559e-15,
+      "max_error_over_max_exact": 4.878715203852844e-16,
+      "different_from_correctly_rounded": 15,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k256",
+      "method": "ozimmu_cpu_s3",
+      "bits_per_slice": 7,
+      "max_int_dot": 128717,
+      "different_from_numpy": 16,
+      "max_abs_error": 3.380347576610601e-05,
+      "max_error_over_max_exact": 3.0554300186088336e-06,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k256",
+      "method": "ozimmu_cpu_s6",
+      "bits_per_slice": 7,
+      "max_int_dot": 167965,
+      "different_from_numpy": 16,
+      "max_abs_error": 2.93079218683339e-11,
+      "max_error_over_max_exact": 2.649085699918994e-12,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k256",
+      "method": "ozimmu_cpu_s9",
+      "bits_per_slice": 7,
+      "max_int_dot": 209586,
+      "different_from_numpy": 15,
+      "max_abs_error": 2.6512850912546535e-15,
+      "max_error_over_max_exact": 2.3964447063849087e-16,
+      "different_from_correctly_rounded": 12,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k256",
+      "method": "ozimmu_cpu_s12",
+      "bits_per_slice": 7,
+      "max_int_dot": 215064,
+      "different_from_numpy": 15,
+      "max_abs_error": 2.6512850912546535e-15,
+      "max_error_over_max_exact": 2.3964447063849087e-16,
+      "different_from_correctly_rounded": 12,
+      "elements": 16
+    },
+    {
+      "case": "uniform_k256",
+      "method": "ozimmu_cpu_s18",
+      "bits_per_slice": 7,
+      "max_int_dot": 215064,
+      "different_from_numpy": 15,
+      "max_abs_error": 2.6512850912546535e-15,
+      "max_error_over_max_exact": 2.3964447063849087e-16,
+      "different_from_correctly_rounded": 12,
+      "elements": 16
+    },
+    {
+      "case": "exponent_spread_80",
+      "method": "numpy_fp64",
+      "shape": [
+        4,
+        32,
+        4
+      ],
+      "max_abs_error": 130684655.04051664,
+      "max_error_over_max_exact": 9.621392524388542e-17,
+      "different_from_correctly_rounded": 8,
+      "elements": 16
+    },
+    {
+      "case": "exponent_spread_80",
+      "method": "ozimmu_cpu_s3",
+      "bits_per_slice": 7,
+      "max_int_dot": 15898,
+      "different_from_numpy": 16,
+      "max_abs_error": 7.72478154313963e+18,
+      "max_error_over_max_exact": 5.687213649426212e-06,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "exponent_spread_80",
+      "method": "ozimmu_cpu_s6",
+      "bits_per_slice": 7,
+      "max_int_dot": 27433,
+      "different_from_numpy": 16,
+      "max_abs_error": 12072185551567.9,
+      "max_error_over_max_exact": 8.887901627232055e-12,
+      "different_from_correctly_rounded": 16,
+      "elements": 16
+    },
+    {
+      "case": "exponent_spread_80",
+      "method": "ozimmu_cpu_s9",
+      "bits_per_slice": 7,
+      "max_int_dot": 51738,
+      "different_from_numpy": 15,
+      "max_abs_error": 130684655.04051664,
+      "max_error_over_max_exact": 9.621392524388542e-17,
+      "different_from_correctly_rounded": 15,
+      "elements": 16
+    },
+    {
+      "case": "exponent_spread_80",
+      "method": "ozimmu_cpu_s12",
+      "bits_per_slice": 7,
+      "max_int_dot": 73111,
+      "different_from_numpy": 12,
+      "max_abs_error": 130684655.04051664,
+      "max_error_over_max_exact": 9.621392524388542e-17,
+      "different_from_correctly_rounded": 12,
+      "elements": 16
+    },
+    {
+      "case": "exponent_spread_80",
+      "method": "ozimmu_cpu_s18",
+      "bits_per_slice": 7,
+      "max_int_dot": 105248,
+      "different_from_numpy": 12,
+      "max_abs_error": 130684655.04051664,
+      "max_error_over_max_exact": 9.621392524388542e-17,
+      "different_from_correctly_rounded": 11,
+      "elements": 16
+    },
+    {
+      "case": "cancellation",
+      "method": "numpy_fp64",
+      "shape": [
+        1,
+        4,
+        1
+      ],
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    },
+    {
+      "case": "cancellation",
+      "method": "ozimmu_cpu_s3",
+      "bits_per_slice": 7,
+      "max_int_dot": 0,
+      "different_from_numpy": 1,
+      "max_abs_error": 5.684341886080802e-14,
+      "max_error_over_max_exact": 1.0,
+      "different_from_correctly_rounded": 1,
+      "elements": 1
+    },
+    {
+      "case": "cancellation",
+      "method": "ozimmu_cpu_s6",
+      "bits_per_slice": 7,
+      "max_int_dot": 0,
+      "different_from_numpy": 1,
+      "max_abs_error": 5.684341886080802e-14,
+      "max_error_over_max_exact": 1.0,
+      "different_from_correctly_rounded": 1,
+      "elements": 1
+    },
+    {
+      "case": "cancellation",
+      "method": "ozimmu_cpu_s9",
+      "bits_per_slice": 7,
+      "max_int_dot": 256,
+      "different_from_numpy": 0,
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    },
+    {
+      "case": "cancellation",
+      "method": "ozimmu_cpu_s12",
+      "bits_per_slice": 7,
+      "max_int_dot": 256,
+      "different_from_numpy": 0,
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    },
+    {
+      "case": "cancellation",
+      "method": "ozimmu_cpu_s18",
+      "bits_per_slice": 7,
+      "max_int_dot": 256,
+      "different_from_numpy": 0,
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    },
+    {
+      "case": "positive_integers",
+      "method": "numpy_fp64",
+      "shape": [
+        1,
+        4,
+        1
+      ],
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    },
+    {
+      "case": "positive_integers",
+      "method": "ozimmu_cpu_s3",
+      "bits_per_slice": 7,
+      "max_int_dot": 2560,
+      "different_from_numpy": 0,
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    },
+    {
+      "case": "positive_integers",
+      "method": "ozimmu_cpu_s6",
+      "bits_per_slice": 7,
+      "max_int_dot": 2560,
+      "different_from_numpy": 0,
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    },
+    {
+      "case": "positive_integers",
+      "method": "ozimmu_cpu_s9",
+      "bits_per_slice": 7,
+      "max_int_dot": 2560,
+      "different_from_numpy": 0,
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    },
+    {
+      "case": "positive_integers",
+      "method": "ozimmu_cpu_s12",
+      "bits_per_slice": 7,
+      "max_int_dot": 2560,
+      "different_from_numpy": 0,
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    },
+    {
+      "case": "positive_integers",
+      "method": "ozimmu_cpu_s18",
+      "bits_per_slice": 7,
+      "max_int_dot": 2560,
+      "different_from_numpy": 0,
+      "max_abs_error": 0.0,
+      "max_error_over_max_exact": 0.0,
+      "different_from_correctly_rounded": 0,
+      "elements": 1
+    }
+  ],
+  "rejected_domains": [
+    {
+      "case": "zero",
+      "reason": "zero/subnormal/NaN/Inf outside source-faithful domain"
+    },
+    {
+      "case": "subnormal",
+      "reason": "zero/subnormal/NaN/Inf outside source-faithful domain"
+    },
+    {
+      "case": "shift_128",
+      "reason": "source uint128 shift >=128 has unestablished semantics"
+    },
+    {
+      "case": "max_double",
+      "reason": "source x2(max_exp) overflows"
+    }
+  ],
+  "integer_bound_checks": [
+    {
+      "k": 1,
+      "p": 7,
+      "absolute_sum_bound": 16129
+    },
+    {
+      "k": 3,
+      "p": 7,
+      "absolute_sum_bound": 48387
+    },
+    {
+      "k": 131072,
+      "p": 7,
+      "absolute_sum_bound": 2114060288
+    },
+    {
+      "k": 131073,
+      "p": 6,
+      "absolute_sum_bound": 520228737
+    },
+    {
+      "k": 524288,
+      "p": 6,
+      "absolute_sum_bound": 2080899072
+    },
+    {
+      "k": 524289,
+      "p": 5,
+      "absolute_sum_bound": 503841729
+    },
+    {
+      "k": 536870912,
+      "p": 1,
+      "absolute_sum_bound": 536870912
+    }
+  ],
+  "cancellation_inputs": {
+    "A": [
+      1.0,
+      2.842170943040401e-14,
+      -1.0,
+      2.842170943040401e-14
+    ],
+    "B": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "exact": "1/17592186044416"
+  }
+}

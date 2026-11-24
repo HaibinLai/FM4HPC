@@ -1,0 +1,13 @@
+deepexp: 54 jobs, device 0
+GPU done in 11s; outputs 54/54
+analysis done in 12s
+--- by family
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+neg1000                      18    17/18          18/18       18/18              1          0           0   18/18         0     0
+pos900                       18    14/18          14/18       18/18              1          1           0   18/18         0     0
+wide500                      18     5/18           5/18       18/18   17157889862552454301 17157889862552454301           0   18/18         0     0
+--- by shape/ta-tb/maxsplit
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+((16, 16, 64), 'NN', 12)     18    13/18          13/18       18/18   7939283193100763137 7939283193100763137           0   18/18         0     0
+((32, 24, 128), 'NN', 12)    18     7/18           8/18       18/18   17157889862552454301 17157889862552454301           0   18/18         0     0
+((8, 8, 32), 'NN', 12)       18    16/18          16/18       18/18   8435270728082569990 8435270728082569990           0   18/18         0     0

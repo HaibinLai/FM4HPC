@@ -1,0 +1,14 @@
+port of magma_dsgesv_iteref_gpu (GMSTRS), n = 256, ||A0||_inf = 197.6
+P2 predicts iter = 1 once ||A||_inf >= 1/(eps sqrt(n)) = 5.63e+14, i.e. scale >= 2.85e+12
+scale 2^-80  ||b||_2= 9.24e-23 tol=  2.9e-37 iter=   0 rel.residual=        1 (P1 bound   2.9e-37) bwd/thr=      inf fwd_err=        1
+scale 2^-60  ||b||_2= 9.69e-17 tol= 3.05e-31 iter= 256 rel.residual= 5.55e-15 (P1 bound  3.05e-31) bwd/thr=    0.356 fwd_err= 3.17e-13
+scale 2^-40  ||b||_2= 1.02e-10 tol= 3.19e-25 iter= 256 rel.residual= 5.55e-15 (P1 bound  3.19e-25) bwd/thr=    0.356 fwd_err= 3.17e-13
+scale 2^-20  ||b||_2= 0.000107 tol= 3.35e-19 iter= 256 rel.residual= 5.55e-15 (P1 bound  3.35e-19) bwd/thr=    0.356 fwd_err= 3.17e-13
+scale 2^0    ||b||_2=      112 tol= 3.51e-13 iter=   3 rel.residual=  1.4e-15 (P1 bound  3.51e-13) bwd/thr=   0.0858 fwd_err= 7.42e-14
+scale 2^10   ||b||_2= 1.14e+05 tol=  3.6e-10 iter=   2 rel.residual= 6.58e-11 (P1 bound   3.6e-10) bwd/thr= 4.66e+03 fwd_err= 2.16e-09
+scale 2^20   ||b||_2= 1.17e+08 tol= 3.68e-07 iter=   2 rel.residual= 6.58e-11 (P1 bound  3.68e-07) bwd/thr= 4.66e+03 fwd_err= 2.16e-09
+scale 2^30   ||b||_2=  1.2e+11 tol= 0.000377 iter=   1 rel.residual=  1.6e-06 (P1 bound  0.000377) bwd/thr= 1.11e+08 fwd_err= 9.14e-05
+scale 2^40   ||b||_2= 1.23e+14 tol=    0.386 iter=   1 rel.residual=  1.6e-06 (P1 bound     0.386) bwd/thr= 1.11e+08 fwd_err= 9.14e-05
+scale 2^45   ||b||_2= 3.93e+15 tol=     12.4 iter=   1 rel.residual=  1.6e-06 (P1 bound      12.4) bwd/thr= 1.11e+08 fwd_err= 9.14e-05
+scale 2^50   ||b||_2= 1.26e+17 tol=      395 iter=   1 rel.residual=  1.6e-06 (P1 bound       395) bwd/thr= 1.11e+08 fwd_err= 9.14e-05
+scale 2^60   ||b||_2= 1.29e+20 tol= 4.05e+05 iter=   1 rel.residual=  1.6e-06 (P1 bound  4.05e+05) bwd/thr= 1.11e+08 fwd_err= 9.14e-05

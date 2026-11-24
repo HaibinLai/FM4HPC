@@ -1,0 +1,12 @@
+{
+  "cublas_dgemm": {
+    "max_abs": 0.0,
+    "normalized_max": 0.0,
+    "different_from_rounded_exact": 0
+  },
+  "ozblas_D_H": {
+    "max_abs": 0.0,
+    "normalized_max": 0.0,
+    "different_from_rounded_exact": 0
+  }
+}

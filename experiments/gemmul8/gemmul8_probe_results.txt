@@ -1,0 +1,327 @@
+exit=0
+GEMMul8 version header: see include/version.hpp; u = 2^-53
+
+rand_s0      m=128 n=128 k=512  ref C00=-3.657178e+00 |A||B|00=1.264e+02 ||a0||=1.303e+01 ||b0||=1.310e+01
+  DGEMM      comp=0.7483      bits=53.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  fast_N8    comp=2.996e+07   bits=28.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  fast_N12   comp=449.7       bits=44.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  fast_N14   comp=2.874       bits=51.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  fast_N16   comp=0.129       bits=56.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  fast_N20   comp=0.129       bits=56.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  accu_N8    comp=2.996e+07   bits=28.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  accu_N12   comp=449.7       bits=44.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  accu_N14   comp=2.785       bits=51.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  accu_N16   comp=0.129       bits=56.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+  accu_N20   comp=0.129       bits=56.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.657178e+00
+
+rand_s30     m=128 n=128 k=512  ref C00=3.892335e+17 |A||B|00=9.037e+17 ||a0||=2.896e+09 ||b0||=2.710e+09
+  DGEMM      comp=8.343       bits=52.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  fast_N8    comp=1.563e+09   bits=28.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  fast_N12   comp=4.74e+04    bits=44.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  fast_N14   comp=173         bits=52.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  fast_N16   comp=0.9112      bits=55.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  fast_N20   comp=0.8958      bits=55.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  accu_N8    comp=9.025e+08   bits=29.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  accu_N12   comp=1.767e+04   bits=45.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  accu_N14   comp=96.75       bits=53.0   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  accu_N16   comp=0.8958      bits=55.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+  accu_N20   comp=0.8958      bits=55.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.892335e+17
+
+rand_s60     m=128 n=128 k=512  ref C00=1.314655e+34 |A||B|00=1.413e+35 ||a0||=2.761e+18 ||b0||=2.305e+18
+  DGEMM      comp=7.116       bits=52.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  fast_N8    comp=6.485e+10   bits=29.0   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  fast_N12   comp=1.565e+06   bits=44.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  fast_N14   comp=7933        bits=52.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  fast_N16   comp=42.88       bits=54.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  fast_N20   comp=0.9493      bits=54.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  accu_N8    comp=2.503e+10   bits=30.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  accu_N12   comp=9.433e+05   bits=44.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  accu_N14   comp=4115        bits=53.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  accu_N16   comp=30.33       bits=54.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+  accu_N20   comp=0.9493      bits=54.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.314655e+34
+
+gram_pos     m=128 n=128 k=4096  ref C00=3.701155e+03 |A||B|00=3.701e+03 ||a0||=6.084e+01 ||b0||=6.084e+01
+  DGEMM      comp=5.081       bits=50.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  fast_N8    comp=2.89e+08    bits=24.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  fast_N12   comp=8779        bits=39.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  fast_N14   comp=33.58       bits=47.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  fast_N16   comp=0.5677      bits=53.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  fast_N20   comp=0.5677      bits=53.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  accu_N8    comp=2.89e+08    bits=24.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  accu_N12   comp=8779        bits=39.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  accu_N14   comp=33.58       bits=47.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  accu_N16   comp=0.5677      bits=53.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+  accu_N20   comp=0.5677      bits=53.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=3.701155e+03
+
+gram_ones    m=64 n=64 k=1024  ref C00=1.024000e+03 |A||B|00=1.024e+03 ||a0||=3.200e+01 ||b0||=3.200e+01
+  DGEMM      comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  fast_N8    comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  fast_N12   comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  fast_N14   comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  fast_N16   comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  fast_N20   comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  accu_N8    comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  accu_N12   comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  accu_N14   comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  accu_N16   comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+  accu_N20   comp=0           bits=inf    nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.024000e+03
+
+avg_hides    m=64 n=64 k=64  ref C00=5.048710e-29 |A||B|00=5.049e-29 ||a0||=1.000e+00 ||b0||=7.937e+00
+  DGEMM      comp=2.518       bits=52.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=5.048710e-29
+  fast_N8    comp=9.007e+15   bits=28.8   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=9.007e+15   bits=44.4   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=9.007e+15   bits=53.6   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=9.007e+15   bits=54.4   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=9.007e+15   bits=54.4   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=9.007e+15   bits=29.3   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N12   comp=9.007e+15   bits=44.4   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N14   comp=9.007e+15   bits=53.6   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N16   comp=9.007e+15   bits=54.4   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N20   comp=9.007e+15   bits=54.4   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=0.000000e+00
+
+big520       m=64 n=64 k=256  ref C00=6.011072e+00 |A||B|00=6.657e+01 ||a0||=3.046e+157 ||b0||=2.813e-156
+  DGEMM      comp=1.113       bits=53.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.011072e+00
+  fast_N8    comp=2.789e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.789e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.789e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.789e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.789e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=1.887e+07   bits=29.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.011072e+00
+  accu_N12   comp=574.9       bits=44.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.011072e+00
+  accu_N14   comp=1.497       bits=52.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.011072e+00
+  accu_N16   comp=0.247       bits=55.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.011072e+00
+  accu_N20   comp=0.247       bits=55.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.011072e+00
+
+big520_row0  m=64 n=64 k=256  ref C00=-1.974393e+157 |A||B|00=2.110e+158 ||a0||=3.029e+157 ||b0||=9.352e+00
+  DGEMM      comp=1.298       bits=53.0   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.974393e+157
+  fast_N8    comp=2.143e+15   bits=2.5    nonfinite=0 wrong>=100%=64 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.143e+15   bits=2.5    nonfinite=0 wrong>=100%=64 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.143e+15   bits=2.5    nonfinite=0 wrong>=100%=64 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.143e+15   bits=2.5    nonfinite=0 wrong>=100%=64 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.143e+15   bits=2.5    nonfinite=0 wrong>=100%=64 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=2.141e+07   bits=29.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.974393e+157
+  accu_N12   comp=564.7       bits=44.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.974393e+157
+  accu_N14   comp=1.615       bits=52.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.974393e+157
+  accu_N16   comp=0.225       bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.974393e+157
+  accu_N20   comp=0.225       bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.974393e+157
+
+big500       m=64 n=64 k=256  ref C00=-3.021289e+00 |A||B|00=5.893e+01 ||a0||=2.989e+151 ||b0||=2.725e-150
+  DGEMM      comp=1.253       bits=53.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  fast_N8    comp=2.093e+07   bits=29.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  fast_N12   comp=519.3       bits=44.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  fast_N14   comp=1.425       bits=52.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  fast_N16   comp=0.2305      bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  fast_N20   comp=0.2305      bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  accu_N8    comp=2.093e+07   bits=29.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  accu_N12   comp=519.3       bits=44.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  accu_N14   comp=1.425       bits=52.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  accu_N16   comp=0.2305      bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+  accu_N20   comp=0.2305      bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.021289e+00
+
+big505       m=64 n=64 k=256  ref C00=-7.256949e-01 |A||B|00=6.688e+01 ||a0||=9.747e+152 ||b0||=8.742e-152
+  DGEMM      comp=0.9578      bits=53.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  fast_N8    comp=2.334e+07   bits=28.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  fast_N12   comp=619.2       bits=44.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  fast_N14   comp=1.707       bits=52.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  fast_N16   comp=0.247       bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  fast_N20   comp=0.247       bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  accu_N8    comp=2.051e+07   bits=29.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  accu_N12   comp=619.2       bits=44.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  accu_N14   comp=1.707       bits=52.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  accu_N16   comp=0.247       bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+  accu_N20   comp=0.247       bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-7.256949e-01
+
+big508       m=64 n=64 k=256  ref C00=1.476367e+00 |A||B|00=6.309e+01 ||a0||=7.699e+153 ||b0||=1.074e-152
+  DGEMM      comp=1.013       bits=53.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  fast_N8    comp=2.077e+07   bits=29.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  fast_N12   comp=583.3       bits=44.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  fast_N14   comp=1.934       bits=52.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  fast_N16   comp=0.2239      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  fast_N20   comp=0.2239      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  accu_N8    comp=2.077e+07   bits=29.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  accu_N12   comp=583.3       bits=44.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  accu_N14   comp=1.934       bits=52.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  accu_N16   comp=0.2239      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+  accu_N20   comp=0.2239      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.476367e+00
+
+big511       m=64 n=64 k=256  ref C00=2.230365e+00 |A||B|00=6.447e+01 ||a0||=6.251e+154 ||b0||=1.404e-153
+  DGEMM      comp=1.155       bits=53.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=2.230365e+00
+  fast_N8    comp=2.75e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.75e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.75e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.75e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.75e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=1.74e+07    bits=29.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=2.230365e+00
+  accu_N12   comp=550.3       bits=44.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=2.230365e+00
+  accu_N14   comp=1.641       bits=52.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=2.230365e+00
+  accu_N16   comp=0.238       bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=2.230365e+00
+  accu_N20   comp=0.238       bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=2.230365e+00
+
+tinyA_bigB600 m=64 n=64 k=256  ref C00=-1.422400e+00 |A||B|00=6.735e+01 ||a0||=2.282e-180 ||b0||=3.850e+181
+  DGEMM      comp=1.43        bits=52.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.422400e+00
+  fast_N8    comp=2.701e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.701e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.701e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.701e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.701e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=1.816e+07   bits=29.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.422400e+00
+  accu_N12   comp=543.1       bits=44.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.422400e+00
+  accu_N14   comp=1.378       bits=52.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.422400e+00
+  accu_N16   comp=0.2699      bits=55.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.422400e+00
+  accu_N20   comp=0.2699      bits=55.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.422400e+00
+
+tinyA_bigB540 m=64 n=64 k=256  ref C00=6.543739e+00 |A||B|00=6.687e+01 ||a0||=2.653e-162 ||b0||=3.409e+163
+  DGEMM      comp=1.287       bits=53.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.543739e+00
+  fast_N8    comp=2.587e+15   bits=2.2    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.587e+15   bits=2.2    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.587e+15   bits=2.2    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.587e+15   bits=2.2    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.587e+15   bits=2.2    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=1.802e+07   bits=29.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.543739e+00
+  accu_N12   comp=579.4       bits=44.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.543739e+00
+  accu_N14   comp=1.547       bits=52.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.543739e+00
+  accu_N16   comp=0.22        bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.543739e+00
+  accu_N20   comp=0.22        bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=6.543739e+00
+
+tinyA_bigB560 m=64 n=64 k=256  ref C00=-1.938597e+00 |A||B|00=6.436e+01 ||a0||=2.373e-168 ||b0||=3.536e+169
+  DGEMM      comp=1.118       bits=53.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.938597e+00
+  fast_N8    comp=2.81e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.81e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.81e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.81e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.81e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=1.74e+07    bits=29.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.938597e+00
+  accu_N12   comp=542.2       bits=44.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.938597e+00
+  accu_N14   comp=1.485       bits=52.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.938597e+00
+  accu_N16   comp=0.2526      bits=55.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.938597e+00
+  accu_N20   comp=0.2526      bits=55.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-1.938597e+00
+
+tinyA_bigB580 m=64 n=64 k=256  ref C00=-3.854025e+00 |A||B|00=6.303e+01 ||a0||=2.290e-174 ||b0||=3.621e+175
+  DGEMM      comp=1.342       bits=53.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.854025e+00
+  fast_N8    comp=2.853e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.853e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.853e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.853e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.853e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=1.886e+07   bits=29.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.854025e+00
+  accu_N12   comp=540.5       bits=44.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.854025e+00
+  accu_N14   comp=1.54        bits=52.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.854025e+00
+  accu_N16   comp=0.1872      bits=55.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.854025e+00
+  accu_N20   comp=0.1872      bits=55.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-3.854025e+00
+
+tinyA530     m=64 n=64 k=256  ref C00=7.908100e-160 |A||B|00=1.827e-158 ||a0||=2.696e-159 ||b0||=9.021e+00
+  DGEMM      comp=1.119       bits=53.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  fast_N8    comp=2.171e+07   bits=29.0   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  fast_N12   comp=472.4       bits=44.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  fast_N14   comp=1.5         bits=52.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  fast_N16   comp=0.1953      bits=55.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  fast_N20   comp=0.1953      bits=55.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  accu_N8    comp=1.711e+07   bits=29.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  accu_N12   comp=472.4       bits=44.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  accu_N14   comp=1.5         bits=52.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  accu_N16   comp=0.1953      bits=55.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+  accu_N20   comp=0.1953      bits=55.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=7.908100e-160
+
+tinyA545     m=64 n=64 k=256  ref C00=1.886605e-163 |A||B|00=5.947e-163 ||a0||=8.007e-164 ||b0||=9.685e+00
+  DGEMM      comp=1.323       bits=53.0   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+  fast_N8    comp=4.792e+09   bits=21.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886603e-163
+  fast_N12   comp=1.715e+05   bits=36.0   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+  fast_N14   comp=694.8       bits=44.0   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+  fast_N16   comp=2.045       bits=52.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+  fast_N20   comp=0.2223      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+  accu_N8    comp=2.096e+07   bits=29.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+  accu_N12   comp=764         bits=43.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+  accu_N14   comp=1.404       bits=52.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+  accu_N16   comp=0.2223      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+  accu_N20   comp=0.2223      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.886605e-163
+
+tinyA600     m=64 n=64 k=256  ref C00=1.959590e-180 |A||B|00=1.458e-179 ||a0||=2.194e-180 ||b0||=9.217e+00
+  DGEMM      comp=1.257       bits=53.0   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.959590e-180
+  fast_N8    comp=2.746e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.746e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.746e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.746e+15   bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.821e+12   bits=12.1   nonfinite=0 wrong>=100%=1 (ref nonfinite 0)  C00=1.958732e-180
+  accu_N8    comp=1.837e+07   bits=29.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.959590e-180
+  accu_N12   comp=527.9       bits=44.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.959590e-180
+  accu_N14   comp=1.442       bits=52.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.959590e-180
+  accu_N16   comp=0.1747      bits=55.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.959590e-180
+  accu_N20   comp=0.1747      bits=55.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.959590e-180
+
+tinyA800     m=64 n=64 k=256  ref C00=-8.954871e-241 |A||B|00=9.242e-240 ||a0||=1.367e-240 ||b0||=8.798e+00
+  DGEMM      comp=1.316       bits=53.0   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-8.954871e-241
+  fast_N8    comp=2.588e+15   bits=2.3    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.588e+15   bits=2.3    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.588e+15   bits=2.3    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.588e+15   bits=2.3    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.588e+15   bits=2.3    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=1.953e+07   bits=29.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-8.954871e-241
+  accu_N12   comp=553.5       bits=44.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-8.954871e-241
+  accu_N14   comp=1.379       bits=52.9   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-8.954871e-241
+  accu_N16   comp=0.1912      bits=55.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-8.954871e-241
+  accu_N20   comp=0.1912      bits=55.8   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-8.954871e-241
+
+tinyA1000    m=64 n=64 k=256  ref C00=8.741559e-301 |A||B|00=6.199e-300 ||a0||=8.845e-301 ||b0||=9.339e+00
+  DGEMM      comp=1.238       bits=53.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=8.741559e-301
+  fast_N8    comp=2.851e+15   bits=2.0    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.851e+15   bits=2.0    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.851e+15   bits=2.0    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.851e+15   bits=2.0    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.851e+15   bits=2.0    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=1.739e+07   bits=29.4   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=8.741559e-301
+  accu_N12   comp=622.2       bits=44.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=8.741559e-301
+  accu_N14   comp=1.613       bits=52.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=8.741559e-301
+  accu_N16   comp=0.2148      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=8.741559e-301
+  accu_N20   comp=0.2148      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=8.741559e-301
+
+bigB505      m=64 n=64 k=256  ref C00=1.173788e+153 |A||B|00=6.242e+153 ||a0||=8.808e+00 ||b0||=9.918e+152
+  DGEMM      comp=1.261       bits=53.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  fast_N8    comp=2.002e+07   bits=29.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  fast_N12   comp=591.2       bits=44.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  fast_N14   comp=1.662       bits=52.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  fast_N16   comp=0.2287      bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  fast_N20   comp=0.2287      bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  accu_N8    comp=2.002e+07   bits=29.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  accu_N12   comp=591.2       bits=44.2   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  accu_N14   comp=1.662       bits=52.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  accu_N16   comp=0.2287      bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+  accu_N20   comp=0.2287      bits=55.5   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=1.173788e+153
+
+bigB515      m=64 n=64 k=256  ref C00=-5.722903e+155 |A||B|00=6.932e+156 ||a0||=9.387e+00 ||b0||=9.817e+155
+  DGEMM      comp=1.084       bits=53.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-5.722903e+155
+  fast_N8    comp=2.67e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N12   comp=2.67e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N14   comp=2.67e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N16   comp=2.67e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  fast_N20   comp=2.67e+15    bits=2.1    nonfinite=0 wrong>=100%=4096 (ref nonfinite 0)  C00=0.000000e+00
+  accu_N8    comp=1.824e+07   bits=29.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-5.722903e+155
+  accu_N12   comp=590.6       bits=44.3   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-5.722903e+155
+  accu_N14   comp=1.613       bits=52.7   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-5.722903e+155
+  accu_N16   comp=0.2363      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-5.722903e+155
+  accu_N20   comp=0.2363      bits=55.6   nonfinite=0 wrong>=100%=0 (ref nonfinite 0)  C00=-5.722903e+155
+
+inf_a00      m=64 n=64 k=256  ref C00=inf |A||B|00=inf ||a0||=inf ||b0||=9.276e+00
+  DGEMM      comp=1.211       bits=53.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 64)  C00=inf
+  fast_N8    comp=2.245e+07   bits=29.0   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  fast_N12   comp=537.8       bits=44.4   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  fast_N14   comp=1.424       bits=52.9   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  fast_N16   comp=0.2346      bits=55.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  fast_N20   comp=0.2346      bits=55.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  accu_N8    comp=1.781e+07   bits=29.3   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.371343e+00
+  accu_N12   comp=537.8       bits=44.4   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.371343e+00
+  accu_N14   comp=1.424       bits=52.9   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.371343e+00
+  accu_N16   comp=0.2346      bits=55.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.371343e+00
+  accu_N20   comp=0.2346      bits=55.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.371343e+00
+
+nan_a00      m=64 n=64 k=256  ref C00=nan |A||B|00=nan ||a0||=nan ||b0||=9.501e+00
+  DGEMM      comp=1.286       bits=53.1   nonfinite=0 wrong>=100%=0 (ref nonfinite 64)  C00=nan
+  fast_N8    comp=1.89e+07    bits=29.2   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  fast_N12   comp=569.4       bits=44.2   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  fast_N14   comp=1.954       bits=52.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  fast_N16   comp=0.2267      bits=55.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  fast_N20   comp=0.2267      bits=55.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=0.000000e+00
+  accu_N8    comp=1.89e+07    bits=29.2   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.305887e+00
+  accu_N12   comp=569.4       bits=44.2   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.305887e+00
+  accu_N14   comp=1.954       bits=52.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.305887e+00
+  accu_N16   comp=0.2267      bits=55.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.305887e+00
+  accu_N20   comp=0.2267      bits=55.5   nonfinite=0 wrong>=100%=64 (ref nonfinite 64)  C00=2.305887e+00

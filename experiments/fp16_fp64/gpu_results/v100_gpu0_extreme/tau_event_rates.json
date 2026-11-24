@@ -1,0 +1,74 @@
+{
+ "uniform(-1,1) float64": {
+  "matrices": 300,
+  "matrices_with_gpu_too_large": 0,
+  "matrices_with_formula_too_small": 0,
+  "row_steps": 57600,
+  "gpu_too_large_events": 0,
+  "formula_too_small_events": 0
+ },
+ "gaussian float64": {
+  "matrices": 300,
+  "matrices_with_gpu_too_large": 300,
+  "matrices_with_formula_too_small": 0,
+  "row_steps": 63828,
+  "gpu_too_large_events": 6241,
+  "formula_too_small_events": 0
+ },
+ "uniform float32->double": {
+  "matrices": 300,
+  "matrices_with_gpu_too_large": 0,
+  "matrices_with_formula_too_small": 0,
+  "row_steps": 33507,
+  "gpu_too_large_events": 0,
+  "formula_too_small_events": 0
+ },
+ "uniform float16->double": {
+  "matrices": 300,
+  "matrices_with_gpu_too_large": 4,
+  "matrices_with_formula_too_small": 0,
+  "row_steps": 20044,
+  "gpu_too_large_events": 4,
+  "formula_too_small_events": 0
+ },
+ "multiples of 1/8 in [-1,1]": {
+  "matrices": 300,
+  "matrices_with_gpu_too_large": 0,
+  "matrices_with_formula_too_small": 0,
+  "row_steps": 9600,
+  "gpu_too_large_events": 0,
+  "formula_too_small_events": 0
+ },
+ "small integers -10..10": {
+  "matrices": 300,
+  "matrices_with_gpu_too_large": 0,
+  "matrices_with_formula_too_small": 0,
+  "row_steps": 9600,
+  "gpu_too_large_events": 0,
+  "formula_too_small_events": 0
+ },
+ "0/1 matrix": {
+  "matrices": 300,
+  "matrices_with_gpu_too_large": 0,
+  "matrices_with_formula_too_small": 0,
+  "row_steps": 9600,
+  "gpu_too_large_events": 0,
+  "formula_too_small_events": 0
+ },
+ "powers of two (random e)": {
+  "matrices": 300,
+  "matrices_with_gpu_too_large": 203,
+  "matrices_with_formula_too_small": 0,
+  "row_steps": 19200,
+  "gpu_too_large_events": 343,
+  "formula_too_small_events": 0
+ },
+ "spread +-100 (float64)": {
+  "matrices": 300,
+  "matrices_with_gpu_too_large": 297,
+  "matrices_with_formula_too_small": 0,
+  "row_steps": 115200,
+  "gpu_too_large_events": 1406,
+  "formula_too_small_events": 0
+ }
+}

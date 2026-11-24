@@ -1,0 +1,73 @@
+cuSOLVER version 12401; EPS = 2^-53; threshold sqrt(n)*eps
+
+S scale=1 (max|a|=1): n=2048  FP64 (lowest=64F): niters=0 82.6 ms eta/(sqrt(n)eps)=0.956 nan=0
+   16F /CL   fb=on  niters= -50 outer=  50 info=0 st=0   133.0 ms  eta/thr=    0.956 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=1.02e+27
+   16F /CL   fb=off niters= -50 outer=  50 info=0 st=0    16.6 ms  eta/thr= 4.48e+10 fwd_vs_fp64= 4.24e+27 nonfinite=0 last_hist_rnrm=1.02e+27
+   16F /GM   fb=on  niters=  14 outer=  14 info=0 st=0    15.3 ms  eta/thr=    0.669 fwd_vs_fp64= 4.82e-11 nonfinite=0 last_hist_rnrm=3.47e-11
+   16F /GM   fb=off niters=  14 outer=  14 info=0 st=0    12.9 ms  eta/thr=    0.669 fwd_vs_fp64= 4.82e-11 nonfinite=0 last_hist_rnrm=3.47e-11
+   16BF/GM   fb=on  niters=  43 outer=  43 info=0 st=0    81.6 ms  eta/thr=     58.8 fwd_vs_fp64= 1.18e-09 nonfinite=0 last_hist_rnrm=3.01e-09   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=off niters=  43 outer=  43 info=0 st=0    49.0 ms  eta/thr=     58.8 fwd_vs_fp64= 1.18e-09 nonfinite=0 last_hist_rnrm=3.01e-09   <-- accepted but eta above threshold / non-finite
+
+S scale=100 (max|a|=100): n=2048  FP64 (lowest=64F): niters=1 21.9 ms eta/(sqrt(n)eps)=0.011 nan=0
+   16F /CL   fb=on  niters=  18 outer=  18 info=0 st=0     9.0 ms  eta/thr=    0.412 fwd_vs_fp64= 1.89e-12 nonfinite=0 last_hist_rnrm=2.26e-10
+   16F /CL   fb=off niters=  18 outer=  18 info=0 st=0     9.1 ms  eta/thr=    0.412 fwd_vs_fp64= 1.89e-12 nonfinite=0 last_hist_rnrm=2.26e-10
+   16F /GM   fb=on  niters=  11 outer=  11 info=0 st=0    10.8 ms  eta/thr=      104 fwd_vs_fp64= 1.74e-10 nonfinite=0 last_hist_rnrm=5.47e-07   <-- accepted but eta above threshold / non-finite
+   16F /GM   fb=off niters=  11 outer=  11 info=0 st=0    11.0 ms  eta/thr=      104 fwd_vs_fp64= 1.74e-10 nonfinite=0 last_hist_rnrm=5.47e-07   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=on  niters=  35 outer=  35 info=0 st=0    37.2 ms  eta/thr=  2.4e+04 fwd_vs_fp64= 2.15e-07 nonfinite=0 last_hist_rnrm=0.00011   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=off niters=  35 outer=  35 info=0 st=0    44.2 ms  eta/thr=  2.4e+04 fwd_vs_fp64= 2.15e-07 nonfinite=0 last_hist_rnrm=0.00011   <-- accepted but eta above threshold / non-finite
+
+S scale=1000 (max|a|=1000): n=2048  FP64 (lowest=64F): niters=0 19.9 ms eta/(sqrt(n)eps)=0.968 nan=0
+   16F /CL   fb=on  niters=  21 outer=  21 info=0 st=0    10.7 ms  eta/thr=    0.803 fwd_vs_fp64= 1.53e-11 nonfinite=0 last_hist_rnrm=4.29e-09
+   16F /CL   fb=off niters=  21 outer=  21 info=0 st=0    10.7 ms  eta/thr=    0.803 fwd_vs_fp64= 1.53e-11 nonfinite=0 last_hist_rnrm=4.29e-09
+   16F /GM   fb=on  niters=  10 outer=  10 info=0 st=0     9.2 ms  eta/thr=      776 fwd_vs_fp64= 1.46e-08 nonfinite=0 last_hist_rnrm=3.54e-05   <-- accepted but eta above threshold / non-finite
+   16F /GM   fb=off niters=  10 outer=  10 info=0 st=0     9.5 ms  eta/thr=      776 fwd_vs_fp64= 1.46e-08 nonfinite=0 last_hist_rnrm=3.54e-05   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=on  niters=  32 outer=  32 info=0 st=0    34.4 ms  eta/thr= 9.68e+04 fwd_vs_fp64= 1.34e-06 nonfinite=0 last_hist_rnrm=0.00573   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=off niters=  32 outer=  32 info=0 st=0    33.2 ms  eta/thr= 9.68e+04 fwd_vs_fp64= 1.34e-06 nonfinite=0 last_hist_rnrm=0.00573   <-- accepted but eta above threshold / non-finite
+
+S scale=3000 (max|a|=3000): n=2048  FP64 (lowest=64F): niters=0 19.8 ms eta/(sqrt(n)eps)=0.97 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    31.1 ms  eta/thr=     0.97 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=4.74e+13
+   16F /CL   fb=off niters=  -5 outer=  -5 info=0 st=0    10.2 ms  eta/thr=      nan fwd_vs_fp64=      nan nonfinite=2048 last_hist_rnrm=4.74e+13
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    82.3 ms  eta/thr=     0.97 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=4.08e+06
+   16F /GM   fb=off niters= -50 outer=  50 info=0 st=0    64.1 ms  eta/thr= 3.07e+12 fwd_vs_fp64=     10.8 nonfinite=0 last_hist_rnrm=4.08e+06
+   16BF/GM   fb=on  niters=  27 outer=  27 info=0 st=0    25.9 ms  eta/thr= 1.14e+06 fwd_vs_fp64= 4.35e-06 nonfinite=0 last_hist_rnrm=0.155   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=off niters=  27 outer=  27 info=0 st=0    24.9 ms  eta/thr= 1.14e+06 fwd_vs_fp64= 4.35e-06 nonfinite=0 last_hist_rnrm=0.155   <-- accepted but eta above threshold / non-finite
+
+S scale=10000 (max|a|=1e+04): n=2048  FP64 (lowest=64F): niters=1 20.0 ms eta/(sqrt(n)eps)=0.00896 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    26.1 ms  eta/thr=     1.12 fwd_vs_fp64= 5.41e-11 nonfinite=0 last_hist_rnrm=1.13e+26
+   16F /CL   fb=off niters=  -5 outer=  -5 info=0 st=0     7.2 ms  eta/thr=      nan fwd_vs_fp64=      nan nonfinite=1719 last_hist_rnrm=1.13e+26
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    82.3 ms  eta/thr=     1.12 fwd_vs_fp64= 5.41e-11 nonfinite=0 last_hist_rnrm=3.01e+08
+   16F /GM   fb=off niters= -50 outer=  50 info=0 st=0    67.1 ms  eta/thr= 3.06e+12 fwd_vs_fp64=      189 nonfinite=0 last_hist_rnrm=3.01e+08
+   16BF/GM   fb=on  niters=  37 outer=  37 info=0 st=0    38.3 ms  eta/thr= 1.58e+05 fwd_vs_fp64= 5.81e-06 nonfinite=0 last_hist_rnrm=0.0745   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=off niters=  37 outer=  37 info=0 st=0    39.0 ms  eta/thr= 1.58e+05 fwd_vs_fp64= 5.81e-06 nonfinite=0 last_hist_rnrm=0.0745   <-- accepted but eta above threshold / non-finite
+
+S scale=30000 (max|a|=3e+04): n=2048  FP64 (lowest=64F): niters=0 19.5 ms eta/(sqrt(n)eps)=0.886 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    26.2 ms  eta/thr=    0.886 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=nan
+   16F /CL   fb=off niters=  -5 outer=  -5 info=0 st=0     6.2 ms  eta/thr=      nan fwd_vs_fp64=      nan nonfinite=1102 last_hist_rnrm=nan
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    82.3 ms  eta/thr=    0.886 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=2.31e+09
+   16F /GM   fb=off niters= -50 outer=  50 info=0 st=0    62.8 ms  eta/thr= 2.88e+12 fwd_vs_fp64=      482 nonfinite=0 last_hist_rnrm=2.31e+09
+   16BF/GM   fb=on  niters=  28 outer=  28 info=0 st=0    26.3 ms  eta/thr= 2.02e+07 fwd_vs_fp64= 0.000409 nonfinite=0 last_hist_rnrm=36.1   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=off niters=  28 outer=  28 info=0 st=0    25.6 ms  eta/thr= 2.02e+07 fwd_vs_fp64= 0.000409 nonfinite=0 last_hist_rnrm=36.1   <-- accepted but eta above threshold / non-finite
+
+S scale=60000 (max|a|=6e+04): n=2048  FP64 (lowest=64F): niters=1 20.2 ms eta/(sqrt(n)eps)=0.00794 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    24.8 ms  eta/thr=     1.02 fwd_vs_fp64=  4.2e-12 nonfinite=0 last_hist_rnrm=nan
+   16F /CL   fb=off niters=  -5 outer=  -5 info=0 st=0     5.8 ms  eta/thr=      nan fwd_vs_fp64=      nan nonfinite=1957 last_hist_rnrm=nan
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    81.9 ms  eta/thr=     1.02 fwd_vs_fp64=  4.2e-12 nonfinite=0 last_hist_rnrm=2.05e+10
+   16F /GM   fb=off niters= -50 outer=  50 info=0 st=0    61.2 ms  eta/thr=  2.4e+12 fwd_vs_fp64= 2.22e+03 nonfinite=0 last_hist_rnrm=2.05e+10
+   16BF/GM   fb=on  niters=  26 outer=  26 info=0 st=0    23.3 ms  eta/thr= 6.73e+06 fwd_vs_fp64= 4.06e-05 nonfinite=0 last_hist_rnrm=19.5   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=off niters=  26 outer=  26 info=0 st=0    25.1 ms  eta/thr= 6.73e+06 fwd_vs_fp64= 4.06e-05 nonfinite=0 last_hist_rnrm=19.5   <-- accepted but eta above threshold / non-finite
+
+S scale=70000 (max|a|=7e+04): n=2048  FP64 (lowest=64F): niters=0 20.7 ms eta/(sqrt(n)eps)=0.911 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    25.5 ms  eta/thr=    0.911 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=9.56e+12
+   16F /CL   fb=off niters=  -5 outer=  -5 info=0 st=0     5.6 ms  eta/thr=      nan fwd_vs_fp64=      nan nonfinite=202 last_hist_rnrm=0
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    81.6 ms  eta/thr=    0.911 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=2.3e+10
+   16F /GM   fb=off niters= -50 outer=  50 info=0 st=0    62.7 ms  eta/thr= 2.99e+12 fwd_vs_fp64= 1.83e+03 nonfinite=0 last_hist_rnrm=2.3e+10
+   16BF/GM   fb=on  niters=  29 outer=  29 info=0 st=0    29.1 ms  eta/thr= 1.39e+07 fwd_vs_fp64= 4.36e-05 nonfinite=0 last_hist_rnrm=52.8   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=off niters=  29 outer=  29 info=0 st=0    29.4 ms  eta/thr= 1.39e+07 fwd_vs_fp64= 4.36e-05 nonfinite=0 last_hist_rnrm=52.8   <-- accepted but eta above threshold / non-finite
+
+S scale=1e+06 (max|a|=1e+06): n=2048  FP64 (lowest=64F): niters=0 21.2 ms eta/(sqrt(n)eps)=0.808 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    26.7 ms  eta/thr=    0.808 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0
+   16F /CL   fb=off niters=  -5 outer=  -5 info=0 st=0     5.4 ms  eta/thr=      nan fwd_vs_fp64=      nan nonfinite=508 last_hist_rnrm=0
+   16F /GM   fb=on  niters=  45 outer=  45 info=0 st=0    56.3 ms  eta/thr= 2.26e+12 fwd_vs_fp64= 8.49e+05 nonfinite=0 last_hist_rnrm=1.18e+14   <-- accepted but eta above threshold / non-finite
+   16F /GM   fb=off niters=  45 outer=  45 info=0 st=0    56.5 ms  eta/thr= 2.26e+12 fwd_vs_fp64= 8.49e+05 nonfinite=0 last_hist_rnrm=1.18e+14   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=on  niters=  22 outer=  22 info=0 st=0    20.9 ms  eta/thr= 2.08e+08 fwd_vs_fp64=  0.00131 nonfinite=0 last_hist_rnrm=1.06e+04   <-- accepted but eta above threshold / non-finite
+   16BF/GM   fb=off niters=  22 outer=  22 info=0 st=0    19.2 ms  eta/thr= 2.08e+08 fwd_vs_fp64=  0.00131 nonfinite=0 last_hist_rnrm=1.06e+04   <-- accepted but eta above threshold / non-finite

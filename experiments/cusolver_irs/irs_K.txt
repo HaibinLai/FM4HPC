@@ -1,0 +1,50 @@
+cuSOLVER version 12401; EPS = 2^-53; threshold sqrt(n)*eps
+
+K kappa=100: n=2048  FP64 (lowest=64F): niters=0 80.9 ms eta/(sqrt(n)eps)=0.639 nan=0
+   16F /CL   fb=on  niters=   9 outer=   9 info=0 st=0   102.5 ms  eta/thr=   0.0372 fwd_vs_fp64= 5.53e-13 nonfinite=0 last_hist_rnrm=2.39e-15
+   16F /GM   fb=on  niters=  10 outer=  10 info=0 st=0    13.9 ms  eta/thr=     0.01 fwd_vs_fp64=  5.4e-13 nonfinite=0 last_hist_rnrm=8.66e-16
+   16BF/GM   fb=on  niters=  26 outer=  26 info=0 st=0    58.0 ms  eta/thr=   0.0652 fwd_vs_fp64= 5.44e-13 nonfinite=0 last_hist_rnrm=3.86e-14
+   TF32/GM   fb=on  niters=  10 outer=  10 info=0 st=0    11.2 ms  eta/thr=     0.01 fwd_vs_fp64= 5.42e-13 nonfinite=0 last_hist_rnrm=9.34e-16
+   32F /CL   fb=on  niters=   2 outer=   2 info=0 st=0     4.3 ms  eta/thr=    0.641 fwd_vs_fp64= 7.44e-13 nonfinite=0 last_hist_rnrm=4.25e-14
+
+K kappa=10000: n=2048  FP64 (lowest=64F): niters=0 21.0 ms eta/(sqrt(n)eps)=0.244 nan=0
+   16F /CL   fb=on  niters= -50 outer=  50 info=0 st=0    36.8 ms  eta/thr=    0.244 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=1.16e+19
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    85.8 ms  eta/thr=    0.244 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=6.39e-11
+   16BF/GM   fb=on  niters= -50 outer=  50 info=0 st=0    83.2 ms  eta/thr=    0.244 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.69
+   TF32/GM   fb=on  niters= -50 outer=  50 info=0 st=0    81.6 ms  eta/thr=    0.244 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=4.81e-11
+   32F /CL   fb=on  niters=   3 outer=   3 info=0 st=0     4.9 ms  eta/thr=    0.193 fwd_vs_fp64= 1.31e-11 nonfinite=0 last_hist_rnrm=9.37e-15
+
+K kappa=1e+06: n=2048  FP64 (lowest=64F): niters=0 20.1 ms eta/(sqrt(n)eps)=0.219 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    34.0 ms  eta/thr=    0.219 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=7.09e+03
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    84.7 ms  eta/thr=    0.219 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.0243
+   16BF/GM   fb=on  niters= -50 outer=  50 info=0 st=0    84.0 ms  eta/thr=    0.219 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.205
+   TF32/GM   fb=on  niters= -50 outer=  50 info=0 st=0    83.7 ms  eta/thr=    0.219 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.0244
+   32F /CL   fb=on  niters=   6 outer=   6 info=0 st=0     5.5 ms  eta/thr=    0.619 fwd_vs_fp64= 1.18e-09 nonfinite=0 last_hist_rnrm=2.56e-14
+
+K kappa=1e+08: n=2048  FP64 (lowest=64F): niters=0 19.7 ms eta/(sqrt(n)eps)=0.193 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    31.6 ms  eta/thr=    0.193 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=3.27e+04
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    82.2 ms  eta/thr=    0.193 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.0111
+   16BF/GM   fb=on  niters= -50 outer=  50 info=0 st=0    81.2 ms  eta/thr=    0.193 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.0674
+   TF32/GM   fb=on  niters= -50 outer=  50 info=0 st=0    84.1 ms  eta/thr=    0.193 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.00982
+   32F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    31.3 ms  eta/thr=    0.193 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=53.2
+
+K kappa=1e+10: n=2048  FP64 (lowest=64F): niters=0 20.8 ms eta/(sqrt(n)eps)=0.0836 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    36.4 ms  eta/thr=   0.0836 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=138
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    86.4 ms  eta/thr=   0.0836 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.00422
+   16BF/GM   fb=on  niters= -50 outer=  50 info=0 st=0    86.8 ms  eta/thr=   0.0836 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.0268
+   TF32/GM   fb=on  niters= -50 outer=  50 info=0 st=0    85.0 ms  eta/thr=   0.0836 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.00294
+   32F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    34.2 ms  eta/thr=   0.0836 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=1.01
+
+K kappa=1e+12: n=2048  FP64 (lowest=64F): niters=0 20.1 ms eta/(sqrt(n)eps)=0.103 nan=0
+   16F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    28.9 ms  eta/thr=    0.103 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=1.22e+09
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    82.0 ms  eta/thr=    0.103 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.0153
+   16BF/GM   fb=on  niters= -50 outer=  50 info=0 st=0    81.4 ms  eta/thr=    0.103 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.0124
+   TF32/GM   fb=on  niters= -50 outer=  50 info=0 st=0    84.0 ms  eta/thr=    0.103 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.00291
+   32F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    34.2 ms  eta/thr=    0.103 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=42.3
+
+K kappa=1e+15: n=2048  FP64 (lowest=64F): niters=0 20.0 ms eta/(sqrt(n)eps)=0.101 nan=0
+   16F /CL   fb=on  niters= -50 outer=  50 info=0 st=0    38.3 ms  eta/thr=    0.101 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=2.46e+29
+   16F /GM   fb=on  niters= -50 outer=  50 info=0 st=0    88.8 ms  eta/thr=    0.101 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.000566
+   16BF/GM   fb=on  niters= -50 outer=  50 info=0 st=0    82.1 ms  eta/thr=    0.101 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.00265
+   TF32/GM   fb=on  niters= -50 outer=  50 info=0 st=0   119.9 ms  eta/thr=    0.101 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=0.000418
+   32F /CL   fb=on  niters=  -5 outer=  -5 info=0 st=0    32.2 ms  eta/thr=    0.101 fwd_vs_fp64=        0 nonfinite=0 last_hist_rnrm=9.16

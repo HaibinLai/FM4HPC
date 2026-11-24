@@ -1,0 +1,28 @@
+
+R only n=1024
+  FP64 (IRS 64/64)           iter=    1 info=  0    66.4ms  nonfinite=  0/1024 max|x-x_true|=2.44e-15
+  FP16 factor                iter=    2 info=  0   121.4ms  nonfinite=  0/1024 max|x-x_true|=2.89e-15
+  FP32 factor                iter=    2 info=  0     7.5ms  nonfinite=  0/1024 max|x-x_true|=2.78e-15
+  FP16 factor, no fallback   iter=    2 info=  0     7.7ms  nonfinite=  0/1024 max|x-x_true|=2.44e-15
+  FP32 factor, no fallback   iter=    2 info=  0     7.1ms  nonfinite=  0/1024 max|x-x_true|=2.44e-15
+
+diag(W(20)*2^0, R) n=1024
+  FP64 (IRS 64/64)           iter=    1 info=  0     9.9ms  nonfinite=  0/1024 max|x-x_true|=4e-15
+  FP16 factor                iter=    2 info=  0     7.4ms  nonfinite=  0/1024 max|x-x_true|=4.11e-15
+  FP32 factor                iter=    2 info=  0     6.5ms  nonfinite=  0/1024 max|x-x_true|=4e-15
+  FP16 factor, no fallback   iter=    2 info=  0     7.3ms  nonfinite=  0/1024 max|x-x_true|=4e-15
+  FP32 factor, no fallback   iter=    2 info=  0     6.3ms  nonfinite=  0/1024 max|x-x_true|=4e-15
+
+diag(W(40)*2^0, R) n=1024
+  FP64 (IRS 64/64)           iter=    1 info=  0    10.9ms  nonfinite=  0/1024 max|x-x_true|=2.89e-15
+  FP16 factor                iter=    2 info=  0     7.2ms  nonfinite=  0/1024 max|x-x_true|=2.44e-15
+  FP32 factor                iter=    2 info=  0     6.3ms  nonfinite=  0/1024 max|x-x_true|=2.66e-15
+  FP16 factor, no fallback   iter=    2 info=  0     6.7ms  nonfinite=  0/1024 max|x-x_true|=2.89e-15
+  FP32 factor, no fallback   iter=    2 info=  0     6.3ms  nonfinite=  0/1024 max|x-x_true|=2.89e-15
+
+diag(W(40)*2^100, R) n=1024
+  FP64 (IRS 64/64)           iter=    0 info=  0    10.6ms  nonfinite=  0/1024 max|x-x_true|=4.44e-15
+  FP16 factor                iter=    1 info=  0     7.0ms  nonfinite=  0/1024 max|x-x_true|=1.13e-12
+  FP32 factor                iter=    1 info=  0     6.4ms  nonfinite=  0/1024 max|x-x_true|=1.31e-12
+  FP16 factor, no fallback   iter=    1 info=  0     6.8ms  nonfinite=  0/1024 max|x-x_true|=1.25e-12
+  FP32 factor, no fallback   iter=    1 info=  0     6.5ms  nonfinite=  0/1024 max|x-x_true|=1.25e-12

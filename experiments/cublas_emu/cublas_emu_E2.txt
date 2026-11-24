@@ -1,0 +1,8 @@
+E2: adversarial inputs at n=2048, sampled exact check
+rand_s0         | native: bits=   -2    64.7ms comp=     1.96 >k=0 wrong=0 | emu_perf: bits=   59    72.9ms comp=   0.0865 >k=0 wrong=0 | emu_eager: bits=   59    10.9ms comp=   0.0865 >k=0 wrong=0
+rand_s60        | native: bits=   -2    26.1ms comp=     28.7 >k=0 wrong=0 | emu_perf: bits=  115    34.6ms comp=     13.8 >k=0 wrong=0 | emu_eager: bits=  115    33.7ms comp=     13.8 >k=0 wrong=0
+avg_hides       | native: bits=   -2    26.5ms comp=     2.49 >k=0 wrong=0 | emu_perf: bits=  154    33.4ms comp=     2.49 >k=0 wrong=0 | emu_eager: bits=  154    33.9ms comp=     2.49 >k=0 wrong=0
+wide_row0       | native: bits=   -2    28.1ms comp=     2.73 >k=0 wrong=0 | emu_perf: bits=   62    10.4ms comp=    0.657 >k=0 wrong=0 | emu_eager: bits=   62     9.7ms comp=    0.657 >k=0 wrong=0
+tri_s60         | native: bits=   -2    27.6ms comp=     11.6 >k=0 wrong=0 | emu_perf: bits= 4308    32.9ms comp=     11.6 >k=0 wrong=0 | emu_eager: bits= 4308    32.6ms comp=     11.6 >k=0 wrong=0
+big_row0_2^900  | native: bits=   -2    26.2ms comp=     2.26 >k=0 wrong=0 | emu_perf: bits=   59    10.0ms comp=   0.0571 >k=0 wrong=0 | emu_eager: bits=   59     9.4ms comp=   0.0571 >k=0 wrong=0
+cancel_heavy    | native: bits=   -2    28.0ms comp= 2.82e-16 >k=0 wrong=0 | emu_perf: bits=   73    11.1ms comp=  2.2e-05 >k=0 wrong=0 | emu_eager: bits=   73    10.4ms comp=  2.2e-05 >k=0 wrong=0

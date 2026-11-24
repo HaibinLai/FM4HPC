@@ -1,0 +1,20 @@
+# toolchain and build artifacts
+.toolchain/
+*.olean
+*.ilean
+*.o
+*.so
+*.dylib
+*.exe
+__pycache__/
+*.pyc
+.DS_Store
+~$*
+
+# raw GPU outputs (regenerate with the scripts; summaries are kept)
+*.bin
+
+# not public: unfiled vendor bug-report drafts, personal outreach material
+operators/NVIDIA_REPORT_cusolver_irs.md
+operators/MAGMA_REPORT_fgmres_ir.md
+outreach/

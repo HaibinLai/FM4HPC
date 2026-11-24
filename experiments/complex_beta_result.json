@@ -1,0 +1,25 @@
+{
+  "scope": "exact upstream kernel body, host single-thread replay; NOT GPU execution",
+  "source_commit": "08eea9231729d54dbfd92955f2cbfc21ec236856",
+  "source_sha256": "24c90373d309261f166a2c89b059f17a93e6cfc26d975f791dfe40b42134d922",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+  "input_C": [
+    1,
+    2
+  ],
+  "beta": [
+    3,
+    4
+  ],
+  "source_result": [
+    -5.0,
+    -14.0
+  ],
+  "python_complex_reference": [
+    -5.0,
+    10.0
+  ],
+  "conclusion": "sequential overwrite violates complex beta*C for this example",
+  "gpu_reproduction": "pending",
+  "upstream_issue_submitted": false
+}

@@ -1,0 +1,235 @@
+{
+  "input": "spread_40.bin",
+  "gpu_output": "gpu_results/v100_gpu6/spread_40.bin",
+  "model_limit": 12,
+  "shape_MNK": [
+    3,
+    3,
+    16
+  ],
+  "structure": {
+    "model": {
+      "splits_A": 9,
+      "splits_B": 9,
+      "partial_gemms": 81,
+      "zero_padded_row_steps_A": 2,
+      "zero_padded_row_steps_B": 2
+    },
+    "gpu": {
+      "splits_A": 9,
+      "splits_B": 9,
+      "partial_gemms": 81,
+      "sumMode": 2,
+      "tensor_core_execution_confirmed": false
+    },
+    "slices_match": true
+  },
+  "summary": {
+    "gpu_vs_model": {
+      "forward": {
+        "bit_identical": 9,
+        "total": 9,
+        "max_ulp": 0,
+        "all_bit_identical": true
+      },
+      "reverse": {
+        "bit_identical": 3,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      },
+      "pairwise": {
+        "bit_identical": 3,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      },
+      "math_fsum": {
+        "bit_identical": 4,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      }
+    },
+    "gpu_vs_rounded_exact": {
+      "bit_identical": 4,
+      "total": 9,
+      "max_ulp": 1,
+      "all_bit_identical": false
+    },
+    "cublas_vs_rounded_exact": {
+      "bit_identical": 5,
+      "total": 9,
+      "max_ulp": 1,
+      "all_bit_identical": false
+    }
+  },
+  "model_variants_matching_gpu_on_all_elements": [
+    "forward"
+  ],
+  "elements": [
+    {
+      "index": [
+        0,
+        0
+      ],
+      "exact_rounded_hex": "0x1.27f3d0130681ep+12",
+      "ozblas_gpu_hex": "0x1.27f3d0130681dp+12",
+      "cublas_gpu_hex": "0x1.27f3d0130681ep+12",
+      "ozblas_err_vs_exact": 1.1297304380087857e-12,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        0,
+        1
+      ],
+      "exact_rounded_hex": "-0x1.da43fc459103ep+23",
+      "ozblas_gpu_hex": "-0x1.da43fc459103ep+23",
+      "cublas_gpu_hex": "-0x1.da43fc459103dp+23",
+      "ozblas_err_vs_exact": 2.7074289851495973e-10,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        0,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.6a73bcce2cf7dp+24",
+      "ozblas_gpu_hex": "-0x1.6a73bcce2cf7dp+24",
+      "cublas_gpu_hex": "-0x1.6a73bcce2cf7dp+24",
+      "ozblas_err_vs_exact": 7.749833487655727e-10,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        1,
+        0
+      ],
+      "exact_rounded_hex": "0x1.db4c2926d6c9cp+29",
+      "ozblas_gpu_hex": "0x1.db4c2926d6c9dp+29",
+      "cublas_gpu_hex": "0x1.db4c2926d6c9cp+29",
+      "ozblas_err_vs_exact": 1.0108782862315615e-07,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        1,
+        1
+      ],
+      "exact_rounded_hex": "-0x1.49df5675d0f1ap+26",
+      "ozblas_gpu_hex": "-0x1.49df5675d0f1bp+26",
+      "cublas_gpu_hex": "-0x1.49df5675d0f1ap+26",
+      "ozblas_err_vs_exact": 1.4098820230992577e-08,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        1,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.07599eb442e86p+29",
+      "ozblas_gpu_hex": "-0x1.07599eb442e87p+29",
+      "cublas_gpu_hex": "-0x1.07599eb442e86p+29",
+      "ozblas_err_vs_exact": 1.3804007636985116e-07,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        2,
+        0
+      ],
+      "exact_rounded_hex": "0x1.189135ddf1adap+12",
+      "ozblas_gpu_hex": "0x1.189135ddf1adap+12",
+      "cublas_gpu_hex": "0x1.189135ddf1ad9p+12",
+      "ozblas_err_vs_exact": 2.331667571328019e-14,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        2,
+        1
+      ],
+      "exact_rounded_hex": "-0x1.82d423aaed206p+29",
+      "ozblas_gpu_hex": "-0x1.82d423aaed207p+29",
+      "cublas_gpu_hex": "-0x1.82d423aaed207p+29",
+      "ozblas_err_vs_exact": 7.674723276579872e-08,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        2,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.d2cba8c5b881fp+25",
+      "ozblas_gpu_hex": "-0x1.d2cba8c5b881fp+25",
+      "cublas_gpu_hex": "-0x1.d2cba8c5b881ep+25",
+      "ozblas_err_vs_exact": 2.1369915800437575e-09,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 0
+      }
+    }
+  ],
+  "caveat": "numerical comparison only; says nothing about Tensor Core execution or library internals"
+}

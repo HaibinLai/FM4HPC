@@ -1,0 +1,11 @@
+nearpow: 360 (e,k) pairs where GPU tau != libm tau (of total differing)
+nearpow: 360 jobs, device 0
+GPU done in 36s; outputs 360/360
+analysis done in 37s
+--- by family
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+near2^e+k                   226     0/226          0/226     226/226             4          4           0  226/226        0     0
+near2^ek                    134     0/134          0/134     134/134             5          5           0  134/134        0     0
+--- by shape/ta-tb/maxsplit
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+((4, 4, 16), 'NN', 12)      360     0/360          0/360     360/360             5          5           0  360/360        0     0

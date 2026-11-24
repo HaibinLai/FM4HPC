@@ -1,0 +1,24 @@
+multiseed: 420 jobs, device 0
+GPU done in 43s; outputs 420/420
+analysis done in 46s
+--- by family
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+dyadic                       42    42/42          42/42       42/42              0          0           0   42/42         0     0
+f16                          42    42/42          42/42       42/42              0          0           0   42/42         0     0
+f32                          42    42/42          42/42       42/42              0          0           0   42/42         0     0
+gaussian                     42    13/42          42/42       42/42              1          0           0   42/42         0     0
+ints                         42    42/42          42/42       42/42              0          0           0   42/42         0     0
+pow2                         42    42/42          42/42       42/42              0          0           0   42/42         0     0
+rowscale                     42    42/42          42/42       42/42              0          0           0   42/42         0     0
+spread100                    42    41/42          42/42       42/42              2          0           0   42/42         0     0
+spread30                     42    15/42          42/42       42/42              1          0           0   42/42         0     0
+uniform                      42    42/42          42/42       42/42              0          0           0   42/42         0     0
+--- by shape/ta-tb/maxsplit
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+(16, 16, 64)                 60    51/60          60/60       60/60              1          0           0   60/60         0     0
+(24, 40, 17)                 60    50/60          60/60       60/60              1          0           0   60/60         0     0
+(32, 32, 128)                60    49/60          60/60       60/60              1          0           0   60/60         0     0
+(4, 4, 16)                   60    60/60          60/60       60/60              0          0           0   60/60         0     0
+(48, 32, 100)                60    48/60          60/60       60/60              1          0           0   60/60         0     0
+(64, 64, 256)                60    47/60          60/60       60/60              2          0           0   60/60         0     0
+(8, 8, 32)                   60    58/60          60/60       60/60              1          0           0   60/60         0     0

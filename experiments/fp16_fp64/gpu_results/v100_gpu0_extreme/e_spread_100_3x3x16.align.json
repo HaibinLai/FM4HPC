@@ -1,0 +1,235 @@
+{
+  "input": "/private/tmp/claude-501/-Users-haibin-Desktop-phd01-kernel-fm/1e29af12-88d9-4f68-b168-3cc9880ba18f/scratchpad/ext_in/e_spread_100_3x3x16.bin",
+  "gpu_output": "gpu_results/v100_gpu0_extreme/e_spread_100_3x3x16.out.bin",
+  "model_limit": 12,
+  "shape_MNK": [
+    3,
+    3,
+    16
+  ],
+  "structure": {
+    "model": {
+      "splits_A": 12,
+      "splits_B": 12,
+      "partial_gemms": 144,
+      "zero_padded_row_steps_A": 0,
+      "zero_padded_row_steps_B": 0
+    },
+    "gpu": {
+      "splits_A": 12,
+      "splits_B": 12,
+      "partial_gemms": 144,
+      "sumMode": 2,
+      "tensor_core_execution_confirmed": false
+    },
+    "slices_match": true
+  },
+  "summary": {
+    "gpu_vs_model": {
+      "forward": {
+        "bit_identical": 9,
+        "total": 9,
+        "max_ulp": 0,
+        "all_bit_identical": true
+      },
+      "reverse": {
+        "bit_identical": 3,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      },
+      "pairwise": {
+        "bit_identical": 4,
+        "total": 9,
+        "max_ulp": 2,
+        "all_bit_identical": false
+      },
+      "math_fsum": {
+        "bit_identical": 3,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      }
+    },
+    "gpu_vs_rounded_exact": {
+      "bit_identical": 3,
+      "total": 9,
+      "max_ulp": 1,
+      "all_bit_identical": false
+    },
+    "cublas_vs_rounded_exact": {
+      "bit_identical": 7,
+      "total": 9,
+      "max_ulp": 1,
+      "all_bit_identical": false
+    }
+  },
+  "model_variants_matching_gpu_on_all_elements": [
+    "forward"
+  ],
+  "elements": [
+    {
+      "index": [
+        0,
+        0
+      ],
+      "exact_rounded_hex": "-0x1.981e008b6e63cp+101",
+      "ozblas_gpu_hex": "-0x1.981e008b6e63dp+101",
+      "cublas_gpu_hex": "-0x1.981e008b6e63cp+101",
+      "ozblas_err_vs_exact": 625568058531989.6,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        0,
+        1
+      ],
+      "exact_rounded_hex": "-0x1.c2c9a1fc326a3p+159",
+      "ozblas_gpu_hex": "-0x1.c2c9a1fc326a3p+159",
+      "cublas_gpu_hex": "-0x1.c2c9a1fc326a3p+159",
+      "ozblas_err_vs_exact": 2.238390054944769e+31,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        0,
+        2
+      ],
+      "exact_rounded_hex": "0x1.9922ae0783921p+141",
+      "ozblas_gpu_hex": "0x1.9922ae0783922p+141",
+      "cublas_gpu_hex": "0x1.9922ae0783921p+141",
+      "ozblas_err_vs_exact": 8.526109444973332e+26,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 2,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        1,
+        0
+      ],
+      "exact_rounded_hex": "0x1.993eae492f284p+98",
+      "ozblas_gpu_hex": "0x1.993eae492f284p+98",
+      "cublas_gpu_hex": "0x1.993eae492f285p+98",
+      "ozblas_err_vs_exact": 20306322105411.344,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        1,
+        1
+      ],
+      "exact_rounded_hex": "0x1.a8d72765e3c43p+102",
+      "ozblas_gpu_hex": "0x1.a8d72765e3c42p+102",
+      "cublas_gpu_hex": "0x1.a8d72765e3c43p+102",
+      "ozblas_err_vs_exact": 827299898718078.1,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        1,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.7529872a6b892p+142",
+      "ozblas_gpu_hex": "-0x1.7529872a6b891p+142",
+      "cublas_gpu_hex": "-0x1.7529872a6b892p+142",
+      "ozblas_err_vs_exact": 1.0373891314428717e+27,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        2,
+        0
+      ],
+      "exact_rounded_hex": "0x1.217ed20cc64b1p+154",
+      "ozblas_gpu_hex": "0x1.217ed20cc64b1p+154",
+      "cublas_gpu_hex": "0x1.217ed20cc64b1p+154",
+      "ozblas_err_vs_exact": 1.7456342208631639e+30,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        2,
+        1
+      ],
+      "exact_rounded_hex": "-0x1.8cff9dd32ba67p+131",
+      "ozblas_gpu_hex": "-0x1.8cff9dd32ba68p+131",
+      "cublas_gpu_hex": "-0x1.8cff9dd32ba67p+131",
+      "ozblas_err_vs_exact": 7.08825139500649e+23,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        2,
+        2
+      ],
+      "exact_rounded_hex": "0x1.415b4bf206788p+171",
+      "ozblas_gpu_hex": "0x1.415b4bf206789p+171",
+      "cublas_gpu_hex": "0x1.415b4bf206789p+171",
+      "ozblas_err_vs_exact": 4.02090771152676e+35,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 0,
+        "math_fsum": 1
+      }
+    }
+  ],
+  "caveat": "numerical comparison only; says nothing about Tensor Core execution or library internals"
+}

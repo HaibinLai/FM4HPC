@@ -1,0 +1,50 @@
+cuSOLVER 12401; round R3
+fresh-process seed=11 cusolverDnDBgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=3.146e+11 exact=3.146e+11 fwd=0.227 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=11 cusolverDnDXgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=6.125e+09 exact=6.125e+09 fwd=0.00416 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=11 cusolverDnDSgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=5688 exact=5688 fwd=2.33e-09 VIOLATES
+cuSOLVER 12401; round R3
+fresh-process seed=11 cusolverDnDSgesv 2^-60 n=512 niters=0 info=0 eta/thr FP64=3.173e+08 exact=3.173e+08 fwd=7.62e-05 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=11 cusolverDnDHgesv 2^4 n=512 niters=8 info=0 eta/thr FP64=0.05933 exact=0.05343 fwd=7.17e-14 ok
+cuSOLVER 12401; round R3
+fresh-process seed=12 cusolverDnDBgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=3.812e+11 exact=3.812e+11 fwd=0.42 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=12 cusolverDnDXgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=6.735e+09 exact=6.735e+09 fwd=0.0098 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=12 cusolverDnDSgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=1.019e+04 exact=1.019e+04 fwd=1.07e-08 VIOLATES
+cuSOLVER 12401; round R3
+fresh-process seed=12 cusolverDnDSgesv 2^-60 n=512 niters=0 info=0 eta/thr FP64=2.467e+08 exact=2.467e+08 fwd=0.000127 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=12 cusolverDnDHgesv 2^4 n=512 niters=8 info=0 eta/thr FP64=0.07506 exact=0.07908 fwd=2.01e-13 ok
+cuSOLVER 12401; round R3
+fresh-process seed=13 cusolverDnDBgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=2.677e+11 exact=2.677e+11 fwd=0.122 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=13 cusolverDnDXgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=4.797e+09 exact=4.797e+09 fwd=0.00281 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=13 cusolverDnDSgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=4912 exact=4912 fwd=9.62e-10 VIOLATES
+cuSOLVER 12401; round R3
+fresh-process seed=13 cusolverDnDSgesv 2^-60 n=512 niters=0 info=0 eta/thr FP64=3.07e+08 exact=3.07e+08 fwd=7.54e-05 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=13 cusolverDnDHgesv 2^4 n=512 niters=7 info=0 eta/thr FP64=0.3174 exact=0.3197 fwd=2.56e-13 ok
+cuSOLVER 12401; round R3
+fresh-process seed=14 cusolverDnDBgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=1.338e+11 exact=1.338e+11 fwd=2.02 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=14 cusolverDnDXgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=1.673e+10 exact=1.673e+10 fwd=0.0647 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=14 cusolverDnDSgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=1.39e+05 exact=1.39e+05 fwd=5.61e-07 VIOLATES
+cuSOLVER 12401; round R3
+fresh-process seed=14 cusolverDnDSgesv 2^-60 n=512 niters=0 info=0 eta/thr FP64=2.478e+08 exact=2.478e+08 fwd=0.00187 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=14 cusolverDnDHgesv 2^4 n=512 niters=8 info=0 eta/thr FP64=0.682 exact=0.6875 fwd=1.28e-11 ok
+cuSOLVER 12401; round R3
+fresh-process seed=15 cusolverDnDBgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=5.22e+11 exact=5.22e+11 fwd=3.51 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=15 cusolverDnDXgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=1.657e+10 exact=1.657e+10 fwd=0.00843 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=15 cusolverDnDSgesv 2^40 n=512 niters=1 info=0 eta/thr FP64=5.192e+04 exact=5.192e+04 fwd=6.98e-08 VIOLATES
+cuSOLVER 12401; round R3
+fresh-process seed=15 cusolverDnDSgesv 2^-60 n=512 niters=0 info=0 eta/thr FP64=2.555e+08 exact=2.555e+08 fwd=0.000719 WRONG
+cuSOLVER 12401; round R3
+fresh-process seed=15 cusolverDnDHgesv 2^4 n=512 niters=8 info=0 eta/thr FP64=0.4843 exact=0.4819 fwd=1.44e-12 ok

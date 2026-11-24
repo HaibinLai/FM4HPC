@@ -1,0 +1,14 @@
+Lean (version 4.36.0, arm64-apple-darwin24.6.0, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)
+--- (1) lean -o Kahan.olean Kahan.lean ; (2) LEAN_PATH=. lean OzSlice.lean   (exit code follows output)
+'OzSlice.slice_lemma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OzSlice.slice_fp16' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OzSlice.multi_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OzSlice.product_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OzSlice.fl32_foldl_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OzSlice.tree_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OzSlice.ozblas_partial_dot_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OzSlice.isMaxS_unique' depends on axioms: [propext, Quot.sound]
+'OzSlice.s_le_11' depends on axioms: [propext, Quot.sound]
+'OzSlice.k1_needs_special_case' depends on axioms: [propext, Quot.sound]
+'OzSlice.isMaxS_examples' does not depend on any axioms
+exit=0

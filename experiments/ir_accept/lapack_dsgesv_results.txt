@@ -1,0 +1,9 @@
+W(40)*2^80  LAPACK dsgesv: iter=1 info=0 nonfinite=0/40 max|x-1|=0 x[0]=1
+               LAPACK dgesv : info=0 nonfinite=0/40 max|x-1|=0
+W(40)*2^100  LAPACK dsgesv: iter=0 info=0 nonfinite=40/40 max|x-1|=0 x[0]=-nan
+               LAPACK dgesv : info=0 nonfinite=0/40 max|x-1|=0
+W(30)*2^120  LAPACK dsgesv: iter=0 info=0 nonfinite=30/30 max|x-1|=0 x[0]=-nan
+               LAPACK dgesv : info=0 nonfinite=0/30 max|x-1|=0
+W(20)*2^0  LAPACK dsgesv: iter=0 info=0 nonfinite=0/20 max|x-1|=0 x[0]=1
+               LAPACK dgesv : info=0 nonfinite=0/20 max|x-1|=0
+liblapack3:amd64 3.12.0-3build1.1

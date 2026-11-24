@@ -1,0 +1,15 @@
+pad: 252 jobs, device 0
+GPU done in 34s; outputs 252/252
+analysis done in 35s
+--- by family
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+gaussian                    120    62/120        120/120     120/120             1          0           0  120/120        0     0
+uniform                     132   132/132        132/132     132/132             0          0           0  132/132        0     0
+--- by shape/ta-tb/maxsplit
+group                         n  GPU==libm GPU==gpu_style  GPU==table maxULP(libm) maxULP(gs) maxULP(tab) splitsOK modelErr noOut
+('pad', 0, 'clobbered_oz', 0, 'clobbered_cublas', 0, 'inputs_modified', 0)   54    42/54          54/54       54/54              1          0           0   54/54         0     0
+('pad', 1, 'clobbered_oz', 0, 'clobbered_cublas', 0, 'inputs_modified', 0)   48    35/48          48/48       48/48              1          0           0   48/48         0     0
+('pad', 17, 'clobbered_oz', 0, 'clobbered_cublas', 0, 'inputs_modified', 0)   48    38/48          48/48       48/48              1          0           0   48/48         0     0
+('pad', 3, 'clobbered_oz', 0, 'clobbered_cublas', 0, 'inputs_modified', 0)   48    38/48          48/48       48/48              1          0           0   48/48         0     0
+('pad', 5, 'clobbered_oz', 0, 'clobbered_cublas', 0, 'inputs_modified', 0)    6     6/6            6/6         6/6               0          0           0    6/6          0     0
+('pad', 8, 'clobbered_oz', 0, 'clobbered_cublas', 0, 'inputs_modified', 0)   48    35/48          48/48       48/48              1          0           0   48/48         0     0

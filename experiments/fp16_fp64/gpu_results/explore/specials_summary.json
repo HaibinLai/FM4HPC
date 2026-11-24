@@ -1,0 +1,347 @@
+[
+ {
+  "case": "zero_A",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "zero_B",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "zero_row_A",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "zero_col_B",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "single_entry_A",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "subnormal_A",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "subnormal_both",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "near_max_A",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   16,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": false,
+  "note": "model_error: ValueError: sigma overflow",
+  "library_status": 0
+ },
+ {
+  "case": "overflow_out",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   16,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   16
+  ],
+  "pattern_equal": false,
+  "note": "model_error: OverflowError: math range error",
+  "library_status": 0
+ },
+ {
+  "case": "tiny_products",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "col_scaled_B",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "K1",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "neg_zero_entries",
+  "finite_inputs": true,
+  "ozblas_nan_inf": [
+   0,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "identical",
+  "library_status": 0
+ },
+ {
+  "case": "nan_A",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   4,
+   0
+  ],
+  "cublas_nan_inf": [
+   4,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "finite elems max rel diff vs cuBLAS: 2.983949459300557e-16",
+  "library_status": 0
+ },
+ {
+  "case": "posinf_A",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   4,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   4
+  ],
+  "pattern_equal": false,
+  "note": "finite elems max rel diff vs cuBLAS: 4.049090573278393e-14",
+  "library_status": 0
+ },
+ {
+  "case": "neginf_A",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   4,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   4
+  ],
+  "pattern_equal": false,
+  "note": "finite elems max rel diff vs cuBLAS: 4.3214448553874303e-16",
+  "library_status": 0
+ },
+ {
+  "case": "posinf_B",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   4,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   4
+  ],
+  "pattern_equal": false,
+  "note": "finite elems max rel diff vs cuBLAS: 1.8341053245812476e-15",
+  "library_status": 0
+ },
+ {
+  "case": "inf_times_zero",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   4,
+   0
+  ],
+  "cublas_nan_inf": [
+   1,
+   3
+  ],
+  "pattern_equal": false,
+  "note": "finite elems max rel diff vs cuBLAS: 4.0232207612825635e-16",
+  "library_status": 0
+ },
+ {
+  "case": "inf_row_zero_B_row",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   7,
+   0
+  ],
+  "cublas_nan_inf": [
+   4,
+   3
+  ],
+  "pattern_equal": false,
+  "note": "finite elems max rel diff vs cuBLAS: 4.2664636512384747e-16",
+  "library_status": 0
+ },
+ {
+  "case": "nan_C0_beta0",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   16,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": false,
+  "note": "finite elems max rel diff vs cuBLAS: None",
+  "library_status": 0
+ },
+ {
+  "case": "nan_C0_beta1",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   16,
+   0
+  ],
+  "cublas_nan_inf": [
+   16,
+   0
+  ],
+  "pattern_equal": true,
+  "note": "finite elems max rel diff vs cuBLAS: None",
+  "library_status": 0
+ },
+ {
+  "case": "inf_C0_beta0",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   16,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": false,
+  "note": "finite elems max rel diff vs cuBLAS: None",
+  "library_status": 0
+ },
+ {
+  "case": "one_nan_C0_beta0",
+  "finite_inputs": false,
+  "ozblas_nan_inf": [
+   1,
+   0
+  ],
+  "cublas_nan_inf": [
+   0,
+   0
+  ],
+  "pattern_equal": false,
+  "note": "finite elems max rel diff vs cuBLAS: 5.550377398210012e-16",
+  "library_status": 0
+ }
+]

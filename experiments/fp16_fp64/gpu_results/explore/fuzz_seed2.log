@@ -1,0 +1,12 @@
+[46s] done 500/4000: GPU==table 500, GPU==libm 456, model_error 0, no_output 0, mismatches so far 0
+[90s] done 1000/4000: GPU==table 1000, GPU==libm 933, model_error 0, no_output 0, mismatches so far 0
+[136s] done 1500/4000: GPU==table 1500, GPU==libm 1403, model_error 0, no_output 0, mismatches so far 0
+[184s] done 2000/4000: GPU==table 2000, GPU==libm 1867, model_error 0, no_output 0, mismatches so far 0
+[230s] done 2500/4000: GPU==table 2500, GPU==libm 2327, model_error 0, no_output 0, mismatches so far 0
+[278s] done 3000/4000: GPU==table 3000, GPU==libm 2784, model_error 0, no_output 0, mismatches so far 0
+[328s] done 3500/4000: GPU==table 3500, GPU==libm 3254, model_error 0, no_output 0, mismatches so far 0
+[379s] done 4000/4000: GPU==table 4000, GPU==libm 3717, model_error 0, no_output 0, mismatches so far 0
+
+FUZZ seed=2: 4000 jobs; GPU==table model bit-identical 4000; splits mismatch 0; model errors 0; no output 0; library status != 0: 0
+GPU==libm model (no GPU-log2 table): 3717
+per A-family (n, identical): {'gaussian': [331, 331], 'wide500': [345, 345], 'spread30': [325, 325], 'f16': [356, 356], 'rowscale': [314, 314], 'neg1000': [337, 337], 'pow2': [312, 312], 'uniform': [321, 321], 'f32': [347, 347], 'dyadic': [330, 330], 'ints': [365, 365], 'spread100': [317, 317]}

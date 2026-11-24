@@ -1,0 +1,17 @@
+{
+  "library": "mukunoki/ozblas",
+  "commit": "a6f6198bc7af6cf288607ef867693f991cf48862",
+  "lean": "Lean (version 4.36.0, arm64-apple-darwin24.6.0, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)",
+  "lean_status": "Kahan.lean, OzSlice.lean (360 lines), OzRecombine.lean (173 lines) all check with exit code 0, no sorry; axioms: propext, Classical.choice, Quot.sound only",
+  "files": {
+    "lean/OptimiKahan/Kahan.lean": "07369480c44a93b3ec6981ebf49c899357569619a0d2bbc7662f558f40fb6719",
+    "lean/OptimiKahan/OzSlice.lean": "ea787508832b7459ae8bce384f20cc04f5f638314483625777be03f04361f5cd",
+    "lean/OptimiKahan/check_log.txt": "9428e30021708efef2d0ed1a33d8b717939736dc03c5aa184f9ed820114e38e6",
+    "lean/OptimiKahan/check_log_ozslice.txt": "7d72896f0681036179253f1e3fe77ecf6bd3abf91aa36e58824fb32b045916af",
+    "lean/OptimiKahan/README.md": "30cc2496de9033b7074484371ea2e8148e3b11699df4ba2cb68c83d389357109",
+    "experiments/ozslice/slice_crosscheck.py": "1d292a16df438679c4015dc820b9fb8af95321c0cc358acda8460f4598a73f8e",
+    "lean/OptimiKahan/OzRecombine.lean": "c2bc671b4efa9f1081dcfd73041a9ece9804853ba4af3f6bfde5e2318783e1d7",
+    "lean/OptimiKahan/check_log_ozrecombine.txt": "e1a4ef001205dc6470360d3371e447ce7108ba7a6dab72188603edbbdb56f2bb",
+    "experiments/ozslice/recombine_crosscheck.py": "ad9d36a6c64165abdc9746f4d60a21c7fc92c4269ce313f6d036b737188feec5"
+  }
+}

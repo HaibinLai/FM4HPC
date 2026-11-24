@@ -1,0 +1,35 @@
+--- a/src/oz2/core/crt_groups.hpp	2026-11-23 06:47:36
++++ b/src/oz2/core/crt_groups.hpp
+@@ -4,7 +4,10 @@
+ #include "../common/timer.hpp"
+ 
+ namespace gemmul8::oz2::core {
++template <class T> inline void compat_clear_ptr1(common::matptr_type<T, true> &m) { m.ptr1 = nullptr; }
++template <class T> inline void compat_clear_ptr1(common::matptr_type<T, false> &) {}
+ 
++
+ template <Func F, Backend B, unsigned N, bool Complex,
+           cublasFillMode_t UA, cublasFillMode_t UB, cublasFillMode_t UC,
+           class Layout, class Multiply, size_t... G>
+@@ -45,7 +48,7 @@
+             auto C_hi = common::make_matptr<Hi, Complex, Complex ? 2U : 1U>(
+                 hi + sizeC * Layout::planes(N, first, i - first), sizeC * Layout::products(N, i));
+             if constexpr (F == Func::herk) {
+-                C_hi.ptr1 = nullptr;
++                compat_clear_ptr1(C_hi); // COMPAT(nvcc 12.0): same effect, via overloads
+             }
+             multiply(i, count, C_hi);
+             i += count;
+--- a/src/oz2/scaling/general/config.hpp	2026-11-23 06:47:36
++++ b/src/oz2/scaling/general/config.hpp
+@@ -2,6 +2,10 @@
+ #include "../../common/common.hpp"
+ 
+ #define GEMMUL8_FP8_UNPACK(...) __VA_ARGS__
++// COMPAT(nvcc 12.0): __maxnreg__ (register-count hint, CUDA >= 12.4) is performance-only; drop it.
++#if defined(__CUDACC_VER_MAJOR__) && (__CUDACC_VER_MAJOR__ == 12 && __CUDACC_VER_MINOR__ < 4)
++    #define __maxnreg__(x)
++#endif
+ 
+ #if defined(__CUDA_ARCH__) && __CUDA_ARCH__ >= 1000 && __CUDA_ARCH__ < 1200
+     #define GEMMUL8_FP8_USE_LIMIT (!common::isComplex<T> && NUM_MODULI < 10U && (NUM_MODULI != 8U || std::is_same_v<T, float>))

@@ -1,0 +1,46 @@
+{
+ "uniform": {
+  "jobs": 42,
+  "differing_jobs": 0,
+  "elems_diff": 0,
+  "gpu_closer": 0,
+  "libm_closer": 0,
+  "tie": 0,
+  "mean_maxerr_gpu": 2.8460023034182145e-16,
+  "mean_maxerr_libm": 2.8460023034182145e-16,
+  "mean_maxerr_cublas": 2.8801525162052113e-16
+ },
+ "gaussian": {
+  "jobs": 42,
+  "differing_jobs": 29,
+  "elems_diff": 108,
+  "gpu_closer": 51,
+  "libm_closer": 57,
+  "tie": 0,
+  "mean_maxerr_gpu": 3.181537862278869e-16,
+  "mean_maxerr_libm": 3.181537862278869e-16,
+  "mean_maxerr_cublas": 3.0566427663342125e-16
+ },
+ "spread30": {
+  "jobs": 42,
+  "differing_jobs": 27,
+  "elems_diff": 891,
+  "gpu_closer": 430,
+  "libm_closer": 461,
+  "tie": 0,
+  "mean_maxerr_gpu": 2.773806707446832e-16,
+  "mean_maxerr_libm": 2.793298573629612e-16,
+  "mean_maxerr_cublas": 3.2402602821535355e-16
+ },
+ "spread100": {
+  "jobs": 42,
+  "differing_jobs": 1,
+  "elems_diff": 48,
+  "gpu_closer": 25,
+  "libm_closer": 23,
+  "tie": 0,
+  "mean_maxerr_gpu": 2.58184314589457e-16,
+  "mean_maxerr_libm": 2.58184314589457e-16,
+  "mean_maxerr_cublas": 2.1529470177023595e-16
+ }
+}

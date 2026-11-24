@@ -1,0 +1,9 @@
+72 traced calls; TraceReplay.lean written
+  assumption A1: holds on all calls
+  assumption A2: holds on all calls
+  assumption A3: holds on all calls
+  assumption A4: holds on all calls
+  assumption A5: holds on all calls
+  assumption A6: holds on all calls
+  assumption A7: holds on all calls
+  A6 detail: worst ro_i/ro_(i-1) = 1, worst |s| = 1

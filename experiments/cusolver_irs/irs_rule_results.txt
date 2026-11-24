@@ -1,0 +1,26 @@
+cuSOLVER 12401; n=2048
+32F/CL k= -20 niters=   5 hist_rows=6 first-satisfied: doc=5 bnrm=None rel=5  -> consistent with ['doc', 'rel']  last RNRM/doc_thr=0.0346
+32F/CL k= -10 niters=   5 hist_rows=6 first-satisfied: doc=5 bnrm=5 rel=5  -> consistent with ['doc', 'bnrm', 'rel']  last RNRM/doc_thr=0.0346
+32F/CL k=   0 niters=   5 hist_rows=6 first-satisfied: doc=5 bnrm=4 rel=5  -> consistent with ['doc', 'rel']  last RNRM/doc_thr=0.0346
+32F/CL k=  10 niters=   5 hist_rows=6 first-satisfied: doc=5 bnrm=2 rel=5  -> consistent with ['doc', 'rel']  last RNRM/doc_thr=0.0346
+32F/CL k=  20 niters=   5 hist_rows=6 first-satisfied: doc=5 bnrm=1 rel=5  -> consistent with ['doc', 'rel']  last RNRM/doc_thr=0.0346
+32F/GM k= -20 niters=  45 hist_rows=46 first-satisfied: doc=5 bnrm=7 rel=6  -> consistent with []  last RNRM/doc_thr=3.33e-08
+32F/GM k= -10 niters=   7 hist_rows=8 first-satisfied: doc=5 bnrm=6 rel=6  -> consistent with []  last RNRM/doc_thr=1.82e-05
+32F/GM k=   0 niters=   6 hist_rows=7 first-satisfied: doc=5 bnrm=4 rel=6  -> consistent with ['rel']  last RNRM/doc_thr=0.00212
+32F/GM k=  10 niters=   5 hist_rows=6 first-satisfied: doc=5 bnrm=3 rel=None  -> consistent with ['doc']  last RNRM/doc_thr=0.337
+32F/GM k=  20 niters=   3 hist_rows=4 first-satisfied: doc=None bnrm=1 rel=None  -> consistent with []  last RNRM/doc_thr=4.64e+03
+16F/CL k= -20 niters= -50 hist_rows=51 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=2.82e+42
+16F/CL k= -10 niters= -50 hist_rows=51 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=13.5
+16F/CL k=   0 niters= -50 hist_rows=51 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=9.85e+24
+16F/CL k=  10 niters= -50 hist_rows=51 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=2.81e+39
+16F/CL k=  20 niters=  -5 hist_rows=6 first-satisfied: doc=None bnrm=3 rel=None  -> consistent with []  last RNRM/doc_thr=8.43e+03
+16F/GM k= -20 niters= -50 hist_rows=51 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=2.77
+16F/GM k= -10 niters=  16 hist_rows=17 first-satisfied: doc=15 bnrm=16 rel=16  -> consistent with ['bnrm', 'rel']  last RNRM/doc_thr=0.018
+16F/GM k=   0 niters=  14 hist_rows=15 first-satisfied: doc=None bnrm=14 rel=None  -> consistent with ['bnrm']  last RNRM/doc_thr=7.47
+16F/GM k=  10 niters=  19 hist_rows=20 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=8.33e+04
+16F/GM k=  20 niters=  37 hist_rows=38 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=2.51e+13
+16BF/GM k= -20 niters= -50 hist_rows=51 first-satisfied: doc=49 bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=0.243
+16BF/GM k= -10 niters=  50 hist_rows=51 first-satisfied: doc=49 bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=0.243
+16BF/GM k=   0 niters=  43 hist_rows=44 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=561
+16BF/GM k=  10 niters=  37 hist_rows=38 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=2.5e+05
+16BF/GM k=  20 niters=  29 hist_rows=30 first-satisfied: doc=None bnrm=None rel=None  -> consistent with []  last RNRM/doc_thr=4.33e+08

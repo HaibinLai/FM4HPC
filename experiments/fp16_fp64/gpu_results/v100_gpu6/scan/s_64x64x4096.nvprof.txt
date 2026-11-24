@@ -1,0 +1,18 @@
+==2624791== NVPROF is profiling process 2624791, command: ./results/uniform_k16.exe scan_in/s_64x64x4096.bin scan_out/s_64x64x4096.out.bin
+{"device":"Tesla V100-PCIE-32GB","sm":70,"cuda_runtime":12000,"cuda_driver":13000,"cublas":120002,"splits_A":8,"splits_B":8,"partial_gemms":64,"sumMode":2,"backend":"double_half_float","tensor_core_execution_confirmed":false}
+==2624791== Profiling application: ./results/uniform_k16.exe scan_in/s_64x64x4096.bin scan_out/s_64x64x4096.out.bin
+==2624791== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   60.62%  1.6428ms         2  821.40us  817.24us  825.56us  [CUDA memcpy HtoD]
+                   16.35%  443.16us        64  6.9240us  5.6310us  11.711us  void cutlass::Kernel<cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8>(cutlass_70_wmma_tensorop_s161616gemm_f16_32x32_64x2_tn_align8Params)
+                    6.83%  185.02us        64  2.8900us  2.8150us  4.2250us  void splitKreduce_kernel<int=32, int=16, int, float, float, float, float, bool=1, bool=0, bool=0>(cublasSplitKParams<float>, float const *, float const *, float*, float const *, float const *, float const *, float const *, float*, void*, long, float*, int*)
+                    5.43%  147.04us        64  2.2970us  2.1430us  4.0000us  void cuozblasLocalFsumKernel<double, float>(int, int, short const *, short const *, float const *, int, double*, int, int)
+                    4.50%  122.08us        16  7.6300us  7.4870us  7.8400us  void cuozblasSplitCKernel<double, __half>(int, int, int, double const *, int, double*, int, __half*, int, short*, double*, int)
+                    2.62%  70.881us        32  2.2150us  2.1430us  2.4000us  void asum_kernel<int, double, double>(cublasAsumParams<double, double>)
+                    1.23%  33.314us        18  1.8500us  1.3760us  5.2800us  [CUDA memcpy DtoH]
+                    1.17%  31.679us         1  31.679us  31.679us  31.679us  volta_dgemm_128x64_nn
+                    0.40%  10.816us         2  5.4080us  4.3200us  6.4960us  void cuozblasFindMaxCKernel<double>(int, int, double const *, int, double*)
+                    0.34%  9.2800us         1  9.2800us  9.2800us  9.2800us  void splitKreduce_kernel<int=32, int=16, int, double, double, double, double, bool=1, bool=0, bool=0>(cublasSplitKParams<double>, double const *, double const *, double*, double const *, double const *, double const *, double const *, double*, void*, long, double*, int*)
+                    0.25%  6.8160us         1  6.8160us  6.8160us  6.8160us  void transpose_readWrite_alignment_kernel<double, double, int=1, bool=0, int=6, int=4, int=4>(cublasTransposeParams<double>, double const *, double*, double const *)
+                    0.16%  4.3200us         2  2.1600us  1.8560us  2.4640us  [CUDA memset]
+                    0.10%  2.7190us         1  2.7190us  2.7190us  2.7190us  void cuozblasAxpbyKernel<double>(int, int, double const *, int, double*, int, double, double)

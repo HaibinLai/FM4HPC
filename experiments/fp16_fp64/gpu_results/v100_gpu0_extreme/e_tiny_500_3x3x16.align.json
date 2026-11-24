@@ -1,0 +1,235 @@
+{
+  "input": "/private/tmp/claude-501/-Users-haibin-Desktop-phd01-kernel-fm/1e29af12-88d9-4f68-b168-3cc9880ba18f/scratchpad/ext_in/e_tiny_500_3x3x16.bin",
+  "gpu_output": "gpu_results/v100_gpu0_extreme/e_tiny_500_3x3x16.out.bin",
+  "model_limit": 12,
+  "shape_MNK": [
+    3,
+    3,
+    16
+  ],
+  "structure": {
+    "model": {
+      "splits_A": 5,
+      "splits_B": 5,
+      "partial_gemms": 25,
+      "zero_padded_row_steps_A": 0,
+      "zero_padded_row_steps_B": 0
+    },
+    "gpu": {
+      "splits_A": 5,
+      "splits_B": 5,
+      "partial_gemms": 25,
+      "sumMode": 2,
+      "tensor_core_execution_confirmed": false
+    },
+    "slices_match": true
+  },
+  "summary": {
+    "gpu_vs_model": {
+      "forward": {
+        "bit_identical": 9,
+        "total": 9,
+        "max_ulp": 0,
+        "all_bit_identical": true
+      },
+      "reverse": {
+        "bit_identical": 5,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      },
+      "pairwise": {
+        "bit_identical": 3,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      },
+      "math_fsum": {
+        "bit_identical": 5,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      }
+    },
+    "gpu_vs_rounded_exact": {
+      "bit_identical": 5,
+      "total": 9,
+      "max_ulp": 1,
+      "all_bit_identical": false
+    },
+    "cublas_vs_rounded_exact": {
+      "bit_identical": 5,
+      "total": 9,
+      "max_ulp": 1,
+      "all_bit_identical": false
+    }
+  },
+  "model_variants_matching_gpu_on_all_elements": [
+    "forward"
+  ],
+  "elements": [
+    {
+      "index": [
+        0,
+        0
+      ],
+      "exact_rounded_hex": "0x1.003de3ab0fbe6p-1000",
+      "ozblas_gpu_hex": "0x1.003de3ab0fbe6p-1000",
+      "cublas_gpu_hex": "0x1.003de3ab0fbe6p-1000",
+      "ozblas_err_vs_exact": 6.066583e-318,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        0,
+        1
+      ],
+      "exact_rounded_hex": "-0x1.a1f7b540b72f5p-1002",
+      "ozblas_gpu_hex": "-0x1.a1f7b540b72f5p-1002",
+      "cublas_gpu_hex": "-0x1.a1f7b540b72f6p-1002",
+      "ozblas_err_vs_exact": 6.59153e-319,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        0,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.29db16004ca63p-1003",
+      "ozblas_gpu_hex": "-0x1.29db16004ca63p-1003",
+      "cublas_gpu_hex": "-0x1.29db16004ca64p-1003",
+      "ozblas_err_vs_exact": 7.7304e-319,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 1,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        1,
+        0
+      ],
+      "exact_rounded_hex": "0x1.419d381745e31p-1002",
+      "ozblas_gpu_hex": "0x1.419d381745e32p-1002",
+      "cublas_gpu_hex": "0x1.419d381745e30p-1002",
+      "ozblas_err_vs_exact": 4.655314e-318,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        1,
+        1
+      ],
+      "exact_rounded_hex": "-0x1.f728d9e9d9940p-1005",
+      "ozblas_gpu_hex": "-0x1.f728d9e9d993fp-1005",
+      "cublas_gpu_hex": "-0x1.f728d9e9d9940p-1005",
+      "ozblas_err_vs_exact": 4.7387e-319,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        1,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.aad901da5d43dp-1000",
+      "ozblas_gpu_hex": "-0x1.aad901da5d43dp-1000",
+      "cublas_gpu_hex": "-0x1.aad901da5d43dp-1000",
+      "ozblas_err_vs_exact": 5.12966e-318,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 1,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        2,
+        0
+      ],
+      "exact_rounded_hex": "0x1.8c22b77115359p-1000",
+      "ozblas_gpu_hex": "0x1.8c22b77115359p-1000",
+      "cublas_gpu_hex": "0x1.8c22b77115359p-1000",
+      "ozblas_err_vs_exact": 2.693295e-318,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        2,
+        1
+      ],
+      "exact_rounded_hex": "0x1.d4522bc5f614ap-1000",
+      "ozblas_gpu_hex": "0x1.d4522bc5f6149p-1000",
+      "cublas_gpu_hex": "0x1.d4522bc5f614ap-1000",
+      "ozblas_err_vs_exact": 1.2829037e-317,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        2,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.29b3956f9a70fp-1000",
+      "ozblas_gpu_hex": "-0x1.29b3956f9a710p-1000",
+      "cublas_gpu_hex": "-0x1.29b3956f9a70ep-1000",
+      "ozblas_err_vs_exact": 2.9986153e-317,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    }
+  ],
+  "caveat": "numerical comparison only; says nothing about Tensor Core execution or library internals"
+}

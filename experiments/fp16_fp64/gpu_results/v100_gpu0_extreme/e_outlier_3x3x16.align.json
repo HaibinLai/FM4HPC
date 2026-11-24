@@ -1,0 +1,235 @@
+{
+  "input": "/private/tmp/claude-501/-Users-haibin-Desktop-phd01-kernel-fm/1e29af12-88d9-4f68-b168-3cc9880ba18f/scratchpad/ext_in/e_outlier_3x3x16.bin",
+  "gpu_output": "gpu_results/v100_gpu0_extreme/e_outlier_3x3x16.out.bin",
+  "model_limit": 12,
+  "shape_MNK": [
+    3,
+    3,
+    16
+  ],
+  "structure": {
+    "model": {
+      "splits_A": 6,
+      "splits_B": 5,
+      "partial_gemms": 30,
+      "zero_padded_row_steps_A": 2,
+      "zero_padded_row_steps_B": 0
+    },
+    "gpu": {
+      "splits_A": 6,
+      "splits_B": 5,
+      "partial_gemms": 30,
+      "sumMode": 2,
+      "tensor_core_execution_confirmed": false
+    },
+    "slices_match": true
+  },
+  "summary": {
+    "gpu_vs_model": {
+      "forward": {
+        "bit_identical": 9,
+        "total": 9,
+        "max_ulp": 0,
+        "all_bit_identical": true
+      },
+      "reverse": {
+        "bit_identical": 6,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      },
+      "pairwise": {
+        "bit_identical": 7,
+        "total": 9,
+        "max_ulp": 2,
+        "all_bit_identical": false
+      },
+      "math_fsum": {
+        "bit_identical": 6,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      }
+    },
+    "gpu_vs_rounded_exact": {
+      "bit_identical": 6,
+      "total": 9,
+      "max_ulp": 1,
+      "all_bit_identical": false
+    },
+    "cublas_vs_rounded_exact": {
+      "bit_identical": 5,
+      "total": 9,
+      "max_ulp": 7,
+      "all_bit_identical": false
+    }
+  },
+  "model_variants_matching_gpu_on_all_elements": [
+    "forward"
+  ],
+  "elements": [
+    {
+      "index": [
+        0,
+        0
+      ],
+      "exact_rounded_hex": "0x1.0000000000000p+497",
+      "ozblas_gpu_hex": "0x1.0000000000000p+497",
+      "cublas_gpu_hex": "0x1.0000000000000p+497",
+      "ozblas_err_vs_exact": 0.7865802729981317,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        0,
+        1
+      ],
+      "exact_rounded_hex": "0x1.33ef5e34b93d4p+499",
+      "ozblas_gpu_hex": "0x1.33ef5e34b93d4p+499",
+      "cublas_gpu_hex": "0x1.33ef5e34b93d4p+499",
+      "ozblas_err_vs_exact": 1.4329475792415736,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        0,
+        2
+      ],
+      "exact_rounded_hex": "0x1.e6d1c9a00ad30p+496",
+      "ozblas_gpu_hex": "0x1.e6d1c9a00ad30p+496",
+      "cublas_gpu_hex": "0x1.e6d1c9a00ad30p+496",
+      "ozblas_err_vs_exact": 0.14932595433737755,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        1,
+        0
+      ],
+      "exact_rounded_hex": "0x1.fffaa6f5963e1p-3",
+      "ozblas_gpu_hex": "0x1.fffaa6f5963e1p-3",
+      "cublas_gpu_hex": "0x1.fffaa6f5963e8p-3",
+      "ozblas_err_vs_exact": 3.4121129588832033e-18,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 7,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        1,
+        1
+      ],
+      "exact_rounded_hex": "0x1.0ecf97fd34d84p+0",
+      "ozblas_gpu_hex": "0x1.0ecf97fd34d85p+0",
+      "cublas_gpu_hex": "0x1.0ecf97fd34d84p+0",
+      "ozblas_err_vs_exact": 2.3349937632928487e-16,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        1,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.e70517357a9f4p+0",
+      "ozblas_gpu_hex": "-0x1.e70517357a9f3p+0",
+      "cublas_gpu_hex": "-0x1.e70517357a9f4p+0",
+      "ozblas_err_vs_exact": 1.3551915650880922e-16,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 0,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        2,
+        0
+      ],
+      "exact_rounded_hex": "-0x1.9469b2a2ac038p-3",
+      "ozblas_gpu_hex": "-0x1.9469b2a2ac039p-3",
+      "cublas_gpu_hex": "-0x1.9469b2a2ac032p-3",
+      "ozblas_err_vs_exact": 3.214392985791747e-17,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 6,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 2,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        2,
+        1
+      ],
+      "exact_rounded_hex": "0x1.165565d7e3e6bp-2",
+      "ozblas_gpu_hex": "0x1.165565d7e3e6bp-2",
+      "cublas_gpu_hex": "0x1.165565d7e3e6cp-2",
+      "ozblas_err_vs_exact": 1.0464655280425188e-18,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        2,
+        2
+      ],
+      "exact_rounded_hex": "0x1.43dd34f22a303p-2",
+      "ozblas_gpu_hex": "0x1.43dd34f22a303p-2",
+      "cublas_gpu_hex": "0x1.43dd34f22a304p-2",
+      "ozblas_err_vs_exact": 6.435897128725338e-18,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    }
+  ],
+  "caveat": "numerical comparison only; says nothing about Tensor Core execution or library internals"
+}

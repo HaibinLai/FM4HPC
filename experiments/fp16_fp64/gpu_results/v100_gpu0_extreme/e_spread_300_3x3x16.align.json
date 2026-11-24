@@ -1,0 +1,235 @@
+{
+  "input": "/private/tmp/claude-501/-Users-haibin-Desktop-phd01-kernel-fm/1e29af12-88d9-4f68-b168-3cc9880ba18f/scratchpad/ext_in/e_spread_300_3x3x16.bin",
+  "gpu_output": "gpu_results/v100_gpu0_extreme/e_spread_300_3x3x16.out.bin",
+  "model_limit": 12,
+  "shape_MNK": [
+    3,
+    3,
+    16
+  ],
+  "structure": {
+    "model": {
+      "splits_A": 12,
+      "splits_B": 12,
+      "partial_gemms": 144,
+      "zero_padded_row_steps_A": 0,
+      "zero_padded_row_steps_B": 0
+    },
+    "gpu": {
+      "splits_A": 12,
+      "splits_B": 12,
+      "partial_gemms": 144,
+      "sumMode": 2,
+      "tensor_core_execution_confirmed": false
+    },
+    "slices_match": true
+  },
+  "summary": {
+    "gpu_vs_model": {
+      "forward": {
+        "bit_identical": 9,
+        "total": 9,
+        "max_ulp": 0,
+        "all_bit_identical": true
+      },
+      "reverse": {
+        "bit_identical": 4,
+        "total": 9,
+        "max_ulp": 2,
+        "all_bit_identical": false
+      },
+      "pairwise": {
+        "bit_identical": 4,
+        "total": 9,
+        "max_ulp": 1,
+        "all_bit_identical": false
+      },
+      "math_fsum": {
+        "bit_identical": 4,
+        "total": 9,
+        "max_ulp": 2,
+        "all_bit_identical": false
+      }
+    },
+    "gpu_vs_rounded_exact": {
+      "bit_identical": 2,
+      "total": 9,
+      "max_ulp": 5815122926979571828,
+      "all_bit_identical": false
+    },
+    "cublas_vs_rounded_exact": {
+      "bit_identical": 8,
+      "total": 9,
+      "max_ulp": 1,
+      "all_bit_identical": false
+    }
+  },
+  "model_variants_matching_gpu_on_all_elements": [
+    "forward"
+  ],
+  "elements": [
+    {
+      "index": [
+        0,
+        0
+      ],
+      "exact_rounded_hex": "-0x1.b0ba0b0a8c6c9p+479",
+      "ozblas_gpu_hex": "-0x1.b0ba0b0a8c6c9p+479",
+      "cublas_gpu_hex": "-0x1.b0ba0b0a8c6c9p+479",
+      "ozblas_err_vs_exact": 1.2374204702891298e+128,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        0,
+        1
+      ],
+      "exact_rounded_hex": "-0x1.511fcc006adbbp+533",
+      "ozblas_gpu_hex": "-0x1.511fcc006adbcp+533",
+      "cublas_gpu_hex": "-0x1.511fcc006adbbp+533",
+      "ozblas_err_vs_exact": 7.032590311004678e+144,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        0,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.216f9386b1581p+507",
+      "ozblas_gpu_hex": "-0x1.216f9386b1581p+507",
+      "cublas_gpu_hex": "-0x1.216f9386b1581p+507",
+      "ozblas_err_vs_exact": 3.2787780874772817e+136,
+      "ozblas_ulp_vs_rounded_exact": 0,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        1,
+        0
+      ],
+      "exact_rounded_hex": "-0x1.3777e03d8e074p+268",
+      "ozblas_gpu_hex": "0x0.0p+0",
+      "cublas_gpu_hex": "-0x1.3777e03d8e073p+268",
+      "ozblas_err_vs_exact": 5.770489788858377e+80,
+      "ozblas_ulp_vs_rounded_exact": 5815122926979571828,
+      "cublas_ulp_vs_rounded_exact": 1,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        1,
+        1
+      ],
+      "exact_rounded_hex": "-0x1.31a46587d3531p+547",
+      "ozblas_gpu_hex": "-0x1.31a46587d3530p+547",
+      "cublas_gpu_hex": "-0x1.31a46587d3531p+547",
+      "ozblas_err_vs_exact": 1.1729836698160636e+149,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        1,
+        2
+      ],
+      "exact_rounded_hex": "0x1.05d3aceea655ap+565",
+      "ozblas_gpu_hex": "0x1.05d3aceea655cp+565",
+      "cublas_gpu_hex": "0x1.05d3aceea655ap+565",
+      "ozblas_err_vs_exact": 4.272982909651126e+154,
+      "ozblas_ulp_vs_rounded_exact": 2,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 2,
+        "pairwise": 1,
+        "math_fsum": 2
+      }
+    },
+    {
+      "index": [
+        2,
+        0
+      ],
+      "exact_rounded_hex": "-0x1.177c9ec7daaffp+242",
+      "ozblas_gpu_hex": "0x0.0p+0",
+      "cublas_gpu_hex": "-0x1.177c9ec7daaffp+242",
+      "ozblas_err_vs_exact": 7.715787942794585e+72,
+      "ozblas_ulp_vs_rounded_exact": 5697466712740178687,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 0,
+        "pairwise": 0,
+        "math_fsum": 0
+      }
+    },
+    {
+      "index": [
+        2,
+        1
+      ],
+      "exact_rounded_hex": "0x1.344c3883351e5p+387",
+      "ozblas_gpu_hex": "0x1.344c3883269bap+387",
+      "cublas_gpu_hex": "0x1.344c3883351e5p+387",
+      "ozblas_err_vs_exact": 4.1599999146606165e+105,
+      "ozblas_ulp_vs_rounded_exact": 59435,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    },
+    {
+      "index": [
+        2,
+        2
+      ],
+      "exact_rounded_hex": "-0x1.1955e226f6ef1p+540",
+      "ozblas_gpu_hex": "-0x1.1955e226f6ef2p+540",
+      "cublas_gpu_hex": "-0x1.1955e226f6ef1p+540",
+      "ozblas_err_vs_exact": 4.7071531944565565e+146,
+      "ozblas_ulp_vs_rounded_exact": 1,
+      "cublas_ulp_vs_rounded_exact": 0,
+      "ozblas_ulp_vs_model": {
+        "forward": 0,
+        "reverse": 1,
+        "pairwise": 1,
+        "math_fsum": 1
+      }
+    }
+  ],
+  "caveat": "numerical comparison only; says nothing about Tensor Core execution or library internals"
+}

@@ -1,0 +1,67 @@
+{
+  "commit": "a6f6198bc7af6cf288607ef867693f991cf48862",
+  "gpu_status": "run_partial",
+  "gpu_status_note": "Original-library D_H path compiled and run on V100 (2026-11-23). Round 1: 4 original inputs, 33-shape scan, 18 extreme-exponent inputs. Round 2 (exploration): fast model, 420 multi-seed, 96 shapes, 192 split-cap, 144 transposes, 96 alpha/beta, 360 library-mode, 360 near-power, 54 deep-exponent, 252 padded-ld jobs, special values, exponent boundary, ill-conditioned dots, large K, cross-card rerun (GPU0 vs saved GPU6), and 11300 random fuzz jobs (seeds 1,2: 4000 each; seed 3: 300 larger shapes; seed 4: 3000 with the final model). Not covered: other CUDA/driver/GPU versions, M or N > 2048, NearSum (sumMode=1, unsupported for D_H), other instantiations, new runs on GPUs other than 0, hardware-counter proof of Tensor Core execution. See HANDOFF.md sections 11-12.",
+  "lean_status": "not_run",
+  "toolchain": {
+    "node": "eightsocket (<NODE_IP>, reached via ssh s82)",
+    "gpu": "Tesla V100-PCIE-32GB",
+    "gpu_uuids_used": {
+      "gpu6_original_inputs_and_shape_scan": "GPU-fabcf9ba-da72-4882-4bd0-aaef74989638",
+      "gpu0_extreme_inputs_and_split_dump": "GPU-7961f273-980c-646b-b98e-7b4b259c6e09",
+      "gpu0_exploration_round2": "GPU-7961f273-980c-646b-b98e-7b4b259c6e09"
+    },
+    "gpu_excluded": "GPU-a86f28ab-cc75-0ac8-f4d0-641c7024eef1 (GPU 2): reported faulty by the user; its extreme-input outputs are untrusted and were never analyzed",
+    "driver": "580.178.04",
+    "nvcc": "12.0.140 (cuda_12.0.r12.0/compiler.32267302_0)",
+    "cublas": "12.0.2.224",
+    "arch_flag": "-arch=sm_70",
+    "executable_sha256": {
+      "uniform_k16.exe (reused for all later runs)": "1f3e62f3fc314c44ea3a45023f9b4d8b35de13c4430996edca56004f21ef82bb"
+    },
+    "node_data_dir": "/ssd/haibin/lean4hpc-fp16 (data policy: /ssd/haibin, not /home; delete when done; /home copy removed 2026-11-23)"
+  },
+  "results_dirs": {
+    "gpu_results/v100_gpu6": "4 original inputs, mid_64, 33-shape scan (scan/, scan_summary.json), cuBLASLt SASS HMMA counts",
+    "gpu_results/v100_gpu0_extreme": "18 extreme-exponent runs, split_dump/, ext_inputs/ (4 files), gpu_log2_bad_powers.txt",
+    "gpu_results/explore": "round-2 suites (*_summary.json, *.log, final/ = reruns with the final model), fuzz_seed1.json, fuzz_seed2.json, cross_card_legacy.json, accuracy_effect.json, bigK/illcond/boundary/specials outputs"
+  },
+  "files": {
+    "uniform_k64.bin": "fd6eb83cccbedac084a10682b89624797476338e045d86f8f884cb8142676090",
+    "uniform_k16.bin": "fa5baea78d74b762a29cb87175f9d3b090ca8103b3b6e5d63fb34e56dc737e93",
+    "cancellation.bin": "21d3a61fcff95a8178e918a8de5a8b4e8584f8c21bf39f7044f7518b04c44976",
+    "spread_40.bin": "3bc6ea60046c97ff338b75dc0a23305a5aedf5feb9548062f8813119d50f40a8",
+    "analyze_gpu.py": "c4c3773b2d4cdcc2434293e6936689c83376e6a9f872a2f18219a35a0db64267",
+    "compare.py": "b876eaf9861010c75b153b88e5243607c56534b4a167a11e2584e9632ce25054",
+    "gpu_compare.cu": "29b5e5e242c24cd6347824abba7c8cec0d164fdbd3146d4b3922d862597dfd7e",
+    "run_gpu.sh": "1d8b861b0d589aaa65efb2a9d026485a56b07b63d996b04f8c89098be9536217",
+    "mid_64.bin": "bcdec0b3993f18d013fe44cd0cc1b80db094324a709e3254e7bdc46489efdc33",
+    "align_gpu.py": "cdcb64a26094786919be757cb8e9b4c0b4a47857d90c7927b53589ab38b7e49a",
+    "scan_shapes.py": "1904d64cbe8c923be8fa2bee9bcdda49146dffe196bd61f2c7c49bc679e79e62",
+    "dump_split.cu": "f2929ededd9a01ab6d60b16b102ebc29735b4aee82e8a8ee2a507c57b48e6ce1",
+    "log2probe.cu": "720abbefdda3cd8aabf17769e5b93d0db1b475b3cd9d2dbe2939e307458c677a",
+    "verify_gpu_log2.py": "2ad6d122d34da1112deb07e8b0bee91d3f2c242313983dce9a27d6443f6b5705",
+    "gen_extreme_inputs.py": "7d6a1c6dac184453ca9c062541a50c330a1667cc446661eedc58fd226dda0d15",
+    "gpu_results/v100_gpu0_extreme/gpu_log2_bad_powers.txt": "519f1c85a400b874c24bd6c8edc8e4a8c36532d9e03ca96f558eb6d7f0f8f970",
+    "fastmodel.py": "3676d54be506a8df23e61145071899e38018e555f19892f0698a3650e72bf9bb",
+    "validate_fastmodel.py": "a13f76bbf3425bcd5e9c149aa3cf723998fc1cfebfae976418e15b93e6d23dfc",
+    "gpu_general.cu": "dd2cde6e42da23402f8b444ee29a01fdc43241b831e0836b914f34ccbfdf0b41",
+    "gpubatch.py": "e49785c8ff0486a0f5531d3a9f34b78911ce2e6772680e7fbfe321d26bc7ff5d",
+    "analysis.py": "37d571d8582c169e14e18d6c60eed82602d86df45fe05530dd095a7fb052d347",
+    "explore.py": "c8e5c9b101fee5f2a8a9668eb4281aa935b678ab8afc541d3290881280e21c57",
+    "specials.py": "8c645b7d096f12d9f0f5ef960998a897326025cf312bbfe118b441ea005a456d",
+    "boundary.py": "d1b31e0f561f2a96b74179499eb40469ab251aa6af3e3bf7976b0456b7030f35",
+    "illcond.py": "0d43f39a32b3f78ecd0e209d98f0e01ec3764e071988e3bd94fdf833bb34a76c",
+    "bigk_cap.py": "40ee7507b41c00b0cb971ca1fbee34ff4269a9fac76609cececc49c3ba7f5585",
+    "fuzz.py": "aebe73f12fb18662393949dd34a6bd96217c1a61514dbfa42e0dc34950002116",
+    "accuracy_effect.py": "e5bd02a9b936cf0b04189a09c0a151c2d46ec3cd7b75ba61a3f776d6469866ab",
+    "cross_card_legacy.py": "26a3da1b35c665c661613e980b7ba69e398c7e35d52bb0679df397ca3b29edb0",
+    "tau_event_rates.py": "da46ea60db2ada6b832695537cfaebe3fca2d7dee9f3b93d48a04a130277cccf",
+    "log2table.cu": "0a57c1ae2ea1efd331c6766320b429da8794bbb6b395f041a2f537aefdf0d332",
+    "gpu_results/v100_gpu0_extreme/gpu_log2_table.txt": "40e282bb6b60157bd8f10f9f9c6ad50631a9f7e74818812043035aafbc81238c"
+  },
+  "model_notes": {
+    "fastmodel": "bit-identical to compare.emulate forward on validated inputs; sigma expression follows source (scalbn overflow); DOT (m=n=1) ignores fastMode; rho uses dim_=max(K,2) as in the getRho<double,half> specialization (all splitEpsMode formulas)",
+    "gpu_log2_table": "gpu_results/v100_gpu0_extreme/gpu_log2_table.txt, measured CUDA 12.0.140 on V100, powers of two +-8 ulps"
+  }
+}
