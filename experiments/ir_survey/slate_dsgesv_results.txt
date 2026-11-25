@@ -1,0 +1,3 @@
+# SLATE 878439b (2026-08-26), LAPACK API slate_dsgesv_ (lapack_api/lapack_gesv_mixed.cc), Host target default, 1 MPI rank, OpenBLAS; node eightsocket CPU, 2026-11-25. x pre-filled with sentinel -12345. Program aborts at exit (after all output; MPI started by SLATE not finalized).
+L1 random diag-dominant, x_true=1  n=100 info=0 iter=  23  x unwritten=100/100  b modified=100/100  max|x-xtrue|=1.23e+04  max|b-xtrue|=1          b[0..2]=(0, 0, 0)
+L2 exactly singular diag(1,..,1,0) n=100 info=0 iter=  -3  x unwritten=100/100  b modified=  0/100  b[0..2]=(1, 1, 1)

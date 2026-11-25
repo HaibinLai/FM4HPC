@@ -1,0 +1,13 @@
+# STRUMPACK edc9a72 (2026-11-23), no MPI, OpenMP, node eightsocket CPU, 2026-11-25.
+STRUMPACK edc9a72, tridiag(-1,4,-1) n=2000, x_exact=1, default options except Krylov solver
+Mixed<float,double>    REFINE                         scale=1e+00   rc=SUCCESS  max|x-1|=1.19e-07  #zero(x)=   0 #nonfinite(x)=   0 -> ok (within default rel_tol 1e-6)
+Mixed<float,double>    REFINE                         scale=1e-06   rc=SUCCESS  max|x-1|=0         #zero(x)=   0 #nonfinite(x)=   0 -> ok (within default rel_tol 1e-6)
+Mixed<float,double>    REFINE                         scale=1e-12   rc=SUCCESS  max|x-1|=1         #zero(x)=2000 #nonfinite(x)=   0 -> SILENT WRONG: x = 0, SUCCESS
+Mixed<float,double>    REFINE                         scale=1e-20   rc=SUCCESS  max|x-1|=1         #zero(x)=2000 #nonfinite(x)=   0 -> SILENT WRONG: x = 0, SUCCESS
+Mixed<float,double>    PREC_GMRES                     scale=1e+00   rc=SUCCESS  max|x-1|=1.45e-07  #zero(x)=   0 #nonfinite(x)=   0 -> ok (within default rel_tol 1e-6)
+Mixed<float,double>    PREC_GMRES                     scale=1e-12   rc=SUCCESS  max|x-1|=1.2e-07   #zero(x)=   0 #nonfinite(x)=   0 -> ok (within default rel_tol 1e-6)
+Mixed<float,double>    REFINE, b[0]=NaN               scale=1e+00   rc=SUCCESS  max|x-1|=1         #zero(x)=2000 #nonfinite(x)=   0 -> SILENT WRONG: x = 0, SUCCESS
+SparseSolver<double>   AUTO (default)                 scale=1e+00   rc=SUCCESS  max|x-1|=2.22e-16  #zero(x)=   0 #nonfinite(x)=   0 -> ok (within default rel_tol 1e-6)
+SparseSolver<double>   AUTO (default)                 scale=1e-12   rc=SUCCESS  max|x-1|=1         #zero(x)=2000 #nonfinite(x)=   0 -> SILENT WRONG: x = 0, SUCCESS
+SparseSolver<double>   AUTO (default)                 scale=1e-20   rc=SUCCESS  max|x-1|=1         #zero(x)=2000 #nonfinite(x)=   0 -> SILENT WRONG: x = 0, SUCCESS
+SparseSolver<double>   AUTO, b[0]=NaN                 scale=1e+00   rc=SUCCESS  max|x-1|=1         #zero(x)=2000 #nonfinite(x)=   0 -> SILENT WRONG: x = 0, SUCCESS

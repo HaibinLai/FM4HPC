@@ -1,0 +1,11 @@
+# PLASMA master 548e0bd, plasma_dsgesv, node eightsocket CPU, conda-forge OpenBLAS 0.3.34, 2026-11-25. Reference: LAPACKE_dgesv (FP64). 'unwritten(X)' counts entries still equal to the sentinel -12345.
+plasma/build/libplasma.so
+plasma/build/libplasma_core_blas.so
+control: random diag-dominant                n=300 retval=0 iter=   2  nonfinite(X)=  0 unwritten(X)=  0  relerr_vs_dgesv=2.82e-15  dgesv_info=0 -> ok
+P1 random diag-dominant, b[0]=NaN            n=300 retval=0 iter=   0  nonfinite(X)=300 unwritten(X)=  0  relerr_vs_dgesv=0         dgesv_info=-7 -> SILENT WRONG (success reported)
+P1 random diag-dominant, b[150]=NaN          n=300 retval=0 iter=   0  nonfinite(X)=300 unwritten(X)=  0  relerr_vs_dgesv=0         dgesv_info=-7 -> SILENT WRONG (success reported)
+P1 Wilkinson 2^60*W(40), x_true=1            n= 40 retval=0 iter=   1  nonfinite(X)=  0 unwritten(X)=  0  relerr_vs_dgesv=0         dgesv_info=0 -> ok
+P1 Wilkinson 2^90*W(40), x_true=1            n= 40 retval=0 iter=   0  nonfinite(X)= 40 unwritten(X)=  0  relerr_vs_dgesv=0         dgesv_info=0 -> SILENT WRONG (success reported)
+P1 Wilkinson 2^120*W(40), x_true=1           n= 40 retval=0 iter=   0  nonfinite(X)= 40 unwritten(X)=  0  relerr_vs_dgesv=0         dgesv_info=0 -> SILENT WRONG (success reported)
+P2 [[1,1],[1,1+2^-30]] (FP32 singular)       n=  2 retval=2 iter= -31  nonfinite(X)=  0 unwritten(X)=  2  relerr_vs_dgesv=1.23e+04  dgesv_info=0 -> error returned, no FP64 fallback
+P2 A=I, b=(1e39,1) (b overflows FP32)        n=  2 retval=1 iter= -31  nonfinite(X)=  0 unwritten(X)=  2  relerr_vs_dgesv=1         dgesv_info=0 -> error returned, no FP64 fallback

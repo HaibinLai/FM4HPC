@@ -1501,3 +1501,28 @@ cuBLAS无法打补丁。做法是先用模型算出修正后的位数，再用�
 - 加一个 trans/nrhs 探针；
 - 计时，看后检的开销；
 - 数据仍放 /ssd/haibin，用完删除。
+
+## 25. 研究重心收窄 + 迭代精化接受逻辑的跨库普查（2026-11-24）
+
+**重心（用户决定）**：相关工作核对（`operators/RELATED_WORK_zh.md`）之后，主线定为**混合精度迭代精化的接受逻辑缺陷**。原因：
+- 这一方向没有公开先例；
+- 相比之下，ADP的零元素问题已有 arXiv 2611.19008，Ozaki精度与k的关系已有 2602.02549，LAPACK把NaN当成功已有 PR #1501 系列。
+
+Ozaki/ADP/ozIMMU/GEMMul8 的结果改为辅助材料。
+
+**普查**（`operators/IR_SURVEY_zh.md`）：
+- 只读源码、没有运行，覆盖约25个实现：MAGMA、SLATE、PLASMA、LAPACK、SuperLU(_DIST)、MUMPS、STRUMPACK、PaStiX、hpl-ai、rocHPL-MxP、Ginkgo、PETSc、Trilinos、hipSOLVER、cuDSS/oneMKL（只看文档）。
+- 在原有的 D1–D9 之外，新增两类：D10（封装层丢状态）、D11（最大值归约吞掉NaN）。
+- 主会话逐行复核过的：MAGMA `zchesv` 的空壳回退、MAGMA `dshposv_gmres` 的 `goto cleanup` 与 EPSILON中断、SLATE LAPACK接口（X与b共用内存、`info=0` 写死）、PLASMA任务失败后跳过回退、STRUMPACK mixed总是返回SUCCESS、PaStiX GMRES的 `normx` 只算一次、hipSOLVER不写 `niters`、hpl-ai的 `/‖b‖` 判据。
+- **以上全部还没有运行确认**。
+
+**下一步**：其中大部分能在CPU上确认，不需要GPU（优先级见普查文档末尾）。在哪里运行由用户决定。
+
+### 25.1 运行确认（2026-11-25，节点CPU，用户批准在 /ssd/haibin/lean4hpc-ir 建conda环境，用完已删除）
+
+在 eightsocket 的CPU上（不用GPU）运行了普查的预测，**7项全部证实**：SuperLU、SuperLU_DIST `psgssvx_d2`、MUMPS 5.8.2、PaStiX GMRES（x0=0 → x≈249·x_true 且报SUCCESS）、PLASMA `dsgesv`（NaN被接受；失败时跳过FP64回退）、STRUMPACK（小尺度 → x≡0 且报SUCCESS，默认的双精度求解器也一样）、SLATE LAPACK接口（良态矩阵也丢失解，并报info=0）。
+
+- 详细结果、命令和运行中做的更正：`experiments/ir_survey/README.md`；
+- 汇总：`operators/IR_SURVEY_zh.md` 中“运行确认”一节；
+- 还没有运行：MAGMA `zchesv`、`dshposv_gmres`（需要GPU）；hpl-ai、Ginkgo、PETSc。
+- 对外报告由用户自己提交。

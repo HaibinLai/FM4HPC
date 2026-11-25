@@ -1,0 +1,9 @@
+# SuperLU serial a8d98be (2026-11-11), dgssvx + dgsrfs (IterRefine=SLU_DOUBLE), node eightsocket CPU, gcc 13.3 -O2, bundled CBLAS. 2026-11-24.
+I, b[0]=NaN (masked)               n=    2 info=0  berr=0          ferr=-nan       refine_steps=0  x[0]=nan x[n-1]=1  #NaN(x)=1 #Inf(x)=0  -> VIOLATION (clean berr, non-finite x)
+I, b[n-1]=NaN (control)            n=    2 info=0  berr=nan        ferr=-nan       refine_steps=0  x[0]=1 x[n-1]=nan  #NaN(x)=1 #Inf(x)=0  -> ok/flagged
+tridiag, b[0]=NaN (masked)         n= 1000 info=0  berr=nan        ferr=-nan       refine_steps=0  x[0]=nan x[n-1]=nan  #NaN(x)=1000 #Inf(x)=0  -> ok/flagged
+tridiag, b[n-1]=NaN (control)      n= 1000 info=0  berr=nan        ferr=-nan       refine_steps=0  x[0]=nan x[n-1]=nan  #NaN(x)=1000 #Inf(x)=0  -> ok/flagged
+2 decoupled tridiag blocks, b[0]=NaN n= 1000 info=0  berr=6.94e-17   ferr=-nan       refine_steps=0  x[0]=nan x[n-1]=0.366025  #NaN(x)=500 #Inf(x)=0  -> VIOLATION (clean berr, non-finite x)
+2 decoupled blocks, b[0]=Inf       n= 1000 info=0  berr=6.94e-17   ferr=-nan       refine_steps=0  x[0]=-nan x[n-1]=0.366025  #NaN(x)=500 #Inf(x)=0  -> VIOLATION (clean berr, non-finite x)
+tridiag, b[0]=Inf                  n= 1000 info=0  berr=nan        ferr=-nan       refine_steps=0  x[0]=-nan x[n-1]=-nan  #NaN(x)=1000 #Inf(x)=0  -> ok/flagged
+tridiag, finite (baseline)         n= 1000 info=0  berr=6.94e-17   ferr=1.97e-15   refine_steps=0  x[0]=0.366025 x[n-1]=0.366025  #NaN(x)=0 #Inf(x)=0  -> ok/flagged

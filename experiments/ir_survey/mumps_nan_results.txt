@@ -1,0 +1,5 @@
+# MUMPS 5.8.2 sequential (conda-forge mumps-seq 5.8.2 gfortran_hfb83c00_3, libopenblas 0.3.34 openmp), ICNTL(10)=3, ICNTL(11)=2; two decoupled tridiag(-1,4,-1) blocks n=1000, x_true=1; node eightsocket CPU, 2026-11-25. INFOG(1)=2 is a MUMPS warning code (not checked here which one).
+baseline (finite)          INFOG(1)=0 INFOG(15)(IR steps)=0  omega1=RINFOG(7)=1.94e-16  omega2=RINFOG(8)=0         err_bound=RINFOG(9)=0          nonfinite(x)=0/1000  -> flagged/ok
+b[0]=NaN                   INFOG(1)=0 INFOG(15)(IR steps)=0  omega1=RINFOG(7)=1.94e-16  omega2=RINFOG(8)=0         err_bound=RINFOG(9)=0          nonfinite(x)=500/1000  -> SILENT: clean backward error for non-finite x
+b[500]=NaN                 INFOG(1)=2 INFOG(15)(IR steps)=0  omega1=RINFOG(7)=0         omega2=RINFOG(8)=0         err_bound=RINFOG(9)=0          nonfinite(x)=500/1000  -> flagged/ok
+b[999]=NaN                 INFOG(1)=2 INFOG(15)(IR steps)=0  omega1=RINFOG(7)=0         omega2=RINFOG(8)=0         err_bound=RINFOG(9)=0          nonfinite(x)=500/1000  -> flagged/ok

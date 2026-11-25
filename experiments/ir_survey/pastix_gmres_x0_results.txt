@@ -1,0 +1,21 @@
+# PaStiX master e2ecf99 (2026-11-03), shared memory, 4 threads, scotch; node eightsocket CPU, 2026-11-25. Verdict = true residual.
+PaStiX e2ecf99, Laplacian d:1000, n=1000, LU, eps_refine=-1, itermax=250, gmres_im=25
+  GMRES    solve result (normal use)   rc=0 (SUCCESS) nbiter=   0  ||b-Ax||/||b||=9.07e-17  <x,xt>/<xt,xt>=0.9967   nonfinite=0  -> ok
+  GMRES    x0 = 0                      rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=249       <x,xt>/<xt,xt>=248.9    nonfinite=0  -> VIOLATION (SUCCESS, wrong x)
+  GMRES    x0 = 0.5*x_true             rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=2.29e-16  <x,xt>/<xt,xt>=0.9978   nonfinite=0  -> ok
+  BiCGSTAB solve result (normal use)   rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=9.14e-17  <x,xt>/<xt,xt>=0.9953   nonfinite=0  -> ok
+  BiCGSTAB x0 = 0                      rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=4.43e+10  <x,xt>/<xt,xt>=-3.689e+14 nonfinite=0  -> VIOLATION (SUCCESS, wrong x)
+  BiCGSTAB x0 = 0.5*x_true             rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=4.59e-16  <x,xt>/<xt,xt>=0.98     nonfinite=0  -> ok
+  SR       solve result (normal use)   rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=9.05e-17  <x,xt>/<xt,xt>=0.9957   nonfinite=0  -> ok
+  SR       x0 = 0                      rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=9.15e-17  <x,xt>/<xt,xt>=0.9966   nonfinite=0  -> ok
+  SR       x0 = 0.5*x_true             rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=7.78e-17  <x,xt>/<xt,xt>=0.9979   nonfinite=0  -> ok
+PaStiX e2ecf99, Laplacian d:20:20:20, n=8000, LU, eps_refine=-1, itermax=250, gmres_im=25
+  GMRES    solve result (normal use)   rc=0 (SUCCESS) nbiter=   0  ||b-Ax||/||b||=2.56e-16  <x,xt>/<xt,xt>=1.002    nonfinite=0  -> ok
+  GMRES    x0 = 0                      rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=249       <x,xt>/<xt,xt>=250.9    nonfinite=0  -> VIOLATION (SUCCESS, wrong x)
+  GMRES    x0 = 0.5*x_true             rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=2.92e-16  <x,xt>/<xt,xt>=1.002    nonfinite=0  -> ok
+  BiCGSTAB solve result (normal use)   rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=2.54e-16  <x,xt>/<xt,xt>=1.003    nonfinite=0  -> ok
+  BiCGSTAB x0 = 0                      rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=1.44e-15  <x,xt>/<xt,xt>=1.01     nonfinite=0  -> ok
+  BiCGSTAB x0 = 0.5*x_true             rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=2.1e-15   <x,xt>/<xt,xt>=0.9983   nonfinite=0  -> ok
+  SR       solve result (normal use)   rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=2.56e-16  <x,xt>/<xt,xt>=1.003    nonfinite=0  -> ok
+  SR       x0 = 0                      rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=2.58e-16  <x,xt>/<xt,xt>=1.003    nonfinite=0  -> ok
+  SR       x0 = 0.5*x_true             rc=0 (SUCCESS) nbiter= 250  ||b-Ax||/||b||=1.75e-16  <x,xt>/<xt,xt>=1.001    nonfinite=0  -> ok
