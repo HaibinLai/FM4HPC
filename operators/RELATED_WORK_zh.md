@@ -173,3 +173,64 @@
    - 查清MMAlgebra；
    - 对照 `d8d3901` 源码确认fast模式默认缩放就是 2606.29129 的公式；
    - 在论文中正面比较TensorLean和LAPACK PR系列。
+
+---
+
+## 补充（2026-11-25）：任意次序误差界与跨硬件精度测试
+
+**起因**：考虑把“与加法次序无关的误差界”作为三类库（HPC、仿真、AI算子）的统一精度契约，并用“两种硬件结果之差 > 2B ⇒ 至少一个违约”做无参考答案的跨硬件测试。
+
+**检索**：2个子代理检索；主会话打开了VSCL与lean-ieee754的Lean源码，以及numoracle、Grading the BLAS、VERNA的论文原文核实。
+
+### 已被做过的部分（不能再当贡献）
+
+- **任意加法树 + 参数化 u 的求和/点积误差界，已在 Lean 4 中机器证明**：
+  - **VSCL / lean-computational-mathematics**（Georgantzas、Melnichenko 等，MIT，2026-03起）
+    - `SumTree.forward_error`：`|t.eval fp v − Σvᵢ| ≤ γ(depth)·Σ|vᵢ|`（`Algorithms/Summation/Tree/Core.lean:569`，已核实）；
+    - `sumTreeDotProduct_error_bound`：`γ(depth+1)·Σ|xᵢ||yᵢ|`（`TreeDotProduct.lean:82`，已核实）；
+    - 还有任意置换、块点积、扩展精度点积；
+    - 也有GEMM `matMul_error_bound`，但基于串行matVec，不是树；
+    - 模型是抽象 `FPModel`，全局一个 u，不含下溢项。
+    - https://github.com/the-numerical-proving-ground/lean-computational-mathematics
+  - **lean-ieee754**（tunnellm/girving，2026-09起，README说主要由LLM写成，未经专家评审）
+    - `ReductionTree.mixed_error`：任意树，界为 `((1+u)^height − 1)·mass + ε·roundWeight`，含下溢项ε，舍入函数抽象（`FP/Summation.lean:78`，已核实）；
+    - 点积只有串行版本。
+  - 纸面结果早已有：Higham §4.2（深度为 h 的树给出 γ_h）；Jeannerod–Rump 2013（n·u，任意次序）；Lange–Rump 2017/2019（忠实/定向舍入，以及 h·v）。
+- **证明过的误差界作为测试容差**：
+  - **Grading the BLAS**（Demmel、Henry、Kozachenko、Langou、Li、Riedy、Vanover，arXiv 2609.12307，2026-09）
+    - 按 |GEMM − AB| ≤ f(n)·ε·|A||B| 给BLAS评级；只给“真阳性”；
+    - 测了 Netlib、BLIS、OpenBLAS、oneMKL、cuBLAS（B200）、ozIMMU、GEMMul8；
+    - 只做FP64，混合精度列为未来工作；参考答案是80位long double，不是精确有理数；
+    - 有同机置换测试（Test 4b），但不是跨硬件的2B判据。
+  - **numoracle**（Xinyi Shi，Duke，arXiv 2610.38983 v2，2026-11-09）
+    - 从带精度标注的参考程序推出逐元素接受区域，与次序无关、按累加格式参数化；
+    - 主要是概率界（零均值假设），另有固定输入模式；证明是纸面的；
+    - 13个Triton算子（Liger、Unsloth、vLLM），在A100与RTX PRO 6000 Blackwell上**各自对照FP64参考**，零误报；
+    - **不是**跨GPU的无参考比较。
+  - **VERNA**（Fountoulakis、Melnichenko、Georgantzas…、Murray、Mahoney，arXiv 2611.21570，2026-11-16）
+    - 提出“超出VSCL中证明的界 ⇒ 拒绝该内核”；
+    - **只是设计**，“设计描述留给另一篇论文”；没有硬件或累加器建模，没有跨硬件部分。
+  - Brower–Caday–Gunnels（arXiv 2611.19008）已对cuBLAS ADP证明经典点积界可保持，并用Grading the BLAS的测试核对。
+- **跨硬件差异的解释（逐位级，没有误差界）**：
+  - FPRev（ATC 2025，黑盒反推累加树）；
+  - MMA-Sim（MICRO 2026，10种NVIDIA/AMD架构的逐位模型，例如Hopper FP8累加只有13位小数位）；
+  - Khattak–Mikaitis 2026（张量核模型）；
+  - Valpey等 NFM 2025（张量核的SMT形式化）；
+  - FTTN（CCGrid 2024）。
+- **跨后端、跨硬件的差分测试**：CRADLE、LEMON、Audee、FreeFuzz、DeepREL、TitanFuzz、NNSmith、Mind the Gap（arXiv 2511.11601，5种加速器）。**容差全部是人为设定的**。
+
+### 没有找到的部分
+
+1. **无参考答案的跨硬件判据**：利用“两边都必须满足同一个界”，以2B为阈值、零误报。没找到。
+   - 最接近的是 Grading the BLAS 的同机置换测试，以及ABFT的舍入阈值（A-ABFT、V-ABFT）。
+2. **同一棵树里不同节点用不同的 δ**（张量核内部累加精度 ≠ 外层累加器，或块FMA）：没有机器证明。
+   - VSCL、lean-ieee754 都是每棵树一个u或一个舍入函数；Blanchard等 2020 只有纸面分析。
+3. **从逐位硬件模型（MMA-Sim式的对齐、截断、规格化）推出可用的误差界**，并接到真实内核：没有找到。
+   - TensorLean把张量核舍入放在可信基里，论文未出，细节未知。
+4. **Lean证明的界当作真实库的测试阈值**：VERNA只是提出，没有实现。numoracle、Grading the BLAS做了，但都是纸面证明。**竞争激烈**，VERNA团队正在做。
+
+### 对我们的含义
+
+- “任意次序误差界”本身**不能**作为贡献。要用的话，应在VSCL（MIT，Lean 4 + Mathlib）之上做，或者引用它。我们的代码只用core Lean，二者不能直接合并，需要决定是否引入Mathlib。
+- 迭代精化接受逻辑这条主线**不受影响**：上述工作都是GEMM、点积、逐元素算子的精度，没有一项涉及求解器的接受判据、回退或状态报告。
+- 可以加进来的新东西：第1点（跨硬件2B判据）和第2点（分节点δ）。它们可以作为论文中的一个RQ或一节，不宜单独成文。
