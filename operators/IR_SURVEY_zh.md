@@ -121,6 +121,62 @@
   - `MaxFold.lean`：D11的定理，并给出“判据安全 ⇔ `<` 形式且归约传播NaN”（`detects_iff`）；
   - `IrDriver.lean`：契约的充要条件 C1–C4（`contract_iff`）。D10（封装层丢状态）对应C4，D9对应C2/C3，D4对应C1，D1和D11经 `c1_forces_accept_propagate` 也归入C1。
 
+## 各库自带测试能否发现这些缺陷（2026-11-25，只读，没有编译或运行）
+
+**问题**：
+1. 库自带的测试（默认列表、CI，以及测试程序已有的选项）会不会触发这些缺陷？
+2. 触发后，测试的判定能不能发现？
+
+**方法**：
+- 2个子代理分别读ICL库（MAGMA、SLATE、PLASMA）和稀疏库（SuperLU、SuperLU_DIST、MUMPS、PaStiX、STRUMPACK）的测试程序、测试列表和CI脚本；
+- 主会话逐条复核了标 ✔ 的证据；
+- 源码版本与上面的版本表相同。
+
+| 库 / 缺陷 | 默认测试会触发吗 | 触发后判定能发现吗 | 证据 |
+|---|---|---|---|
+| MAGMA GMSTRS（`dsgesv/dhgesv_iteref`） | **否**：`testing_dxgesv_gpu` 不在 `run_tests.py` 中；b 固定为 U(0,1)；生成器没有NaN类型 | NaN：能。**‖b‖≤1e-18 → x=0：不能**，因为度量是 ‖r‖/(N‖A‖)，不含 ‖x‖ | `testing_dxgesv_gpu.cpp`、`magma_util.cpp:192` |
+| MAGMA `dsgesv_gpu` 接受NaN ✔ | **否**：默认列表只有 `testing_zcgesv_gpu -c`（`run_tests.py:813`）；没有NaN，也没有增长矩阵 | 能：`status += !(error < tol)`（`testing_zcgesv_gpu.cpp:245`）；info、iter只打印 | 同左 |
+| MAGMA `zchesv_gpu` 空壳回退 | **没有任何测试调用** | — | grep `testing/` |
+| MAGMA dshposv GMRES | 否；手动加 `--nrhs 2` 可以触发第2列为0 | 能 | `testing_dshposv_gpu.cpp` |
+| MAGMA FGMRES 忽略 trans/nrhs | 否；手动加 `-T`、`--nrhs` 可以触发 | 能 | `testing_dxgesv_gpu.cpp:131-136` |
+| SLATE LAPACK接口 `slate_dsgesv` ✔ | **没有任何测试或示例调用**（只在定义文件里出现） | — | `lapack_api/lapack_gesv_mixed.cc:89-90` |
+| SLATE `gesv_mixed/posv_mixed` | 否：默认 rand、n=100；**有选项可触发**：`--matrixB rand_large`、`--matrix gfpp`（未运行验证） | 能：`okay = (error <= tol)`，范数用 `max_nan` | `test_gesv.cc:377` |
+| SLATE ScaLAPACK接口 `pdsgesv` | 只有一个没进构建的示例 | **不能**：不读info，只打印残差 | `example_pdsgesv.c` |
+| PLASMA `dsgesv` 接受NaN ✔ | **否**：`dsgesv` 不在 `run_tests.py` 中（LU组只有 `gesv` 等）；A、b为 U(0,1) | 能：`residual < tol`；iter不查 | `test_zcgesv.c:152-170` |
+| PLASMA 任务失败后跳过回退 | 否：`--zerocol` 让A在FP64下也奇异，不是“只在FP32下奇异” | 间接能：与 `LAPACKE_zcgesv` 的返回值比对 | `test_zcgesv.c:174-186` |
+| SuperLU `dgsrfs`（D11） ✔ | 否：x_true 全为1，b=A·x_true，没有NaN选项 | **不能**：判定是 `result[i] >= THRESH`（NaN通过）；**检查函数自身也用 `SUPERLU_MAX`**（`dgst02.c:121`、`dgst07.c:145`） | `ddrive.c:473` |
+| SuperLU_DIST `psgssvx_d2`（D11） ✔ | **没有注册的测试覆盖d2路径**：`psdrive` 默认 NOREFINE，且不在ctest里；`pstest_ci` 要 `-B n -i 2` 才走d2，没有注册这种运行 | 示例驱动**不能**：`psinf_norm_error` 用 `SUPERLU_MAX`，并 `return 0`。`ptest_ci` **能**：明写“NaN anywhere fails”，判定 `value <= tol`，但它没有跑d2 | `psutil.c:1467`、`ptest_ci.c:550-567` |
+| MUMPS 精化（ICNTL(10)/(11)） ✔ | **没有测试**；示例都不开精化（默认0） | **不能**：只查 `INFOG(1) < 0`；MATLAB示例是 `if norm(...) > sqrt(eps)`（NaN通过） | `examples/` grep 无 ICNTL(10) |
+| PaStiX GMRES x0=0 | 否：所有驱动 x0=b（`memcpy(x, b)`），或者从LU解开始 | 部分：`refinement.c` 在 `NBITER >= ITERMAX` 时判失败，能发现；`simple.c` 靠 `spmCheckAxb`（`spm/` 子模块为空，未读到） | `refinement.c:140`、`simple.c:120` |
+| STRUMPACK atol（小尺度 → x≡0） | 否：矩阵为O(1)；平衡化测试只缩放 2^±8、2^−10 | 稀疏测试能（缩放残差为1，超过阈值）。**混合精度测试 `test_SPD_mixedPrecision` 只打印，总是 `return 0`** ✔ | `test_SPD_mixedPrecision.cpp:82-90,160` |
+| STRUMPACK b含NaN | 否 | 不可靠：`if (res > tol)`，加上 `max_scaled_residual` 用 `std::max` 丢掉NaN行；x≡0 能被有限行抓到，但“部分NaN、其余正确”的x会通过 | `CSRMatrix.cpp:994` |
+
+**结论**（可用于论文RQ3）：
+1. **16个缺陷中，没有一个会被任何库的默认测试或CI触发。** 没有一个测试往b里放NaN或Inf、把(A,b)缩放到1e-12以下，或给PaStiX零初值。b几乎总是U(0,1)，或者等于 A·全1。
+2. **6个例程完全没有带判定的测试**：
+   - MAGMA `zchesv`；
+   - SLATE `slate_dsgesv`、`pdsgesv`；
+   - SuperLU_DIST d2路径；
+   - MUMPS精化；
+   - STRUMPACK混合精度（只打印）。
+   其中4个（`slate_dsgesv`、SuperLU_DIST d2、MUMPS、STRUMPACK mixed）正是我们已运行确认“报成功、答案错”的例程；`zchesv`、`pdsgesv` 只读码，未运行。
+3. **测试的判定和bug犯同样的错**：
+   - SuperLU的检查函数、SuperLU_DIST的 `psinf_norm_error` 用的就是丢NaN的 `SUPERLU_MAX`；
+   - STRUMPACK用 `std::max`；
+   - 判定又写成 `>=`/`>`（拒绝式）。
+   所以即使有人加上NaN输入，SuperLU、MUMPS、STRUMPACK 的测试也会判“通过”。这是D1/D11在测试预言机里的再现。
+4. **生成器有危险选项，但从未用于IR例程**：MAGMA 的 `_ofl/_large`、SLATE 的 `gfpp/--matrixB`。两个生成器都没有NaN/Inf类型。
+5. **正面例子**：
+   - SuperLU_DIST 的 `ptest_ci.c` 专门写成对NaN安全，可惜没跑d2；
+   - MAGMA、SLATE、PLASMA 的判定都是 `<`/`<=`（NaN安全）。它们漏掉问题，是因为输入覆盖不到。
+6. **MAGMA的测试度量不是后向误差**（没有 ‖x‖），所以“小‖b‖返回x=0”在它的测试里会判通过。
+
+**边界**：
+- 只读码，没有运行；SLATE `gfpp`/`rand_large` 能否触发没有实测；
+- PaStiX 的 `spmCheckAxb` 未读到；
+- 判定对NaN安全，依赖所链接BLAS/LAPACK的 `xlange` 传播NaN（参考实现会传播，MKL未查）；
+- cuSOLVER、LAPACK参考实现的测试集不在本次范围内。
+
 ## 下一步：用CPU就能确认的部分（不需要GPU）
 
 PLASMA、SLATE（Host target）、SuperLU/SuperLU_DIST、MUMPS、STRUMPACK、PaStiX、hpl-ai、Ginkgo（reference executor）、PETSc 都能在CPU上运行。按“影响 × 置信度”排的优先级：
