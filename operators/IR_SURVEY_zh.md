@@ -117,9 +117,9 @@
   - `coarse_unsafe`、`coarse_safe`：判据形式与NaN，对应D1；
   - 缩放协变：对应D2、D3；
   - `fixed_post` 与 `fixed_nan_fallback`：对应D4、D5、D9。
-- 还缺的：
-  - D11（归约吞NaN）的形式化。可以写一个 `max_fold` 模型，证明“NaN安全的max ⇔ 判据安全”；
-  - D10属于接口层，可以把“返回码 = 内核状态”写成契约的一部分。
+- **已补上（2026-11-25，HANDOFF §26）**：
+  - `MaxFold.lean`：D11的定理，并给出“判据安全 ⇔ `<` 形式且归约传播NaN”（`detects_iff`）；
+  - `IrDriver.lean`：契约的充要条件 C1–C4（`contract_iff`）。D10（封装层丢状态）对应C4，D9对应C2/C3，D4对应C1，D1和D11经 `c1_forces_accept_propagate` 也归入C1。
 
 ## 下一步：用CPU就能确认的部分（不需要GPU）
 

@@ -1526,3 +1526,65 @@ Ozaki/ADP/ozIMMU/GEMMul8 的结果改为辅助材料。
 - 汇总：`operators/IR_SURVEY_zh.md` 中“运行确认”一节；
 - 还没有运行：MAGMA `zchesv`、`dshposv_gmres`（需要GPU）；hpl-ai、Ginkgo、PETSc。
 - 对外报告由用户自己提交。
+
+## 26. 形式化：D11定理与迭代精化接受契约的充要条件（2026-11-25）
+
+两个新文件，都只用核心Lean、没有 `sorry`，公理只有 propext / Classical.choice / Quot.sound。
+
+### 26.1 `lean/OptimiKahan/MaxFold.lean`（D11，日志 `check_log_maxfold.txt`）
+
+把三种求最大值的写法建模，数值是精确有理数加NaN，与NaN比较一律为假，不建模无穷：
+- SuperLU 的 `SUPERLU_MAX(s,v)=(s>v)?s:v`；
+- PLASMA / IDAMAX 的 `if (v>s) s=v`；
+- 会传播NaN的写法。
+
+| 定理 | 内容 |
+|---|---|
+| `smax_fold_isNaN` / `smax_fold_nan_iff_last` | SuperLU写法：结果是NaN **当且仅当最后一个元素是NaN** |
+| `smax_fold_after_nan` / `smax_fold_value` | 最后一个NaN之前的元素全部被丢掉；它后面若都是有限值，结果恰好等于这些值的最大值 |
+| `masked_equals_baseline` | SuperLU_DIST 实验的形状（第一块全NaN，第二块与干净值相同）返回的值**与干净基线完全相等**，与实测一致（berr 都是2.96e-16） |
+| `pstep_fold_isNaN` | PLASMA/IDAMAX写法：结果是NaN 当且仅当**第一个**元素是NaN |
+| `nmax_fold_isNaN` | 传播写法：结果是NaN 当且仅当某个元素是NaN |
+| `detects_iff` | 2种判据写法 × 3种归约中，“任何含NaN的输入都被拒绝”成立，**当且仅当**判据写成 `<` 形式且归约会传播NaN；其余5种组合各有一个两元素反例 |
+
+### 26.2 `lean/OptimiKahan/IrDriver.lean`（导入 MaxFold，日志 `check_log_irdriver.txt`）
+
+**抽象驱动**：
+- 内层求解器是对抗性的，可以返回任何值；
+- 外层检查 `check`；
+- 回退能否到达 `fbReach`；回退写出什么、自己报不报成功 `fb`；
+- 封装层是否强制报成功 `force`。
+
+**契约**：
+- Sound：报成功 ⇒ 调用者读到的答案是好的；
+- Complete：FP64可解的问题 ⇒ 一定报成功。
+
+**主定理 `contract_iff`**：在建模假设下，Sound ∧ Complete **当且仅当** C1–C4 同时成立。建模假设是：内层可能返回坏值；好答案只在可解问题上存在；可解和不可解的问题都会出现。
+
+| 条件 | 含义 |
+|---|---|
+| C1 | 外层检查可靠 |
+| C2 | 回退能到达 |
+| C3 | 回退正确：报成功就给好答案，可解时一定成功 |
+| C4 | 状态没有被强制改成成功 |
+
+- 充分性 `contract_of_conditions` 不需要任何假设。
+
+**推论**：每种实测到的失败，都对应违反了一条条件。
+
+| 推论 | 违反 | 对应的库 |
+|---|---|---|
+| `trust_inner_unsound` | C1（没有外层检查） | MAGMA GMSTRS、`dshposv_gmres`、PaStiX、STRUMPACK mixed |
+| `forced_unsound` | C4 | SLATE LAPACK接口、STRUMPACK、PaStiX |
+| `stub_fallback_fails` | C3 | MAGMA `zchesv` |
+| `skipped_fallback_incomplete` | C2 | PLASMA |
+| `c1_forces_accept_propagate` | 与26.1衔接 | 若检查是“判据(归约(逐行值))”，且每种NaN分布都能由某个坏输入产生，则 C1 迫使判据为 `<` 形式、归约会传播NaN；D1和D11因此都是违反C1的特例 |
+
+- **非空性**：`tOk_contract` 给出一个所有假设都成立、满足契约的玩具实例；它的“强制成功”版本和“去掉检查”版本分别被证明不可靠（`tForced_unsound`、`tTrust_unsound`）。
+- **C1在数值上怎样才能做到**：见已有的 `IrsContract.wrapper_post`、`MagmaFixed.fixed_post`（Dot2残差加外向舍入的 `<` 检查，对任意精化输出都可靠），以及 `IrsContract.fp64_cannot_certify`（普通FP64残差无法认证文档中的 √n·eps 阈值）。
+
+### 26.3 边界（如实）
+
+- `contract_iff` 的层次是调用者能观察到的行为，证明本身是简单的逻辑。它的价值在于给出完整的条件清单，并把各库映射到具体条件上；数值上的难点在C1，由26.1和 IrsContract/MagmaFixed 承担。
+- 各库被映射到哪条条件，依据的是读码和第25节的运行结果，并不是从C代码机器生成的模型。
+- 没有建模无穷大，也没有建模MUMPS所依赖的具体BLAS中 `idamax` 的NaN行为。
