@@ -1,0 +1,973 @@
+
+== trd hetrd_gpu 33 33 L L N 0
+DONE cuda=no error
+== trd hetrd_gpu 33 33 L L N 5
+DONE cuda=no error
+== trd hetrd_gpu 33 33 L L C 0
+DONE cuda=no error
+== trd hetrd_gpu 33 33 L L C 5
+DONE cuda=no error
+== trd hetrd_gpu 33 33 L R N 0
+DONE cuda=no error
+== trd hetrd_gpu 33 33 L R N 5
+DONE cuda=no error
+== trd hetrd_gpu 33 33 L R C 0
+DONE cuda=no error
+== trd hetrd_gpu 33 33 L R C 5
+DONE cuda=no error
+== trd hetrd_gpu 33 33 U L N 0
+DONE cuda=no error
+== trd hetrd_gpu 33 33 U L N 5
+DONE cuda=no error
+== trd hetrd_gpu 33 33 U L C 0
+DONE cuda=no error
+== trd hetrd_gpu 33 33 U L C 5
+DONE cuda=no error
+== trd hetrd_gpu 33 33 U R N 0
+DONE cuda=no error
+== trd hetrd_gpu 33 33 U R N 5
+DONE cuda=no error
+== trd hetrd_gpu 33 33 U R C 0
+DONE cuda=no error
+== trd hetrd_gpu 33 33 U R C 5
+DONE cuda=no error
+== trd hetrd_gpu 33 50 L L N 0
+DONE cuda=no error
+== trd hetrd_gpu 33 50 L L N 5
+DONE cuda=no error
+== trd hetrd_gpu 33 50 L L C 0
+DONE cuda=no error
+== trd hetrd_gpu 33 50 L L C 5
+DONE cuda=no error
+== trd hetrd_gpu 33 50 L R N 0
+DONE cuda=no error
+== trd hetrd_gpu 33 50 L R N 5
+DONE cuda=no error
+== trd hetrd_gpu 33 50 L R C 0
+DONE cuda=no error
+== trd hetrd_gpu 33 50 L R C 5
+DONE cuda=no error
+== trd hetrd_gpu 33 50 U L N 0
+DONE cuda=no error
+== trd hetrd_gpu 33 50 U L N 5
+DONE cuda=no error
+== trd hetrd_gpu 33 50 U L C 0
+DONE cuda=no error
+== trd hetrd_gpu 33 50 U L C 5
+DONE cuda=no error
+== trd hetrd_gpu 33 50 U R N 0
+DONE cuda=no error
+== trd hetrd_gpu 33 50 U R N 5
+DONE cuda=no error
+== trd hetrd_gpu 33 50 U R C 0
+DONE cuda=no error
+== trd hetrd_gpu 33 50 U R C 5
+DONE cuda=no error
+== trd hetrd_gpu 300 50 L L N 0
+DONE cuda=no error
+== trd hetrd_gpu 300 50 L L N 5
+DONE cuda=no error
+== trd hetrd_gpu 300 50 L L C 0
+DONE cuda=no error
+== trd hetrd_gpu 300 50 L L C 5
+DONE cuda=no error
+== trd hetrd_gpu 300 50 L R N 0
+DONE cuda=no error
+== trd hetrd_gpu 300 50 L R N 5
+DONE cuda=no error
+== trd hetrd_gpu 300 50 L R C 0
+DONE cuda=no error
+== trd hetrd_gpu 300 50 L R C 5
+DONE cuda=no error
+== trd hetrd_gpu 300 50 U L N 0
+DONE cuda=no error
+== trd hetrd_gpu 300 50 U L N 5
+DONE cuda=no error
+== trd hetrd_gpu 300 50 U L C 0
+DONE cuda=no error
+== trd hetrd_gpu 300 50 U L C 5
+DONE cuda=no error
+== trd hetrd_gpu 300 50 U R N 0
+DONE cuda=no error
+== trd hetrd_gpu 300 50 U R N 5
+DONE cuda=no error
+== trd hetrd_gpu 300 50 U R C 0
+DONE cuda=no error
+== trd hetrd_gpu 300 50 U R C 5
+DONE cuda=no error
+== trd hetrd_gpu 300 300 L L N 0
+DONE cuda=no error
+== trd hetrd_gpu 300 300 L L N 5
+DONE cuda=no error
+== trd hetrd_gpu 300 300 L L C 0
+DONE cuda=no error
+== trd hetrd_gpu 300 300 L L C 5
+DONE cuda=no error
+== trd hetrd_gpu 300 300 L R N 0
+DONE cuda=no error
+== trd hetrd_gpu 300 300 L R N 5
+DONE cuda=no error
+== trd hetrd_gpu 300 300 L R C 0
+DONE cuda=no error
+== trd hetrd_gpu 300 300 L R C 5
+DONE cuda=no error
+== trd hetrd_gpu 300 300 U L N 0
+DONE cuda=no error
+== trd hetrd_gpu 300 300 U L N 5
+DONE cuda=no error
+== trd hetrd_gpu 300 300 U L C 0
+DONE cuda=no error
+== trd hetrd_gpu 300 300 U L C 5
+DONE cuda=no error
+== trd hetrd_gpu 300 300 U R N 0
+DONE cuda=no error
+== trd hetrd_gpu 300 300 U R N 5
+DONE cuda=no error
+== trd hetrd_gpu 300 300 U R C 0
+DONE cuda=no error
+== trd hetrd_gpu 300 300 U R C 5
+DONE cuda=no error
+== trd hetrd_gpu 513 50 L L N 0
+DONE cuda=no error
+== trd hetrd_gpu 513 50 L L N 5
+DONE cuda=no error
+== trd hetrd_gpu 513 50 L L C 0
+DONE cuda=no error
+== trd hetrd_gpu 513 50 L L C 5
+DONE cuda=no error
+== trd hetrd_gpu 513 50 L R N 0
+DONE cuda=no error
+== trd hetrd_gpu 513 50 L R N 5
+DONE cuda=no error
+== trd hetrd_gpu 513 50 L R C 0
+DONE cuda=no error
+== trd hetrd_gpu 513 50 L R C 5
+DONE cuda=no error
+== trd hetrd_gpu 513 50 U L N 0
+DONE cuda=no error
+== trd hetrd_gpu 513 50 U L N 5
+DONE cuda=no error
+== trd hetrd_gpu 513 50 U L C 0
+DONE cuda=no error
+== trd hetrd_gpu 513 50 U L C 5
+DONE cuda=no error
+== trd hetrd_gpu 513 50 U R N 0
+DONE cuda=no error
+== trd hetrd_gpu 513 50 U R N 5
+DONE cuda=no error
+== trd hetrd_gpu 513 50 U R C 0
+DONE cuda=no error
+== trd hetrd_gpu 513 50 U R C 5
+DONE cuda=no error
+== trd hetrd_gpu 513 513 L L N 0
+DONE cuda=no error
+== trd hetrd_gpu 513 513 L L N 5
+DONE cuda=no error
+== trd hetrd_gpu 513 513 L L C 0
+DONE cuda=no error
+== trd hetrd_gpu 513 513 L L C 5
+DONE cuda=no error
+== trd hetrd_gpu 513 513 L R N 0
+DONE cuda=no error
+== trd hetrd_gpu 513 513 L R N 5
+DONE cuda=no error
+== trd hetrd_gpu 513 513 L R C 0
+DONE cuda=no error
+== trd hetrd_gpu 513 513 L R C 5
+DONE cuda=no error
+== trd hetrd_gpu 513 513 U L N 0
+DONE cuda=no error
+== trd hetrd_gpu 513 513 U L N 5
+DONE cuda=no error
+== trd hetrd_gpu 513 513 U L C 0
+DONE cuda=no error
+== trd hetrd_gpu 513 513 U L C 5
+DONE cuda=no error
+== trd hetrd_gpu 513 513 U R N 0
+DONE cuda=no error
+== trd hetrd_gpu 513 513 U R N 5
+DONE cuda=no error
+== trd hetrd_gpu 513 513 U R C 0
+DONE cuda=no error
+== trd hetrd_gpu 513 513 U R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 L L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 L L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 L L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 L L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 L R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 L R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 L R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 L R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 U L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 U L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 U L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 U L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 U R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 U R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 U R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 33 U R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 L L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 L L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 L L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 L L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 L R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 L R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 L R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 L R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 U L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 U L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 U L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 U L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 U R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 U R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 U R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 33 50 U R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 L L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 L L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 L L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 L L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 L R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 L R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 L R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 L R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 U L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 U L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 U L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 U L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 U R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 U R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 U R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 50 U R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 L L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 L L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 L L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 L L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 L R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 L R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 L R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 L R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 U L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 U L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 U L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 U L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 U R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 U R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 U R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 300 300 U R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 L L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 L L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 L L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 L L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 L R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 L R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 L R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 L R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 U L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 U L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 U L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 U L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 U R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 U R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 U R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 50 U R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 L L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 L L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 L L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 L L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 L R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 L R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 L R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 L R C 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 U L N 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 U L N 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 U L C 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 U L C 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 U R N 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 U R N 5
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 U R C 0
+DONE cuda=no error
+== trd hetrd2_gpu 513 513 U R C 5
+DONE cuda=no error
+== bqr 64 48 7 L N 0 3
+DONE cuda=no error
+== bqr 64 48 7 L N 3 3
+DONE cuda=no error
+== bqr 64 48 7 L C 0 3
+DONE cuda=no error
+== bqr 64 48 7 L C 3 3
+DONE cuda=no error
+== bqr 64 48 32 L N 0 3
+DONE cuda=no error
+== bqr 64 48 32 L N 3 3
+DONE cuda=no error
+== bqr 64 48 32 L C 0 3
+DONE cuda=no error
+== bqr 64 48 32 L C 3 3
+DONE cuda=no error
+== bqr 64 48 64 L N 0 3
+DONE cuda=no error
+== bqr 64 48 64 L N 3 3
+DONE cuda=no error
+== bqr 64 48 64 L C 0 3
+DONE cuda=no error
+== bqr 64 48 64 L C 3 3
+DONE cuda=no error
+== bqr 64 48 7 R N 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 7 R N 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 7 R C 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 7 R C 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 24 R N 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 24 R N 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 24 R C 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 24 R C 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 48 R N 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 48 R N 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 48 R C 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 64 48 48 R C 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 7 L N 0 3
+DONE cuda=no error
+== bqr 48 64 7 L N 3 3
+DONE cuda=no error
+== bqr 48 64 7 L C 0 3
+DONE cuda=no error
+== bqr 48 64 7 L C 3 3
+DONE cuda=no error
+== bqr 48 64 24 L N 0 3
+DONE cuda=no error
+== bqr 48 64 24 L N 3 3
+DONE cuda=no error
+== bqr 48 64 24 L C 0 3
+DONE cuda=no error
+== bqr 48 64 24 L C 3 3
+DONE cuda=no error
+== bqr 48 64 48 L N 0 3
+DONE cuda=no error
+== bqr 48 64 48 L N 3 3
+DONE cuda=no error
+== bqr 48 64 48 L C 0 3
+DONE cuda=no error
+== bqr 48 64 48 L C 3 3
+DONE cuda=no error
+== bqr 48 64 7 R N 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 7 R N 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 7 R C 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 7 R C 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 32 R N 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 32 R N 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 32 R C 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 32 R C 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 64 R N 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 64 R N 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 64 R C 0 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 48 64 64 R C 3 3
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_reg_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunm2r_sm_batched, parameter 1 had an illegal value (info = -1)
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 7 L N 0 3
+DONE cuda=no error
+== bqr 200 150 7 L N 3 3
+DONE cuda=no error
+== bqr 200 150 7 L C 0 3
+DONE cuda=no error
+== bqr 200 150 7 L C 3 3
+DONE cuda=no error
+== bqr 200 150 100 L N 0 3
+DONE cuda=no error
+== bqr 200 150 100 L N 3 3
+DONE cuda=no error
+== bqr 200 150 100 L C 0 3
+DONE cuda=no error
+== bqr 200 150 100 L C 3 3
+DONE cuda=no error
+== bqr 200 150 200 L N 0 3
+DONE cuda=no error
+== bqr 200 150 200 L N 3 3
+DONE cuda=no error
+== bqr 200 150 200 L C 0 3
+DONE cuda=no error
+== bqr 200 150 200 L C 3 3
+DONE cuda=no error
+== bqr 200 150 7 R N 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 7 R N 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 7 R C 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 7 R C 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 75 R N 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 75 R N 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 75 R C 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 75 R C 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 150 R N 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 150 R N 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 150 R C 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 200 150 150 R C 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 7 L N 0 3
+DONE cuda=no error
+== bqr 150 200 7 L N 3 3
+DONE cuda=no error
+== bqr 150 200 7 L C 0 3
+DONE cuda=no error
+== bqr 150 200 7 L C 3 3
+DONE cuda=no error
+== bqr 150 200 75 L N 0 3
+DONE cuda=no error
+== bqr 150 200 75 L N 3 3
+DONE cuda=no error
+== bqr 150 200 75 L C 0 3
+DONE cuda=no error
+== bqr 150 200 75 L C 3 3
+DONE cuda=no error
+== bqr 150 200 150 L N 0 3
+DONE cuda=no error
+== bqr 150 200 150 L N 3 3
+DONE cuda=no error
+== bqr 150 200 150 L C 0 3
+DONE cuda=no error
+== bqr 150 200 150 L C 3 3
+DONE cuda=no error
+== bqr 150 200 7 R N 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 7 R N 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 7 R C 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 7 R C 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 100 R N 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 100 R N 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 100 R C 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 100 R C 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 200 R N 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 200 R N 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 200 R C 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 150 200 200 R C 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 7 L N 0 3
+DONE cuda=no error
+== bqr 300 300 7 L N 3 3
+DONE cuda=no error
+== bqr 300 300 7 L C 0 3
+DONE cuda=no error
+== bqr 300 300 7 L C 3 3
+DONE cuda=no error
+== bqr 300 300 150 L N 0 3
+DONE cuda=no error
+== bqr 300 300 150 L N 3 3
+DONE cuda=no error
+== bqr 300 300 150 L C 0 3
+DONE cuda=no error
+== bqr 300 300 150 L C 3 3
+DONE cuda=no error
+== bqr 300 300 300 L N 0 3
+DONE cuda=no error
+== bqr 300 300 300 L N 3 3
+DONE cuda=no error
+== bqr 300 300 300 L C 0 3
+DONE cuda=no error
+== bqr 300 300 300 L C 3 3
+DONE cuda=no error
+== bqr 300 300 7 R N 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 7 R N 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 7 R C 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 7 R C 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 150 R N 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 150 R N 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 150 R C 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 150 R C 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 300 R N 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 300 R N 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 300 R C 0 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== bqr 300 300 300 R C 3 3
+On entry to magma_zunmqr_batched, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error

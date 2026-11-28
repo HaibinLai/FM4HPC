@@ -1,0 +1,4 @@
+n= 1024  FP64 dgesv_gpu=  0.0784 s (info 0) | host certification: D2H copy= 0.0147 s, Dot2 pass= 0.0157 s, total= 0.0304 s  (r=0.998084)
+n= 2048  FP64 dgesv_gpu=  0.1920 s (info 0) | host certification: D2H copy= 0.0444 s, Dot2 pass= 0.0753 s, total= 0.1197 s  (r=0.998874)
+n= 4096  FP64 dgesv_gpu=  0.7446 s (info 0) | host certification: D2H copy= 0.1423 s, Dot2 pass= 0.4038 s, total= 0.5460 s  (r=0.999704)
+n= 8192  FP64 dgesv_gpu=  5.4306 s (info 0) | host certification: D2H copy= 0.5432 s, Dot2 pass= 1.8029 s, total= 2.3461 s  (r=0.99981)

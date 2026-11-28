@@ -1,0 +1,15 @@
+== timing (well-conditioned, k = 0), best of 3 after one warm-up ==
+dsgesv_iteref  n= 1024  time=  0.5344 s  iter=   2 info=0  relerr=7.70e-12
+dhgesv_iteref  n= 1024  time=  0.3071 s  iter=   2 info=0  relerr=2.56e-12
+dsgesv_iteref  n= 2048  time=  0.4905 s  iter=   2 info=0  relerr=2.72e-12
+dhgesv_iteref  n= 2048  time=  0.4160 s  iter=   2 info=0  relerr=2.00e-12
+dsgesv_iteref  n= 4096  time=  1.3609 s  iter=   2 info=0  relerr=4.44e-12
+dhgesv_iteref  n= 4096  time=  0.5700 s  iter=   2 info=0  relerr=4.84e-12
+dsgesv_iteref  n= 8192  time=  5.3408 s  iter=   2 info=0  relerr=8.72e-12
+dhgesv_iteref  n= 8192  time=  1.5864 s  iter=   2 info=0  relerr=1.02e-11
+== trans = MagmaTrans (A nonsymmetric): solution should satisfy A^T x = b ==
+dsgesv_iteref  trans=T n=1024  iter=   2 info=0  relerr vs A^T-solution=6.61e-02
+dhgesv_iteref  trans=T n=1024  iter=   2 info=0  relerr vs A^T-solution=6.61e-02
+== nrhs = 2 ==
+dsgesv_iteref  nrhs=2 n=1024  iter=   2 info=0  relerr col0=5.40e-12  col1=1.00e+00  max|x col1|=0
+dhgesv_iteref  nrhs=2 n=1024  iter=   2 info=0  relerr col0=1.85e-12  col1=1.00e+00  max|x col1|=0

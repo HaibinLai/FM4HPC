@@ -1,0 +1,16 @@
+dshift 10
+dshift 200
+dslice 10 9 5
+dslice 10 9 6
+dslice 10 9 8
+dslice 5 4 3
+dslice 5 4 3
+dslice 5 4 3
+dicc 10
+dicc 30
+cidr rot0 4
+cidr rot90 4
+cidr rot0 1
+cidr rot90 1
+cjac 10
+cjac 30

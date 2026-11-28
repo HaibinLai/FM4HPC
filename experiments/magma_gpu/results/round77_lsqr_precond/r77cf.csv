@@ -1,0 +1,10 @@
+exit,row
+0,r77i,cpx,jacobi,10,lsqr,0,0.388,0.388,1.48e-16,OK
+0,r77i,cpx,jacobi,10,pbicg,0,0.388,0.388,1.48e-16,OK
+0,r77i,cpx,jacobi,30,lsqr,0,0.388,0.388,2.99e-16,OK
+0,r77i,cpx,jacobi,30,pbicg,0,0.388,0.388,2.99e-16,OK
+0,r77s,cpx,lsqr,jacobi,10,0,64,3.11e-11,3.11e-11,OK
+0,r77s,cpx,lsqr,jacobi,30,0,91,8.51e-11,8.51e-11,OK
+0,r77s,cpx,pbicg,jacobi,10,0,33,4.13e-11,4.13e-11,OK
+0,r77s,cpx,pbicg,jacobi,30,0,47,7.01e-11,7.01e-11,OK
+LIST_DONE

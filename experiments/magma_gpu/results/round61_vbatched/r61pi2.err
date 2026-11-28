@@ -1,0 +1,64 @@
+
+== vb 256 0 0 -1
+DONE cuda=no error
+== vb 256 100 0 -1
+DONE cuda=no error
+== vb 257 0 0 -1
+DONE cuda=no error
+== vb 257 100 0 -1
+DONE cuda=no error
+== vb 300 0 0 -1
+DONE cuda=no error
+== vb 300 100 0 -1
+DONE cuda=no error
+== vb 320 0 0 -1
+DONE cuda=no error
+== vb 320 100 0 -1
+DONE cuda=no error
+== vb 352 0 0 -1
+DONE cuda=no error
+== vb 352 100 0 -1
+DONE cuda=no error
+== vb 384 0 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 384 100 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 385 0 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 385 100 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 400 0 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 400 100 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 416 0 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 416 100 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 447 0 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 447 100 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 448 0 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 448 100 0 -1
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 448 0 100 50
+On entry to magma_zpotrf_lpout_vbatched, parameter 33 had an illegal value (info = -33)
+DONE cuda=no error
+== vb 300 0 100 50
+DONE cuda=no error
+== vb 257 128 100 50
+DONE cuda=no error

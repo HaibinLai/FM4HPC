@@ -1,0 +1,236 @@
+ungqr_gpu 64 64 27 0
+ungqr_gpu 64 64 27 5
+ungqr_gpu 64 64 32 0
+ungqr_gpu 64 64 32 5
+ungqr_gpu 64 64 64 0
+ungqr_gpu 64 64 64 5
+ungqr_gpu 200 200 100 0
+ungqr_gpu 200 200 100 5
+ungqr_gpu 200 200 163 0
+ungqr_gpu 200 200 163 5
+ungqr_gpu 200 200 200 0
+ungqr_gpu 200 200 200 5
+ungqr_gpu 300 200 100 0
+ungqr_gpu 300 200 100 5
+ungqr_gpu 300 200 163 0
+ungqr_gpu 300 200 163 5
+ungqr_gpu 300 200 200 0
+ungqr_gpu 300 200 200 5
+ungqr_gpu 257 129 64 0
+ungqr_gpu 257 129 64 5
+ungqr_gpu 257 129 92 0
+ungqr_gpu 257 129 92 5
+ungqr_gpu 257 129 129 0
+ungqr_gpu 257 129 129 5
+ungqr_gpu 600 70 33 0
+ungqr_gpu 600 70 33 5
+ungqr_gpu 600 70 35 0
+ungqr_gpu 600 70 35 5
+ungqr_gpu 600 70 70 0
+ungqr_gpu 600 70 70 5
+ungqr 64 64 27 0
+ungqr 64 64 27 5
+ungqr 64 64 32 0
+ungqr 64 64 32 5
+ungqr 64 64 64 0
+ungqr 64 64 64 5
+ungqr 200 200 100 0
+ungqr 200 200 100 5
+ungqr 200 200 163 0
+ungqr 200 200 163 5
+ungqr 200 200 200 0
+ungqr 200 200 200 5
+ungqr 300 200 100 0
+ungqr 300 200 100 5
+ungqr 300 200 163 0
+ungqr 300 200 163 5
+ungqr 300 200 200 0
+ungqr 300 200 200 5
+ungqr 257 129 64 0
+ungqr 257 129 64 5
+ungqr 257 129 92 0
+ungqr 257 129 92 5
+ungqr 257 129 129 0
+ungqr 257 129 129 5
+ungqr 600 70 33 0
+ungqr 600 70 33 5
+ungqr 600 70 35 0
+ungqr 600 70 35 5
+ungqr 600 70 70 0
+ungqr 600 70 70 5
+unmqr_gpu 200 150 37 0 L N
+unmqr_gpu 200 150 37 5 L N
+unmqr_gpu 200 150 37 0 L C
+unmqr_gpu 200 150 37 5 L C
+unmqr_gpu 200 150 100 0 L N
+unmqr_gpu 200 150 100 5 L N
+unmqr_gpu 200 150 100 0 L C
+unmqr_gpu 200 150 100 5 L C
+unmqr_gpu 200 150 200 0 L N
+unmqr_gpu 200 150 200 5 L N
+unmqr_gpu 200 150 200 0 L C
+unmqr_gpu 200 150 200 5 L C
+unmqr_gpu 200 150 37 0 R N
+unmqr_gpu 200 150 37 5 R N
+unmqr_gpu 200 150 37 0 R C
+unmqr_gpu 200 150 37 5 R C
+unmqr_gpu 200 150 75 0 R N
+unmqr_gpu 200 150 75 5 R N
+unmqr_gpu 200 150 75 0 R C
+unmqr_gpu 200 150 75 5 R C
+unmqr_gpu 200 150 150 0 R N
+unmqr_gpu 200 150 150 5 R N
+unmqr_gpu 200 150 150 0 R C
+unmqr_gpu 200 150 150 5 R C
+unmqr_gpu 150 200 37 0 L N
+unmqr_gpu 150 200 37 5 L N
+unmqr_gpu 150 200 37 0 L C
+unmqr_gpu 150 200 37 5 L C
+unmqr_gpu 150 200 75 0 L N
+unmqr_gpu 150 200 75 5 L N
+unmqr_gpu 150 200 75 0 L C
+unmqr_gpu 150 200 75 5 L C
+unmqr_gpu 150 200 150 0 L N
+unmqr_gpu 150 200 150 5 L N
+unmqr_gpu 150 200 150 0 L C
+unmqr_gpu 150 200 150 5 L C
+unmqr_gpu 150 200 37 0 R N
+unmqr_gpu 150 200 37 5 R N
+unmqr_gpu 150 200 37 0 R C
+unmqr_gpu 150 200 37 5 R C
+unmqr_gpu 150 200 100 0 R N
+unmqr_gpu 150 200 100 5 R N
+unmqr_gpu 150 200 100 0 R C
+unmqr_gpu 150 200 100 5 R C
+unmqr_gpu 150 200 200 0 R N
+unmqr_gpu 150 200 200 5 R N
+unmqr_gpu 150 200 200 0 R C
+unmqr_gpu 150 200 200 5 R C
+unmqr_gpu 300 300 37 0 L N
+unmqr_gpu 300 300 37 5 L N
+unmqr_gpu 300 300 37 0 L C
+unmqr_gpu 300 300 37 5 L C
+unmqr_gpu 300 300 150 0 L N
+unmqr_gpu 300 300 150 5 L N
+unmqr_gpu 300 300 150 0 L C
+unmqr_gpu 300 300 150 5 L C
+unmqr_gpu 300 300 300 0 L N
+unmqr_gpu 300 300 300 5 L N
+unmqr_gpu 300 300 300 0 L C
+unmqr_gpu 300 300 300 5 L C
+unmqr_gpu 300 300 37 0 R N
+unmqr_gpu 300 300 37 5 R N
+unmqr_gpu 300 300 37 0 R C
+unmqr_gpu 300 300 37 5 R C
+unmqr_gpu 300 300 150 0 R N
+unmqr_gpu 300 300 150 5 R N
+unmqr_gpu 300 300 150 0 R C
+unmqr_gpu 300 300 150 5 R C
+unmqr_gpu 300 300 300 0 R N
+unmqr_gpu 300 300 300 5 R N
+unmqr_gpu 300 300 300 0 R C
+unmqr_gpu 300 300 300 5 R C
+unmqr_gpu 600 70 37 0 L N
+unmqr_gpu 600 70 37 5 L N
+unmqr_gpu 600 70 37 0 L C
+unmqr_gpu 600 70 37 5 L C
+unmqr_gpu 600 70 300 0 L N
+unmqr_gpu 600 70 300 5 L N
+unmqr_gpu 600 70 300 0 L C
+unmqr_gpu 600 70 300 5 L C
+unmqr_gpu 600 70 600 0 L N
+unmqr_gpu 600 70 600 5 L N
+unmqr_gpu 600 70 600 0 L C
+unmqr_gpu 600 70 600 5 L C
+unmqr_gpu 600 70 35 0 R N
+unmqr_gpu 600 70 35 5 R N
+unmqr_gpu 600 70 35 0 R C
+unmqr_gpu 600 70 35 5 R C
+unmqr_gpu 600 70 37 0 R N
+unmqr_gpu 600 70 37 5 R N
+unmqr_gpu 600 70 37 0 R C
+unmqr_gpu 600 70 37 5 R C
+unmqr_gpu 600 70 70 0 R N
+unmqr_gpu 600 70 70 5 R N
+unmqr_gpu 600 70 70 0 R C
+unmqr_gpu 600 70 70 5 R C
+geqrs_gpu 64 64 1 0
+geqrs_gpu 64 64 1 5
+geqrs_gpu 64 64 7 0
+geqrs_gpu 64 64 7 5
+geqrs_gpu 200 200 1 0
+geqrs_gpu 200 200 1 5
+geqrs_gpu 200 200 7 0
+geqrs_gpu 200 200 7 5
+geqrs_gpu 300 200 1 0
+geqrs_gpu 300 200 1 5
+geqrs_gpu 300 200 7 0
+geqrs_gpu 300 200 7 5
+geqrs_gpu 257 129 1 0
+geqrs_gpu 257 129 1 5
+geqrs_gpu 257 129 7 0
+geqrs_gpu 257 129 7 5
+geqrs_gpu 600 70 1 0
+geqrs_gpu 600 70 1 5
+geqrs_gpu 600 70 7 0
+geqrs_gpu 600 70 7 5
+geqrs3_gpu 64 64 1 0
+geqrs3_gpu 64 64 1 5
+geqrs3_gpu 64 64 7 0
+geqrs3_gpu 64 64 7 5
+geqrs3_gpu 200 200 1 0
+geqrs3_gpu 200 200 1 5
+geqrs3_gpu 200 200 7 0
+geqrs3_gpu 200 200 7 5
+geqrs3_gpu 300 200 1 0
+geqrs3_gpu 300 200 1 5
+geqrs3_gpu 300 200 7 0
+geqrs3_gpu 300 200 7 5
+geqrs3_gpu 257 129 1 0
+geqrs3_gpu 257 129 1 5
+geqrs3_gpu 257 129 7 0
+geqrs3_gpu 257 129 7 5
+geqrs3_gpu 600 70 1 0
+geqrs3_gpu 600 70 1 5
+geqrs3_gpu 600 70 7 0
+geqrs3_gpu 600 70 7 5
+gels_gpu 64 64 1 0
+gels_gpu 64 64 1 5
+gels_gpu 64 64 7 0
+gels_gpu 64 64 7 5
+gels_gpu 200 200 1 0
+gels_gpu 200 200 1 5
+gels_gpu 200 200 7 0
+gels_gpu 200 200 7 5
+gels_gpu 300 200 1 0
+gels_gpu 300 200 1 5
+gels_gpu 300 200 7 0
+gels_gpu 300 200 7 5
+gels_gpu 257 129 1 0
+gels_gpu 257 129 1 5
+gels_gpu 257 129 7 0
+gels_gpu 257 129 7 5
+gels_gpu 600 70 1 0
+gels_gpu 600 70 1 5
+gels_gpu 600 70 7 0
+gels_gpu 600 70 7 5
+gels3_gpu 64 64 1 0
+gels3_gpu 64 64 1 5
+gels3_gpu 64 64 7 0
+gels3_gpu 64 64 7 5
+gels3_gpu 200 200 1 0
+gels3_gpu 200 200 1 5
+gels3_gpu 200 200 7 0
+gels3_gpu 200 200 7 5
+gels3_gpu 300 200 1 0
+gels3_gpu 300 200 1 5
+gels3_gpu 300 200 7 0
+gels3_gpu 300 200 7 5
+gels3_gpu 257 129 1 0
+gels3_gpu 257 129 1 5
+gels3_gpu 257 129 7 0
+gels3_gpu 257 129 7 5
+gels3_gpu 600 70 1 0
+gels3_gpu 600 70 1 5
+gels3_gpu 600 70 7 0
+gels3_gpu 600 70 7 5

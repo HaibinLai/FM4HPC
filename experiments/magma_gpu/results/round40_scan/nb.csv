@@ -1,0 +1,32 @@
+r40,routine,case,observed,expected,verdict
+r40,magmablas_dsyrk,n=7 L k=0 beta=0.5 max|C-0.5C0|,0.2451,0,BAD
+r40,magmablas_dsyrk,n=7 L k=17 other-triangle changed (of 21),21,0,BAD
+r40,magmablas_dsyrk,n=7 L k=17 referenced-triangle maxerr,0,0,OK
+r40,magmablas_dsyrk,n=7 U k=0 beta=0.5 max|C-0.5C0|,0.2393,0,BAD
+r40,magmablas_dsyrk,n=7 U k=17 other-triangle changed (of 21),21,0,BAD
+r40,magmablas_dsyrk,n=7 U k=17 referenced-triangle maxerr,0,0,OK
+r40,magmablas_dsyrk,n=31 L k=0 beta=0.5 max|C-0.5C0|,0.2499,0,BAD
+r40,magmablas_dsyrk,n=31 L k=17 other-triangle changed (of 465),465,0,BAD
+r40,magmablas_dsyrk,n=31 L k=17 referenced-triangle maxerr,0,0,OK
+r40,magmablas_dsyrk,n=31 U k=0 beta=0.5 max|C-0.5C0|,0.2484,0,BAD
+r40,magmablas_dsyrk,n=31 U k=17 other-triangle changed (of 465),465,0,BAD
+r40,magmablas_dsyrk,n=31 U k=17 referenced-triangle maxerr,0,0,OK
+r40,magmablas_dsyrk,n=64 L k=0 beta=0.5 max|C-0.5C0|,0.25,0,BAD
+r40,magmablas_dsyrk,n=64 L k=17 other-triangle changed (of 2016),2016,0,BAD
+r40,magmablas_dsyrk,n=64 L k=17 referenced-triangle maxerr,0,0,OK
+r40,magmablas_dsyrk,n=64 U k=0 beta=0.5 max|C-0.5C0|,0.2497,0,BAD
+r40,magmablas_dsyrk,n=64 U k=17 other-triangle changed (of 2016),2016,0,BAD
+r40,magmablas_dsyrk,n=64 U k=17 referenced-triangle maxerr,0,0,OK
+r40,magmablas_dsyrk,n=200 L k=0 beta=0.5 max|C-0.5C0|,0.25,0,BAD
+r40,magmablas_dsyrk,n=200 L k=17 other-triangle changed (of 19900),1.99e+04,0,BAD
+r40,magmablas_dsyrk,n=200 L k=17 referenced-triangle maxerr,0,0,OK
+r40,magmablas_dsyrk,n=200 U k=0 beta=0.5 max|C-0.5C0|,0.25,0,BAD
+r40,magmablas_dsyrk,n=200 U k=17 other-triangle changed (of 19900),1.99e+04,0,BAD
+r40,magmablas_dsyrk,n=200 U k=17 referenced-triangle maxerr,0,0,OK
+r40,magmablas_dtrmm,m=1 L alpha=0 B=NaN: nonzero (of 9),9,0,BAD
+r40,magmablas_dtrmm,m=1 R alpha=0 B=NaN: nonzero (of 9),9,0,BAD
+r40,magmablas_dtrmm,m=31 L alpha=0 B=NaN: nonzero (of 279),279,0,BAD
+r40,magmablas_dtrmm,m=31 R alpha=0 B=NaN: nonzero (of 279),279,0,BAD
+r40,magmablas_dtrmm,m=100 L alpha=0 B=NaN: nonzero (of 900),900,0,BAD
+r40,magmablas_dtrmm,m=100 R alpha=0 B=NaN: nonzero (of 900),900,0,BAD
+DONE cuda=no error

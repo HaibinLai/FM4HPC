@@ -1,0 +1,48 @@
+0 MiB, 0 %
+## bpcg
+== R1: magma_z_solver with a 2-column right-hand side and solver = CG (routes to zbpcg) ==
+4.3000e-10  
+4.3000e-10  
+column 0: relerr=8.54e-11
+column 1: relerr=1
+ret=0 info=0 numiter=18 (b.num_rows=64 b.num_cols=2 -> zbpcg num_vecs = b.num_rows/A.num_rows = 1)
+exit 0
+## rbtb
+== R2: zgesv_rbt_batched ==
+matrix 0: return=0 info_array=0 nonfinite=0 relerr(finite part)=7.93e-16
+matrix 1: return=0 info_array=0 nonfinite=0 relerr(finite part)=6.91e-16
+matrix 2 (singular): return=0 info_array=0 nonfinite=0 relerr(finite part)=8.45e-01
+matrix 3: return=0 info_array=0 nonfinite=0 relerr(finite part)=4.48e-16
+leak: 200 calls with n=4096: device free memory dropped by 25.17 MB (dv = 2n complex = 0.131 MB per call); host RSS grew by 52.70 MB (hu+hv = 4n complex = 0.262 MB per call)
+exit 0
+## bombard
+== R3: bombard / bombard_merge, reported iter_res vs true residual ==
+% BiCGSTAB fastest solver.
+BOMBARD      maxiter=   3: info=-201 numiter=3 iter_res=1.740e-02 final_res=1.740e-02 true ||b-Ax||=1.740e-02
+% BiCGSTAB fastest solver.
+BOMBARD      maxiter=   6: info=-201 numiter=6 iter_res=3.570e-05 final_res=3.570e-05 true ||b-Ax||=3.570e-05
+% CGS fastest solver.
+BOMBARD      maxiter=  10: info=0 numiter=10 iter_res=7.321e-10 final_res=7.321e-10 true ||b-Ax||=7.321e-10
+% CGS fastest solver.
+BOMBARD      maxiter=1000: info=0 numiter=10 iter_res=7.321e-10 final_res=7.321e-10 true ||b-Ax||=7.321e-10
+% BiCGSTAB fastest solver.
+BOMBARDMERGE maxiter=   3: info=-201 numiter=3 iter_res=1.740e-02 final_res=1.740e-02 true ||b-Ax||=1.740e-02
+% BiCGSTAB fastest solver.
+BOMBARDMERGE maxiter=   6: info=-201 numiter=6 iter_res=3.570e-05 final_res=3.570e-05 true ||b-Ax||=3.570e-05
+% CGS fastest solver.
+BOMBARDMERGE maxiter=  10: info=0 numiter=10 iter_res=7.321e-10 final_res=7.321e-10 true ||b-Ax||=7.321e-10
+% CGS fastest solver.
+BOMBARDMERGE maxiter=1000: info=0 numiter=10 iter_res=7.321e-10 final_res=7.321e-10 true ||b-Ax||=7.321e-10
+exit 0
+## single
+== R4: single-precision variants ==
+c gbtrs_batched_strided: ret=0 x[0]=nan (a correct solve gives about 0.366)
+c trtri_gpu n=512 A(300,300)=0: info=45 (LAPACK 301)
+s potf2_gpu A(0,0)=-1: info=0 (LAPACK 1)
+c cg_merge A=diag(2,3) b=(2,i): info=0 numiter=1 x=(2+0i, 0+1i) (exact (1, 0.333i))
+exit 0
+## ilu (segv_bt)
+== R5: ILU(0) setup on [[0,1],[1,0]] with the zero diagonal stored (expect a crash; backtrace from segv_bt.so) ==
+timeout: the monitored command dumped core
+exit 139
+bash: line 1: 3490367 Segmentation fault      LD_PRELOAD=./segv_bt.so timeout 120 ./round5_probe ilu 2>&1

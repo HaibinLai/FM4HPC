@@ -1,0 +1,17 @@
+exit,row
+0,r67t,40,40,conjcpu,1,0,0,OK
+0,r67t,40,40,abscpu,2,0,2.22e-16,OK
+0,r67t,40,40,structcpu,3,0,0,OK
+-1073741819,MISSING,30 47 conjcpu 0
+-1073741819,MISSING,30 47 abscpu 0
+-1073741819,MISSING,30 47 structcpu 0
+0,r67t,47,30,conjcpu,1,0,inf,WRONG
+0,r67t,47,30,abscpu,2,0,inf,WRONG
+0,r67t,47,30,structcpu,3,0,inf,WRONG
+0,r67t,10,11,conjcpu,1,0,inf,WRONG
+0,r67t,10,11,abscpu,2,0,inf,WRONG
+0,r67t,10,11,structcpu,3,0,inf,WRONG
+0,r67t,11,10,conjcpu,1,0,inf,WRONG
+0,r67t,11,10,abscpu,2,0,inf,WRONG
+0,r67t,11,10,structcpu,3,0,inf,WRONG
+LIST_DONE

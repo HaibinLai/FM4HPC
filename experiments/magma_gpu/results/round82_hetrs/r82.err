@@ -1,0 +1,79 @@
+
+== U 100 1 0
+bad columns 0 of 1
+DONE
+== U 100 2 0
+bad columns 0 of 2
+DONE
+== U 100 3 0
+bad columns 0 of 3
+DONE
+== U 100 16 0
+bad columns 0 of 16
+DONE
+== U 100 1024 0
+bad columns 0 of 1024
+DONE
+== U 100 1025 0
+bad columns 1025 of 1025
+DONE
+== U 100 1 1
+bad columns 0 of 1
+DONE
+== U 100 2 1
+bad columns 0 of 2
+DONE
+== U 100 3 1
+bad columns 0 of 3
+DONE
+== U 100 16 1
+bad columns 0 of 16
+DONE
+== U 100 1024 1
+bad columns 0 of 1024
+DONE
+== U 100 1025 1
+bad columns 1025 of 1025
+DONE
+== L 100 1 0
+bad columns 0 of 1
+DONE
+== L 100 2 0
+bad columns 1 of 2
+DONE
+== L 100 3 0
+bad columns 2 of 3
+DONE
+== L 100 16 0
+bad columns 15 of 16
+DONE
+== L 100 1024 0
+bad columns 1023 of 1024
+DONE
+== L 100 1025 0
+bad columns 1025 of 1025
+DONE
+== L 100 1 1
+bad columns 0 of 1
+DONE
+== L 100 2 1
+bad columns 1 of 2
+DONE
+== L 100 3 1
+bad columns 2 of 3
+DONE
+== L 100 16 1
+bad columns 15 of 16
+DONE
+== L 100 1024 1
+bad columns 1023 of 1024
+DONE
+== L 100 1025 1
+bad columns 1025 of 1025
+DONE
+== U 300 5 1
+bad columns 0 of 5
+DONE
+== L 300 5 1
+bad columns 4 of 5
+DONE

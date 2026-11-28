@@ -1,0 +1,115 @@
+######## lag2s
+magmablas_dlag2s with one NaN: info=0 (documented: 1 if an entry is outside the FP32 range; Inf is flagged)
+magmablas_dlag2s with one Inf: info=1
+exit=0
+######## stedx
+LAPACK dsteqr on the first block (rows 0..9, d[3]=NaN): info=9
+magma_dstedx n=200, d[3]=NaN, split at e[9]=0: info=0  non-finite eigenvalues=10
+exit=0
+######## gels
+LAPACK dgels, column 0 = 0: info=1
+magma_dgels_gpu (nb=128), column 0 = 0: info=0  x finite=1  max|x|=17.8  ||b-Ax||/||b||=95.2  max|A^T r|=848
+exit=0
+######## geqp3
+calling dgeqp3_gpu with jpvt[0] = 1 ...
+On entry to magma_dgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+info=-8  jpvt[0]=1  output column 0: 64 of 64 entries identical to the input column; |R(0,0)|=0.261219 vs ||A(:,0)||=2.3079; tau[0]=12345
+exit=0
+######## geqp3_swap
+calling dgeqp3_gpu with jpvt[1] = 1 ...
+On entry to magma_dgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+info=-8  jpvt[0]=0  output column 0: 64 of 64 entries identical to the input column; |R(0,0)|=0.261219 vs ||A(:,0)||=2.3079; tau[0]=12345
+exit=0
+######## sygvdx
+dsygvdx n=50 B=I, RangeI il=iu=50: info=0 m=50 w[0]=-0.766681 (requested: m=1, w[0]=lambda_max=49.7517; lambda_min=-0.766681)
+dsygvdx n=50 B=I, RangeV (lmax-1e-6, lmax+1e-6]: info=0 m=50 w[0]=-0.766681 (requested: m=1, w[0]=lambda_max=49.7517; lambda_min=-0.766681)
+exit=0
+######## mscale
+zmscale UNITDIAG on [[-4,1],[1,-4]]: ret=0  values: -nan -nan -nan -nan
+zmscale UNITDIAG on [[2i,1],[1,2i]]: ret=0  values: (-nan-nani) (-nan-nani) (-nan-nani) (-nan-nani)
+exit=0
+######## spmv
+spmv A 4x4, x 3x1: ret=0
+  y (initialised to 7) = (7+0i) (7+0i) (7+0i) (7+0i)
+spmv DENSE [[1,2],[0,3]] x=(1,1): convert=0 ret=0 (expected y = 3 3)
+  y = (1+0i) (5+0i)
+spmv CSC  [[1,2],[0,3]] x=(1,1): convert=0 ret=0 (expected y = 3 3)
+  y = (1+0i) (2+0i)
+  [after CSC spmv] cudaDeviceSynchronize: no error | cudaGetLastError: no error
+spmv SELLP (blocksize 32, alignment 1) 300x1 ones, x=(1): convert=0 ret=0  rows with y != 1: 44 (first 256, value 7)
+exit=0
+######## icc
+ICC + PCG, real tridiag(-1,4,-1)         precondsetup=0 solver ret=0 info=0 numiter=1  true_rel_res=1.86e-16
+ICC + PCG, Hermitian tridiag(-i,4,i)     precondsetup=0 solver ret=-202 info=-202 numiter=1000  true_rel_res=16.8
+CG (no precond), Hermitian tridiag(-i,4,i) precondsetup=0 solver ret=0 info=0 numiter=17  true_rel_res=4.72e-11
+exit=0
+######## symbilu
+ILU(0) + PBICGSTAB, arrowhead n=200      precondsetup=0 solver ret=0 info=0 numiter=2  true_rel_res=1.51e-16
+ILU: STORAGE parameter value 15548 < 15548 too small.
+Increase STORAGE parameter.
+ ** On entry to cusparseSpSM_solve() parameter number 10 (descr) had an illegal value: NULL pointer
+
+ILU(1) + PBICGSTAB, arrowhead n=200      precondsetup=-3009 solver ret=-3003 info=-3003 numiter=1  true_rel_res=1
+exit=0
+######## syncfree
+ILU0 + PBICGSTAB, trisolver CUSOLVE      precondsetup=0 solver ret=0 info=0 numiter=1  true_rel_res=0
+ILU0 + PBICGSTAB, trisolver SYNCFREESOLVE precondsetup=0 solver ret=-202 info=-202 numiter=1  true_rel_res=1
+  [after syncfree] cudaDeviceSynchronize: no error | cudaGetLastError: no error
+exit=0
+0 MiB, 0 %
+######## geqp3
+On entry to magma_dgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+dgeqp3_gpu with the documented LWORK = (N+1)*NB + 2*N = 2208: info=-8
+calling dgeqp3_gpu with jpvt[0] = 1, LWORK = 9856 ...
+info=0  jpvt[0]=1  output column 0: 64 of 64 entries identical to the input column; |R(0,0)|=0.261219 vs ||A(:,0)||=2.3079; tau[0]=12345
+control (no fixed column): info=0  |R(0,0)|=2.581 vs ||A(:,jpvt[0])||=2.581
+exit=0
+######## geqp3_swap
+On entry to magma_dgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+dgeqp3_gpu with the documented LWORK = (N+1)*NB + 2*N = 2208: info=-8
+calling dgeqp3_gpu with jpvt[1] = 1, LWORK = 9856 ...
+timeout: the monitored command dumped core
+exit=139
+######## syncfree under guard_malloc
+ILU0 + PBICGSTAB, trisolver CUSOLVE      precondsetup=0 solver ret=0 info=0 numiter=1  true_rel_res=0
+ILU0 + PBICGSTAB, trisolver SYNCFREESOLVE precondsetup=0 solver ret=-202 info=-202 numiter=1  true_rel_res=1
+  [after syncfree] cudaDeviceSynchronize: no error | cudaGetLastError: no error
+[guard] allocations checked at free: 39, with out-of-bounds writes: 0
+######## syncfree under guard_malloc, precond freed
+[guard] OUT-OF-BOUNDS WRITE: allocation of 760 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 260 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 2032 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 508 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 260 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 2032 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 508 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 260 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 256 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 256 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 256 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+[guard] OUT-OF-BOUNDS WRITE: allocation of 256 bytes, guard bytes [0, 1048575] modified (1048576 bytes)
+  [after syncfree] cudaDeviceSynchronize: an illegal memory access was encountered | cudaGetLastError: an illegal memory access was encountered
+[guard] allocations checked at free: 66, with out-of-bounds writes: 24
+## without guard
+ILU0 + PBICGSTAB, trisolver CUSOLVE      precondsetup=0 solver ret=0 info=0 numiter=1  true_rel_res=0
+ILU0 + PBICGSTAB, trisolver SYNCFREESOLVE precondsetup=0 solver ret=-202 info=-202 numiter=1  true_rel_res=1
+  L after setup: nnz=127  drow[0..7] = 0 1 1 2 2 3 3 4  drow[n]=32 nondecreasing=1 | dcol[0..7] = 0 2 4 6 8 10 12 14
+  [after syncfree] cudaDeviceSynchronize: no error | cudaGetLastError: no error
+## with guard
+ILU0 + PBICGSTAB, trisolver CUSOLVE      precondsetup=0 solver ret=0 info=0 numiter=1  true_rel_res=0
+ ** On entry to cusparseSpMV() parameter number 10 (externalBuffer) had an illegal value: NULL pointer
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+ILU0 + PBICGSTAB, trisolver SYNCFREESOLVE precondsetup=0 solver ret=0 info=0 numiter=1  true_rel_res=1
+  L after setup: nnz=127  drow[0..7] = 0 0 0 0 0 0 0 0  drow[n]=0 nondecreasing=1 | dcol[0..7] = 0 0 0 0 0 0 0 0
+  [after syncfree] cudaDeviceSynchronize: an illegal memory access was encountered | cudaGetLastError: an illegal memory access was encountered
+[guard] allocations checked at free: 66, with out-of-bounds writes: 24

@@ -1,0 +1,18 @@
+r43,finding,routine,case,observed,control,verdict
+r43,M245,sgemm_batched,k=0 beta=0.5 max|C-0.5C0|,0.25,0,REPRODUCED
+r43,M245,ssyrk_batched,k=0 beta=0.5 strict lower max|C-0.5C0|,0.25,0,REPRODUCED
+r43,M246,ssyrk_batched,n=31 k=17 L strictly-upper changed (of 1395),1.4e+03,0,REPRODUCED
+r43,M247,strsm_batched,alpha=0 B=NaN nonzero (of 465),465,0,REPRODUCED
+r43,M247,magmablas_strmm,alpha=0 B=NaN nonzero (of 155),155,0,REPRODUCED
+r43,M250,sgesv_rbt,n=1 max|x-x_true| vs n=5,0.00494,2.98e-08,REPRODUCED
+r43,M250,sgesv_rbt,n=2 max|x-x_true| vs n=5,0.00509,2.98e-08,REPRODUCED
+r43,M250,sgesv_rbt,n=3 max|x-x_true| vs n=5,0.0189,2.98e-08,REPRODUCED
+r43,M245,cgemm_batched,k=0 beta=0.5 max|C-0.5C0|,0.34,0,REPRODUCED
+r43,M245,cherk_batched,k=0 beta=0.5 strict lower max|C-0.5C0|,0.25,0,REPRODUCED
+r43,M246,cherk_batched,n=31 k=17 L strictly-upper changed (of 1395),1.4e+03,0,REPRODUCED
+r43,M247,ctrsm_batched,alpha=0 B=NaN nonzero (of 465),465,0,REPRODUCED
+r43,M247,magmablas_ctrmm,alpha=0 B=NaN nonzero (of 155),155,0,REPRODUCED
+r43,M250,cgesv_rbt,n=1 max|x-x_true| vs n=5,0.557,8.43e-08,REPRODUCED
+r43,M250,cgesv_rbt,n=2 max|x-x_true| vs n=5,0.347,8.43e-08,REPRODUCED
+r43,M250,cgesv_rbt,n=3 max|x-x_true| vs n=5,0.261,8.43e-08,REPRODUCED
+DONE cuda=no error

@@ -1,0 +1,214 @@
+herk_small 1 100 U N 0 1
+herk_small 1 100 U N 0 32
+herk_small 1 100 U N 1 1
+herk_small 1 100 U N 1 32
+herk_small 1 100 U C 0 1
+herk_small 1 100 U C 0 32
+herk_small 1 100 U C 1 1
+herk_small 1 100 U C 1 32
+herk_small 1 100 L N 0 1
+herk_small 1 100 L N 0 32
+herk_small 1 100 L N 1 1
+herk_small 1 100 L N 1 32
+herk_small 1 100 L C 0 1
+herk_small 1 100 L C 0 32
+herk_small 1 100 L C 1 1
+herk_small 1 100 L C 1 32
+herk_small 1 5000 U N 0 1
+herk_small 1 5000 U N 0 32
+herk_small 1 5000 U N 1 1
+herk_small 1 5000 U N 1 32
+herk_small 1 5000 U C 0 1
+herk_small 1 5000 U C 0 32
+herk_small 1 5000 U C 1 1
+herk_small 1 5000 U C 1 32
+herk_small 1 5000 L N 0 1
+herk_small 1 5000 L N 0 32
+herk_small 1 5000 L N 1 1
+herk_small 1 5000 L N 1 32
+herk_small 1 5000 L C 0 1
+herk_small 1 5000 L C 0 32
+herk_small 1 5000 L C 1 1
+herk_small 1 5000 L C 1 32
+herk_small 7 100 U N 0 1
+herk_small 7 100 U N 0 32
+herk_small 7 100 U N 1 1
+herk_small 7 100 U N 1 32
+herk_small 7 100 U C 0 1
+herk_small 7 100 U C 0 32
+herk_small 7 100 U C 1 1
+herk_small 7 100 U C 1 32
+herk_small 7 100 L N 0 1
+herk_small 7 100 L N 0 32
+herk_small 7 100 L N 1 1
+herk_small 7 100 L N 1 32
+herk_small 7 100 L C 0 1
+herk_small 7 100 L C 0 32
+herk_small 7 100 L C 1 1
+herk_small 7 100 L C 1 32
+herk_small 7 5000 U N 0 1
+herk_small 7 5000 U N 0 32
+herk_small 7 5000 U N 1 1
+herk_small 7 5000 U N 1 32
+herk_small 7 5000 U C 0 1
+herk_small 7 5000 U C 0 32
+herk_small 7 5000 U C 1 1
+herk_small 7 5000 U C 1 32
+herk_small 7 5000 L N 0 1
+herk_small 7 5000 L N 0 32
+herk_small 7 5000 L N 1 1
+herk_small 7 5000 L N 1 32
+herk_small 7 5000 L C 0 1
+herk_small 7 5000 L C 0 32
+herk_small 7 5000 L C 1 1
+herk_small 7 5000 L C 1 32
+herk_small 16 100 U N 0 1
+herk_small 16 100 U N 0 32
+herk_small 16 100 U N 1 1
+herk_small 16 100 U N 1 32
+herk_small 16 100 U C 0 1
+herk_small 16 100 U C 0 32
+herk_small 16 100 U C 1 1
+herk_small 16 100 U C 1 32
+herk_small 16 100 L N 0 1
+herk_small 16 100 L N 0 32
+herk_small 16 100 L N 1 1
+herk_small 16 100 L N 1 32
+herk_small 16 100 L C 0 1
+herk_small 16 100 L C 0 32
+herk_small 16 100 L C 1 1
+herk_small 16 100 L C 1 32
+herk_small 16 5000 U N 0 1
+herk_small 16 5000 U N 0 32
+herk_small 16 5000 U N 1 1
+herk_small 16 5000 U N 1 32
+herk_small 16 5000 U C 0 1
+herk_small 16 5000 U C 0 32
+herk_small 16 5000 U C 1 1
+herk_small 16 5000 U C 1 32
+herk_small 16 5000 L N 0 1
+herk_small 16 5000 L N 0 32
+herk_small 16 5000 L N 1 1
+herk_small 16 5000 L N 1 32
+herk_small 16 5000 L C 0 1
+herk_small 16 5000 L C 0 32
+herk_small 16 5000 L C 1 1
+herk_small 16 5000 L C 1 32
+herk_small 31 100 U N 0 1
+herk_small 31 100 U N 0 32
+herk_small 31 100 U N 1 1
+herk_small 31 100 U N 1 32
+herk_small 31 100 U C 0 1
+herk_small 31 100 U C 0 32
+herk_small 31 100 U C 1 1
+herk_small 31 100 U C 1 32
+herk_small 31 100 L N 0 1
+herk_small 31 100 L N 0 32
+herk_small 31 100 L N 1 1
+herk_small 31 100 L N 1 32
+herk_small 31 100 L C 0 1
+herk_small 31 100 L C 0 32
+herk_small 31 100 L C 1 1
+herk_small 31 100 L C 1 32
+herk_small 31 5000 U N 0 1
+herk_small 31 5000 U N 0 32
+herk_small 31 5000 U N 1 1
+herk_small 31 5000 U N 1 32
+herk_small 31 5000 U C 0 1
+herk_small 31 5000 U C 0 32
+herk_small 31 5000 U C 1 1
+herk_small 31 5000 U C 1 32
+herk_small 31 5000 L N 0 1
+herk_small 31 5000 L N 0 32
+herk_small 31 5000 L N 1 1
+herk_small 31 5000 L N 1 32
+herk_small 31 5000 L C 0 1
+herk_small 31 5000 L C 0 32
+herk_small 31 5000 L C 1 1
+herk_small 31 5000 L C 1 32
+herk_small 32 100 U N 0 1
+herk_small 32 100 U N 0 32
+herk_small 32 100 U N 1 1
+herk_small 32 100 U N 1 32
+herk_small 32 100 U C 0 1
+herk_small 32 100 U C 0 32
+herk_small 32 100 U C 1 1
+herk_small 32 100 U C 1 32
+herk_small 32 100 L N 0 1
+herk_small 32 100 L N 0 32
+herk_small 32 100 L N 1 1
+herk_small 32 100 L N 1 32
+herk_small 32 100 L C 0 1
+herk_small 32 100 L C 0 32
+herk_small 32 100 L C 1 1
+herk_small 32 100 L C 1 32
+herk_small 32 5000 U N 0 1
+herk_small 32 5000 U N 0 32
+herk_small 32 5000 U N 1 1
+herk_small 32 5000 U N 1 32
+herk_small 32 5000 U C 0 1
+herk_small 32 5000 U C 0 32
+herk_small 32 5000 U C 1 1
+herk_small 32 5000 U C 1 32
+herk_small 32 5000 L N 0 1
+herk_small 32 5000 L N 0 32
+herk_small 32 5000 L N 1 1
+herk_small 32 5000 L N 1 32
+herk_small 32 5000 L C 0 1
+herk_small 32 5000 L C 0 32
+herk_small 32 5000 L C 1 1
+herk_small 32 5000 L C 1 32
+symtiles 16 1 0 0 U
+symtiles 16 1 0 0 L
+symtiles 16 4 16 16 U
+symtiles 16 4 16 16 L
+symtiles 32 3 32 0 U
+symtiles 32 3 32 0 L
+symtiles 17 5 20 25 U
+symtiles 17 5 20 25 L
+symtiles 64 2 64 64 U
+symtiles 64 2 64 64 L
+laswp_sym 8 4
+laswp_sym 33 16
+laswp_sym 100 50
+laswp_sym 100 100
+hemv 1 U 1
+hemv 1 U 2
+hemv 1 L 1
+hemv 1 L 2
+hemv 33 U 1
+hemv 33 U 2
+hemv 33 L 1
+hemv 33 L 2
+hemv 100 U 1
+hemv 100 U 2
+hemv 100 L 1
+hemv 100 L 2
+hemv 257 U 1
+hemv 257 U 2
+hemv 257 L 1
+hemv 257 L 2
+hemv 1000 U 1
+hemv 1000 U 2
+hemv 1000 L 1
+hemv 1000 L 2
+symv 1 U 1
+symv 1 U 2
+symv 1 L 1
+symv 1 L 2
+symv 33 U 1
+symv 33 U 2
+symv 33 L 1
+symv 33 L 2
+symv 100 U 1
+symv 100 U 2
+symv 100 L 1
+symv 100 L 2
+symv 257 U 1
+symv 257 U 2
+symv 257 L 1
+symv 257 L 2
+symv 1000 U 1
+symv 1000 U 2
+symv 1000 L 1
+symv 1000 L 2

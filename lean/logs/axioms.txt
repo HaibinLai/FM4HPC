@@ -1,0 +1,467 @@
+OptimiKahan/AdpEsc.lean:720:0: 'AdpEsc.sentinel_iff' depends on axioms: [propext, Quot.sound]
+OptimiKahan/AdpEsc.lean:721:0: 'AdpEsc.fp64_sentinel_ok' does not depend on any axioms
+OptimiKahan/AdpEsc.lean:722:0: 'AdpEsc.skip_zero_unsafe' depends on axioms: [propext]
+OptimiKahan/AdpEsc.lean:723:0: 'AdpEsc.fixedEst_le' depends on axioms: [propext, Quot.sound]
+OptimiKahan/AdpEsc.lean:724:0: 'AdpEsc.adp_sound' depends on axioms: [propext, Quot.sound]
+OptimiKahan/AdpEsc.lean:725:0: 'AdpEsc.adp_paper_sound' depends on axioms: [propext, Quot.sound]
+OptimiKahan/AdpEsc.lean:726:0: 'AdpEsc.adp_fixed_sound' depends on axioms: [propext, Quot.sound]
+OptimiKahan/AdpEsc.lean:727:0: 'AdpEsc.cublas_rule' depends on axioms: [propext, Quot.sound]
+OptimiKahan/CublasEsc.lean:166:0: 'CublasEsc.coarse_safe' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/CublasEsc.lean:167:0: 'CublasEsc.coarse_unsafe' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/CublasEsc.lean:168:0: 'CublasEsc.zero_block_gap' depends on axioms: [propext, Quot.sound]
+OptimiKahan/CublasEsc.lean:169:0: 'CublasEsc.binary64_contract' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Gemmul8Range.lean:193:0: 'Gemmul8Range.fast_range' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Gemmul8Range.lean:194:0: 'Gemmul8Range.accu_range' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Gemmul8Range.lean:195:0: 'Gemmul8Range.crt_unique' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Gemmul8Range.lean:196:0: 'Gemmul8Range.dvd_prod_of_pairwise' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Gemmul8Range.lean:197:0: 'Gemmul8Range.crt_exact' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Gemmul8Range.lean:198:0: 'Gemmul8Range.fast_crt_exact' depends on axioms: [propext, Quot.sound]
+OptimiKahan/IrDriver.lean:249:0: 'IrDriver.contract_of_conditions' depends on axioms: [propext]
+OptimiKahan/IrDriver.lean:250:0: 'IrDriver.contract_iff' depends on axioms: [propext]
+OptimiKahan/IrDriver.lean:251:0: 'IrDriver.trust_inner_unsound' depends on axioms: [propext]
+OptimiKahan/IrDriver.lean:252:0: 'IrDriver.forced_unsound' depends on axioms: [propext]
+OptimiKahan/IrDriver.lean:253:0: 'IrDriver.stub_fallback_fails' depends on axioms: [propext]
+OptimiKahan/IrDriver.lean:254:0: 'IrDriver.skipped_fallback_incomplete' depends on axioms: [propext]
+OptimiKahan/IrDriver.lean:255:0: 'IrDriver.c1_forces_accept_propagate' depends on axioms: [propext, Quot.sound]
+OptimiKahan/IrDriver.lean:256:0: 'IrDriver.tOk_contract' depends on axioms: [propext, Quot.sound]
+OptimiKahan/IrDriver.lean:257:0: 'IrDriver.tForced_unsound' depends on axioms: [propext, Quot.sound]
+OptimiKahan/IrDriver.lean:258:0: 'IrDriver.tTrust_unsound' depends on axioms: [propext, Quot.sound]
+OptimiKahan/IrsContract.lean:599:0: 'IrsContract.accept_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:600:0: 'IrsContract.absolute_rule_flips' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:601:0: 'IrsContract.rnd_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:602:0: 'IrsContract.rnd_rel_err' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:603:0: 'IrsContract.expOf_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:604:0: 'IrsContract.eval_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:605:0: 'IrsContract.iterate_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:606:0: 'IrsContract.oracle' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:607:0: 'IrsContract.absolute_tol_breaks' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:608:0: 'IrsContract.wrapper_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:609:0: 'IrsContract.wrapper_post' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:610:0: 'IrsContract.fp64_cannot_certify' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/IrsContract.lean:611:0: 'IrsContract.fp64_n1024' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Kahan.lean:546:0: 'OptimiKahan.step_value' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Kahan.lean:547:0: 'OptimiKahan.eta_zero' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Kahan.lean:548:0: 'OptimiKahan.run_value' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Kahan.lean:549:0: 'OptimiKahan.run_bound' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Kahan.lean:550:0: 'OptimiKahan.naive_stagnates' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Kahan.lean:551:0: 'OptimiKahan.naive_run_stagnates' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Kahan.lean:552:0: 'OptimiKahan.exists_nearest' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Kahan.lean:553:0: 'OptimiKahan.relErr8' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Kahan.lean:554:0: 'OptimiKahan.run_bound_bf16' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Kahan.lean:555:0: 'OptimiKahan.gap_2pow20' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Kahan.lean:556:0: 'OptimiKahan.bf16_stagnation' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Kahan.lean:557:0: 'OptimiKahan.fast2sum_bf16' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Kahan.lean:558:0: 'OptimiKahan.run_value_bf16' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Kahan.lean:559:0: 'OptimiKahan.kahan_error_bf16' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Kahan.lean:560:0: 'OptimiKahan.eta_bound_violation' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Kahan.lean:561:0: 'OptimiKahan.eta_bound_bf16' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Kahan.lean:562:0: 'OptimiKahan.kahan_error_bf16_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/ArgChecks.lean:84:0: 'MagmaAudit.hegv_jobz_range_swapped' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/ArgChecks.lean:85:0: 'MagmaAudit.argnum_all_wrong' does not depend on any axioms
+OptimiKahan/Magma/Dense/ArgChecks.lean:86:0: 'MagmaAudit.argnum_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/ArgChecks.lean:87:0: 'MagmaAudit.cposv_bad_uplo_reported_as_conversion' does not depend on any axioms
+OptimiKahan/Magma/Dense/Differential.lean:423:0: 'MagmaAudit.geqp3_swap_restore_short_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:424:0: 'MagmaAudit.geqp3_patch_covers_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:425:0: 'MagmaAudit.geqp3_norm_rows_off_by_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:426:0: 'MagmaAudit.gemm_k0_beta_ignored' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:427:0: 'MagmaAudit.gemv_beta0_reads_y' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:428:0: 'MagmaAudit.gels_singular_nan_success' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:429:0: 'MagmaAudit.heevdx_n1_mout_unset' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:430:0: 'MagmaAudit.small_path_lda_n_rejects_n0' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:431:0: 'MagmaAudit.geqp3_gpu_tau_space_mismatch' does not depend on any axioms
+OptimiKahan/Magma/Dense/Differential.lean:432:0: 'MagmaAudit.swap_long_llp64_wrong' does not depend on any axioms
+OptimiKahan/Magma/Dense/Differential.lean:433:0: 'MagmaAudit.gesvj_zero_sigma_nan' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:434:0: 'MagmaAudit.getf2_native_aligned_no_share_all' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:435:0: 'MagmaAudit.getf2_native_unaligned_shares' does not depend on any axioms
+OptimiKahan/Magma/Dense/Differential.lean:436:0: 'MagmaAudit.getf2_native_stale_read' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:437:0: 'MagmaAudit.getf2_native_ldcg_fix' does not depend on any axioms
+OptimiKahan/Magma/Dense/Differential.lean:438:0: 'MagmaAudit.sgesv_fallback_race' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:439:0: 'MagmaAudit.sgesv_fallback_synced' does not depend on any axioms
+OptimiKahan/Magma/Dense/Differential.lean:440:0: 'MagmaAudit.dsgesv_lddsa_n_unaligned' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:441:0: 'MagmaAudit.batched_k0_beta_ignored_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:442:0: 'MagmaAudit.herk_batched_diag_tile_breaks_contract_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:443:0: 'MagmaAudit.trsm_batched_alpha0_nan' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:444:0: 'MagmaAudit.trsm_batched_alpha0_finite' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:445:0: 'MagmaAudit.hemm_fetch_base_wrong_all' does not depend on any axioms
+OptimiKahan/Magma/Dense/Differential.lean:446:0: 'MagmaAudit.hemm_fetch_threads_collide' does not depend on any axioms
+OptimiKahan/Magma/Dense/Differential.lean:447:0: 'MagmaAudit.trevc3_blocked_without_backtransform' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:448:0: 'MagmaAudit.trevc3_lapack_selection_correct' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:449:0: 'MagmaAudit.rbt_size1_inconsistent' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:450:0: 'MagmaAudit.sellp_params_lost' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:451:0: 'MagmaAudit.sellp_params_forwarded' does not depend on any axioms
+OptimiKahan/Magma/Dense/Differential.lean:452:0: 'MagmaAudit.coo_rows_lost' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:453:0: 'MagmaAudit.ellrt_reduction_loses_lanes' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:454:0: 'MagmaAudit.csrlist_empty_row_overflows' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Differential.lean:455:0: 'MagmaAudit.legacy_return_ge_mem' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:456:0: 'MagmaAudit.trtri_diag_waits_unrelated' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Differential.lean:457:0: 'MagmaAudit.trtri_diag_not_async' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/FaultInjection.lean:101:0: 'MagmaAudit.early_alloc_failure_hidden' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/FaultInjection.lean:102:0: 'MagmaAudit.hetrd_failure_reaches_dlascl' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/FaultInjection.lean:103:0: 'MagmaAudit.pinned_alloc_unchecked' does not depend on any axioms
+OptimiKahan/Magma/Dense/FaultInjection.lean:104:0: 'MagmaAudit.geqrf_ooc_lwork_short' does not depend on any axioms
+OptimiKahan/Magma/Dense/FaultInjection.lean:105:0: 'MagmaAudit.helper_iinfo_dropped' does not depend on any axioms
+OptimiKahan/Magma/Dense/FaultInjection.lean:106:0: 'MagmaAudit.unglq_header_mismatch' does not depend on any axioms
+OptimiKahan/Magma/Dense/FaultInjection.lean:107:0: 'MagmaAudit.early_failure_hidden_all' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/FaultInjection.lean:108:0: 'MagmaAudit.helper_iinfo_dropped_all' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:218:0: 'MagmaAudit.lascl2x2_args' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:219:0: 'MagmaAudit.stedx_rangev_unscaled' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:220:0: 'MagmaAudit.stedx_subblock_info_unmapped' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:221:0: 'MagmaAudit.adjust_ipiv_noop_large' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:222:0: 'MagmaAudit.gesvj_blocked_zero_sigma' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:223:0: 'MagmaAudit.dsidi_lower_reads_upper' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:224:0: 'MagmaAudit.rangev_closed_interval' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:225:0: 'MagmaAudit.stedx_blocks_indistinguishable' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:226:0: 'MagmaAudit.gesvj_chunk_flags_not_offset' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:227:0: 'MagmaAudit.dsidi_inverse_wrong' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:228:0: 'MagmaAudit.sort_nan_rank_collision' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/NonZ.lean:229:0: 'MagmaAudit.dc_sizes_wrap' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:230:0: 'MagmaAudit.adjust_ipiv_noop_all' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/NonZ.lean:231:0: 'MagmaAudit.wrap32_cases' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/NonZ.lean:232:0: 'MagmaAudit.heevd_lrwmin_wraps_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/NonZ.lean:233:0: 'MagmaAudit.heevd_lrwmin_instance' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:234:0: 'MagmaAudit.lacpy_offset_wraps' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:235:0: 'MagmaAudit.lacpy_offset_negative_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/NonZ.lean:236:0: 'MagmaAudit.offset_audit_covers_all' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:237:0: 'MagmaAudit.potrf_gpu_host_offset_wraps' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:238:0: 'MagmaAudit.getrf_native_laswp_wraps' does not depend on any axioms
+OptimiKahan/Magma/Dense/NonZ.lean:239:0: 'MagmaAudit.transpose_stride_chunk_wrong_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/NonZ.lean:240:0: 'MagmaAudit.swapblk_short_truncates' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:366:0: 'MagmaAudit.hegvdx_small_ignores_range' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:367:0: 'MagmaAudit.geqp3_fixed_unreduced' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:368:0: 'MagmaAudit.geqp3_doc_lwork_rejected' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:369:0: 'MagmaAudit.geqrf_singular_block_used' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:370:0: 'MagmaAudit.stedx_info_erased' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:371:0: 'MagmaAudit.lag2s_nan_passes' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:372:0: 'MagmaAudit.gels_lwork_too_small' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:373:0: 'MagmaAudit.hegvx_leak_512' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:374:0: 'MagmaAudit.hegvd_alloc_error_positive' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:375:0: 'MagmaAudit.geqrs3_argnums_wrong' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:376:0: 'MagmaAudit.rangev_unscaled_bounds' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:377:0: 'MagmaAudit.heevdx_2stage_stedx_lost' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:378:0: 'MagmaAudit.unmtr_m_not_implemented_lost' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:379:0: 'MagmaAudit.he2hb_small_lwork_underflow' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:380:0: 'MagmaAudit.geqrf_m_ngpu0_accepted' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:381:0: 'MagmaAudit.cgeqrsv_nan_accepted' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:382:0: 'MagmaAudit.gglse_singular_unreported' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:383:0: 'MagmaAudit.ggrqf_lwork_inconsistent' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:384:0: 'MagmaAudit.dlascl_nan_rejected' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:385:0: 'MagmaAudit.hegvdx_small_all' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/QrEigen.lean:386:0: 'MagmaAudit.geqp3_fixed_never_reduced' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:387:0: 'MagmaAudit.stedx_last_large_erases' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/QrEigen.lean:388:0: 'MagmaAudit.rbt_batched_default_build_silent' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:389:0: 'MagmaAudit.rbt_hip_refine_dropped' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:390:0: 'MagmaAudit.rbt_hip_refine_irrelevant_all' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/QrEigen.lean:391:0: 'MagmaAudit.rbt_cuda_refine_kept' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:392:0: 'MagmaAudit.ungtr_upper_shift_short' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:393:0: 'MagmaAudit.ungtr_lower_shift_wrong' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:394:0: 'MagmaAudit.ungtr_first_col_stale' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:395:0: 'MagmaAudit.check_info_build_broken' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:396:0: 'MagmaAudit.unmqr_gpu_dT_overflow' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:397:0: 'MagmaAudit.unmqr_gpu_tester_size_suffices' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:398:0: 'MagmaAudit.unmqr_gpu_overflow_instance' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:399:0: 'MagmaAudit.unmqr_2stage_right_applied_left' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:400:0: 'MagmaAudit.unmqr_2stage_right_dwork_short' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:401:0: 'MagmaAudit.unmqr_2stage_reads_unwritten_T' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:402:0: 'MagmaAudit.aasen_rejects_documented_upper' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:403:0: 'MagmaAudit.unmqr_batched_rejects_documented_right' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:404:0: 'MagmaAudit.potrf_vbatched_lg_info_local' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:405:0: 'MagmaAudit.potrf_vbatched_lg_info_first_panel' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/QrEigen.lean:406:0: 'MagmaAudit.potrf_vbatched_lg_instances' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:407:0: 'MagmaAudit.potrf_vbatched_z_gap' does not depend on any axioms
+OptimiKahan/Magma/Dense/QrEigen.lean:408:0: 'MagmaAudit.potrf_vbatched_z_gap_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/QrEigen.lean:409:0: 'MagmaAudit.potrf_vbatched_cds_no_gap' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:265:0: 'MagmaAudit.gbtrs_alias' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/StatusAudit.lean:266:0: 'MagmaAudit.gbtrs_overread' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/StatusAudit.lean:267:0: 'MagmaAudit.heevdx_upper_success' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/StatusAudit.lean:268:0: 'MagmaAudit.last_pivot_untested' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/StatusAudit.lean:269:0: 'MagmaAudit.nopiv_info_wrong' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:270:0: 'MagmaAudit.potf2_col0_success' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:271:0: 'MagmaAudit.trtri_gpu_instances' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:272:0: 'MagmaAudit.getrf_m_offset' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:273:0: 'MagmaAudit.vbatched_stale' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/StatusAudit.lean:274:0: 'MagmaAudit.gegqr_rank0_success' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:275:0: 'MagmaAudit.vbatched_upper_wrong' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:276:0: 'MagmaAudit.getrf_m_never_singular' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/StatusAudit.lean:277:0: 'MagmaAudit.gesvj_nan_converged' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:278:0: 'MagmaAudit.hgetrf_left_transposed' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:279:0: 'MagmaAudit.lag2h_nan_passes' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:280:0: 'MagmaAudit.lag2h_info_always_zero' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:281:0: 'MagmaAudit.lag2h_batched_only_first' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:282:0: 'MagmaAudit.shpotrf_ignores_conversion' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:283:0: 'MagmaAudit.shpotrf_oom_uninit_queues' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:284:0: 'MagmaAudit.nopiv_info_reversed' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/StatusAudit.lean:285:0: 'MagmaAudit.gegqr_reports_index' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/StatusAudit.lean:286:0: 'MagmaAudit.hgetrf_padded_gemm_overrun' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:287:0: 'MagmaAudit.hgetrf_1000_padded' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:288:0: 'MagmaAudit.fp16_conversion_unchecked' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:289:0: 'MagmaAudit.getri_outplace_info_untouched' does not depend on any axioms
+OptimiKahan/Magma/Dense/StatusAudit.lean:290:0: 'MagmaAudit.dense_declared_not_defined' does not depend on any axioms
+OptimiKahan/Magma/Dense/Workspace.lean:229:0: 'MagmaAudit.hegvdx_2stage_query_rejected' does not depend on any axioms
+OptimiKahan/Magma/Dense/Workspace.lean:230:0: 'MagmaAudit.hegvdx_2stage_query_rejected_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:231:0: 'MagmaAudit.hegvdx_2stage_vec_short_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:232:0: 'MagmaAudit.hegvdx_2stage_vec_instance' does not depend on any axioms
+OptimiKahan/Magma/Dense/Workspace.lean:233:0: 'MagmaAudit.gesdd_slow_lnwork_bound' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:234:0: 'MagmaAudit.gesdd_slow_ungbr_short_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:235:0: 'MagmaAudit.gesdd_6to_slow_instance' does not depend on any axioms
+OptimiKahan/Magma/Dense/Workspace.lean:236:0: 'MagmaAudit.he2hb_mgpu_underrun_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:237:0: 'MagmaAudit.he2hb_mgpu_silent_query' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:238:0: 'MagmaAudit.gbtrf_native_stale_info_all' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Workspace.lean:239:0: 'MagmaAudit.gbsv_native_work_argnum' does not depend on any axioms
+OptimiKahan/Magma/Dense/Workspace.lean:240:0: 'MagmaAudit.gbtrf_batched_query_unanswered' depends on axioms: [propext]
+OptimiKahan/Magma/Dense/Workspace.lean:241:0: 'MagmaAudit.geqlf_query_rejected_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:242:0: 'MagmaAudit.geqlf_query_instance' does not depend on any axioms
+OptimiKahan/Magma/Dense/Workspace.lean:243:0: 'MagmaAudit.doc_minimum_rejected_all' does not depend on any axioms
+OptimiKahan/Magma/Dense/Workspace.lean:244:0: 'MagmaAudit.hegvr_lrwork_query_ignored' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:245:0: 'MagmaAudit.gbtrf_native_info_misaligned_ilp64' does not depend on any axioms
+OptimiKahan/Magma/Dense/Workspace.lean:246:0: 'MagmaAudit.gbtrf_info_alignment_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:247:0: 'MagmaAudit.he2hb_query_underrun_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Dense/Workspace.lean:248:0: 'MagmaAudit.sygvdx_2stage_real_short_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:385:0: 'MagmaDense.accept_nan_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:386:0: 'MagmaDense.accept_nan_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:387:0: 'MagmaDense.accept_inf' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:388:0: 'MagmaDense.diverge_accepted' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:389:0: 'MagmaDense.success_iter_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:390:0: 'MagmaDense.zchesv_stub' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:391:0: 'MagmaDense.gerfs_nopiv_silent' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:392:0: 'MagmaDense.rbt_info_lost' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:393:0: 'MagmaDense.x_overflow_accepted' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:394:0: 'MagmaDense.zcgesv_b_overflow_accepted' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:395:0: 'MagmaDense.zcposv_b_overflow_fallback' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:396:0: 'MagmaDense.dshposv_always_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:397:0: 'MagmaDense.spd_tiny_rhs_returns_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:398:0: 'MagmaDense.spd_threshold_larger' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:399:0: 'MagmaDense.spd_nan_runs_to_maxiter' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/DenseIR.lean:400:0: 'MagmaDense.nonconverged_oob' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:355:0: 'MagmaFgmres.single_cycle' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:356:0: 'MagmaFgmres.gmstrs_always_success' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:357:0: 'MagmaFgmres.nan_runs_to_maxiter' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:358:0: 'MagmaFgmres.enforced_rule' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:359:0: 'MagmaFgmres.givens_nonincreasing' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:360:0: 'MagmaFgmres.tol_ge_one_one_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:361:0: 'MagmaFgmres.oneStep_not_accept' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:362:0: 'MagmaFgmres.one_step_violates' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:363:0: 'MagmaFgmres.one_step_returned' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fgmres.lean:364:0: 'MagmaFgmres.tiny_violates' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fixed.lean:303:0: 'MagmaFixed.fixed_post' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fixed.lean:304:0: 'MagmaFixed.fixed_nan_fallback' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Fixed.lean:305:0: 'MagmaFixed.fixed_rejects' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fixed.lean:306:0: 'MagmaFixed.fixed_rejects_tiny' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fixed.lean:307:0: 'MagmaFixed.fixed_rejects_one_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fixed.lean:308:0: 'MagmaFixed.fixed_accepts_example' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fixed.lean:309:0: 'MagmaFixed.example_faithful' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fixed.lean:310:0: 'MagmaFixed.example_post' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Fixed.lean:311:0: 'MagmaFixed.fgmresFixed_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:465:0: 'MagmaAudit.vbatched_panel_info_erased' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:466:0: 'MagmaAudit.gb_generic_info_last_column' depends on axioms: [propext]
+OptimiKahan/Magma/Kernels.lean:467:0: 'MagmaAudit.getf2_gpu_never_singular' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:468:0: 'MagmaAudit.potf2_zero_nan_pass' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:469:0: 'MagmaAudit.izamax_long_column_no_info' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:470:0: 'MagmaAudit.native_recursive_offset' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:471:0: 'MagmaAudit.gb_km_one_extra_row' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:472:0: 'MagmaAudit.heevj_nan_converged' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:473:0: 'MagmaAudit.nopiv_count_not_incremented' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:474:0: 'MagmaAudit.gesv_small_solves_singular' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:475:0: 'MagmaAudit.fused_mlt_n_spurious_info' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:476:0: 'MagmaAudit.argmax_nan_hides_max' depends on axioms: [propext]
+OptimiKahan/Magma/Kernels.lean:477:0: 'MagmaAudit.zlascl_argnums' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:478:0: 'MagmaAudit.lag2c_shared_flag_race' depends on axioms: [propext]
+OptimiKahan/Magma/Kernels.lean:479:0: 'MagmaAudit.heevj_zero_sweeps_success' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:480:0: 'MagmaAudit.diinertia_nan_as_zero' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:481:0: 'MagmaAudit.vbatched_panel_erased_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:482:0: 'MagmaAudit.gb_generic_last_only' depends on axioms: [propext]
+OptimiKahan/Magma/Kernels.lean:483:0: 'MagmaAudit.gb_generic_earlier_zero_hidden' depends on axioms: [propext]
+OptimiKahan/Magma/Kernels.lean:484:0: 'MagmaAudit.getf2_gpu_never_singular_all' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:485:0: 'MagmaAudit.izamax_long_no_info_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:486:0: 'MagmaAudit.native_recursive_offset_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:487:0: 'MagmaAudit.gb_km_extra_row_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:488:0: 'MagmaAudit.gesvj_norm_overflow' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:489:0: 'MagmaAudit.gbtrf_generic_path_reached' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:490:0: 'MagmaAudit.set_fillin_launch_invalid_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:491:0: 'MagmaAudit.geam_conjtrans_is_trans' depends on axioms: [propext]
+OptimiKahan/Magma/Kernels.lean:492:0: 'MagmaAudit.geam_conjtrans_wrong' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:493:0: 'MagmaAudit.geam_n_t_agree' depends on axioms: [propext]
+OptimiKahan/Magma/Kernels.lean:494:0: 'MagmaAudit.gemm_reduce_conjugates' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:495:0: 'MagmaAudit.tfqmr_dotc_reversed' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:496:0: 'MagmaAudit.tfqmr_rho_wrong_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:497:0: 'MagmaAudit.lobpcg_stops_on_first' depends on axioms: [propext]
+OptimiKahan/Magma/Kernels.lean:498:0: 'MagmaAudit.lobpcg_instance' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:499:0: 'MagmaAudit.print_header_swapped' depends on axioms: [propext]
+OptimiKahan/Magma/Kernels.lean:500:0: 'MagmaAudit.z_transpose_csr_returns_freed' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:501:0: 'MagmaAudit.geqr2x_overruns' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:502:0: 'MagmaAudit.geqr2x_instances' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:503:0: 'MagmaAudit.laswp_sym_second_chunk_out_of_bounds' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:504:0: 'MagmaAudit.laswp_sym_race_instance' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:505:0: 'MagmaAudit.spmm_alpha_ignored' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:506:0: 'MagmaAudit.stencil27_wrap_instance' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:507:0: 'MagmaAudit.spmv_shift_lambda_unscaled' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:508:0: 'MagmaAudit.spmv_shift_instance' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:509:0: 'MagmaAudit.mslice_size_negative' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:510:0: 'MagmaAudit.mslice_instances' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:511:0: 'MagmaAudit.idr_rotation_rotates_dot' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:512:0: 'MagmaAudit.idr_rho_instance' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:513:0: 'MagmaAudit.icc_trans_swapped' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:514:0: 'MagmaAudit.icc_trans_instance' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:515:0: 'MagmaAudit.jacobi_trans_adjoint_iff' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:516:0: 'MagmaAudit.jacobi_trans_instance' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:517:0: 'MagmaAudit.geqr2x_tkernel_overflow_iff' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:518:0: 'MagmaAudit.geqr2x_tkernel_instances' does not depend on any axioms
+OptimiKahan/Magma/Kernels.lean:519:0: 'MagmaAudit.larfbx_applies_adjoint' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:520:0: 'MagmaAudit.hetrs_lower_wrong_cols' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Kernels.lean:521:0: 'MagmaAudit.hetrs_launch_invalid_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:404:0: 'MagmaMultiGpu.distribution_covers' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:405:0: 'MagmaMultiGpu.getrf_mgpu_first_global' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:406:0: 'MagmaMultiGpu.potrf_mgpu_global' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:407:0: 'MagmaMultiGpu.htod_returns_caller_value_all' does not depend on any axioms
+OptimiKahan/Magma/MultiGpu.lean:408:0: 'MagmaMultiGpu.nlocal_eq_cols_on_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:409:0: 'MagmaMultiGpu.lblocks_eq_cols_on_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:410:0: 'MagmaMultiGpu.owned_before_formula' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:411:0: 'MagmaMultiGpu.owned_from_formula' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:412:0: 'MagmaMultiGpu.getrf_mgpu_next_local_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:413:0: 'MagmaMultiGpu.add_mod_eq_self_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:414:0: 'MagmaMultiGpu.potrf_mgpu_dlp_reuse_at' depends on axioms: [propext]
+OptimiKahan/Magma/MultiGpu.lean:415:0: 'MagmaMultiGpu.potrf_mgpu_dlp_not_reused_before' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:416:0: 'MagmaMultiGpu.potrf_mgpu_host_slot_alias' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:417:0: 'MagmaMultiGpu.potrf_mgpu_host_slot_covered_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:418:0: 'MagmaMultiGpu.potrf_mgpu_h2_uncovered' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:419:0: 'MagmaMultiGpu.potrf_mgpu_h_ngpu_covered' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:420:0: 'MagmaMultiGpu.getrf_m_loop_exceeds_alloc' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:421:0: 'MagmaMultiGpu.getrf_m_ngr64_instance' does not depend on any axioms
+OptimiKahan/Magma/MultiGpu.lean:422:0: 'MagmaMultiGpu.getrf_m_fix_within_alloc' depends on axioms: [propext]
+OptimiKahan/Magma/MultiGpu.lean:423:0: 'MagmaMultiGpu.unghr_m_reads_wrong_T' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:424:0: 'MagmaMultiGpu.unghr_m_inconsistent' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:425:0: 'MagmaMultiGpu.unghr_m_ilo1_consistent' depends on axioms: [propext]
+OptimiKahan/Magma/MultiGpu.lean:426:0: 'MagmaMultiGpu.unghr_single_consistent' depends on axioms: [propext]
+OptimiKahan/Magma/MultiGpu.lean:427:0: 'MagmaMultiGpu.unghr_m_fix_consistent' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:428:0: 'MagmaMultiGpu.unghr_m_fix_extra' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:429:0: 'MagmaMultiGpu.gehrd_remainder_le_two' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:430:0: 'MagmaMultiGpu.gehrd_m_unsynced_device' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:431:0: 'MagmaMultiGpu.gehrd_m_panel_unsynced' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:432:0: 'MagmaMultiGpu.gehrd_m_panel_synced_when_full' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:433:0: 'MagmaMultiGpu.gehrd_m_n96_instance' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/MultiGpu.lean:434:0: 'MagmaMultiGpu.gehrd_m_fix_syncs_all' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Blas.lean:187:0: 'MagmaSparse.csrmv_trans_ignored' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:188:0: 'MagmaSparse.mdot_shfl_reduction_noop' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:189:0: 'MagmaSparse.mgecsrmv_stride' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:190:0: 'MagmaSparse.sellp_multi_half' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:191:0: 'MagmaSparse.vread_two_columns_overflow' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:192:0: 'MagmaSparse.csrget_dangling' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:193:0: 'MagmaSparse.compact_nan_converged' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:194:0: 'MagmaSparse.compressor_cpu_emptied' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:195:0: 'MagmaSparse.frobenius_real_only' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:196:0: 'MagmaSparse.zsort_nan_no_progress' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Blas.lean:197:0: 'MagmaSparse.mdotc_unconjugated' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:198:0: 'MagmaSparse.csr_sort_values_not_permuted' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Blas.lean:199:0: 'MagmaSparse.bitonic_error_dropped' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:200:0: 'MagmaSparse.vget_dev_dangling' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:201:0: 'MagmaSparse.csr_sort_gpu_mixed_location' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:202:0: 'MagmaSparse.ge3pt_reads_before_start' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:203:0: 'MagmaSparse.ellrt_launch_unchecked' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:204:0: 'MagmaSparse.jaccard_identical_rows' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:205:0: 'MagmaSparse.lobpcg_shift_row0_only' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:206:0: 'MagmaSparse.cuspmm_cpu_uninit_destroy' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:207:0: 'MagmaSparse.syncfree_wait_disabled' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:208:0: 'MagmaSparse.csrget_gpu_dangling' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:209:0: 'MagmaSparse.orderstat_last_unchecked' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Sparse/Blas.lean:210:0: 'MagmaSparse.rowentries_imaginary_missed' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:211:0: 'MagmaSparse.trisolve_singular_success' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Blas.lean:212:0: 'MagmaSparse.mgecsrmv_stride_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Sparse/Blas.lean:213:0: 'MagmaSparse.sellp_multi_fewer' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Sparse/Blas.lean:214:0: 'MagmaSparse.ellrt_launch_unchecked_all' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Control.lean:298:0: 'MagmaSparse.syncfree_csc_swapped' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:299:0: 'MagmaSparse.spmv_mismatch_success' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:300:0: 'MagmaSparse.dense_spmv_transpose' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Control.lean:301:0: 'MagmaSparse.sellp_tall_rows_skipped' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:302:0: 'MagmaSparse.mscale_nonfinite_success' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:303:0: 'MagmaSparse.icc_transpose_not_conjugate' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:304:0: 'MagmaSparse.spmv_cpu_frees_caller' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:305:0: 'MagmaSparse.csrd_missing_diag_overflow' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:306:0: 'MagmaSparse.mdiff_blind' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:307:0: 'MagmaSparse.frobenius_uninit' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:308:0: 'MagmaSparse.diagadd_missing_row' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:309:0: 'MagmaSparse.transpose_cpu_dims' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:310:0: 'MagmaSparse.mtx_unchecked_index' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:311:0: 'MagmaSparse.applyprecond_ilu_noop' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:312:0: 'MagmaSparse.applyright_conjtrans_noop' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:313:0: 'MagmaSparse.symbilu_status_dropped' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:314:0: 'MagmaSparse.csc_spmv_layout_mismatch' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:315:0: 'MagmaSparse.mscale_generate_double_free' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:316:0: 'MagmaSparse.matrix_rhs_partial_update' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:317:0: 'MagmaSparse.transfer_unhandled_success' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:318:0: 'MagmaSparse.transpose_cpu_heap_overflow' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:319:0: 'MagmaSparse.mtx_truncated_phantom' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:320:0: 'MagmaSparse.residual_multi_first_only' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:321:0: 'MagmaSparse.compressor_not_owned_noop' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:322:0: 'MagmaSparse.lumerge_double_free' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:323:0: 'MagmaSparse.declaration_mismatches' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:324:0: 'MagmaSparse.residual_div_by_zero' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:325:0: 'MagmaSparse.csrsplit_unsorted_overflow' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:326:0: 'MagmaSparse.spmv_short_x_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Sparse/Control.lean:327:0: 'MagmaSparse.sellp_rows_skipped_all' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Sparse/Control.lean:328:0: 'MagmaSparse.csrd_last_entry_spills' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Sparse/Control.lean:329:0: 'MagmaSparse.frobenius_mismatch_untouched' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:330:0: 'MagmaSparse.transpose_cpu_wide_overflow' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Sparse/Control.lean:331:0: 'MagmaSparse.applyright_other_trans' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Sparse/Control.lean:332:0: 'MagmaSparse.residual_multi_only_one' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Control.lean:333:0: 'MagmaSparse.csrcoo_transpose_dims' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Control.lean:334:0: 'MagmaSparse.diagdom_empty_row_nan' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:392:0: 'MagmaSparse.bicg_breakdown_success' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Solvers.lean:393:0: 'MagmaSparse.cg_merge_false_convergence' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:394:0: 'MagmaSparse.dotu_eq_dotc_real' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Solvers.lean:395:0: 'MagmaSparse.wrapper_unhandled_success' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Solvers.lean:396:0: 'MagmaSparse.early_exit_returns_x0' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Sparse/Solvers.lean:397:0: 'MagmaSparse.template_ignores_final_res' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Solvers.lean:398:0: 'MagmaSparse.jacobi_any_decrease' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Sparse/Solvers.lean:399:0: 'MagmaSparse.lobpcg_nan_converged' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:400:0: 'MagmaSparse.cgres_exact_x0_nonspd' depends on axioms: [propext, Quot.sound]
+OptimiKahan/Magma/Sparse/Solvers.lean:401:0: 'MagmaSparse.pcg_merge_upgrade' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:402:0: 'MagmaSparse.bpcg_col0' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Sparse/Solvers.lean:403:0: 'MagmaSparse.idr_params' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:404:0: 'MagmaSparse.bombard_wrong_res' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:405:0: 'MagmaSparse.ilu_numerical_zero_unchecked' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:406:0: 'MagmaSparse.precond_setup_info_lost' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:407:0: 'MagmaSparse.ilu_zero_pivot_pbicg_success' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Solvers.lean:408:0: 'MagmaSparse.fixed_breakdown_divergence' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Solvers.lean:409:0: 'MagmaSparse.overwrite_group_size' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:410:0: 'MagmaSparse.lobpcg_check_dead' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Sparse/Solvers.lean:411:0: 'MagmaSparse.jacobi_stored_zero_passes' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Sparse/Solvers.lean:412:0: 'MagmaSparse.icc_breakdown_unchecked' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:413:0: 'MagmaSparse.fgmres_sticky_success' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:414:0: 'MagmaSparse.fgmres_nan_alone' does not depend on any axioms
+OptimiKahan/Magma/Sparse/Solvers.lean:415:0: 'MagmaSparse.transpose_unbuilt_diverges' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Solvers.lean:416:0: 'MagmaSparse.transpose_cpu_terminates' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Solvers.lean:417:0: 'MagmaSparse.jacobi_any_decrease_all' depends on axioms: [propext]
+OptimiKahan/Magma/Sparse/Solvers.lean:418:0: 'MagmaSparse.idr_params_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/Magma/Sparse/Solvers.lean:419:0: 'MagmaSparse.fgmres_sticky_success_all' does not depend on any axioms
+OptimiKahan/MaxFold.lean:271:0: 'MaxFold.smax_fold_isNaN' depends on axioms: [propext]
+OptimiKahan/MaxFold.lean:272:0: 'MaxFold.smax_fold_nan_iff_last' depends on axioms: [propext]
+OptimiKahan/MaxFold.lean:273:0: 'MaxFold.smax_fold_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/MaxFold.lean:274:0: 'MaxFold.masked_equals_baseline' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/MaxFold.lean:275:0: 'MaxFold.pstep_fold_isNaN' depends on axioms: [propext]
+OptimiKahan/MaxFold.lean:276:0: 'MaxFold.nmax_fold_isNaN' depends on axioms: [propext]
+OptimiKahan/MaxFold.lean:277:0: 'MaxFold.detects_iff' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzRecombine.lean:165:0: 'OzRecombine.relErr53' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzRecombine.lean:166:0: 'OzRecombine.recombine_gen' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzRecombine.lean:167:0: 'OzRecombine.recombine_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzRecombine.lean:168:0: 'OzRecombine.accum_rep' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzRecombine.lean:169:0: 'OzRecombine.final_axpby_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzRecombine.lean:170:0: 'OzRecombine.rep_mul_pow2' depends on axioms: [propext]
+OptimiKahan/OzRecombine.lean:171:0: 'OzRecombine.recombine_alpha1_beta0' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzSlice.lean:348:0: 'OzSlice.slice_lemma' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzSlice.lean:349:0: 'OzSlice.slice_fp16' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzSlice.lean:350:0: 'OzSlice.multi_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzSlice.lean:351:0: 'OzSlice.product_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzSlice.lean:352:0: 'OzSlice.fl32_foldl_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzSlice.lean:353:0: 'OzSlice.tree_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzSlice.lean:354:0: 'OzSlice.ozblas_partial_dot_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+OptimiKahan/OzSlice.lean:355:0: 'OzSlice.isMaxS_unique' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzSlice.lean:356:0: 'OzSlice.s_le_11' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzSlice.lean:357:0: 'OzSlice.k1_needs_special_case' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzSlice.lean:358:0: 'OzSlice.isMaxS_examples' does not depend on any axioms
+OptimiKahan/OzimmuAuto.lean:199:0: 'OzimmuAuto.cut_exact' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzimmuAuto.lean:200:0: 'OzimmuAuto.cut_rel_err' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzimmuAuto.lean:201:0: 'OzimmuAuto.cut_total_loss' depends on axioms: [propext]
+OptimiKahan/OzimmuAuto.lean:202:0: 'OzimmuAuto.dot_bound' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzimmuAuto.lean:203:0: 'OzimmuAuto.good_side' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzimmuAuto.lean:204:0: 'OzimmuAuto.avg_not_max' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzimmuAuto.lean:205:0: 'OzimmuAuto.int32_exact' depends on axioms: [propext, Quot.sound]
+OptimiKahan/OzimmuAuto.lean:206:0: 'OzimmuAuto.slice_prod_lt' does not depend on any axioms

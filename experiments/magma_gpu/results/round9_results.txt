@@ -1,0 +1,96 @@
+BUILD_DONE
+0 MiB, 0 %
+## zpotrf_mgpu_right: header declarations 1, exported symbols 0
+######## rangev
+== Range V on A = 1e-150*diag(1..200) (anrm < rmin => internal scaling), (vl, vu] = (0, 1.005e-148]: 100 eigenvalues ==
+zheevdx                    jobz=N: info=0 m=2 (expected 100)  w[0]=1e-150
+zheevdx                    jobz=V: info=0 m=2 (expected 100)  w[0]=1e-150
+zheevdx_m(ngpu=1)          jobz=N: info=0 m=2 (expected 100)  w[0]=1e-150
+zheevdx_m(ngpu=1)          jobz=V: info=0 m=2 (expected 100)  w[0]=1e-150
+zheevdx_2stage             jobz=N: info=0 m=100 (expected 100)  w[0]=1e-150
+zheevdx_2stage             jobz=V: info=0 m=100 (expected 100)  w[0]=1e-150
+zheevdx_2stage_m(ngpu=1)   jobz=N: info=0 m=100 (expected 100)  w[0]=1e-150
+zheevdx_2stage_m(ngpu=1)   jobz=V: info=0 m=100 (expected 100)  w[0]=1e-150
+control zheevdx, A = diag(1..200), (0, 100.5]: info=0 m=100
+exit=0
+######## eig_nan
+== Hermitian n = 1000 with one NaN pair, jobz = V, range All ==
+LAPACK zheevd: info=0
+ ** On entry to DLASCL parameter number  4 had an illegal value
+exit=0
+######## unmtr_m
+Error in magma_zunmqr_m, not implemented (info = -117)
+zunmtr_m(ngpu=1, Right, Lower, m=10, n=200): info=0  entries of C unchanged: 2000 of 2000
+zunmtr  (single GPU, same call):           info=0  entries of C unchanged: 10 of 2000
+exit=0
+######## he2hb
+zhetrd_he2hb n=256 nb=32 lwork=32768 ...
+  info=0  max |band - band(lwork = 4 n nb)| = 0
+zhetrd_he2hb n=256 nb=32 lwork=1056 ...
+  info=0  max |band - band(lwork = 4 n nb)| = 2.53e+119
+zhetrd_he2hb n=256 nb=32 lwork=100 ...
+corrupted size vs. prev_size
+timeout: the monitored command dumped core
+exit=134
+######## geqrf_m0
+zgeqrf_m with ngpu = 0 (the check is ngpu < 0) ...
+On entry to magma_zsetmatrix_1D_col_bcyclic, parameter 1 had an illegal value (info = -1)
+timeout: the monitored command dumped core
+exit=136
+######## cgeqrsv
+LAPACK zgels, column 0 = 0: info=1
+zcgeqrsv_gpu n=64, column 0 = 0: iter=0 info=0  non-finite x entries=1 of 64
+zcgeqrsv_gpu A = [0], b = [1]: iter=0 info=0 x=(inf,-nan)
+exit=0
+######## gglse
+LAPACK zgglse, B = [0 0]: info=1
+magma_zgglse, B = [0 0]: info=0  x = (-inf,-nan) (inf,-nan)
+exit=0
+######## ggrqf
+On entry to magma_zgeqrf, parameter 7 had an illegal value (info = -7)
+zggrqf m=p=n=200 with lwork = 200 (documented minimum max(m,p,n)): info=-7; entries modified: A 40000, B 40000
+exit=0
+######## mscale_gen
+magma_zmscale_generate(UNITCOL, Left) on a 4x4 device CSR ...
+free(): double free detected in tcache 2
+timeout: the monitored command dumped core
+exit=134
+0 MiB, 0 %
+######## eig_nan EIGF=9
+== Hermitian n = 1000 with one NaN pair, jobz = V, range All ==
+LAPACK zheevd: info=0 non-finite eigenvalues=999
+exit=0
+######## eig_nan EIGF=0
+== Hermitian n = 1000 with one NaN pair, jobz = V, range All ==
+calling zheevdx ...
+ ** On entry to DLASCL parameter number  4 had an illegal value
+exit=0
+######## eig_nan EIGF=1
+== Hermitian n = 1000 with one NaN pair, jobz = V, range All ==
+calling zheevdx_m(ngpu=1) ...
+ ** On entry to DLASCL parameter number  4 had an illegal value
+exit=0
+######## eig_nan EIGF=2
+== Hermitian n = 1000 with one NaN pair, jobz = V, range All ==
+calling zheevdx_2stage ...
+ ** On entry to DLASCL parameter number  4 had an illegal value
+exit=0
+######## eig_nan EIGF=3
+== Hermitian n = 1000 with one NaN pair, jobz = V, range All ==
+calling zheevdx_2stage_m(ngpu=1) ...
+ ** On entry to DLASCL parameter number  4 had an illegal value
+exit=0
+######## rangev RN=1000
+== Range V on A = 1e-150*diag(1..1000) (anrm < rmin => internal scaling), (vl, vu] = (0, 1.005e-148]: 100 eigenvalues ==
+zheevdx                    jobz=N: info=0 m=10 (expected 100)  w[0]=1e-150
+zheevdx                    jobz=V: info=0 m=10 (expected 100)  w[0]=1e-150
+zheevdx_m(ngpu=1)          jobz=N: info=0 m=10 (expected 100)  w[0]=1e-150
+zheevdx_m(ngpu=1)          jobz=V: info=0 m=10 (expected 100)  w[0]=1e-150
+zheevdx_2stage             jobz=N: info=0 m=10 (expected 100)  w[0]=1e-150
+zheevdx_2stage             jobz=V: info=0 m=10 (expected 100)  w[0]=1e-150
+zheevdx_2stage_m(ngpu=1)   jobz=N: info=0 m=10 (expected 100)  w[0]=1e-150
+zheevdx_2stage_m(ngpu=1)   jobz=V: info=0 m=10 (expected 100)  w[0]=1e-150
+control zheevdx, A = diag(1..200), (0, 100.5]: info=0 m=100
+exit=0
+0 MiB, 0 %
+0

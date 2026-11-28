@@ -1,0 +1,31 @@
+MAGMA 2.10.0, n = 1024, maxiter = min(n,500) = 500, documented threshold sqrt(n)*eps = 3.55e-15
+
+dsgesv_iteref (FP32 LU)
+  k= -80 ||b||_2= 3.65e-22 tol= 2.31e-36 | iter=   0 info=0 | rel.res=        1 bwd/thr=      inf fwd_err=        1 finite=1 | predicted iter=0,x=0 [tiny_rhs]              MATCH
+  k= -70 ||b||_2= 3.74e-19 tol= 2.36e-33 | iter=   0 info=0 | rel.res=        1 bwd/thr=      inf fwd_err=        1 finite=1 | predicted iter=0,x=0 [tiny_rhs]              MATCH
+  k= -60 ||b||_2= 3.83e-16 tol= 2.42e-30 | iter= 500 info=0 | rel.res= 1.22e-14 bwd/thr=    0.216 fwd_err= 4.12e-13 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k= -40 ||b||_2= 4.01e-10 tol= 2.54e-24 | iter= 500 info=0 | rel.res= 1.22e-14 bwd/thr=    0.216 fwd_err= 4.12e-13 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k= -20 ||b||_2= 0.000421 tol= 2.66e-18 | iter= 500 info=0 | rel.res= 1.22e-14 bwd/thr=    0.216 fwd_err= 4.12e-13 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=   0 ||b||_2=      441 tol= 2.79e-12 | iter=   3 info=0 | rel.res= 1.32e-13 bwd/thr=     2.78 fwd_err= 1.65e-12 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=  10 ||b||_2= 4.52e+05 tol= 2.86e-09 | iter=   2 info=0 | rel.res= 8.69e-10 bwd/thr= 2.21e+04 fwd_err= 3.16e-08 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=  20 ||b||_2= 4.62e+08 tol= 2.93e-06 | iter=   2 info=0 | rel.res= 8.69e-10 bwd/thr= 2.21e+04 fwd_err= 3.16e-08 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=  30 ||b||_2= 4.74e+11 tol=    0.003 | iter=   1 info=0 | rel.res= 1.53e-05 bwd/thr= 3.07e+08 fwd_err= 0.000191 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=  40 ||b||_2= 4.85e+14 tol=     3.07 | iter=   1 info=0 | rel.res= 1.53e-05 bwd/thr= 3.07e+08 fwd_err= 0.000191 finite=1 | predicted iter=1 [tol>=1]                    MATCH
+  k=  50 ||b||_2= 4.97e+17 tol= 3.14e+03 | iter=   1 info=0 | rel.res= 1.53e-05 bwd/thr= 3.07e+08 fwd_err= 0.000191 finite=1 | predicted iter=1 [tol>=1]                    MATCH
+  k=  60 ||b||_2= 5.08e+20 tol= 3.22e+06 | iter=   1 info=0 | rel.res= 1.53e-05 bwd/thr= 3.07e+08 fwd_err= 0.000191 finite=1 | predicted iter=1 [tol>=1]                    MATCH
+
+dhgesv_iteref (FP16-TC LU)
+  k= -80 ||b||_2= 3.65e-22 tol= 2.31e-36 | iter=   0 info=0 | rel.res=        1 bwd/thr=      inf fwd_err=        1 finite=1 | predicted iter=0,x=0 [tiny_rhs]              MATCH
+  k= -70 ||b||_2= 3.74e-19 tol= 2.36e-33 | iter=   0 info=0 | rel.res=        1 bwd/thr=      inf fwd_err=        1 finite=1 | predicted iter=0,x=0 [tiny_rhs]              MATCH
+  k= -60 ||b||_2= 3.83e-16 tol= 2.42e-30 | iter= 500 info=0 | rel.res=    2e-05 bwd/thr= 3.83e+08 fwd_err=  0.00373 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k= -40 ||b||_2= 4.01e-10 tol= 2.54e-24 | iter= 500 info=0 | rel.res=    2e-05 bwd/thr= 3.83e+08 fwd_err=  0.00373 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k= -20 ||b||_2= 0.000421 tol= 2.66e-18 | iter= 500 info=0 | rel.res= 1.28e-14 bwd/thr=    0.204 fwd_err= 1.35e-12 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=   0 ||b||_2=      441 tol= 2.79e-12 | iter=   9 info=0 | rel.res= 1.24e-12 bwd/thr=     21.5 fwd_err= 2.18e-11 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=  10 ||b||_2= 4.52e+05 tol= 2.86e-09 | iter=   7 info=0 | rel.res= 8.77e-10 bwd/thr= 1.68e+04 fwd_err= 1.68e-08 finite=1 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=  20 ||b||_2= 4.62e+08 tol= 2.93e-06 | iter= 500 info=0 | rel.res=      nan bwd/thr=      inf fwd_err=        0 finite=0 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=  30 ||b||_2= 4.74e+11 tol=    0.003 | iter= 500 info=0 | rel.res=      nan bwd/thr=      inf fwd_err=        0 finite=0 | predicted rel<=tol or iter=maxiter [enforced] MATCH
+  k=  40 ||b||_2= 4.85e+14 tol=     3.07 | iter= 500 info=0 | rel.res=      nan bwd/thr=      inf fwd_err=        0 finite=0 | predicted iter=1 [tol>=1]                    MISMATCH
+  k=  50 ||b||_2= 4.97e+17 tol= 3.14e+03 | iter= 500 info=0 | rel.res=      nan bwd/thr=      inf fwd_err=        0 finite=0 | predicted iter=1 [tol>=1]                    MISMATCH
+  k=  60 ||b||_2= 5.08e+20 tol= 3.22e+06 | iter= 500 info=0 | rel.res=      nan bwd/thr=      inf fwd_err=        0 finite=0 | predicted iter=1 [tol>=1]                    MISMATCH
+
+21 / 24 calls match the model's prediction

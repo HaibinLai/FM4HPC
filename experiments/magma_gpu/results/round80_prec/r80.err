@@ -1,0 +1,39 @@
+
+== dshift 10
+DONE cuda=no error
+== dshift 200
+DONE cuda=no error
+== dslice 10 9 5
+DONE cuda=no error
+== dslice 10 9 6
+DONE cuda=no error
+== dslice 10 9 8
+DONE cuda=no error
+== dslice 5 4 3
+DONE cuda=no error
+== dslice 5 4 3
+DONE cuda=no error
+== dslice 5 4 3
+DONE cuda=no error
+== dicc 10
+dpbicg+icc info -202 iter 200 res 3.33
+DONE cuda=no error
+== dicc 30
+dpbicg+icc info 0 iter 30 res 6.09e-11
+DONE cuda=no error
+== cidr rot0 4
+DONE cuda=no error
+== cidr rot90 4
+DONE cuda=no error
+== cidr rot0 1
+DONE cuda=no error
+== cidr rot90 1
+DONE cuda=no error
+== cjac 10
+clsqr none: info 0 iter 38 res 7.88e-06
+clsqr jacobi: info -201 iter 200 res 0.266
+DONE cuda=no error
+== cjac 30
+clsqr none: info 0 iter 44 res 8.41e-06
+clsqr jacobi: info -201 iter 1800 res 0.486
+DONE cuda=no error

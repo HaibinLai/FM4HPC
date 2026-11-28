@@ -1,0 +1,36 @@
+######## lascl_2x2
+On entry to magmablas_zlascl_2x2, parameter 4 had an illegal value (info = -4)
+zlascl_2x2 ldda = 2 < m = 4 (argument 6): info=-4
+zlascl_2x2 lddw = 1 < m (argument 4; W is read up to row m+1): info=0
+exit=0
+######## residual
+zresidual, A = I (4x4), b 4x2 with columns of 1s and 2s, x = 0: ret=0 res = 2 -1 (expected 2, 4)
+exit=0
+######## residual0
+On entry to magmablas_zlaset, parameter 7 had an illegal value (info = -7)
+On entry to magmablas_zlaset, parameter 7 had an illegal value (info = -7)
+zresidual with A 0x0 ...
+On entry to magmablas_zlaset, parameter 7 had an illegal value (info = -7)
+  ret=0 res=0
+exit=0
+######## csrsplit
+zcsrsplit(offset 0, bsize 1) of a 2x2 CSR whose last row is unsorted ...
+  ret=0 D nnz=2 R nnz=1; freeing ...
+  freed
+exit=0
+######## ungbr fault injection
+ungbr(Q) k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+ungbr(P) k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+  site: magma_zungqr2
+  site: magma_zungbr
+ungbr(Q) k=  1 nalloc=  1 info=0      diff_to_unfailed=52.2       SILENT-WRONG
+  site: magma_zunglq
+  site: magma_zungbr
+ungbr(P) k=  1 nalloc=  1 info=0      diff_to_unfailed=8.58       SILENT-WRONG
+ungbr(Q) k=  2 nalloc=  1 info=0      diff_to_unfailed=0          ok
+ungbr(P) k=  2 nalloc=  1 info=0      diff_to_unfailed=0          ok
+ungbr(Q) k=  3 nalloc=  1 info=0      diff_to_unfailed=0          ok
+ungbr(P) k=  3 nalloc=  1 info=0      diff_to_unfailed=0          ok
+ROUND19_DONE
+
+[exited with code 0]

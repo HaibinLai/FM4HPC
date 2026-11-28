@@ -1,0 +1,23 @@
+
+== ident jacobi 10 lsqr
+DONE cuda=no error
+== ident ilu 10 lsqr
+DONE cuda=no error
+== ident icc 10 lsqr
+DONE cuda=no error
+== solve lsqr none 10
+DONE cuda=no error
+== solve lsqr none 30
+DONE cuda=no error
+== solve lsqr jacobi 10
+DONE cuda=no error
+== solve lsqr jacobi 30
+DONE cuda=no error
+== solve lsqr ilu 10
+DONE cuda=no error
+== solve lsqr ilu 30
+DONE cuda=no error
+== solve lsqr icc 10
+DONE cuda=no error
+== solve lsqr icc 30
+DONE cuda=no error

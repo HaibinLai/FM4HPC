@@ -1,0 +1,12 @@
+gbtrf 1 100 1 H L
+gbsv 1 100 1 H L
+gbtrf 3 100 7 H L
+gbsv 3 100 7 H L
+gbtrf 10 100 2 H L
+gbsv 10 100 2 H L
+gbtrf 1 1000 1 H L
+gbsv 1 1000 1 H L
+gbtrf 3 1000 7 H L
+gbsv 3 1000 7 H L
+gbtrf 10 1000 2 H L
+gbsv 10 1000 2 H L

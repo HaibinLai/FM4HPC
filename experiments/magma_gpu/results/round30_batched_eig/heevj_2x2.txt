@@ -1,0 +1,38 @@
+routine,kind,m,n,batch_index,info,ratio_values,ratio_residual,ratio_orth,verdict
+  [A0: diag 2 3, max|A z_j - w_j z_j| = 6.66e-16]
+jobz=V A0 ret=0 info=0  W = [1.3819660112501049, 3.618033988749894]  Z = [[0.850651+0i, -0.525731+0i], [0.525731+0i, 0.850651+0i]] (columns)
+  [A1: diag 1 1, max|A z_j - w_j z_j| = 0]
+jobz=V A1 ret=0 info=0  W = [1, 1]  Z = [[1+0i, 0+0i], [0+0i, 1+0i]] (columns)
+  [A2: diag 1 2, max|A z_j - w_j z_j| = 0]
+jobz=V A2 ret=0 info=0  W = [1, 2]  Z = [[1+0i, 0+0i], [0+0i, 1+0i]] (columns)
+  [A3: diag 2 3, max|A z_j - w_j z_j| = 1.33e-15]
+jobz=V A3 ret=0 info=0  W = [1, 4.0000000000000009]  Z = [[0.816497+0i, -0.408248+0.408248i], [0.408248+0.408248i, 0.816497+0i]] (columns)
+  [A4: diag 1 1, max|A z_j - w_j z_j| = 1e-16]
+jobz=V A4 ret=0 info=0  W = [1, 1]  Z = [[1+0i, 0+0i], [0+0i, 1+0i]] (columns)
+  [A5: diag 0 0, max|A z_j - w_j z_j| = 1.41]
+jobz=V A5 ret=0 info=0  W = [0.99999999999999978, -0.99999999999999978]  Z = [[-0.707107+0i, 0.707107+0i], [0.707107+0i, 0.707107+0i]] (columns)
+  [A6: diag 1 -1, max|A z_j - w_j z_j| = 3.8]
+jobz=V A6 ret=0 info=0  W = [2.2360679774997894, -2.2360679774997894]  Z = [[-0.525731+0i, 0.850651+0i], [0.850651+0i, 0.525731+0i]] (columns)
+  [A7: diag -2 1, max|A z_j - w_j z_j| = 0]
+jobz=V A7 ret=0 info=0  W = [-2, 1]  Z = [[1+0i, 0+0i], [0+0i, 1+0i]] (columns)
+  [A8: diag -3 -2, max|A z_j - w_j z_j| = 6.66e-16]
+jobz=V A8 ret=0 info=0  W = [-3.618033988749894, -1.3819660112501049]  Z = [[0.850651+0i, -0.525731+0i], [0.525731+0i, 0.850651+0i]] (columns)
+  [A9: diag 3 2, max|A z_j - w_j z_j| = 1.9]
+jobz=V A9 ret=0 info=0  W = [3.6180332035304832, 1.3819664038598103]  Z = [[-0.525731+0i, 0.850651+0i], [0.850651+0i, 0.525731+0i]] (columns)
+  [A10: diag 5 1, max|A z_j - w_j z_j| = 4.35]
+jobz=V A10 ret=0 info=0  W = [5.2360670808805869, 0.76393213457761033]  Z = [[-0.229753+0i, 0.973249+0i], [0.973249+0i, 0.229753+0i]] (columns)
+  [A11: diag 2 2, max|A z_j - w_j z_j| = 1.41]
+jobz=V A11 ret=0 info=0  W = [2.9999999999999991, 0.99999999999999989]  Z = [[-0.707107+0i, 0.707107+0i], [0.707107+0i, 0.707107+0i]] (columns)
+jobz=N A0 ret=0 info=0  W = [1.3819660112501049, 3.618033988749894]  Z = [[2+0i, 1+0i], [1+0i, 3+0i]] (columns)
+jobz=N A1 ret=0 info=0  W = [1, 1]  Z = [[1+0i, 0+0i], [0+0i, 1+0i]] (columns)
+jobz=N A2 ret=0 info=0  W = [1, 2]  Z = [[1+0i, 0+0i], [0+0i, 2+0i]] (columns)
+jobz=N A3 ret=0 info=0  W = [1, 4.0000000000000009]  Z = [[2+0i, 1-1i], [1+1i, 3+0i]] (columns)
+jobz=N A4 ret=0 info=0  W = [1, 1]  Z = [[1+0i, 0-1e-16i], [0+1e-16i, 1+0i]] (columns)
+jobz=N A5 ret=0 info=0  W = [0.99999999999999978, -0.99999999999999978]  Z = [[0+0i, 1+0i], [1+0i, 0+0i]] (columns)
+jobz=N A6 ret=0 info=0  W = [2.2360679774997894, -2.2360679774997894]  Z = [[1+0i, 2+0i], [2+0i, -1+0i]] (columns)
+jobz=N A7 ret=0 info=0  W = [-2, 1]  Z = [[-2+0i, 0+0i], [0+0i, 1+0i]] (columns)
+jobz=N A8 ret=0 info=0  W = [-3.618033988749894, -1.3819660112501049]  Z = [[-3+0i, 1+0i], [1+0i, -2+0i]] (columns)
+jobz=N A9 ret=0 info=0  W = [3.6180332035304832, 1.3819664038598103]  Z = [[3+0i, 1+0i], [1+0i, 2+0i]] (columns)
+jobz=N A10 ret=0 info=0  W = [5.2360670808805869, 0.76393213457761033]  Z = [[5+0i, 1+0i], [1+0i, 1+0i]] (columns)
+jobz=N A11 ret=0 info=0  W = [2.9999999999999991, 0.99999999999999989]  Z = [[2+0i, 1+0i], [1+0i, 2+0i]] (columns)
+DONE heevjdbg cuda=no error

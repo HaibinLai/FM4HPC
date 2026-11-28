@@ -1,0 +1,177 @@
+r48,routine,n,k,relerr,verdict
+r48,dmdotc,1,1,0,OK
+r48,dmdotc,1,2,0,OK
+r48,dmdotc,1,3,0,OK
+r48,dmdotc,1,4,0,OK
+r48,dmdotc,1,5,0,OK
+r48,dmdotc,1,6,0,OK
+r48,dmdotc,1,7,0,OK
+r48,dmdotc,1,8,0,OK
+r48,dgemvmdot,1,1,0,OK
+r48,dgemvmdot,1,2,0,OK
+r48,dgemvmdot,1,3,0,OK
+r48,dgemvmdot,1,4,0,OK
+r48,dgemvmdot,1,5,0,OK
+r48,dgemvmdot,1,6,0,OK
+r48,dgemvmdot,1,7,0,OK
+r48,dgemvmdot,1,8,0,OK
+r48,dmdotc1,1,1,0,OK
+r48,dmdotc2,1,2,0,OK
+r48,dmdotc3,1,3,0,OK
+r48,dmdotc4,1,4,0,OK
+r48,dmdotc,31,1,0,OK
+r48,dmdotc,31,2,0,OK
+r48,dmdotc,31,3,0,OK
+r48,dmdotc,31,4,0,OK
+r48,dmdotc,31,5,0,OK
+r48,dmdotc,31,6,0,OK
+r48,dmdotc,31,7,0,OK
+r48,dmdotc,31,8,0,OK
+r48,dgemvmdot,31,1,0,OK
+r48,dgemvmdot,31,2,0,OK
+r48,dgemvmdot,31,3,0,OK
+r48,dgemvmdot,31,4,0,OK
+r48,dgemvmdot,31,5,0,OK
+r48,dgemvmdot,31,6,0,OK
+r48,dgemvmdot,31,7,0,OK
+r48,dgemvmdot,31,8,0,OK
+r48,dmdotc1,31,1,0,OK
+r48,dmdotc2,31,2,0,OK
+r48,dmdotc3,31,3,0,OK
+r48,dmdotc4,31,4,0,OK
+r48,dmdotc,255,1,0,OK
+r48,dmdotc,255,2,0,OK
+r48,dmdotc,255,3,0,OK
+r48,dmdotc,255,4,0,OK
+r48,dmdotc,255,5,0,OK
+r48,dmdotc,255,6,0,OK
+r48,dmdotc,255,7,0,OK
+r48,dmdotc,255,8,0,OK
+r48,dgemvmdot,255,1,0,OK
+r48,dgemvmdot,255,2,0,OK
+r48,dgemvmdot,255,3,0,OK
+r48,dgemvmdot,255,4,0,OK
+r48,dgemvmdot,255,5,0,OK
+r48,dgemvmdot,255,6,0,OK
+r48,dgemvmdot,255,7,0,OK
+r48,dgemvmdot,255,8,0,OK
+r48,dmdotc1,255,1,0,OK
+r48,dmdotc2,255,2,0,OK
+r48,dmdotc3,255,3,0,OK
+r48,dmdotc4,255,4,0,OK
+r48,dmdotc,256,1,0,OK
+r48,dmdotc,256,2,0,OK
+r48,dmdotc,256,3,0,OK
+r48,dmdotc,256,4,0,OK
+r48,dmdotc,256,5,0,OK
+r48,dmdotc,256,6,0,OK
+r48,dmdotc,256,7,0,OK
+r48,dmdotc,256,8,0,OK
+r48,dgemvmdot,256,1,0,OK
+r48,dgemvmdot,256,2,0,OK
+r48,dgemvmdot,256,3,0,OK
+r48,dgemvmdot,256,4,0,OK
+r48,dgemvmdot,256,5,0,OK
+r48,dgemvmdot,256,6,0,OK
+r48,dgemvmdot,256,7,0,OK
+r48,dgemvmdot,256,8,0,OK
+r48,dmdotc1,256,1,0,OK
+r48,dmdotc2,256,2,0,OK
+r48,dmdotc3,256,3,0,OK
+r48,dmdotc4,256,4,0,OK
+r48,dmdotc,257,1,0,OK
+r48,dmdotc,257,2,0,OK
+r48,dmdotc,257,3,0,OK
+r48,dmdotc,257,4,0,OK
+r48,dmdotc,257,5,0,OK
+r48,dmdotc,257,6,0,OK
+r48,dmdotc,257,7,0,OK
+r48,dmdotc,257,8,0,OK
+r48,dgemvmdot,257,1,0,OK
+r48,dgemvmdot,257,2,0,OK
+r48,dgemvmdot,257,3,0,OK
+r48,dgemvmdot,257,4,0,OK
+r48,dgemvmdot,257,5,0,OK
+r48,dgemvmdot,257,6,0,OK
+r48,dgemvmdot,257,7,0,OK
+r48,dgemvmdot,257,8,0,OK
+r48,dmdotc1,257,1,0,OK
+r48,dmdotc2,257,2,0,OK
+r48,dmdotc3,257,3,0,OK
+r48,dmdotc4,257,4,0,OK
+r48,dmdotc,1000,1,0,OK
+r48,dmdotc,1000,2,0,OK
+r48,dmdotc,1000,3,0,OK
+r48,dmdotc,1000,4,0,OK
+r48,dmdotc,1000,5,0,OK
+r48,dmdotc,1000,6,0,OK
+r48,dmdotc,1000,7,0,OK
+r48,dmdotc,1000,8,0,OK
+r48,dgemvmdot,1000,1,0,OK
+r48,dgemvmdot,1000,2,0,OK
+r48,dgemvmdot,1000,3,0,OK
+r48,dgemvmdot,1000,4,0,OK
+r48,dgemvmdot,1000,5,0,OK
+r48,dgemvmdot,1000,6,0,OK
+r48,dgemvmdot,1000,7,0,OK
+r48,dgemvmdot,1000,8,0,OK
+r48,dmdotc1,1000,1,0,OK
+r48,dmdotc2,1000,2,0,OK
+r48,dmdotc3,1000,3,0,OK
+r48,dmdotc4,1000,4,0,OK
+r48,dmdotc,4097,1,0,OK
+r48,dmdotc,4097,2,0,OK
+r48,dmdotc,4097,3,0,OK
+r48,dmdotc,4097,4,0,OK
+r48,dmdotc,4097,5,0,OK
+r48,dmdotc,4097,6,0,OK
+r48,dmdotc,4097,7,0,OK
+r48,dmdotc,4097,8,0,OK
+r48,dgemvmdot,4097,1,0,OK
+r48,dgemvmdot,4097,2,0,OK
+r48,dgemvmdot,4097,3,0,OK
+r48,dgemvmdot,4097,4,0,OK
+r48,dgemvmdot,4097,5,0,OK
+r48,dgemvmdot,4097,6,0,OK
+r48,dgemvmdot,4097,7,0,OK
+r48,dgemvmdot,4097,8,0,OK
+r48,dmdotc1,4097,1,0,OK
+r48,dmdotc2,4097,2,0,OK
+r48,dmdotc3,4097,3,0,OK
+r48,dmdotc4,4097,4,0,OK
+r48,dmdotc,100000,1,0,OK
+r48,dmdotc,100000,2,0.0226,OK
+r48,dmdotc,100000,3,0.0226,OK
+r48,dmdotc,100000,4,0.0226,OK
+r48,dmdotc,100000,5,0.0226,OK
+r48,dmdotc,100000,6,0.0226,OK
+r48,dmdotc,100000,7,0.0226,OK
+r48,dmdotc,100000,8,0.0667,OK
+r48,dgemvmdot,100000,1,0,OK
+r48,dgemvmdot,100000,2,0.0226,OK
+r48,dgemvmdot,100000,3,0.0226,OK
+r48,dgemvmdot,100000,4,0.0226,OK
+r48,dgemvmdot,100000,5,0.0226,OK
+r48,dgemvmdot,100000,6,0.0226,OK
+r48,dgemvmdot,100000,7,0.0226,OK
+r48,dgemvmdot,100000,8,0.0667,OK
+r48,dmdotc1,100000,1,0,OK
+r48,dmdotc2,100000,2,0.0226,OK
+r48,dmdotc3,100000,3,0.0226,OK
+r48,dmdotc4,100000,4,0.0226,OK
+r48,dpotf2_gpu,1,0,0.0301,OK info=0
+r48,zpotf2_gpu,1,0,0,OK info=0
+r48,dpotf2_gpu,7,0,0.00229,OK info=0
+r48,zpotf2_gpu,7,0,0.00227,OK info=0
+r48,dpotf2_gpu,31,0,0.000936,OK info=0
+r48,zpotf2_gpu,31,0,0.000935,OK info=0
+r48,dpotf2_gpu,32,0,0.000882,OK info=0
+r48,zpotf2_gpu,32,0,0.00087,OK info=0
+r48,dpotf2_gpu,33,0,0.000832,OK info=0
+r48,zpotf2_gpu,33,0,0.000815,OK info=0
+r48,dpotf2_gpu,64,0,0.000443,OK info=0
+r48,zpotf2_gpu,64,0,0.000883,OK info=0
+r48,dpotf2_gpu,100,0,0.000182,OK info=0
+r48,zpotf2_gpu,100,0,0.000182,OK info=0
+r48,dpotf2_gpu,128,0,0.000222,OK info=0
+r48,zpotf2_gpu,128,0,0.000221,OK info=0

@@ -1,0 +1,50 @@
+0 MiB, 0 %
+## vb
+== potrf_vbatched ==
+uplo=Upper stale_info_in=0  matrix n= 40: ret=0 info=2  modified=1  max|A - U^H U| (upper) = 13.000000
+uplo=Upper stale_info_in=0  matrix n=300: ret=0 info=2  modified=1  max|A - U^H U| (upper) = 13.000000
+uplo=Lower stale_info_in=0  matrix n= 40: ret=0 info=0  modified=1  
+uplo=Lower stale_info_in=0  matrix n=300: ret=0 info=0  modified=1  
+uplo=Lower stale_info_in=7  matrix n= 40: ret=0 info=7  modified=0  
+uplo=Lower stale_info_in=7  matrix n=300: ret=0 info=7  modified=0  
+exit 0
+## getri
+== getri_outofplace_batched on an exactly singular matrix ==
+getrf_batched ret=0 info=0 | info_array set to 12345 | getri_outofplace ret=0 info_array after=12345 | nonfinite entries of inverse=0
+exit 0
+## gegqr
+== gegqr_gpu: rank 0 reported as info = 0 ==
+ikind=1 scale=1      info=0  ||Q^T Q - I||_max=2e-15  nonfinite=0
+ikind=1 scale=1e-20  info=0  ||Q^T Q - I||_max=1  nonfinite=0
+ikind=3 scale=1      info=0  ||Q^T Q - I||_max=1.55e-15  nonfinite=0
+ikind=3 scale=1e-20  info=0  ||Q^T Q - I||_max=1  nonfinite=0
+ikind=4 scale=1      info=0  ||Q^T Q - I||_max=1.55e-15  nonfinite=0
+ikind=4 scale=1e-20  info=0  ||Q^T Q - I||_max=1.33e-15  nonfinite=0
+exit 0
+## icc
+== ICC (IC(0)) setup + PCG on an SPD matrix whose IC(0) breaks down (pivot 6 negative) ==
+[icc] setup...
+[icc] setup returned 0; pcg...
+ICC setup info=0 | PCG ret=0 info=0 numiter=4 final_res=1.30893e-15 | x[0]=0.439649
+exit 0
+## lobpcg
+== LOBPCG with more eigenvectors than rows (n_ev = 8 > m = 6): parameter check is dead code ==
+[lobpcg] solve...
+On entry to magma_zgegqr_gpu, parameter 2 had an illegal value (info = -2)
+Eigenvalues:
+nan  nan  nan  nan  nan  nan  nan  nan  
+
+Final residuals:
+[      -nan     -nan     -nan     -nan     -nan     -nan     -nan     -nan ];
+
+
+Residuals are stored in file residualNorms
+Plot the residuals using: myplot 
+LOBPCG n_ev=8 m=6: ret=7 info=-201 numiter=14
+exit 0
+## hgetrf (with guard)
+== hgetrf_gpu (FP16-TC LU): ldda = n (unaligned) vs ldda = roundup(n,32) ==
+n=1000: info(ld=1000)=0 info(ld=1024)=0 | factor entries differing=20903 (max |diff|=14.8) | pivots differing=0
+n=1024: info(ld=1024)=0 info(ld=1024)=0 | factor entries differing=0 (max |diff|=0) | pivots differing=0
+[guard] allocations checked at free: 12, with out-of-bounds writes: 0
+exit 0

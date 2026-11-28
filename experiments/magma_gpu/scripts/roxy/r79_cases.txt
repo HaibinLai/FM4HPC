@@ -1,0 +1,62 @@
+trtri b U N 1 6
+trtri b U N 15 6
+trtri b U N 16 6
+trtri b U N 17 6
+trtri b U N 100 6
+trtri b U N 128 6
+trtri b U N 129 6
+trtri b U N 300 6
+trtri b U U 1 6
+trtri b U U 15 6
+trtri b U U 16 6
+trtri b U U 17 6
+trtri b U U 100 6
+trtri b U U 128 6
+trtri b U U 129 6
+trtri b U U 300 6
+trtri b L N 1 6
+trtri b L N 15 6
+trtri b L N 16 6
+trtri b L N 17 6
+trtri b L N 100 6
+trtri b L N 128 6
+trtri b L N 129 6
+trtri b L N 300 6
+trtri b L U 1 6
+trtri b L U 15 6
+trtri b L U 16 6
+trtri b L U 17 6
+trtri b L U 100 6
+trtri b L U 128 6
+trtri b L U 129 6
+trtri b L U 300 6
+trtri v U N 17 10
+trtri v U N 130 10
+trtri v U N 300 10
+trtri v U U 17 10
+trtri v U U 130 10
+trtri v U U 300 10
+trtri v L N 17 10
+trtri v L N 130 10
+trtri v L N 300 10
+trtri v L U 17 10
+trtri v L U 130 10
+trtri v L U 300 10
+getT 10 10 4 0
+getT 10 10 4 1
+setT 10 10 4
+getT 37 50 16 0
+getT 37 50 16 1
+setT 37 50 16
+getT 64 1 32 0
+getT 64 1 32 1
+setT 64 1 32
+getT 5 100 7 0
+getT 5 100 7 1
+setT 5 100 7
+getT 200 130 64 0
+getT 200 130 64 1
+setT 200 130 64
+getT 1000 700 128 0
+getT 1000 700 128 1
+setT 1000 700 128

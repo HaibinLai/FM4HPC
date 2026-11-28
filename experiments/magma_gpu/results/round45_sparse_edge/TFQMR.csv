@@ -1,0 +1,63 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,diag64,64,0,0,34,4.93e-09,4.93e-09,5.79e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,tridiag2,2,0,0,2,9.42e-16,9.42e-16,4.71e-16,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,emptyrow,256,0,0,45,1.64e-09,1.64e-09,7.83e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,denserow,64,0,0,2,2.44e-14,2.44e-14,1.64e-16,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,diag64,64,0,0,34,4.93e-09,4.93e-09,5.79e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,tridiag2,2,0,0,2,9.42e-16,9.42e-16,4.71e-16,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,emptyrow,256,0,0,45,1.64e-09,1.64e-09,7.83e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,denserow,64,0,0,2,2.44e-14,2.44e-14,1.64e-16,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,diag64,64,0,0,34,4.93e-09,4.93e-09,5.79e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,tridiag2,2,0,0,2,9.42e-16,9.42e-16,4.71e-16,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,emptyrow,256,0,0,45,1.64e-09,1.64e-09,7.83e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,denserow,64,0,0,2,2.44e-14,2.44e-14,1.64e-16,OK,parse=0 setup=0 convert=0

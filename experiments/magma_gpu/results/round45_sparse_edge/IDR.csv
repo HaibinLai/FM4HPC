@@ -1,0 +1,547 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,diag64,64,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,tridiag2,2,-201,-201,4,0.0842,0.0842,0.0421,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,emptyrow,256,-202,-202,16,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,denserow,64,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,diag64,64,0,0,1,1.78e-15,1.78e-15,2.09e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,tridiag2,2,-201,-201,4,0.0842,0.0842,0.0421,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+ error: zero diagonal element in row 37!
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,CSR,emptyrow,256,-202,-202,1,0,-nan,-nan,FAIL,parse=0 setup=-204 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,CSR,denserow,64,0,0,0,0,148,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,CSR,n1,1,0,0,0,0,inf,inf,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,CSR,identity8,8,0,0,0,0,3.28,3.93,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,CSR,diag64,64,0,0,0,0,1.5e+04,176,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,CSR,tridiag2,2,0,0,0,0,2,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,CSR,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,CSR,emptyrow,256,0,0,0,0,20.9,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,CSR,denserow,64,0,0,0,0,1.04e+04,69.9,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,ELL,n1,1,0,0,0,0,inf,inf,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,ELL,identity8,8,0,0,0,0,0.864,1.03,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,ELL,diag64,64,0,0,0,0,1.83e+04,215,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,ELL,tridiag2,2,0,0,0,0,2,1,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,ELL,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,ELL,emptyrow,256,0,0,0,0,20.9,1,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,ELL,denserow,64,0,0,0,0,713,4.81,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,ELL,n1,1,0,0,0,0,-nan,-nan,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,ELL,identity8,8,0,0,0,0,0.836,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,ELL,diag64,64,0,0,0,0,1.64e+04,192,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,ELL,tridiag2,2,0,0,0,0,2,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,ELL,zero_rhs,256,0,0,0,0,2.42,inf,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+ error: zero diagonal element in row 37!
+Memory Free Error.
+IDR,JACOBI,ELL,emptyrow,256,0,0,0,0,20.9,1,LIE,parse=0 setup=-204 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,ELL,denserow,64,0,0,0,0,149,1.01,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,ELL,n1,1,0,0,0,0,9.75,12.9,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,ELL,identity8,8,0,0,0,0,3.28,3.93,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,ELL,diag64,64,0,0,0,0,1.5e+04,176,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,ELL,tridiag2,2,0,0,0,0,2,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,ELL,zero_rhs,256,0,0,0,0,1.62,inf,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,ELL,emptyrow,256,0,0,0,0,20.9,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,ELL,denserow,64,0,0,0,0,1.04e+04,69.9,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,SELLP,n1,1,0,0,0,0,0.753,1,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,SELLP,identity8,8,0,0,0,0,0.836,1,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,SELLP,diag64,64,0,0,0,0,496,5.82,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,SELLP,tridiag2,2,0,0,0,0,2,1,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,SELLP,zero_rhs,256,0,0,0,0,1.62,inf,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,SELLP,emptyrow,256,0,0,0,0,20.9,1,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,NONE,SELLP,denserow,64,0,0,0,0,713,4.81,LIE,parse=0 setup=0 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,SELLP,n1,1,0,0,0,0,4.12e+45,5.46e+45,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,SELLP,identity8,8,0,0,0,0,3.28,3.93,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,SELLP,diag64,64,0,0,0,0,378,4.44,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,SELLP,tridiag2,2,0,0,0,0,2.12,1.06,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,SELLP,zero_rhs,256,0,0,0,0,2.12,inf,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+ error: zero diagonal element in row 37!
+Memory Free Error.
+IDR,JACOBI,SELLP,emptyrow,256,0,0,0,0,20.9,0.999,LIE,parse=0 setup=-204 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,JACOBI,SELLP,denserow,64,0,0,0,0,149,1.01,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,SELLP,n1,1,0,0,0,0,0.753,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,SELLP,identity8,8,0,0,0,0,0.836,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,SELLP,diag64,64,0,0,0,0,99.4,1.17,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,SELLP,tridiag2,2,0,0,0,0,2,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,SELLP,zero_rhs,256,0,0,0,0,1.62,inf,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,SELLP,emptyrow,256,0,0,0,0,20.9,1,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+% Usage: probe [options] [-h|--help]  matrices
+
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.
+IDR,ILU,SELLP,denserow,64,0,0,0,0,1.04e+04,69.9,LIE,parse=0 setup=-113 convert=0
+Memory Free Error.
+Memory Free Error.
+Memory Free Error.

@@ -1,4 +1,4 @@
-import Kahan
+import OptimiKahan.Kahan
 open OptimiKahan
 
 /-!

@@ -1,0 +1,19 @@
+symmprec,magmablas_dsymm,m=4,maxdiff=1.52368,BAD
+symmprec,magma_dsymm(cublas),m=4,maxdiff=0,OK
+symmprec,magmablas_dgemm,m=4,maxdiff=0,OK
+symmprec,magmablas_ssymm,m=4,maxdiff=1.52368,BAD
+symmprec,magmablas_zhemm,m=4,maxdiff=1.52368,BAD
+symmprec,magmablas_zsymm,m=4,maxdiff=1.52368,BAD
+symmprec,magmablas_dsymm,m=33,maxdiff=7.11508,BAD
+symmprec,magma_dsymm(cublas),m=33,maxdiff=0,OK
+symmprec,magmablas_dgemm,m=33,maxdiff=0,OK
+symmprec,magmablas_ssymm,m=33,maxdiff=7.11508,BAD
+symmprec,magmablas_zhemm,m=33,maxdiff=7.11249,BAD
+symmprec,magmablas_zsymm,m=33,maxdiff=7.11249,BAD
+symmprec,magmablas_dsymm,m=64,maxdiff=13.7371,BAD
+symmprec,magma_dsymm(cublas),m=64,maxdiff=0,OK
+symmprec,magmablas_dgemm,m=64,maxdiff=0,OK
+symmprec,magmablas_ssymm,m=64,maxdiff=13.7372,BAD
+symmprec,magmablas_zhemm,m=64,maxdiff=13.7341,BAD
+symmprec,magmablas_zsymm,m=64,maxdiff=13.7341,BAD
+DONE symmprec cuda=no error

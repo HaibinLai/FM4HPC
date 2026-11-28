@@ -1,0 +1,25 @@
+
+== gbtrf 1 100 1 H L
+DONE cuda=no error
+== gbsv 1 100 1 H L
+DONE cuda=no error
+== gbtrf 3 100 7 H L
+DONE cuda=no error
+== gbsv 3 100 7 H L
+DONE cuda=no error
+== gbtrf 10 100 2 H L
+DONE cuda=no error
+== gbsv 10 100 2 H L
+DONE cuda=no error
+== gbtrf 1 1000 1 H L
+DONE cuda=no error
+== gbsv 1 1000 1 H L
+DONE cuda=no error
+== gbtrf 3 1000 7 H L
+DONE cuda=no error
+== gbsv 3 1000 7 H L
+DONE cuda=no error
+== gbtrf 10 1000 2 H L
+DONE cuda=no error
+== gbsv 10 1000 2 H L
+DONE cuda=no error

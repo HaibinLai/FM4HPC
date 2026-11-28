@@ -1,0 +1,12 @@
+laswp_sym 64 10
+laswp_sym 64 32
+laswp_sym 64 33
+laswp_sym 64 64
+laswp_sym 65 10
+laswp_sym 65 2
+laswp_sym 100 10
+laswp_sym 100 1
+laswp_sym 128 1
+laswp_sym 200 5
+laswp_sym 40 32
+laswp_sym 40 40

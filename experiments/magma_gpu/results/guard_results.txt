@@ -1,0 +1,10 @@
+## mode clean2
+[guard] allocations checked at free: 7, with out-of-bounds writes: 0
+dshposv nrhs=2 b[0]=finite     n= 512 nrhs=2  ret=0 iter=   2 info=0  x0max=1          relerr(col0)=1.15e-14  bwd/thr=2.50e+00  col1: max|x|=0 relerr=1.00e+00
+## mode nan1
+[guard] allocations checked at free: 7, with out-of-bounds writes: 0
+dshposv nrhs=1 b[0]=NaN        n= 512 nrhs=1  ret=0 iter= 500 info=0  x0max=0          relerr(col0)=inf  bwd/thr=-nan
+## mode nan2
+[guard] OUT-OF-BOUNDS WRITE: allocation of 2048000 bytes, guard bytes [0, 4095] modified (4096 bytes)
+[guard] allocations checked at free: 7, with out-of-bounds writes: 1
+dshposv nrhs=2 b[0]=NaN        n= 512 nrhs=2  ret=0 iter= 500 info=0  x0max=0          relerr(col0)=inf  bwd/thr=-nan  col1: max|x|=0 relerr=1.00e+00

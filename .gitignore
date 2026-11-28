@@ -18,3 +18,7 @@ __pycache__/
 operators/NVIDIA_REPORT_cusolver_irs.md
 operators/MAGMA_REPORT_fgmres_ir.md
 outreach/
+operators/upstream_reports/
+
+# Lake build directory
+.lake/

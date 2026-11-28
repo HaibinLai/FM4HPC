@@ -1,0 +1,216 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,CSR,poisson2d,1024,0,0,84,3.44e-09,3.44e-09,8.33e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,CSR,aniso1e-4,1024,0,0,82,9.57e-10,9.57e-10,4.28e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,CSR,convdiff,1024,0,0,55,4.7e-09,4.7e-09,9.33e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,CSR,shifted_indef,1024,-201,-201,1000,7.79e-06,7.79e-06,4.14e-07,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,CSR,complexsym,1024,0,0,41,2.25e-09,2.25e-09,3.81e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,CSR,neumann_singular,1024,0,0,114,2.78e-09,2.78e-09,7.26e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,CSR,zerodiag,1024,0,0,105,3.02e-09,3.02e-09,7.43e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,CSR,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,CSR,poisson2d,1024,0,0,84,3.44e-09,3.44e-09,8.33e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,CSR,aniso1e-4,1024,0,0,84,2.07e-10,2.07e-10,9.27e-12,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,CSR,convdiff,1024,0,0,55,4.7e-09,4.7e-09,9.33e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,CSR,shifted_indef,1024,-202,-202,1,18.8,18.8,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,CSR,complexsym,1024,0,0,41,2.31e-09,2.31e-09,3.91e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,CSR,neumann_singular,1024,0,0,107,3.8e-09,3.8e-09,9.94e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,CSR,zerodiag,1024,-202,-202,1,40.6,40.6,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,CSR,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,CSR,poisson2d,1024,0,0,24,1.7e-09,1.7e-09,4.13e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,CSR,aniso1e-4,1024,0,0,3,1.43e-11,1.43e-11,6.42e-13,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,CSR,convdiff,1024,0,0,18,2.79e-09,2.79e-09,5.53e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,CSR,shifted_indef,1024,-3003,-3003,1,18.8,18.8,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,CSR,complexsym,1024,0,0,11,2.03e-09,2.03e-09,3.43e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,CSR,neumann_singular,1024,0,0,41,1.56e-09,1.56e-09,4.07e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,CSR,zerodiag,1024,-3003,-3003,1,40.6,40.6,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,CSR,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,ELL,poisson2d,1024,0,0,83,3.82e-09,3.82e-09,9.25e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,ELL,aniso1e-4,1024,0,0,78,8.81e-10,8.81e-10,3.94e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,ELL,convdiff,1024,0,0,55,4.7e-09,4.7e-09,9.33e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,ELL,shifted_indef,1024,-201,-201,1000,1.12e-05,1.12e-05,5.97e-07,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,ELL,complexsym,1024,0,0,41,3.35e-09,3.35e-09,5.67e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,ELL,neumann_singular,1024,0,0,116,1.75e-09,1.75e-09,4.57e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,ELL,zerodiag,1024,0,0,89,2.61e-09,2.61e-09,6.43e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,ELL,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,ELL,poisson2d,1024,0,0,83,3.82e-09,3.82e-09,9.25e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,ELL,aniso1e-4,1024,0,0,78,8.65e-10,8.65e-10,3.87e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,ELL,convdiff,1024,0,0,55,4.7e-09,4.7e-09,9.33e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,ELL,shifted_indef,1024,-202,-202,1,18.8,18.8,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,ELL,complexsym,1024,0,0,41,3.5e-09,3.5e-09,5.92e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,ELL,neumann_singular,1024,0,0,104,2.48e-09,2.48e-09,6.49e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,ELL,zerodiag,1024,-202,-202,1,40.6,40.6,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,ELL,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,ELL,poisson2d,1024,0,0,24,1.7e-09,1.7e-09,4.13e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,ELL,aniso1e-4,1024,0,0,3,1.43e-11,1.43e-11,6.42e-13,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,ELL,convdiff,1024,0,0,18,2.79e-09,2.79e-09,5.53e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,ELL,shifted_indef,1024,-3003,-3003,1,18.8,18.8,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,ELL,complexsym,1024,0,0,11,2.03e-09,2.03e-09,3.43e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,ELL,neumann_singular,1024,0,0,41,1.56e-09,1.56e-09,4.07e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,ELL,zerodiag,1024,-3003,-3003,1,40.6,40.6,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,ELL,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,SELLP,poisson2d,1024,0,0,86,2.57e-09,2.57e-09,6.24e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,SELLP,aniso1e-4,1024,0,0,78,9.04e-10,9.04e-10,4.04e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,SELLP,convdiff,1024,0,0,55,4.7e-09,4.7e-09,9.33e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,SELLP,shifted_indef,1024,-201,-201,1000,1.18e-05,1.18e-05,6.25e-07,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,SELLP,complexsym,1024,0,0,39,5.79e-09,5.79e-09,9.79e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,SELLP,neumann_singular,1024,0,0,115,3.48e-09,3.48e-09,9.09e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,SELLP,zerodiag,1024,0,0,93,2.95e-09,2.95e-09,7.27e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,NONE,SELLP,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,SELLP,poisson2d,1024,0,0,86,2.57e-09,2.57e-09,6.24e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,SELLP,aniso1e-4,1024,0,0,81,1.79e-09,1.79e-09,8.01e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,SELLP,convdiff,1024,0,0,55,4.7e-09,4.7e-09,9.33e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,SELLP,shifted_indef,1024,-202,-202,1,18.8,18.8,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,SELLP,complexsym,1024,0,0,41,2.57e-09,2.57e-09,4.35e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,SELLP,neumann_singular,1024,0,0,105,2.6e-09,2.6e-09,6.79e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,SELLP,zerodiag,1024,-202,-202,1,40.6,40.6,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,JACOBI,SELLP,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,SELLP,poisson2d,1024,0,0,24,1.7e-09,1.7e-09,4.13e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,SELLP,aniso1e-4,1024,0,0,3,1.43e-11,1.43e-11,6.42e-13,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,SELLP,convdiff,1024,0,0,18,2.79e-09,2.79e-09,5.53e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,SELLP,shifted_indef,1024,-3003,-3003,1,18.8,18.8,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,SELLP,complexsym,1024,0,0,11,2.03e-09,2.03e-09,3.43e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,SELLP,neumann_singular,1024,0,0,41,1.56e-09,1.56e-09,4.07e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,SELLP,zerodiag,1024,-3003,-3003,1,40.6,40.6,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICGSTAB,ILU,SELLP,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0

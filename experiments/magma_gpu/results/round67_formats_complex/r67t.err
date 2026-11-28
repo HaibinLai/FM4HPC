@@ -1,0 +1,82 @@
+
+== 30 47 host 0
+BEFORE host T
+== 30 47 host 1
+BEFORE host H
+AFTER ret 0 rows 47 cols 30 nnz 90
+== 30 47 dev 0
+BEFORE dev T
+AFTER ret 0 rows 47 cols 30 nnz 90
+== 30 47 dev 1
+BEFORE dev H
+AFTER ret 0 rows 47 cols 30 nnz 90
+== 47 30 host 0
+BEFORE host T
+AFTER ret 0 rows 47 cols 30 nnz 141
+== 47 30 host 1
+BEFORE host H
+AFTER ret 0 rows 30 cols 47 nnz 141
+== 47 30 dev 0
+BEFORE dev T
+AFTER ret 0 rows 30 cols 47 nnz 141
+== 47 30 dev 1
+BEFORE dev H
+AFTER ret 0 rows 30 cols 47 nnz 141
+== 10 11 host 0
+BEFORE host T
+== 10 11 host 1
+BEFORE host H
+AFTER ret 0 rows 11 cols 10 nnz 10
+== 10 11 dev 0
+BEFORE dev T
+AFTER ret 0 rows 11 cols 10 nnz 10
+== 10 11 dev 1
+BEFORE dev H
+AFTER ret 0 rows 11 cols 10 nnz 10
+== 11 10 host 0
+BEFORE host T
+AFTER ret 0 rows 11 cols 10 nnz 33
+== 11 10 host 1
+BEFORE host H
+AFTER ret 0 rows 10 cols 11 nnz 33
+== 11 10 dev 0
+BEFORE dev T
+AFTER ret 0 rows 10 cols 11 nnz 33
+== 11 10 dev 1
+BEFORE dev H
+AFTER ret 0 rows 10 cols 11 nnz 33
+== 5 50 host 0
+BEFORE host T
+== 5 50 host 1
+BEFORE host H
+AFTER ret 0 rows 50 cols 5 nnz 15
+== 5 50 dev 0
+BEFORE dev T
+AFTER ret 0 rows 50 cols 5 nnz 15
+== 5 50 dev 1
+BEFORE dev H
+AFTER ret 0 rows 50 cols 5 nnz 15
+== 50 5 host 0
+BEFORE host T
+AFTER ret 0 rows 50 cols 5 nnz 150
+== 50 5 host 1
+BEFORE host H
+AFTER ret 0 rows 5 cols 50 nnz 150
+== 50 5 dev 0
+BEFORE dev T
+AFTER ret 0 rows 5 cols 50 nnz 150
+== 50 5 dev 1
+BEFORE dev H
+AFTER ret 0 rows 5 cols 50 nnz 150
+== 40 40 host 0
+BEFORE host T
+AFTER ret 0 rows 40 cols 40 nnz 120
+== 40 40 host 1
+BEFORE host H
+AFTER ret 0 rows 40 cols 40 nnz 120
+== 40 40 dev 0
+BEFORE dev T
+AFTER ret 0 rows 40 cols 40 nnz 120
+== 40 40 dev 1
+BEFORE dev H
+AFTER ret 0 rows 40 cols 40 nnz 120

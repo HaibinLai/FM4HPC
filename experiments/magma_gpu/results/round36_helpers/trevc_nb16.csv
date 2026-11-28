@@ -1,0 +1,91 @@
+helpers,routine,case,info,relerr,verdict
+helpers,dtrevc3_resid,n=1 RA,0,0,OK,lapack_resid=0
+helpers,dtrevc3,n=1 RA m=1/1,0,0,OK
+helpers,dtrevc3,n=1 RB m=1/1,0,0,OK
+helpers,dtrevc3_resid,n=1 RS,0,0,OK,lapack_resid=0
+helpers,dtrevc3,n=1 RS m=1/1,0,0,OK
+helpers,dtrevc3_resid,n=1 LA,0,0,OK,lapack_resid=0
+helpers,dtrevc3,n=1 LA m=1/1,0,0,OK
+helpers,dtrevc3,n=1 LB m=1/1,0,0,OK
+helpers,dtrevc3_resid,n=1 LS,0,0,OK,lapack_resid=0
+helpers,dtrevc3,n=1 LS m=1/1,0,0,OK
+helpers,dtrevc3_resid,n=1 BA,0,0,OK,lapack_resid=0
+helpers,dtrevc3,n=1 BA m=1/1,0,0,OK
+helpers,dtrevc3,n=1 BB m=1/1,0,0,OK
+helpers,dtrevc3_resid,n=1 BS,0,0,OK,lapack_resid=0
+helpers,dtrevc3,n=1 BS m=1/1,0,0,OK
+helpers,dtrevc3_resid,n=2 RA,0,3.43e+15,BAD,lapack_resid=0.544
+helpers,dtrevc3,n=2 RA m=2/2,0,1,BAD
+helpers,dtrevc3,n=2 RB m=2/2,0,0,OK
+helpers,dtrevc3_resid,n=2 RS,0,3.43e+15,BAD,lapack_resid=0.544
+helpers,dtrevc3,n=2 RS m=2/2,0,1,BAD
+helpers,dtrevc3_resid,n=2 LA,0,1e+300,BAD,lapack_resid=0.544
+helpers,dtrevc3,n=2 LA m=2/2,0,0,OK
+helpers,dtrevc3,n=2 LB m=2/2,0,0,OK
+helpers,dtrevc3_resid,n=2 LS,0,1e+300,BAD,lapack_resid=0.544
+helpers,dtrevc3,n=2 LS m=2/2,0,0,OK
+helpers,dtrevc3_resid,n=2 BA,0,1e+300,BAD,lapack_resid=0.544
+helpers,dtrevc3,n=2 BA m=2/2,0,1,BAD
+helpers,dtrevc3,n=2 BB m=2/2,0,0,OK
+helpers,dtrevc3_resid,n=2 BS,0,1e+300,BAD,lapack_resid=0.544
+helpers,dtrevc3,n=2 BS m=2/2,0,1,BAD
+helpers,dtrevc3_resid,n=5 RA,0,1.14e+15,BAD,lapack_resid=0.204
+helpers,dtrevc3,n=5 RA m=5/5,0,1.04,BAD
+helpers,dtrevc3,n=5 RB m=5/5,0,0,OK
+helpers,dtrevc3_resid,n=5 RS,0,2.35e+14,BAD,lapack_resid=0.0509
+helpers,dtrevc3,n=5 RS m=3/3,0,1,BAD
+helpers,dtrevc3_resid,n=5 LA,0,2.5e+14,BAD,lapack_resid=0.102
+helpers,dtrevc3,n=5 LA m=5/5,0,1,BAD
+helpers,dtrevc3,n=5 LB m=5/5,0,0,OK
+helpers,dtrevc3_resid,n=5 LS,0,0.102,OK,lapack_resid=0.102
+helpers,dtrevc3,n=5 LS m=3/3,0,0,OK
+helpers,dtrevc3_resid,n=5 BA,0,1.14e+15,BAD,lapack_resid=0.204
+helpers,dtrevc3,n=5 BA m=5/5,0,1.04,BAD
+helpers,dtrevc3,n=5 BB m=5/5,0,0,OK
+helpers,dtrevc3_resid,n=5 BS,0,2.35e+14,BAD,lapack_resid=0.102
+helpers,dtrevc3,n=5 BS m=3/3,0,1,BAD
+helpers,dtrevc3_resid,n=33 RA,0,4.63e+13,BAD,lapack_resid=0.0149
+helpers,dtrevc3,n=33 RA m=33/33,0,2.61,BAD
+helpers,dtrevc3,n=33 RB m=33/33,0,5.55e-17,OK
+helpers,dtrevc3_resid,n=33 RS,0,1.11e+14,BAD,lapack_resid=0.0149
+helpers,dtrevc3,n=33 RS m=18/18,0,1.75,BAD
+helpers,dtrevc3_resid,n=33 LA,0,4.17e+13,BAD,lapack_resid=0.00743
+helpers,dtrevc3,n=33 LA m=33/33,0,2.2,BAD
+helpers,dtrevc3,n=33 LB m=33/33,0,2.22e-16,OK
+helpers,dtrevc3_resid,n=33 LS,0,0.00743,OK,lapack_resid=0.00743
+helpers,dtrevc3,n=33 LS m=18/18,0,1.39e-17,OK
+helpers,dtrevc3_resid,n=33 BA,0,9.58e+13,BAD,lapack_resid=0.0149
+helpers,dtrevc3,n=33 BA m=33/33,0,2.61,BAD
+helpers,dtrevc3,n=33 BB m=33/33,0,2.22e-16,OK
+helpers,dtrevc3_resid,n=33 BS,0,1.11e+14,BAD,lapack_resid=0.0149
+helpers,dtrevc3,n=33 BS m=18/18,0,1.24,BAD
+helpers,dtrevc3_resid,n=64 RA,0,1.5e+13,BAD,lapack_resid=0.00393
+helpers,dtrevc3,n=64 RA m=64/64,0,1.75,BAD
+helpers,dtrevc3,n=64 RB m=64/64,0,0,OK
+helpers,dtrevc3_resid,n=64 RS,0,5.21e+13,BAD,lapack_resid=0.00393
+helpers,dtrevc3,n=64 RS m=33/33,0,1.81,BAD
+helpers,dtrevc3_resid,n=64 LA,0,1.17e+13,BAD,lapack_resid=0.0157
+helpers,dtrevc3,n=64 LA m=64/64,0,41,BAD
+helpers,dtrevc3,n=64 LB m=64/64,0,2.22e-16,OK
+helpers,dtrevc3_resid,n=64 LS,0,0.0157,OK,lapack_resid=0.0157
+helpers,dtrevc3,n=64 LS m=33/33,0,1.39e-17,OK
+helpers,dtrevc3_resid,n=64 BA,0,1.5e+13,BAD,lapack_resid=0.0157
+helpers,dtrevc3,n=64 BA m=64/64,0,41,BAD
+helpers,dtrevc3,n=64 BB m=64/64,0,2.22e-16,OK
+helpers,dtrevc3_resid,n=64 BS,0,5.21e+13,BAD,lapack_resid=0.0157
+helpers,dtrevc3,n=64 BS m=33/33,0,1.81,BAD
+helpers,dtrevc3_resid,n=130 RA,0,4.88e+12,BAD,lapack_resid=0.00382
+helpers,dtrevc3,n=130 RA m=130/130,0,2.24,BAD
+helpers,dtrevc3,n=130 RB m=130/130,0,1.67e-16,OK
+helpers,dtrevc3_resid,n=130 RS,0,1.72e+13,BAD,lapack_resid=0.00191
+helpers,dtrevc3,n=130 RS m=66/66,0,1.82,BAD
+helpers,dtrevc3_resid,n=130 LA,0,3.31e+12,BAD,lapack_resid=0.00382
+helpers,dtrevc3,n=130 LA m=130/130,0,19.5,BAD
+helpers,dtrevc3,n=130 LB m=130/130,0,5.55e-16,OK
+helpers,dtrevc3_resid,n=130 LS,0,0.00382,OK,lapack_resid=0.00382
+helpers,dtrevc3,n=130 LS m=66/66,0,2.78e-17,OK
+helpers,dtrevc3_resid,n=130 BA,0,4.88e+12,BAD,lapack_resid=0.00382
+helpers,dtrevc3,n=130 BA m=130/130,0,19.7,BAD
+helpers,dtrevc3,n=130 BB m=130/130,0,5.55e-16,OK
+helpers,dtrevc3_resid,n=130 BS,0,1.72e+13,BAD,lapack_resid=0.00382
+helpers,dtrevc3,n=130 BS m=66/66,0,1.82,BAD

@@ -1,0 +1,24 @@
+GPUs before: 0, 0 MiB 1, 0 MiB 
+######## potrf_m
+visible devices: 2
+zpotrf_m               ngpu=1  info=0       time=  5.092 s  rel err vs LAPACK (lower)=3.03e-15
+zpotrf_m               ngpu=2  info=526     time=  4.077 s  rel err vs LAPACK (lower)=63.2
+zpotrf_m               ngpu=1  A(101,101) = -1e6: info=101 (LAPACK 101)
+zpotrf_m               ngpu=2  A(101,101) = -1e6: info=101 (LAPACK 101)
+zpotrf_m               ngpu=1  A(3001,3001) = -1e6: info=3001 (LAPACK 3001)
+zpotrf_m               ngpu=2  A(3001,3001) = -1e6: info=684 (LAPACK 3001)
+cudaGetLastError at exit: no error
+exit=0
+######## getrf_m
+visible devices: 2
+zgetrf_m               ngpu=1  info=0       time=  4.701 s  rel err vs LAPACK=1.63e-12
+                        pivots different from LAPACK: 0
+zgetrf_m               ngpu=2  info=0       time=126.559 s  rel err vs LAPACK=inf
+                        pivots different from LAPACK: 3543
+zgetrf_m               ngpu=1  column 2501 = 0: info=0 (LAPACK 2501)
+zgetrf_m               ngpu=2  column 2501 = 0: info=0 (LAPACK 2501)
+cudaGetLastError at exit: unspecified launch failure
+#### wait log
+15:33:37 busy=0 ok=1
+15:34:40 busy=0 ok=2
+15:35:43 busy=0 ok=3

@@ -1,0 +1,529 @@
+
+== brd 300 200 0 unmbr Q L N 50
+DONE cuda=no error
+== brd 300 200 0 unmbr Q L C 50
+DONE cuda=no error
+== brd 300 200 0 unmbr Q R N 50
+DONE cuda=no error
+== brd 300 200 0 unmbr Q R C 50
+DONE cuda=no error
+== brd 300 200 0 ungbr Q - - 50
+DONE cuda=no error
+== brd 300 200 0 unmbr P L N 50
+DONE cuda=no error
+== brd 300 200 0 unmbr P L C 50
+DONE cuda=no error
+== brd 300 200 0 unmbr P R N 50
+DONE cuda=no error
+== brd 300 200 0 unmbr P R C 50
+DONE cuda=no error
+== brd 300 200 0 ungbr P - - 50
+DONE cuda=no error
+== qrf 300 200 0 unmqr L N - 50
+DONE cuda=no error
+== lqf 300 200 0 unmlq L N - 50
+DONE cuda=no error
+== lqfgpu 300 200 0 unmlq L N - 50
+DONE cuda=no error
+== qlf 300 200 0 unmql L N - 50
+DONE cuda=no error
+== qrf 300 200 0 unmqr L C - 50
+DONE cuda=no error
+== lqf 300 200 0 unmlq L C - 50
+DONE cuda=no error
+== lqfgpu 300 200 0 unmlq L C - 50
+DONE cuda=no error
+== qlf 300 200 0 unmql L C - 50
+DONE cuda=no error
+== qrf 300 200 0 unmqr R N - 50
+DONE cuda=no error
+== lqf 300 200 0 unmlq R N - 50
+DONE cuda=no error
+== lqfgpu 300 200 0 unmlq R N - 50
+DONE cuda=no error
+== qlf 300 200 0 unmql R N - 50
+DONE cuda=no error
+== qrf 300 200 0 unmqr R C - 50
+DONE cuda=no error
+== lqf 300 200 0 unmlq R C - 50
+DONE cuda=no error
+== lqfgpu 300 200 0 unmlq R C - 50
+DONE cuda=no error
+== qlf 300 200 0 unmql R C - 50
+DONE cuda=no error
+== qrf 300 200 0 ungqr2 - - - 50
+DONE cuda=no error
+== brd 300 200 5 unmbr Q L N 50
+DONE cuda=no error
+== brd 300 200 5 unmbr Q L C 50
+DONE cuda=no error
+== brd 300 200 5 unmbr Q R N 50
+DONE cuda=no error
+== brd 300 200 5 unmbr Q R C 50
+DONE cuda=no error
+== brd 300 200 5 ungbr Q - - 50
+DONE cuda=no error
+== brd 300 200 5 unmbr P L N 50
+DONE cuda=no error
+== brd 300 200 5 unmbr P L C 50
+DONE cuda=no error
+== brd 300 200 5 unmbr P R N 50
+DONE cuda=no error
+== brd 300 200 5 unmbr P R C 50
+DONE cuda=no error
+== brd 300 200 5 ungbr P - - 50
+DONE cuda=no error
+== qrf 300 200 5 unmqr L N - 50
+DONE cuda=no error
+== lqf 300 200 5 unmlq L N - 50
+DONE cuda=no error
+== lqfgpu 300 200 5 unmlq L N - 50
+DONE cuda=no error
+== qlf 300 200 5 unmql L N - 50
+DONE cuda=no error
+== qrf 300 200 5 unmqr L C - 50
+DONE cuda=no error
+== lqf 300 200 5 unmlq L C - 50
+DONE cuda=no error
+== lqfgpu 300 200 5 unmlq L C - 50
+DONE cuda=no error
+== qlf 300 200 5 unmql L C - 50
+DONE cuda=no error
+== qrf 300 200 5 unmqr R N - 50
+DONE cuda=no error
+== lqf 300 200 5 unmlq R N - 50
+DONE cuda=no error
+== lqfgpu 300 200 5 unmlq R N - 50
+DONE cuda=no error
+== qlf 300 200 5 unmql R N - 50
+DONE cuda=no error
+== qrf 300 200 5 unmqr R C - 50
+DONE cuda=no error
+== lqf 300 200 5 unmlq R C - 50
+DONE cuda=no error
+== lqfgpu 300 200 5 unmlq R C - 50
+DONE cuda=no error
+== qlf 300 200 5 unmql R C - 50
+DONE cuda=no error
+== qrf 300 200 5 ungqr2 - - - 50
+DONE cuda=no error
+== brd 200 300 0 unmbr Q L N 50
+DONE cuda=no error
+== brd 200 300 0 unmbr Q L C 50
+DONE cuda=no error
+== brd 200 300 0 unmbr Q R N 50
+DONE cuda=no error
+== brd 200 300 0 unmbr Q R C 50
+DONE cuda=no error
+== brd 200 300 0 ungbr Q - - 50
+DONE cuda=no error
+== brd 200 300 0 unmbr P L N 50
+DONE cuda=no error
+== brd 200 300 0 unmbr P L C 50
+DONE cuda=no error
+== brd 200 300 0 unmbr P R N 50
+DONE cuda=no error
+== brd 200 300 0 unmbr P R C 50
+DONE cuda=no error
+== brd 200 300 0 ungbr P - - 50
+DONE cuda=no error
+== qrf 200 300 0 unmqr L N - 50
+DONE cuda=no error
+== lqf 200 300 0 unmlq L N - 50
+DONE cuda=no error
+== lqfgpu 200 300 0 unmlq L N - 50
+DONE cuda=no error
+== qlf 200 300 0 unmql L N - 50
+DONE cuda=no error
+== qrf 200 300 0 unmqr L C - 50
+DONE cuda=no error
+== lqf 200 300 0 unmlq L C - 50
+DONE cuda=no error
+== lqfgpu 200 300 0 unmlq L C - 50
+DONE cuda=no error
+== qlf 200 300 0 unmql L C - 50
+DONE cuda=no error
+== qrf 200 300 0 unmqr R N - 50
+DONE cuda=no error
+== lqf 200 300 0 unmlq R N - 50
+DONE cuda=no error
+== lqfgpu 200 300 0 unmlq R N - 50
+DONE cuda=no error
+== qlf 200 300 0 unmql R N - 50
+DONE cuda=no error
+== qrf 200 300 0 unmqr R C - 50
+DONE cuda=no error
+== lqf 200 300 0 unmlq R C - 50
+DONE cuda=no error
+== lqfgpu 200 300 0 unmlq R C - 50
+DONE cuda=no error
+== qlf 200 300 0 unmql R C - 50
+DONE cuda=no error
+== qrf 200 300 0 ungqr2 - - - 50
+DONE cuda=no error
+== brd 200 300 5 unmbr Q L N 50
+DONE cuda=no error
+== brd 200 300 5 unmbr Q L C 50
+DONE cuda=no error
+== brd 200 300 5 unmbr Q R N 50
+DONE cuda=no error
+== brd 200 300 5 unmbr Q R C 50
+DONE cuda=no error
+== brd 200 300 5 ungbr Q - - 50
+DONE cuda=no error
+== brd 200 300 5 unmbr P L N 50
+DONE cuda=no error
+== brd 200 300 5 unmbr P L C 50
+DONE cuda=no error
+== brd 200 300 5 unmbr P R N 50
+DONE cuda=no error
+== brd 200 300 5 unmbr P R C 50
+DONE cuda=no error
+== brd 200 300 5 ungbr P - - 50
+DONE cuda=no error
+== qrf 200 300 5 unmqr L N - 50
+DONE cuda=no error
+== lqf 200 300 5 unmlq L N - 50
+DONE cuda=no error
+== lqfgpu 200 300 5 unmlq L N - 50
+DONE cuda=no error
+== qlf 200 300 5 unmql L N - 50
+DONE cuda=no error
+== qrf 200 300 5 unmqr L C - 50
+DONE cuda=no error
+== lqf 200 300 5 unmlq L C - 50
+DONE cuda=no error
+== lqfgpu 200 300 5 unmlq L C - 50
+DONE cuda=no error
+== qlf 200 300 5 unmql L C - 50
+DONE cuda=no error
+== qrf 200 300 5 unmqr R N - 50
+DONE cuda=no error
+== lqf 200 300 5 unmlq R N - 50
+DONE cuda=no error
+== lqfgpu 200 300 5 unmlq R N - 50
+DONE cuda=no error
+== qlf 200 300 5 unmql R N - 50
+DONE cuda=no error
+== qrf 200 300 5 unmqr R C - 50
+DONE cuda=no error
+== lqf 200 300 5 unmlq R C - 50
+DONE cuda=no error
+== lqfgpu 200 300 5 unmlq R C - 50
+DONE cuda=no error
+== qlf 200 300 5 unmql R C - 50
+DONE cuda=no error
+== qrf 200 300 5 ungqr2 - - - 50
+DONE cuda=no error
+== brd 257 257 0 unmbr Q L N 50
+DONE cuda=no error
+== brd 257 257 0 unmbr Q L C 50
+DONE cuda=no error
+== brd 257 257 0 unmbr Q R N 50
+DONE cuda=no error
+== brd 257 257 0 unmbr Q R C 50
+DONE cuda=no error
+== brd 257 257 0 ungbr Q - - 50
+DONE cuda=no error
+== brd 257 257 0 unmbr P L N 50
+DONE cuda=no error
+== brd 257 257 0 unmbr P L C 50
+DONE cuda=no error
+== brd 257 257 0 unmbr P R N 50
+DONE cuda=no error
+== brd 257 257 0 unmbr P R C 50
+DONE cuda=no error
+== brd 257 257 0 ungbr P - - 50
+DONE cuda=no error
+== qrf 257 257 0 unmqr L N - 50
+DONE cuda=no error
+== lqf 257 257 0 unmlq L N - 50
+DONE cuda=no error
+== lqfgpu 257 257 0 unmlq L N - 50
+DONE cuda=no error
+== qlf 257 257 0 unmql L N - 50
+DONE cuda=no error
+== qrf 257 257 0 unmqr L C - 50
+DONE cuda=no error
+== lqf 257 257 0 unmlq L C - 50
+DONE cuda=no error
+== lqfgpu 257 257 0 unmlq L C - 50
+DONE cuda=no error
+== qlf 257 257 0 unmql L C - 50
+DONE cuda=no error
+== qrf 257 257 0 unmqr R N - 50
+DONE cuda=no error
+== lqf 257 257 0 unmlq R N - 50
+DONE cuda=no error
+== lqfgpu 257 257 0 unmlq R N - 50
+DONE cuda=no error
+== qlf 257 257 0 unmql R N - 50
+DONE cuda=no error
+== qrf 257 257 0 unmqr R C - 50
+DONE cuda=no error
+== lqf 257 257 0 unmlq R C - 50
+DONE cuda=no error
+== lqfgpu 257 257 0 unmlq R C - 50
+DONE cuda=no error
+== qlf 257 257 0 unmql R C - 50
+DONE cuda=no error
+== qrf 257 257 0 ungqr2 - - - 50
+DONE cuda=no error
+== brd 257 257 5 unmbr Q L N 50
+DONE cuda=no error
+== brd 257 257 5 unmbr Q L C 50
+DONE cuda=no error
+== brd 257 257 5 unmbr Q R N 50
+DONE cuda=no error
+== brd 257 257 5 unmbr Q R C 50
+DONE cuda=no error
+== brd 257 257 5 ungbr Q - - 50
+DONE cuda=no error
+== brd 257 257 5 unmbr P L N 50
+DONE cuda=no error
+== brd 257 257 5 unmbr P L C 50
+DONE cuda=no error
+== brd 257 257 5 unmbr P R N 50
+DONE cuda=no error
+== brd 257 257 5 unmbr P R C 50
+DONE cuda=no error
+== brd 257 257 5 ungbr P - - 50
+DONE cuda=no error
+== qrf 257 257 5 unmqr L N - 50
+DONE cuda=no error
+== lqf 257 257 5 unmlq L N - 50
+DONE cuda=no error
+== lqfgpu 257 257 5 unmlq L N - 50
+DONE cuda=no error
+== qlf 257 257 5 unmql L N - 50
+DONE cuda=no error
+== qrf 257 257 5 unmqr L C - 50
+DONE cuda=no error
+== lqf 257 257 5 unmlq L C - 50
+DONE cuda=no error
+== lqfgpu 257 257 5 unmlq L C - 50
+DONE cuda=no error
+== qlf 257 257 5 unmql L C - 50
+DONE cuda=no error
+== qrf 257 257 5 unmqr R N - 50
+DONE cuda=no error
+== lqf 257 257 5 unmlq R N - 50
+DONE cuda=no error
+== lqfgpu 257 257 5 unmlq R N - 50
+DONE cuda=no error
+== qlf 257 257 5 unmql R N - 50
+DONE cuda=no error
+== qrf 257 257 5 unmqr R C - 50
+DONE cuda=no error
+== lqf 257 257 5 unmlq R C - 50
+DONE cuda=no error
+== lqfgpu 257 257 5 unmlq R C - 50
+DONE cuda=no error
+== qlf 257 257 5 unmql R C - 50
+DONE cuda=no error
+== qrf 257 257 5 ungqr2 - - - 50
+DONE cuda=no error
+== brd 64 40 0 unmbr Q L N 50
+DONE cuda=no error
+== brd 64 40 0 unmbr Q L C 50
+DONE cuda=no error
+== brd 64 40 0 unmbr Q R N 50
+DONE cuda=no error
+== brd 64 40 0 unmbr Q R C 50
+DONE cuda=no error
+== brd 64 40 0 ungbr Q - - 50
+DONE cuda=no error
+== brd 64 40 0 unmbr P L N 50
+DONE cuda=no error
+== brd 64 40 0 unmbr P L C 50
+DONE cuda=no error
+== brd 64 40 0 unmbr P R N 50
+DONE cuda=no error
+== brd 64 40 0 unmbr P R C 50
+DONE cuda=no error
+== brd 64 40 0 ungbr P - - 50
+DONE cuda=no error
+== qrf 64 40 0 unmqr L N - 50
+DONE cuda=no error
+== lqf 64 40 0 unmlq L N - 50
+DONE cuda=no error
+== lqfgpu 64 40 0 unmlq L N - 50
+DONE cuda=no error
+== qlf 64 40 0 unmql L N - 50
+DONE cuda=no error
+== qrf 64 40 0 unmqr L C - 50
+DONE cuda=no error
+== lqf 64 40 0 unmlq L C - 50
+DONE cuda=no error
+== lqfgpu 64 40 0 unmlq L C - 50
+DONE cuda=no error
+== qlf 64 40 0 unmql L C - 50
+DONE cuda=no error
+== qrf 64 40 0 unmqr R N - 50
+DONE cuda=no error
+== lqf 64 40 0 unmlq R N - 50
+DONE cuda=no error
+== lqfgpu 64 40 0 unmlq R N - 50
+DONE cuda=no error
+== qlf 64 40 0 unmql R N - 50
+DONE cuda=no error
+== qrf 64 40 0 unmqr R C - 50
+DONE cuda=no error
+== lqf 64 40 0 unmlq R C - 50
+DONE cuda=no error
+== lqfgpu 64 40 0 unmlq R C - 50
+DONE cuda=no error
+== qlf 64 40 0 unmql R C - 50
+DONE cuda=no error
+== qrf 64 40 0 ungqr2 - - - 50
+DONE cuda=no error
+== brd 64 40 5 unmbr Q L N 50
+DONE cuda=no error
+== brd 64 40 5 unmbr Q L C 50
+DONE cuda=no error
+== brd 64 40 5 unmbr Q R N 50
+DONE cuda=no error
+== brd 64 40 5 unmbr Q R C 50
+DONE cuda=no error
+== brd 64 40 5 ungbr Q - - 50
+DONE cuda=no error
+== brd 64 40 5 unmbr P L N 50
+DONE cuda=no error
+== brd 64 40 5 unmbr P L C 50
+DONE cuda=no error
+== brd 64 40 5 unmbr P R N 50
+DONE cuda=no error
+== brd 64 40 5 unmbr P R C 50
+DONE cuda=no error
+== brd 64 40 5 ungbr P - - 50
+DONE cuda=no error
+== qrf 64 40 5 unmqr L N - 50
+DONE cuda=no error
+== lqf 64 40 5 unmlq L N - 50
+DONE cuda=no error
+== lqfgpu 64 40 5 unmlq L N - 50
+DONE cuda=no error
+== qlf 64 40 5 unmql L N - 50
+DONE cuda=no error
+== qrf 64 40 5 unmqr L C - 50
+DONE cuda=no error
+== lqf 64 40 5 unmlq L C - 50
+DONE cuda=no error
+== lqfgpu 64 40 5 unmlq L C - 50
+DONE cuda=no error
+== qlf 64 40 5 unmql L C - 50
+DONE cuda=no error
+== qrf 64 40 5 unmqr R N - 50
+DONE cuda=no error
+== lqf 64 40 5 unmlq R N - 50
+DONE cuda=no error
+== lqfgpu 64 40 5 unmlq R N - 50
+DONE cuda=no error
+== qlf 64 40 5 unmql R N - 50
+DONE cuda=no error
+== qrf 64 40 5 unmqr R C - 50
+DONE cuda=no error
+== lqf 64 40 5 unmlq R C - 50
+DONE cuda=no error
+== lqfgpu 64 40 5 unmlq R C - 50
+DONE cuda=no error
+== qlf 64 40 5 unmql R C - 50
+DONE cuda=no error
+== qrf 64 40 5 ungqr2 - - - 50
+DONE cuda=no error
+== trd 33 33 0 unmtr L N L 50
+DONE cuda=no error
+== trd 33 33 0 unmtr L C L 50
+DONE cuda=no error
+== trd 33 33 0 unmtr R N L 50
+DONE cuda=no error
+== trd 33 33 0 unmtr R C L 50
+DONE cuda=no error
+== trd 33 33 0 unmtr L N U 50
+DONE cuda=no error
+== trd 33 33 0 unmtr L C U 50
+DONE cuda=no error
+== trd 33 33 0 unmtr R N U 50
+DONE cuda=no error
+== trd 33 33 0 unmtr R C U 50
+DONE cuda=no error
+== trd 33 33 5 unmtr L N L 50
+DONE cuda=no error
+== trd 33 33 5 unmtr L C L 50
+DONE cuda=no error
+== trd 33 33 5 unmtr R N L 50
+DONE cuda=no error
+== trd 33 33 5 unmtr R C L 50
+DONE cuda=no error
+== trd 33 33 5 unmtr L N U 50
+DONE cuda=no error
+== trd 33 33 5 unmtr L C U 50
+DONE cuda=no error
+== trd 33 33 5 unmtr R N U 50
+DONE cuda=no error
+== trd 33 33 5 unmtr R C U 50
+DONE cuda=no error
+== trd 300 300 0 unmtr L N L 50
+DONE cuda=no error
+== trd 300 300 0 unmtr L C L 50
+DONE cuda=no error
+== trd 300 300 0 unmtr R N L 50
+DONE cuda=no error
+== trd 300 300 0 unmtr R C L 50
+DONE cuda=no error
+== trd 300 300 0 unmtr L N U 50
+DONE cuda=no error
+== trd 300 300 0 unmtr L C U 50
+DONE cuda=no error
+== trd 300 300 0 unmtr R N U 50
+DONE cuda=no error
+== trd 300 300 0 unmtr R C U 50
+DONE cuda=no error
+== trd 300 300 5 unmtr L N L 50
+DONE cuda=no error
+== trd 300 300 5 unmtr L C L 50
+DONE cuda=no error
+== trd 300 300 5 unmtr R N L 50
+DONE cuda=no error
+== trd 300 300 5 unmtr R C L 50
+DONE cuda=no error
+== trd 300 300 5 unmtr L N U 50
+DONE cuda=no error
+== trd 300 300 5 unmtr L C U 50
+DONE cuda=no error
+== trd 300 300 5 unmtr R N U 50
+DONE cuda=no error
+== trd 300 300 5 unmtr R C U 50
+DONE cuda=no error
+== trd 513 513 0 unmtr L N L 50
+DONE cuda=no error
+== trd 513 513 0 unmtr L C L 50
+DONE cuda=no error
+== trd 513 513 0 unmtr R N L 50
+DONE cuda=no error
+== trd 513 513 0 unmtr R C L 50
+DONE cuda=no error
+== trd 513 513 0 unmtr L N U 50
+DONE cuda=no error
+== trd 513 513 0 unmtr L C U 50
+DONE cuda=no error
+== trd 513 513 0 unmtr R N U 50
+DONE cuda=no error
+== trd 513 513 0 unmtr R C U 50
+DONE cuda=no error
+== trd 513 513 5 unmtr L N L 50
+DONE cuda=no error
+== trd 513 513 5 unmtr L C L 50
+DONE cuda=no error
+== trd 513 513 5 unmtr R N L 50
+DONE cuda=no error
+== trd 513 513 5 unmtr R C L 50
+DONE cuda=no error
+== trd 513 513 5 unmtr L N U 50
+DONE cuda=no error
+== trd 513 513 5 unmtr L C U 50
+DONE cuda=no error
+== trd 513 513 5 unmtr R N U 50
+DONE cuda=no error
+== trd 513 513 5 unmtr R C U 50
+DONE cuda=no error

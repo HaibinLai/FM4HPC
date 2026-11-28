@@ -1,0 +1,69 @@
+
+== tril 1
+DONE cuda=no error
+== tril 10
+DONE cuda=no error
+== tril 100
+DONE cuda=no error
+== triu 1
+DONE cuda=no error
+== triu 10
+DONE cuda=no error
+== triu 100
+DONE cuda=no error
+== diagadd 1
+DONE cuda=no error
+== diagadd 10
+DONE cuda=no error
+== diagadd 100
+DONE cuda=no error
+== spmm 10 1
+DONE cuda=no error
+== spmm 100 3
+DONE cuda=no error
+== spmm 100 8
+DONE cuda=no error
+== spmm 500 16
+DONE cuda=no error
+== isort 1
+DONE cuda=no error
+== isort 2
+DONE cuda=no error
+== isort 10
+DONE cuda=no error
+== isort 100
+DONE cuda=no error
+== isort 1000
+DONE cuda=no error
+== isort 10000
+DONE cuda=no error
+== stencil5 2
+stencil n=4: spurious couplings 0, missing 0
+DONE cuda=no error
+== stencil5 3
+stencil n=9: spurious couplings 0, missing 0
+DONE cuda=no error
+== stencil5 8
+stencil n=64: spurious couplings 0, missing 0
+DONE cuda=no error
+== stencil27 2
+stencil n=8: spurious couplings 0, missing 30
+DONE cuda=no error
+== stencil27 3
+stencil n=27: spurious couplings 84, missing 0
+DONE cuda=no error
+== stencil27 5
+stencil n=125: spurious couplings 312, missing 0
+DONE cuda=no error
+== spgemm 10
+ ** On entry to cusparseSpGEMM_workEstimation() parameter number 7 (beta) had an illegal value: NULL pointer
+
+DONE cuda=no error
+== spgemm 100
+ ** On entry to cusparseSpGEMM_workEstimation() parameter number 7 (beta) had an illegal value: NULL pointer
+
+DONE cuda=no error
+== spgemm 500
+ ** On entry to cusparseSpGEMM_workEstimation() parameter number 7 (beta) had an illegal value: NULL pointer
+
+DONE cuda=no error

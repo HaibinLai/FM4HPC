@@ -67,8 +67,8 @@
 | PaStiX 简单IR / BiCGSTAB | ◐ | ○ | ○ | ●（BiCGSTAB不复核） | ● | ○ | ● | ○ | ● | ? | mixed模式下RHS溢出：`pastixRhsDoubletoSingle` 释放了调用者的b（疑似use-after-free） |
 | SuperLU_DIST `psgsrfs_d2`（单精度LU + 双精度IR） **（已运行证实）** | ● | ○ | ○ | — | ◐（只有误差界） | ◐（只是文档不一致） | — | ○ | ○ | **●**（`SUPERLU_MAX`） | A=I、b=(NaN,1)：CONVERGED，误差界约6e-8，X[0]=NaN（高） |
 | SuperLU_DIST `pdgsrfs`（+ 新的 `SLU_GMRES` 内层） | ◐ | ○ | ●（GMRES写死 atol=1e-14） | ○ | ○ | ● | — | ○ | ○ | ● | (A,b)×2^-50：内层GMRES直接返回 d=0，精化不起作用 |
-| SuperLU `dgsrfs` **（已在节点CPU上运行确认）** | ◐ | ○ | ○ | — | ○ | ●（`SLU_DOUBLE` 选项是空的） | — | ○ | ○ | ● | **已证实**：两个解耦的三对角块（n=1000）且 b[0]=NaN/Inf 时，x有500个NaN，却返回 info=0、berr=6.94e-17（与有限基线相同）。ferr为NaN，没有被屏蔽。见 `experiments/ir_survey/` |
-| MUMPS 5.8.1 IR（ICNTL(10)；没有混合精度功能） **（5.8.2上运行证实）** | ●（经 `idamax`） | ○ | ○ | — | ◐ | ●（nrhs>1 等情况静默关闭精化） | — | — | ◐ | ● | A=I、b=(NaN,1)：OMEGA=0，判为收敛，INFO=0（中高，取决于BLAS） |
+| SuperLU `dgsrfs` **（已在节点CPU上运行确认）** | ◐ | ○ | ○ | — | ○ | ●（`SLU_DOUBLE` 选项是空的） | — | ○ | ○ | ● | **已证实**：两个解耦的三对角块（n=1000）且 b[0]=NaN/Inf 时，x有500个NaN，却返回 info=0、berr=6.94e-17（干净的值，等于单个三对角有限输入的 berr；两块的有限基线没有跑）。ferr为NaN，没有被屏蔽。同一结果文件里更小的复现：A=I、n=2、b=(NaN,1) ⇒ info=0、berr=0。见 `experiments/ir_survey/` |
+| MUMPS 5.8.1 IR（ICNTL(10)；没有混合精度功能） **（5.8.2上运行证实）** | ●（逐行比较吞掉NaN，见 `dsol_aux.F:889–899`；2026-11-25更正：不是 `idamax`） | ○ | ○ | — | ◐ | ●（nrhs>1 等情况静默关闭精化） | — | — | ◐ | ● | A=I、b=(NaN,1)：OMEGA=0，判为收敛，INFO=0（中高，取决于BLAS） |
 | hpl-ai 参考实现（GMRES-IR） ✔ | ●（GMRES内部） | ●（`/‖b‖`） | ◐ | ◐ | ● | — | ● | —（基准程序） | ●（`main` 总返回0） | ? | 驱动程序的最终检查对NaN安全，但FAILED只打印到stdout |
 | hipSOLVER `DnXXgesv`（AMD后端） ✔ | — | — | — | — | — | ●（`niters` 从不写） | — | — | ● | — | 从cuSOLVER移植、靠 `niters<0` 判断回退的代码会读到未初始化的值（高） |
 | Ginkgo `Ir` | ○ | ○ | ◐（仅absolute基线） | ○ | ●（静默，`apply` 返回void） | ○ | ● | — | ● | ? | b含NaN：只配了ResidualNorm时无限循环（高） |
@@ -90,8 +90,8 @@
 
 | 例程 | 实测结果 |
 |---|---|
-| SuperLU `dgsrfs` | x有500个NaN，返回 info=0，berr与有限基线相同（6.94e-17）；ferr为NaN |
-| SuperLU_DIST `psgssvx_d2` | **比预测更严重**：b[0]=NaN 时，info、两个前向误差界（1.03e-7）和berr（2.96e-16）**全部与干净基线相同**，而x有500个NaN |
+| SuperLU `dgsrfs` | x有500个NaN，返回 info=0，berr=6.94e-17（干净的值）；ferr为NaN。A=I、b=(NaN,1) ⇒ berr=0 |
+| SuperLU_DIST `psgssvx_d2` | **比预测更严重**：b[0]=NaN 时，info、两个前向误差界（1.03e-7）和berr（2.96e-16）**全部与干净基线相同**，而x有500个NaN。其中范数误差界 1.03e-7 恰为公式下限 √3·2^-24（`psgsrfs_d2.c:566`），本来就不会变；berr 相同才是屏蔽 |
 | MUMPS 5.8.2 | b[0]=NaN 时 INFOG(1)=0、omega1=1.94e-16（与基线相同）；NaN在其他行时给出警告 INFOG(1)=2 |
 | PaStiX GMRES | x0=0（文档允许）时跑满250次迭代，x≈249·x_true，残差为249，返回 `PASTIX_SUCCESS` |
 | PLASMA `dsgesv` | b含NaN或FP32主元增长溢出时：返回0、iter=0、X全为NaN；FP32奇异或b溢出时：返回错误、iter=−31（声称已回退），但X从未写入 |
@@ -102,7 +102,7 @@
 
 1. **D1几乎普遍存在。** 25个左右的实现里，只有rocHPL-MxP、Trilinos、PETSc、Ginkgo、SLATE的GMRES版和hpl-ai的驱动程序检查做对了。根源有两条：
    - 判据写成拒绝式，从LAPACK `dsgesv` 一路继承到MAGMA、SLATE、PLASMA；
-   - D11，最大值归约吞掉NaN（SuperLU、PLASMA、MUMPS经idamax、LAPACK IDAMAX）。
+   - D11，最大值归约吞掉NaN（SuperLU、PLASMA、LAPACK IDAMAX；MUMPS 是逐行比较吞掉NaN）。
    上游 PR #1501 只修了参考LAPACK的第一条路径。
 2. **内层用Krylov的混合精度IR，明显比经典IR更不可靠。** MAGMA的两条GMRES路径、STRUMPACK mixed、PaStiX GMRES、cuSOLVER IRS（黑盒）都**信任内层的递推残差**，结束后不复核（D4）。外层复核的只有SLATE的GMRES版和Trilinos。这正是 `fixed_post` 的主张：验证结果，而不是迭代。
 3. **封装层丢状态（D10）是一个独立的类别，以前没人归纳过。** 例子：SLATE的LAPACK/ScaLAPACK接口写死 `info=0`；STRUMPACK mixed总是返回SUCCESS；PaStiX总是返回SUCCESS；hipSOLVER不写 `niters`；hpl-ai的 `main` 总返回0。内核里的检查做得再好，到了调用者那里也会丢失。
@@ -144,11 +144,11 @@
 | SLATE ScaLAPACK接口 `pdsgesv` | 只有一个没进构建的示例 | **不能**：不读info，只打印残差 | `example_pdsgesv.c` |
 | PLASMA `dsgesv` 接受NaN ✔ | **否**：`dsgesv` 不在 `run_tests.py` 中（LU组只有 `gesv` 等）；A、b为 U(0,1) | 能：`residual < tol`；iter不查 | `test_zcgesv.c:152-170` |
 | PLASMA 任务失败后跳过回退 | 否：`--zerocol` 让A在FP64下也奇异，不是“只在FP32下奇异” | 间接能：与 `LAPACKE_zcgesv` 的返回值比对 | `test_zcgesv.c:174-186` |
-| SuperLU `dgsrfs`（D11） ✔ | 否：x_true 全为1，b=A·x_true，没有NaN选项 | **不能**：判定是 `result[i] >= THRESH`（NaN通过）；**检查函数自身也用 `SUPERLU_MAX`**（`dgst02.c:121`、`dgst07.c:145`） | `ddrive.c:473` |
+| SuperLU `dgsrfs`（D11） ✔ | 否：x_true 全为1，b=A·x_true，没有NaN选项 | **不能**：判定是 `result[i] >= THRESH`（NaN通过）；**检查函数自身也用 `SUPERLU_MAX`**（`dgst02.c:121`、`dgst07.c:129/151/193`；l.145 在 `#if 0` 内） | `ddrive.c:473` |
 | SuperLU_DIST `psgssvx_d2`（D11） ✔ | **没有注册的测试覆盖d2路径**：`psdrive` 默认 NOREFINE，且不在ctest里；`pstest_ci` 要 `-B n -i 2` 才走d2，没有注册这种运行 | 示例驱动**不能**：`psinf_norm_error` 用 `SUPERLU_MAX`，并 `return 0`。`ptest_ci` **能**：明写“NaN anywhere fails”，判定 `value <= tol`，但它没有跑d2 | `psutil.c:1467`、`ptest_ci.c:550-567` |
 | MUMPS 精化（ICNTL(10)/(11)） ✔ | **没有测试**；示例都不开精化（默认0） | **不能**：只查 `INFOG(1) < 0`；MATLAB示例是 `if norm(...) > sqrt(eps)`（NaN通过） | `examples/` grep 无 ICNTL(10) |
 | PaStiX GMRES x0=0 | 否：所有驱动 x0=b（`memcpy(x, b)`），或者从LU解开始 | 部分：`refinement.c` 在 `NBITER >= ITERMAX` 时判失败，能发现；`simple.c` 靠 `spmCheckAxb`（`spm/` 子模块为空，未读到） | `refinement.c:140`、`simple.c:120` |
-| STRUMPACK atol（小尺度 → x≡0） | 否：矩阵为O(1)；平衡化测试只缩放 2^±8、2^−10 | 稀疏测试能（缩放残差为1，超过阈值）。**混合精度测试 `test_SPD_mixedPrecision` 只打印，总是 `return 0`** ✔ | `test_SPD_mixedPrecision.cpp:82-90,160` |
+| STRUMPACK atol（小尺度 → x≡0） | 否：矩阵为O(1)；平衡化测试只缩放 2^±8、2^−10 | 稀疏测试能（缩放残差为1，超过阈值）。**混合精度测试 `test_SPD_mixedPrecision` 只打印，总是 `return 0`** ✔ | `test_SPD_mixedPrecision.cpp:82-90,161` |
 | STRUMPACK b含NaN | 否 | 不可靠：`if (res > tol)`，加上 `max_scaled_residual` 用 `std::max` 丢掉NaN行；x≡0 能被有限行抓到，但“部分NaN、其余正确”的x会通过 | `CSRMatrix.cpp:994` |
 
 **结论**（可用于论文RQ3）：

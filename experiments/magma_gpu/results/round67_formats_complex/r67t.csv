@@ -1,0 +1,30 @@
+exit,row
+-1073741819,MISSING,30 47 host 0
+0,r67t,30,47,host,1,0,0,OK
+0,r67t,30,47,dev,0,0,0,OK
+0,r67t,30,47,dev,1,0,0,OK
+0,r67t,47,30,host,0,0,inf,WRONG
+0,r67t,47,30,host,1,0,0,OK
+0,r67t,47,30,dev,0,0,0,OK
+0,r67t,47,30,dev,1,0,0,OK
+-1073741819,MISSING,10 11 host 0
+0,r67t,10,11,host,1,0,0,OK
+0,r67t,10,11,dev,0,0,0,OK
+0,r67t,10,11,dev,1,0,0,OK
+0,r67t,11,10,host,0,0,inf,WRONG
+0,r67t,11,10,host,1,0,0,OK
+0,r67t,11,10,dev,0,0,0,OK
+0,r67t,11,10,dev,1,0,0,OK
+-1073741819,MISSING,5 50 host 0
+0,r67t,5,50,host,1,0,0,OK
+0,r67t,5,50,dev,0,0,0,OK
+0,r67t,5,50,dev,1,0,0,OK
+0,r67t,50,5,host,0,0,inf,WRONG
+0,r67t,50,5,host,1,0,0,OK
+0,r67t,50,5,dev,0,0,0,OK
+0,r67t,50,5,dev,1,0,0,OK
+0,r67t,40,40,host,0,0,0,OK
+0,r67t,40,40,host,1,0,0,OK
+0,r67t,40,40,dev,0,0,0,OK
+0,r67t,40,40,dev,1,0,0,OK
+LIST_DONE

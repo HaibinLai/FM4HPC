@@ -1,0 +1,1256 @@
+r44,routine,shape,job,lwork,info,sv_err,resid,orthU,orthV,verdict
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,NN,6700,0,0,0,0,0,OK
+r44,dgesvd,300x100,NN,6764,0,0,0,0,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,NO,6700,0,0.0196,0,0,0.048,OK
+r44,dgesvd,300x100,NO,6764,0,0.0196,0,0,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,NS,6700,0,0.0196,0,0,0.048,OK
+r44,dgesvd,300x100,NS,6764,0,0.0196,0,0,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,NA,6700,0,0.0196,0,0,0.048,OK
+r44,dgesvd,300x100,NA,6764,0,0.0196,0,0,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,ON,13100,0,0.0412,0,0.0163,0,OK
+r44,dgesvd,300x100,ON,13562,0,0.0412,0,0.0163,0,OK
+r44,dgesvd,300x100,ON,14041,0,0.0412,0,0.0163,0,OK
+r44,dgesvd,300x100,ON,14536,0,0.0412,0,0.0163,0,OK
+r44,dgesvd,300x100,ON,15049,0,0.0412,0,0.0163,0,OK
+r44,dgesvd,300x100,ON,15580,0,0.0412,0,0.0163,0,OK
+r44,dgesvd,300x100,ON,16130,0,0.0412,0,0.0163,0,OK
+r44,dgesvd,300x100,ON,16700,0,0.0196,0,0.0107,0,OK
+r44,dgesvd,300x100,ON,16764,0,0.0196,0,0.0107,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,OS,9900,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OS,10667,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OS,11495,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OS,12386,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OS,13347,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OS,14382,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OS,15498,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OS,16700,0,0.0196,0.0337,0.0107,0.048,OK
+r44,dgesvd,300x100,OS,16764,0,0.0196,0.0337,0.0107,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,OA,9900,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OA,10667,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OA,11495,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OA,12386,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OA,13347,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OA,14382,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OA,15498,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,OA,16700,0,0.0196,0.0337,0.0107,0.048,OK
+r44,dgesvd,300x100,OA,16764,0,0.0196,0.0337,0.0107,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,SN,9900,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,SN,10667,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,SN,11495,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,SN,12386,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,SN,13347,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,SN,14382,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,SN,15498,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,SN,16700,0,0.0196,0,0.0107,0,OK
+r44,dgesvd,300x100,SN,16764,0,0.0196,0,0.0107,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,SO,9900,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SO,11407,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SO,13144,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SO,15145,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SO,17452,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SO,20109,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SO,23171,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SO,26700,0,0.0196,0.0337,0.0107,0.048,OK
+r44,dgesvd,300x100,SO,26764,0,0.0196,0.0337,0.0107,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,SS,9900,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SS,10667,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SS,11495,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SS,12386,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SS,13347,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SS,14382,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SS,15498,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SS,16700,0,0.0196,0.0337,0.0107,0.048,OK
+r44,dgesvd,300x100,SS,16764,0,0.0196,0.0337,0.0107,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,SA,9900,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SA,10667,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SA,11495,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SA,12386,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SA,13347,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SA,14382,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SA,15498,0,0.0196,0.0343,0.0113,0.048,OK
+r44,dgesvd,300x100,SA,16700,0,0.0196,0.0337,0.0107,0.048,OK
+r44,dgesvd,300x100,SA,16764,0,0.0196,0.0337,0.0107,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,AN,9900,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,AN,10922,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,AN,12050,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,AN,13295,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,AN,14668,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,AN,16184,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,AN,17855,0,0.0196,0,0.0113,0,OK
+r44,dgesvd,300x100,AN,19700,0,0.0196,0,0.0107,0,OK
+r44,dgesvd,300x100,AN,19764,0,0.0196,0,0.0107,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,AO,9900,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AO,11582,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AO,13550,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AO,15853,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AO,18547,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AO,21698,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AO,25386,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AO,29700,0,0.0196,0.033,0.0107,0.048,OK
+r44,dgesvd,300x100,AO,29764,0,0.0196,0.033,0.0107,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,AS,9900,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AS,10922,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AS,12050,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AS,13295,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AS,14668,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AS,16184,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AS,17855,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AS,19700,0,0.0196,0.033,0.0107,0.048,OK
+r44,dgesvd,300x100,AS,19764,0,0.0196,0.033,0.0107,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,300x100,AA,9900,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AA,10922,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AA,12050,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AA,13295,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AA,14668,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AA,16184,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AA,17855,0,0.0196,0.0341,0.0113,0.048,OK
+r44,dgesvd,300x100,AA,19700,0,0.0196,0.033,0.0107,0.048,OK
+r44,dgesvd,300x100,AA,19764,0,0.0196,0.033,0.0107,0.048,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,NN,8300,0,0,0,0,0,OK
+r44,dgesvd,150x100,NN,8364,0,0,0,0,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,NO,8300,0,0.029,0,0,0.042,OK
+r44,dgesvd,150x100,NO,8364,0,0.029,0,0,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,NS,8300,0,0.029,0,0,0.042,OK
+r44,dgesvd,150x100,NS,8364,0,0.029,0,0,0.042,OK
+r44,dgesvd,150x100,NA,8300,0,0.029,0,0,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,NA,8364,0,0.029,0,0,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,ON,8300,0,0.029,0,0.0453,0,OK
+r44,dgesvd,150x100,ON,8364,0,0.029,0,0.0453,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,OS,8300,0,0.029,0.058,0.0453,0.042,OK
+r44,dgesvd,150x100,OS,8364,0,0.029,0.058,0.0453,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,OA,8300,0,0.029,0.058,0.0453,0.042,OK
+r44,dgesvd,150x100,OA,8364,0,0.029,0.058,0.0453,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,SN,8300,0,0.029,0,0.0453,0,OK
+r44,dgesvd,150x100,SN,8364,0,0.029,0,0.0453,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,SO,8300,0,0.029,0.058,0.0453,0.042,OK
+r44,dgesvd,150x100,SO,8364,0,0.029,0.058,0.0453,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,SS,8300,0,0.029,0.058,0.0453,0.042,OK
+r44,dgesvd,150x100,SS,8364,0,0.029,0.058,0.0453,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,SA,8300,0,0.029,0.058,0.0453,0.042,OK
+r44,dgesvd,150x100,SA,8364,0,0.029,0.058,0.0453,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,AN,8300,0,0.029,0,0.0453,0,OK
+r44,dgesvd,150x100,AN,8364,0,0.029,0,0.0453,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,AO,8300,0,0.029,0.058,0.0453,0.042,OK
+r44,dgesvd,150x100,AO,8364,0,0.029,0.058,0.0453,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,AS,8300,0,0.029,0.058,0.0453,0.042,OK
+r44,dgesvd,150x100,AS,8364,0,0.029,0.058,0.0453,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,150x100,AA,8300,0,0.029,0.058,0.0453,0.042,OK
+r44,dgesvd,150x100,AA,8364,0,0.029,0.058,0.0453,0.042,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,NN,6700,0,0,0,0,0,OK
+r44,dgesvd,100x100,NN,6764,0,0,0,0,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,NO,6700,0,0.0396,0,0,0.035,OK
+r44,dgesvd,100x100,NO,6764,0,0.0396,0,0,0.035,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,NS,6700,0,0.0396,0,0,0.035,OK
+r44,dgesvd,100x100,NS,6764,0,0.0396,0,0,0.035,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,NA,6700,0,0.0396,0,0,0.035,OK
+r44,dgesvd,100x100,NA,6764,0,0.0396,0,0,0.035,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,ON,6700,0,0.0396,0,0.042,0,OK
+r44,dgesvd,100x100,ON,6764,0,0.0396,0,0.042,0,OK
+rOn entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+44,dgesvd,100x100,OS,6700,0,0.0396,0.086,0.042,0.035,OK
+r44,dgesvd,100x100,OS,6764,0,0.0396,0.086,0.042,0.035,OK
+rOn entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+44,dgesvd,100x100,OA,6700,0,0.0396,0.086,0.042,0.035,OK
+r44,dgesvd,100x100,OA,6764,0,0.0396,0.086,0.042,0.035,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,SN,6700,0,0.0396,0,0.042,0,OK
+r44,dgesvd,100x100,SN,6764,0,0.0396,0,0.042,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,SO,6700,0,0.0396,0.086,0.042,0.035,OK
+r44,dgesvd,100x100,SO,6764,0,0.0396,0.086,0.042,0.035,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,SS,6700,0,0.0396,0.086,0.042,0.035,OK
+r44,dgesvd,100x100,SS,6764,0,0.0396,0.086,0.042,0.035,OK
+r44,dgesvd,100x100,SA,6700,0,0On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+.0396,0.086,0.042,0.035,OK
+r44,dgesvd,100x100,SA,6764,0,0.0396,0.086,0.042,0.035,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,AN,6700,0,0.0396,0,0.042,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,AN,6764,0,0.0396,0,0.042,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,AO,6700,0,0.0396,0.086,0.042,0.035,OK
+r44,dgesvd,100x100,AO,6764,0,0.0396,0.086,0.042,0.035,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,AS,6700,0,0.0396,0.086,0.042,0.035,OK
+r44,dgesvd,100x100,AS,6764,0,0.0396,0.086,0.042,0.035,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x100,AA,6700,0,0.0396,0.086,0.042,0.035,OK
+r44,dgesvd,100x100,AA,6764,0,0.0396,0.086,0.042,0.035,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,NN,8300,0,0.0137,0,0,0,OK
+r44,dgesvd,100x150,NN,8364,0,0.0137,0,0,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,NO,8300,0,0.03,0,0,0.0233,OK
+r44,dgesvd,100x150,NO,8364,0,0.03,0,0,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,NS,8300,0,0.03,0,0,0.0233,OK
+r44,dgesvd,100x150,NS,8364,0,0.03,0,0,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,NA,8300,0,0.03,0,0,0.0233,OK
+r44,dgesvd,100x150,NA,8364,0,0.03,0,0,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,ON,8300,0,0.03,0,0.034,0,OK
+r44,dgesvd,100x150,ON,8364,0,0.03,0,0.034,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,OS,8300,0,0.03,0.0503,0.034,0.0233,OK
+r44,dgesvd,100x150,OS,8364,0,0.03,0.0503,0.034,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,OA,8300,0,0.03,0.0503,0.034,0.0233,OK
+r44,dgesvd,100x150,OA,8364,0,0.03,0.0503,0.034,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,SN,8300,0,0.03,0,0.034,0,OK
+r44,dgesvd,100x150,SN,8364,0,0.03,0,0.034,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,SO,8300,0,0.03,0.0503,0.034,0.0233,OK
+r44,dgesvd,100x150,SO,8364,0,0.03,0.0503,0.034,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,SS,8300,0,0.03,0.0503,0.034,0.0233,OK
+r44,dgesvd,100x150,SS,8364,0,0.03,0.0503,0.034,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,SA,8300,0,0.03,0.0503,0.034,0.0233,OK
+r44,dgesvd,100x150,SA,8364,0,0.03,0.0503,0.034,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,AN,8300,0,0.03,0,0.034,0,OK
+r44,dgesvd,100x150,AN,8364,0,0.03,0,0.034,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,AO,8300,0,0.03,0.0503,0.034,0.0233,OK
+r44,dgesvd,100x150,AO,8364,0,0.03,0.0503,0.034,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,AS,8300,0,0.03,0.0503,0.034,0.0233,OK
+r44,dgesvd,100x150,AS,8364,0,0.03,0.0503,0.034,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x150,AA,8300,0,0.03,0.0503,0.034,0.0233,OK
+r44,dgesvd,100x150,AA,8364,0,0.03,0.0503,0.034,0.0233,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,NN,6700,0,0.0062,0,0,0,OK
+r44,dgesvd,100x300,NN,6764,0,0.0062,0,0,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,NO,13100,0,0.0578,0,0,0.0193,OK
+r44,dgesvd,100x300,NO,13562,0,0.0578,0,0,0.0193,OK
+r44,dgesvd,100x300,NO,14041,0,0.0578,0,0,0.0193,OK
+r44,dgesvd,100x300,NO,14536,0,0.0578,0,0,0.0193,OK
+r44,dgesvd,100x300,NO,15049,0,0.0578,0,0,0.0193,OK
+r44,dgesvd,100x300,NO,15580,0,0.0578,0,0,0.0193,OK
+r44,dgesvd,100x300,NO,16130,0,0.0578,0,0,0.0193,OK
+r44,dgesvd,100x300,NO,16700,0,0.0217,0,0,0.0163,OK
+r44,dgesvd,100x300,NO,16764,0,0.0217,0,0,0.0163,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,NS,9900,0,0.0217,0,0,0.0147,OK
+r44,dgesvd,100x300,NS,10667,0,0.0217,0,0,0.0147,OK
+r44,dgesvd,100x300,NS,11495,0,0.0217,0,0,0.0147,OK
+r44,dgesvd,100x300,NS,12386,0,0.0217,0,0,0.0147,OK
+r44,dgesvd,100x300,NS,13347,0,0.0217,0,0,0.0147,OK
+r44,dgesvd,100x300,NS,14382,0,0.0217,0,0,0.0147,OK
+r44,dgesvd,100x300,NS,15498,0,0.0217,0,0,0.0147,OK
+r44,dgesvd,100x300,NS,16700,0,0.0217,0,0,0.0163,OK
+r44,dgesvd,100x300,NS,16764,0,0.0217,0,0,0.0163,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,NA,9900,0,0.0217,0,0,0.015,OK
+r44,dgesvd,100x300,NA,10922,0,0.0217,0,0,0.015,OK
+r44,dgesvd,100x300,NA,12050,0,0.0217,0,0,0.015,OK
+r44,dgesvd,100x300,NA,13295,0,0.0217,0,0,0.015,OK
+r44,dgesvd,100x300,NA,14668,0,0.0217,0,0,0.015,OK
+r44,dgesvd,100x300,NA,16184,0,0.0217,0,0,0.015,OK
+r44,dgesvd,100x300,NA,17855,0,0.0217,0,0,0.015,OK
+r44,dgesvd,100x300,NA,19700,0,0.0217,0,0,0.0153,OK
+r44,dgesvd,100x300,NA,19764,0,0.0217,0,0,0.0153,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,ON,6700,0,0.0217,0,0.042,0,OK
+r44,dgesvd,100x300,ON,6764,0,0.0217,0,0.042,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,OS,9900,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,OS,11407,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,OS,13144,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,OS,15145,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,OS,17452,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,OS,20109,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,OS,23171,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,OS,26700,0,0.0217,0.0261,0.042,0.0163,OK
+r44,dgesvd,100x300,OS,26764,0,0.0217,0.0261,0.042,0.0163,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,OA,9900,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,OA,11582,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,OA,13550,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,OA,15853,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,OA,18547,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,OA,21698,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,OA,25386,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,OA,29700,0,0.0217,0.0256,0.042,0.0153,OK
+r44,dgesvd,100x300,OA,29764,0,0.0217,0.0256,0.042,0.0153,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,SN,6700,0,0.0217,0,0.042,0,OK
+r44,dgesvd,100x300,SN,6764,0,0.0217,0,0.042,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,SO,9900,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SO,10667,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SO,11495,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SO,12386,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SO,13347,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SO,14382,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SO,15498,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SO,16700,0,0.0217,0.0261,0.042,0.0163,OK
+r44,dgesvd,100x300,SO,16764,0,0.0217,0.0261,0.042,0.0163,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,SS,9900,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SS,10667,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SS,11495,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SS,12386,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SS,13347,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SS,14382,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SS,15498,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,SS,16700,0,0.0217,0.0261,0.042,0.0163,OK
+r44,dgesvd,100x300,SS,16764,0,0.0217,0.0261,0.042,0.0163,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,SA,9900,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,SA,10922,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,SA,12050,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,SA,13295,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,SA,14668,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,SA,16184,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,SA,17855,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,SA,19700,0,0.0217,0.0256,0.042,0.0153,OK
+r44,dgesvd,100x300,SA,19764,0,0.0217,0.0256,0.042,0.0153,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,AN,6700,0,0.0217,0,0.042,0,OK
+r44,dgesvd,100x300,AN,6764,0,0.0217,0,0.042,0,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,AO,9900,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AO,10667,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AO,11495,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AO,12386,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AO,13347,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AO,14382,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AO,15498,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AO,16700,0,0.0217,0.0261,0.042,0.0163,OK
+r44,dgesvd,100x300,AO,16764,0,0.0217,0.0261,0.042,0.0163,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,AS,9900,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AS,10667,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AS,11495,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AS,12386,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AS,13347,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AS,14382,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AS,15498,0,0.0217,0.029,0.042,0.0147,OK
+r44,dgesvd,100x300,AS,16700,0,0.0217,0.0261,0.042,0.0163,OK
+r44,dgesvd,100x300,AS,16764,0,0.0217,0.0261,0.042,0.0163,OK
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+On entry to magma_dgesvd, parameter 13 had an illegal value (info = -13)
+r44,dgesvd,100x300,AA,9900,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,AA,10922,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,AA,12050,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,AA,13295,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,AA,14668,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,AA,16184,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,AA,17855,0,0.0217,0.0283,0.042,0.015,OK
+r44,dgesvd,100x300,AA,19700,0,0.0217,0.0256,0.042,0.0153,OK
+r44,dgesvd,100x300,AA,19764,0,0.0217,0.0256,0.042,0.0153,OK
+DONE cuda=no error

@@ -1,0 +1,2 @@
+== dshposv_gpu nrhs=2, ill-conditioned SPD (for compute-sanitizer) ==
+dshposv nrhs=2 hard SPD        n= 512 nrhs=2  ret=0 iter=   1 info=0  x0max=1          relerr(col0)=2.63e-07  bwd/thr=6.36e+07  col1: max|x|=0 relerr=1.00e+00

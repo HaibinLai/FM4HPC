@@ -1,0 +1,28 @@
+tril 1
+tril 10
+tril 100
+triu 1
+triu 10
+triu 100
+diagadd 1
+diagadd 10
+diagadd 100
+spmm 10 1
+spmm 100 3
+spmm 100 8
+spmm 500 16
+isort 1
+isort 2
+isort 10
+isort 100
+isort 1000
+isort 10000
+stencil5 2
+stencil5 3
+stencil5 8
+stencil27 2
+stencil27 3
+stencil27 5
+spgemm 10
+spgemm 100
+spgemm 500

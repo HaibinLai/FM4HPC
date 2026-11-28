@@ -1,0 +1,715 @@
+group,routine,kind,m,n,info_magma,info_lapack,ratio,verdict,note
+qrcp,zgeqp3,lowrank_half,1,1,0,0,0,OK,|R(r,r)|/|R(0,0)| magma=-nan(ind) lapack=-nan(ind)
+qrcp,zgeqp3_gpu,lowrank_half,1,1,0,0,0,OK,|R(r,r)|/|R(0,0)| magma=-nan(ind) lapack=-nan(ind)
+qrcp,zgeqrf,lowrank_half,1,1,0,0,0,OK,
+qrcp,zgeqp3,lowrank_half/tall,18,1,0,0,0,OK,|R(r,r)|/|R(0,0)| magma=-nan(ind) lapack=-nan(ind)
+qrcp,zgeqp3_gpu,lowrank_half/tall,18,1,0,0,0,OK,|R(r,r)|/|R(0,0)| magma=-nan(ind) lapack=-nan(ind)
+qrcp,zgeqrf,lowrank_half/tall,18,1,0,0,0,OK,
+qrcp,zgeqp3,rank1,1,1,0,0,0,OK,
+qrcp,zgeqp3_gpu,rank1,1,1,0,0,0,OK,
+qrcp,zgeqrf,rank1,1,1,0,0,0,OK,
+qrcp,zgeqp3,rank1/tall,18,1,0,0,0.0674,OK,
+qrcp,zgeqp3_gpu,rank1/tall,18,1,0,0,0.0644,OK,
+qrcp,zgeqrf,rank1/tall,18,1,0,0,0.0674,OK,
+qrcp,zgeqp3,cond1e12,1,1,0,0,0,OK,
+qrcp,zgeqp3_gpu,cond1e12,1,1,0,0,0,OK,
+qrcp,zgeqrf,cond1e12,1,1,0,0,0,OK,
+qrcp,zgeqp3,cond1e12/tall,18,1,0,0,0.0674,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,18,1,0,0,0.0644,OK,
+qrcp,zgeqrf,cond1e12/tall,18,1,0,0,0.0674,OK,
+qrcp,zgeqp3,cond1e8_one_small,1,1,0,0,1.49,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,1,1,0,0,1.49,OK,
+qrcp,zgeqrf,cond1e8_one_small,1,1,0,0,1.49,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,18,1,0,0,0.0349,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,18,1,0,0,0.0261,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,18,1,0,0,0.0349,OK,
+qrcp,zgeqp3,gap_at_half,1,1,0,0,1.3,OK,|R(r,r)|/|R(0,0)| magma=1.00e+00 lapack=1.00e+00
+qrcp,zgeqp3_gpu,gap_at_half,1,1,0,0,1.3,OK,|R(r,r)|/|R(0,0)| magma=1.00e+00 lapack=1.00e+00
+qrcp,zgeqrf,gap_at_half,1,1,0,0,1.3,OK,
+qrcp,zgeqp3,gap_at_half/tall,18,1,0,0,0.0954,OK,|R(r,r)|/|R(0,0)| magma=1.00e+00 lapack=1.00e+00
+qrcp,zgeqp3_gpu,gap_at_half/tall,18,1,0,0,0.0262,OK,|R(r,r)|/|R(0,0)| magma=1.00e+00 lapack=1.00e+00
+qrcp,zgeqrf,gap_at_half/tall,18,1,0,0,0.0954,OK,
+qrcp,zgeqp3,kahan,1,1,0,0,0,OK,
+qrcp,zgeqp3_gpu,kahan,1,1,0,0,0,OK,
+qrcp,zgeqrf,kahan,1,1,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,18,1,0,0,0,OK,
+qrcp,zgeqp3_gpu,kahan/tall,18,1,0,0,0,OK,
+qrcp,zgeqrf,kahan/tall,18,1,0,0,0,OK,
+qrcp,zgeqp3,graded,1,1,0,0,1.82,OK,
+qrcp,zgeqp3_gpu,graded,1,1,0,0,1.82,OK,
+qrcp,zgeqrf,graded,1,1,0,0,1.82,OK,
+qrcp,zgeqp3,graded/tall,18,1,0,0,1.08e-13,OK,
+qrcp,zgeqp3_gpu,graded/tall,18,1,0,0,0.0298,OK,
+qrcp,zgeqrf,graded/tall,18,1,0,0,1.08e-13,OK,
+qrcp,zgeqp3,lowrank_half,2,2,0,0,1.83,OK,|R(r,r)|/|R(0,0)| magma=7.82e-17 lapack=7.82e-17
+qrcp,zgeqp3_gpu,lowrank_half,2,2,0,0,0.592,OK,|R(r,r)|/|R(0,0)| magma=1.26e-16 lapack=7.82e-17
+qrcp,zgeqrf,lowrank_half,2,2,0,0,1.14,OK,
+qrcp,zgeqp3,lowrank_half/tall,19,2,0,0,0.218,OK,|R(r,r)|/|R(0,0)| magma=3.53e-16 lapack=3.53e-16
+qrcp,zgeqp3_gpu,lowrank_half/tall,19,2,0,0,0.057,OK,|R(r,r)|/|R(0,0)| magma=1.11e-16 lapack=3.53e-16
+qrcp,zgeqrf,lowrank_half/tall,19,2,0,0,0.218,OK,
+qrcp,zgeqp3,rank1,2,2,0,0,1.83,OK,|R(r,r)|/|R(0,0)| magma=7.82e-17 lapack=7.82e-17
+qrcp,zgeqp3_gpu,rank1,2,2,0,0,0.592,OK,|R(r,r)|/|R(0,0)| magma=1.26e-16 lapack=7.82e-17
+qrcp,zgeqrf,rank1,2,2,0,0,1.14,OK,
+qrcp,zgeqp3,rank1/tall,19,2,0,0,0.218,OK,|R(r,r)|/|R(0,0)| magma=3.53e-16 lapack=3.53e-16
+qrcp,zgeqp3_gpu,rank1/tall,19,2,0,0,0.057,OK,|R(r,r)|/|R(0,0)| magma=1.11e-16 lapack=3.53e-16
+qrcp,zgeqrf,rank1/tall,19,2,0,0,0.218,OK,
+qrcp,zgeqp3,cond1e12,2,2,0,0,0.732,OK,
+qrcp,zgeqp3_gpu,cond1e12,2,2,0,0,1.4,OK,
+qrcp,zgeqrf,cond1e12,2,2,0,0,0.905,OK,
+qrcp,zgeqp3,cond1e12/tall,19,2,0,0,0.088,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,19,2,0,0,0.143,OK,
+qrcp,zgeqrf,cond1e12/tall,19,2,0,0,0.088,OK,
+qrcp,zgeqp3,cond1e8_one_small,2,2,0,0,0.972,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,2,2,0,0,0.905,OK,
+qrcp,zgeqrf,cond1e8_one_small,2,2,0,0,0.772,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,19,2,0,0,0.084,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,19,2,0,0,0.0781,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,19,2,0,0,0.084,OK,
+qrcp,zgeqp3,gap_at_half,2,2,0,0,0.941,OK,|R(r,r)|/|R(0,0)| magma=1.59e-10 lapack=1.59e-10
+qrcp,zgeqp3_gpu,gap_at_half,2,2,0,0,0.679,OK,|R(r,r)|/|R(0,0)| magma=1.59e-10 lapack=1.59e-10
+qrcp,zgeqrf,gap_at_half,2,2,0,0,2.09,OK,
+qrcp,zgeqp3,gap_at_half/tall,19,2,0,0,0.0929,OK,|R(r,r)|/|R(0,0)| magma=1.65e-10 lapack=1.65e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,19,2,0,0,0.302,OK,|R(r,r)|/|R(0,0)| magma=1.65e-10 lapack=1.65e-10
+qrcp,zgeqrf,gap_at_half/tall,19,2,0,0,0.0929,OK,
+qrcp,zgeqp3,kahan,2,2,0,0,2.19,OK,
+qrcp,zgeqp3_gpu,kahan,2,2,0,0,0,OK,
+qrcp,zgeqrf,kahan,2,2,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,19,2,0,0,0.231,OK,
+qrcp,zgeqp3_gpu,kahan/tall,19,2,0,0,0,OK,
+qrcp,zgeqrf,kahan/tall,19,2,0,0,0,OK,
+qrcp,zgeqp3,graded,2,2,0,0,0.658,OK,
+qrcp,zgeqp3_gpu,graded,2,2,0,0,0.416,OK,
+qrcp,zgeqrf,graded,2,2,0,0,0.658,OK,
+qrcp,zgeqp3,graded/tall,19,2,0,0,0.0731,OK,
+qrcp,zgeqp3_gpu,graded/tall,19,2,0,0,0.0258,OK,
+qrcp,zgeqrf,graded/tall,19,2,0,0,0.0365,OK,
+qrcp,zgeqp3,lowrank_half,7,7,0,0,0.599,OK,|R(r,r)|/|R(0,0)| magma=4.08e-16 lapack=4.08e-16
+qrcp,zgeqp3_gpu,lowrank_half,7,7,0,0,0.848,OK,|R(r,r)|/|R(0,0)| magma=3.04e-16 lapack=4.08e-16
+qrcp,zgeqrf,lowrank_half,7,7,0,0,0.54,OK,
+qrcp,zgeqp3,lowrank_half/tall,24,7,0,0,0.0988,OK,|R(r,r)|/|R(0,0)| magma=1.88e-16 lapack=1.88e-16
+qrcp,zgeqp3_gpu,lowrank_half/tall,24,7,0,0,0.236,OK,|R(r,r)|/|R(0,0)| magma=2.94e-16 lapack=1.88e-16
+qrcp,zgeqrf,lowrank_half/tall,24,7,0,0,0.248,OK,
+qrcp,zgeqp3,rank1,7,7,0,0,0.646,OK,|R(r,r)|/|R(0,0)| magma=2.14e-16 lapack=2.14e-16
+qrcp,zgeqp3_gpu,rank1,7,7,0,0,0.67,OK,|R(r,r)|/|R(0,0)| magma=8.60e-17 lapack=2.14e-16
+qrcp,zgeqrf,rank1,7,7,0,0,0.67,OK,
+qrcp,zgeqp3,rank1/tall,24,7,0,0,0.198,OK,|R(r,r)|/|R(0,0)| magma=2.72e-16 lapack=2.72e-16
+qrcp,zgeqp3_gpu,rank1/tall,24,7,0,0,0.243,OK,|R(r,r)|/|R(0,0)| magma=1.58e-16 lapack=2.72e-16
+qrcp,zgeqrf,rank1/tall,24,7,0,0,0.079,OK,
+qrcp,zgeqp3,cond1e12,7,7,0,0,0.717,OK,
+qrcp,zgeqp3_gpu,cond1e12,7,7,0,0,0.397,OK,
+qrcp,zgeqrf,cond1e12,7,7,0,0,0.426,OK,
+qrcp,zgeqp3,cond1e12/tall,24,7,0,0,0.126,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,24,7,0,0,0.168,OK,
+qrcp,zgeqrf,cond1e12/tall,24,7,0,0,0.12,OK,
+qrcp,zgeqp3,cond1e8_one_small,7,7,0,0,0.47,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,7,7,0,0,0.69,OK,
+qrcp,zgeqrf,cond1e8_one_small,7,7,0,0,0.755,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,24,7,0,0,0.121,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,24,7,0,0,0.134,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,24,7,0,0,0.122,OK,
+qrcp,zgeqp3,gap_at_half,7,7,0,0,0.364,OK,|R(r,r)|/|R(0,0)| magma=2.10e-10 lapack=2.10e-10
+qrcp,zgeqp3_gpu,gap_at_half,7,7,0,0,0.411,OK,|R(r,r)|/|R(0,0)| magma=2.04e-10 lapack=2.10e-10
+qrcp,zgeqrf,gap_at_half,7,7,0,0,0.918,OK,
+qrcp,zgeqp3,gap_at_half/tall,24,7,0,0,0.164,OK,|R(r,r)|/|R(0,0)| magma=1.99e-10 lapack=1.99e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,24,7,0,0,0.147,OK,|R(r,r)|/|R(0,0)| magma=1.74e-10 lapack=1.99e-10
+qrcp,zgeqrf,gap_at_half/tall,24,7,0,0,0.138,OK,
+qrcp,zgeqp3,kahan,7,7,0,0,0.549,OK,
+qrcp,zgeqp3_gpu,kahan,7,7,0,0,0.0606,OK,
+qrcp,zgeqrf,kahan,7,7,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,24,7,0,0,0.16,OK,
+qrcp,zgeqp3_gpu,kahan/tall,24,7,0,0,0.0177,OK,
+qrcp,zgeqrf,kahan/tall,24,7,0,0,0,OK,
+qrcp,zgeqp3,graded,7,7,0,0,0.625,OK,
+qrcp,zgeqp3_gpu,graded,7,7,0,0,0.606,OK,
+qrcp,zgeqrf,graded,7,7,0,0,0.26,OK,
+qrcp,zgeqp3,graded/tall,24,7,0,0,0.118,OK,
+qrcp,zgeqp3_gpu,graded/tall,24,7,0,0,0.118,OK,
+qrcp,zgeqrf,graded/tall,24,7,0,0,0.0579,OK,
+qrcp,zgeqp3,lowrank_half,31,31,0,0,0.14,OK,|R(r,r)|/|R(0,0)| magma=5.38e-16 lapack=5.38e-16
+qrcp,zgeqp3_gpu,lowrank_half,31,31,0,0,0.181,OK,|R(r,r)|/|R(0,0)| magma=3.88e-16 lapack=5.38e-16
+qrcp,zgeqrf,lowrank_half,31,31,0,0,0.167,OK,
+qrcp,zgeqp3,lowrank_half/tall,48,31,0,0,0.101,OK,|R(r,r)|/|R(0,0)| magma=6.21e-16 lapack=6.21e-16
+qrcp,zgeqp3_gpu,lowrank_half/tall,48,31,0,0,0.135,OK,|R(r,r)|/|R(0,0)| magma=4.60e-16 lapack=6.21e-16
+qrcp,zgeqrf,lowrank_half/tall,48,31,0,0,0.12,OK,
+qrcp,zgeqp3,rank1,31,31,0,0,0.256,OK,|R(r,r)|/|R(0,0)| magma=7.33e-16 lapack=7.33e-16
+qrcp,zgeqp3_gpu,rank1,31,31,0,0,0.181,OK,|R(r,r)|/|R(0,0)| magma=1.85e-16 lapack=7.33e-16
+qrcp,zgeqrf,rank1,31,31,0,0,0.104,OK,
+qrcp,zgeqp3,rank1/tall,48,31,0,0,0.0704,OK,|R(r,r)|/|R(0,0)| magma=3.60e-16 lapack=3.60e-16
+qrcp,zgeqp3_gpu,rank1/tall,48,31,0,0,0.114,OK,|R(r,r)|/|R(0,0)| magma=1.39e-16 lapack=3.60e-16
+qrcp,zgeqrf,rank1/tall,48,31,0,0,0.0574,OK,
+qrcp,zgeqp3,cond1e12,31,31,0,0,0.123,OK,
+qrcp,zgeqp3_gpu,cond1e12,31,31,0,0,0.229,OK,
+qrcp,zgeqrf,cond1e12,31,31,0,0,0.151,OK,
+qrcp,zgeqp3,cond1e12/tall,48,31,0,0,0.109,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,48,31,0,0,0.128,OK,
+qrcp,zgeqrf,cond1e12/tall,48,31,0,0,0.0665,OK,
+qrcp,zgeqp3,cond1e8_one_small,31,31,0,0,0.232,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,31,31,0,0,0.246,OK,
+qrcp,zgeqrf,cond1e8_one_small,31,31,0,0,0.202,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,48,31,0,0,0.119,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,48,31,0,0,0.155,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,48,31,0,0,0.13,OK,
+qrcp,zgeqp3,gap_at_half,31,31,0,0,0.127,OK,|R(r,r)|/|R(0,0)| magma=3.12e-10 lapack=3.12e-10
+qrcp,zgeqp3_gpu,gap_at_half,31,31,0,0,0.225,OK,|R(r,r)|/|R(0,0)| magma=2.02e-10 lapack=3.12e-10
+qrcp,zgeqrf,gap_at_half,31,31,0,0,0.181,OK,
+qrcp,zgeqp3,gap_at_half/tall,48,31,0,0,0.113,OK,|R(r,r)|/|R(0,0)| magma=3.18e-10 lapack=3.18e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,48,31,0,0,0.126,OK,|R(r,r)|/|R(0,0)| magma=2.63e-10 lapack=3.18e-10
+qrcp,zgeqrf,gap_at_half/tall,48,31,0,0,0.119,OK,
+qrcp,zgeqp3,kahan,31,31,0,0,0.104,OK,
+qrcp,zgeqp3_gpu,kahan,31,31,0,0,0.117,OK,
+qrcp,zgeqrf,kahan,31,31,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,48,31,0,0,0.0675,OK,
+qrcp,zgeqp3_gpu,kahan/tall,48,31,0,0,0.0755,OK,
+qrcp,zgeqrf,kahan/tall,48,31,0,0,0,OK,
+qrcp,zgeqp3,graded,31,31,0,0,0.167,OK,
+qrcp,zgeqp3_gpu,graded,31,31,0,0,0.0533,OK,
+qrcp,zgeqrf,graded,31,31,0,0,0.0853,OK,
+qrcp,zgeqp3,graded/tall,48,31,0,0,0.0863,OK,
+qrcp,zgeqp3_gpu,graded/tall,48,31,0,0,0.0803,OK,
+qrcp,zgeqrf,graded/tall,48,31,0,0,0.0635,OK,
+qrcp,zgeqp3,lowrank_half,32,32,0,0,0.181,OK,|R(r,r)|/|R(0,0)| magma=4.96e-16 lapack=4.96e-16
+qrcp,zgeqp3_gpu,lowrank_half,32,32,0,0,0.213,OK,|R(r,r)|/|R(0,0)| magma=3.84e-16 lapack=4.96e-16
+qrcp,zgeqrf,lowrank_half,32,32,0,0,0.193,OK,
+qrcp,zgeqp3,lowrank_half/tall,49,32,0,0,0.108,OK,|R(r,r)|/|R(0,0)| magma=7.63e-16 lapack=7.63e-16
+qrcp,zgeqp3_gpu,lowrank_half/tall,49,32,0,0,0.126,OK,|R(r,r)|/|R(0,0)| magma=3.80e-16 lapack=7.63e-16
+qrcp,zgeqrf,lowrank_half/tall,49,32,0,0,0.107,OK,
+qrcp,zgeqp3,rank1,32,32,0,0,0.067,OK,|R(r,r)|/|R(0,0)| magma=2.03e-16 lapack=2.03e-16
+qrcp,zgeqp3_gpu,rank1,32,32,0,0,0.201,OK,|R(r,r)|/|R(0,0)| magma=1.05e-16 lapack=2.03e-16
+qrcp,zgeqrf,rank1,32,32,0,0,0.08,OK,
+qrcp,zgeqp3,rank1/tall,49,32,0,0,0.0649,OK,|R(r,r)|/|R(0,0)| magma=4.68e-16 lapack=4.68e-16
+qrcp,zgeqp3_gpu,rank1/tall,49,32,0,0,0.0827,OK,|R(r,r)|/|R(0,0)| magma=5.08e-16 lapack=4.68e-16
+qrcp,zgeqrf,rank1/tall,49,32,0,0,0.0431,OK,
+qrcp,zgeqp3,cond1e12,32,32,0,0,0.0722,OK,
+qrcp,zgeqp3_gpu,cond1e12,32,32,0,0,0.135,OK,
+qrcp,zgeqrf,cond1e12,32,32,0,0,0.129,OK,
+qrcp,zgeqp3,cond1e12/tall,49,32,0,0,0.119,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,49,32,0,0,0.105,OK,
+qrcp,zgeqrf,cond1e12/tall,49,32,0,0,0.0927,OK,
+qrcp,zgeqp3,cond1e8_one_small,32,32,0,0,0.209,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,32,32,0,0,0.19,OK,
+qrcp,zgeqrf,cond1e8_one_small,32,32,0,0,0.225,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,49,32,0,0,0.117,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,49,32,0,0,0.129,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,49,32,0,0,0.141,OK,
+qrcp,zgeqp3,gap_at_half,32,32,0,0,0.147,OK,|R(r,r)|/|R(0,0)| magma=3.15e-10 lapack=3.15e-10
+qrcp,zgeqp3_gpu,gap_at_half,32,32,0,0,0.183,OK,|R(r,r)|/|R(0,0)| magma=2.64e-10 lapack=3.15e-10
+qrcp,zgeqrf,gap_at_half,32,32,0,0,0.169,OK,
+qrcp,zgeqp3,gap_at_half/tall,49,32,0,0,0.103,OK,|R(r,r)|/|R(0,0)| magma=2.86e-10 lapack=2.86e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,49,32,0,0,0.119,OK,|R(r,r)|/|R(0,0)| magma=2.04e-10 lapack=2.86e-10
+qrcp,zgeqrf,gap_at_half/tall,49,32,0,0,0.105,OK,
+qrcp,zgeqp3,kahan,32,32,0,0,0.0795,OK,
+qrcp,zgeqp3_gpu,kahan,32,32,0,0,0.112,OK,
+qrcp,zgeqrf,kahan,32,32,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,49,32,0,0,0.0519,OK,
+qrcp,zgeqp3_gpu,kahan/tall,49,32,0,0,0.0731,OK,
+qrcp,zgeqrf,kahan/tall,49,32,0,0,0,OK,
+qrcp,zgeqp3,graded,32,32,0,0,0.113,OK,
+qrcp,zgeqp3_gpu,graded,32,32,0,0,0.0906,OK,
+qrcp,zgeqrf,graded,32,32,0,0,0.101,OK,
+qrcp,zgeqp3,graded/tall,49,32,0,0,0.0867,OK,
+qrcp,zgeqp3_gpu,graded/tall,49,32,0,0,0.0878,OK,
+qrcp,zgeqrf,graded/tall,49,32,0,0,0.0388,OK,
+qrcp,zgeqp3,lowrank_half,33,33,0,0,0.16,OK,|R(r,r)|/|R(0,0)| magma=5.47e-16 lapack=5.25e-16
+qrcp,zgeqp3_gpu,lowrank_half,33,33,0,0,0.207,OK,|R(r,r)|/|R(0,0)| magma=5.00e-16 lapack=5.25e-16
+qrcp,zgeqrf,lowrank_half,33,33,0,0,0.198,OK,
+qrcp,zgeqp3,lowrank_half/tall,50,33,0,0,0.0844,OK,|R(r,r)|/|R(0,0)| magma=5.94e-16 lapack=5.92e-16
+qrcp,zgeqp3_gpu,lowrank_half/tall,50,33,0,0,0.126,OK,|R(r,r)|/|R(0,0)| magma=6.97e-16 lapack=5.92e-16
+qrcp,zgeqrf,lowrank_half/tall,50,33,0,0,0.121,OK,
+qrcp,zgeqp3,rank1,33,33,0,0,0.0872,OK,|R(r,r)|/|R(0,0)| magma=3.27e-16 lapack=2.79e-16
+qrcp,zgeqp3_gpu,rank1,33,33,0,0,0.201,OK,|R(r,r)|/|R(0,0)| magma=3.19e-16 lapack=2.79e-16
+qrcp,zgeqrf,rank1,33,33,0,0,0.0965,OK,
+qrcp,zgeqp3,rank1/tall,50,33,0,0,0.0434,OK,|R(r,r)|/|R(0,0)| magma=2.98e-16 lapack=3.70e-16
+qrcp,zgeqp3_gpu,rank1/tall,50,33,0,0,0.0932,OK,|R(r,r)|/|R(0,0)| magma=2.68e-16 lapack=3.70e-16
+qrcp,zgeqrf,rank1/tall,50,33,0,0,0.0503,OK,
+qrcp,zgeqp3,cond1e12,33,33,0,0,0.0971,OK,
+qrcp,zgeqp3_gpu,cond1e12,33,33,0,0,0.164,OK,
+qrcp,zgeqrf,cond1e12,33,33,0,0,0.159,OK,
+qrcp,zgeqp3,cond1e12/tall,50,33,0,0,0.0729,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,50,33,0,0,0.13,OK,
+qrcp,zgeqrf,cond1e12/tall,50,33,0,0,0.0822,OK,
+qrcp,zgeqp3,cond1e8_one_small,33,33,0,0,0.23,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,33,33,0,0,0.272,OK,
+qrcp,zgeqrf,cond1e8_one_small,33,33,0,0,0.224,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,50,33,0,0,0.145,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,50,33,0,0,0.148,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,50,33,0,0,0.119,OK,
+qrcp,zgeqp3,gap_at_half,33,33,0,0,0.151,OK,|R(r,r)|/|R(0,0)| magma=3.08e-10 lapack=3.08e-10
+qrcp,zgeqp3_gpu,gap_at_half,33,33,0,0,0.221,OK,|R(r,r)|/|R(0,0)| magma=2.53e-10 lapack=3.08e-10
+qrcp,zgeqrf,gap_at_half,33,33,0,0,0.2,OK,
+qrcp,zgeqp3,gap_at_half/tall,50,33,0,0,0.089,OK,|R(r,r)|/|R(0,0)| magma=3.37e-10 lapack=3.37e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,50,33,0,0,0.126,OK,|R(r,r)|/|R(0,0)| magma=2.94e-10 lapack=3.37e-10
+qrcp,zgeqrf,gap_at_half/tall,50,33,0,0,0.108,OK,
+qrcp,zgeqp3,kahan,33,33,0,0,0.0762,OK,
+qrcp,zgeqp3_gpu,kahan,33,33,0,0,0.107,OK,
+qrcp,zgeqrf,kahan,33,33,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,50,33,0,0,0.0503,OK,
+qrcp,zgeqp3_gpu,kahan/tall,50,33,0,0,0.0708,OK,
+qrcp,zgeqrf,kahan/tall,50,33,0,0,0,OK,
+qrcp,zgeqp3,graded,33,33,0,0,0.0863,OK,
+qrcp,zgeqp3_gpu,graded,33,33,0,0,0.0696,OK,
+qrcp,zgeqrf,graded,33,33,0,0,0.0965,OK,
+qrcp,zgeqp3,graded/tall,50,33,0,0,0.0675,OK,
+qrcp,zgeqp3_gpu,graded/tall,50,33,0,0,0.0675,OK,
+qrcp,zgeqrf,graded/tall,50,33,0,0,0.0302,OK,
+qrcp,zgeqp3,lowrank_half,63,63,0,0,0.107,OK,|R(r,r)|/|R(0,0)| magma=8.99e-16 lapack=8.42e-16
+qrcp,zgeqp3_gpu,lowrank_half,63,63,0,0,0.106,OK,|R(r,r)|/|R(0,0)| magma=6.36e-16 lapack=8.42e-16
+qrcp,zgeqrf,lowrank_half,63,63,0,0,0.0939,OK,
+qrcp,zgeqp3,lowrank_half/tall,80,63,0,0,0.0864,OK,|R(r,r)|/|R(0,0)| magma=8.18e-16 lapack=8.64e-16
+qrcp,zgeqp3_gpu,lowrank_half/tall,80,63,0,0,0.0815,OK,|R(r,r)|/|R(0,0)| magma=5.90e-16 lapack=8.64e-16
+qrcp,zgeqrf,lowrank_half/tall,80,63,0,0,0.0853,OK,
+qrcp,zgeqp3,rank1,63,63,0,0,0.0295,OK,|R(r,r)|/|R(0,0)| magma=2.50e-16 lapack=1.82e-16
+qrcp,zgeqp3_gpu,rank1,63,63,0,0,0.0681,OK,|R(r,r)|/|R(0,0)| magma=2.76e-16 lapack=1.82e-16
+qrcp,zgeqrf,rank1,63,63,0,0,0.0696,OK,
+qrcp,zgeqp3,rank1/tall,80,63,0,0,0.0421,OK,|R(r,r)|/|R(0,0)| magma=2.85e-16 lapack=2.37e-16
+qrcp,zgeqp3_gpu,rank1/tall,80,63,0,0,0.0817,OK,|R(r,r)|/|R(0,0)| magma=4.74e-16 lapack=2.37e-16
+qrcp,zgeqrf,rank1/tall,80,63,0,0,0.0534,OK,
+qrcp,zgeqp3,cond1e12,63,63,0,0,0.0803,OK,
+qrcp,zgeqp3_gpu,cond1e12,63,63,0,0,0.0918,OK,
+qrcp,zgeqrf,cond1e12,63,63,0,0,0.0686,OK,
+qrcp,zgeqp3,cond1e12/tall,80,63,0,0,0.0771,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,80,63,0,0,0.087,OK,
+qrcp,zgeqrf,cond1e12/tall,80,63,0,0,0.0544,OK,
+qrcp,zgeqp3,cond1e8_one_small,63,63,0,0,0.144,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,63,63,0,0,0.157,OK,
+qrcp,zgeqrf,cond1e8_one_small,63,63,0,0,0.147,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,80,63,0,0,0.0916,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,80,63,0,0,0.0989,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,80,63,0,0,0.108,OK,
+qrcp,zgeqp3,gap_at_half,63,63,0,0,0.11,OK,|R(r,r)|/|R(0,0)| magma=3.96e-10 lapack=3.96e-10
+qrcp,zgeqp3_gpu,gap_at_half,63,63,0,0,0.0997,OK,|R(r,r)|/|R(0,0)| magma=3.27e-10 lapack=3.96e-10
+qrcp,zgeqrf,gap_at_half,63,63,0,0,0.0946,OK,
+qrcp,zgeqp3,gap_at_half/tall,80,63,0,0,0.0939,OK,|R(r,r)|/|R(0,0)| magma=3.64e-10 lapack=3.64e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,80,63,0,0,0.0839,OK,|R(r,r)|/|R(0,0)| magma=3.05e-10 lapack=3.64e-10
+qrcp,zgeqrf,gap_at_half/tall,80,63,0,0,0.082,OK,
+qrcp,zgeqp3,kahan,63,63,0,0,0.0839,OK,
+qrcp,zgeqp3_gpu,kahan,63,63,0,0,0.0764,OK,
+qrcp,zgeqrf,kahan,63,63,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,80,63,0,0,0.066,OK,
+qrcp,zgeqp3_gpu,kahan/tall,80,63,0,0,0.0697,OK,
+qrcp,zgeqrf,kahan/tall,80,63,0,0,0,OK,
+qrcp,zgeqp3,graded,63,63,0,0,0.0801,OK,
+qrcp,zgeqp3_gpu,graded,63,63,0,0,0.0438,OK,
+qrcp,zgeqrf,graded,63,63,0,0,0.037,OK,
+qrcp,zgeqp3,graded/tall,80,63,0,0,0.0426,OK,
+qrcp,zgeqp3_gpu,graded/tall,80,63,0,0,0.0571,OK,
+qrcp,zgeqrf,graded/tall,80,63,0,0,0.0539,OK,
+qrcp,zgeqp3,lowrank_half,64,64,0,0,0.105,OK,|R(r,r)|/|R(0,0)| magma=8.56e-16 lapack=9.45e-16
+qrcp,zgeqp3_gpu,lowrank_half,64,64,0,0,0.0997,OK,|R(r,r)|/|R(0,0)| magma=5.84e-16 lapack=9.45e-16
+qrcp,zgeqrf,lowrank_half,64,64,0,0,0.102,OK,
+qrcp,zgeqp3,lowrank_half/tall,81,64,0,0,0.0819,OK,|R(r,r)|/|R(0,0)| magma=8.75e-16 lapack=9.77e-16
+qrcp,zgeqp3_gpu,lowrank_half/tall,81,64,0,0,0.0705,OK,|R(r,r)|/|R(0,0)| magma=6.09e-16 lapack=9.77e-16
+qrcp,zgeqrf,lowrank_half/tall,81,64,0,0,0.092,OK,
+qrcp,zgeqp3,rank1,64,64,0,0,0.0702,OK,|R(r,r)|/|R(0,0)| magma=3.45e-16 lapack=3.84e-16
+qrcp,zgeqp3_gpu,rank1,64,64,0,0,0.0767,OK,|R(r,r)|/|R(0,0)| magma=1.12e-16 lapack=3.84e-16
+qrcp,zgeqrf,rank1,64,64,0,0,0.0377,OK,
+qrcp,zgeqp3,rank1/tall,81,64,0,0,0.0298,OK,|R(r,r)|/|R(0,0)| magma=2.29e-16 lapack=2.33e-16
+qrcp,zgeqp3_gpu,rank1/tall,81,64,0,0,0.0489,OK,|R(r,r)|/|R(0,0)| magma=2.24e-16 lapack=2.33e-16
+qrcp,zgeqrf,rank1/tall,81,64,0,0,0.0295,OK,
+qrcp,zgeqp3,cond1e12,64,64,0,0,0.0883,OK,
+qrcp,zgeqp3_gpu,cond1e12,64,64,0,0,0.0902,OK,
+qrcp,zgeqrf,cond1e12,64,64,0,0,0.0858,OK,
+qrcp,zgeqp3,cond1e12/tall,81,64,0,0,0.0711,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,81,64,0,0,0.0654,OK,
+qrcp,zgeqrf,cond1e12/tall,81,64,0,0,0.0631,OK,
+qrcp,zgeqp3,cond1e8_one_small,64,64,0,0,0.156,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,64,64,0,0,0.156,OK,
+qrcp,zgeqrf,cond1e8_one_small,64,64,0,0,0.139,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,81,64,0,0,0.0977,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,81,64,0,0,0.099,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,81,64,0,0,0.135,OK,
+qrcp,zgeqp3,gap_at_half,64,64,0,0,0.121,OK,|R(r,r)|/|R(0,0)| magma=3.80e-10 lapack=3.80e-10
+qrcp,zgeqp3_gpu,gap_at_half,64,64,0,0,0.101,OK,|R(r,r)|/|R(0,0)| magma=2.70e-10 lapack=3.80e-10
+qrcp,zgeqrf,gap_at_half,64,64,0,0,0.115,OK,
+qrcp,zgeqp3,gap_at_half/tall,81,64,0,0,0.0831,OK,|R(r,r)|/|R(0,0)| magma=3.57e-10 lapack=3.57e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,81,64,0,0,0.0741,OK,|R(r,r)|/|R(0,0)| magma=2.47e-10 lapack=3.57e-10
+qrcp,zgeqrf,gap_at_half/tall,81,64,0,0,0.0844,OK,
+qrcp,zgeqp3,kahan,64,64,0,0,0.0842,OK,
+qrcp,zgeqp3_gpu,kahan,64,64,0,0,0.0755,OK,
+qrcp,zgeqrf,kahan,64,64,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,81,64,0,0,0.0666,OK,
+qrcp,zgeqp3_gpu,kahan/tall,81,64,0,0,0.0672,OK,
+qrcp,zgeqrf,kahan/tall,81,64,0,0,0,OK,
+qrcp,zgeqp3,graded,64,64,0,0,0.0649,OK,
+qrcp,zgeqp3_gpu,graded,64,64,0,0,0.065,OK,
+qrcp,zgeqrf,graded,64,64,0,0,0.0459,OK,
+qrcp,zgeqp3,graded/tall,81,64,0,0,0.055,OK,
+qrcp,zgeqp3_gpu,graded/tall,81,64,0,0,0.0699,OK,
+qrcp,zgeqrf,graded/tall,81,64,0,0,0.0339,OK,
+qrcp,zgeqp3,lowrank_half,65,65,0,0,0.117,OK,|R(r,r)|/|R(0,0)| magma=8.76e-16 lapack=8.55e-16
+qrcp,zgeqp3_gpu,lowrank_half,65,65,0,0,0.104,OK,|R(r,r)|/|R(0,0)| magma=5.71e-16 lapack=8.55e-16
+qrcp,zgeqrf,lowrank_half,65,65,0,0,0.101,OK,
+qrcp,zgeqp3,lowrank_half/tall,82,65,0,0,0.0811,OK,|R(r,r)|/|R(0,0)| magma=8.42e-16 lapack=8.47e-16
+qrcp,zgeqp3_gpu,lowrank_half/tall,82,65,0,0,0.0785,OK,|R(r,r)|/|R(0,0)| magma=6.90e-16 lapack=8.47e-16
+qrcp,zgeqrf,lowrank_half/tall,82,65,0,0,0.0797,OK,
+qrcp,zgeqp3,rank1,65,65,0,0,0.0689,OK,|R(r,r)|/|R(0,0)| magma=4.74e-16 lapack=5.10e-16
+qrcp,zgeqp3_gpu,rank1,65,65,0,0,0.0842,OK,|R(r,r)|/|R(0,0)| magma=2.16e-16 lapack=5.10e-16
+qrcp,zgeqrf,rank1,65,65,0,0,0.0434,OK,
+qrcp,zgeqp3,rank1/tall,82,65,0,0,0.0467,OK,|R(r,r)|/|R(0,0)| magma=3.03e-16 lapack=3.84e-16
+qrcp,zgeqp3_gpu,rank1/tall,82,65,0,0,0.084,OK,|R(r,r)|/|R(0,0)| magma=1.48e-16 lapack=3.84e-16
+qrcp,zgeqrf,rank1/tall,82,65,0,0,0.0487,OK,
+qrcp,zgeqp3,cond1e12,65,65,0,0,0.0704,OK,
+qrcp,zgeqp3_gpu,cond1e12,65,65,0,0,0.0995,OK,
+qrcp,zgeqrf,cond1e12,65,65,0,0,0.104,OK,
+qrcp,zgeqp3,cond1e12/tall,82,65,0,0,0.0694,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,82,65,0,0,0.0733,OK,
+qrcp,zgeqrf,cond1e12/tall,82,65,0,0,0.0865,OK,
+qrcp,zgeqp3,cond1e8_one_small,65,65,0,0,0.137,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,65,65,0,0,0.151,OK,
+qrcp,zgeqrf,cond1e8_one_small,65,65,0,0,0.142,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,82,65,0,0,0.103,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,82,65,0,0,0.105,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,82,65,0,0,0.105,OK,
+qrcp,zgeqp3,gap_at_half,65,65,0,0,0.0991,OK,|R(r,r)|/|R(0,0)| magma=3.62e-10 lapack=3.62e-10
+qrcp,zgeqp3_gpu,gap_at_half,65,65,0,0,0.104,OK,|R(r,r)|/|R(0,0)| magma=2.77e-10 lapack=3.62e-10
+qrcp,zgeqrf,gap_at_half,65,65,0,0,0.114,OK,
+qrcp,zgeqp3,gap_at_half/tall,82,65,0,0,0.0826,OK,|R(r,r)|/|R(0,0)| magma=3.42e-10 lapack=3.42e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,82,65,0,0,0.0796,OK,|R(r,r)|/|R(0,0)| magma=3.42e-10 lapack=3.42e-10
+qrcp,zgeqrf,gap_at_half/tall,82,65,0,0,0.0739,OK,
+qrcp,zgeqp3,kahan,65,65,0,0,0.074,OK,
+qrcp,zgeqp3_gpu,kahan,65,65,0,0,0.0819,OK,
+qrcp,zgeqrf,kahan,65,65,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,82,65,0,0,0.0587,OK,
+qrcp,zgeqp3_gpu,kahan/tall,82,65,0,0,0.064,OK,
+qrcp,zgeqrf,kahan/tall,82,65,0,0,0,OK,
+qrcp,zgeqp3,graded,65,65,0,0,0.0496,OK,
+qrcp,zgeqp3_gpu,graded,65,65,0,0,0.0604,OK,
+qrcp,zgeqrf,graded,65,65,0,0,0.0446,OK,
+qrcp,zgeqp3,graded/tall,82,65,0,0,0.0569,OK,
+qrcp,zgeqp3_gpu,graded/tall,82,65,0,0,0.0687,OK,
+qrcp,zgeqrf,graded/tall,82,65,0,0,0.0471,OK,
+qrcp,zgeqp3,lowrank_half,96,96,0,0,0.0748,OK,|R(r,r)|/|R(0,0)| magma=1.07e-15 lapack=1.15e-15
+qrcp,zgeqp3_gpu,lowrank_half,96,96,0,0,0.0789,OK,|R(r,r)|/|R(0,0)| magma=8.43e-16 lapack=1.15e-15
+qrcp,zgeqrf,lowrank_half,96,96,0,0,0.0752,OK,
+qrcp,zgeqp3,lowrank_half/tall,113,96,0,0,0.0656,OK,|R(r,r)|/|R(0,0)| magma=9.55e-16 lapack=1.19e-15
+qrcp,zgeqp3_gpu,lowrank_half/tall,113,96,0,0,0.06,OK,|R(r,r)|/|R(0,0)| magma=6.85e-16 lapack=1.19e-15
+qrcp,zgeqrf,lowrank_half/tall,113,96,0,0,0.0641,OK,
+qrcp,zgeqp3,rank1,96,96,0,0,0.0291,OK,|R(r,r)|/|R(0,0)| magma=2.41e-16 lapack=2.62e-16
+qrcp,zgeqp3_gpu,rank1,96,96,0,0,0.0497,OK,|R(r,r)|/|R(0,0)| magma=2.16e-16 lapack=2.62e-16
+qrcp,zgeqrf,rank1,96,96,0,0,0.0311,OK,
+qrcp,zgeqp3,rank1/tall,113,96,0,0,0.0225,OK,|R(r,r)|/|R(0,0)| magma=2.44e-16 lapack=2.79e-16
+qrcp,zgeqp3_gpu,rank1/tall,113,96,0,0,0.0362,OK,|R(r,r)|/|R(0,0)| magma=1.98e-16 lapack=2.79e-16
+qrcp,zgeqrf,rank1/tall,113,96,0,0,0.0221,OK,
+qrcp,zgeqp3,cond1e12,96,96,0,0,0.0696,OK,
+qrcp,zgeqp3_gpu,cond1e12,96,96,0,0,0.0592,OK,
+qrcp,zgeqrf,cond1e12,96,96,0,0,0.0478,OK,
+qrcp,zgeqp3,cond1e12/tall,113,96,0,0,0.0652,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,113,96,0,0,0.0626,OK,
+qrcp,zgeqrf,cond1e12/tall,113,96,0,0,0.038,OK,
+qrcp,zgeqp3,cond1e8_one_small,96,96,0,0,0.102,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,96,96,0,0,0.105,OK,
+qrcp,zgeqrf,cond1e8_one_small,96,96,0,0,0.108,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,113,96,0,0,0.0894,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,113,96,0,0,0.085,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,113,96,0,0,0.0908,OK,
+qrcp,zgeqp3,gap_at_half,96,96,0,0,0.0779,OK,|R(r,r)|/|R(0,0)| magma=4.19e-10 lapack=4.19e-10
+qrcp,zgeqp3_gpu,gap_at_half,96,96,0,0,0.0795,OK,|R(r,r)|/|R(0,0)| magma=3.59e-10 lapack=4.19e-10
+qrcp,zgeqrf,gap_at_half,96,96,0,0,0.0941,OK,
+qrcp,zgeqp3,gap_at_half/tall,113,96,0,0,0.0632,OK,|R(r,r)|/|R(0,0)| magma=4.19e-10 lapack=4.19e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,113,96,0,0,0.0691,OK,|R(r,r)|/|R(0,0)| magma=3.41e-10 lapack=4.19e-10
+qrcp,zgeqrf,gap_at_half/tall,113,96,0,0,0.0741,OK,
+qrcp,zgeqp3,kahan,96,96,0,0,0.0821,OK,
+qrcp,zgeqp3_gpu,kahan,96,96,0,0,0.0594,OK,
+qrcp,zgeqrf,kahan,96,96,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,113,96,0,0,0.0694,OK,
+qrcp,zgeqp3_gpu,kahan/tall,113,96,0,0,0.0519,OK,
+qrcp,zgeqrf,kahan/tall,113,96,0,0,0,OK,
+qrcp,zgeqp3,graded,96,96,0,0,0.0302,OK,
+qrcp,zgeqp3_gpu,graded,96,96,0,0,0.0311,OK,
+qrcp,zgeqrf,graded,96,96,0,0,0.034,OK,
+qrcp,zgeqp3,graded/tall,113,96,0,0,0.0596,OK,
+qrcp,zgeqp3_gpu,graded/tall,113,96,0,0,0.0486,OK,
+qrcp,zgeqrf,graded/tall,113,96,0,0,0.0243,OK,
+qrcp,zgeqp3,lowrank_half,127,127,0,0,0.0615,OK,|R(r,r)|/|R(0,0)| magma=1.19e-15 lapack=1.36e-15
+qrcp,zgeqp3_gpu,lowrank_half,127,127,0,0,0.0565,OK,|R(r,r)|/|R(0,0)| magma=9.95e-16 lapack=1.36e-15
+qrcp,zgeqrf,lowrank_half,127,127,0,0,0.0665,OK,
+qrcp,zgeqp3,lowrank_half/tall,144,127,0,0,0.0562,OK,|R(r,r)|/|R(0,0)| magma=1.31e-15 lapack=1.61e-15
+qrcp,zgeqp3_gpu,lowrank_half/tall,144,127,0,0,0.0546,OK,|R(r,r)|/|R(0,0)| magma=8.44e-16 lapack=1.61e-15
+qrcp,zgeqrf,lowrank_half/tall,144,127,0,0,0.055,OK,
+qrcp,zgeqp3,rank1,127,127,0,0,0.0378,OK,|R(r,r)|/|R(0,0)| magma=4.85e-16 lapack=4.04e-16
+qrcp,zgeqp3_gpu,rank1,127,127,0,0,0.0403,OK,|R(r,r)|/|R(0,0)| magma=1.52e-16 lapack=4.04e-16
+qrcp,zgeqrf,rank1,127,127,0,0,0.044,OK,
+qrcp,zgeqp3,rank1/tall,144,127,0,0,0.0295,OK,|R(r,r)|/|R(0,0)| magma=3.70e-16 lapack=6.88e-16
+qrcp,zgeqp3_gpu,rank1/tall,144,127,0,0,0.0367,OK,|R(r,r)|/|R(0,0)| magma=5.13e-16 lapack=6.88e-16
+qrcp,zgeqrf,rank1/tall,144,127,0,0,0.033,OK,
+qrcp,zgeqp3,cond1e12,127,127,0,0,0.0539,OK,
+qrcp,zgeqp3_gpu,cond1e12,127,127,0,0,0.0482,OK,
+qrcp,zgeqrf,cond1e12,127,127,0,0,0.046,OK,
+qrcp,zgeqp3,cond1e12/tall,144,127,0,0,0.0459,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,144,127,0,0,0.0449,OK,
+qrcp,zgeqrf,cond1e12/tall,144,127,0,0,0.0421,OK,
+qrcp,zgeqp3,cond1e8_one_small,127,127,0,0,0.0917,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,127,127,0,0,0.0912,OK,
+qrcp,zgeqrf,cond1e8_one_small,127,127,0,0,0.101,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,144,127,0,0,0.0734,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,144,127,0,0,0.0666,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,144,127,0,0,0.0849,OK,
+qrcp,zgeqp3,gap_at_half,127,127,0,0,0.0654,OK,|R(r,r)|/|R(0,0)| magma=4.76e-10 lapack=4.76e-10
+qrcp,zgeqp3_gpu,gap_at_half,127,127,0,0,0.0663,OK,|R(r,r)|/|R(0,0)| magma=3.25e-10 lapack=4.76e-10
+qrcp,zgeqrf,gap_at_half,127,127,0,0,0.0678,OK,
+qrcp,zgeqp3,gap_at_half/tall,144,127,0,0,0.0623,OK,|R(r,r)|/|R(0,0)| magma=5.56e-10 lapack=5.56e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,144,127,0,0,0.0535,OK,|R(r,r)|/|R(0,0)| magma=3.42e-10 lapack=5.56e-10
+qrcp,zgeqrf,gap_at_half/tall,144,127,0,0,0.0621,OK,
+qrcp,zgeqp3,kahan,127,127,0,0,0.0614,OK,
+qrcp,zgeqp3_gpu,kahan,127,127,0,0,0.0464,OK,
+qrcp,zgeqrf,kahan,127,127,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,144,127,0,0,0.0555,OK,
+qrcp,zgeqp3_gpu,kahan/tall,144,127,0,0,0.0487,OK,
+qrcp,zgeqrf,kahan/tall,144,127,0,0,0,OK,
+qrcp,zgeqp3,graded,127,127,0,0,0.0431,OK,
+qrcp,zgeqp3_gpu,graded,127,127,0,0,0.0432,OK,
+qrcp,zgeqrf,graded,127,127,0,0,0.0329,OK,
+qrcp,zgeqp3,graded/tall,144,127,0,0,0.0361,OK,
+qrcp,zgeqp3_gpu,graded/tall,144,127,0,0,0.0701,OK,
+qrcp,zgeqrf,graded/tall,144,127,0,0,0.0371,OK,
+qrcp,zgeqp3,lowrank_half,128,128,0,0,0.066,OK,|R(r,r)|/|R(0,0)| magma=1.48e-15 lapack=1.54e-15
+qrcp,zgeqp3_gpu,lowrank_half,128,128,0,0,0.0593,OK,|R(r,r)|/|R(0,0)| magma=8.34e-16 lapack=1.54e-15
+qrcp,zgeqrf,lowrank_half,128,128,0,0,0.0684,OK,
+qrcp,zgeqp3,lowrank_half/tall,145,128,0,0,0.0573,OK,|R(r,r)|/|R(0,0)| magma=1.12e-15 lapack=1.38e-15
+qrcp,zgeqp3_gpu,lowrank_half/tall,145,128,0,0,0.0517,OK,|R(r,r)|/|R(0,0)| magma=7.34e-16 lapack=1.38e-15
+qrcp,zgeqrf,lowrank_half/tall,145,128,0,0,0.0634,OK,
+qrcp,zgeqp3,rank1,128,128,0,0,0.0311,OK,|R(r,r)|/|R(0,0)| magma=3.47e-16 lapack=3.43e-16
+qrcp,zgeqp3_gpu,rank1,128,128,0,0,0.0439,OK,|R(r,r)|/|R(0,0)| magma=9.69e-17 lapack=3.43e-16
+qrcp,zgeqrf,rank1,128,128,0,0,0.0611,OK,
+qrcp,zgeqp3,rank1/tall,145,128,0,0,0.02,OK,|R(r,r)|/|R(0,0)| magma=2.19e-16 lapack=2.81e-16
+qrcp,zgeqp3_gpu,rank1/tall,145,128,0,0,0.0324,OK,|R(r,r)|/|R(0,0)| magma=1.65e-16 lapack=2.81e-16
+qrcp,zgeqrf,rank1/tall,145,128,0,0,0.0253,OK,
+qrcp,zgeqp3,cond1e12,128,128,0,0,0.0546,OK,
+qrcp,zgeqp3_gpu,cond1e12,128,128,0,0,0.0574,OK,
+qrcp,zgeqrf,cond1e12,128,128,0,0,0.0479,OK,
+qrcp,zgeqp3,cond1e12/tall,145,128,0,0,0.0462,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,145,128,0,0,0.0398,OK,
+qrcp,zgeqrf,cond1e12/tall,145,128,0,0,0.0331,OK,
+qrcp,zgeqp3,cond1e8_one_small,128,128,0,0,0.0876,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,128,128,0,0,0.105,OK,
+qrcp,zgeqrf,cond1e8_one_small,128,128,0,0,0.0985,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,145,128,0,0,0.076,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,145,128,0,0,0.072,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,145,128,0,0,0.0875,OK,
+qrcp,zgeqp3,gap_at_half,128,128,0,0,0.0637,OK,|R(r,r)|/|R(0,0)| magma=5.11e-10 lapack=5.11e-10
+qrcp,zgeqp3_gpu,gap_at_half,128,128,0,0,0.0632,OK,|R(r,r)|/|R(0,0)| magma=4.81e-10 lapack=5.11e-10
+qrcp,zgeqrf,gap_at_half,128,128,0,0,0.0677,OK,
+qrcp,zgeqp3,gap_at_half/tall,145,128,0,0,0.0539,OK,|R(r,r)|/|R(0,0)| magma=4.61e-10 lapack=4.61e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,145,128,0,0,0.0546,OK,|R(r,r)|/|R(0,0)| magma=3.07e-10 lapack=4.61e-10
+qrcp,zgeqrf,gap_at_half/tall,145,128,0,0,0.0603,OK,
+qrcp,zgeqp3,kahan,128,128,0,0,0.0609,OK,
+qrcp,zgeqp3_gpu,kahan,128,128,0,0,0.0449,OK,
+qrcp,zgeqrf,kahan,128,128,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,145,128,0,0,0.0543,OK,
+qrcp,zgeqp3_gpu,kahan/tall,145,128,0,0,0.0478,OK,
+qrcp,zgeqrf,kahan/tall,145,128,0,0,0,OK,
+qrcp,zgeqp3,graded,128,128,0,0,0.0448,OK,
+qrcp,zgeqp3_gpu,graded,128,128,0,0,0.054,OK,
+qrcp,zgeqrf,graded,128,128,0,0,0.0409,OK,
+qrcp,zgeqp3,graded/tall,145,128,0,0,0.0363,OK,
+qrcp,zgeqp3_gpu,graded/tall,145,128,0,0,0.038,OK,
+qrcp,zgeqrf,graded/tall,145,128,0,0,0.0205,OK,
+qrcp,zgeqp3,lowrank_half,129,129,0,0,0.0658,OK,|R(r,r)|/|R(0,0)| magma=1.19e-15 lapack=1.49e-15
+qrcp,zgeqp3_gpu,lowrank_half,129,129,0,0,0.059,OK,|R(r,r)|/|R(0,0)| magma=8.58e-16 lapack=1.49e-15
+qrcp,zgeqrf,lowrank_half,129,129,0,0,0.0881,OK,
+qrcp,zgeqp3,lowrank_half/tall,146,129,0,0,0.0563,OK,|R(r,r)|/|R(0,0)| magma=1.23e-15 lapack=1.33e-15
+qrcp,zgeqp3_gpu,lowrank_half/tall,146,129,0,0,0.0458,OK,|R(r,r)|/|R(0,0)| magma=7.55e-16 lapack=1.33e-15
+qrcp,zgeqrf,lowrank_half/tall,146,129,0,0,0.0873,OK,
+qrcp,zgeqp3,rank1,129,129,0,0,0.0272,OK,|R(r,r)|/|R(0,0)| magma=3.93e-16 lapack=4.83e-16
+qrcp,zgeqp3_gpu,rank1,129,129,0,0,0.0449,OK,|R(r,r)|/|R(0,0)| magma=1.05e-16 lapack=4.83e-16
+qrcp,zgeqrf,rank1,129,129,0,0,0.0818,OK,
+qrcp,zgeqp3,rank1/tall,146,129,0,0,0.0142,OK,|R(r,r)|/|R(0,0)| magma=2.08e-16 lapack=5.19e-16
+qrcp,zgeqp3_gpu,rank1/tall,146,129,0,0,0.0231,OK,|R(r,r)|/|R(0,0)| magma=1.23e-16 lapack=5.19e-16
+qrcp,zgeqrf,rank1/tall,146,129,0,0,0.08,OK,
+qrcp,zgeqp3,cond1e12,129,129,0,0,0.0493,OK,
+qrcp,zgeqp3_gpu,cond1e12,129,129,0,0,0.0433,OK,
+qrcp,zgeqrf,cond1e12,129,129,0,0,0.0956,OK,
+qrcp,zgeqp3,cond1e12/tall,146,129,0,0,0.0468,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,146,129,0,0,0.0467,OK,
+qrcp,zgeqrf,cond1e12/tall,146,129,0,0,0.0686,OK,
+qrcp,zgeqp3,cond1e8_one_small,129,129,0,0,0.0786,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,129,129,0,0,0.0901,OK,
+qrcp,zgeqrf,cond1e8_one_small,129,129,0,0,0.112,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,146,129,0,0,0.0718,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,146,129,0,0,0.0731,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,146,129,0,0,0.0954,OK,
+qrcp,zgeqp3,gap_at_half,129,129,0,0,0.0634,OK,|R(r,r)|/|R(0,0)| magma=4.88e-10 lapack=4.88e-10
+qrcp,zgeqp3_gpu,gap_at_half,129,129,0,0,0.0596,OK,|R(r,r)|/|R(0,0)| magma=4.07e-10 lapack=4.88e-10
+qrcp,zgeqrf,gap_at_half,129,129,0,0,0.101,OK,
+qrcp,zgeqp3,gap_at_half/tall,146,129,0,0,0.0536,OK,|R(r,r)|/|R(0,0)| magma=4.96e-10 lapack=4.96e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,146,129,0,0,0.05,OK,|R(r,r)|/|R(0,0)| magma=3.43e-10 lapack=4.96e-10
+qrcp,zgeqrf,gap_at_half/tall,146,129,0,0,0.0788,OK,
+qrcp,zgeqp3,kahan,129,129,0,0,0.0619,OK,
+qrcp,zgeqp3_gpu,kahan,129,129,0,0,0.0465,OK,
+qrcp,zgeqrf,kahan,129,129,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,146,129,0,0,0.0528,OK,
+qrcp,zgeqp3_gpu,kahan/tall,146,129,0,0,0.0504,OK,
+qrcp,zgeqrf,kahan/tall,146,129,0,0,0,OK,
+qrcp,zgeqp3,graded,129,129,0,0,0.0305,OK,
+qrcp,zgeqp3_gpu,graded,129,129,0,0,0.0298,OK,
+qrcp,zgeqrf,graded,129,129,0,0,0.0335,OK,
+qrcp,zgeqp3,graded/tall,146,129,0,0,0.0271,OK,
+qrcp,zgeqp3_gpu,graded/tall,146,129,0,0,0.0485,OK,
+qrcp,zgeqrf,graded/tall,146,129,0,0,0.0569,OK,
+qrcp,zgeqp3,lowrank_half,200,200,0,0,0.0434,OK,|R(r,r)|/|R(0,0)| magma=1.65e-15 lapack=1.73e-15
+qrcp,zgeqp3_gpu,lowrank_half,200,200,0,0,0.0392,OK,|R(r,r)|/|R(0,0)| magma=1.07e-15 lapack=1.73e-15
+qrcp,zgeqrf,lowrank_half,200,200,0,0,0.065,OK,
+qrcp,zgeqp3,lowrank_half/tall,217,200,0,0,0.0404,OK,|R(r,r)|/|R(0,0)| magma=1.58e-15 lapack=1.79e-15
+qrcp,zgeqp3_gpu,lowrank_half/tall,217,200,0,0,0.0386,OK,|R(r,r)|/|R(0,0)| magma=1.27e-15 lapack=1.79e-15
+qrcp,zgeqrf,lowrank_half/tall,217,200,0,0,0.0693,OK,
+qrcp,zgeqp3,rank1,200,200,0,0,0.013,OK,|R(r,r)|/|R(0,0)| magma=3.61e-16 lapack=4.05e-16
+qrcp,zgeqp3_gpu,rank1,200,200,0,0,0.0179,OK,|R(r,r)|/|R(0,0)| magma=1.23e-16 lapack=4.05e-16
+qrcp,zgeqrf,rank1,200,200,0,0,0.0616,OK,
+qrcp,zgeqp3,rank1/tall,217,200,0,0,0.0327,OK,|R(r,r)|/|R(0,0)| magma=7.50e-16 lapack=7.48e-16
+qrcp,zgeqp3_gpu,rank1/tall,217,200,0,0,0.0213,OK,|R(r,r)|/|R(0,0)| magma=1.01e-16 lapack=7.48e-16
+qrcp,zgeqrf,rank1/tall,217,200,0,0,0.0659,OK,
+qrcp,zgeqp3,cond1e12,200,200,0,0,0.0367,OK,
+qrcp,zgeqp3_gpu,cond1e12,200,200,0,0,0.0328,OK,
+qrcp,zgeqrf,cond1e12,200,200,0,0,0.0631,OK,
+qrcp,zgeqp3,cond1e12/tall,217,200,0,0,0.0335,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,217,200,0,0,0.0341,OK,
+qrcp,zgeqrf,cond1e12/tall,217,200,0,0,0.0585,OK,
+qrcp,zgeqp3,cond1e8_one_small,200,200,0,0,0.0603,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,200,200,0,0,0.0606,OK,
+qrcp,zgeqrf,cond1e8_one_small,200,200,0,0,0.0916,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,217,200,0,0,0.0573,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,217,200,0,0,0.0546,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,217,200,0,0,0.0826,OK,
+qrcp,zgeqp3,gap_at_half,200,200,0,0,0.0446,OK,|R(r,r)|/|R(0,0)| magma=5.70e-10 lapack=5.70e-10
+qrcp,zgeqp3_gpu,gap_at_half,200,200,0,0,0.0439,OK,|R(r,r)|/|R(0,0)| magma=4.20e-10 lapack=5.70e-10
+qrcp,zgeqrf,gap_at_half,200,200,0,0,0.0709,OK,
+qrcp,zgeqp3,gap_at_half/tall,217,200,0,0,0.0382,OK,|R(r,r)|/|R(0,0)| magma=5.83e-10 lapack=5.83e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,217,200,0,0,0.0407,OK,|R(r,r)|/|R(0,0)| magma=4.55e-10 lapack=5.83e-10
+qrcp,zgeqrf,gap_at_half/tall,217,200,0,0,0.069,OK,
+qrcp,zgeqp3,kahan,200,200,0,0,0.0386,OK,
+qrcp,zgeqp3_gpu,kahan,200,200,0,0,0.0345,OK,
+qrcp,zgeqrf,kahan,200,200,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,217,200,0,0,0.0368,OK,
+qrcp,zgeqp3_gpu,kahan/tall,217,200,0,0,0.032,OK,
+qrcp,zgeqrf,kahan/tall,217,200,0,0,0,OK,
+qrcp,zgeqp3,graded,200,200,0,0,0.0314,OK,
+qrcp,zgeqp3_gpu,graded,200,200,0,0,0.0382,OK,
+qrcp,zgeqrf,graded,200,200,0,0,0.0456,OK,
+qrcp,zgeqp3,graded/tall,217,200,0,0,0.0224,OK,
+qrcp,zgeqp3_gpu,graded/tall,217,200,0,0,0.0327,OK,
+qrcp,zgeqrf,graded/tall,217,200,0,0,0.0466,OK,
+qrcp,zgeqp3,lowrank_half,255,255,0,0,0.035,OK,|R(r,r)|/|R(0,0)| magma=1.88e-15 lapack=2.40e-15
+qrcp,zgeqp3_gpu,lowrank_half,255,255,0,0,0.0339,OK,|R(r,r)|/|R(0,0)| magma=1.36e-15 lapack=2.40e-15
+qrcp,zgeqrf,lowrank_half,255,255,0,0,0.0582,OK,
+qrcp,zgeqp3,lowrank_half/tall,272,255,0,0,0.0329,OK,|R(r,r)|/|R(0,0)| magma=2.00e-15 lapack=2.19e-15
+qrcp,zgeqp3_gpu,lowrank_half/tall,272,255,0,0,0.0327,OK,|R(r,r)|/|R(0,0)| magma=1.42e-15 lapack=2.19e-15
+qrcp,zgeqrf,lowrank_half/tall,272,255,0,0,0.0547,OK,
+qrcp,zgeqp3,rank1,255,255,0,0,0.0103,OK,|R(r,r)|/|R(0,0)| magma=3.96e-16 lapack=5.62e-16
+qrcp,zgeqp3_gpu,rank1,255,255,0,0,0.0207,OK,|R(r,r)|/|R(0,0)| magma=1.37e-16 lapack=5.62e-16
+qrcp,zgeqrf,rank1,255,255,0,0,0.0659,OK,
+qrcp,zgeqp3,rank1/tall,272,255,0,0,0.0263,OK,|R(r,r)|/|R(0,0)| magma=7.20e-16 lapack=8.42e-16
+qrcp,zgeqp3_gpu,rank1/tall,272,255,0,0,0.0145,OK,|R(r,r)|/|R(0,0)| magma=1.05e-16 lapack=8.42e-16
+qrcp,zgeqrf,rank1/tall,272,255,0,0,0.0489,OK,
+qrcp,zgeqp3,cond1e12,255,255,0,0,0.0305,OK,
+qrcp,zgeqp3_gpu,cond1e12,255,255,0,0,0.0278,OK,
+qrcp,zgeqrf,cond1e12,255,255,0,0,0.0462,OK,
+qrcp,zgeqp3,cond1e12/tall,272,255,0,0,0.0301,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,272,255,0,0,0.0272,OK,
+qrcp,zgeqrf,cond1e12/tall,272,255,0,0,0.0515,OK,
+qrcp,zgeqp3,cond1e8_one_small,255,255,0,0,0.0508,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,255,255,0,0,0.0547,OK,
+qrcp,zgeqrf,cond1e8_one_small,255,255,0,0,0.0817,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,272,255,0,0,0.0511,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,272,255,0,0,0.0475,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,272,255,0,0,0.0705,OK,
+qrcp,zgeqp3,gap_at_half,255,255,0,0,0.0377,OK,|R(r,r)|/|R(0,0)| magma=6.75e-10 lapack=6.75e-10
+qrcp,zgeqp3_gpu,gap_at_half,255,255,0,0,0.0371,OK,|R(r,r)|/|R(0,0)| magma=4.47e-10 lapack=6.75e-10
+qrcp,zgeqrf,gap_at_half,255,255,0,0,0.0604,OK,
+qrcp,zgeqp3,gap_at_half/tall,272,255,0,0,0.0345,OK,|R(r,r)|/|R(0,0)| magma=7.27e-10 lapack=7.27e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,272,255,0,0,0.0337,OK,|R(r,r)|/|R(0,0)| magma=7.27e-10 lapack=7.27e-10
+qrcp,zgeqrf,gap_at_half/tall,272,255,0,0,0.0552,OK,
+qrcp,zgeqp3,kahan,255,255,0,0,0.0309,OK,
+qrcp,zgeqp3_gpu,kahan,255,255,0,0,0.0289,OK,
+qrcp,zgeqrf,kahan,255,255,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,272,255,0,0,0.0292,OK,
+qrcp,zgeqp3_gpu,kahan/tall,272,255,0,0,0.0215,OK,
+qrcp,zgeqrf,kahan/tall,272,255,0,0,0,OK,
+qrcp,zgeqp3,graded,255,255,0,0,0.0313,OK,
+qrcp,zgeqp3_gpu,graded,255,255,0,0,0.0342,OK,
+qrcp,zgeqrf,graded,255,255,0,0,0.0507,OK,
+qrcp,zgeqp3,graded/tall,272,255,0,0,0.0201,OK,
+qrcp,zgeqp3_gpu,graded/tall,272,255,0,0,0.0181,OK,
+qrcp,zgeqrf,graded/tall,272,255,0,0,0.028,OK,
+qrcp,zgeqp3,lowrank_half,256,256,0,0,0.0381,OK,|R(r,r)|/|R(0,0)| magma=2.17e-15 lapack=2.16e-15
+qrcp,zgeqp3_gpu,lowrank_half,256,256,0,0,0.0357,OK,|R(r,r)|/|R(0,0)| magma=1.33e-15 lapack=2.16e-15
+qrcp,zgeqrf,lowrank_half,256,256,0,0,0.0599,OK,
+qrcp,zgeqp3,lowrank_half/tall,273,256,0,0,0.0339,OK,|R(r,r)|/|R(0,0)| magma=2.12e-15 lapack=2.11e-15
+qrcp,zgeqp3_gpu,lowrank_half/tall,273,256,0,0,0.0332,OK,|R(r,r)|/|R(0,0)| magma=1.05e-15 lapack=2.11e-15
+qrcp,zgeqrf,lowrank_half/tall,273,256,0,0,0.0571,OK,
+qrcp,zgeqp3,rank1,256,256,0,0,0.0183,OK,|R(r,r)|/|R(0,0)| magma=5.43e-16 lapack=7.77e-16
+qrcp,zgeqp3_gpu,rank1,256,256,0,0,0.0235,OK,|R(r,r)|/|R(0,0)| magma=2.19e-16 lapack=7.77e-16
+qrcp,zgeqrf,rank1,256,256,0,0,0.0781,OK,
+qrcp,zgeqp3,rank1/tall,273,256,0,0,0.0157,OK,|R(r,r)|/|R(0,0)| magma=4.38e-16 lapack=7.39e-16
+qrcp,zgeqp3_gpu,rank1/tall,273,256,0,0,0.0147,OK,|R(r,r)|/|R(0,0)| magma=3.15e-16 lapack=7.39e-16
+qrcp,zgeqrf,rank1/tall,273,256,0,0,0.0544,OK,
+qrcp,zgeqp3,cond1e12,256,256,0,0,0.0339,OK,
+qrcp,zgeqp3_gpu,cond1e12,256,256,0,0,0.0294,OK,
+qrcp,zgeqrf,cond1e12,256,256,0,0,0.05,OK,
+qrcp,zgeqp3,cond1e12/tall,273,256,0,0,0.0287,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,273,256,0,0,0.0269,OK,
+qrcp,zgeqrf,cond1e12/tall,273,256,0,0,0.0527,OK,
+qrcp,zgeqp3,cond1e8_one_small,256,256,0,0,0.0529,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,256,256,0,0,0.059,OK,
+qrcp,zgeqrf,cond1e8_one_small,256,256,0,0,0.0759,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,273,256,0,0,0.0453,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,273,256,0,0,0.0459,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,273,256,0,0,0.0692,OK,
+qrcp,zgeqp3,gap_at_half,256,256,0,0,0.0378,OK,|R(r,r)|/|R(0,0)| magma=7.48e-10 lapack=7.48e-10
+qrcp,zgeqp3_gpu,gap_at_half,256,256,0,0,0.0375,OK,|R(r,r)|/|R(0,0)| magma=5.39e-10 lapack=7.48e-10
+qrcp,zgeqrf,gap_at_half,256,256,0,0,0.0595,OK,
+qrcp,zgeqp3,gap_at_half/tall,273,256,0,0,0.034,OK,|R(r,r)|/|R(0,0)| magma=6.62e-10 lapack=6.62e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,273,256,0,0,0.0336,OK,|R(r,r)|/|R(0,0)| magma=4.48e-10 lapack=6.62e-10
+qrcp,zgeqrf,gap_at_half/tall,273,256,0,0,0.0568,OK,
+qrcp,zgeqp3,kahan,256,256,0,0,0.0304,OK,
+qrcp,zgeqp3_gpu,kahan,256,256,0,0,0.0285,OK,
+qrcp,zgeqrf,kahan,256,256,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,273,256,0,0,0.0291,OK,
+qrcp,zgeqp3_gpu,kahan/tall,273,256,0,0,0.0214,OK,
+qrcp,zgeqrf,kahan/tall,273,256,0,0,0,OK,
+qrcp,zgeqp3,graded,256,256,0,0,0.0233,OK,
+qrcp,zgeqp3_gpu,graded,256,256,0,0,0.0383,OK,
+qrcp,zgeqrf,graded,256,256,0,0,0.03,OK,
+qrcp,zgeqp3,graded/tall,273,256,0,0,0.0274,OK,
+qrcp,zgeqp3_gpu,graded/tall,273,256,0,0,0.0245,OK,
+qrcp,zgeqrf,graded/tall,273,256,0,0,0.0237,OK,
+qrcp,zgeqp3,lowrank_half,257,257,0,0,0.0362,OK,|R(r,r)|/|R(0,0)| magma=1.98e-15 lapack=2.09e-15
+qrcp,zgeqp3_gpu,lowrank_half,257,257,0,0,0.0328,OK,|R(r,r)|/|R(0,0)| magma=1.39e-15 lapack=2.09e-15
+qrcp,zgeqrf,lowrank_half,257,257,0,0,0.0594,OK,
+qrcp,zgeqp3,lowrank_half/tall,274,257,0,0,0.0326,OK,|R(r,r)|/|R(0,0)| magma=2.04e-15 lapack=2.16e-15
+qrcp,zgeqp3_gpu,lowrank_half/tall,274,257,0,0,0.0314,OK,|R(r,r)|/|R(0,0)| magma=1.12e-15 lapack=2.16e-15
+qrcp,zgeqrf,lowrank_half/tall,274,257,0,0,0.056,OK,
+qrcp,zgeqp3,rank1,257,257,0,0,0.0106,OK,|R(r,r)|/|R(0,0)| magma=3.20e-16 lapack=4.26e-16
+qrcp,zgeqp3_gpu,rank1,257,257,0,0,0.0219,OK,|R(r,r)|/|R(0,0)| magma=9.44e-17 lapack=4.26e-16
+qrcp,zgeqrf,rank1,257,257,0,0,0.0816,OK,
+qrcp,zgeqp3,rank1/tall,274,257,0,0,0.0141,OK,|R(r,r)|/|R(0,0)| magma=3.37e-16 lapack=4.76e-16
+qrcp,zgeqp3_gpu,rank1/tall,274,257,0,0,0.0149,OK,|R(r,r)|/|R(0,0)| magma=1.60e-16 lapack=4.76e-16
+qrcp,zgeqrf,rank1/tall,274,257,0,0,0.0501,OK,
+qrcp,zgeqp3,cond1e12,257,257,0,0,0.0267,OK,
+qrcp,zgeqp3_gpu,cond1e12,257,257,0,0,0.027,OK,
+qrcp,zgeqrf,cond1e12,257,257,0,0,0.0463,OK,
+qrcp,zgeqp3,cond1e12/tall,274,257,0,0,0.0272,OK,
+qrcp,zgeqp3_gpu,cond1e12/tall,274,257,0,0,0.0254,OK,
+qrcp,zgeqrf,cond1e12/tall,274,257,0,0,0.0518,OK,
+qrcp,zgeqp3,cond1e8_one_small,257,257,0,0,0.0519,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small,257,257,0,0,0.0505,OK,
+qrcp,zgeqrf,cond1e8_one_small,257,257,0,0,0.0751,OK,
+qrcp,zgeqp3,cond1e8_one_small/tall,274,257,0,0,0.0509,OK,
+qrcp,zgeqp3_gpu,cond1e8_one_small/tall,274,257,0,0,0.0453,OK,
+qrcp,zgeqrf,cond1e8_one_small/tall,274,257,0,0,0.0748,OK,
+qrcp,zgeqp3,gap_at_half,257,257,0,0,0.0361,OK,|R(r,r)|/|R(0,0)| magma=6.48e-10 lapack=6.48e-10
+qrcp,zgeqp3_gpu,gap_at_half,257,257,0,0,0.0352,OK,|R(r,r)|/|R(0,0)| magma=5.14e-10 lapack=6.48e-10
+qrcp,zgeqrf,gap_at_half,257,257,0,0,0.0586,OK,
+qrcp,zgeqp3,gap_at_half/tall,274,257,0,0,0.0333,OK,|R(r,r)|/|R(0,0)| magma=6.70e-10 lapack=6.70e-10
+qrcp,zgeqp3_gpu,gap_at_half/tall,274,257,0,0,0.0331,OK,|R(r,r)|/|R(0,0)| magma=4.73e-10 lapack=6.70e-10
+qrcp,zgeqrf,gap_at_half/tall,274,257,0,0,0.0552,OK,
+qrcp,zgeqp3,kahan,257,257,0,0,0.0304,OK,
+qrcp,zgeqp3_gpu,kahan,257,257,0,0,0.0284,OK,
+qrcp,zgeqrf,kahan,257,257,0,0,0,OK,
+qrcp,zgeqp3,kahan/tall,274,257,0,0,0.029,OK,
+qrcp,zgeqp3_gpu,kahan/tall,274,257,0,0,0.0241,OK,
+qrcp,zgeqrf,kahan/tall,274,257,0,0,0,OK,
+qrcp,zgeqp3,graded,257,257,0,0,0.0258,OK,
+qrcp,zgeqp3_gpu,graded,257,257,0,0,0.0301,OK,
+qrcp,zgeqrf,graded,257,257,0,0,0.046,OK,
+qrcp,zgeqp3,graded/tall,274,257,0,0,0.0276,OK,
+qrcp,zgeqp3_gpu,graded/tall,274,257,0,0,0.0226,OK,
+qrcp,zgeqrf,graded/tall,274,257,0,0,0.0294,OK,

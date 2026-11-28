@@ -1,0 +1,195 @@
+
+== lange 1 1 M
+DONE cuda=no error
+== lange 1 1 O
+DONE cuda=no error
+== lange 1 1 I
+DONE cuda=no error
+== lange 1 1 F
+DONE cuda=no error
+== lange 33 17 M
+DONE cuda=no error
+== lange 33 17 O
+DONE cuda=no error
+== lange 33 17 I
+DONE cuda=no error
+== lange 33 17 F
+DONE cuda=no error
+== lange 17 33 M
+DONE cuda=no error
+== lange 17 33 O
+DONE cuda=no error
+== lange 17 33 I
+DONE cuda=no error
+== lange 17 33 F
+DONE cuda=no error
+== lange 300 200 M
+DONE cuda=no error
+== lange 300 200 O
+DONE cuda=no error
+== lange 300 200 I
+DONE cuda=no error
+== lange 300 200 F
+DONE cuda=no error
+== lange 64 1000 M
+DONE cuda=no error
+== lange 64 1000 O
+DONE cuda=no error
+== lange 64 1000 I
+DONE cuda=no error
+== lange 64 1000 F
+DONE cuda=no error
+== lanhe 1 M U
+DONE cuda=no error
+== lanhe 1 M L
+DONE cuda=no error
+== lanhe 1 O U
+DONE cuda=no error
+== lanhe 1 O L
+DONE cuda=no error
+== lanhe 1 I U
+DONE cuda=no error
+== lanhe 1 I L
+DONE cuda=no error
+== lanhe 1 F U
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 1 F L
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 31 M U
+DONE cuda=no error
+== lanhe 31 M L
+DONE cuda=no error
+== lanhe 31 O U
+DONE cuda=no error
+== lanhe 31 O L
+DONE cuda=no error
+== lanhe 31 I U
+DONE cuda=no error
+== lanhe 31 I L
+DONE cuda=no error
+== lanhe 31 F U
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 31 F L
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 32 M U
+DONE cuda=no error
+== lanhe 32 M L
+DONE cuda=no error
+== lanhe 32 O U
+DONE cuda=no error
+== lanhe 32 O L
+DONE cuda=no error
+== lanhe 32 I U
+DONE cuda=no error
+== lanhe 32 I L
+DONE cuda=no error
+== lanhe 32 F U
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 32 F L
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 33 M U
+DONE cuda=no error
+== lanhe 33 M L
+DONE cuda=no error
+== lanhe 33 O U
+DONE cuda=no error
+== lanhe 33 O L
+DONE cuda=no error
+== lanhe 33 I U
+DONE cuda=no error
+== lanhe 33 I L
+DONE cuda=no error
+== lanhe 33 F U
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 33 F L
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 64 M U
+DONE cuda=no error
+== lanhe 64 M L
+DONE cuda=no error
+== lanhe 64 O U
+DONE cuda=no error
+== lanhe 64 O L
+DONE cuda=no error
+== lanhe 64 I U
+DONE cuda=no error
+== lanhe 64 I L
+DONE cuda=no error
+== lanhe 64 F U
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 64 F L
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 100 M U
+DONE cuda=no error
+== lanhe 100 M L
+DONE cuda=no error
+== lanhe 100 O U
+DONE cuda=no error
+== lanhe 100 O L
+DONE cuda=no error
+== lanhe 100 I U
+DONE cuda=no error
+== lanhe 100 I L
+DONE cuda=no error
+== lanhe 100 F U
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 100 F L
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 257 M U
+DONE cuda=no error
+== lanhe 257 M L
+DONE cuda=no error
+== lanhe 257 O U
+DONE cuda=no error
+== lanhe 257 O L
+DONE cuda=no error
+== lanhe 257 I U
+DONE cuda=no error
+== lanhe 257 I L
+DONE cuda=no error
+== lanhe 257 F U
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 257 F L
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 1000 M U
+DONE cuda=no error
+== lanhe 1000 M L
+DONE cuda=no error
+== lanhe 1000 O U
+DONE cuda=no error
+== lanhe 1000 O L
+DONE cuda=no error
+== lanhe 1000 I U
+DONE cuda=no error
+== lanhe 1000 I L
+DONE cuda=no error
+== lanhe 1000 F U
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== lanhe 1000 F L
+On entry to magmablas_zlanhe, parameter 1 had an illegal value (info = -1)
+DONE cuda=no error
+== geqr2 64 16
+DONE cuda=no error
+== geqr2 200 64
+DONE cuda=no error
+== geqr2 1000 128
+DONE cuda=no error
+== geqr2 100 100
+DONE cuda=no error
+== geqr2 50 80
+DONE cuda=no error

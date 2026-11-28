@@ -1,0 +1,10 @@
+## restart=4
+IDR             | real SPD (control)     | ret=0     info=0     numiter=4     | finite=1 true_rel_res=4.89e-11   | ok
+IDRMERGE        | real SPD (control)     | ret=-202  info=-202  numiter=12    | finite=0 true_rel_res=nan        | reported-failure
+PIDR            | real SPD (control)     | ret=0     info=0     numiter=4     | finite=1 true_rel_res=4.89e-11   | ok
+PIDRMERGE       | real SPD (control)     | ret=-202  info=-202  numiter=12    | finite=0 true_rel_res=nan        | reported-failure
+## restart=50
+IDR             | real SPD (control)     | ret=0     info=0     numiter=10    | finite=1 true_rel_res=8.97e-11   | ok
+IDRMERGE        | real SPD (control)     | ret=-201  info=-201  numiter=128   | finite=1 true_rel_res=0.297      | reported-failure
+PIDR            | real SPD (control)     | ret=0     info=0     numiter=10    | finite=1 true_rel_res=8.97e-11   | ok
+PIDRMERGE       | real SPD (control)     | ret=-201  info=-201  numiter=128   | finite=1 true_rel_res=0.297      | reported-failure

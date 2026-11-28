@@ -1,0 +1,19 @@
+bash: line 1: 3402868 Segmentation fault      timeout 120 ./precond_probe 2>&1
+## ./precond_probe c   (ILU control + Jacobi)
+== ILU(0) + PBiCG, exact solution of A x = (1,2) ==
+[A=[[2,1],[1,2]] (control)] precondsetup...
+[A=[[2,1],[1,2]] (control)] setup returned 0, pbicg...
+[A=[[2,1],[1,2]] (control)] pbicg returned
+A=[[2,1],[1,2]] (control)              precondsetup info=0 | pbicg ret=0 info=0 numiter=1 final_res=0 | x=(0, 1)
+== Jacobi setup (magma_zjacobisetup_diagscal) ==
+[jacobi d=0] setup...
+[jacobi d=0] setup returned 0
+A=[[0,1],[1,2]] (diagonal stored): setup info=0  D^-1 = (-nan, 0.5)
+[jacobi d=2] setup...
+[jacobi d=2] setup returned 0
+A=[[2,1],[1,2]] (diagonal stored): setup info=0  D^-1 = (0.5, 0.5)
+## ./precond_probe     (ILU zero pivot)
+== ILU(0) + PBiCG, exact solution of A x = (1,2) ==
+[A=[[0,1],[1,0]] (ILU pivot 0)] precondsetup...
+timeout: the monitored command dumped core
+exit status: 139

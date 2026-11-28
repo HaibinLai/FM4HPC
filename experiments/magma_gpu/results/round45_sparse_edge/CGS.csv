@@ -1,0 +1,63 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,CSR,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,CSR,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,CSR,diag64,64,0,0,33,7.29e-09,7.29e-09,8.56e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,CSR,tridiag2,2,0,0,2,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,CSR,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,CSR,emptyrow,256,0,0,44,1.76e-09,1.76e-09,8.42e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,CSR,denserow,64,0,0,2,1.18e-14,1.18e-14,7.96e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,ELL,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,ELL,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,ELL,diag64,64,0,0,33,7.29e-09,7.29e-09,8.56e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,ELL,tridiag2,2,0,0,2,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,ELL,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,ELL,emptyrow,256,0,0,44,1.76e-09,1.76e-09,8.42e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,ELL,denserow,64,0,0,2,1.38e-14,1.38e-14,9.29e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,SELLP,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,SELLP,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,SELLP,diag64,64,0,0,33,7.29e-09,7.29e-09,8.56e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,SELLP,tridiag2,2,0,0,2,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,SELLP,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,SELLP,emptyrow,256,0,0,44,1.76e-09,1.76e-09,8.42e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+CGS,NONE,SELLP,denserow,64,0,0,2,1.18e-14,1.18e-14,7.96e-17,OK,parse=0 setup=0 convert=0

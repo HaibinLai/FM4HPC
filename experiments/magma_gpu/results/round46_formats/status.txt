@@ -1,0 +1,113 @@
+ELLPACKT,n1,exit=0,last=END
+ELLPACKT,poisson,exit=0,last=END
+ELLPACKT,random,exit=0,last=END
+ELLPACKT,emptyrow,exit=0,last=END
+ELLPACKT,denserow,exit=0,last=END
+ELLPACKT,rect,exit=0,last=END
+ELLPACKT,zero,exit=0,last=END
+ELL,n1,exit=0,last=END
+ELL,poisson,exit=0,last=END
+ELL,random,exit=0,last=END
+ELL,emptyrow,exit=0,last=END
+ELL,denserow,exit=0,last=END
+ELL,rect,exit=0,last=END
+ELL,zero,exit=0,last=END
+DENSE,n1,exit=0,last=END
+DENSE,poisson,exit=0,last=END
+DENSE,random,exit=0,last=END
+DENSE,emptyrow,exit=0,last=END
+DENSE,denserow,exit=0,last=END
+DENSE,rect,exit=0,last=END
+DENSE,zero,exit=0,last=END
+BCSR,n1,exit=0,last=END
+BCSR,poisson,exit=0,last=END
+BCSR,random,exit=0,last=END
+BCSR,emptyrow,exit=0,last=END
+BCSR,denserow,exit=0,last=END
+BCSR,rect,exit=0,last=END
+BCSR,zero,exit=0,last=END
+CSC,n1,exit=0,last=END
+CSC,poisson,exit=0,last=END
+CSC,random,exit=0,last=END
+CSC,emptyrow,exit=0,last=END
+CSC,denserow,exit=0,last=END
+CSC,rect,exit=0,last=END
+CSC,zero,exit=0,last=END
+COO,n1,exit=0,last=END
+COO,poisson,exit=0,last=END
+COO,random,exit=0,last=END
+COO,emptyrow,exit=0,last=END
+COO,denserow,exit=0,last=END
+COO,rect,exit=0,last=END
+COO,zero,exit=0,last=END
+ELLRT,n1,exit=-1073741676,last=STEP 4
+ELLRT,poisson,exit=-1073741676,last=STEP 4
+ELLRT,random,exit=-1073741676,last=STEP 4
+ELLRT,emptyrow,exit=-1073741676,last=STEP 4
+ELLRT,denserow,exit=-1073741676,last=STEP 4
+ELLRT,rect,exit=-1073741676,last=STEP 4
+ELLRT,zero,exit=-1073741676,last=STEP 4
+SELLP,n1,exit=-1073741676,last=STEP 4
+SELLP,poisson,exit=-1073741676,last=STEP 4
+SELLP,random,exit=-1073741676,last=STEP 4
+SELLP,emptyrow,exit=-1073741676,last=STEP 4
+SELLP,denserow,exit=-1073741676,last=STEP 4
+SELLP,rect,exit=-1073741676,last=STEP 4
+SELLP,zero,exit=-1073741676,last=STEP 4
+ELLD,n1,exit=0,last=END
+ELLD,poisson,exit=0,last=END
+ELLD,random,exit=0,last=END
+ELLD,emptyrow,exit=0,last=END
+ELLD,denserow,exit=0,last=END
+ELLD,rect,exit=0,last=END
+ELLD,zero,exit=0,last=END
+CSRLIST,n1,exit=0,last=END
+CSRLIST,poisson,exit=0,last=END
+CSRLIST,random,exit=0,last=END
+CSRLIST,emptyrow,exit=-1073740940,last=STEP 2
+CSRLIST,denserow,exit=0,last=END
+CSRLIST,rect,exit=0,last=END
+CSRLIST,zero,exit=-1073740940,last=STEP 4
+CSRD,n1,exit=0,last=END
+CSRD,poisson,exit=0,last=END
+CSRD,random,exit=0,last=END
+CSRD,emptyrow,exit=0,last=END
+CSRD,denserow,exit=0,last=END
+CSRD,rect,exit=0,last=END
+CSRD,zero,exit=0,last=END
+CSRL,n1,exit=0,last=END
+CSRL,poisson,exit=0,last=END
+CSRL,random,exit=0,last=END
+CSRL,emptyrow,exit=0,last=END
+CSRL,denserow,exit=0,last=END
+CSRL,rect,exit=0,last=END
+CSRL,zero,exit=0,last=END
+CSRU,n1,exit=0,last=END
+CSRU,poisson,exit=0,last=END
+CSRU,random,exit=0,last=END
+CSRU,emptyrow,exit=0,last=END
+CSRU,denserow,exit=0,last=END
+CSRU,rect,exit=0,last=END
+CSRU,zero,exit=0,last=END
+CSRCOO,n1,exit=0,last=END
+CSRCOO,poisson,exit=0,last=END
+CSRCOO,random,exit=0,last=END
+CSRCOO,emptyrow,exit=0,last=END
+CSRCOO,denserow,exit=0,last=END
+CSRCOO,rect,exit=0,last=END
+CSRCOO,zero,exit=0,last=END
+CUCSR,n1,exit=0,last=END
+CUCSR,poisson,exit=0,last=END
+CUCSR,random,exit=0,last=END
+CUCSR,emptyrow,exit=0,last=END
+CUCSR,denserow,exit=0,last=END
+CUCSR,rect,exit=0,last=END
+CUCSR,zero,exit=0,last=END
+CSR5,n1,exit=0,last=END
+CSR5,poisson,exit=0,last=END
+CSR5,random,exit=0,last=END
+CSR5,emptyrow,exit=0,last=END
+CSR5,denserow,exit=0,last=END
+CSR5,rect,exit=0,last=END
+CSR5,zero,exit=0,last=END
+FMT46_DONE

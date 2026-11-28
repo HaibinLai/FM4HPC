@@ -1,0 +1,442 @@
+CG,n1,CSR,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,n1,ELL,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,emptyrow,CSR,exit=0,DONE CG cuda=an illegal memory access was encountered
+CG,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE CG cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE CG cuda=an...was encountered:String) [], RemoteException
+CG,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE CG cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE CG cuda=an...was encountered:String) [], RemoteException
+CG,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+CG,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE CG cuda=no error     + CategoryInfo          : NotSpecified: (DONE CG cuda=no error:String) [], RemoteException
+PCG,n1,CSR,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,n1,ELL,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,emptyrow,CSR,exit=0,DONE PCG cuda=an illegal memory access was encountered
+PCG,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE PCG cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PCG cuda=a...was encountered:String) [], RemoteException
+PCG,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE PCG cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PCG cuda=a...was encountered:String) [], RemoteException
+PCG,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+PCG,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE PCG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCG cuda=no error:String) [], RemoteException
+BICGSTAB,n1,CSR,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,n1,ELL,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,emptyrow,CSR,exit=0,DONE BICGSTAB cuda=an illegal memory access was encountered
+BICGSTAB,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE BICGSTAB c...was encountered:String) [], RemoteException
+BICGSTAB,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE BICGSTAB c...was encountered:String) [], RemoteException
+BICGSTAB,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+BICGSTAB,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE BICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,n1,CSR,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,n1,ELL,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,emptyrow,CSR,exit=0,DONE PBICGSTAB cuda=an illegal memory access was encountered
+PBICGSTAB,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB ...was encountered:String) [], RemoteException
+PBICGSTAB,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB ...was encountered:String) [], RemoteException
+PBICGSTAB,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+PBICGSTAB,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE PBICGSTAB cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICGSTAB cuda=no error:String) [], RemoteException
+QMR,n1,CSR,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,n1,ELL,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,n1,SELLP,exit=-1073741676,
+QMR,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,identity8,SELLP,exit=-1073741676,
+QMR,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,diag64,SELLP,exit=-1073741676,
+QMR,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,tridiag2,SELLP,exit=-1073741676,
+QMR,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,zero_rhs,SELLP,exit=-1073741676,
+QMR,emptyrow,CSR,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,emptyrow,SELLP,exit=-1073741676,
+QMR,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE QMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE QMR cuda=no error:String) [], RemoteException
+QMR,denserow,SELLP,exit=-1073741676,
+PQMR,n1,CSR,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,n1,ELL,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,n1,SELLP,exit=-1073741676,
+PQMR,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,identity8,SELLP,exit=-1073741676,
+PQMR,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,diag64,SELLP,exit=-1073741676,
+PQMR,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,tridiag2,SELLP,exit=-1073741676,
+PQMR,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,zero_rhs,SELLP,exit=-1073741676,
+PQMR,emptyrow,CSR,exit=-1073741571,
+PQMR,emptyrow,ELL,exit=-1073741571,
+PQMR,emptyrow,SELLP,exit=-1073741676,
+PQMR,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE PQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PQMR cuda=no error:String) [], RemoteException
+PQMR,denserow,SELLP,exit=-1073741676,
+TFQMR,n1,CSR,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,n1,ELL,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,emptyrow,CSR,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+TFQMR,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE TFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE TFQMR cuda=no error:String) [], RemoteException
+PTFQMR,n1,CSR,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,n1,ELL,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,emptyrow,CSR,exit=0,DONE PTFQMR cuda=an illegal memory access was encountered
+PTFQMR,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PTFQMR cud...was encountered:String) [], RemoteException
+PTFQMR,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PTFQMR cud...was encountered:String) [], RemoteException
+PTFQMR,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+PTFQMR,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE PTFQMR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PTFQMR cuda=no error:String) [], RemoteException
+GMRES,n1,CSR,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,n1,ELL,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,emptyrow,CSR,exit=0,DONE GMRES cuda=an illegal memory access was encountered
+GMRES,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE GMRES cuda...was encountered:String) [], RemoteException
+GMRES,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE GMRES cuda...was encountered:String) [], RemoteException
+GMRES,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+GMRES,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE GMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE GMRES cuda=no error:String) [], RemoteException
+PGMRES,n1,CSR,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,n1,ELL,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,emptyrow,CSR,exit=0,DONE PGMRES cuda=an illegal memory access was encountered
+PGMRES,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PGMRES cud...was encountered:String) [], RemoteException
+PGMRES,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PGMRES cud...was encountered:String) [], RemoteException
+PGMRES,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+PGMRES,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE PGMRES cuda=no error     + CategoryInfo          : NotSpecified: (DONE PGMRES cuda=no error:String) [], RemoteException
+IDR,n1,CSR,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,n1,ELL,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,emptyrow,CSR,exit=0,DONE IDR cuda=an illegal memory access was encountered
+IDR,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE IDR cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE IDR cuda=a...was encountered:String) [], RemoteException
+IDR,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE IDR cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE IDR cuda=a...was encountered:String) [], RemoteException
+IDR,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+IDR,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE IDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE IDR cuda=no error:String) [], RemoteException
+PIDR,n1,CSR,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,n1,ELL,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,emptyrow,CSR,exit=0,DONE PIDR cuda=an illegal memory access was encountered
+PIDR,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=...was encountered:String) [], RemoteException
+PIDR,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=...was encountered:String) [], RemoteException
+PIDR,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+PIDR,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE PIDR cuda=no error     + CategoryInfo          : NotSpecified: (DONE PIDR cuda=no error:String) [], RemoteException
+CGS,n1,CSR,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,n1,ELL,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,emptyrow,CSR,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+CGS,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE CGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE CGS cuda=no error:String) [], RemoteException
+PCGS,n1,CSR,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,n1,ELL,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,emptyrow,CSR,exit=0,DONE PCGS cuda=an illegal memory access was encountered
+PCGS,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=...was encountered:String) [], RemoteException
+PCGS,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=an illegal memory access was encountered     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=...was encountered:String) [], RemoteException
+PCGS,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+PCGS,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE PCGS cuda=no error     + CategoryInfo          : NotSpecified: (DONE PCGS cuda=no error:String) [], RemoteException
+BICG,n1,CSR,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,n1,ELL,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,n1,SELLP,exit=-1073741676,
+BICG,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,identity8,SELLP,exit=-1073741676,
+BICG,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,diag64,SELLP,exit=-1073741676,
+BICG,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,tridiag2,SELLP,exit=-1073741676,
+BICG,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,zero_rhs,SELLP,exit=-1073741676,
+BICG,emptyrow,CSR,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,emptyrow,SELLP,exit=-1073741676,
+BICG,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE BICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE BICG cuda=no error:String) [], RemoteException
+BICG,denserow,SELLP,exit=-1073741676,
+PBICG,n1,CSR,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,n1,ELL,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,n1,SELLP,exit=-1073741676,
+PBICG,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,identity8,SELLP,exit=-1073741676,
+PBICG,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,diag64,SELLP,exit=-1073741676,
+PBICG,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,tridiag2,SELLP,exit=-1073741676,
+PBICG,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,zero_rhs,SELLP,exit=-1073741676,
+PBICG,emptyrow,CSR,exit=-1073741571,
+PBICG,emptyrow,ELL,exit=-1073741571,
+PBICG,emptyrow,SELLP,exit=-1073741676,
+PBICG,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE PBICG cuda=no error     + CategoryInfo          : NotSpecified: (DONE PBICG cuda=no error:String) [], RemoteException
+PBICG,denserow,SELLP,exit=-1073741676,
+LSQR,n1,CSR,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,n1,ELL,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,n1,SELLP,exit=-1073741676,
+LSQR,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,identity8,SELLP,exit=-1073741676,
+LSQR,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,diag64,SELLP,exit=-1073741676,
+LSQR,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,tridiag2,SELLP,exit=-1073741676,
+LSQR,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,zero_rhs,SELLP,exit=-1073741676,
+LSQR,emptyrow,CSR,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,emptyrow,SELLP,exit=-1073741676,
+LSQR,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE LSQR cuda=no error     + CategoryInfo          : NotSpecified: (DONE LSQR cuda=no error:String) [], RemoteException
+LSQR,denserow,SELLP,exit=-1073741676,
+JACOBI,n1,CSR,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,n1,ELL,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,emptyrow,CSR,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+JACOBI,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE JACOBI cuda=no error     + CategoryInfo          : NotSpecified: (DONE JACOBI cuda=no error:String) [], RemoteException
+BA,n1,CSR,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,n1,ELL,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,emptyrow,CSR,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+BA,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE BA cuda=no error     + CategoryInfo          : NotSpecified: (DONE BA cuda=no error:String) [], RemoteException
+ITERREF,n1,CSR,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,n1,ELL,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,n1,SELLP,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,identity8,SELLP,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,diag64,SELLP,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,tridiag2,SELLP,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,zero_rhs,SELLP,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,emptyrow,CSR,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,emptyrow,SELLP,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+ITERREF,denserow,SELLP,exit=0,round45_sparse_edge.exe : DONE ITERREF cuda=no error     + CategoryInfo          : NotSpecified: (DONE ITERREF cuda=no error:String) [], RemoteException
+BOMBARDMENT,n1,CSR,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,n1,ELL,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,n1,SELLP,exit=-1073741676,
+BOMBARDMENT,identity8,CSR,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,identity8,ELL,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,identity8,SELLP,exit=-1073741676,
+BOMBARDMENT,diag64,CSR,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,diag64,ELL,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,diag64,SELLP,exit=-1073741676,
+BOMBARDMENT,tridiag2,CSR,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,tridiag2,ELL,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,tridiag2,SELLP,exit=-1073741676,
+BOMBARDMENT,zero_rhs,CSR,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,zero_rhs,ELL,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,zero_rhs,SELLP,exit=-1073741676,
+BOMBARDMENT,emptyrow,CSR,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,emptyrow,ELL,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,emptyrow,SELLP,exit=-1073741676,
+BOMBARDMENT,denserow,CSR,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,denserow,ELL,exit=0,round45_sparse_edge.exe : DONE BOMBARDMENT cuda=no error     + CategoryInfo          : NotSpecified: (DONE BOMBARDMENT cuda=no error:String) [], RemoteException
+BOMBARDMENT,denserow,SELLP,exit=-1073741676,
+ISO45_DONE

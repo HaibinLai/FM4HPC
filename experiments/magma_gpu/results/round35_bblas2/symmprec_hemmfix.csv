@@ -1,0 +1,6 @@
+symmprec,magmablas_dsymm,m=4,maxdiff=0,OK
+symmprec,magma_dsymm(cublas),m=4,maxdiff=0,OK
+symmprec,magmablas_dsymm,m=33,maxdiff=0,OK
+symmprec,magma_dsymm(cublas),m=33,maxdiff=0,OK
+symmprec,magmablas_dsymm,m=64,maxdiff=0,OK
+symmprec,magma_dsymm(cublas),m=64,maxdiff=0,OK

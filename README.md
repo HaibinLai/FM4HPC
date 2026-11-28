@@ -1,7 +1,8 @@
 # FM4HPC：用形式化方法检验“低精度模拟高精度”的数值算子
 
 - 一页简介：`BRIEF_zh.md`；失效类型分类与传统方法：`operators/TAXONOMY_zh.md`；完整工作记录：`HANDOFF.md`。
-- Lean 4 证明（只用 core Lean，不用 Mathlib）：`lean/OptimiKahan/`，检查命令见其中的 `README.md`。
+- Lean 4 证明（只用 core Lean，不用 Mathlib）：`lean/` 是一个 Lake 包，`cd lean && lake build` 检查全部模块；模块说明见 `lean/OptimiKahan/README.md`，MAGMA 部分在 `lean/OptimiKahan/Magma/`。
+- MAGMA 审计：覆盖表与清点在 `operators/magma/`，GPU 探针、脚本与结果在 `experiments/magma_gpu/`（`probes/`、`scripts/`、`shims/`、`inputs/`、`results/`）。
 - 实验与结果：`experiments/`，各子目录对应 HANDOFF 的章节：
   - `cublas_emu`：cuBLAS FP64 仿真；
   - `cusolver_irs`：cuSOLVER IRS；

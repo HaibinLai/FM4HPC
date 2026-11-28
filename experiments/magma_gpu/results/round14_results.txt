@@ -1,0 +1,47 @@
+######## lascl2
+zlascl2 m=128 (D ends exactly at an unmapped page): info=0  cudaDeviceSynchronize: no error
+zlascl2 m=100 (D ends exactly at an unmapped page): info=0  cudaDeviceSynchronize: no error
+exit=0
+######## potf2
+zpotf2_gpu n=128 HPD, 1000 runs: info histogram: 0 x1000; runs differing bitwise from run 0: 0; runs with relative error > 1e-10 against LAPACK: 0
+exit=0
+######## lag2c
+zlag2c from two host threads, two queues, 2000 calls each: overflowing matrix reported 0 in 1889 calls; clean matrix reported 1 in 7 calls
+exit=0
+######## heevj
+zheevj expert, 64 Hermitian 16x16, max_sweeps = 0: matrices with info != 0: 0; with wrong eigenvalues: 64
+                                     max_sweeps = 1: info != 0: 64; wrong eigenvalues: 64
+                                     max_sweeps = 100, 200 repetitions (race check): info != 0 in 0, wrong eigenvalues in 0 of 12800 matrix solves
+exit=0
+######## sparse
+zmtranspose of a 1x1000 CPU CSR ...
+timeout: the monitored command dumped core
+exit=139
+unmqr      k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+unmqr      k=  1 nalloc=  1 info=-113   diff_to_unfailed=1.27       reported  [failing site: magma_zunmqr<]
+unmql      k=  0 nalloc=  2 info=0      diff_to_unfailed=0          ok
+unmql      k=  1 nalloc=  1 info=-113   diff_to_unfailed=1.3        reported  [failing site: magma_zunmql<]
+unmql      k=  2 nalloc=  2 info=-112   diff_to_unfailed=1.3        reported  [failing site: magma_zunmql<]
+unmlq      k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+unmlq      k=  1 nalloc=  1 info=-113   diff_to_unfailed=1.11       reported  [failing site: magma_zunmlq<]
+ungqr2     k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+ungqr2     k=  1 nalloc=  1 info=-113   diff_to_unfailed=55         reported  [failing site: magma_zungqr2<]
+trevc3     k=  0 nalloc=  0 info=0      diff_to_unfailed=0          ok
+trevc3_mt  k=  0 nalloc=  0 info=0      diff_to_unfailed=0          ok
+ROUND14_DONE
+round14_probe.cpp:90:35: error: ‘r’ was not declared in this scope
+######## sparse (MTX_ONLY)
+zmtranspose of a 1x1000 CPU CSR ...
+timeout: the monitored command dumped core
+exit=139
+0
+0 MiB, 0 %
+######## sparse (MTX_ONLY)
+% Reading sparse matrix from file (truncated.mtx): done. Converting to CSR: done.
+magma_z_csr_mtx of a file announcing 3 entries but containing 2: ret=0 nnz=3  entries: (0,1) (1,1) (1,1)
+exit=0
+ROUND14B_DONE
+0
+0 MiB, 0 %
+
+[exited with code 0]

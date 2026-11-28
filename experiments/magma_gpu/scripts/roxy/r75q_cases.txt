@@ -1,0 +1,12 @@
+qr 100 4 cpu 0
+qr 100 4 cpu 3
+qr 50 8 cpu 0
+qr 300 16 cpu 7
+qr 8 8 cpu 0
+qr 4 8 cpu 0
+qr 100 4 dev 0
+qr 100 4 dev 3
+qr 50 8 dev 0
+qr 300 16 dev 7
+qr 8 8 dev 0
+qr 4 8 dev 0

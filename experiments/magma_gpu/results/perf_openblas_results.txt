@@ -1,0 +1,40 @@
+0 MiB, 0 %
+magma-fix/lib/libmagma.so
+magma-orig/lib/libmagma.so
+######## orig (OpenBLAS)
+== timing (well-conditioned, k = 0), best of 3 after one warm-up ==
+dsgesv_iteref  n= 1024  time=  0.0200 s  iter=   2 info=0  relerr=6.52e-13
+dhgesv_iteref  n= 1024  time=  0.0178 s  iter=   2 info=0  relerr=9.53e-13
+dsgesv_iteref  n= 2048  time=  0.0323 s  iter=   2 info=0  relerr=1.84e-12
+dhgesv_iteref  n= 2048  time=  0.0721 s  iter=   2 info=0  relerr=1.99e-12
+dsgesv_iteref  n= 4096  time=  0.0809 s  iter=   2 info=0  relerr=2.98e-12
+dhgesv_iteref  n= 4096  time=  0.1120 s  iter=   2 info=0  relerr=3.19e-12
+dsgesv_iteref  n= 8192  time=  0.2058 s  iter=   2 info=0  relerr=8.55e-12
+dhgesv_iteref  n= 8192  time=  0.1693 s  iter=   2 info=0  relerr=1.93e-11
+== trans = MagmaTrans (A nonsymmetric): solution should satisfy A^T x = b ==
+dsgesv_iteref  trans=T n=1024  iter=   2 info=0  relerr vs A^T-solution=6.61e-02
+dhgesv_iteref  trans=T n=1024  iter=   2 info=0  relerr vs A^T-solution=6.61e-02
+== nrhs = 2 ==
+dsgesv_iteref  nrhs=2 n=1024  iter=   2 info=0  relerr col0=1.09e-12  col1=1.00e+00  max|x col1|=0
+dhgesv_iteref  nrhs=2 n=1024  iter=   2 info=0  relerr col0=7.64e-13  col1=1.00e+00  max|x col1|=0
+######## fix (OpenBLAS)
+== timing (well-conditioned, k = 0), best of 3 after one warm-up ==
+dsgesv_iteref  n= 1024  time=  0.0410 s  iter=   3 info=0  relerr=2.89e-15
+dhgesv_iteref  n= 1024  time=  0.0615 s  iter=   3 info=0  relerr=2.44e-15
+dsgesv_iteref  n= 2048  time=  0.1781 s  iter=   3 info=0  relerr=4.89e-15
+dhgesv_iteref  n= 2048  time=  0.2587 s  iter=   3 info=0  relerr=5.34e-15
+dsgesv_iteref  n= 4096  time=  0.6817 s  iter=   3 info=0  relerr=6.89e-15
+dhgesv_iteref  n= 4096  time=  0.8210 s  iter=   3 info=0  relerr=6.44e-15
+dsgesv_iteref  n= 8192  time=  3.3355 s  iter=   3 info=0  relerr=1.05e-14
+dhgesv_iteref  n= 8192  time=  3.2747 s  iter=   3 info=0  relerr=9.55e-15
+== trans = MagmaTrans (A nonsymmetric): solution should satisfy A^T x = b ==
+dsgesv_iteref  trans=T n=1024  iter=  -1 info=0  relerr vs A^T-solution=3.00e-15
+dhgesv_iteref  trans=T n=1024  iter=  -1 info=0  relerr vs A^T-solution=3.00e-15
+== nrhs = 2 ==
+dsgesv_iteref  nrhs=2 n=1024  iter=   3 info=0  relerr col0=3.11e-15  col1=3.11e-15  max|x col1|=2
+dhgesv_iteref  nrhs=2 n=1024  iter=   3 info=0  relerr col0=3.11e-15  col1=3.11e-15  max|x col1|=2
+######## FP64 dgesv_gpu + host certification (OpenBLAS)
+n= 1024  FP64 dgesv_gpu=  0.0108 s (info 0) | host certification: D2H copy= 0.0110 s, Dot2 pass= 0.0132 s, total= 0.0242 s  (r=0.998084)
+n= 2048  FP64 dgesv_gpu=  0.0405 s (info 0) | host certification: D2H copy= 0.0554 s, Dot2 pass= 0.0816 s, total= 0.1370 s  (r=0.998874)
+n= 4096  FP64 dgesv_gpu=  0.0954 s (info 0) | host certification: D2H copy= 0.1366 s, Dot2 pass= 0.2798 s, total= 0.4165 s  (r=0.999704)
+n= 8192  FP64 dgesv_gpu=  0.2894 s (info 0) | host certification: D2H copy= 0.5540 s, Dot2 pass= 1.8575 s, total= 2.4115 s  (r=0.99981)

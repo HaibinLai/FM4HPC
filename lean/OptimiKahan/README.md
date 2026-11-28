@@ -1,29 +1,66 @@
-# Lean models: optimi's Kahan update (`Kahan.lean`), OzBLAS's slicing lemma (`OzSlice.lean`), FP64 recombination (`OzRecombine.lean`) ozIMMU's auto slice selection (`OzimmuAuto.lean`) GEMMul8's CRT range (`Gemmul8Range.lean`) the cuBLAS ADP coarsened-ESC contract (`CublasEsc.lean`) the ADP estimate plus per-element error bound (`AdpEsc.lean`) the cuSOLVER IRS contract, scaling oracle and post-check (`IrsContract.lean`) a code-level model of MAGMA's FGMRES-IR (`MagmaFgmres.lean`) and the proof of a fix for it (`MagmaFixed.lean`), max reductions that drop NaN (`MaxFold.lean`, defect class D11) and the necessary-and-sufficient acceptance contract of iterative refinement (`IrDriver.lean`)
+# Lean models (`lean/OptimiKahan/`)
 
-Core Lean only (no Mathlib, no network). From the project root:
+Core Lean 4 v4.36.0 only (no Mathlib, no network), built as one Lake package.
+
+## Build and check
 
 ```sh
-L=.toolchain/elan/toolchains/leanprover--lean4---v4.36.0/bin
-cd lean/OptimiKahan
-../../$L/lean Kahan.lean                                  # optimi Kahan update; log: check_log.txt
-../../$L/lean -o Kahan.olean Kahan.lean                   # build the module that OzSlice imports
-LEAN_PATH=$PWD ../../$L/lean OzSlice.lean                 # OzBLAS slicing lemma; log: check_log_ozslice.txt
-LEAN_PATH=$PWD ../../$L/lean OzRecombine.lean             # OzBLAS FP64 recombination; log: check_log_ozrecombine.txt
-../../$L/lean OzimmuAuto.lean                             # ozIMMU fp64_int8_auto (standalone); log: check_log_ozimmuauto.txt
-../../$L/lean Gemmul8Range.lean                           # GEMMul8 CRT range (standalone); log: check_log_gemmul8range.txt
-../../$L/lean AdpEsc.lean                                 # cuBLAS ADP / ESC estimate (standalone); log: check_log_adpesc.txt
-../../$L/lean IrsContract.lean                            # cuSOLVER IRS contract / oracle / post-check (standalone, uses core Rat); log: check_log_irscontract.txt
-../../$L/lean -o IrsContract.olean IrsContract.lean       # build the module that MagmaFgmres imports
-LEAN_PATH=$PWD ../../$L/lean MagmaFgmres.lean             # MAGMA FGMRES-IR (GMSTRS) code model; log: check_log_magmafgmres.txt
-LEAN_PATH=$PWD ../../$L/lean -o MagmaFgmres.olean MagmaFgmres.lean   # build the module that MagmaFixed imports
-LEAN_PATH=$PWD ../../$L/lean MagmaFixed.lean              # the GMSTRS fix and its soundness proof; log: check_log_magmafixed.txt
-../../$L/lean CublasEsc.lean                              # cuBLAS ADP coarsened-ESC contract (standalone); log: check_log_cublasesc.txt
-../../$L/lean MaxFold.lean                                # NaN-dropping max reductions, D11 (standalone); log: check_log_maxfold.txt
-../../$L/lean -o MaxFold.olean MaxFold.lean               # build the module that IrDriver imports
-LEAN_PATH=$PWD ../../$L/lean IrDriver.lean                # IR acceptance contract: C1-C4 iff; log: check_log_irdriver.txt
+TC=$PWD/.toolchain/elan/toolchains/leanprover--lean4---v4.36.0/bin   # from the project root
+cd lean && PATH=$TC:$PATH lake build                                 # builds and checks every module
 ```
 
-Expected: only `#print axioms` lines (no `sorryAx`), exit code 0 (the word "error" appears in the theorem name `recombine_error`). `Kahan.olean`, `IrsContract.olean`, `MagmaFgmres.olean` and `MaxFold.olean` are build artifacts (not kept; it depends on the exact Lean version).
-The Lean toolchain (~3 GB) lives in the project's hidden `.toolchain/` directory; exclude it when archiving the project.
+Expected: `Build completed successfully`, and the `#print axioms` output lists only `propext`, `Classical.choice` and
+`Quot.sound` (never `sorryAx`). The axioms of every printed theorem are kept in `lean/logs/axioms.txt`; regenerate it with
 
-See HANDOFF.md section 13 (Kahan.lean), section 14 (OzSlice.lean), section 15 (OzRecombine.lean) section 16 (OzimmuAuto.lean) section 17 (Gemmul8Range.lean) section 20 (CublasEsc.lean) section 21 (AdpEsc.lean) section 22.6 (IrsContract.lean) section 24 (MagmaFgmres.lean, MagmaFixed.lean) and section 26 (MaxFold.lean, IrDriver.lean) for what is proved, what is assumed, and how the models relate to PyTorch / CUDA.
+```sh
+cd lean && PATH=$TC:$PATH lake build 2>&1 | grep -E "depends on axioms|does not depend on any axioms" | sed 's/^info: //' > logs/axioms.txt
+```
+
+The Lean toolchain (~3 GB) lives in the project's hidden `.toolchain/` directory; `.lake/` is the build directory. Both are
+ignored by git.
+
+## Modules
+
+| Module | Subject |
+|---|---|
+| `Kahan.lean` | optimi's Kahan update |
+| `OzSlice.lean`, `OzRecombine.lean` | OzBLAS slicing lemma and FP64 recombination (import `Kahan`) |
+| `OzimmuAuto.lean` | ozIMMU automatic slice selection |
+| `Gemmul8Range.lean` | GEMMul8 CRT range |
+| `CublasEsc.lean`, `AdpEsc.lean` | cuBLAS ADP coarsened-ESC contract; ADP estimate and per-element error bound |
+| `IrsContract.lean` | cuSOLVER IRS contract, scaling oracle and post-check |
+| `MaxFold.lean`, `IrDriver.lean` | NaN-dropping max reductions (D11); the IR acceptance contract C1–C4 (imports `MaxFold`) |
+| `Magma/Fgmres.lean`, `Magma/Fixed.lean` | MAGMA FGMRES-IR (GMSTRS) code model; the fix and its soundness proof |
+| `Magma/DenseIR.lean` | the other MAGMA mixed-precision dense solvers (zcgesv, zcposv, zchesv, RBT, dshposv) |
+| `Magma/Dense/StatusAudit.lean` | dense status-loss audit: LU, Cholesky, LDLᵀ, trtri, batched/vbatched, FP16 conversion |
+| `Magma/Dense/QrEigen.lean` | QR, least squares, generalized and tridiagonal eigensolvers, multi-GPU drivers |
+| `Magma/Dense/FaultInjection.lean` | allocation-failure paths and helpers that drop a sub-call status |
+| `Magma/Dense/NonZ.lean` | non-z files on the z call graph, review findings, 32-bit size arithmetic |
+| `Magma/Dense/Workspace.lean` | workspace sizes (lwork/lrwork/liwork): queried vs. accepted vs. used, over all 83 z drivers |
+| `Magma/Dense/ArgChecks.lean` | argument checks: reported `−k` vs. position of the tested argument (58 checks, 33 routines); unchecked `uplo` in zcposv/zchesv_gpu |
+| `Magma/Dense/Differential.lean` | findings of the round-27 differential sweep against LAPACK: zgeqp3/zlaqps host-device inconsistency, gemm k = 0, gemv beta = 0, gels singular, heevdx n = 1, n = 0 small paths |
+| `Magma/Kernels.lean` | status logic inside the magmablas GPU kernels |
+| `Magma/Sparse/Solvers.lean` | sparse Krylov solvers and preconditioner setup |
+| `Magma/Sparse/Control.lean` | sparse control layer: conversion, scaling, I/O, preconditioner apply |
+| `Magma/Sparse/Blas.lean` | sparse BLAS layer: SpMV kernels, dot products, sorting, LOBPCG helpers |
+| `Magma/MultiGpu.lean` | multi-GPU status bookkeeping, proved for every ngpu, nb, n |
+
+Namespaces are unchanged by the reorganisation: theorem `MagmaAudit.x` and `MagmaSparse.x` keep their names.
+
+## Where the old files went (reorganisation of 2026-11-26)
+
+Older documents (`HANDOFF.md` up to §29.26 and the review reports in `operators/magma/reviews/`) cite the earlier flat
+layout. `MagmaFgmres.lean` → `Magma/Fgmres.lean`, `MagmaFixed.lean` → `Magma/Fixed.lean`, `MagmaDense.lean` →
+`Magma/DenseIR.lean`, `MagmaMultiGpu.lean` → `Magma/MultiGpu.lean`, and the per-file `check_log_*.txt` → `lean/logs/axioms.txt`.
+The two large files were split by subject:
+
+| Old file and sections | New module |
+|---|---|
+| `MagmaAudit.lean` §1, §2, §3, §4, §5, §6, §7, §8, §9, §6b, §10, §15, §16, §17 | `Magma/Dense/StatusAudit.lean` |
+| `MagmaAudit.lean` §18, §19, §20 | `Magma/Dense/QrEigen.lean` |
+| `MagmaAudit.lean` §21, §22, §26 | `Magma/Dense/FaultInjection.lean` |
+| `MagmaAudit.lean` §23, §24, §25, §30 | `Magma/Kernels.lean` |
+| `MagmaAudit.lean` §27, §28, §29, §31 | `Magma/Dense/NonZ.lean` |
+| `MagmaSparse.lean` §1, §2, §3, §4, §5, §6, §7, §8, §9, §10, §11, §12 | `Magma/Sparse/Solvers.lean` |
+| `MagmaSparse.lean` §13, §14, §15, §16, §20, §21, §22 | `Magma/Sparse/Control.lean` |
+| `MagmaSparse.lean` §17, §18, §19 | `Magma/Sparse/Blas.lean` |

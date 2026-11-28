@@ -1,0 +1,1289 @@
+
+== potrfU 2 4096 0
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 1
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 2
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 3
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 4
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 5
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 6
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 7
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 8
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 9
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 10
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 11
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 12
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 13
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 14
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 15
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 16
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 17
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 18
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 19
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 20
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 21
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 22
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 23
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 24
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 25
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 26
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 27
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 28
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 29
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 30
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 31
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 32
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 33
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 34
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 35
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 36
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 37
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 38
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 39
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 40
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 41
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 42
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 43
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 44
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 45
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 46
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 47
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 48
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 49
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 50
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 51
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 52
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 53
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 54
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 55
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 56
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 57
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 58
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 59
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 60
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 61
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 62
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 63
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 64
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 65
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 66
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 67
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 68
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 69
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 70
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 71
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 72
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 73
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 74
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 75
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 76
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 77
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 78
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 79
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 80
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 81
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 82
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 83
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 84
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 85
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 86
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 87
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 88
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 89
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 90
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 91
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 92
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 93
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 94
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 95
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 96
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 97
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 98
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 99
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 100
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 101
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 102
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 103
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 104
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 105
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 106
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 107
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 108
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 109
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 110
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 111
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 112
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 113
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 114
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 115
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 116
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 117
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 118
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 119
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 120
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 121
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 122
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 123
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 124
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 125
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 126
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 127
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 128
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 129
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 130
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 131
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 132
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 133
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 134
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 135
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 136
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 137
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 138
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 139
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 140
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 141
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 142
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 143
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 144
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 145
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 146
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 147
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 148
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 149
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 150
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 151
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 152
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 153
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 154
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 155
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 156
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 157
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 158
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 159
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== potrfU 2 4096 160
+round52_mgpu_fuzz.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r52.ps1:15 char:12
++     $out = & $exe $r $g $n $t 100 2>> $log; $ec = $LASTEXITCODE
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

@@ -1,0 +1,193 @@
+0 MiB, 0 %
+BICG            | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=3.43e-11   | ok
+BICG            | complex HPD            | ret=0     info=0     numiter=32    | finite=1 true_rel_res=6.68e-11   | ok
+BICG            | complex non-Hermitian  | ret=0     info=0     numiter=7     | finite=1 true_rel_res=3.05e-11   | ok
+BICG            | tiny b=1e-20, x0 random | ret=0     info=0     numiter=30    | finite=1 true_rel_res=1.87e+03   | SILENT-FAIL
+BICG            | b[0]=NaN               | ret=0     info=0     numiter=1     | finite=1 true_rel_res=nan        | SILENT-FAIL
+BICG            | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PBICG           | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=3.43e-11   | ok
+PBICG           | complex HPD            | ret=0     info=0     numiter=32    | finite=1 true_rel_res=6.68e-11   | ok
+PBICG           | complex non-Hermitian  | ret=0     info=0     numiter=7     | finite=1 true_rel_res=3.05e-11   | ok
+PBICG           | tiny b=1e-20, x0 random | ret=0     info=0     numiter=30    | finite=1 true_rel_res=1.87e+03   | SILENT-FAIL
+PBICG           | b[0]=NaN               | ret=0     info=0     numiter=1     | finite=1 true_rel_res=nan        | SILENT-FAIL
+PBICG           | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+BICGSTAB        | real SPD (control)     | ret=0     info=0     numiter=11    | finite=1 true_rel_res=2.09e-11   | ok
+BICGSTAB        | complex HPD            | ret=0     info=0     numiter=24    | finite=1 true_rel_res=4.05e-11   | ok
+BICGSTAB        | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=1.76e-12   | ok
+BICGSTAB        | tiny b=1e-20, x0 random | ret=0     info=0     numiter=0     | finite=1 true_rel_res=1.18e+20   | SILENT-FAIL
+BICGSTAB        | b[0]=NaN               | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+BICGSTAB        | exact x0 (residual 0)  | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=-nan       | reported-failure
+BICGSTABMERGE   | real SPD (control)     | ret=0     info=0     numiter=11    | finite=1 true_rel_res=2.21e-11   | ok
+BICGSTABMERGE   | complex HPD            | ret=0     info=0     numiter=24    | finite=1 true_rel_res=4.2e-11    | ok
+BICGSTABMERGE   | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=2.03e-12   | ok
+BICGSTABMERGE   | tiny b=1e-20, x0 random | ret=0     info=0     numiter=0     | finite=1 true_rel_res=1.18e+20   | SILENT-FAIL
+BICGSTABMERGE   | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+BICGSTABMERGE   | exact x0 (residual 0)  | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=0          | false-failure
+PBICGSTAB       | real SPD (control)     | ret=0     info=0     numiter=11    | finite=1 true_rel_res=2.67e-11   | ok
+PBICGSTAB       | complex HPD            | ret=0     info=0     numiter=23    | finite=1 true_rel_res=7.83e-11   | ok
+PBICGSTAB       | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=8.76e-13   | ok
+PBICGSTAB       | tiny b=1e-20, x0 random | ret=0     info=0     numiter=19    | finite=1 true_rel_res=2.47e+03   | SILENT-FAIL
+PBICGSTAB       | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+PBICGSTAB       | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PBICGSTABMERGE  | real SPD (control)     | ret=0     info=0     numiter=11    | finite=1 true_rel_res=2.21e-11   | ok
+PBICGSTABMERGE  | complex HPD            | ret=0     info=0     numiter=24    | finite=1 true_rel_res=4.2e-11    | ok
+PBICGSTABMERGE  | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=2.03e-12   | ok
+PBICGSTABMERGE  | tiny b=1e-20, x0 random | ret=0     info=0     numiter=0     | finite=1 true_rel_res=1.18e+20   | SILENT-FAIL
+PBICGSTABMERGE  | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+PBICGSTABMERGE  | exact x0 (residual 0)  | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=0          | false-failure
+CG              | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=3.43e-11   | ok
+CG              | complex HPD            | ret=0     info=0     numiter=32    | finite=1 true_rel_res=6.68e-11   | ok
+CG              | complex non-Hermitian  | ret=0     info=0     numiter=11    | finite=1 true_rel_res=2.41e-11   | ok
+CG              | tiny b=1e-20, x0 random | ret=0     info=0     numiter=0     | finite=1 true_rel_res=1.18e+20   | SILENT-FAIL
+CG              | b[0]=NaN               | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+CG              | exact x0 (residual 0)  | ret=-203  info=-203  numiter=0     | finite=1 true_rel_res=0          | false-failure
+CGMERGE         | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=3.43e-11   | ok
+CGMERGE         | complex HPD            | ret=-205  info=-205  numiter=1000  | finite=1 true_rel_res=2.56e+05   | reported-failure
+CGMERGE         | complex non-Hermitian  | ret=-205  info=-205  numiter=1000  | finite=1 true_rel_res=8.09e+19   | reported-failure
+CGMERGE         | tiny b=1e-20, x0 random | ret=0     info=0     numiter=0     | finite=1 true_rel_res=1          | SILENT-FAIL
+CGMERGE         | b[0]=NaN               | ret=-205  info=-205  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+CGMERGE         | exact x0 (residual 0)  | ret=0     info=0     numiter=3     | finite=1 true_rel_res=4.36e-17   | ok
+PCG             | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=3.43e-11   | ok
+PCG             | complex HPD            | ret=0     info=0     numiter=32    | finite=1 true_rel_res=6.68e-11   | ok
+PCG             | complex non-Hermitian  | ret=0     info=0     numiter=11    | finite=1 true_rel_res=2.41e-11   | ok
+PCG             | tiny b=1e-20, x0 random | ret=0     info=0     numiter=30    | finite=1 true_rel_res=1.87e+03   | SILENT-FAIL
+PCG             | b[0]=NaN               | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+PCG             | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PCGMERGE        | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=3.43e-11   | ok
+PCGMERGE        | complex HPD            | ret=-205  info=-205  numiter=1000  | finite=1 true_rel_res=2.56e+05   | reported-failure
+PCGMERGE        | complex non-Hermitian  | ret=-205  info=-205  numiter=1000  | finite=1 true_rel_res=8.09e+19   | reported-failure
+PCGMERGE        | tiny b=1e-20, x0 random | ret=0     info=0     numiter=30    | finite=1 true_rel_res=8.14e+03   | SILENT-FAIL
+PCGMERGE        | b[0]=NaN               | ret=-205  info=-205  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+PCGMERGE        | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+CGS             | real SPD (control)     | ret=0     info=0     numiter=9     | finite=1 true_rel_res=5.98e-11   | ok
+CGS             | complex HPD            | ret=0     info=0     numiter=18    | finite=1 true_rel_res=6.07e-11   | ok
+CGS             | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=2.52e-12   | ok
+CGS             | tiny b=1e-20, x0 random | ret=0     info=0     numiter=16    | finite=1 true_rel_res=8.12e+03   | SILENT-FAIL
+CGS             | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+CGS             | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+CGSMERGE        | real SPD (control)     | ret=0     info=0     numiter=9     | finite=1 true_rel_res=5.98e-11   | ok
+CGSMERGE        | complex HPD            | ret=0     info=0     numiter=18    | finite=1 true_rel_res=6.07e-11   | ok
+CGSMERGE        | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=2.52e-12   | ok
+CGSMERGE        | tiny b=1e-20, x0 random | ret=0     info=0     numiter=16    | finite=1 true_rel_res=9.83e+03   | SILENT-FAIL
+CGSMERGE        | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+CGSMERGE        | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PCGS            | real SPD (control)     | ret=0     info=0     numiter=9     | finite=1 true_rel_res=5.98e-11   | ok
+PCGS            | complex HPD            | ret=0     info=0     numiter=18    | finite=1 true_rel_res=6.07e-11   | ok
+PCGS            | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=2.52e-12   | ok
+PCGS            | tiny b=1e-20, x0 random | ret=0     info=0     numiter=16    | finite=1 true_rel_res=8.12e+03   | SILENT-FAIL
+PCGS            | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+PCGS            | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PCGSMERGE       | real SPD (control)     | ret=0     info=0     numiter=9     | finite=1 true_rel_res=5.98e-11   | ok
+PCGSMERGE       | complex HPD            | ret=0     info=0     numiter=18    | finite=1 true_rel_res=6.07e-11   | ok
+PCGSMERGE       | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=2.52e-12   | ok
+PCGSMERGE       | tiny b=1e-20, x0 random | ret=0     info=0     numiter=16    | finite=1 true_rel_res=9.83e+03   | SILENT-FAIL
+PCGSMERGE       | b[0]=NaN               | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+PCGSMERGE       | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+QMR             | real SPD (control)     | ret=0     info=0     numiter=73    | finite=1 true_rel_res=3.04e-11   | ok
+QMR             | complex HPD            | ret=-201  info=-201  numiter=1000  | finite=1 true_rel_res=4.64e-10   | false-failure
+QMR             | complex non-Hermitian  | ret=-201  info=-201  numiter=1000  | finite=1 true_rel_res=3.08e-09   | false-failure
+QMR             | tiny b=1e-20, x0 random | ret=-201  info=-201  numiter=326   | finite=1 true_rel_res=1.73e+07   | reported-failure
+QMR             | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+QMR             | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+QMRMERGE        | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=3.33e-11   | ok
+QMRMERGE        | complex HPD            | ret=0     info=0     numiter=32    | finite=1 true_rel_res=6.02e-11   | ok
+QMRMERGE        | complex non-Hermitian  | ret=0     info=0     numiter=7     | finite=1 true_rel_res=3.01e-11   | ok
+QMRMERGE        | tiny b=1e-20, x0 random | ret=-201  info=-201  numiter=1000  | finite=1 true_rel_res=1.31e+04   | reported-failure
+QMRMERGE        | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+QMRMERGE        | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PQMR            | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=3.33e-11   | ok
+PQMR            | complex HPD            | ret=0     info=0     numiter=32    | finite=1 true_rel_res=6.02e-11   | ok
+PQMR            | complex non-Hermitian  | ret=0     info=0     numiter=7     | finite=1 true_rel_res=3.01e-11   | ok
+PQMR            | tiny b=1e-20, x0 random | ret=-201  info=-201  numiter=1000  | finite=1 true_rel_res=1.27e+04   | reported-failure
+PQMR            | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+PQMR            | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PQMRMERGE       | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=3.33e-11   | ok
+PQMRMERGE       | complex HPD            | ret=0     info=0     numiter=32    | finite=1 true_rel_res=6.02e-11   | ok
+PQMRMERGE       | complex non-Hermitian  | ret=0     info=0     numiter=7     | finite=1 true_rel_res=3.01e-11   | ok
+PQMRMERGE       | tiny b=1e-20, x0 random | ret=-201  info=-201  numiter=1000  | finite=1 true_rel_res=1.31e+04   | reported-failure
+PQMRMERGE       | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+PQMRMERGE       | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+TFQMR           | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=6.85e-11   | ok
+TFQMR           | complex HPD            | ret=0     info=0     numiter=36    | finite=1 true_rel_res=9.06e-11   | ok
+TFQMR           | complex non-Hermitian  | ret=-201  info=-201  numiter=1000  | finite=1 true_rel_res=0.333      | reported-failure
+TFQMR           | tiny b=1e-20, x0 random | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+TFQMR           | b[0]=NaN               | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+TFQMR           | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+TFQMRMERGE      | real SPD (control)     | ret=0     info=0     numiter=9     | finite=1 true_rel_res=6.85e-11   | ok
+TFQMRMERGE      | complex HPD            | ret=0     info=0     numiter=18    | finite=1 true_rel_res=9.06e-11   | ok
+TFQMRMERGE      | complex non-Hermitian  | ret=-201  info=-201  numiter=1000  | finite=1 true_rel_res=0.339      | reported-failure
+TFQMRMERGE      | tiny b=1e-20, x0 random | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+TFQMRMERGE      | b[0]=NaN               | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+TFQMRMERGE      | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PTFQMR          | real SPD (control)     | ret=0     info=0     numiter=18    | finite=1 true_rel_res=6.85e-11   | ok
+PTFQMR          | complex HPD            | ret=0     info=0     numiter=36    | finite=1 true_rel_res=9.06e-11   | ok
+PTFQMR          | complex non-Hermitian  | ret=-201  info=-201  numiter=1000  | finite=1 true_rel_res=3.32e-05   | reported-failure
+PTFQMR          | tiny b=1e-20, x0 random | ret=0     info=0     numiter=257   | finite=1 true_rel_res=2.24e+04   | SILENT-FAIL
+PTFQMR          | b[0]=NaN               | ret=0     info=0     numiter=1     | finite=1 true_rel_res=nan        | SILENT-FAIL
+PTFQMR          | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PTFQMRMERGE     | real SPD (control)     | ret=0     info=0     numiter=9     | finite=1 true_rel_res=6.85e-11   | ok
+PTFQMRMERGE     | complex HPD            | ret=0     info=0     numiter=18    | finite=1 true_rel_res=9.06e-11   | ok
+PTFQMRMERGE     | complex non-Hermitian  | ret=-201  info=-201  numiter=1000  | finite=1 true_rel_res=0.339      | reported-failure
+PTFQMRMERGE     | tiny b=1e-20, x0 random | ret=0     info=0     numiter=131   | finite=0 true_rel_res=nan        | SILENT-FAIL
+PTFQMRMERGE     | b[0]=NaN               | ret=0     info=0     numiter=1     | finite=1 true_rel_res=nan        | SILENT-FAIL
+PTFQMRMERGE     | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+GMRES           | real SPD (control)     | ret=0     info=0     numiter=19    | finite=1 true_rel_res=3.33e-11   | ok
+GMRES           | complex HPD            | ret=0     info=0     numiter=34    | finite=1 true_rel_res=9.21e-11   | ok
+GMRES           | complex non-Hermitian  | ret=0     info=0     numiter=8     | finite=1 true_rel_res=1.33e-11   | ok
+GMRES           | tiny b=1e-20, x0 random | ret=0     info=0     numiter=121   | finite=1 true_rel_res=5.84e-11   | ok
+GMRES           | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+GMRES           | exact x0 (residual 0)  | ret=0     info=0     numiter=1     | finite=1 true_rel_res=0          | ok
+PGMRES          | real SPD (control)     | ret=0     info=0     numiter=19    | finite=1 true_rel_res=3.33e-11   | ok
+PGMRES          | complex HPD            | ret=0     info=0     numiter=34    | finite=1 true_rel_res=9.21e-11   | ok
+PGMRES          | complex non-Hermitian  | ret=0     info=0     numiter=8     | finite=1 true_rel_res=1.33e-11   | ok
+PGMRES          | tiny b=1e-20, x0 random | ret=0     info=0     numiter=121   | finite=1 true_rel_res=5.84e-11   | ok
+PGMRES          | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+PGMRES          | exact x0 (residual 0)  | ret=0     info=0     numiter=1     | finite=1 true_rel_res=0          | ok
+IDR             | real SPD (control)     | ret=0     info=0     numiter=1     | finite=1 true_rel_res=2.23e-11   | ok
+IDR             | complex HPD            | ret=0     info=0     numiter=2     | finite=1 true_rel_res=5.11e-11   | ok
+IDR             | complex non-Hermitian  | ret=0     info=0     numiter=1     | finite=1 true_rel_res=1.38e-12   | ok
+IDR             | tiny b=1e-20, x0 random | ret=0     info=0     numiter=2     | finite=1 true_rel_res=1.03e+04   | SILENT-FAIL
+IDR             | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+IDR             | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+IDRMERGE        | real SPD (control)     | ret=-202  info=-202  numiter=12    | finite=0 true_rel_res=nan        | reported-failure
+IDRMERGE        | complex HPD            | ret=-202  info=-202  numiter=12    | finite=0 true_rel_res=nan        | reported-failure
+IDRMERGE        | complex non-Hermitian  | ret=-202  info=-202  numiter=12    | finite=0 true_rel_res=nan        | reported-failure
+IDRMERGE        | tiny b=1e-20, x0 random | ret=-202  info=-202  numiter=18    | finite=0 true_rel_res=nan        | reported-failure
+IDRMERGE        | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+IDRMERGE        | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PIDR            | real SPD (control)     | ret=0     info=0     numiter=1     | finite=1 true_rel_res=2.23e-11   | ok
+PIDR            | complex HPD            | ret=0     info=0     numiter=2     | finite=1 true_rel_res=5.11e-11   | ok
+PIDR            | complex non-Hermitian  | ret=0     info=0     numiter=1     | finite=1 true_rel_res=1.38e-12   | ok
+PIDR            | tiny b=1e-20, x0 random | ret=0     info=0     numiter=2     | finite=1 true_rel_res=1.03e+04   | SILENT-FAIL
+PIDR            | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+PIDR            | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+PIDRMERGE       | real SPD (control)     | ret=-202  info=-202  numiter=12    | finite=0 true_rel_res=nan        | reported-failure
+PIDRMERGE       | complex HPD            | ret=-202  info=-202  numiter=12    | finite=0 true_rel_res=nan        | reported-failure
+PIDRMERGE       | complex non-Hermitian  | ret=-202  info=-202  numiter=12    | finite=0 true_rel_res=nan        | reported-failure
+PIDRMERGE       | tiny b=1e-20, x0 random | ret=-202  info=-202  numiter=18    | finite=0 true_rel_res=nan        | reported-failure
+PIDRMERGE       | b[0]=NaN               | ret=-202  info=-202  numiter=1     | finite=1 true_rel_res=nan        | reported-failure
+PIDRMERGE       | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+LSQR            | real SPD (control)     | ret=0     info=0     numiter=33    | finite=1 true_rel_res=6.53e-11   | ok
+LSQR            | complex HPD            | ret=0     info=0     numiter=70    | finite=1 true_rel_res=9.9e-11    | ok
+LSQR            | complex non-Hermitian  | ret=0     info=0     numiter=8     | finite=1 true_rel_res=6.27e-12   | ok
+LSQR            | tiny b=1e-20, x0 random | ret=0     info=0     numiter=54    | finite=1 true_rel_res=1.95e+04   | SILENT-FAIL
+LSQR            | b[0]=NaN               | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+LSQR            | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+JACOBI          | real SPD (control)     | ret=0     info=0     numiter=1000  | finite=1 true_rel_res=5.46e-18   | ok
+JACOBI          | complex HPD            | ret=0     info=0     numiter=1000  | finite=1 true_rel_res=2.74e-16   | ok
+JACOBI          | complex non-Hermitian  | ret=0     info=0     numiter=1000  | finite=1 true_rel_res=3.37e-17   | ok
+JACOBI          | tiny b=1e-20, x0 random | ret=0     info=0     numiter=1000  | finite=1 true_rel_res=9.45e-17   | ok
+JACOBI          | b[0]=NaN               | ret=-202  info=-202  numiter=1000  | finite=0 true_rel_res=nan        | reported-failure
+JACOBI          | exact x0 (residual 0)  | ret=-202  info=-202  numiter=1000  | finite=1 true_rel_res=0          | false-failure
+BOMBARD         | real SPD (control)     | ret=0     info=0     numiter=9     | finite=1 true_rel_res=5.98e-11   | ok
+BOMBARD         | complex HPD            | ret=0     info=0     numiter=18    | finite=1 true_rel_res=6.07e-11   | ok
+BOMBARD         | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=2.03e-12   | ok
+BOMBARD         | tiny b=1e-20, x0 random | ret=0     info=0     numiter=16    | finite=1 true_rel_res=9.83e+03   | SILENT-FAIL
+BOMBARD         | b[0]=NaN               | ret=-202  info=-202  numiter=2     | finite=1 true_rel_res=nan        | reported-failure
+BOMBARD         | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok
+BOMBARDMERGE    | real SPD (control)     | ret=0     info=0     numiter=9     | finite=1 true_rel_res=5.98e-11   | ok
+BOMBARDMERGE    | complex HPD            | ret=0     info=0     numiter=18    | finite=1 true_rel_res=6.07e-11   | ok
+BOMBARDMERGE    | complex non-Hermitian  | ret=0     info=0     numiter=4     | finite=1 true_rel_res=2.03e-12   | ok
+BOMBARDMERGE    | tiny b=1e-20, x0 random | ret=0     info=0     numiter=16    | finite=1 true_rel_res=1.05e+04   | SILENT-FAIL
+BOMBARDMERGE    | b[0]=NaN               | ret=-202  info=-202  numiter=2     | finite=1 true_rel_res=nan        | reported-failure
+BOMBARDMERGE    | exact x0 (residual 0)  | ret=0     info=0     numiter=0     | finite=1 true_rel_res=0          | ok

@@ -1,0 +1,82 @@
+zgesv              k=  0 nalloc=  4 info=0      err=3.73e-15   ok
+zgesv              k=  1 nalloc=  2 info=0      err=3.57e-15   ok
+zgesv              k=  2 nalloc=  3 info=0      err=3.57e-15   ok
+zgesv k=3 CRASH/EXIT rc=139: timeout: the monitored command dumped core
+zgesv              k=  4 nalloc=  4 info=1      err=1e+03      reported
+zposv              k=  0 nalloc=  3 info=0      err=2.59e-15   ok
+zposv              k=  1 nalloc=  2 info=0      err=2.9e-15    ok
+zposv              k=  2 nalloc=  3 info=0      err=2.9e-15    ok
+zposv k=3 CRASH/EXIT rc=139: timeout: the monitored command dumped core
+zheevd             k=  0 nalloc=  3 info=0      err=1.11e-14   ok
+zheevd k=1 CRASH/EXIT rc=0:  ** On entry to DLASCL parameter number  4 had an illegal value
+zheevd             k=  2 nalloc=  2 info=-113   err=1.01       reported
+zheevd             k=  3 nalloc=  3 info=0      err=1.11e-14   ok
+zheevd_m           k=  0 nalloc=  6 info=0      err=1.11e-14   ok
+zheevd_m k=1 CRASH/EXIT rc=0:  ** On entry to DLASCL parameter number  4 had an illegal value
+zheevd_m k=2 CRASH/EXIT rc=0:  ** On entry to DLASCL parameter number  4 had an illegal value
+zheevd_m k=3 CRASH/EXIT rc=0:  ** On entry to DLASCL parameter number  4 had an illegal value
+zheevd_m           k=  4 nalloc=  6 info=-113   err=1          reported
+zheevd_m           k=  5 nalloc=  5 info=0      err=1.11e-14   ok
+zheevd_m           k=  6 nalloc=  6 info=0      err=1.11e-14   ok
+zhegvd             k=  0 nalloc=  7 info=0      err=1.05e-14   ok
+zhegvd             k=  1 nalloc=  1 info=-113   err=inf        reported
+zhegvd             k=  2 nalloc=  2 info=-113   err=inf        reported
+zhegvd k=3 CRASH/EXIT rc=139: timeout: the monitored command dumped core
+zhegvd             k=  4 nalloc=  7 info=0      err=599        SILENT-WRONG
+zhegvd             k=  5 nalloc=  5 info=-113   err=inf        reported
+zhegvd k=6 CRASH/EXIT rc=0:  ** On entry to DLASCL parameter number  4 had an illegal value
+zhegvd             k=  7 nalloc=  7 info=0      err=1.05e-14   ok
+zhegvd_m           k=  0 nalloc=  9 info=0      err=1.11e-14   ok
+zhegvd_m           k=  1 nalloc=  1 info=487    err=inf        reported
+zhegvd_m           k=  2 nalloc=  9 info=0      err=599        SILENT-WRONG
+zhegvd_m k=3 CRASH/EXIT rc=0:  ** On entry to DLASCL parameter number  4 had an illegal value
+zhegvd_m k=4 CRASH/EXIT rc=0:  ** On entry to DLASCL parameter number  4 had an illegal value
+zhegvd_m k=5 CRASH/EXIT rc=0:  ** On entry to DLASCL parameter number  4 had an illegal value
+zhegvd_m           k=  6 nalloc=  8 info=-113   err=4.13       reported
+zhegvd_m           k=  7 nalloc=  8 info=0      err=1.11e-14   ok
+zhegvd_m           k=  8 nalloc=  9 info=0      err=1.11e-14   ok
+zhegvd_m           k=  9 nalloc=  9 info=0      err=1.11e-14   ok
+zheevdx_2stage     k=  0 nalloc=  7 info=0      err=1.62e-14   ok
+zheevdx_2stage     k=  1 nalloc=  1 info=-113   err=inf        reported
+zheevdx_2stage     k=  2 nalloc=  7 info=0      err=0.498      SILENT-WRONG
+zheevdx_2stage     k=  3 nalloc=  3 info=-113   err=1.01       reported
+zheevdx_2stage     k=  4 nalloc=  4 info=-113   err=1.62e-14   reported
+zheevdx_2stage     k=  5 nalloc=  7 info=0      err=1.62e-14   ok
+zheevdx_2stage     k=  6 nalloc=  6 info=-113   err=1.62e-14   reported
+zheevdx_2stage     k=  7 nalloc=  7 info=0      err=1.62e-14   ok
+zheevdx_2stage_m   k=  0 nalloc=  8 info=0      err=1.55e-14   ok
+zheevdx_2stage_m   k=  1 nalloc=  6 info=-112   err=1          reported
+zheevdx_2stage_m   k=  2 nalloc=  6 info=-112   err=1          reported
+zheevdx_2stage_m   k=  3 nalloc=  6 info=-112   err=1          reported
+zheevdx_2stage_m   k=  4 nalloc=  8 info=0      err=1          SILENT-WRONG
+zheevdx_2stage_m   k=  5 nalloc=  7 info=0      err=1.55e-14   ok
+zheevdx_2stage_m   k=  6 nalloc=  8 info=0      err=1.55e-14   ok
+zheevdx_2stage_m   k=  7 nalloc=  7 info=-112   err=1.55e-14   reported
+zheevdx_2stage_m   k=  8 nalloc=  8 info=-113   err=1.55e-14   reported
+zgeev              k=  0 nalloc=  3 info=0      err=2e-14      ok
+zgeev              k=  1 nalloc=  1 info=-113   err=inf        reported
+zgeev              k=  2 nalloc=  3 info=0      err=0.0672     SILENT-WRONG
+zgeev              k=  3 nalloc=  3 info=0      err=2e-14      ok
+zgeev_m            k=  0 nalloc=  2 info=0      err=2.63e-14   ok
+zgeev_m            k=  1 nalloc=  2 info=0      err=0.0672     SILENT-WRONG
+zgeev_m            k=  2 nalloc=  2 info=0      err=2.63e-14   ok
+zgesvd             k=  0 nalloc=  3 info=0      err=9.16e-15   ok
+zgesvd             k=  1 nalloc=  3 info=599    err=inf        reported
+zgesvd             k=  2 nalloc=  3 info=0      err=9.16e-15   ok
+zgesvd             k=  3 nalloc=  3 info=0      err=9.16e-15   ok
+######## zgeqrf_ooc lwork = n (MALLOC_CHECK_=3)
+zgeqrf_ooc m=20000 n=4096: free 298.1 MB, nb=128, NB=640 (out of core: NB < n), lwork=4096 (documented >= n*nb = 524288) ...
+timeout: the monitored command dumped core
+exit=139
+######## zgeqrf_ooc with ~20 MB free (NB = 0?)
+zgeqrf_ooc m=20000 n=4096: free 19.1 MB, nb=128, NB=0 (out of core: NB < n), lwork=524288 (documented >= n*nb = 524288) ...
+  returned info=-113
+exit=0 (124 = timeout)
+######## ngpu = 2 with one visible device
+$MAGMA_NUM_GPUS='2' exceeds MagmaMaxGPUs=8 or available GPUs=1; using 1 GPUs.
+visible devices: 1; magma_num_gpus() = 1
+zpotrf_m(ngpu=2) n=2000: info=0  max|L - L_lapack|=1.07e-13
+zheevd_m(ngpu=2) n=600: info=0  eigenvalue relerr=6.91e-15
+cudaGetLastError after the calls: invalid device ordinal
+exit=0
+ROUND10_DONE

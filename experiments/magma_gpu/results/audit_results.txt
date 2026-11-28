@@ -1,0 +1,17 @@
+T1 gbtrs_batched_strided batch 0: gbtrf ret=0 info=0  gbtrs ret=0  relerr=3.67e+15  x[0]=-nan (true 1)
+T1 gbtrs_batched_strided batch 1: gbtrf ret=0 info=0  gbtrs ret=0  relerr=0.00e+00  x[0]=-nan (true 11)
+T1 gbtrs_batched_strided batch 2: gbtrf ret=0 info=0  gbtrs ret=0  relerr=0.00e+00  x[0]=-nan (true 21)
+T1 gbtrs_batched_strided batch 3: gbtrf ret=0 info=0  gbtrs ret=0  relerr=0.00e+00  x[0]=-nan (true 31)
+T2 heevdx_2stage uplo=Lower n=512: info=0 m=512  max|lambda - lambda_LAPACK|=9.77e-14  (lambda range -12.795..12.911)
+ZHETRD_HE2HB is not yet implemented for upper matrix storage. Exit.
+T2 heevdx_2stage uplo=Upper n=512: info=0 m=512  max|lambda - lambda_LAPACK|=1.29e+01  (lambda range -12.795..12.911)
+T3 hesv_nopiv_gpu [[1,1],[1,1]] (singular, D2 = 0)   info=0  nonfinite(x)=2  x[0]=-nan
+T3 hesv_nopiv_gpu [[0]] n=1                          info=0  nonfinite(x)=1  x[0]=-nan
+T3 hesv_nopiv_gpu [[2,1],[1,2]] (control)            info=0  nonfinite(x)=0  x[0]=1
+T4 n=8   uplo=Upper A(0,0)=-1: LAPACK zpotrf info=1 | magma_zpotrf_native info=0 | magma_zpotf2_gpu info=0 (nonfinite factor entries 0)
+T4 n=8   uplo=Lower A(0,0)=-1: LAPACK zpotrf info=1 | magma_zpotrf_native info=1 | magma_zpotf2_gpu info=0 (nonfinite factor entries 0)
+T4 n=256 uplo=Upper A(0,0)=-1: LAPACK zpotrf info=1 | magma_zpotrf_native info=0 | magma_zpotf2_gpu info=0 (nonfinite factor entries 0)
+T4 n=256 uplo=Lower A(0,0)=-1: LAPACK zpotrf info=1 | magma_zpotrf_native info=1 | magma_zpotf2_gpu info=0 (nonfinite factor entries 0)
+T5 trtri_gpu n=512, A(0,0)=0: LAPACK ztrtri info=1 | magma_ztrtri_gpu info=0  (nonfinite entries in returned inverse: 0)
+T5 trtri_gpu n=512, A(300,300)=0: LAPACK ztrtri info=301 | magma_ztrtri_gpu info=45  (nonfinite entries in returned inverse: 54272)
+T5 trtri_gpu n=512, A(511,511)=0: LAPACK ztrtri info=512 | magma_ztrtri_gpu info=256  (nonfinite entries in returned inverse: 256)

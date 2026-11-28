@@ -1,0 +1,185 @@
+
+== geqrf_gpu 64 64 0
+DONE cuda=no error
+== geqrf_gpu 300 200 0
+DONE cuda=no error
+== geqrf_gpu 200 300 0
+DONE cuda=no error
+== geqrf_gpu 257 129 0
+DONE cuda=no error
+== geqrf_gpu 600 70 0
+DONE cuda=no error
+== geqrf_gpu 31 31 0
+DONE cuda=no error
+== geqrf3_gpu 64 64 0
+DONE cuda=no error
+== geqrf3_gpu 300 200 0
+DONE cuda=no error
+== geqrf3_gpu 200 300 0
+DONE cuda=no error
+== geqrf3_gpu 257 129 0
+DONE cuda=no error
+== geqrf3_gpu 600 70 0
+DONE cuda=no error
+== geqrf3_gpu 31 31 0
+DONE cuda=no error
+== geqp3 64 64 0
+On entry to magma_zgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== geqp3 300 200 0
+On entry to magma_zgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== geqp3 200 300 0
+On entry to magma_zgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== geqp3 257 129 0
+On entry to magma_zgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== geqp3 600 70 0
+On entry to magma_zgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== geqp3 31 31 0
+On entry to magma_zgeqp3_gpu, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== geqrs_gpu 64 64 1
+DONE cuda=no error
+== geqrs_gpu 64 64 7
+DONE cuda=no error
+== geqrs_gpu 64 64 100
+DONE cuda=no error
+== geqrs_gpu 300 200 1
+DONE cuda=no error
+== geqrs_gpu 300 200 7
+DONE cuda=no error
+== geqrs_gpu 300 200 100
+DONE cuda=no error
+== geqrs_gpu 257 129 1
+DONE cuda=no error
+== geqrs_gpu 257 129 7
+DONE cuda=no error
+== geqrs_gpu 257 129 100
+DONE cuda=no error
+== geqrs_gpu 600 70 1
+DONE cuda=no error
+== geqrs_gpu 600 70 7
+DONE cuda=no error
+== geqrs_gpu 600 70 100
+DONE cuda=no error
+== geqrs_gpu 31 31 1
+DONE cuda=no error
+== geqrs_gpu 31 31 7
+DONE cuda=no error
+== geqrs_gpu 31 31 100
+DONE cuda=no error
+== geqrs3_gpu 64 64 1
+DONE cuda=no error
+== geqrs3_gpu 64 64 7
+DONE cuda=no error
+== geqrs3_gpu 64 64 100
+DONE cuda=no error
+== geqrs3_gpu 300 200 1
+DONE cuda=no error
+== geqrs3_gpu 300 200 7
+DONE cuda=no error
+== geqrs3_gpu 300 200 100
+DONE cuda=no error
+== geqrs3_gpu 257 129 1
+DONE cuda=no error
+== geqrs3_gpu 257 129 7
+DONE cuda=no error
+== geqrs3_gpu 257 129 100
+DONE cuda=no error
+== geqrs3_gpu 600 70 1
+DONE cuda=no error
+== geqrs3_gpu 600 70 7
+DONE cuda=no error
+== geqrs3_gpu 600 70 100
+DONE cuda=no error
+== geqrs3_gpu 31 31 1
+DONE cuda=no error
+== geqrs3_gpu 31 31 7
+DONE cuda=no error
+== geqrs3_gpu 31 31 100
+DONE cuda=no error
+== he2hb 0 100 32
+DONE cuda=no error
+== he2hb 0 100 64
+DONE cuda=no error
+== he2hb 0 300 32
+DONE cuda=no error
+== he2hb 0 300 64
+DONE cuda=no error
+== hetrd2 0 33 0
+DONE cuda=no error
+== hetrd2 0 300 0
+DONE cuda=no error
+== hetrd2 0 513 0
+DONE cuda=no error
+== getri 0 33 0
+DONE cuda=no error
+== getri 0 300 0
+DONE cuda=no error
+== getri 0 513 0
+DONE cuda=no error
+== stedx 0 33 0
+DONE cuda=no error
+== stedx 0 300 0
+DONE cuda=no error
+== stedx 0 513 0
+DONE cuda=no error
+== gegqr 300 50 1
+DONE cuda=no error
+== gegqr 300 50 2
+DONE cuda=no error
+== gegqr 300 50 3
+DONE cuda=no error
+== gegqr 300 50 4
+DONE cuda=no error
+== gegqr 1000 30 1
+DONE cuda=no error
+== gegqr 1000 30 2
+DONE cuda=no error
+== gegqr 1000 30 3
+DONE cuda=no error
+== gegqr 1000 30 4
+DONE cuda=no error
+== gegqr 100 100 1
+DONE cuda=no error
+== gegqr 100 100 2
+DONE cuda=no error
+== gegqr 100 100 3
+DONE cuda=no error
+== gegqr 100 100 4
+DONE cuda=no error
+== trsm 100 50 0 L
+DONE cuda=no error
+== trsm 100 50 0 R
+DONE cuda=no error
+== trsm 300 200 0 L
+DONE cuda=no error
+== trsm 300 200 0 R
+DONE cuda=no error
+== trsm 129 257 0 L
+DONE cuda=no error
+== trsm 129 257 0 R
+DONE cuda=no error
+== hemv 0 33 0
+DONE cuda=no error
+== hemv 0 300 0
+DONE cuda=no error
+== hemv 0 513 0
+DONE cuda=no error
+== hemv 0 1000 0
+DONE cuda=no error
+== larfb 200 150 32 L
+DONE cuda=no error
+== larfb 200 150 32 R
+DONE cuda=no error
+== larfb 150 200 64 L
+DONE cuda=no error
+== larfb 150 200 64 R
+DONE cuda=no error
+== larfb 300 300 17 L
+DONE cuda=no error
+== larfb 300 300 17 R
+DONE cuda=no error

@@ -1,0 +1,16 @@
+## n=8192 orig
+dsgesv_iteref  n= 8192  time=  0.2556 s  iter=   2 info=0  relerr=8.55e-12
+dhgesv_iteref  n= 8192  time=  0.1799 s  iter=   2 info=0  relerr=1.93e-11
+## n=8192 fix3
+dsgesv_iteref  n= 8192  time=  0.2285 s  iter=   3 info=0  relerr=1.05e-14
+dhgesv_iteref  n= 8192  time=  0.2031 s  iter=   3 info=0  relerr=9.55e-15
+## n=8192 FP64
+n= 8192  FP64 dgesv_gpu=  0.4340 s (info
+## n=16384 orig
+dsgesv_iteref  n=16384  time=  0.8489 s  iter=   2 info=0  relerr=1.95e-11
+dhgesv_iteref  n=16384  time=  0.7304 s  iter=   2 info=0  relerr=1.72e-11
+## n=16384 fix3
+dsgesv_iteref  n=16384  time=  0.9002 s  iter=   3 info=0  relerr=1.49e-14
+dhgesv_iteref  n=16384  time=  0.9099 s  iter=   3 info=0  relerr=1.52e-14
+## n=16384 FP64
+n=16384  FP64 dgesv_gpu=  1.0881 s (info

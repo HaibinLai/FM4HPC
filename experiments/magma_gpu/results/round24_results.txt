@@ -1,0 +1,20 @@
+GPU 0 used before: 0 MiB; host available: 596 GB
+######## n=4000
+n=4000: D&C device workspace 3n(n/2+1) = 24012000 doubles, as 32-bit int = 24012000; lrwmin = 32016001, as 32-bit int = 32016001
+magma_zstedx_m(ngpu=1, range All): info=0 time=1.1 s  cudaDeviceSynchronize=no error lastError=no error
+  eigenvalues: non-finite 0, max|w - w_dsterf| = 4.49e-14;  eigenvectors (columns 0, n/2, n-1): max|<z_a,z_b> - delta| = 3.89e-15, non-finite in column 0: 0
+exit=0
+######## n=38000
+n=38000: D&C device workspace 3n(n/2+1) = 2166114000 doubles, as 32-bit int = -2128853296; lrwmin = 2888152001, as 32-bit int = -1406815295
+On entry to magma_dstedx_m, parameter 12 had an illegal value (info = -12)
+magma_zstedx_m(ngpu=1, range All): info=-12 time=19.5 s  cudaDeviceSynchronize=no error lastError=no error
+exit=0
+######## n=53600
+n=53600: D&C device workspace 3n(n/2+1) = 4309600800 doubles, as 32-bit int = 14633504; lrwmin = 5746134401, as 32-bit int = 1451167105
+timeout: the monitored command dumped core
+exit=139
+ROUND24_DONE
+0
+0 MiB, 0 %
+
+[exited with code 0]

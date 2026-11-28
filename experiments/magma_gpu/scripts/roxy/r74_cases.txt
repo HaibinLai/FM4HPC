@@ -1,0 +1,48 @@
+shift csr 10 1
+shift csr 10 0
+shift csr 200 1
+shift csr 200 0
+shift ell 10 1
+shift ell 10 0
+shift ell 200 1
+shift ell 200 0
+shift ellpackt 10 1
+shift ellpackt 10 0
+shift ellpackt 200 1
+shift ellpackt 200 0
+conj csr 50
+conj ell 50
+conj csr 1000
+compress 10
+compress 100
+compress 1000
+slice 100 9 0
+slice 100 9 1
+slice 100 9 8
+slice 100 1 0
+slice 10 9 0
+slice 10 9 1
+slice 10 9 2
+slice 10 9 3
+slice 10 9 4
+slice 10 9 5
+slice 10 9 6
+slice 10 9 7
+slice 10 9 8
+slice 5 4 0
+slice 5 4 1
+slice 5 4 2
+slice 5 4 3
+slice 7 3 0
+slice 7 3 1
+slice 7 3 2
+shrink 10 15 cpu
+shrink 40 41 cpu
+shrink 20 20 cpu
+shrink 10 15 dev
+shrink 40 41 dev
+shrink 20 20 dev
+vtrans 7 3 cpu
+vtrans 64 5 cpu
+vtrans 7 3 dev
+vtrans 64 5 dev

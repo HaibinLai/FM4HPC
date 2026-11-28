@@ -1,0 +1,80 @@
+# Round 26 on roxy (RTX 5070 Ti sm_120, Windows; MAGMA 2.10.0 static, MSVC 14.44 + nvcc 13.5 wheels, OpenBLAS 0.3.34), 2026-11-26
+# probes/round26_probe.cpp; stdout+stderr; 'On entry to ...' lines are MAGMA's own xerbla prints
+######## geqlf
+device: NVIDIA GeForce RTX 5070 Ti, sm_120, shared mem opt-in 101376 B
+On entry to magma_zgeqlf, parameter 7 had an illegal value (info = -7)
+zgeqlf m=0 n=5: queried lwork=1, call with it -> info=-7
+On entry to magma_zgeqlf, parameter 7 had an illegal value (info = -7)
+zgeqlf m=7 n=0: queried lwork=1, call with it -> info=-7
+cudaGetLastError at exit: no error
+exit=0
+######## gbstale
+device: NVIDIA GeForce RTX 5070 Ti, sm_120, shared mem opt-in 101376 B
+Error in magma_zgbtrf_native, function-specific error (info = 7)
+zgbtrf_native n=200: info on entry=7 -> info=7, band modified=no (nothing done)
+zgbtrf_native n=200: info on entry=0 -> info=0, band modified=yes (factored)
+cudaGetLastError at exit: no error
+exit=0
+######## argnum
+device: NVIDIA GeForce RTX 5070 Ti, sm_120, shared mem opt-in 101376 B
+On entry to magma_zgesv_batched, parameter 6 had an illegal value (info = -6)
+zgesv_batched lddb < n (lddb is argument 7): returned -6
+On entry to magma_zgetrs_nopiv_batched, parameter 8 had an illegal value (info = -8)
+zgetrs_nopiv_batched lddb < n (lddb is argument 7): returned -8
+On entry to magmablas_zlanhe, parameter 2 had an illegal value (info = -2)
+On entry to magmablas_zlat2c, parameter 1 had an illegal value (info = -1)
+On entry to magma_zpotrf_gpu, parameter 1 had an illegal value (info = -1)
+zcposv_gpu invalid uplo (argument 1): iter=-2 info=-1
+cudaGetLastError at exit: no error
+exit=0
+######## he2hb
+device: NVIDIA GeForce RTX 5070 Ti, sm_120, shared mem opt-in 101376 B
+zhetrd_he2hb n=16 nb=32: queried lwork=512, info=0; elements written before work: 512, after work+lwork: 0
+cudaGetLastError at exit: no error
+exit=0
+######## ungtr
+device: NVIDIA GeForce RTX 5070 Ti, sm_120, shared mem opt-in 101376 B
+magma_zungtr upper n=8 info=0  max|Q_magma - Q_lapack| = 2.71  orth(Q_lapack)=2.2e-16  orth(Q_magma)=9.84
+magma_zungtr upper n=50 info=0  max|Q_magma - Q_lapack| = 1.65e+15  orth(Q_lapack)=4.4e-16  orth(Q_magma)=6.13e+30
+cudaGetLastError at exit: no error
+exit=0
+######## hegvdx2
+device: NVIDIA GeForce RTX 5070 Ti, sm_120, shared mem opt-in 101376 B
+zhegvdx_2stage n=128 nb=128 threads=16  lwork=17024 (its own query)  info=0  A modified=yes B modified=yes  eig err=5.92e-15
+zhegvdx_2stage n=128 nb=128 threads=16  lwork=33408 (5n+2nb*n)  info=0  A modified=yes B modified=yes  eig err=5.92e-15
+On entry to magma_zheevdx_2stage, parameter 14 had an illegal value (info = -14)
+zhegvdx_2stage n=129 nb=128 threads=16  lwork=17157 (its own query)  info=-14  A modified=yes B modified=yes  eig err=nan
+zhegvdx_2stage n=129 nb=128 threads=16  lwork=33669 (5n+2nb*n)  info=0  A modified=yes B modified=yes  eig err=1.69e-15
+On entry to magma_zheevdx_2stage, parameter 14 had an illegal value (info = -14)
+zhegvdx_2stage n=200 nb=128 threads=16  lwork=26600 (its own query)  info=-14  A modified=yes B modified=yes  eig err=nan
+zhegvdx_2stage n=200 nb=128 threads=16  lwork=52200 (5n+2nb*n)  info=0  A modified=yes B modified=yes  eig err=4.75e-15
+cudaGetLastError at exit: no error
+exit=0
+
+######## argnum, zhegvx rerun with lwork = 1000 (the first run used 64n < 65n, so its lwork check overrode the jobz/range codes)
+On entry to magma_zhegvx, parameter 3 had an illegal value (info = -3)
+zhegvx invalid jobz  (argument 2): info=-3
+On entry to magma_zhegvx, parameter 2 had an illegal value (info = -2)
+zhegvx invalid range (argument 3): info=-2
+######## gesdd (bisection on acceptance; the -12 messages of rejected probes removed)
+device: NVIDIA GeForce RTX 5070 Ti, sm_120, shared mem opt-in 101376 B
+On entry to magma_zungbr, parameter 9 had an illegal value (info = -9)
+On entry to magma_zungbr, parameter 9 had an illegal value (info = -9)
+On entry to magma_zungbr, parameter 9 had an illegal value (info = -9)
+On entry to magma_zungbr, parameter 9 had an illegal value (info = -9)
+On entry to magma_zungbr, parameter 9 had an illegal value (info = -9)
+On entry to magma_zungbr, parameter 9 had an illegal value (info = -9)
+On entry to magma_zungbr, parameter 9 had an illegal value (info = -9)
+zgesdd m=1024 n=1087 jobz=O: queried lwork (maxwrk) = 1182688, smallest accepted lwork = 1181696
+[run lwork=1181696]
+On entry to magma_zungbr, parameter 9 had an illegal value (info = -9)
+zgesdd lwork=1181696  (slow path)  info=0  max|VT VT^H - I| (rows of A on exit) = 400
+[run lwork=1182688]
+zgesdd lwork=1182688  (fast path)  info=0  max|VT VT^H - I| (rows of A on exit) = 5.54e-15
+cudaGetLastError at exit: no error
+
+######## gbalias
+device: NVIDIA GeForce RTX 5070 Ti, sm_120, shared mem opt-in 101376 B
+zgbtrf_batched (aliased) batch=65535 m=n=65 kl=ku=32: returned 0, launch error=no error, after sync=no error
+zgbtrf_batched (aliased) batch=65536 m=n=65 kl=ku=32: returned 0, launch error=invalid argument, after sync=no error
+cudaGetLastError at exit: no error

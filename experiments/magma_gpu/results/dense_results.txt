@@ -1,0 +1,39 @@
+# MAGMA 2.10.0 (tarball sha256 ea0c57fcb64ac2fd...), CUDA Build cuda_12.0.r12.0/compiler.32267302_0, GPU 0: Tesla V100-PCIE-32GB, 580.178.04, Wed Nov 25 17:05:15 UTC 2026
+dgesv_rbt n=64 zero-pivot instance (first rand() use)  info=0 nonfinite=0  relerr vs LAPACK dgesv=1.58e+13  (dgesv info=0)
+== dsgesv_gpu / dsposv_gpu: solution overflow (A, b in FP32 range) and B overflow ==
+dsgesv a=2^-100 b=2^28             n=    1  iter=   0 info=0  x[0]=inf          nonfinite=    1  relerr=inf
+dsposv a=2^-100 b=2^28             n=    1  iter=   0 info=0  x[0]=inf          nonfinite=    1  relerr=inf
+dsgesv a=2^-90 b=2^28              n=    1  iter=   0 info=0  x[0]=3.32307e+35  nonfinite=    0  relerr=0.00e+00
+dsposv a=2^-90 b=2^28              n=    1  iter=   0 info=0  x[0]=3.32307e+35  nonfinite=    0  relerr=0.00e+00
+dsgesv a=2^-100 b=2^28             n=    2  iter=   0 info=0  x[0]=nan          nonfinite=    2  relerr=inf
+dsposv a=2^-100 b=2^28             n=    2  iter=   0 info=0  x[0]=nan          nonfinite=    2  relerr=inf
+dsgesv a=2^-90 b=2^28              n=    2  iter=   0 info=0  x[0]=3.32307e+35  nonfinite=    0  relerr=0.00e+00
+dsposv a=2^-90 b=2^28              n=    2  iter=   0 info=0  x[0]=3.32307e+35  nonfinite=    0  relerr=0.00e+00
+dsgesv a=2^-100 b=2^28             n= 1024  iter=   0 info=0  x[0]=nan          nonfinite= 1024  relerr=inf
+dsposv a=2^-100 b=2^28             n= 1024  iter=   0 info=0  x[0]=nan          nonfinite= 1024  relerr=inf
+dsgesv a=2^-90 b=2^28              n= 1024  iter=   0 info=0  x[0]=3.32307e+35  nonfinite=    0  relerr=0.00e+00
+dsposv a=2^-90 b=2^28              n= 1024  iter=   0 info=0  x[0]=3.32307e+35  nonfinite=    0  relerr=0.00e+00
+dsgesv a=1 b=2^200                 n=    2  iter=   0 info=0  x[0]=nan          nonfinite=    2  relerr=inf
+dsposv a=1 b=2^200                 n=    2  iter=  -2 info=0  x[0]=1.60694e+60  nonfinite=    0  relerr=0.00e+00
+dsgesv a=1 b=2^200                 n= 1024  iter=   0 info=0  x[0]=nan          nonfinite= 1024  relerr=inf
+dsposv a=1 b=2^200                 n= 1024  iter=  -2 info=0  x[0]=1.60694e+60  nonfinite=    0  relerr=0.00e+00
+== zchesv_gpu on A = [[d, c^T], [c, M]] (inputs identical to zchesv_port.py) ==
+zchesv d=2^-20  seed=0  iter=  15 info=0  X==B:0  nonfinite=0  relerr=3.89e-16
+zchesv d=2^-20  seed=1  iter=  12 info=0  X==B:0  nonfinite=0  relerr=8.12e-16
+zchesv d=2^-20  seed=2  iter=  12 info=0  X==B:0  nonfinite=0  relerr=6.97e-16
+zchesv d=2^-24  seed=0  iter=  27 info=0  X==B:0  nonfinite=1  relerr=inf
+zchesv d=2^-24  seed=1  iter= -31 info=0  X==B:1  nonfinite=0  relerr=4.54e-01
+zchesv d=2^-24  seed=2  iter= -31 info=0  X==B:1  nonfinite=0  relerr=1.84e+00
+== dshposv_gpu (public wrapper: use_gmres=1, preprocess=1) ==
+dshposv tridiag*2^0            n= 256 nrhs=1  ret=0 iter=   2 info=0  x0max=1          relerr(col0)=7.55e-15  bwd/thr=2.96e+00
+dshposv tridiag*2^-40          n= 256 nrhs=1  ret=0 iter= 256 info=0  x0max=1          relerr(col0)=2.89e-15  bwd/thr=1.10e+00
+dshposv tridiag*2^40           n= 256 nrhs=1  ret=0 iter=   1 info=0  x0max=1          relerr(col0)=1.76e-07  bwd/thr=5.50e+07
+dshposv ||b||_2=1e-15          n= 256 nrhs=1  ret=0 iter=   2 info=0  x0max=3.11e-17   relerr(col0)=7.93e-15  bwd/thr=3.03e+00
+dshposv ||b||_2=1e-17          n= 256 nrhs=1  ret=0 iter=   0 info=0  x0max=0          relerr(col0)=1.00e+00  bwd/thr=inf
+== dgesv_rbt(refine=true), diagonally dominant random A, n = 1..6 ==
+dgesv_rbt n=1  info=0  relerr=6.04e-02
+dgesv_rbt n=2  info=0  relerr=2.58e-02
+dgesv_rbt n=3  info=0  relerr=2.73e-02
+dgesv_rbt n=4  info=0  relerr=1.74e-16
+dgesv_rbt n=5  info=0  relerr=5.99e-16
+dgesv_rbt n=6  info=0  relerr=3.16e-16

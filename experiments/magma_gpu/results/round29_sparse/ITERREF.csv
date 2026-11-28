@@ -1,0 +1,96 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,CSR,poisson2d,1024,0,0,0,0,41.2,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,CSR,aniso1e-4,1024,0,0,0,0,22.4,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,CSR,convdiff,1024,0,0,0,0,50.4,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,CSR,shifted_indef,1024,0,0,0,0,18.8,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,CSR,complexsym,1024,0,0,0,0,59.1,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,CSR,neumann_singular,1024,0,0,0,0,38.3,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,CSR,zerodiag,1024,0,0,0,0,40.6,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,CSR,tiny_rhs1e-30,1024,0,0,0,0,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,ELL,poisson2d,1024,0,0,0,0,41.2,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,ELL,aniso1e-4,1024,0,0,0,0,22.4,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,ELL,convdiff,1024,0,0,0,0,50.4,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,ELL,shifted_indef,1024,0,0,0,0,18.8,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,ELL,complexsym,1024,0,0,0,0,59.1,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,ELL,neumann_singular,1024,0,0,0,0,38.3,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,ELL,zerodiag,1024,0,0,0,0,40.6,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,ELL,tiny_rhs1e-30,1024,0,0,0,0,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,SELLP,poisson2d,1024,0,0,0,0,41.2,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,SELLP,aniso1e-4,1024,0,0,0,0,22.4,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,SELLP,convdiff,1024,0,0,0,0,50.4,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,SELLP,shifted_indef,1024,0,0,0,0,18.8,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,SELLP,complexsym,1024,0,0,0,0,59.1,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,SELLP,neumann_singular,1024,0,0,0,0,38.3,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,SELLP,zerodiag,1024,0,0,0,0,40.6,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+ITERREF,NONE,SELLP,tiny_rhs1e-30,1024,0,0,0,0,3.99e-29,1,LIE,parse=0 setup=0 convert=0

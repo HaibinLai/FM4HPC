@@ -1,0 +1,100 @@
+build,exit,r51,mode,a1,a2,a3,observed,expected,verdict
+lib,0,r51,syncfree,d,bidiag,1000,nnz=1999 max|x-x_true|=11.8 wrong_entries=999,0,WRONG
+lib,0,r51,syncfree,d,bidiag,1000,nnz=1999 max|x-x_true|=11.8 wrong_entries=999,0,WRONG
+lib,0,r51,syncfree,d,bidiag,1000,nnz=1999 max|x-x_true|=11.8 wrong_entries=999,0,WRONG
+lib,0,r51,syncfree,d,bidiag,20000,nnz=39999 max|x-x_true|=224 wrong_entries=19999,0,WRONG
+lib,0,r51,syncfree,d,bidiag,20000,nnz=39999 max|x-x_true|=224 wrong_entries=19999,0,WRONG
+lib,0,r51,syncfree,d,bidiag,20000,nnz=39999 max|x-x_true|=224 wrong_entries=19999,0,WRONG
+lib,0,r51,syncfree,d,random,1000,nnz=4777 max|x-x_true|=8.92 wrong_entries=978,0,WRONG
+lib,0,r51,syncfree,d,random,1000,nnz=4777 max|x-x_true|=8.92 wrong_entries=978,0,WRONG
+lib,0,r51,syncfree,d,random,1000,nnz=4777 max|x-x_true|=8.92 wrong_entries=978,0,WRONG
+lib,0,r51,syncfree,d,random,20000,nnz=97009 max|x-x_true|=208 wrong_entries=19664,0,WRONG
+lib,0,r51,syncfree,d,random,20000,nnz=97009 max|x-x_true|=210 wrong_entries=19664,0,WRONG
+lib,0,r51,syncfree,d,random,20000,nnz=97009 max|x-x_true|=207 wrong_entries=19664,0,WRONG
+lib,0,r51,syncfree,z,bidiag,1000,nnz=1999 max|x-x_true|=12.5 wrong_entries=999,0,WRONG
+lib,0,r51,syncfree,z,bidiag,1000,nnz=1999 max|x-x_true|=12.5 wrong_entries=999,0,WRONG
+lib,0,r51,syncfree,z,bidiag,1000,nnz=1999 max|x-x_true|=12.5 wrong_entries=999,0,WRONG
+lib,0,r51,syncfree,z,bidiag,20000,nnz=39999 max|x-x_true|=266 wrong_entries=19999,0,WRONG
+lib,0,r51,syncfree,z,bidiag,20000,nnz=39999 max|x-x_true|=266 wrong_entries=19999,0,WRONG
+lib,0,r51,syncfree,z,bidiag,20000,nnz=39999 max|x-x_true|=263 wrong_entries=19999,0,WRONG
+lib,0,r51,syncfree,z,random,1000,nnz=4777 max|x-x_true|=7.1 wrong_entries=978,0,WRONG
+lib,0,r51,syncfree,z,random,1000,nnz=4777 max|x-x_true|=7.1 wrong_entries=978,0,WRONG
+lib,0,r51,syncfree,z,random,1000,nnz=4777 max|x-x_true|=6.41 wrong_entries=978,0,WRONG
+lib,0,r51,syncfree,z,random,20000,nnz=97009 max|x-x_true|=210 wrong_entries=19663,0,WRONG
+lib,0,r51,syncfree,z,random,20000,nnz=97009 max|x-x_true|=210 wrong_entries=19663,0,WRONG
+lib,0,r51,syncfree,z,random,20000,nnz=97009 max|x-x_true|=210 wrong_entries=19663,0,WRONG
+lib,0,r51,h2batched,0,info=[0 0 0 0],info[0]=1,WRONG
+lib,0,r51,h2batched,1,info=[0 0 0 0],info[1]=1,WRONG
+lib,0,r51,h2batched,2,info=[0 0 0 0],info[2]=1,WRONG
+lib,0,r51,h2batched,3,info=[0 0 0 0],info[3]=1,WRONG
+lib,0,r51,flag,slag2h,magma,0,info=0,1,WRONG
+lib,0,r51,flag,slag2h_ok,magma,0,info=0,0,OK
+lib,0,r51,flag,slag2h,blocking,0,info=0,1,WRONG
+lib,0,r51,flag,slag2h_ok,blocking,0,info=0,0,OK
+lib,0,r51,flag,slag2h,nonblocking,0,info=0,1,WRONG
+lib,0,r51,flag,slag2h_ok,nonblocking,0,info=0,0,OK
+fix,0,r51,syncfree,d,bidiag,1000,nnz=1999 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,bidiag,1000,nnz=1999 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,bidiag,1000,nnz=1999 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,bidiag,20000,nnz=39999 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,bidiag,20000,nnz=39999 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,bidiag,20000,nnz=39999 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,random,1000,nnz=4777 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,random,1000,nnz=4777 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,random,1000,nnz=4777 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,random,20000,nnz=97009 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,random,20000,nnz=97009 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,d,random,20000,nnz=97009 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,bidiag,1000,nnz=1999 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,bidiag,1000,nnz=1999 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,bidiag,1000,nnz=1999 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,bidiag,20000,nnz=39999 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,bidiag,20000,nnz=39999 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,bidiag,20000,nnz=39999 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,random,1000,nnz=4777 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,random,1000,nnz=4777 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,random,1000,nnz=4777 max|x-x_true|=3.55e-15 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,random,20000,nnz=97009 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,random,20000,nnz=97009 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,syncfree,z,random,20000,nnz=97009 max|x-x_true|=5.68e-14 wrong_entries=0,0,OK
+fix,0,r51,h2batched,0,info=[1 0 0 0],info[0]=1,OK
+fix,0,r51,h2batched,1,info=[0 1 0 0],info[1]=1,OK
+fix,0,r51,h2batched,2,info=[0 0 1 0],info[2]=1,OK
+fix,0,r51,h2batched,3,info=[0 0 0 1],info[3]=1,OK
+fix,0,r51,flag,slag2h,magma,0,info=1,1,OK
+fix,0,r51,flag,slag2h_ok,magma,0,info=0,0,OK
+fix,0,r51,flag,slag2h,blocking,0,info=1,1,OK
+fix,0,r51,flag,slag2h_ok,blocking,0,info=0,0,OK
+fix,0,r51,flag,slag2h,nonblocking,0,info=1,1,OK
+fix,0,r51,flag,slag2h_ok,nonblocking,0,info=0,0,OK
+lib,0,r51,flag,zlag2c,magma,0,info=1,1,OK
+lib,0,r51,flag,zlag2c,magma,100,info=1,1,OK
+lib,0,r51,flag,zlag2c,blocking,0,info=1,1,OK
+lib,0,r51,flag,zlag2c,blocking,100,info=1,1,OK
+lib,0,r51,flag,zlag2c,nonblocking,0,info=1,1,OK
+lib,0,r51,flag,zlag2c,nonblocking,100,info=1,1,OK
+lib,0,r51,flag,dlag2s,magma,0,info=1,1,OK
+lib,0,r51,flag,dlag2s,magma,100,info=1,1,OK
+lib,0,r51,flag,dlag2s,blocking,0,info=1,1,OK
+lib,0,r51,flag,dlag2s,blocking,100,info=1,1,OK
+lib,0,r51,flag,dlag2s,nonblocking,0,info=1,1,OK
+lib,0,r51,flag,dlag2s,nonblocking,100,info=1,1,OK
+lib,0,r51,flag,zlat2c,magma,0,info=1,1,OK
+lib,0,r51,flag,zlat2c,magma,100,info=1,1,OK
+lib,0,r51,flag,zlat2c,blocking,0,info=1,1,OK
+lib,0,r51,flag,zlat2c,blocking,100,info=1,1,OK
+lib,0,r51,flag,zlat2c,nonblocking,0,info=1,1,OK
+lib,0,r51,flag,zlat2c,nonblocking,100,info=1,1,OK
+lib,0,r51,flag,dlat2s,magma,0,info=1,1,OK
+lib,0,r51,flag,dlat2s,magma,100,info=1,1,OK
+lib,0,r51,flag,dlat2s,blocking,0,info=1,1,OK
+lib,0,r51,flag,dlat2s,blocking,100,info=1,1,OK
+lib,0,r51,flag,dlat2s,nonblocking,0,info=1,1,OK
+lib,0,r51,flag,dlat2s,nonblocking,100,info=1,1,OK
+lib,0,r51,trtri,magma,busy 0 ms: call 0.6 ms queue_sync 1.6 ms; |A*inv-I| after queue sync 1.11e-16 after device sync 1.11e-16,<1e-12,OK
+lib,0,r51,trtri,magma,busy 150 ms: call 156.4 ms queue_sync 0.2 ms; |A*inv-I| after queue sync 1.11e-16 after device sync 1.11e-16,<1e-12,OK
+lib,0,r51,trtri,blocking,busy 0 ms: call 0.4 ms queue_sync 0.3 ms; |A*inv-I| after queue sync 1.11e-16 after device sync 1.11e-16,<1e-12,OK
+lib,0,r51,trtri,blocking,busy 150 ms: call 164.4 ms queue_sync 0.5 ms; |A*inv-I| after queue sync 1.11e-16 after device sync 1.11e-16,<1e-12,OK
+lib,0,r51,trtri,nonblocking,busy 0 ms: call 0.6 ms queue_sync 1.6 ms; |A*inv-I| after queue sync 1.11e-16 after device sync 1.11e-16,<1e-12,OK
+lib,0,r51,trtri,nonblocking,busy 150 ms: call 160.2 ms queue_sync 0.2 ms; |A*inv-I| after queue sync 1.11e-16 after device sync 1.11e-16,<1e-12,OK
+SWEEP51_DONE

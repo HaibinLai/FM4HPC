@@ -1,0 +1,156 @@
+
+== shift csr 10 1
+DONE cuda=no error
+== shift csr 10 0
+DONE cuda=no error
+== shift csr 200 1
+DONE cuda=no error
+== shift csr 200 0
+DONE cuda=no error
+== shift ell 10 1
+DONE cuda=no error
+== shift ell 10 0
+DONE cuda=no error
+== shift ell 200 1
+DONE cuda=no error
+== shift ell 200 0
+DONE cuda=no error
+== shift ellpackt 10 1
+DONE cuda=no error
+== shift ellpackt 10 0
+DONE cuda=no error
+== shift ellpackt 200 1
+DONE cuda=no error
+== shift ellpackt 200 0
+DONE cuda=no error
+== conj csr 50
+BEFORE conj csr
+AFTER conj cuda=no error
+DONE cuda=no error
+== conj ell 50
+BEFORE conj ell
+AFTER conj cuda=an illegal memory access was encountered
+DONE cuda=an illegal memory access was encountered
+== conj csr 1000
+BEFORE conj csr
+AFTER conj cuda=no error
+DONE cuda=no error
+== compress 10
+compress n=10: nnz before 27, nonzeros 16, nnz after 16, stored zeros after 0, row[n] 16
+DONE cuda=no error
+== compress 100
+compress n=100: nnz before 2085, nonzeros 1374, nnz after 1374, stored zeros after 0, row[n] 1374
+DONE cuda=no error
+== compress 1000
+compress n=1000: nnz before 200938, nonzeros 133959, nnz after 133959, stored zeros after 0, row[n] 133959
+DONE cuda=no error
+== slice 100 9 0
+BEFORE slice n=100 ns=9 sl=0 (raw lstart 0)
+AFTER info 0 start 0 end 12 B.nnz 337
+DONE cuda=no error
+== slice 100 9 1
+BEFORE slice n=100 ns=9 sl=1 (raw lstart 12)
+AFTER info 0 start 12 end 24 B.nnz 343
+DONE cuda=no error
+== slice 100 9 8
+BEFORE slice n=100 ns=9 sl=8 (raw lstart 96)
+AFTER info 0 start 96 end 100 B.nnz 165
+DONE cuda=no error
+== slice 100 1 0
+BEFORE slice n=100 ns=1 sl=0 (raw lstart 0)
+AFTER info 0 start 0 end 100 B.nnz 2121
+DONE cuda=no error
+== slice 10 9 0
+BEFORE slice n=10 ns=9 sl=0 (raw lstart 0)
+AFTER info 0 start 0 end 2 B.nnz 14
+DONE cuda=no error
+== slice 10 9 1
+BEFORE slice n=10 ns=9 sl=1 (raw lstart 2)
+AFTER info 0 start 2 end 4 B.nnz 15
+DONE cuda=no error
+== slice 10 9 2
+BEFORE slice n=10 ns=9 sl=2 (raw lstart 4)
+AFTER info 0 start 4 end 6 B.nnz 14
+DONE cuda=no error
+== slice 10 9 3
+BEFORE slice n=10 ns=9 sl=3 (raw lstart 6)
+AFTER info 0 start 6 end 8 B.nnz 13
+DONE cuda=no error
+== slice 10 9 4
+BEFORE slice n=10 ns=9 sl=4 (raw lstart 8)
+AFTER info 0 start 8 end 10 B.nnz 16
+DONE cuda=no error
+== slice 10 9 5
+BEFORE slice n=10 ns=9 sl=5 (raw lstart 10)
+AFTER info 0 start 10 end 10 B.nnz 10
+DONE cuda=no error
+== slice 10 9 6
+BEFORE slice n=10 ns=9 sl=6 (raw lstart 12)
+AFTER info -112 start -1 end -1 B.nnz 32
+DONE cuda=no error
+== slice 10 9 7
+BEFORE slice n=10 ns=9 sl=7 (raw lstart 14)
+AFTER info -112 start -1 end -1 B.nnz 32
+DONE cuda=no error
+== slice 10 9 8
+BEFORE slice n=10 ns=9 sl=8 (raw lstart 16)
+AFTER info -112 start -1 end -1 B.nnz 32
+DONE cuda=no error
+== slice 5 4 0
+BEFORE slice n=5 ns=4 sl=0 (raw lstart 0)
+AFTER info 0 start 0 end 2 B.nnz 7
+DONE cuda=no error
+== slice 5 4 1
+BEFORE slice n=5 ns=4 sl=1 (raw lstart 2)
+AFTER info 0 start 2 end 4 B.nnz 8
+DONE cuda=no error
+== slice 5 4 2
+BEFORE slice n=5 ns=4 sl=2 (raw lstart 4)
+AFTER info 0 start 4 end 5 B.nnz 5
+DONE cuda=no error
+== slice 5 4 3
+BEFORE slice n=5 ns=4 sl=3 (raw lstart 6)
+AFTER info -112 start -1 end -1 B.nnz 10
+DONE cuda=no error
+== slice 7 3 0
+BEFORE slice n=7 ns=3 sl=0 (raw lstart 0)
+AFTER info 0 start 0 end 3 B.nnz 10
+DONE cuda=no error
+== slice 7 3 1
+BEFORE slice n=7 ns=3 sl=1 (raw lstart 3)
+AFTER info 0 start 3 end 6 B.nnz 15
+DONE cuda=no error
+== slice 7 3 2
+BEFORE slice n=7 ns=3 sl=2 (raw lstart 6)
+AFTER info 0 start 6 end 7 B.nnz 7
+DONE cuda=no error
+== shrink 10 15 cpu
+shrink 10x15 cpu: info 0 rows 10 cols 10 nnz 25
+DONE cuda=no error
+== shrink 40 41 cpu
+shrink 40x41 cpu: info 0 rows 40 cols 40 nnz 349
+DONE cuda=no error
+== shrink 20 20 cpu
+shrink 20x20 cpu: info 0 rows 20 cols 20 nnz 84
+DONE cuda=no error
+== shrink 10 15 dev
+shrink 10x15 dev: info 0 rows 10 cols 10 nnz 25
+DONE cuda=no error
+== shrink 40 41 dev
+shrink 40x41 dev: info 0 rows 40 cols 40 nnz 349
+DONE cuda=no error
+== shrink 20 20 dev
+shrink 20x20 dev: info 0 rows 20 cols 20 nnz 84
+DONE cuda=no error
+== vtrans 7 3 cpu
+vtrans: rows 7 cols 3 major 101
+DONE cuda=no error
+== vtrans 64 5 cpu
+vtrans: rows 64 cols 5 major 101
+DONE cuda=no error
+== vtrans 7 3 dev
+vtrans: rows 7 cols 3 major 101
+DONE cuda=no error
+== vtrans 64 5 dev
+vtrans: rows 64 cols 5 major 101
+DONE cuda=no error

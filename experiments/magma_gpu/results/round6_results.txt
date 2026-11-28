@@ -1,0 +1,40 @@
+libmagma.a
+libmagma.so
+libmagma_sparse.a
+libmagma_sparse.so
+pkgconfig
+0, 0 MiB, 32768 MiB, 0 %
+######## lag2h_ok
+magmablas_slag2h m=n=64, special entry 0: info=0 (documented: 1 if an entry is outside the FP16 range)
+  [after slag2h] cudaDeviceSynchronize: no error | cudaGetLastError: no error
+exit=0
+######## lag2h_ovf
+magmablas_slag2h m=n=64, special entry 100000: info=0 (documented: 1 if an entry is outside the FP16 range)
+  [after slag2h] cudaDeviceSynchronize: an illegal memory access was encountered | cudaGetLastError: an illegal memory access was encountered
+exit=0
+######## lag2h_nan
+magmablas_slag2h m=n=64, special entry nan: info=0 (documented: 1 if an entry is outside the FP16 range)
+  [after slag2h] cudaDeviceSynchronize: no error | cudaGetLastError: no error
+exit=0
+######## lag2hb_ovf
+magmablas_slag2h_batched, batch 3, matrices 1 and 2 contain 1e6: info_array = 0 0 0 (expected 0 1 1)
+  [after slag2h_batched] cudaDeviceSynchronize: an illegal memory access was encountered | cudaGetLastError: an illegal memory access was encountered
+exit=0
+######## dshposv_big
+dshposv_gpu n=1024 tridiag*2^40 (L entries ~ 2^20 > 65504): ret=0 iter=1 info=0  nonfinite x=0  max|x-1| (finite)=1.19e-07
+  [after dshposv] cudaDeviceSynchronize: no error | cudaGetLastError: no error
+exit=0
+######## shpotrf_oom
+free 33.73 GB of 34.07 GB; n = 82048: dA 26.93 GB, dhW 13.46 GB
+calling magma_shpotrf_gpu ...
+returned ret=1 info=1 (MAGMA_ERR_DEVICE_ALLOC=-113, MAGMA_ERR_HOST_ALLOC=-112)
+exit=0
+######## shpotrf_big
+== shpotrf_gpu (CUDA path: cublasGemmEx COMPUTE_32F_FAST_16F) vs spotrf_gpu on SPD tridiag(-1,4,-1)*2^k, n = 2048 ==
+k= 0  max|a|=4  shpotrf_gpu info=0 (nonfinite L entries 0, L(n,n)/sqrt(scale)=1.93185, exact ~1.7320508)  shpotrf_native info=0  spotrf_gpu info=0
+k= 8  max|a|=1.02e+03  shpotrf_gpu info=0 (nonfinite L entries 0, L(n,n)/sqrt(scale)=1.93185, exact ~1.7320508)  shpotrf_native info=0  spotrf_gpu info=0
+k=14  max|a|=6.55e+04  shpotrf_gpu info=0 (nonfinite L entries 0, L(n,n)/sqrt(scale)=1.93185, exact ~1.7320508)  shpotrf_native info=0  spotrf_gpu info=0
+k=20  max|a|=4.19e+06  shpotrf_gpu info=0 (nonfinite L entries 0, L(n,n)/sqrt(scale)=1.93185, exact ~1.7320508)  shpotrf_native info=0  spotrf_gpu info=0
+k=30  max|a|=4.29e+09  shpotrf_gpu info=0 (nonfinite L entries 0, L(n,n)/sqrt(scale)=1.93185, exact ~1.7320508)  shpotrf_native info=0  spotrf_gpu info=0
+k=40  max|a|=4.4e+12  shpotrf_gpu info=1025 (nonfinite L entries 917760, L(n,n)/sqrt(scale)=4.1943e+06, exact ~1.7320508)  shpotrf_native info=1025  spotrf_gpu info=0
+NOTE: the probe printed 'exact ~1.7320508' by mistake; the exact limit of L(n,n) for tridiag(-1,4,-1) is sqrt(2+sqrt(3)) = 1.93185, so k = 0..30 are correct. Probe label fixed afterwards.

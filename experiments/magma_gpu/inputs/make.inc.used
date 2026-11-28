@@ -1,0 +1,18 @@
+BACKEND     = cuda
+CC          = gcc
+CXX         = g++
+NVCC        = nvcc
+FORT        =
+ARCH        = ar
+ARCHFLAGS   = cr
+RANLIB      = ranlib
+GPU_TARGET  = Volta
+FPIC        = -fPIC
+CFLAGS      = -O3 $(FPIC) -DNDEBUG -DADD_ -Wall -fopenmp -std=c99
+CXXFLAGS    = -O3 $(FPIC) -DNDEBUG -DADD_ -Wall -fopenmp -std=c++11
+NVCCFLAGS   = -O3 -DNDEBUG -DADD_ -Xcompiler "$(FPIC)" -std=c++11
+LDFLAGS     = $(FPIC) -fopenmp
+CUDADIR     = /usr
+LIB         = -L/usr/lib/x86_64-linux-gnu -l:liblapack.so.3 -l:libblas.so.3 -lcublas -lcusparse -lcudart -lstdc++ -lm -l:libgfortran.so.5
+INC         = -I$(CUDADIR)/include
+LIBDIR      = -L/usr/lib/x86_64-linux-gnu

@@ -1,0 +1,151 @@
+
+== getrf 0 0 0
+DONE cuda=no error
+== getrf 0 0 1
+matrix 5 (257x257): info 0, LAPACK 129
+DONE cuda=no error
+== getrf 0 3 0
+DONE cuda=no error
+== getrf 0 3 1
+matrix 5 (257x257): info 0, LAPACK 129
+DONE cuda=no error
+== getrf 1 0 0
+DONE cuda=no error
+== getrf 1 0 1
+DONE cuda=no error
+== getrf 1 3 0
+DONE cuda=no error
+== getrf 1 3 1
+DONE cuda=no error
+== getrf 2 0 0
+DONE cuda=no error
+== getrf 2 0 1
+DONE cuda=no error
+== getrf 2 3 0
+DONE cuda=no error
+== getrf 2 3 1
+DONE cuda=no error
+== getrf 3 0 0
+DONE cuda=no error
+== getrf 3 0 1
+DONE cuda=no error
+== getrf 3 3 0
+DONE cuda=no error
+== getrf 3 3 1
+DONE cuda=no error
+== getrfmax 0 0 0
+DONE cuda=no error
+== getrfmax 0 0 1
+matrix 5 (257x257): info 0, LAPACK 129
+DONE cuda=no error
+== getrfmax 0 3 0
+DONE cuda=no error
+== getrfmax 0 3 1
+matrix 5 (257x257): info 0, LAPACK 129
+DONE cuda=no error
+== getrfmax 1 0 0
+DONE cuda=no error
+== getrfmax 1 0 1
+DONE cuda=no error
+== getrfmax 1 3 0
+DONE cuda=no error
+== getrfmax 1 3 1
+DONE cuda=no error
+== getrfmax 2 0 0
+DONE cuda=no error
+== getrfmax 2 0 1
+DONE cuda=no error
+== getrfmax 2 3 0
+DONE cuda=no error
+== getrfmax 2 3 1
+DONE cuda=no error
+== getrfmax 3 0 0
+DONE cuda=no error
+== getrfmax 3 0 1
+DONE cuda=no error
+== getrfmax 3 3 0
+DONE cuda=no error
+== getrfmax 3 3 1
+DONE cuda=no error
+== nopiv 0 0 0
+DONE cuda=no error
+== nopiv 0 0 1
+matrix 1 (7x7): info 0, LAPACK 4
+matrix 3 (33x33): info 0, LAPACK 17
+DONE cuda=no error
+== nopiv 0 3 0
+DONE cuda=no error
+== nopiv 0 3 1
+matrix 1 (7x7): info 0, LAPACK 4
+matrix 3 (33x33): info 0, LAPACK 17
+DONE cuda=no error
+== nopiv 1 0 0
+DONE cuda=no error
+== nopiv 1 0 1
+matrix 1 (10x50): info 0, LAPACK 6
+matrix 3 (64x300): info 0, LAPACK 33
+DONE cuda=no error
+== nopiv 1 3 0
+DONE cuda=no error
+== nopiv 1 3 1
+matrix 1 (10x50): info 0, LAPACK 6
+matrix 3 (64x300): info 0, LAPACK 33
+DONE cuda=no error
+== nopiv 2 0 0
+DONE cuda=no error
+== nopiv 2 0 1
+matrix 1 (1000x200): info 0, LAPACK 101
+DONE cuda=no error
+== nopiv 2 3 0
+DONE cuda=no error
+== nopiv 2 3 1
+matrix 1 (1000x200): info 0, LAPACK 101
+DONE cuda=no error
+== nopiv 3 0 0
+DONE cuda=no error
+== nopiv 3 0 1
+matrix 1 (1x1): info 0, LAPACK 1
+matrix 3 (128x3): info 0, LAPACK 2
+matrix 5 (64x64): info 0, LAPACK 33
+DONE cuda=no error
+== nopiv 3 3 0
+DONE cuda=no error
+== nopiv 3 3 1
+matrix 1 (1x1): info 0, LAPACK 1
+matrix 3 (128x3): info 0, LAPACK 2
+matrix 5 (64x64): info 0, LAPACK 33
+DONE cuda=no error
+== potrf 0 0 0
+DONE cuda=no error
+== potrf 0 0 1
+DONE cuda=no error
+== potrf 0 3 0
+DONE cuda=no error
+== potrf 0 3 1
+DONE cuda=no error
+== potrf 1 0 0
+DONE cuda=no error
+== potrf 1 0 1
+DONE cuda=no error
+== potrf 1 3 0
+DONE cuda=no error
+== potrf 1 3 1
+DONE cuda=no error
+== potrf 2 0 0
+DONE cuda=no error
+== potrf 2 0 1
+matrix 1 (1000x1000): info 117, LAPACK 501
+DONE cuda=no error
+== potrf 2 3 0
+DONE cuda=no error
+== potrf 2 3 1
+matrix 1 (1000x1000): info 117, LAPACK 501
+DONE cuda=no error
+== potrf 3 0 0
+DONE cuda=no error
+== potrf 3 0 1
+DONE cuda=no error
+== potrf 3 3 0
+DONE cuda=no error
+== potrf 3 3 1
+DONE cuda=no error

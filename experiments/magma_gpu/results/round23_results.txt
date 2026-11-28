@@ -1,0 +1,29 @@
+GPU 0 used before: 0 MiB
+######## residual
+zresidual with A 0x0 and b 4x1 ...
+timeout: the monitored command dumped core
+exit=136
+######## csrsplit
+zcsrsplit(offset 0, bsize 2), last row unsorted ...
+  ret=0 D: nnz=3 (0,0)=1 (1,1)=2 (1,681594464)=4.78345e-310  (expected (0,0)=1 (1,1)=2 (1,0)=3 in some order); freeing ...
+free(): invalid pointer
+timeout: the monitored command dumped core
+exit=134
+######## heinertia
+magmablas_zheinertia, D = diag(1, -1, NaN, 2), no 2x2 blocks: ret=0  +/-/0 = -1/-1/-1
+exit=0
+ROUND23_DONE
+0
+0 MiB, 0 %
+
+[exited with code 0]
+GPU 0 used before: 0 MiB
+######## heinertia
+  (ipiv passed as a device array; sync: no error)
+magmablas_zheinertia, D = diag(1, -1, NaN, 2), no 2x2 blocks: ret=0  +/-/0 = 2/1/1
+exit=0
+ROUND23_DONE
+0
+0 MiB, 0 %
+
+[exited with code 0]

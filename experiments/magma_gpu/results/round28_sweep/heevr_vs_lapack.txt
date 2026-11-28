@@ -1,0 +1,11 @@
+# MAGMA zheevr vs LAPACK zheevr eigenvector orthogonality (||Z^H Z - I|| / (n eps)) on the same matrices
+heevr cond1e12     n= 31  orth LAPACK zheevr=164  MAGMA zheevr=164
+heevr lowrank_half n= 31  orth LAPACK zheevr=2.91  MAGMA zheevr=2.91
+heevr cond1e12     n= 63  orth LAPACK zheevr=170  MAGMA zheevr=170
+heevr lowrank_half n= 63  orth LAPACK zheevr=4.15  MAGMA zheevr=4.15
+heevr cond1e12     n=127  orth LAPACK zheevr=553  MAGMA zheevr=553
+heevr lowrank_half n=127  orth LAPACK zheevr=1.96  MAGMA zheevr=1.96
+heevr cond1e12     n=200  orth LAPACK zheevr=59.8  MAGMA zheevr=59.9
+heevr lowrank_half n=200  orth LAPACK zheevr=3.25  MAGMA zheevr=3.63
+heevr cond1e12     n=255  orth LAPACK zheevr=135  MAGMA zheevr=135
+heevr lowrank_half n=255  orth LAPACK zheevr=2.12  MAGMA zheevr=2.62

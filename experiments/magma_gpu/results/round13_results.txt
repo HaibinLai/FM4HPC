@@ -1,0 +1,31 @@
+######## f7
+F7 zgetrf_expert_gpu_work(MagmaNative, nb=128, recnb=32) 128x128 I with A(50,50)=0: info=50 | LAPACK 50
+F7 zgetrf_expert_gpu_work(MagmaNative, nb=128, recnb=64) 128x128 I with A(50,50)=0: info=18 | LAPACK 50
+exit=0
+######## f12
+F12 zgetrf_native 512x32, zero columns 3 and 20, 300 runs: info histogram:  3 x300  | LAPACK 3
+exit=0
+######## f13
+F13 zgetf2_fused_batched m=4 n=8 random: ret=0 info=5 max ipiv=4 (m=4) | LAPACK 0
+    zgetf2_fused_batched m=8 n=8 random (control): ret=0 info=0 max ipiv=8 (m=8) | LAPACK 0
+exit=0
+######## f14
+F14 zgetrf_batched 4x4, column 1 = (0, NaN, 0, ..., 5): ret=0 info=0 max ipiv=4 (m=4) | LAPACK 0
+F14 zgetrf_batched 16x8, column 1 = (0, NaN, 0, ..., 5): ret=0 info=1 max ipiv=8 (m=16) | LAPACK 0
+F14 zgetrf_batched 64x8, column 1 = (0, NaN, 0, ..., 5): ret=0 info=1 max ipiv=8 (m=64) | LAPACK 0
+F14 zgetrf_batched 512x8, column 1 = (0, NaN, 0, ..., 5): ret=0 info=1 max ipiv=8 (m=512) | LAPACK 0
+exit=0
+######## f15
+On entry to magmablas_zlascl, parameter 3 had an illegal value (info = -3)
+F15 magmablas_zlascl n = -1: info=-3 (LAPACK zlascl: -7)
+On entry to magmablas_zlascl, parameter 7 had an illegal value (info = -7)
+    magmablas_zlascl ldda = 2 < m = 4: info=-7 (LAPACK zlascl: -9)
+exit=0
+######## sparse
+%error: zero diagonal element.
+zmscale_matrix_rhs(UNITDIAG) on [[0,1],[1,2]], b = (1,1): ret=-100  b = (inf, 0.5)  A values: 1 1 2
+zmtransfer of a matrix tagged CSRLIST (unhandled storage) CPU->DEV: ret=0  out: num_rows=0 nnz=0 dval=(nil)
+exit=0
+ROUND13_DONE
+0
+0 MiB, 0 %

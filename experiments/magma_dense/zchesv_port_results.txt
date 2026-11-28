@@ -1,0 +1,21 @@
+d=2^  -4  iter=   2 info=0  X==B:False  rel.err=0.00e+00  cond(A)=1.13
+d=2^ -12  iter=   2 info=0  X==B:False  rel.err=0.00e+00  cond(A)=1.00
+d=2^ -20  iter=   2 info=0  X==B:False  rel.err=0.00e+00  cond(A)=1.00
+d=2^ -24  iter=   3 info=0  X==B:False  rel.err=0.00e+00  cond(A)=1.00
+d=2^ -27  iter=   3 info=0  X==B:False  rel.err=0.00e+00  cond(A)=1.00
+--- coupled saddle-type matrices A = [[d, c^T], [c, M]] (M random symmetric, well conditioned) ---
+d=2^  -4 seed=0 iter=   2 info=0  X==B:False  rel.err=1.78e-15  cond(A)=3.3
+d=2^  -4 seed=1 iter=   2 info=0  X==B:False  rel.err=2.32e-16  cond(A)=2.9
+d=2^  -4 seed=2 iter=   2 info=0  X==B:False  rel.err=2.32e-16  cond(A)=2.6
+d=2^ -10 seed=0 iter=   3 info=0  X==B:False  rel.err=2.22e-16  cond(A)=3.3
+d=2^ -10 seed=1 iter=   3 info=0  X==B:False  rel.err=8.12e-16  cond(A)=2.8
+d=2^ -10 seed=2 iter=   3 info=0  X==B:False  rel.err=2.32e-16  cond(A)=2.6
+d=2^ -16 seed=0 iter=   6 info=0  X==B:False  rel.err=4.44e-16  cond(A)=3.3
+d=2^ -16 seed=1 iter=   6 info=0  X==B:False  rel.err=2.32e-16  cond(A)=2.8
+d=2^ -16 seed=2 iter=   6 info=0  X==B:False  rel.err=2.32e-16  cond(A)=2.6
+d=2^ -20 seed=0 iter=  13 info=0  X==B:False  rel.err=4.44e-16  cond(A)=3.3
+d=2^ -20 seed=1 iter=  13 info=0  X==B:False  rel.err=1.16e-15  cond(A)=2.8
+d=2^ -20 seed=2 iter=  12 info=0  X==B:False  rel.err=3.48e-16  cond(A)=2.6
+d=2^ -24 seed=0 iter= -31 info=0  X==B:True  rel.err=1.43e+00  cond(A)=3.3
+d=2^ -24 seed=1 iter= -31 info=0  X==B:True  rel.err=4.54e-01  cond(A)=2.8
+d=2^ -24 seed=2 iter=  29 info=0  X==B:False  rel.err=inf  cond(A)=2.6

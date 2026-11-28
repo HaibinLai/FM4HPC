@@ -1,0 +1,130 @@
+bblas,routine,case,status,maxerr,detail
+bblas,dtrsv_batched,n=1 LNN inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 LNN inc=2,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 LNU inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 LNU inc=2,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 LTN inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 LTN inc=2,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 LTU inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 LTU inc=2,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 UNN inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 UNN inc=2,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 UNU inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 UNU inc=2,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 UTN inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 UTN inc=2,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 UTU inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=1 UTU inc=2,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 LNN inc=1,OK,0.000313, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 LNN inc=2,OK,0.000301, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 LNU inc=1,OK,0.000149, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 LNU inc=2,OK,0.000287, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 LTN inc=1,OK,0.000311, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 LTN inc=2,OK,0.000297, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 LTU inc=1,OK,0.00033, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 LTU inc=2,OK,7.26e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 UNN inc=1,OK,0.000156, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 UNN inc=2,OK,0.000545, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 UNU inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 UNU inc=2,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 UTN inc=1,OK,0.000295, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 UTN inc=2,OK,0.000296, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 UTU inc=1,OK,0, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=5 UTU inc=2,OK,8.46e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 LNN inc=1,OK,0.000115, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 LNN inc=2,OK,6.47e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 LNU inc=1,OK,5.99e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 LNU inc=2,OK,6.04e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 LTN inc=1,OK,0.000115, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 LTN inc=2,OK,6.44e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 LTU inc=1,OK,6.01e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 LTU inc=2,OK,5.95e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 UNN inc=1,OK,5.83e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 UNN inc=2,OK,0.000118, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 UNU inc=1,OK,5.96e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 UNU inc=2,OK,0.000118, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 UTN inc=1,OK,0.000111, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 UTN inc=2,OK,0.000118, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 UTU inc=1,OK,1.49e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=31 UTU inc=2,OK,1.48e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 LNN inc=1,OK,0.000105, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 LNN inc=2,OK,5.96e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 LNU inc=1,OK,7.03e-06, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 LNU inc=2,OK,5.69e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 LTN inc=1,OK,5.86e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 LTN inc=2,OK,0.000111, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 LTU inc=1,OK,5.65e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 LTU inc=2,OK,0.000113, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 UNN inc=1,OK,0.00011, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 UNN inc=2,OK,0.000108, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 UNU inc=1,OK,5.7e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 UNU inc=2,OK,0.000224, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 UTN inc=1,OK,0.000103, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 UTN inc=2,OK,6.13e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 UTU inc=1,OK,5.72e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=33 UTU inc=2,OK,5.63e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 LNN inc=1,OK,0.000148, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 LNN inc=2,OK,0.000111, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 LNU inc=1,OK,9.45e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 LNU inc=2,OK,0.000118, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 LTN inc=1,OK,0.000108, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 LTN inc=2,OK,0.000138, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 LTU inc=1,OK,0.000158, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 LTU inc=2,OK,0.000119, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 UNN inc=1,OK,0.000216, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 UNN inc=2,OK,0.000163, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 UNU inc=1,OK,9.48e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 UNU inc=2,OK,0.00012, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 UTN inc=1,OK,0.000109, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 UTN inc=2,OK,0.000136, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 UTU inc=1,OK,0.000126, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=64 UTU inc=2,OK,0.000237, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 LNN inc=1,OK,0.000103, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 LNN inc=2,OK,0.000102, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 LNU inc=1,OK,0.000136, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 LNU inc=2,OK,0.000115, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 LTN inc=1,OK,0.000103, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 LTN inc=2,OK,0.000111, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 LTU inc=1,OK,0.000136, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 LTU inc=2,OK,0.000152, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 UNN inc=1,OK,0.000161, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 UNN inc=2,OK,0.000104, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 UNU inc=1,OK,0.000115, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 UNU inc=2,OK,0.000116, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 UTN inc=1,OK,0.000143, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 UTN inc=2,OK,0.000102, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 UTU inc=1,OK,0.000134, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=100 UTU inc=2,OK,0.000119, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 LNN inc=1,OK,8.25e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 LNN inc=2,OK,9.69e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 LNU inc=1,OK,0.000115, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 LNU inc=2,OK,9.06e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 LTN inc=1,OK,0.000102, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 LTN inc=2,OK,8.22e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 LTU inc=1,OK,9.1e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 LTU inc=2,OK,0.000105, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 UNN inc=1,OK,0.000105, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 UNN inc=2,OK,6.74e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 UNU inc=1,OK,8.43e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 UNU inc=2,OK,8.31e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 UTN inc=1,OK,7.01e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 UTN inc=2,OK,7.61e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 UTU inc=1,OK,8.3e-05, touched=0 nan=0 wrong=0
+bblas,dtrsv_batched,n=257 UTU inc=2,OK,0.000106, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=1 nrhs=1,OK,0.00105, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=1 nrhs=3,OK,0.00148, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=5 nrhs=1,OK,0.000515, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=5 nrhs=3,OK,0.000659, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=31 nrhs=1,OK,0.000169, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=31 nrhs=3,OK,0.00013, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=33 nrhs=1,OK,9.83e-05, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=33 nrhs=3,OK,0.000207, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=64 nrhs=1,OK,0.000145, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=64 nrhs=3,OK,0.000149, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=100 nrhs=1,OK,0.00013, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=100 nrhs=3,OK,0.000192, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=257 nrhs=1,OK,9.11e-05, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=257 nrhs=3,OK,0.000146, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=513 nrhs=1,OK,6.76e-05, touched=0 nan=0 wrong=0
+bblas,dpotrs_batched,n=513 nrhs=3,OK,8.1e-05, touched=0 nan=0 wrong=0
+DONE trsv cuda=no error

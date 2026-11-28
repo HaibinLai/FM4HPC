@@ -1,0 +1,13 @@
+exit,row
+0,r77i,real,jacobi,10,lsqr,0,2.27e-16,2.27e-16,0,OK
+0,r77i,real,ilu,10,lsqr,0,1.09e-16,0.0289,4.48e-16,OK
+0,r77i,real,icc,10,lsqr,0,0.032,1.09e-16,0.02,WRONG
+0,r77s,real,lsqr,none,10,0,59,2.24e-11,2.24e-11,OK
+0,r77s,real,lsqr,none,30,0,457,7.95e-11,7.95e-11,OK
+0,r77s,real,lsqr,jacobi,10,0,59,3.84e-11,3.84e-11,OK
+0,r77s,real,lsqr,jacobi,30,0,457,8.33e-11,8.33e-11,OK
+0,r77s,real,lsqr,ilu,10,0,23,9.08e-11,9.08e-11,OK
+0,r77s,real,lsqr,ilu,30,0,69,7.39e-11,7.39e-11,OK
+0,r77s,real,lsqr,icc,10,0,38,5.72e-11,5.72e-11,OK
+0,r77s,real,lsqr,icc,30,0,82,9.25e-11,9.25e-11,OK
+LIST_DONE

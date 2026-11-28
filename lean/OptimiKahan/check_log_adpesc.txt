@@ -1,8 +1,0 @@
-'AdpEsc.sentinel_iff' depends on axioms: [propext, Quot.sound]
-'AdpEsc.fp64_sentinel_ok' does not depend on any axioms
-'AdpEsc.skip_zero_unsafe' depends on axioms: [propext]
-'AdpEsc.fixedEst_le' depends on axioms: [propext, Quot.sound]
-'AdpEsc.adp_sound' depends on axioms: [propext, Quot.sound]
-'AdpEsc.adp_paper_sound' depends on axioms: [propext, Quot.sound]
-'AdpEsc.adp_fixed_sound' depends on axioms: [propext, Quot.sound]
-'AdpEsc.cublas_rule' depends on axioms: [propext, Quot.sound]

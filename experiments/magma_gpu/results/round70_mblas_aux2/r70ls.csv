@@ -1,0 +1,14 @@
+exit,row
+0,r70,laswp_sym,64,10,-,-,-,1.44,1.19,WRONG
+0,r70,laswp_sym,64,32,-,-,-,1.44,1.19,WRONG
+0,r70,laswp_sym,64,33,-,-,-,200,200,WRONG
+0,r70,laswp_sym,64,64,-,-,-,200,200,WRONG
+0,r70,laswp_sym,65,10,-,-,-,1.42,1.26,WRONG
+0,r70,laswp_sym,65,2,-,-,-,1.41,0,OK
+0,r70,laswp_sym,100,10,-,-,-,1.57,1.29,WRONG
+0,r70,laswp_sym,100,1,-,-,-,1.43,0,OK
+0,r70,laswp_sym,128,1,-,-,-,1.42,0,OK
+0,r70,laswp_sym,200,5,-,-,-,1.41,0.329,WRONG
+0,r70,laswp_sym,40,32,-,-,-,1.51,1.51,WRONG
+0,r70,laswp_sym,40,40,-,-,-,201,201,WRONG
+LIST_DONE

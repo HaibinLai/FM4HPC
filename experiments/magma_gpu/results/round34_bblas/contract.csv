@@ -1,0 +1,24 @@
+bblas,routine,case,status,maxerr,detail
+contract,dpotrf_batched,n=5,OK,info=0 upper_changed=0 of 30; factor_err=0.032
+contract,dpotrf_batched,n=16,OK,info=0 upper_changed=0 of 360; factor_err=0.00586
+contract,dpotrf_batched,n=31,OK,info=0 upper_changed=0 of 1395; factor_err=0.00161
+contract,dpotrf_batched,n=33,OK,info=0 upper_changed=0 of 1584; factor_err=0.00134
+contract,dpotrf_batched,n=64,OK,info=0 upper_changed=0 of 6048; factor_err=0.000488
+contract,dpotrf_batched,n=100,OK,info=0 upper_changed=0 of 14850; factor_err=0.000128
+contract,dpotrf_batched,n=257,TOUCHED,info=0 upper_changed=19632 of 98688; factor_err=3.02e-05
+contract,dpotrf_batched,n=513,TOUCHED,info=0 upper_changed=43824 of 393984; factor_err=5.69e-06
+contract,dpotrf_vbatched,n=5,OK,info=0 upper_changed=0 of 30; factor_err=0.032
+contract,dpotrf_vbatched,n=16,OK,info=0 upper_changed=0 of 360; factor_err=0.00586
+contract,dpotrf_vbatched,n=31,OK,info=0 upper_changed=0 of 1395; factor_err=0.00161
+contract,dpotrf_vbatched,n=33,OK,info=0 upper_changed=0 of 1584; factor_err=0.00134
+contract,dpotrf_vbatched,n=64,OK,info=0 upper_changed=0 of 6048; factor_err=0.000488
+contract,dpotrf_vbatched,n=100,OK,info=0 upper_changed=0 of 14850; factor_err=0.000128
+contract,dpotrf_vbatched,n=257,OK,info=0 upper_changed=0 of 98688; factor_err=2.26e-05
+contract,dpotrf_vbatched,n=513,WRONG,info=-413432245 upper_changed=0 of 393984; factor_err=5.23e+12
+contract,magmablas_dtrsm,n=1,OK,alpha=0 B=NaN: 0 of 7 entries not zero
+contract,magmablas_dtrsm,n=31,OK,alpha=0 B=NaN: 0 of 217 entries not zero
+contract,magmablas_dtrsm,n=100,OK,alpha=0 B=NaN: 0 of 700 entries not zero
+contract,magma_dtrmm(cublas),n=1,OK,alpha=0 B=NaN: 0 of 7 entries not zero
+contract,magma_dtrmm(cublas),n=31,OK,alpha=0 B=NaN: 0 of 217 entries not zero
+contract,magma_dtrmm(cublas),n=100,OK,alpha=0 B=NaN: 0 of 700 entries not zero
+DONE contract cuda=no error

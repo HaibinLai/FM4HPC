@@ -1,0 +1,15 @@
+unmtr  k=  0 nalloc=  1 info=0      diff_to_ref=0          diff_to_input=2.74       ok
+unmtr  k=  1 nalloc=  1 info=0      diff_to_ref=1.29       diff_to_input=0          SILENT-WRONG  [failing site: magma_gpu<magma_gpu<]
+unghr  k=  0 nalloc=  1 info=0      diff_to_ref=0          diff_to_input=1          ok
+unghr  k=  1 nalloc=  1 info=0      diff_to_ref=1.13       diff_to_input=1          SILENT-WRONG  [failing site: magma_gpu<magma_gpu<]
+unmbr  k=  0 nalloc=  1 info=0      diff_to_ref=0          diff_to_input=2.7        ok
+unmbr  k=  1 nalloc=  1 info=0      diff_to_ref=1.21       diff_to_input=0          SILENT-WRONG  [failing site: magma_gpu<magma_gpu<]
+ROUND11_DONE
+######## unmtr k=1
+magma_zunmqr magma_zunmtr 
+######## unghr k=1
+magma_zungqr magma_zunghr 
+######## unmbr k=1
+magma_zunmqr magma_zunmbr 
+0
+0 MiB, 0 %

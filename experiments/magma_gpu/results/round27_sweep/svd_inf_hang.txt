@@ -1,0 +1,8 @@
+lapack gesvd job=N : start lapack gesvd job=N | done  lapack gesvd job=N info=0 s0=nan
+lapack gesvd job=S : HANG (killed after 30 s)
+lapack gesdd job=N : start lapack gesdd job=N | done  lapack gesdd job=N info=0 s0=nan
+lapack gesdd job=S : HANG (killed after 30 s)
+magma gesvd job=N : start magma gesvd job=N | done  magma gesvd job=N info=0 s0=nan
+magma gesvd job=S : HANG (killed after 30 s)
+magma gesdd job=N : start magma gesdd job=N | done  magma gesdd job=N info=0 s0=nan
+magma gesdd job=S : HANG (killed after 30 s)

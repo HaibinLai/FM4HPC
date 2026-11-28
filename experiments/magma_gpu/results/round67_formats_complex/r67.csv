@@ -1,0 +1,564 @@
+
+0,r67,ELLPACKT,n1,1,0,0,OK
+0,r67,ELLPACKT,n1,2,0,0,OK
+0,r67,ELLPACKT,n1,3,0,0,OK
+0,r67,ELLPACKT,n1,4,0,0,OK
+0,r67,ELLPACKT,poisson,1,0,0,OK
+0,r67,ELLPACKT,poisson,2,0,0,OK
+0,r67,ELLPACKT,poisson,3,0,3.55e-15,OK
+0,r67,ELLPACKT,poisson,4,0,0,OK
+0,r67,ELLPACKT,random,1,0,0,OK
+0,r67,ELLPACKT,random,2,0,0,OK
+0,r67,ELLPACKT,random,3,0,7.11e-15,OK
+0,r67,ELLPACKT,random,4,0,0,OK
+0,r67,ELLPACKT,emptyrow,1,0,0,OK
+0,r67,ELLPACKT,emptyrow,2,0,0,OK
+0,r67,ELLPACKT,emptyrow,3,0,7.11e-15,OK
+0,r67,ELLPACKT,emptyrow,4,0,0,OK
+0,r67,ELLPACKT,denserow,1,0,0,OK
+0,r67,ELLPACKT,denserow,2,0,0,OK
+0,r67,ELLPACKT,denserow,3,0,2.84e-14,OK
+0,r67,ELLPACKT,denserow,4,0,0,OK
+0,r67,ELLPACKT,rect,1,0,0,OK
+0,r67,ELLPACKT,rect,2,0,0,OK
+0,r67,ELLPACKT,rect,3,0,3.55e-15,OK
+0,r67,ELLPACKT,rect,4,0,0,OK
+0,r67,ELLPACKT,zero,1,0,0,OK
+0,r67,ELLPACKT,zero,2,0,0,OK
+0,r67,ELLPACKT,zero,3,0,0,OK
+0,r67,ELLPACKT,zero,4,0,0,OK
+0,r67,ELLPACKT,emptyrow0,1,0,0,OK
+0,r67,ELLPACKT,emptyrow0,2,0,0,OK
+0,r67,ELLPACKT,emptyrow0,3,0,4.44e-16,OK
+0,r67,ELLPACKT,emptyrow0,4,0,0,OK
+0,r67,ELL,n1,1,0,0,OK
+0,r67,ELL,n1,2,0,0,OK
+0,r67,ELL,n1,3,0,0,OK
+0,r67,ELL,n1,4,0,0,OK
+0,r67,ELL,poisson,1,0,0,OK
+0,r67,ELL,poisson,2,0,0,OK
+0,r67,ELL,poisson,3,0,3.55e-15,OK
+0,r67,ELL,poisson,4,0,0,OK
+0,r67,ELL,random,1,0,0,OK
+0,r67,ELL,random,2,0,0,OK
+0,r67,ELL,random,3,0,7.11e-15,OK
+0,r67,ELL,random,4,0,0,OK
+0,r67,ELL,emptyrow,1,0,0,OK
+0,r67,ELL,emptyrow,2,0,0,OK
+0,r67,ELL,emptyrow,3,0,7.11e-15,OK
+0,r67,ELL,emptyrow,4,0,0,OK
+0,r67,ELL,denserow,1,0,0,OK
+0,r67,ELL,denserow,2,0,0,OK
+0,r67,ELL,denserow,3,0,2.84e-14,OK
+0,r67,ELL,denserow,4,0,0,OK
+0,r67,ELL,rect,1,0,0,OK
+0,r67,ELL,rect,2,0,0,OK
+0,r67,ELL,rect,3,0,3.55e-15,OK
+0,r67,ELL,rect,4,0,0,OK
+0,r67,ELL,zero,1,0,0,OK
+0,r67,ELL,zero,2,0,0,OK
+0,r67,ELL,zero,3,0,0,OK
+0,r67,ELL,zero,4,0,0,OK
+0,r67,ELL,emptyrow0,1,0,0,OK
+0,r67,ELL,emptyrow0,2,0,0,OK
+0,r67,ELL,emptyrow0,3,0,4.44e-16,OK
+0,r67,ELL,emptyrow0,4,0,0,OK
+0,r67,DENSE,n1,1,0,0,OK
+0,r67,DENSE,n1,2,0,0,OK
+0,r67,DENSE,n1,3,0,0,OK
+0,r67,DENSE,n1,4,0,0,OK
+0,r67,DENSE,poisson,1,0,0,OK
+0,r67,DENSE,poisson,2,0,0,OK
+0,r67,DENSE,poisson,3,0,4.49,WRONG
+0,r67,DENSE,poisson,4,0,0,OK
+0,r67,DENSE,random,1,0,0,OK
+0,r67,DENSE,random,2,0,0,OK
+0,r67,DENSE,random,3,0,103,WRONG
+0,r67,DENSE,random,4,0,0,OK
+0,r67,DENSE,emptyrow,1,0,0,OK
+0,r67,DENSE,emptyrow,2,0,0,OK
+0,r67,DENSE,emptyrow,3,0,4.81,WRONG
+0,r67,DENSE,emptyrow,4,0,0,OK
+0,r67,DENSE,denserow,1,0,0,OK
+0,r67,DENSE,denserow,2,0,0,OK
+0,r67,DENSE,denserow,3,0,243,WRONG
+0,r67,DENSE,denserow,4,0,0,OK
+0,r67,DENSE,rect,1,0,0,OK
+0,r67,DENSE,rect,2,0,0,OK
+0,r67,DENSE,rect,3,0,44.8,WRONG
+0,r67,DENSE,rect,4,0,0,OK
+0,r67,DENSE,zero,1,0,0,OK
+0,r67,DENSE,zero,2,0,0,OK
+0,r67,DENSE,zero,3,0,0,OK
+0,r67,DENSE,zero,4,0,0,OK
+0,r67,DENSE,emptyrow0,1,0,0,OK
+0,r67,DENSE,emptyrow0,2,0,0,OK
+0,r67,DENSE,emptyrow0,3,0,2.35,WRONG
+0,r67,DENSE,emptyrow0,4,0,0,OK
+0,r67,BCSR,n1,1,-113,0,WRONG
+0,r67,BCSR,n1,4,-113,0,WRONG
+0,r67,BCSR,poisson,1,0,0,OK
+0,r67,BCSR,poisson,2,0,0,OK
+0,r67,BCSR,poisson,3,0,3.97e-15,OK
+0,r67,BCSR,poisson,4,0,0,OK
+0,r67,BCSR,random,1,0,0,OK
+0,r67,BCSR,random,2,0,0,OK
+0,r67,BCSR,random,3,0,1.42e-14,OK
+0,r67,BCSR,random,4,0,0,OK
+0,r67,BCSR,emptyrow,1,0,0,OK
+0,r67,BCSR,emptyrow,2,0,0,OK
+0,r67,BCSR,emptyrow,3,0,7.12e-15,OK
+0,r67,BCSR,emptyrow,4,0,0,OK
+0,r67,BCSR,denserow,1,0,0,OK
+0,r67,BCSR,denserow,2,0,0,OK
+0,r67,BCSR,denserow,3,0,1.78e-15,OK
+0,r67,BCSR,denserow,4,0,0,OK
+0,r67,BCSR,rect,1,0,0,OK
+0,r67,BCSR,rect,2,0,0,OK
+0,r67,BCSR,rect,3,0,7.11e-15,OK
+0,r67,BCSR,rect,4,0,0,OK
+0,r67,BCSR,zero,1,0,0,OK
+0,r67,BCSR,zero,2,0,0,OK
+0,r67,BCSR,zero,3,0,0,OK
+0,r67,BCSR,zero,4,0,0,OK
+0,r67,BCSR,emptyrow0,1,0,0,OK
+0,r67,BCSR,emptyrow0,2,0,0,OK
+0,r67,BCSR,emptyrow0,3,0,4.44e-16,OK
+0,r67,BCSR,emptyrow0,4,0,0,OK
+0,error: format not supported.
+0,r67,CSC,n1,1,-103,0,UNSUPPORTED
+0,r67,CSC,n1,4,0,0,OK
+0,error: format not supported.
+0,r67,CSC,poisson,1,-103,0,UNSUPPORTED
+0,r67,CSC,poisson,4,0,0,OK
+0,error: format not supported.
+0,r67,CSC,random,1,-103,0,UNSUPPORTED
+0,r67,CSC,random,4,0,0,OK
+0,error: format not supported.
+0,r67,CSC,emptyrow,1,-103,0,UNSUPPORTED
+0,r67,CSC,emptyrow,4,0,0,OK
+0,error: format not supported.
+0,r67,CSC,denserow,1,-103,0,UNSUPPORTED
+0,r67,CSC,denserow,4,0,0,OK
+0,error: format not supported.
+0,r67,CSC,rect,1,-103,0,UNSUPPORTED
+0,r67,CSC,rect,4,0,0,OK
+0,error: format not supported.
+0,r67,CSC,zero,1,-103,0,UNSUPPORTED
+0,r67,CSC,zero,4,0,0,OK
+0,error: format not supported.
+0,r67,CSC,emptyrow0,1,-103,0,UNSUPPORTED
+0,r67,CSC,emptyrow0,4,0,0,OK
+0,r67,COO,n1,1,0,0,OK
+0,r67,COO,n1,2,0,0,OK
+0,error: format not supported.
+0,r67,COO,n1,3,-103,0,UNSUPPORTED
+0,r67,COO,n1,4,0,0,OK
+0,r67,COO,poisson,1,0,0,OK
+0,r67,COO,poisson,2,0,6.45,WRONG
+0,error: format not supported.
+0,r67,COO,poisson,3,-103,0,UNSUPPORTED
+0,r67,COO,poisson,4,0,6.45,WRONG
+0,r67,COO,random,1,0,0,OK
+0,r67,COO,random,2,0,32.6,WRONG
+0,error: format not supported.
+0,r67,COO,random,3,-103,0,UNSUPPORTED
+0,r67,COO,random,4,0,32.6,WRONG
+0,r67,COO,emptyrow,1,0,0,OK
+0,r67,COO,emptyrow,2,0,5.16,WRONG
+0,error: format not supported.
+0,r67,COO,emptyrow,3,-103,0,UNSUPPORTED
+0,r67,COO,emptyrow,4,0,5.16,WRONG
+0,r67,COO,denserow,1,0,0,OK
+0,r67,COO,denserow,2,0,5.73,WRONG
+0,error: format not supported.
+0,r67,COO,denserow,3,-103,0,UNSUPPORTED
+0,r67,COO,denserow,4,0,5.73,WRONG
+0,r67,COO,rect,1,0,0,OK
+0,r67,COO,rect,2,0,7.43,WRONG
+0,error: format not supported.
+0,r67,COO,rect,3,-103,0,UNSUPPORTED
+0,r67,COO,rect,4,0,7.43,WRONG
+0,r67,COO,zero,1,0,0,OK
+0,r67,COO,zero,2,0,0,OK
+0,error: format not supported.
+0,r67,COO,zero,3,-103,0,UNSUPPORTED
+0,r67,COO,zero,4,0,0,OK
+0,r67,COO,emptyrow0,1,0,0,OK
+0,r67,COO,emptyrow0,2,0,2.55,WRONG
+0,error: format not supported.
+0,r67,COO,emptyrow0,3,-103,0,UNSUPPORTED
+0,r67,COO,emptyrow0,4,0,2.55,WRONG
+-1073741676,r67,ELLRT,n1,1,0,0,OK
+-1073741676,r67,ELLRT,n1,2,0,0,OK
+-1073741676,r67,ELLRT,n1,3,0,0,OK
+-1073741676,r67,ELLRT,poisson,1,0,0,OK
+-1073741676,r67,ELLRT,poisson,2,0,0,OK
+-1073741676,r67,ELLRT,poisson,3,0,3.97e-15,OK
+-1073741676,r67,ELLRT,random,1,0,0,OK
+-1073741676,r67,ELLRT,random,2,0,0,OK
+-1073741676,r67,ELLRT,random,3,0,1.42e-14,OK
+-1073741676,r67,ELLRT,emptyrow,1,0,0,OK
+-1073741676,r67,ELLRT,emptyrow,2,0,0,OK
+-1073741676,r67,ELLRT,emptyrow,3,0,7.12e-15,OK
+-1073741676,r67,ELLRT,denserow,1,0,0,OK
+-1073741676,r67,ELLRT,denserow,2,0,0,OK
+-1073741676,r67,ELLRT,denserow,3,0,75.5,WRONG
+-1073741676,r67,ELLRT,rect,1,0,0,OK
+-1073741676,r67,ELLRT,rect,2,0,0,OK
+-1073741676,r67,ELLRT,rect,3,0,7.16e-15,OK
+-1073741676,r67,ELLRT,zero,1,0,0,OK
+-1073741676,r67,ELLRT,zero,2,0,0,OK
+-1073741676,r67,ELLRT,zero,3,0,0,OK
+-1073741676,r67,ELLRT,emptyrow0,1,0,0,OK
+-1073741676,r67,ELLRT,emptyrow0,2,0,0,OK
+-1073741676,r67,ELLRT,emptyrow0,3,0,4.44e-16,OK
+-1073741676,r67,SELLP,n1,1,0,0,OK
+-1073741676,r67,SELLP,n1,2,0,0,OK
+-1073741676,r67,SELLP,n1,3,0,0,OK
+-1073741676,r67,SELLP,poisson,1,0,0,OK
+-1073741676,r67,SELLP,poisson,2,0,0,OK
+-1073741676,r67,SELLP,poisson,3,0,3.66e-15,OK
+-1073741676,r67,SELLP,random,1,0,0,OK
+-1073741676,r67,SELLP,random,2,0,0,OK
+-1073741676,r67,SELLP,random,3,0,1.42e-14,OK
+-1073741676,r67,SELLP,emptyrow,1,0,0,OK
+-1073741676,r67,SELLP,emptyrow,2,0,0,OK
+-1073741676,r67,SELLP,emptyrow,3,0,1.78e-15,OK
+-1073741676,r67,SELLP,denserow,1,0,0,OK
+-1073741676,r67,SELLP,denserow,2,0,0,OK
+-1073741676,r67,SELLP,denserow,3,0,1.79e-15,OK
+-1073741676,r67,SELLP,rect,1,0,0,OK
+-1073741676,r67,SELLP,rect,2,0,0,OK
+-1073741676,r67,SELLP,rect,3,0,3.58e-15,OK
+-1073741676,r67,SELLP,zero,1,0,0,OK
+-1073741676,r67,SELLP,zero,2,0,0,OK
+-1073741676,r67,SELLP,zero,3,0,0,OK
+-1073741676,r67,SELLP,emptyrow0,1,0,0,OK
+-1073741676,r67,SELLP,emptyrow0,2,0,0,OK
+-1073741676,r67,SELLP,emptyrow0,3,0,4.44e-16,OK
+0,r67,ELLD,n1,1,0,0,OK
+0,r67,ELLD,n1,2,0,0,OK
+0,error: format not supported.
+0,r67,ELLD,n1,3,-103,0,UNSUPPORTED
+0,r67,ELLD,n1,4,0,0,OK
+0,r67,ELLD,poisson,1,0,0,OK
+0,r67,ELLD,poisson,2,0,0,OK
+0,error: format not supported.
+0,r67,ELLD,poisson,3,-103,0,UNSUPPORTED
+0,r67,ELLD,poisson,4,0,0,OK
+0,r67,ELLD,random,1,0,0,OK
+0,r67,ELLD,random,2,0,0,OK
+0,error: format not supported.
+0,r67,ELLD,random,3,-103,0,UNSUPPORTED
+0,r67,ELLD,random,4,0,0,OK
+0,r67,ELLD,emptyrow,1,0,0,OK
+0,r67,ELLD,emptyrow,2,0,0,OK
+0,error: format not supported.
+0,r67,ELLD,emptyrow,3,-103,0,UNSUPPORTED
+0,r67,ELLD,emptyrow,4,0,0,OK
+0,r67,ELLD,denserow,1,0,0,OK
+0,r67,ELLD,denserow,2,0,0,OK
+0,error: format not supported.
+0,r67,ELLD,denserow,3,-103,0,UNSUPPORTED
+0,r67,ELLD,denserow,4,0,0,OK
+-1073740940,r67,ELLD,rect,1,0,0,OK
+-1073740940,r67,ELLD,rect,2,0,4.07,WRONG
+-1073740940,error: format not supported.
+-1073740940,r67,ELLD,rect,3,-103,0,UNSUPPORTED
+0,r67,ELLD,zero,1,0,0,OK
+0,r67,ELLD,zero,2,0,0,OK
+0,error: format not supported.
+0,r67,ELLD,zero,3,-103,0,UNSUPPORTED
+0,r67,ELLD,zero,4,0,0,OK
+0,r67,ELLD,emptyrow0,1,0,0,OK
+0,r67,ELLD,emptyrow0,2,0,0,OK
+0,error: format not supported.
+0,r67,ELLD,emptyrow0,3,-103,0,UNSUPPORTED
+0,r67,ELLD,emptyrow0,4,0,0,OK
+0,r67,CSRLIST,n1,1,0,0,OK
+0,r67,CSRLIST,n1,2,0,0,OK
+0,error: linear algebra objects are not located in same memory!
+0,memory locations are: 0   572   572
+0,r67,CSRLIST,n1,3,-115,0,WRONG
+0,r67,CSRLIST,n1,4,0,3.17,WRONG
+0,r67,CSRLIST,poisson,1,0,0,OK
+0,r67,CSRLIST,poisson,2,0,0,OK
+0,error: linear algebra objects are not located in same memory!
+0,memory locations are: 0   572   572
+0,r67,CSRLIST,poisson,3,-115,0,WRONG
+0,r67,CSRLIST,poisson,4,0,4.21,WRONG
+0,r67,CSRLIST,random,1,0,0,OK
+0,r67,CSRLIST,random,2,0,0,OK
+0,error: linear algebra objects are not located in same memory!
+0,memory locations are: 0   572   572
+0,r67,CSRLIST,random,3,-115,0,WRONG
+0,r67,CSRLIST,random,4,0,4.91,WRONG
+-1073740940,r67,CSRLIST,emptyrow,1,0,0,OK
+0,r67,CSRLIST,denserow,1,0,0,OK
+0,r67,CSRLIST,denserow,2,0,0,OK
+0,error: linear algebra objects are not located in same memory!
+0,memory locations are: 0   572   572
+0,r67,CSRLIST,denserow,3,-115,0,WRONG
+0,r67,CSRLIST,denserow,4,0,3.39,WRONG
+0,r67,CSRLIST,rect,1,0,0,OK
+0,r67,CSRLIST,rect,2,0,0,OK
+0,error: linear algebra objects are not located in same memory!
+0,memory locations are: 0   572   572
+0,r67,CSRLIST,rect,3,-115,0,WRONG
+0,r67,CSRLIST,rect,4,0,4.07,WRONG
+-1073740940,r67,CSRLIST,zero,1,0,0,OK
+-1073740940,r67,CSRLIST,zero,2,0,0,OK
+-1073740940,error: linear algebra objects are not located in same memory!
+-1073740940,memory locations are: 0   572   572
+-1073740940,r67,CSRLIST,zero,3,-115,0,WRONG
+-1073741819,r67,CSRLIST,emptyrow0,1,0,0,OK
+-1073741819,r67,CSRLIST,emptyrow0,2,0,2.11,WRONG
+-1073741819,error: linear algebra objects are not located in same memory!
+-1073741819,memory locations are: 0   572   572
+-1073741819,r67,CSRLIST,emptyrow0,3,-115,0,WRONG
+0,r67,CSRD,n1,1,0,0,OK
+0,r67,CSRD,n1,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRD,n1,3,-103,0,UNSUPPORTED
+0,r67,CSRD,n1,4,0,0,OK
+0,r67,CSRD,poisson,1,0,0,OK
+0,r67,CSRD,poisson,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRD,poisson,3,-103,0,UNSUPPORTED
+0,r67,CSRD,poisson,4,0,0,OK
+0,r67,CSRD,random,1,0,0,OK
+0,r67,CSRD,random,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRD,random,3,-103,0,UNSUPPORTED
+0,r67,CSRD,random,4,0,0,OK
+0,r67,CSRD,emptyrow,1,0,0,OK
+0,r67,CSRD,emptyrow,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRD,emptyrow,3,-103,0,UNSUPPORTED
+0,r67,CSRD,emptyrow,4,0,0,OK
+0,r67,CSRD,denserow,1,0,0,OK
+0,r67,CSRD,denserow,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRD,denserow,3,-103,0,UNSUPPORTED
+0,r67,CSRD,denserow,4,0,0,OK
+-1073740940,r67,CSRD,rect,1,0,0,OK
+-1073740940,r67,CSRD,rect,2,0,4.07,WRONG
+-1073740940,error: format not supported.
+-1073740940,r67,CSRD,rect,3,-103,0,UNSUPPORTED
+0,r67,CSRD,zero,1,0,0,OK
+0,r67,CSRD,zero,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRD,zero,3,-103,0,UNSUPPORTED
+0,r67,CSRD,zero,4,0,0,OK
+0,r67,CSRD,emptyrow0,1,0,0,OK
+0,r67,CSRD,emptyrow0,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRD,emptyrow0,3,-103,0,UNSUPPORTED
+0,r67,CSRD,emptyrow0,4,0,0,OK
+0,r67,CSRL,n1,1,0,0,OK
+0,error: format not supported.
+0,r67,CSRL,n1,2,-103,0,UNSUPPORTED
+0,error: format not supported.
+0,r67,CSRL,n1,4,-103,0,UNSUPPORTED
+0,r67,CSRL,poisson,1,0,0,OK
+0,error: format not supported.
+0,r67,CSRL,poisson,2,-103,0,UNSUPPORTED
+0,error: format not supported.
+0,r67,CSRL,poisson,4,-103,0,UNSUPPORTED
+0,r67,CSRL,random,1,0,0,OK
+0,error: format not supported.
+0,r67,CSRL,random,2,-103,0,UNSUPPORTED
+0,error: format not supported.
+0,r67,CSRL,random,4,-103,0,UNSUPPORTED
+0,r67,CSRL,emptyrow,1,0,0,OK
+0,error: format not supported.
+0,r67,CSRL,emptyrow,2,-103,0,UNSUPPORTED
+0,error: format not supported.
+0,r67,CSRL,emptyrow,4,-103,0,UNSUPPORTED
+0,r67,CSRL,denserow,1,0,0,OK
+0,error: format not supported.
+0,r67,CSRL,denserow,2,-103,0,UNSUPPORTED
+0,error: format not supported.
+0,r67,CSRL,denserow,4,-103,0,UNSUPPORTED
+0,r67,CSRL,rect,1,0,0,OK
+0,error: format not supported.
+0,r67,CSRL,rect,2,-103,0,UNSUPPORTED
+0,error: format not supported.
+0,r67,CSRL,rect,4,-103,0,UNSUPPORTED
+0,r67,CSRL,zero,1,0,0,OK
+0,error: format not supported.
+0,r67,CSRL,zero,2,-103,0,UNSUPPORTED
+0,error: format not supported.
+0,r67,CSRL,zero,4,-103,0,UNSUPPORTED
+0,r67,CSRL,emptyrow0,1,0,0,OK
+0,error: format not supported.
+0,r67,CSRL,emptyrow0,2,-103,0,UNSUPPORTED
+0,error: format not supported.
+0,r67,CSRL,emptyrow0,4,-103,0,UNSUPPORTED
+0,r67,CSRU,n1,1,0,0,OK
+0,r67,CSRU,n1,2,0,0,OK
+0,r67,CSRU,n1,4,0,0,OK
+0,r67,CSRU,poisson,1,0,0,OK
+0,r67,CSRU,poisson,2,0,0,OK
+0,r67,CSRU,poisson,4,0,0,OK
+0,r67,CSRU,random,1,0,0,OK
+0,r67,CSRU,random,2,0,0,OK
+0,r67,CSRU,random,4,0,0,OK
+0,r67,CSRU,emptyrow,1,0,0,OK
+0,r67,CSRU,emptyrow,2,0,0,OK
+0,r67,CSRU,emptyrow,4,0,0,OK
+0,r67,CSRU,denserow,1,0,0,OK
+0,r67,CSRU,denserow,2,0,0,OK
+0,r67,CSRU,denserow,4,0,0,OK
+0,r67,CSRU,rect,1,0,0,OK
+0,r67,CSRU,rect,2,0,0,OK
+0,r67,CSRU,rect,4,0,0,OK
+0,r67,CSRU,zero,1,0,0,OK
+0,r67,CSRU,zero,2,0,0,OK
+0,r67,CSRU,zero,4,0,0,OK
+0,r67,CSRU,emptyrow0,1,0,0,OK
+0,r67,CSRU,emptyrow0,2,0,0,OK
+0,r67,CSRU,emptyrow0,4,0,0,OK
+0,r67,CSRCOO,n1,1,0,0,OK
+0,r67,CSRCOO,n1,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRCOO,n1,3,-103,0,UNSUPPORTED
+0,r67,CSRCOO,n1,4,0,0,OK
+0,r67,CSRCOO,poisson,1,0,0,OK
+0,r67,CSRCOO,poisson,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRCOO,poisson,3,-103,0,UNSUPPORTED
+0,r67,CSRCOO,poisson,4,0,0,OK
+0,r67,CSRCOO,random,1,0,0,OK
+0,r67,CSRCOO,random,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRCOO,random,3,-103,0,UNSUPPORTED
+0,r67,CSRCOO,random,4,0,0,OK
+0,r67,CSRCOO,emptyrow,1,0,0,OK
+0,r67,CSRCOO,emptyrow,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRCOO,emptyrow,3,-103,0,UNSUPPORTED
+0,r67,CSRCOO,emptyrow,4,0,0,OK
+0,r67,CSRCOO,denserow,1,0,0,OK
+0,r67,CSRCOO,denserow,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRCOO,denserow,3,-103,0,UNSUPPORTED
+0,r67,CSRCOO,denserow,4,0,0,OK
+0,r67,CSRCOO,rect,1,0,0,OK
+0,r67,CSRCOO,rect,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRCOO,rect,3,-103,0,UNSUPPORTED
+0,r67,CSRCOO,rect,4,0,0,OK
+0,r67,CSRCOO,zero,1,0,0,OK
+0,r67,CSRCOO,zero,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRCOO,zero,3,-103,0,UNSUPPORTED
+0,r67,CSRCOO,zero,4,0,0,OK
+0,r67,CSRCOO,emptyrow0,1,0,0,OK
+0,r67,CSRCOO,emptyrow0,2,0,0,OK
+0,error: format not supported.
+0,r67,CSRCOO,emptyrow0,3,-103,0,UNSUPPORTED
+0,r67,CSRCOO,emptyrow0,4,0,0,OK
+0,r67,CUCSR,n1,1,0,0,OK
+0,r67,CUCSR,n1,2,0,0,OK
+0,r67,CUCSR,n1,3,0,0,OK
+0,r67,CUCSR,n1,4,0,0,OK
+0,r67,CUCSR,poisson,1,0,0,OK
+0,r67,CUCSR,poisson,2,0,0,OK
+0,r67,CUCSR,poisson,3,0,5.02e-15,OK
+0,r67,CUCSR,poisson,4,0,0,OK
+0,r67,CUCSR,random,1,0,0,OK
+0,r67,CUCSR,random,2,0,0,OK
+0,r67,CUCSR,random,3,0,1.59e-14,OK
+0,r67,CUCSR,random,4,0,0,OK
+0,r67,CUCSR,emptyrow,1,0,0,OK
+0,r67,CUCSR,emptyrow,2,0,0,OK
+0,r67,CUCSR,emptyrow,3,0,3.58e-15,OK
+0,r67,CUCSR,emptyrow,4,0,0,OK
+0,r67,CUCSR,denserow,1,0,0,OK
+0,r67,CUCSR,denserow,2,0,0,OK
+0,r67,CUCSR,denserow,3,0,2.84e-14,OK
+0,r67,CUCSR,denserow,4,0,0,OK
+0,r67,CUCSR,rect,1,0,0,OK
+0,r67,CUCSR,rect,2,0,0,OK
+0,r67,CUCSR,rect,3,0,3.66e-15,OK
+0,r67,CUCSR,rect,4,0,0,OK
+0,r67,CUCSR,zero,1,0,0,OK
+0,r67,CUCSR,zero,2,0,0,OK
+0,r67,CUCSR,zero,3,0,0,OK
+0,r67,CUCSR,zero,4,0,0,OK
+0,r67,CUCSR,emptyrow0,1,0,0,OK
+0,r67,CUCSR,emptyrow0,2,0,0,OK
+0,r67,CUCSR,emptyrow0,3,0,4.44e-16,OK
+0,r67,CUCSR,emptyrow0,4,0,0,OK
+0,r67,CSR5,n1,1,0,0,OK
+0,r67,CSR5,n1,2,0,0,OK
+0,error: format not supported.
+0,r67,CSR5,n1,3,-103,0,UNSUPPORTED
+0,r67,CSR5,n1,4,0,0,OK
+0,r67,CSR5,poisson,1,0,0,OK
+0,r67,CSR5,poisson,2,0,0,OK
+0,error: format not supported.
+0,r67,CSR5,poisson,3,-103,0,UNSUPPORTED
+0,r67,CSR5,poisson,4,0,0,OK
+0,r67,CSR5,random,1,0,0,OK
+0,r67,CSR5,random,2,0,0,OK
+0,error: format not supported.
+0,r67,CSR5,random,3,-103,0,UNSUPPORTED
+0,r67,CSR5,random,4,0,0,OK
+0,r67,CSR5,emptyrow,1,0,0,OK
+0,r67,CSR5,emptyrow,2,0,0,OK
+0,error: format not supported.
+0,r67,CSR5,emptyrow,3,-103,0,UNSUPPORTED
+0,r67,CSR5,emptyrow,4,0,0,OK
+0,r67,CSR5,denserow,1,0,0,OK
+0,r67,CSR5,denserow,2,0,0,OK
+0,error: format not supported.
+0,r67,CSR5,denserow,3,-103,0,UNSUPPORTED
+0,r67,CSR5,denserow,4,0,0,OK
+0,r67,CSR5,rect,1,0,0,OK
+0,r67,CSR5,rect,2,0,0,OK
+0,error: format not supported.
+0,r67,CSR5,rect,3,-103,0,UNSUPPORTED
+0,r67,CSR5,rect,4,0,0,OK
+0,r67,CSR5,zero,1,0,0,OK
+0,r67,CSR5,zero,2,0,0,OK
+0,error: format not supported.
+0,r67,CSR5,zero,3,-103,0,UNSUPPORTED
+0,r67,CSR5,zero,4,0,0,OK
+0,r67,CSR5,emptyrow0,1,0,0,OK
+0,r67,CSR5,emptyrow0,2,0,0,OK
+0,error: format not supported.
+0,r67,CSR5,emptyrow0,3,-103,0,UNSUPPORTED
+0,r67,CSR5,emptyrow0,4,0,0,OK
+0,r67,TRANS,n1,host_T,0,0,OK
+0,r67,TRANS,n1,host_H,0,0,OK
+0,r67,TRANS,n1,dev_T,0,0,OK
+0,r67,TRANS,n1,dev_H,0,0,OK
+0,r67,TRANS,poisson,host_T,0,0,OK
+0,r67,TRANS,poisson,host_H,0,0,OK
+0,r67,TRANS,poisson,dev_T,0,0,OK
+0,r67,TRANS,poisson,dev_H,0,0,OK
+0,r67,TRANS,random,host_T,0,0,OK
+0,r67,TRANS,random,host_H,0,0,OK
+0,r67,TRANS,random,dev_T,0,0,OK
+0,r67,TRANS,random,dev_H,0,0,OK
+0,r67,TRANS,emptyrow,host_T,0,0,OK
+0,r67,TRANS,emptyrow,host_H,0,0,OK
+0,r67,TRANS,emptyrow,dev_T,0,0,OK
+0,r67,TRANS,emptyrow,dev_H,0,0,OK
+0,r67,TRANS,denserow,host_T,0,0,OK
+0,r67,TRANS,denserow,host_H,0,0,OK
+0,r67,TRANS,denserow,dev_T,0,0,OK
+0,r67,TRANS,denserow,dev_H,0,0,OK
+-1073741819,MISSING,TRANS rect
+0,r67,TRANS,zero,host_T,0,0,OK
+0,r67,TRANS,zero,host_H,0,0,OK
+0,r67,TRANS,zero,dev_T,0,0,OK
+0,r67,TRANS,zero,dev_H,0,0,OK
+0,r67,TRANS,emptyrow0,host_T,0,0,OK
+0,r67,TRANS,emptyrow0,host_H,0,0,OK
+0,r67,TRANS,emptyrow0,dev_T,0,0,OK
+0,r67,TRANS,emptyrow0,dev_H,0,0,OK
+LIST_DONE

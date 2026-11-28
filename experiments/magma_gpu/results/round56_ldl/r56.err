@@ -1,0 +1,1065 @@
+
+== hesv_nopiv_gpu 1 1 L 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 1 1 L 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 1 1 L 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 1 1 L 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 1 1 U 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 1 1 U 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 1 1 U 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 1 1 U 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 1 7 L 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 1 7 L 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 1 7 L 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 1 7 L 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 1 7 U 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 1 7 U 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 1 7 U 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 1 7 U 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 33 1 L 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 33 1 L 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 33 1 L 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 33 1 L 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 33 1 U 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 33 1 U 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 33 1 U 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 33 1 U 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 33 7 L 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 33 7 L 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 33 7 L 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 33 7 L 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 33 7 U 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 33 7 U 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 33 7 U 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 33 7 U 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 300 1 L 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 300 1 L 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 300 1 L 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 300 1 L 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 300 1 U 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 300 1 U 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 300 1 U 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 300 1 U 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 300 7 L 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 300 7 L 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 300 7 L 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 300 7 L 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 300 7 U 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 300 7 U 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 300 7 U 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 300 7 U 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 513 1 L 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 513 1 L 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 513 1 L 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 513 1 L 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 513 1 U 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 513 1 U 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 513 1 U 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 513 1 U 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 513 7 L 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 513 7 L 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 513 7 L 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 513 7 L 5 1
+DONE cuda=no error
+== hesv_nopiv_gpu 513 7 U 0 0
+DONE cuda=no error
+== hesv_nopiv_gpu 513 7 U 0 1
+DONE cuda=no error
+== hesv_nopiv_gpu 513 7 U 5 0
+DONE cuda=no error
+== hesv_nopiv_gpu 513 7 U 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 1 1 L 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 1 1 L 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 1 1 L 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 1 1 L 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 1 1 U 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 1 1 U 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 1 1 U 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 1 1 U 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 1 7 L 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 1 7 L 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 1 7 L 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 1 7 L 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 1 7 U 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 1 7 U 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 1 7 U 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 1 7 U 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 33 1 L 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 33 1 L 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 33 1 L 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 33 1 L 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 33 1 U 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 33 1 U 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 33 1 U 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 33 1 U 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 33 7 L 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 33 7 L 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 33 7 L 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 33 7 L 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 33 7 U 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 33 7 U 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 33 7 U 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 33 7 U 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 300 1 L 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 300 1 L 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 300 1 L 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 300 1 L 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 300 1 U 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 300 1 U 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 300 1 U 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 300 1 U 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 300 7 L 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 300 7 L 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 300 7 L 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 300 7 L 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 300 7 U 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 300 7 U 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 300 7 U 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 300 7 U 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 513 1 L 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 513 1 L 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 513 1 L 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 513 1 L 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 513 1 U 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 513 1 U 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 513 1 U 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 513 1 U 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 513 7 L 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 513 7 L 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 513 7 L 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 513 7 L 5 1
+DONE cuda=no error
+== sysv_nopiv_gpu 513 7 U 0 0
+DONE cuda=no error
+== sysv_nopiv_gpu 513 7 U 0 1
+DONE cuda=no error
+== sysv_nopiv_gpu 513 7 U 5 0
+DONE cuda=no error
+== sysv_nopiv_gpu 513 7 U 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 1 L 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 1 L 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 1 L 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 1 L 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 1 U 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 1 U 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 1 U 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 1 U 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 7 L 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 7 L 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 7 L 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 7 L 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 7 U 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 7 U 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 7 U 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 1 7 U 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 1 L 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 1 L 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 1 L 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 1 L 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 1 U 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 1 U 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 1 U 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 1 U 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 7 L 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 7 L 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 7 L 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 7 L 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 7 U 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 7 U 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 7 U 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 33 7 U 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 1 L 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 1 L 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 1 L 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 1 L 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 1 U 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 1 U 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 1 U 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 1 U 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 7 L 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 7 L 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 7 L 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 7 L 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 7 U 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 7 U 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 7 U 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 300 7 U 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 1 L 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 1 L 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 1 L 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 1 L 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 1 U 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 1 U 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 1 U 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 1 U 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 7 L 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 7 L 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 7 L 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 7 L 5 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 7 U 0 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 7 U 0 1
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 7 U 5 0
+DONE cuda=no error
+== hetrf_nopiv_gpu 513 7 U 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 1 L 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 1 L 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 1 L 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 1 L 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 1 U 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 1 U 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 1 U 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 1 U 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 7 L 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 7 L 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 7 L 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 7 L 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 7 U 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 7 U 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 7 U 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 1 7 U 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 1 L 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 1 L 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 1 L 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 1 L 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 1 U 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 1 U 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 1 U 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 1 U 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 7 L 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 7 L 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 7 L 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 7 L 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 7 U 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 7 U 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 7 U 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 33 7 U 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 1 L 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 1 L 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 1 L 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 1 L 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 1 U 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 1 U 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 1 U 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 1 U 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 7 L 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 7 L 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 7 L 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 7 L 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 7 U 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 7 U 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 7 U 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 300 7 U 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 1 L 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 1 L 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 1 L 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 1 L 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 1 U 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 1 U 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 1 U 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 1 U 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 7 L 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 7 L 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 7 L 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 7 L 5 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 7 U 0 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 7 U 0 1
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 7 U 5 0
+DONE cuda=no error
+== sytrf_nopiv_gpu 513 7 U 5 1
+DONE cuda=no error
+== hetrf_nopiv 1 1 L 0 0
+DONE cuda=no error
+== hetrf_nopiv 1 1 L 0 1
+DONE cuda=no error
+== hetrf_nopiv 1 1 L 5 0
+DONE cuda=no error
+== hetrf_nopiv 1 1 L 5 1
+DONE cuda=no error
+== hetrf_nopiv 1 1 U 0 0
+DONE cuda=no error
+== hetrf_nopiv 1 1 U 0 1
+DONE cuda=no error
+== hetrf_nopiv 1 1 U 5 0
+DONE cuda=no error
+== hetrf_nopiv 1 1 U 5 1
+DONE cuda=no error
+== hetrf_nopiv 1 7 L 0 0
+DONE cuda=no error
+== hetrf_nopiv 1 7 L 0 1
+DONE cuda=no error
+== hetrf_nopiv 1 7 L 5 0
+DONE cuda=no error
+== hetrf_nopiv 1 7 L 5 1
+DONE cuda=no error
+== hetrf_nopiv 1 7 U 0 0
+DONE cuda=no error
+== hetrf_nopiv 1 7 U 0 1
+DONE cuda=no error
+== hetrf_nopiv 1 7 U 5 0
+DONE cuda=no error
+== hetrf_nopiv 1 7 U 5 1
+DONE cuda=no error
+== hetrf_nopiv 33 1 L 0 0
+DONE cuda=no error
+== hetrf_nopiv 33 1 L 0 1
+DONE cuda=no error
+== hetrf_nopiv 33 1 L 5 0
+DONE cuda=no error
+== hetrf_nopiv 33 1 L 5 1
+DONE cuda=no error
+== hetrf_nopiv 33 1 U 0 0
+DONE cuda=no error
+== hetrf_nopiv 33 1 U 0 1
+DONE cuda=no error
+== hetrf_nopiv 33 1 U 5 0
+DONE cuda=no error
+== hetrf_nopiv 33 1 U 5 1
+DONE cuda=no error
+== hetrf_nopiv 33 7 L 0 0
+DONE cuda=no error
+== hetrf_nopiv 33 7 L 0 1
+DONE cuda=no error
+== hetrf_nopiv 33 7 L 5 0
+DONE cuda=no error
+== hetrf_nopiv 33 7 L 5 1
+DONE cuda=no error
+== hetrf_nopiv 33 7 U 0 0
+DONE cuda=no error
+== hetrf_nopiv 33 7 U 0 1
+DONE cuda=no error
+== hetrf_nopiv 33 7 U 5 0
+DONE cuda=no error
+== hetrf_nopiv 33 7 U 5 1
+DONE cuda=no error
+== hetrf_nopiv 300 1 L 0 0
+DONE cuda=no error
+== hetrf_nopiv 300 1 L 0 1
+DONE cuda=no error
+== hetrf_nopiv 300 1 L 5 0
+DONE cuda=no error
+== hetrf_nopiv 300 1 L 5 1
+DONE cuda=no error
+== hetrf_nopiv 300 1 U 0 0
+DONE cuda=no error
+== hetrf_nopiv 300 1 U 0 1
+DONE cuda=no error
+== hetrf_nopiv 300 1 U 5 0
+DONE cuda=no error
+== hetrf_nopiv 300 1 U 5 1
+DONE cuda=no error
+== hetrf_nopiv 300 7 L 0 0
+DONE cuda=no error
+== hetrf_nopiv 300 7 L 0 1
+DONE cuda=no error
+== hetrf_nopiv 300 7 L 5 0
+DONE cuda=no error
+== hetrf_nopiv 300 7 L 5 1
+DONE cuda=no error
+== hetrf_nopiv 300 7 U 0 0
+DONE cuda=no error
+== hetrf_nopiv 300 7 U 0 1
+DONE cuda=no error
+== hetrf_nopiv 300 7 U 5 0
+DONE cuda=no error
+== hetrf_nopiv 300 7 U 5 1
+DONE cuda=no error
+== hetrf_nopiv 513 1 L 0 0
+DONE cuda=no error
+== hetrf_nopiv 513 1 L 0 1
+DONE cuda=no error
+== hetrf_nopiv 513 1 L 5 0
+DONE cuda=no error
+== hetrf_nopiv 513 1 L 5 1
+DONE cuda=no error
+== hetrf_nopiv 513 1 U 0 0
+DONE cuda=no error
+== hetrf_nopiv 513 1 U 0 1
+DONE cuda=no error
+== hetrf_nopiv 513 1 U 5 0
+DONE cuda=no error
+== hetrf_nopiv 513 1 U 5 1
+DONE cuda=no error
+== hetrf_nopiv 513 7 L 0 0
+DONE cuda=no error
+== hetrf_nopiv 513 7 L 0 1
+DONE cuda=no error
+== hetrf_nopiv 513 7 L 5 0
+DONE cuda=no error
+== hetrf_nopiv 513 7 L 5 1
+DONE cuda=no error
+== hetrf_nopiv 513 7 U 0 0
+DONE cuda=no error
+== hetrf_nopiv 513 7 U 0 1
+DONE cuda=no error
+== hetrf_nopiv 513 7 U 5 0
+DONE cuda=no error
+== hetrf_nopiv 513 7 U 5 1
+DONE cuda=no error
+== hetrf 1 1 L 0 0
+DONE cuda=no error
+== hetrf 1 1 L 0 2
+DONE cuda=no error
+== hetrf 1 1 L 5 0
+DONE cuda=no error
+== hetrf 1 1 L 5 2
+DONE cuda=no error
+== hetrf 1 1 U 0 0
+DONE cuda=no error
+== hetrf 1 1 U 0 2
+DONE cuda=no error
+== hetrf 1 1 U 5 0
+DONE cuda=no error
+== hetrf 1 1 U 5 2
+DONE cuda=no error
+== hetrf 1 7 L 0 0
+DONE cuda=no error
+== hetrf 1 7 L 0 2
+DONE cuda=no error
+== hetrf 1 7 L 5 0
+DONE cuda=no error
+== hetrf 1 7 L 5 2
+DONE cuda=no error
+== hetrf 1 7 U 0 0
+DONE cuda=no error
+== hetrf 1 7 U 0 2
+DONE cuda=no error
+== hetrf 1 7 U 5 0
+DONE cuda=no error
+== hetrf 1 7 U 5 2
+DONE cuda=no error
+== hetrf 33 1 L 0 0
+DONE cuda=no error
+== hetrf 33 1 L 0 2
+DONE cuda=no error
+== hetrf 33 1 L 5 0
+DONE cuda=no error
+== hetrf 33 1 L 5 2
+DONE cuda=no error
+== hetrf 33 1 U 0 0
+DONE cuda=no error
+== hetrf 33 1 U 0 2
+DONE cuda=no error
+== hetrf 33 1 U 5 0
+DONE cuda=no error
+== hetrf 33 1 U 5 2
+DONE cuda=no error
+== hetrf 33 7 L 0 0
+DONE cuda=no error
+== hetrf 33 7 L 0 2
+DONE cuda=no error
+== hetrf 33 7 L 5 0
+DONE cuda=no error
+== hetrf 33 7 L 5 2
+DONE cuda=no error
+== hetrf 33 7 U 0 0
+DONE cuda=no error
+== hetrf 33 7 U 0 2
+DONE cuda=no error
+== hetrf 33 7 U 5 0
+DONE cuda=no error
+== hetrf 33 7 U 5 2
+DONE cuda=no error
+== hetrf 300 1 L 0 0
+DONE cuda=no error
+== hetrf 300 1 L 0 2
+DONE cuda=no error
+== hetrf 300 1 L 5 0
+DONE cuda=no error
+== hetrf 300 1 L 5 2
+DONE cuda=no error
+== hetrf 300 1 U 0 0
+DONE cuda=no error
+== hetrf 300 1 U 0 2
+DONE cuda=no error
+== hetrf 300 1 U 5 0
+DONE cuda=no error
+== hetrf 300 1 U 5 2
+DONE cuda=no error
+== hetrf 300 7 L 0 0
+DONE cuda=no error
+== hetrf 300 7 L 0 2
+DONE cuda=no error
+== hetrf 300 7 L 5 0
+DONE cuda=no error
+== hetrf 300 7 L 5 2
+DONE cuda=no error
+== hetrf 300 7 U 0 0
+DONE cuda=no error
+== hetrf 300 7 U 0 2
+DONE cuda=no error
+== hetrf 300 7 U 5 0
+DONE cuda=no error
+== hetrf 300 7 U 5 2
+DONE cuda=no error
+== hetrf 513 1 L 0 0
+DONE cuda=no error
+== hetrf 513 1 L 0 2
+DONE cuda=no error
+== hetrf 513 1 L 5 0
+DONE cuda=no error
+== hetrf 513 1 L 5 2
+DONE cuda=no error
+== hetrf 513 1 U 0 0
+DONE cuda=no error
+== hetrf 513 1 U 0 2
+DONE cuda=no error
+== hetrf 513 1 U 5 0
+DONE cuda=no error
+== hetrf 513 1 U 5 2
+DONE cuda=no error
+== hetrf 513 7 L 0 0
+DONE cuda=no error
+== hetrf 513 7 L 0 2
+DONE cuda=no error
+== hetrf 513 7 L 5 0
+DONE cuda=no error
+== hetrf 513 7 L 5 2
+DONE cuda=no error
+== hetrf 513 7 U 0 0
+DONE cuda=no error
+== hetrf 513 7 U 0 2
+DONE cuda=no error
+== hetrf 513 7 U 5 0
+DONE cuda=no error
+== hetrf 513 7 U 5 2
+DONE cuda=no error
+== hetrf_gpu 1 1 L 0 0
+DONE cuda=no error
+== hetrf_gpu 1 1 L 0 2
+DONE cuda=no error
+== hetrf_gpu 1 1 L 5 0
+DONE cuda=no error
+== hetrf_gpu 1 1 L 5 2
+DONE cuda=no error
+== hetrf_gpu 1 1 U 0 0
+DONE cuda=no error
+== hetrf_gpu 1 1 U 0 2
+DONE cuda=no error
+== hetrf_gpu 1 1 U 5 0
+DONE cuda=no error
+== hetrf_gpu 1 1 U 5 2
+DONE cuda=no error
+== hetrf_gpu 1 7 L 0 0
+DONE cuda=no error
+== hetrf_gpu 1 7 L 0 2
+DONE cuda=no error
+== hetrf_gpu 1 7 L 5 0
+DONE cuda=no error
+== hetrf_gpu 1 7 L 5 2
+DONE cuda=no error
+== hetrf_gpu 1 7 U 0 0
+DONE cuda=no error
+== hetrf_gpu 1 7 U 0 2
+DONE cuda=no error
+== hetrf_gpu 1 7 U 5 0
+DONE cuda=no error
+== hetrf_gpu 1 7 U 5 2
+DONE cuda=no error
+== hetrf_gpu 33 1 L 0 0
+DONE cuda=no error
+== hetrf_gpu 33 1 L 0 2
+DONE cuda=no error
+== hetrf_gpu 33 1 L 5 0
+DONE cuda=no error
+== hetrf_gpu 33 1 L 5 2
+DONE cuda=no error
+== hetrf_gpu 33 1 U 0 0
+DONE cuda=no error
+== hetrf_gpu 33 1 U 0 2
+DONE cuda=no error
+== hetrf_gpu 33 1 U 5 0
+DONE cuda=no error
+== hetrf_gpu 33 1 U 5 2
+DONE cuda=no error
+== hetrf_gpu 33 7 L 0 0
+DONE cuda=no error
+== hetrf_gpu 33 7 L 0 2
+DONE cuda=no error
+== hetrf_gpu 33 7 L 5 0
+DONE cuda=no error
+== hetrf_gpu 33 7 L 5 2
+DONE cuda=no error
+== hetrf_gpu 33 7 U 0 0
+DONE cuda=no error
+== hetrf_gpu 33 7 U 0 2
+DONE cuda=no error
+== hetrf_gpu 33 7 U 5 0
+DONE cuda=no error
+== hetrf_gpu 33 7 U 5 2
+DONE cuda=no error
+== hetrf_gpu 300 1 L 0 0
+DONE cuda=no error
+== hetrf_gpu 300 1 L 0 2
+DONE cuda=no error
+== hetrf_gpu 300 1 L 5 0
+DONE cuda=no error
+== hetrf_gpu 300 1 L 5 2
+DONE cuda=no error
+== hetrf_gpu 300 1 U 0 0
+DONE cuda=no error
+== hetrf_gpu 300 1 U 0 2
+DONE cuda=no error
+== hetrf_gpu 300 1 U 5 0
+DONE cuda=no error
+== hetrf_gpu 300 1 U 5 2
+DONE cuda=no error
+== hetrf_gpu 300 7 L 0 0
+DONE cuda=no error
+== hetrf_gpu 300 7 L 0 2
+DONE cuda=no error
+== hetrf_gpu 300 7 L 5 0
+DONE cuda=no error
+== hetrf_gpu 300 7 L 5 2
+DONE cuda=no error
+== hetrf_gpu 300 7 U 0 0
+DONE cuda=no error
+== hetrf_gpu 300 7 U 0 2
+DONE cuda=no error
+== hetrf_gpu 300 7 U 5 0
+DONE cuda=no error
+== hetrf_gpu 300 7 U 5 2
+DONE cuda=no error
+== hetrf_gpu 513 1 L 0 0
+DONE cuda=no error
+== hetrf_gpu 513 1 L 0 2
+DONE cuda=no error
+== hetrf_gpu 513 1 L 5 0
+DONE cuda=no error
+== hetrf_gpu 513 1 L 5 2
+DONE cuda=no error
+== hetrf_gpu 513 1 U 0 0
+DONE cuda=no error
+== hetrf_gpu 513 1 U 0 2
+DONE cuda=no error
+== hetrf_gpu 513 1 U 5 0
+DONE cuda=no error
+== hetrf_gpu 513 1 U 5 2
+DONE cuda=no error
+== hetrf_gpu 513 7 L 0 0
+DONE cuda=no error
+== hetrf_gpu 513 7 L 0 2
+DONE cuda=no error
+== hetrf_gpu 513 7 L 5 0
+DONE cuda=no error
+== hetrf_gpu 513 7 L 5 2
+DONE cuda=no error
+== hetrf_gpu 513 7 U 0 0
+DONE cuda=no error
+== hetrf_gpu 513 7 U 0 2
+DONE cuda=no error
+== hetrf_gpu 513 7 U 5 0
+DONE cuda=no error
+== hetrf_gpu 513 7 U 5 2
+DONE cuda=no error
+== hesv 1 1 L 0 0
+DONE cuda=no error
+== hesv 1 1 L 0 2
+DONE cuda=no error
+== hesv 1 1 L 5 0
+DONE cuda=no error
+== hesv 1 1 L 5 2
+DONE cuda=no error
+== hesv 1 1 U 0 0
+DONE cuda=no error
+== hesv 1 1 U 0 2
+DONE cuda=no error
+== hesv 1 1 U 5 0
+DONE cuda=no error
+== hesv 1 1 U 5 2
+DONE cuda=no error
+== hesv 1 7 L 0 0
+DONE cuda=no error
+== hesv 1 7 L 0 2
+DONE cuda=no error
+== hesv 1 7 L 5 0
+DONE cuda=no error
+== hesv 1 7 L 5 2
+DONE cuda=no error
+== hesv 1 7 U 0 0
+DONE cuda=no error
+== hesv 1 7 U 0 2
+DONE cuda=no error
+== hesv 1 7 U 5 0
+DONE cuda=no error
+== hesv 1 7 U 5 2
+DONE cuda=no error
+== hesv 33 1 L 0 0
+DONE cuda=no error
+== hesv 33 1 L 0 2
+DONE cuda=no error
+== hesv 33 1 L 5 0
+DONE cuda=no error
+== hesv 33 1 L 5 2
+DONE cuda=no error
+== hesv 33 1 U 0 0
+DONE cuda=no error
+== hesv 33 1 U 0 2
+DONE cuda=no error
+== hesv 33 1 U 5 0
+DONE cuda=no error
+== hesv 33 1 U 5 2
+DONE cuda=no error
+== hesv 33 7 L 0 0
+DONE cuda=no error
+== hesv 33 7 L 0 2
+DONE cuda=no error
+== hesv 33 7 L 5 0
+DONE cuda=no error
+== hesv 33 7 L 5 2
+DONE cuda=no error
+== hesv 33 7 U 0 0
+DONE cuda=no error
+== hesv 33 7 U 0 2
+DONE cuda=no error
+== hesv 33 7 U 5 0
+DONE cuda=no error
+== hesv 33 7 U 5 2
+DONE cuda=no error
+== hesv 300 1 L 0 0
+DONE cuda=no error
+== hesv 300 1 L 0 2
+DONE cuda=no error
+== hesv 300 1 L 5 0
+DONE cuda=no error
+== hesv 300 1 L 5 2
+DONE cuda=no error
+== hesv 300 1 U 0 0
+DONE cuda=no error
+== hesv 300 1 U 0 2
+DONE cuda=no error
+== hesv 300 1 U 5 0
+DONE cuda=no error
+== hesv 300 1 U 5 2
+DONE cuda=no error
+== hesv 300 7 L 0 0
+DONE cuda=no error
+== hesv 300 7 L 0 2
+DONE cuda=no error
+== hesv 300 7 L 5 0
+DONE cuda=no error
+== hesv 300 7 L 5 2
+DONE cuda=no error
+== hesv 300 7 U 0 0
+DONE cuda=no error
+== hesv 300 7 U 0 2
+DONE cuda=no error
+== hesv 300 7 U 5 0
+DONE cuda=no error
+== hesv 300 7 U 5 2
+DONE cuda=no error
+== hesv 513 1 L 0 0
+DONE cuda=no error
+== hesv 513 1 L 0 2
+DONE cuda=no error
+== hesv 513 1 L 5 0
+DONE cuda=no error
+== hesv 513 1 L 5 2
+DONE cuda=no error
+== hesv 513 1 U 0 0
+DONE cuda=no error
+== hesv 513 1 U 0 2
+DONE cuda=no error
+== hesv 513 1 U 5 0
+DONE cuda=no error
+== hesv 513 1 U 5 2
+DONE cuda=no error
+== hesv 513 7 L 0 0
+DONE cuda=no error
+== hesv 513 7 L 0 2
+DONE cuda=no error
+== hesv 513 7 L 5 0
+DONE cuda=no error
+== hesv 513 7 L 5 2
+DONE cuda=no error
+== hesv 513 7 U 0 0
+DONE cuda=no error
+== hesv 513 7 U 0 2
+DONE cuda=no error
+== hesv 513 7 U 5 0
+DONE cuda=no error
+== hesv 513 7 U 5 2
+DONE cuda=no error
+== aasen0 33 1 L 0 0
+DONE cuda=no error
+== aasen0 33 1 L 0 2
+DONE cuda=no error
+== aasen0 33 1 U 0 0
+Error in magma_zhetrf_aasen, not implemented (info = -117)
+DONE cuda=no error
+== aasen0 33 1 U 0 2
+Error in magma_zhetrf_aasen, not implemented (info = -117)
+DONE cuda=no error
+== aasen0 300 1 L 0 0
+DONE cuda=no error
+== aasen0 300 1 L 0 2
+DONE cuda=no error
+== aasen0 300 1 U 0 0
+Error in magma_zhetrf_aasen, not implemented (info = -117)
+DONE cuda=no error
+== aasen0 300 1 U 0 2
+Error in magma_zhetrf_aasen, not implemented (info = -117)
+DONE cuda=no error
+== aasen1 33 1 L 0 0
+DONE cuda=no error
+== aasen1 33 1 L 0 2
+DONE cuda=no error
+== aasen1 33 1 U 0 0
+Error in magma_zhetrf_aasen, not implemented (info = -117)
+DONE cuda=no error
+== aasen1 33 1 U 0 2
+Error in magma_zhetrf_aasen, not implemented (info = -117)
+DONE cuda=no error
+== aasen1 300 1 L 0 0
+DONE cuda=no error
+== aasen1 300 1 L 0 2
+DONE cuda=no error
+== aasen1 300 1 U 0 0
+Error in magma_zhetrf_aasen, not implemented (info = -117)
+DONE cuda=no error
+== aasen1 300 1 U 0 2
+Error in magma_zhetrf_aasen, not implemented (info = -117)
+DONE cuda=no error

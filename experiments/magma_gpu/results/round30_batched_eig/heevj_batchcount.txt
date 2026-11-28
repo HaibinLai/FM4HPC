@@ -1,0 +1,11 @@
+heevj n=16 batch= 1: 1 of 1 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch= 2: 2 of 2 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch= 3: 3 of 3 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch= 4: 4 of 4 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch= 7: 7 of 7 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch= 8: 8 of 8 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch=16: 16 of 16 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch=31: 31 of 31 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch=32: 32 of 32 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch=56: 56 of 56 slots wrong (first 0), worst residual ratio 1.02e+15
+heevj n=16 batch=64: 64 of 64 slots wrong (first 0), worst residual ratio 1.02e+15

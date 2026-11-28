@@ -1,10 +1,12 @@
 # GMSTRS fix for MAGMA 2.10.0 mixed-precision FGMRES refinement
 
 Files:
-- `gmstrs_fix.patch`: patch against MAGMA v2.10.0 (`src/dxgesv_gmres_gpu.cpp`, `src/dgmres_plu_gpu.cpp`). Apply it from the MAGMA root with `patch -p1 < gmstrs_fix.patch`. A dry run applies cleanly to the v2.10.0 GitHub sources. **Not yet compiled against MAGMA or run on a GPU.**
+- `gmstrs_fix.patch`: patch against MAGMA v2.10.0 (`src/dxgesv_gmres_gpu.cpp`, `src/dgmres_plu_gpu.cpp`). Apply it from the MAGMA root with `patch -p1 < gmstrs_fix.patch`. **This first version does not compile** (2026-11-25, V100 build): it adds `#include <cmath>` / `<vector>` after `magma_internal.h`, whose `min`/`max` macros break `<algorithm>`.
+- `gmstrs_fix_v2.patch`: the same patch with those two includes moved before `magma_internal.h`. **Compiled and run on GPU 0** (results: `../../magma_gpu/README.md`): of 24 calls, the original reports success on 24 and violates the documented condition on 20; the fixed version reports success on 15 and violates it on 0, with the other 9 falling back correctly.
+- `gmstrs_fix_v3.patch`: v2 plus a GPU kernel for the certification (`magmablas/dgmstrs_certify.cu`, `magmablas_dgmstrs_rows`: one thread per row, the same Dot2 (fma TwoProduct, TwoSum with `__dadd_rn`/`__dsub_rn`/`__dmul_rn`) and the same row-sum order as the host code). `magma_dgmstrs_certify` calls it and copies back only n-vectors; the outward-rounded comparison `L < R` and the non-finite ⇒ fail rule stay on the host, unchanged. The patch adds the file to `Makefile.src`. **A release tarball builds from `Makefile.gen.cuda` instead**: insert `magmablas/dgmstrs_certify.cu \` after the line `libmagma_templates := \` (line 3041 in 2.10.0), or the symbol is undefined at link time. Compiled and run on GPU 0 with OpenBLAS: 15 success / 0 violations on the 24 calls (as v2), trans and nrhs correct, and n = 8192 in 0.23–0.30 s (FP32 LU) against 0.21–0.26 s unpatched and 3.3 s for v2 (`../../magma_gpu/README.md`).
 - `certify_cpu.cpp`: the certified test `magma_dgmstrs_certify`, copied verbatim from the patched file, with host stubs for the MAGMA types. Build: `clang++ -O2 -std=c++17 -ffp-contract=off -shared -fPIC certify_cpu.cpp -o libcertify.dylib`.
 - `port_fixed.py`, `port_fixed_results.txt`: original vs fixed on the faithful CPU port (`../fgmres_port.py`). The certified test is the compiled C++ above, and the documented condition is decided exactly with Fractions.
-- Proof: `lean/OptimiKahan/MagmaFixed.lean` (log `check_log_magmafixed.txt`).
+- Proof: `lean/OptimiKahan/Magma/Fixed.lean` (axioms in `lean/logs/axioms.txt`).
 
 What the patch changes:
 
@@ -38,11 +40,11 @@ Details of the fixed version:
 
 The FP16 stand-in is a plain FP16 LU, whereas MAGMA's `dhgesv` uses FP32 storage with FP16 tensor-core GEMMs, so its small-scale behaviour differs.
 
-New candidate defects, predicted from the code and **not yet confirmed on a GPU**: `magma_dfgmres_plu_gpu` never uses `trans`, `nrhs`, `lddb` or `lddx`. All of its gemv and dsgetrs calls are `MagmaNoTrans` and use one column. Prediction:
+New candidate defects, predicted from the code (**since confirmed on GPU 0**, `../../magma_gpu/README.md`): `magma_dfgmres_plu_gpu` never uses `trans`, `nrhs`, `lddb` or `lddx`. All of its gemv and dsgetrs calls are `MagmaNoTrans` and use one column. Prediction:
 - `magma_dsgesv_iteref_gpu(MagmaTrans, …)` returns the solution of A x = b instead of Aᵀ x = b, with info = 0 and iter ≥ 0;
 - with `nrhs > 1`, columns 2… stay 0 and success is still reported.
 
 Possible further improvements (not in the patch):
 - scale A by a power of two into the FP16 range before the half-precision LU, so the FP16 path also works at small and large scales;
 - break FGMRES on a NaN estimate;
-- a GPU Dot2 kernel instead of the host pass.
+- ~~a GPU Dot2 kernel instead of the host pass~~ (done in v3). The kernel is not covered by the Lean proof as code; the proof's `Faithful` assumption is about the arithmetic it performs, which is the same sequence of correctly rounded operations as the host version (`-ffp-contract=off`/explicit `_rn` intrinsics).

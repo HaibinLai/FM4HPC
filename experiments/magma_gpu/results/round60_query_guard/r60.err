@@ -1,0 +1,203 @@
+
+== geqrf 64 64 0 H L
+DONE cuda=no error
+== geqrf 64 64 0 N L
+On entry to magma_zgeqrf_expert_gpu_work, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== geqrf 300 200 0 H L
+DONE cuda=no error
+== geqrf 300 200 0 N L
+On entry to magma_zgeqrf_expert_gpu_work, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== geqrf 200 300 0 H L
+DONE cuda=no error
+== geqrf 200 300 0 N L
+On entry to magma_zgeqrf_expert_gpu_work, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== geqrf 1000 100 0 H L
+DONE cuda=no error
+== geqrf 1000 100 0 N L
+On entry to magma_zgeqrf_expert_gpu_work, parameter 8 had an illegal value (info = -8)
+DONE cuda=no error
+== getrf 64 64 0 H L
+DONE cuda=no error
+== getrf 64 64 0 N L
+DONE cuda=no error
+== getrf 300 200 0 H L
+DONE cuda=no error
+== getrf 300 200 0 N L
+DONE cuda=no error
+== getrf 200 300 0 H L
+DONE cuda=no error
+== getrf 200 300 0 N L
+DONE cuda=no error
+== getrf 1000 100 0 H L
+DONE cuda=no error
+== getrf 1000 100 0 N L
+DONE cuda=no error
+== potrf 33 33 0 H L
+DONE cuda=no error
+== potrf 33 33 0 N L
+DONE cuda=no error
+== potrf 33 33 0 H U
+DONE cuda=no error
+== potrf 33 33 0 N U
+DONE cuda=no error
+== potrf 300 300 0 H L
+DONE cuda=no error
+== potrf 300 300 0 N L
+DONE cuda=no error
+== potrf 300 300 0 H U
+DONE cuda=no error
+== potrf 300 300 0 N U
+DONE cuda=no error
+== potrf 1000 1000 0 H L
+DONE cuda=no error
+== potrf 1000 1000 0 N L
+DONE cuda=no error
+== potrf 1000 1000 0 H U
+DONE cuda=no error
+== potrf 1000 1000 0 N U
+DONE cuda=no error
+== getri 33 33 0 H L
+DONE cuda=no error
+== getri 33 33 0 N L
+DONE cuda=no error
+== trtri 33 33 0 H L
+DONE cuda=no error
+== trtri 33 33 0 H U
+DONE cuda=no error
+== getri 300 300 0 H L
+DONE cuda=no error
+== getri 300 300 0 N L
+DONE cuda=no error
+== trtri 300 300 0 H L
+DONE cuda=no error
+== trtri 300 300 0 H U
+DONE cuda=no error
+== getri 513 513 0 H L
+DONE cuda=no error
+== getri 513 513 0 N L
+DONE cuda=no error
+== trtri 513 513 0 H L
+DONE cuda=no error
+== trtri 513 513 0 H U
+DONE cuda=no error
+== getrs 33 33 1 H N
+DONE cuda=no error
+== getrs 33 33 1 N N
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== getrs 33 33 1 H T
+DONE cuda=no error
+== getrs 33 33 1 N T
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== getrs 33 33 1 H C
+DONE cuda=no error
+== getrs 33 33 1 N C
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== potrs 33 33 1 H L
+DONE cuda=no error
+== potrs 33 33 1 H U
+DONE cuda=no error
+== getrs 33 33 7 H N
+DONE cuda=no error
+== getrs 33 33 7 N N
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== getrs 33 33 7 H T
+DONE cuda=no error
+== getrs 33 33 7 N T
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== getrs 33 33 7 H C
+DONE cuda=no error
+== getrs 33 33 7 N C
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== potrs 33 33 7 H L
+DONE cuda=no error
+== potrs 33 33 7 H U
+DONE cuda=no error
+== getrs 300 300 1 H N
+DONE cuda=no error
+== getrs 300 300 1 N N
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== getrs 300 300 1 H T
+DONE cuda=no error
+== getrs 300 300 1 N T
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== getrs 300 300 1 H C
+DONE cuda=no error
+== getrs 300 300 1 N C
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== potrs 300 300 1 H L
+DONE cuda=no error
+== potrs 300 300 1 H U
+DONE cuda=no error
+== getrs 300 300 7 H N
+DONE cuda=no error
+== getrs 300 300 7 N N
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== getrs 300 300 7 H T
+DONE cuda=no error
+== getrs 300 300 7 N T
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== getrs 300 300 7 H C
+DONE cuda=no error
+== getrs 300 300 7 N C
+On entry to magma_zgetrs_expert_gpu_work, parameter 10 had an illegal value (info = -10)
+DONE cuda=no error
+== potrs 300 300 7 H L
+DONE cuda=no error
+== potrs 300 300 7 H U
+DONE cuda=no error
+== gegqr 300 50 1 H L
+DONE cuda=no error
+== gegqr 300 50 2 H L
+DONE cuda=no error
+== gegqr 300 50 3 H L
+DONE cuda=no error
+== gegqr 300 50 4 H L
+DONE cuda=no error
+== gegqr 1000 30 1 H L
+DONE cuda=no error
+== gegqr 1000 30 2 H L
+DONE cuda=no error
+== gegqr 1000 30 3 H L
+DONE cuda=no error
+== gegqr 1000 30 4 H L
+DONE cuda=no error
+== gegqr 100 100 1 H L
+DONE cuda=no error
+== gegqr 100 100 2 H L
+DONE cuda=no error
+== gegqr 100 100 3 H L
+DONE cuda=no error
+== gegqr 100 100 4 H L
+DONE cuda=no error
+== bgeqrf 64 64 3 H L
+DONE cuda=no error
+== bgeqrf 300 200 3 H L
+DONE cuda=no error
+== bgeqrf 32 8 3 H L
+DONE cuda=no error
+== gbtrf 1 100 1 H L
+== gbsv 1 100 1 H L
+== gbtrf 3 100 7 H L
+== gbsv 3 100 7 H L
+== gbtrf 10 100 2 H L
+== gbsv 10 100 2 H L
+== gbtrf 1 1000 1 H L
+== gbsv 1 1000 1 H L
+== gbtrf 3 1000 7 H L
+== gbsv 3 1000 7 H L
+== gbtrf 10 1000 2 H L
+== gbsv 10 1000 2 H L

@@ -1,0 +1,9 @@
+sizeof(long) on this platform = 4 bytes
+heevj expert n= 2 sort_flag=0:  0 of 16 matrices wrong, worst residual ratio 2.08
+heevj expert n= 2 sort_flag=1:  4 of 16 matrices wrong, worst residual ratio 8.71e+15
+heevj expert n= 5 sort_flag=0:  0 of 16 matrices wrong, worst residual ratio 3.73
+heevj expert n= 5 sort_flag=1: 16 of 16 matrices wrong, worst residual ratio 5.1e+15
+heevj expert n=16 sort_flag=0:  0 of 16 matrices wrong, worst residual ratio 3.2
+heevj expert n=16 sort_flag=1: 16 of 16 matrices wrong, worst residual ratio 1.51e+15
+heevj expert n=32 sort_flag=0:  0 of 16 matrices wrong, worst residual ratio 3.45
+heevj expert n=32 sort_flag=1: 16 of 16 matrices wrong, worst residual ratio 8.1e+14

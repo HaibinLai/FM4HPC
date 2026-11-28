@@ -1,0 +1,31 @@
+it= 0  Rnrm=2.122e+01  Xnrm=1.148e+01  Xnrm*cte=3.422e-14  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it= 1  Rnrm=1.636e+02  Xnrm=1.451e+02  Xnrm*cte=4.325e-13  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it= 2  Rnrm=3.679e+03  Xnrm=2.003e+03  Xnrm*cte=5.973e-12  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it= 3  Rnrm=3.555e+04  Xnrm=1.950e+04  Xnrm*cte=5.812e-11  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it= 4  Rnrm=2.865e+05  Xnrm=2.259e+05  Xnrm*cte=6.735e-10  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it= 5  Rnrm=3.679e+06  Xnrm=2.618e+06  Xnrm*cte=7.804e-09  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it= 6  Rnrm=3.763e+07  Xnrm=3.033e+07  Xnrm*cte=9.042e-08  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it= 7  Rnrm=4.924e+08  Xnrm=3.515e+08  Xnrm*cte=1.048e-06  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it= 8  Rnrm=5.024e+09  Xnrm=4.072e+09  Xnrm*cte=1.214e-05  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it= 9  Rnrm=5.187e+10  Xnrm=4.719e+10  Xnrm*cte=1.407e-04  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=10  Rnrm=7.240e+11  Xnrm=5.468e+11  Xnrm*cte=1.630e-03  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=11  Rnrm=1.128e+13  Xnrm=6.335e+12  Xnrm*cte=1.889e-02  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=12  Rnrm=1.018e+14  Xnrm=7.341e+13  Xnrm*cte=2.188e-01  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=13  Rnrm=1.365e+15  Xnrm=8.506e+14  Xnrm*cte=2.536e+00  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=14  Rnrm=1.516e+16  Xnrm=9.856e+15  Xnrm*cte=2.938e+01  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=15  Rnrm=2.163e+17  Xnrm=1.142e+17  Xnrm*cte=3.404e+02  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=16  Rnrm=1.807e+18  Xnrm=1.323e+18  Xnrm*cte=3.945e+03  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=17  Rnrm=2.198e+19  Xnrm=1.533e+19  Xnrm*cte=4.571e+04  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=18  Rnrm=3.319e+20  Xnrm=1.777e+20  Xnrm*cte=5.296e+05  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=19  Rnrm=2.298e+21  Xnrm=2.059e+21  Xnrm*cte=6.137e+06  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=20  Rnrm=3.680e+22  Xnrm=2.385e+22  Xnrm*cte=7.111e+07  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=21  Rnrm=3.308e+23  Xnrm=2.764e+23  Xnrm*cte=8.239e+08  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=22  Rnrm=6.083e+24  Xnrm=4.351e+24  Xnrm*cte=1.297e+10  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=23  Rnrm=5.792e+25  Xnrm=3.711e+25  Xnrm*cte=1.106e+11  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=24  Rnrm=9.424e+26  Xnrm=5.154e+26  Xnrm*cte=1.536e+12  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=25  Rnrm=7.265e+27  Xnrm=4.982e+27  Xnrm*cte=1.485e+13  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=26  Rnrm=1.030e+29  Xnrm=5.773e+28  Xnrm*cte=1.721e+14  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=27  Rnrm=9.196e+29  Xnrm=6.689e+29  Xnrm*cte=1.994e+15  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=28  Rnrm=9.881e+30  Xnrm=7.750e+30  Xnrm*cte=2.310e+16  Rnrm>Xnrm*cte=True  finite(x)=True  nan(x)=0
+it=29  Rnrm=inf  Xnrm=inf  Xnrm*cte=inf  Rnrm>Xnrm*cte=False  finite(x)=False  nan(x)=0
+  -> accepted with iter = 29

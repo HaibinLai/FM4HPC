@@ -1,0 +1,22 @@
+CG exit=
+PCG exit=
+BICGSTAB exit=
+PBICGSTAB exit=
+QMR exit=
+PQMR exit=
+TFQMR exit=
+PTFQMR exit=
+GMRES exit=
+PGMRES exit=
+IDR exit=
+PIDR exit=
+CGS exit=
+PCGS exit=
+BICG exit=
+PBICG exit=
+LSQR exit=
+JACOBI exit=
+BA exit=
+ITERREF exit=
+BOMBARDMENT exit=
+SWEEP45_DONE

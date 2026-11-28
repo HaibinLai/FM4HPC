@@ -1,0 +1,43 @@
+
+== BA cplx (exit 0)
+DONE BA cuda=no error
+== BICG cplx (exit 0)
+DONE BICG cuda=no error
+== BICGSTAB cplx (exit 0)
+DONE BICGSTAB cuda=no error
+== BOMBARDMENT cplx (exit 0)
+DONE BOMBARDMENT cuda=no error
+== CG cplx (exit 0)
+DONE CG cuda=no error
+== CGS cplx (exit 0)
+DONE CGS cuda=no error
+== GMRES cplx (exit 0)
+DONE GMRES cuda=no error
+== IDR cplx (exit 0)
+DONE IDR cuda=no error
+== ITERREF cplx (exit 0)
+DONE ITERREF cuda=no error
+== JACOBI cplx (exit 0)
+DONE JACOBI cuda=no error
+== LSQR cplx (exit 0)
+DONE LSQR cuda=no error
+== PBICG cplx (exit 0)
+DONE PBICG cuda=no error
+== PBICGSTAB cplx (exit 0)
+DONE PBICGSTAB cuda=no error
+== PCG cplx (exit 0)
+DONE PCG cuda=no error
+== PCGS cplx (exit 0)
+DONE PCGS cuda=no error
+== PGMRES cplx (exit 0)
+DONE PGMRES cuda=no error
+== PIDR cplx (exit 0)
+DONE PIDR cuda=no error
+== PQMR cplx (exit 0)
+DONE PQMR cuda=no error
+== PTFQMR cplx (exit 0)
+DONE PTFQMR cuda=no error
+== QMR cplx (exit 0)
+DONE QMR cuda=no error
+== TFQMR cplx (exit 0)
+DONE TFQMR cuda=no error

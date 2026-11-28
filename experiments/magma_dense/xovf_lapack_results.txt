@@ -1,0 +1,7 @@
+dsgesv   n=1 a=0x1p-100 b=0x1p+28  ITER=0 INFO=0  x[0]=inf  exact=3.40282e+38
+dsgesv   n=2 a=0x1p-100 b=0x1p+28  ITER=0 INFO=0  x[0]=nan  exact=3.40282e+38
+dsposv   n=1 a=0x1p-100 b=0x1p+28  ITER=0 INFO=0  x[0]=inf  exact=3.40282e+38
+dsposv   n=2 a=0x1p-100 b=0x1p+28  ITER=0 INFO=0  x[0]=nan  exact=3.40282e+38
+dsgesv   n=2 a=0x1p-90 b=0x1p+28  ITER=0 INFO=0  x[0]=3.32307e+35  exact=3.32307e+35
+dsposv   n=2 a=0x1p-90 b=0x1p+28  ITER=0 INFO=0  x[0]=3.32307e+35  exact=3.32307e+35
+dsgesv   n=2 a=0x1p+0 b=0x1p+200  ITER=-2 INFO=0  x[0]=1.60694e+60  exact=1.60694e+60

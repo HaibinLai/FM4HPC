@@ -1,0 +1,10 @@
+diag(1,1.5), b=(1, 0.5i)                   MAGMA-port: info=0 numiter=   1 final_res/||b||=1.26e+00 relerr=1.14e+00 | textbook CG: iters=2 relerr=5.3e-17
+diag(1,2,3), b=(1, i, 1)                   MAGMA-port: info=-201 numiter=1000 final_res/||b||=nan relerr=nan | textbook CG: iters=3 relerr=9.5e-17
+random HPD n=16, cond=10, complex b        MAGMA-port: info=-201 numiter=1000 final_res/||b||=1.97e+03 relerr=1.83e+03 | textbook CG: iters=16 relerr=3.6e-16
+random HPD n=16, cond=10, real b (control) MAGMA-port: info=-201 numiter=1000 final_res/||b||=5.58e+01 relerr=2.85e+01 | textbook CG: iters=16 relerr=3.4e-16
+random HPD n=64, cond=10, complex b        MAGMA-port: info=-201 numiter=1000 final_res/||b||=1.27e+04 relerr=6.72e+03 | textbook CG: iters=33 relerr=4.3e-11
+random HPD n=64, cond=10, real b (control) MAGMA-port: info=-201 numiter=1000 final_res/||b||=2.86e+02 relerr=1.34e+02 | textbook CG: iters=32 relerr=1.0e-10
+--- control: real SPD data stored as complex (unconjugated == conjugated), port must converge ---
+real SPD n=16 in complex storage       MAGMA-port: info=0 numiter=  16 final_res/||b||=3.82e-16 relerr=3.20e-16
+real SPD n=64 in complex storage       MAGMA-port: info=0 numiter=  33 final_res/||b||=4.02e-11 relerr=3.71e-11
+A=diag(2,3), b=(2,i): info=0 numiter=1 x=[2.+0.j 0.+1.j] final_res=2.8284 ||b||=2.2361 exact=[1.+0.j       0.+0.333333j]

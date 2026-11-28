@@ -1,0 +1,24 @@
+== S1/S2 CG_MERGE (default solver), complex 2x2 ==
+cg_merge A=diag(2,3) b=(2,i)                 ret=0     info=0     numiter=1     final_res/||b||=1.26       true_res/||b||=1.26       relerr=1.14e+00  iter_res/init_res=0.00e+00  x[0]=(2,0)
+cg_merge A=diag(1,1.5) b=(1,0.5i)            ret=0     info=0     numiter=1     final_res/||b||=1.26       true_res/||b||=1.26       relerr=1.14e+00  iter_res/init_res=0.00e+00  x[0]=(2,0)
+== S3/S4 CG_MERGE on HPD n=64, cond 10 ==
+cg_merge complex HPD seed1                   ret=-205  info=-205  numiter=1000  final_res/||b||=4.5e+04    true_res/||b||=4.5e+04    relerr=2.69e+04  iter_res/init_res=5.05e+03  x[0]=(-3097.78,814.6)
+cg_merge real SPD in complex seed1 (control) ret=0     info=0     numiter=32    final_res/||b||=9.3e-11    true_res/||b||=9.3e-11    relerr=8.69e-11  iter_res/init_res=9.30e-11  x[0]=(-0.0598038,0)
+cg_merge complex HPD seed2                   ret=-205  info=-205  numiter=1000  final_res/||b||=5.38e+03   true_res/||b||=5.38e+03   relerr=2.75e+03  iter_res/init_res=1.35e+03  x[0]=(-190.848,-55.3065)
+cg_merge real SPD in complex seed2 (control) ret=0     info=0     numiter=32    final_res/||b||=6.18e-11   true_res/||b||=6.18e-11   relerr=6.20e-11  iter_res/init_res=6.18e-11  x[0]=(-0.0378988,0)
+== S5 BiCG, b with NaN ==
+bicg A=I b=(NaN,1) x0=0                      ret=0     info=0     numiter=1     final_res/||b||=nan        true_res/||b||=nan        relerr=nan       iter_res/init_res=nan  x[0]=(0,0)
+bicg A=I b=(1,1) x0=0 (control)              ret=0     info=0     numiter=1     final_res/||b||=0          true_res/||b||=0          relerr=0.00e+00  iter_res/init_res=0.00e+00  x[0]=(1,0)
+== S6 CG_RES, exact initial guess ==
+cg_res A=diag(2,3) b=(2,3) x0=(1,1) exact    ret=-203  info=-203  numiter=0     final_res/||b||=0          true_res/||b||=0          relerr=0.00e+00  iter_res/init_res=-nan  x[0]=(1,0)
+cg_res A=diag(2,3) b=(2,3) x0=0 (control)    ret=0     info=0     numiter=2     final_res/||b||=0          true_res/||b||=0          relerr=0.00e+00  iter_res/init_res=5.53e-18  x[0]=(1,0)
+== S7 solver wrapper with an unhandled solver class ==
+error: solver class not supported.
+magma_z_solver solver=ITERREF                ret=0  x=(7, 7) (x0 = (7, 7), exact = (1, 1))
+== S8 PCG_MERGE, large x0, SLOW->SUCCESS upgrade relative to init_res ==
+pcg_merge diag(1..10) n=1000 x0~1e6 maxiter=10 ret=-201  info=-201  numiter=10    final_res/||b||=1.02e+03   true_res/||b||=1.02e+03   relerr=1.36e+03  iter_res/init_res=5.80e-04  x[0]=(-171.539,0)
+pcg_merge diag(1..10) n=1000 x0~1e6 maxiter=20 ret=-201  info=-201  numiter=20    final_res/||b||=1.48       true_res/||b||=1.48       relerr=1.96e+00  iter_res/init_res=8.45e-07  x[0]=(0.538225,0)
+pcg_merge diag(1..10) n=1000 x0~1e6 maxiter=30 ret=-201  info=-201  numiter=30    final_res/||b||=0.00216    true_res/||b||=0.00216    relerr=2.74e-03  iter_res/init_res=1.23e-09  x[0]=(0.999129,0)
+pcg_merge diag(1..10) n=1000 x0~1e6 maxiter=40 ret=0     info=0     numiter=40    final_res/||b||=2.89e-06   true_res/||b||=2.89e-06   relerr=3.81e-06  iter_res/init_res=1.65e-12  x[0]=(0.999998,0)
+pcg_merge diag(1..10) n=1000 x0~1e6 maxiter=50 ret=0     info=0     numiter=50    final_res/||b||=3.91e-09   true_res/||b||=3.91e-09   relerr=5.08e-09  iter_res/init_res=2.23e-15  x[0]=(1,0)
+pcg_merge diag(1..10) n=1000 x0~1e6 maxiter=60 ret=0     info=0     numiter=56    final_res/||b||=1.88e-10   true_res/||b||=1.88e-10   relerr=1.27e-10  iter_res/init_res=4.12e-17  x[0]=(1,0)

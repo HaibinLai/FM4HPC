@@ -1,0 +1,72 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,poisson2d,1024,0,0,75,3.78e-09,3.78e-09,9.15e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,aniso1e-4,1024,0,0,62,1.59e-09,1.59e-09,7.1e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,convdiff,1024,0,0,55,3.33e-09,3.33e-09,6.61e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,shifted_indef,1024,0,0,916,1.78e-09,1.78e-09,9.48e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,complexsym,1024,-201,-201,1000,10.8,10.8,0.182,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,neumann_singular,1024,0,0,100,3.76e-09,3.76e-09,9.82e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,zerodiag,1024,0,0,86,3.74e-09,3.74e-09,9.21e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,CSR,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,poisson2d,1024,0,0,75,3.78e-09,3.78e-09,9.15e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,aniso1e-4,1024,0,0,62,1.59e-09,1.59e-09,7.1e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,convdiff,1024,0,0,55,3.33e-09,3.33e-09,6.61e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,shifted_indef,1024,0,0,900,1.68e-09,1.68e-09,8.92e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,complexsym,1024,-201,-201,1000,10.8,10.8,0.182,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,neumann_singular,1024,0,0,100,3.76e-09,3.76e-09,9.82e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,zerodiag,1024,0,0,89,3.84e-09,3.84e-09,9.46e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,ELL,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,poisson2d,1024,0,0,75,3.78e-09,3.78e-09,9.15e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,aniso1e-4,1024,0,0,62,1.59e-09,1.59e-09,7.1e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,convdiff,1024,0,0,55,3.33e-09,3.33e-09,6.61e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,shifted_indef,1024,0,0,903,1.86e-09,1.86e-09,9.88e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,complexsym,1024,-201,-201,1000,10.8,10.8,0.182,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,neumann_singular,1024,0,0,100,3.76e-09,3.76e-09,9.82e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,zerodiag,1024,0,0,86,3.76e-09,3.76e-09,9.26e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+TFQMR,NONE,SELLP,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0

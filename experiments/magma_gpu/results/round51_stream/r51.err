@@ -1,0 +1,792 @@
+
+==  syncfree d bidiag 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d bidiag 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d bidiag 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d bidiag 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d bidiag 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d bidiag 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d random 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d random 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d random 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d random 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d random 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree d random 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z bidiag 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z bidiag 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z bidiag 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z bidiag 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z bidiag 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z bidiag 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z random 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z random 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z random 1000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z random 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z random 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  syncfree z random 20000
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  h2batched 0
+round51_stream.exe : DONE cuda=an illegal memory access was encountered
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=an il...was encountered:String) [], Remote 
+   Exception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  h2batched 1
+round51_stream.exe : DONE cuda=an illegal memory access was encountered
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=an il...was encountered:String) [], Remote 
+   Exception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  h2batched 2
+round51_stream.exe : DONE cuda=an illegal memory access was encountered
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=an il...was encountered:String) [], Remote 
+   Exception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  h2batched 3
+round51_stream.exe : DONE cuda=an illegal memory access was encountered
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=an il...was encountered:String) [], Remote 
+   Exception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag slag2h magma 0
+round51_stream.exe : DONE cuda=an illegal memory access was encountered
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=an il...was encountered:String) [], Remote 
+   Exception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag slag2h_ok magma 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag slag2h blocking 0
+round51_stream.exe : DONE cuda=an illegal memory access was encountered
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=an il...was encountered:String) [], Remote 
+   Exception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag slag2h_ok blocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag slag2h nonblocking 0
+round51_stream.exe : DONE cuda=an illegal memory access was encountered
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=an il...was encountered:String) [], Remote 
+   Exception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag slag2h_ok nonblocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d bidiag 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d bidiag 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d bidiag 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d bidiag 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d bidiag 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d bidiag 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d random 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d random 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d random 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d random 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d random 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree d random 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z bidiag 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z bidiag 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z bidiag 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z bidiag 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z bidiag 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z bidiag 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z random 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z random 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z random 1000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z random 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z random 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix syncfree z random 20000
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix h2batched 0
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix h2batched 1
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix h2batched 2
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix h2batched 3
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix flag slag2h magma 0
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix flag slag2h_ok magma 0
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix flag slag2h blocking 0
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix flag slag2h_ok blocking 0
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix flag slag2h nonblocking 0
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+== _fix flag slag2h_ok nonblocking 0
+round51_stream_fix.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlag2c magma 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlag2c magma 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlag2c blocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlag2c blocking 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlag2c nonblocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlag2c nonblocking 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlag2s magma 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlag2s magma 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlag2s blocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlag2s blocking 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlag2s nonblocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlag2s nonblocking 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlat2c magma 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlat2c magma 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlat2c blocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlat2c blocking 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlat2c nonblocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag zlat2c nonblocking 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlat2s magma 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlat2s magma 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlat2s blocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlat2s blocking 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlat2s nonblocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  flag dlat2s nonblocking 100
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  trtri magma 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  trtri magma 150
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  trtri blocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  trtri blocking 150
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  trtri nonblocking 0
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+==  trtri nonblocking 150
+round51_stream.exe : DONE cuda=no error
+At D:\lean4hpc\magma\run_r51.ps1:8 char:10
++   $out = & $exe @a 2>> $log; $ec = $LASTEXITCODE
++          ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (DONE cuda=no error:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

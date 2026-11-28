@@ -1,0 +1,205 @@
+
+== gemm_s 5 4 3 N N
+DONE cuda=no error
+== gemm_s 5 4 3 N T
+DONE cuda=no error
+== gemm_s 5 4 3 N C
+DONE cuda=no error
+== gemm_s 5 4 3 T N
+DONE cuda=no error
+== gemm_s 5 4 3 T T
+DONE cuda=no error
+== gemm_s 5 4 3 T C
+DONE cuda=no error
+== gemm_s 5 4 3 C N
+DONE cuda=no error
+== gemm_s 5 4 3 C T
+DONE cuda=no error
+== gemm_s 5 4 3 C C
+DONE cuda=no error
+== gemm_s 33 17 9 N N
+DONE cuda=no error
+== gemm_s 33 17 9 N T
+DONE cuda=no error
+== gemm_s 33 17 9 N C
+DONE cuda=no error
+== gemm_s 33 17 9 T N
+DONE cuda=no error
+== gemm_s 33 17 9 T T
+DONE cuda=no error
+== gemm_s 33 17 9 T C
+DONE cuda=no error
+== gemm_s 33 17 9 C N
+DONE cuda=no error
+== gemm_s 33 17 9 C T
+DONE cuda=no error
+== gemm_s 33 17 9 C C
+DONE cuda=no error
+== gemm_s 64 64 64 N N
+DONE cuda=no error
+== gemm_s 64 64 64 N T
+DONE cuda=no error
+== gemm_s 64 64 64 N C
+DONE cuda=no error
+== gemm_s 64 64 64 T N
+DONE cuda=no error
+== gemm_s 64 64 64 T T
+DONE cuda=no error
+== gemm_s 64 64 64 T C
+DONE cuda=no error
+== gemm_s 64 64 64 C N
+DONE cuda=no error
+== gemm_s 64 64 64 C T
+DONE cuda=no error
+== gemm_s 64 64 64 C C
+DONE cuda=no error
+== gemv_s 5 4 0 N N
+DONE cuda=no error
+== gemv_s 5 4 0 T N
+DONE cuda=no error
+== gemv_s 5 4 0 C N
+DONE cuda=no error
+== gemv_s 33 17 0 N N
+DONE cuda=no error
+== gemv_s 33 17 0 T N
+DONE cuda=no error
+== gemv_s 33 17 0 C N
+DONE cuda=no error
+== gemv_s 100 300 0 N N
+DONE cuda=no error
+== gemv_s 100 300 0 T N
+DONE cuda=no error
+== gemv_s 100 300 0 C N
+DONE cuda=no error
+== geadd 1 1 0 F N
+DONE cuda=no error
+== geadd 33 17 0 F N
+DONE cuda=no error
+== geadd 17 33 0 F N
+DONE cuda=no error
+== geadd 100 64 0 F N
+DONE cuda=no error
+== transc 1 1 0 F N
+DONE cuda=no error
+== transc 33 17 0 F N
+DONE cuda=no error
+== transc 17 33 0 F N
+DONE cuda=no error
+== transc 100 64 0 F N
+DONE cuda=no error
+== lacpy 1 1 0 U N
+DONE cuda=no error
+== lacpy 1 1 0 L N
+DONE cuda=no error
+== lacpy 1 1 0 F N
+DONE cuda=no error
+== lacpy 33 17 0 U N
+DONE cuda=no error
+== lacpy 33 17 0 L N
+DONE cuda=no error
+== lacpy 33 17 0 F N
+DONE cuda=no error
+== lacpy 17 33 0 U N
+DONE cuda=no error
+== lacpy 17 33 0 L N
+DONE cuda=no error
+== lacpy 17 33 0 F N
+DONE cuda=no error
+== lacpy 100 64 0 U N
+DONE cuda=no error
+== lacpy 100 64 0 L N
+DONE cuda=no error
+== lacpy 100 64 0 F N
+DONE cuda=no error
+== laset 1 1 0 U N
+DONE cuda=no error
+== laset 1 1 0 L N
+DONE cuda=no error
+== laset 1 1 0 F N
+DONE cuda=no error
+== laset 33 17 0 U N
+DONE cuda=no error
+== laset 33 17 0 L N
+DONE cuda=no error
+== laset 33 17 0 F N
+DONE cuda=no error
+== laset 17 33 0 U N
+DONE cuda=no error
+== laset 17 33 0 L N
+DONE cuda=no error
+== laset 17 33 0 F N
+DONE cuda=no error
+== laset 100 64 0 U N
+DONE cuda=no error
+== laset 100 64 0 L N
+DONE cuda=no error
+== laset 100 64 0 F N
+DONE cuda=no error
+== hemv 0 1 0 U N
+DONE cuda=no error
+== hemv 0 1 0 L N
+DONE cuda=no error
+== hemv 0 16 0 U N
+DONE cuda=no error
+== hemv 0 16 0 L N
+DONE cuda=no error
+== hemv 0 33 0 U N
+DONE cuda=no error
+== hemv 0 33 0 L N
+DONE cuda=no error
+== hemv 0 100 0 U N
+DONE cuda=no error
+== hemv 0 100 0 L N
+DONE cuda=no error
+== hemv 0 300 0 U N
+DONE cuda=no error
+== hemv 0 300 0 L N
+DONE cuda=no error
+== gbsv 0 10 1 1 N
+DONE cuda=no error
+== gbsv 0 10 2 3 N
+DONE cuda=no error
+== gbsv 0 10 5 1 N
+DONE cuda=no error
+== gbsv 0 10 0 2 N
+DONE cuda=no error
+== gbsv 0 100 1 1 N
+DONE cuda=no error
+== gbsv 0 100 2 3 N
+DONE cuda=no error
+== gbsv 0 100 5 1 N
+DONE cuda=no error
+== gbsv 0 100 0 2 N
+DONE cuda=no error
+== gbsv 0 500 1 1 N
+DONE cuda=no error
+== gbsv 0 500 2 3 N
+DONE cuda=no error
+== gbsv 0 500 5 1 N
+DONE cuda=no error
+== gbsv 0 500 0 2 N
+DONE cuda=no error
+== gbsv_s 0 10 1 1 N
+DONE cuda=no error
+== gbsv_s 0 10 2 3 N
+DONE cuda=no error
+== gbsv_s 0 10 5 1 N
+DONE cuda=no error
+== gbsv_s 0 10 0 2 N
+DONE cuda=no error
+== gbsv_s 0 100 1 1 N
+DONE cuda=no error
+== gbsv_s 0 100 2 3 N
+DONE cuda=no error
+== gbsv_s 0 100 5 1 N
+DONE cuda=no error
+== gbsv_s 0 100 0 2 N
+DONE cuda=no error
+== gbsv_s 0 500 1 1 N
+DONE cuda=no error
+== gbsv_s 0 500 2 3 N
+DONE cuda=no error
+== gbsv_s 0 500 5 1 N
+DONE cuda=no error
+== gbsv_s 0 500 0 2 N
+DONE cuda=no error

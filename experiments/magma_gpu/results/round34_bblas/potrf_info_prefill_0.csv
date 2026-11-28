@@ -1,0 +1,18 @@
+bblas,routine,case,status,maxerr,detail
+contract,dpotrf_batched,n=16,OK,info=0 upper_changed=0 of 360; factor_err=0.00586
+contract,dpotrf_batched,n=64,OK,info=0 upper_changed=0 of 6048; factor_err=0.000488
+contract,dpotrf_batched,n=100,OK,info=0 upper_changed=0 of 14850; factor_err=0.000128
+contract,dpotrf_batched,n=257,TOUCHED,info=0 upper_changed=19632 of 98688; factor_err=3.02e-05
+contract,dpotrf_batched,n=300,TOUCHED,info=0 upper_changed=22470 of 134550; factor_err=2.37e-05
+contract,dpotrf_batched,n=448,TOUCHED,info=0 upper_changed=37776 of 300384; factor_err=5.69e-06
+contract,dpotrf_batched,n=513,TOUCHED,info=0 upper_changed=43824 of 393984; factor_err=5.69e-06
+contract,dpotrf_batched,n=1024,TOUCHED,info=0 upper_changed=92208 of 1571328; factor_err=1.91e-06
+contract,dpotrf_vbatched,n=16,OK,info=0 upper_changed=0 of 360; factor_err=0.00586
+contract,dpotrf_vbatched,n=64,OK,info=0 upper_changed=0 of 6048; factor_err=0.000488
+contract,dpotrf_vbatched,n=100,OK,info=0 upper_changed=0 of 14850; factor_err=0.000128
+contract,dpotrf_vbatched,n=257,OK,info=0 upper_changed=0 of 98688; factor_err=2.26e-05
+contract,dpotrf_vbatched,n=300,OK,info=0 upper_changed=0 of 134550; factor_err=1.9e-05
+contract,dpotrf_vbatched,n=448,OK,info=0 upper_changed=0 of 300384; factor_err=5.69e-06
+contract,dpotrf_vbatched,n=513,OK,info=0 upper_changed=0 of 393984; factor_err=5.69e-06
+contract,dpotrf_vbatched,n=1024,OK,info=0 upper_changed=0 of 1571328; factor_err=2.38e-06
+DONE potrf cuda=no error

@@ -1,0 +1,19 @@
+# zgeqp3_gpu tiny cases, one call per process (round28_sweep qp3small): host tau (as magma_z.h declares) vs device tau (as testing_zgeqp3_gpu.cpp uses)
+zgeqp3     m=1 n=1 zero info=0 jpvt[0]=1  sync=no error last=no error
+zgeqp3     m=1 n=1 one  info=0 jpvt[0]=1  sync=no error last=no error
+zgeqp3     m=18 n=1 zero info=0 jpvt[0]=1  sync=no error last=no error
+zgeqp3     m=18 n=1 rand info=0 jpvt[0]=1  sync=no error last=no error
+zgeqp3     m=2 n=2 zero info=0 jpvt[0]=1  sync=no error last=no error
+zgeqp3_gpu m=1 n=1 zero info=0 jpvt[0]=1  sync=an illegal memory access was encountered last=an illegal memory access was encountered
+zgeqp3_gpu m=1 n=1 one  info=0 jpvt[0]=1  sync=an illegal memory access was encountered last=an illegal memory access was encountered
+zgeqp3_gpu m=18 n=1 zero info=0 jpvt[0]=1  sync=an illegal memory access was encountered last=an illegal memory access was encountered
+zgeqp3_gpu m=18 n=1 rand info=0 jpvt[0]=1  sync=an illegal memory access was encountered last=an illegal memory access was encountered
+zgeqp3_gpu m=2 n=2 zero info=0 jpvt[0]=2  sync=an illegal memory access was encountered last=an illegal memory access was encountered
+zgeqrf     m=1 n=1 zero info=0 jpvt[0]=0  sync=no error last=no error
+zgeqrf     m=1 n=1 one  info=0 jpvt[0]=0  sync=no error last=no error
+zgeqrf     m=18 n=1 zero info=0 jpvt[0]=0  sync=no error last=no error
+zgeqrf     m=18 n=1 rand info=0 jpvt[0]=0  sync=no error last=no error
+zgeqrf     m=2 n=2 zero info=0 jpvt[0]=0  sync=no error last=no error
+zgeqp3_gpu(dtau) m=1 n=1 zero info=0 jpvt[0]=1  sync=no error last=no error
+zgeqp3_gpu(dtau) m=18 n=1 rand info=0 jpvt[0]=1  sync=no error last=no error
+zgeqp3_gpu(dtau) m=2 n=2 zero info=0 jpvt[0]=1  sync=no error last=no error

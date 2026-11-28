@@ -1598,3 +1598,1228 @@ Ozaki/ADP/ozIMMU/GEMMul8 的结果改为辅助材料。
   - 6个例程没有带判定的测试；
   - SuperLU 的检查函数自身用 `SUPERLU_MAX`，判定写成 `>= THRESH`；STRUMPACK 用 `std::max` 和 `>`；MUMPS示例只查 `INFOG(1)<0`。所以加上NaN输入也会判通过。
   - 边界：没有运行；PaStiX `spmCheckAxb` 未读到（`spm/` 子模块为空）。
+
+## 28. MAGMA 其余稠密混合精度/精化例程：读码、Lean 模型、CPU 核对（2026-11-25）
+
+**对象**（MAGMA v2.10.0，`src/`）：`zcgesv_gpu`（dsgesv）、`zcposv_gpu`、`zchesv_gpu`、`zcgeqrsv_gpu`、`dshposv_gmres_gpu` + `dfgmres_spd_gpu`、`zgesv_rbt` + `zgerfs_nopiv_gpu`、`zgesv_rbt_batched`。GPU 未用（s82 占用中），GPU 确认见末尾队列。
+
+### 28.1 读码发现（行号为对应文件）
+
+| 例程 | 发现 | 类 |
+|---|---|---|
+| 所有经典驱动 | 范数用 `i?amax` 取下标再取模；判据 `if (Rnrm > Xnrm*cte)` 拒绝式：NaN 和 `Inf > Inf` 都被接受 | D1 |
+| 所有经典驱动 | `for (iiter=1; iiter < ITERMAX;)` 只做 29 次修正（LAPACK 30 次） | 小 |
+| `zcgesv` l.231–235 | B 的 FP32 转换被注释掉，紧跟的 `iter=-2` 检查成为死代码；B 在 `zcgetrs` 里由 `zclaswp` 转换，**无范围检查**（"TODO check precision"）；转置路径用 `zlag2c` 有检查，但首次 `zcgetrs` 的 info 不检查 | D8 |
+| `zlag2c` | 检查 `(x < -rmax) \|\| (x > rmax)`：NaN 两个比较都为假，直接通过 | D8 |
+| 所有经典驱动 | **解溢出 FP32**（A、B 都在范围内）：FP32 求解得 Inf，残差 −Inf/NaN，被接受，iter=0、info=0；所有范围检查都只查 A、B | D1/D8 |
+| `zchesv` l.371–381 | FP64 回退被注释掉，只剩 `zlacpy(B→X)`：不收敛时 **X = B、info = 0、iter = −31**；用不选主元的 `chetrf_nopiv`；精化成功分支直接 `return`，泄漏 queue | D9 |
+| `zchesv`（及不选主元的路径） | **精化发散到溢出后被当作收敛**：iter > 0、info = 0、X 非有限 | D1 |
+| `zcgeqrsv` l.284 | 代码 TODO 自认“只对相容系统有效”：不相容最小二乘的判据几乎永不满足，总是白做 29 次再回退（性能缺陷，答案正确） | 性能 |
+| `dshposv_gpu` / `_native` l.469/497 | 公开接口 `return 0`（不返回 info），工作区分配不检查；固定 `use_gmres=1` | D10 |
+| `dshposv` GMRES 分支 l.292–308 | FGMRES 后直接 `goto cleanup`：无复核、无回退 | D4/D9 |
+| `dfgmres_spd` l.15/97 | 绝对阈值 `EPSILON = dlamch('Epsilon') = 2^-53`（GMSTRS 为 1e-18）：‖b‖₂ ≤ 2^-53 ⇒ x = 0 | D3 |
+| `dfgmres_spd` l.110/195 | `eps1 = tol·ro₀` 随尺度 s² 变化；NaN 跑满 maxiter；niters 恒 ≥ 0 | D2/D5 |
+| `dfgmres_spd` l.133/142/66 | **nrhs ≥ 2 时显存越界**：每步写 `d_w` 从第 i 列起的 nrhs 列，`d_w` 只有 restrt 列；内层跑满一个周期即越界（nrhs ≥ 3 时读 `d_VV` 也越界） | 内存安全 |
+| `dfgmres_spd` l.52 | `assert(uplo == MagmaLower)`：调试构建传 Upper 直接 abort | 小 |
+| `zgerfs_nopiv` l.263–266 | `fallback:` 后为空：不收敛只置 iter = −31，info = 0 | D9 |
+| `zgesv_rbt` l.155–163 | `iter` 是局部变量从不返回；`zgesv_nopiv` 的 info 不检查，且被 `zgerfs_nopiv` 开头的 `*info = 0` 覆盖：**零主元与精化失败都返回 info = 0**；HIP 后端 refine 被强制关闭（注释“probably a bug”） | D9/D10 |
+| `zgesv_rbt_batched` | 逐矩阵 info 只在 `#ifdef CHECK_INFO` 下检查（dinfo_array 仍保留，调用者可自查）；`hu`、`hv`、`dv` 从不释放（每次调用泄漏） | 小 |
+
+### 28.2 Lean（`lean/OptimiKahan/MagmaDense.lean`，导入 MagmaFgmres；日志 `check_log_magmadense.txt`，退出码0，无 sorry）
+
+| 定理 | 内容 |
+|---|---|
+| `accept_nan_R`、`accept_nan_X`、`accept_inf` | 经典驱动：首次判据 NaN 或 Rnrm = Xnrm = +∞ ⇒ iter = 0、info = 0 |
+| `loop_first`、`diverge_accepted` | 前 j−1 次判据要求继续、第 j 次溢出 ⇒ iter = j > 0、info = 0、X 非有限 |
+| `success_iter_lt` | 成功返回的 iter < ITERMAX（最多 29 次修正） |
+| `zchesv_stub` | 不收敛 ⇒ (iter, info, X) = (−31, 0, B) |
+| `gerfs_nopiv_silent`、`rbt_info_lost` | gerfs_nopiv 无回退、info = 0；RBT 不论 nopiv LU 报什么，调用者都得到 info = 0 |
+| `x_overflow_accepted` | 实例 a = 2^-100、b = 2^28（都在 FP32 正规范围），FP64 解 2^128 有限，FP32 解 +∞ 被接受；对 zcgesv 和 zcposv 都成立 |
+| `zcgesv_b_overflow_accepted`、`zcposv_b_overflow_fallback` | b = 2^200：zcgesv 接受 +∞（无 B 检查），zcposv 正确回退 iter = −2 |
+| `dshposv_always_success`、`spd_tiny_rhs_returns_zero`、`spd_threshold_larger`、`spd_nan_runs_to_maxiter` | 公开 dshposv 总报成功；‖b‖₂ ≤ 2^-53 ⇒ x = 0；2^-53 > 1e-18；NaN ⇒ iter = maxiter |
+| `oobW_last`、`oobV_last`、`nonconverged_oob` | nrhs ≥ 2 且内层未在重启长度前收敛 ⇒ 写 `d_w` 第 restrt 列（越界）；nrhs ≥ 3 读 `d_VV` 越界 |
+
+模型边界：精确有理数 + NaN/±∞；FP32 转换与 1×1 FP32 求解只建模溢出；i?amax 的 NaN 行为（cuBLAS）未建模，`accept_nan_*` 以范数本身为 NaN 为前提。
+
+### 28.3 CPU 核对（`experiments/magma_dense/`）
+
+- `xovf_lapack.c`（Mac Accelerate LAPACK；判据结构与 MAGMA zcgesv/zcposv 相同）：a = 2^-100、b = 2^28 ⇒ `dsgesv`/`dsposv` 都返回 ITER = 0、INFO = 0、x = inf（n=1）或 nan（n=2，0·Inf），FP64 精确解 3.4e38。对照 a = 2^-90 正确。b = 2^200：LAPACK 返回 ITER = −2 正确回退（MAGMA zcgesv 无此检查）。LAPACK 侧属于 PR #1501 系列已覆盖的“解上溢”。
+- `zchesv_port.py`（zchesv 控制流的忠实移植 + 不选主元 FP32 LDLᵀ）：A = [[d, cᵀ], [c, M]]，n = 16，cond(A) ≈ 3：
+  - d ≥ 2^-20：收敛（iter 2–13）；
+  - **d = 2^-24，种子 0、1：iter = −31、info = 0、X == B**（相对误差 1.43、0.45）；
+  - **d = 2^-24，种子 2：iter = 29、info = 0，x = inf**（`zchesv_seed2_results.txt`：x 从 1e21 增长到 7.8e30，第 29 次修正溢出，`Inf > Inf` 为假被接受）。
+- `diverge_lapack.c`（对照）：选主元的 `dsgesv` 在 κ = 1e6…1e12 下不会发散到溢出：κ ≥ 1e10 时 ITER = −31 正确回退。所以“发散后被接受”只发生在不选主元的路径（zchesv、RBT）。
+
+### 28.4 GPU 确认队列（等 s82 空出；只用 GPU 0；数据放 /ssd/haibin，用完删除）
+
+1. zcgesv / zcposv：a = 2^-100、b = 2^28（n = 1、2、1024 块对角）⇒ 预测 iter = 0、info = 0、X = inf/nan。
+2. zcgesv：b = 2^200 ⇒ 预测接受 +∞；zcposv 同输入 ⇒ iter = −2。
+3. zchesv：`zchesv_port.py` 的 d = 2^-24 实例 ⇒ 预测 X = B、info = 0、iter = −31，或 iter = 29 + inf。
+4. dshposv_gpu：‖b‖₂ = 1e-17 ⇒ x = 0、iter = 0；(A, b)·2^k 扫描；nrhs = 2 且难收敛矩阵下用 `compute-sanitizer --tool memcheck` 检查 `d_w` 越界写；返回值恒为 0。
+5. zgesv_rbt(refine = true)：用 RBT 子代理构造的实例（见 `experiments/magma_dense/rbt/`，进行中）。
+6. 原有：MAGMA 补丁编译与开销、trans/nrhs 探针。
+
+### 28.5 补充（同日）：RBT 移植与反例、稀疏求解器、对已有结果的更正
+
+**RBT**（`experiments/magma_dense/rbt/`，CPU 忠实移植，含 glibc rand 复现与自检）：
+- **n = 1、2、3 时答案错误，info = 0**（与随机数无关）：转置向量核 `if (n < 2) return;`（zgerbt_kernels.cu l.174）跳过长度为 1 的块的 u 缩放，而矩阵核照常缩放，变换后的 (A′, b′) 不是同一个变换；相对误差 6.0e-2、3.4e-2、3.4e-3。n ≥ 4 一致性 1e-15。
+- **条件数 3.09 的 n = 64 矩阵，dgesv_rbt 返回误差 3.6e35 的有限解，info = 0**：A = U⁻ᵀ M V⁻¹，M[0,0] = 0，变换后主元 7.1e-18；依赖进程内首次 init_butterfly 的 glibc rand 状态。
+- 子代理（中途停止，未写文件）读码更正：零主元时 `zgesv_nopiv` 跳过 getrs，dB 保持 Uᵀb；`getf2_nopiv` 置 info 并跳过该列缩放继续。
+
+**稀疏求解器**（子代理全量读码 + 主会话核对源码；`experiments/magma_sparse/`；Lean `MagmaSparse.lean`，日志 `check_log_magmasparse.txt`，退出码0）：
+- **CG_MERGE / PCG_MERGE（默认求解器）复数精度下内积不取共轭**（zmergecg.cu l.232、l.1258）：CPU 移植中，A = diag(1, 1.5)、b = (1, 0.5i) 一步报 info = 0，误差 1.14；随机复 HPD（cond 10）不收敛；实数据对照正常。Lean `cg_merge_false_convergence`：A = diag(2,3)、b = (2,i) 精确算出 Σr² = 0、info = 0、x = (2,i)，真解 (1, i/3)。
+- **BiCG/PBiCG/PTFQMR(_merge) 的 breakdown 被覆盖成 SUCCESS**（zbicg.cpp l.145–147 → l.197–198）；Lean `bicg_breakdown_success`。
+- **求解器包装层 default 分支返回 0、x 不动**：`--solver BA|BAO|ITERREF|PARDISO`，或多右端配非 CG/PCG/LOBPCG；Lean `wrapper_unhandled_success`。
+- **早退出判据查 ‖b‖ 而非初始残差**（zcg_res l.106、zbicgstab* 等）：‖b‖ < max(rtol‖b‖, dlamch('E')) ⇒ info = 0、x = x0；Lean `early_exit_returns_x0`。
+- 其余（子代理，未逐条核实）：绝对 atol 默认 1e-16；pcg_merge 的 SLOW→SUCCESS 升级以 init_res 为基准；LOBPCG 用绝对 tol、NaN 视为收敛、只看第 0 个特征对；Jacobi 只要残差下降就报成功；final_res 计算但从不与容差比较；`magma_z_precond` 的 atol 未初始化；状态码注释（0/−1/−2）与实际（−201/−202…）不符；测试只打印。
+
+**对已有结果的更正**（起草上游报告时逐条对照原始结果文件发现；已改 `experiments/ir_survey/README.md`、`operators/IR_SURVEY_zh.md`、`paper/DRAFT.md`）：
+1. SuperLU：“berr 与有限基线相同”比较的是单个三对角矩阵，不是两块矩阵；更小的复现 A = I、b = (NaN, 1) ⇒ berr = 0。
+2. MUMPS：机理不是 idamax（DXMAX 有限），而是逐行比较吞掉 NaN（dsol_aux.F:889–899，推断）。
+3. SuperLU 测试引用 dgst07.c:145 在 `#if 0` 内，应为 l.129/151/193。
+4. PaStiX：IPARM_NBITER 是跨调用的运行最大值；GMRES x0 = 0 那行的 250 是真的，之后各行的 250 是带过去的；保存的探针比结果多一列（版本不同）。
+5. PLASMA：“FP64 精确”未被结果显示（只打印 dgesv_info）；P2 的 iter = −31 很可能读自从未写入的缓冲区（推断）。
+6. SLATE：b 被改写只显示了前几个元素为 0。
+7. SuperLU_DIST：范数误差界 1.03e-7 是公式下限 √3·2^-24，本来不变；屏蔽体现在 berr。
+8. SuperLU 用的是节点 gcc 13.3，不是 conda 工具链。
+
+**上游报告草稿**：`operators/upstream_reports/` 新增 SLATE、PLASMA、SUPERLU、SUPERLU_DIST、MUMPS、PASTIX、STRUMPACK 七份（未提交，由用户决定）。每份末尾的 “Internal notes (remove before sending)” 发送前需删除。
+
+**GPU 队列追加**：
+7. zgesv_rbt：n = 1、2、3 的对角占优随机矩阵 ⇒ 预测误差 1e-3–1e-1、info = 0；n = 64 的 `A_zero_pivot_n64.npy`（新进程首次调用）⇒ 预测 info = 0、误差巨大或 NaN。
+8. 稀疏 CG_MERGE（z 精度）：A = diag(2,3)、b = (2,i) ⇒ 预测 info = 0、numiter = 1、x = (2,i)；随机复 HPD ⇒ 不收敛。BiCG：b 含 NaN ⇒ info = 0。包装层：`--solver ITERREF` ⇒ 返回 0、x = x0。
+- 追加核对并入 Lean（`MagmaSparse.lean` 共 8 条定理，退出码 0）：`template_ignores_final_res`（通用模板只要 numiter < maxiter 就 SUCCESS，final_res 不与容差比较，zcg_res.cpp l.170–198）、`jacobi_any_decrease`（zjacobi.cpp l.133–136）、`lobpcg_nan_converged`（zcompact.cu l.36：`dnorms[j] > tol` 为假即移出活跃集）。
+
+### 28.6 本轮小结
+
+- MAGMA 中所有带精化或接受逻辑的稠密例程都已读码并建模：`MagmaFgmres`（dsgesv/dhgesv_iteref，§24）、`MagmaDense`（zcgesv、zcposv、zchesv、zcgeqrsv、zgerfs_nopiv/zgesv_rbt、dshposv + dfgmres_spd）；稀疏求解器的接受逻辑建模于 `MagmaSparse`。
+- CPU 已确认：解溢出被接受（LAPACK 同结构）、zchesv 的 X = B 与发散被接受（移植）、RBT n ≤ 3 错误与 cond 3 矩阵的 3.6e35 误差（移植）、默认稀疏 CG_MERGE 复数下假收敛（移植）。
+- 全部 MAGMA 结论仍待 GPU 确认（队列 1–8）。
+
+### 28.7 稀疏求解器第二批与预条件子（同日，主会话逐条核对源码；`MagmaSparse.lean` 共 16 条定理，退出码 0，无 sorry）
+
+| 发现（文件:行） | Lean |
+|---|---|
+| `zcg_res` l.111–114：x0 恰为解（r0 = 0 ⇒ den = 0）时报 MAGMA_NONSPD（−203），SPD 矩阵也一样 | `cgres_exact_x0_nonspd` |
+| `zbicgstab` 无 breakdown 检查：b = 0 或 x0 恰为解 ⇒ alpha = 0/0，x 被写成 NaN，跑满后报 DIVERGENCE | （未单独建模；状态由 `templateInfo` 覆盖） |
+| `zpcg_merge` l.225–236：达到上限时以 `iter_res/init_res < rtol` 升级为 SUCCESS；循环判据用 `/nomb`。实例：‖b‖ = 1、‖r0‖ = 1e6、‖r‖ = 1e-5 ⇒ SUCCESS，残差是 rtol 的 1e5 倍 | `pcg_merge_upgrade` |
+| `zbpcg` l.224：多右端只看第 0 列 | `bpcg_col0` |
+| `zidr` l.128–140：restart = 50 是“未设置”的哨兵 ⇒ s = 1；maxiter 被截成 min(2n, maxiter) 并写回调用者结构体 | `idr_params` |
+| `zbombard` l.622–625：`if (T_res < res) res = Q_res;`（复制粘贴错误），记录的残差可大于之前的最好值 | `bombard_wrong_res` |
+| `magma_z_precond` l.59–63：内层 `psolver_par.atol` 从不初始化（栈上随机值），内层求解器读它做 `res <= atol`：未定义行为 | — |
+| `magma_z_precondsetup` l.160–184：PQMR/PQMRMERGE/PBICG/LSQR + ILU/ICC 时，ILU 的 setup info 被转置 setup 覆盖 | `precond_setup_info_lost` |
+| `blas/zilu.cpp`：`cusparseXcsrilu02_zeroPivot` 在数值分解之前调用（且连调两次、结果不用），只能查到结构性零；数值零主元从不检查 | `ilu_numerical_zero_unchecked` |
+| 组合：ILU 数值零主元 ⇒ PBiCG 第一次 rho = NaN（zpbicg.cpp l.144–155）⇒ DIVERGENCE ⇒ l.207 覆盖为 SUCCESS | `ilu_zero_pivot_pbicg_success` |
+
+GPU 队列追加：
+9. 稀疏 PBiCG + ILU：构造 ILU0 数值零主元的矩阵（例如 [[1,1],[1,1]] 块加扰动使 A 非奇异而 ILU0 的第二个主元为 0）⇒ 预测 info = 0。
+10. pcg_merge：x0 = 1e6·随机、maxiter = 20 ⇒ 预测 info = 0 而 final_res/‖b‖ ≈ 1e-5。
+11. cg_res：x0 = 精确解 ⇒ 预测 −203。
+
+### 28.8 全部稀疏求解器的收尾逻辑归类、预条件子与 FGMRES（同日；`MagmaSparse.lean` 共 23 条定理，退出码 0，无 sorry）
+
+**归类**（对 `sparse/src/z*.cpp` 逐文件 grep 收尾代码，再人工核对 zcgs、zlobpcg）：
+- “覆盖式”（`if (numiter < maxiter) info = SUCCESS;` 无条件）：zbicg、zbicgstab、zbpcg、zcg、zcg_merge、zcg_res、zlobpcg、zpbicg、zpcg、zpcg_merge、zpcgs_merge、zptfqmr、zptfqmr_merge、ztfqmr、ztfqmr_merge。其中**循环内还会检测 breakdown 的只有 zbicg、zpbicg、zptfqmr、zptfqmr_merge**：这 4 个会把检测到的发散覆盖成 SUCCESS（`bicg_breakdown_success`、`overwrite_group_size`）。
+- “已修正式”（还要求 `info == MAGMA_SUCCESS`）：zcgs、zcgs_merge、zpcgs、zbicgstab_merge、zpbicgstab、zpbicgstab_merge、zqmr、zqmr_merge、zpqmr、zpqmr_merge、zfgmres、zbombard、zbombard_merge。breakdown 保持 DIVERGENCE（`fixed_breakdown_divergence`）；正常收敛经 SLOW 分支升级为 SUCCESS（zcgs 的 info 初值是 NOTCONVERGED，循环内收敛不置 0）。
+- 其他：IDR 系列、Jacobi、LSQR 用各自的收尾逻辑。LSQR 无 breakdown 检查，NaN 会跑满后报 SLOW/DIVERGENCE（未发现误报成功）。
+- 更正：zlobpcg 不在“循环内 breakdown 被覆盖”之列（它的第二个 DIVERGENCE 赋值是开头的参数检查）。
+
+**新发现**：
+| 发现 | Lean |
+|---|---|
+| `zlobpcg` l.170–178：先 `solver_par->info = SUCCESS`，参数错误写进局部 `info`，再检查 `solver_par->info != 0`：检查形同虚设，m < 2 或 n > m（特征向量多于行数）照常执行 | `lobpcg_check_dead` |
+| `magma_zjacobisetup_diagscal`（zjacobi.cpp）：取倒数后才检查 `== 0`，只能抓到缺失的对角元；存储的 0 对角元得到 1/0 = Inf，通过检查 | `jacobi_stored_zero_passes` |
+| `magma_zcumiccsetup`（blas/zilu.cpp）：零主元检查在数值分解之前；数值分解 `cusparseZcsric02` 的返回状态完全不检查：IC(0) 在非 M 矩阵的 SPD 上也可能出现非正主元，从不报告 | `icc_breakdown_unchecked` |
+| `zfgmres` l.187–319：内层 `betanom <= atol` 置 SUCCESS，外层仍按 `rel_resid > rtol` 重启且不重置 info；之后某周期内层出现 NaN，外层拒绝式判据为假直接退出，带着旧的 SUCCESS 返回 | `fgmres_sticky_success`、`fgmres_nan_alone` |
+| 核对后撤回：怀疑 Jacobi setup 出错路径 double free——`magma_zmfree` 末尾把 val/col/row 置 NULL（magma_zfree.cpp l.123–125），不是 double free | — |
+
+GPU 队列追加：
+12. LOBPCG：n > m 的块大小 ⇒ 观察是否越界或返回垃圾。
+13. Jacobi 预条件：CSR 中显式存储的 0 对角元 ⇒ 预条件向量含 Inf。
+14. ICC + PCG：构造 IC(0) breakdown 的 SPD 矩阵 ⇒ setup info = 0，PCG 结果。
+15. FGMRES：‖b‖ ≈ 1e-8（绝对容差先达标）且 Arnoldi 中途出现 NaN ⇒ 预测 SUCCESS。
+
+## 29. GPU 0 确认（2026-11-25，用户授权“在GPU0上测试”；eightsocket V100，只用 GPU 0，用前空闲；`experiments/magma_gpu/`）
+
+**构建**：MAGMA 2.10.0 官方 tarball（sha256 见 `tarball.sha256`），CUDA 12.0，Volta，系统参考 LAPACK/BLAS（需 `-l:liblapack.so.3 -l:libblas.so.3 -l:libgfortran.so.5`，节点无 .so 符号链接），稠密 + 稀疏。节点 `compute-sanitizer` 缺注入库，改用 LD_PRELOAD 保护区垫片 `guard_malloc.c` 检测越界写。节点工作目录 `/ssd/haibin/magma_gpu`（2.6 GB）用完已删除。
+
+**确认的预测**（详表见 `experiments/magma_gpu/README.md`）：
+- 稠密：解溢出被接受（dsgesv/dsposv，n = 1/2/1024，iter = 0、info = 0、x = inf/nan）；dsgesv 不查 B（2^200 ⇒ NaN、iter = 0）而 dsposv 正确回退；zchesv 的 X = B（iter = −31、info = 0）与发散被接受（iter = 27、x 含 Inf）；dshposv 小右端 x = 0、×2^40 一步停止（bwd/thr 5.5e7）、返回值恒 0；**dshposv nrhs = 2 显存越界写一整列（2,048,000 B 分配后的 4096 B）**；RBT n = 1/2/3 误差 6e-2/2.6e-2/2.7e-2 且 info = 0；**RBT 构造的 cond 3.09 矩阵 info = 0、误差 1.58e13**。
+- 稀疏：CG_MERGE 复数 A = diag(2,3)、b = (2,i) ⇒ info = 0、1 步、x = (2,i)；随机复 HPD 不收敛（−205）；BiCG b 含 NaN ⇒ info = 0；cg_res 精确初值 ⇒ −203；包装层 ITERREF ⇒ 返回 0、x 不动；pcg_merge maxiter = 40 ⇒ info = 0 而 final_res/‖b‖ = 2.9e-6。
+- Jacobi 预条件子存储的 0 对角元 ⇒ setup info = 0、D⁻¹ 含 NaN（复数精度；实数应为 Inf）。
+
+**与预测不同**：ILU(0) 数值零主元（A = [[0,1],[1,0]]，零对角元显式存储）——预测 setup 静默返回 0、PBiCG 报成功；实测 **`magma_z_precondsetup` 段错误崩溃**（对照矩阵正常）。源码 HIP 分支注释“this version has the bug fixed where a zero on the diagonal causes a crash”。崩溃位置未定位（节点无 gdb）。
+
+**修复补丁**：`gmstrs_fix.patch` 编译失败（`<cmath>`/`<vector>` 在 `magma_internal.h` 的 min/max 宏之后）；`gmstrs_fix_v2.patch` 修正 include 顺序后通过。24 次调用：原版 24 次报成功、其中 20 次违反文档判据；修复版 15 次报成功、0 次违反，另 9 次正确回退。trans = T：原版误差 6.6e-2（实际解 Ax = b）、修复版走 FP64；nrhs = 2：原版第二列为 0、修复版两列正确。开销：n = 8192 时 dsgesv 5.34 → 8.32 s、dhgesv 1.59 → 4.78 s，主要来自主机端后检（拷贝 A 0.54 s + 串行 Dot2 1.80 s）和多一次迭代；**该构建链接参考 CPU LAPACK，FP64 dgesv_gpu 在 n = 8192 就要 5.4 s，计时不代表 MAGMA 正常性能**，GPU Dot2 核可消除主机端开销。
+
+### 29.1 稠密库“状态丢失”全面审计（子代理读码；前 5 条主会话核对源码并上 GPU）
+
+| # | 发现（文件:行） | GPU 0 |
+|---|---|---|
+| 1 | `zgbtrs_batched_strided`：`dB_array` 取自 `get_dAarray()`（zgbtrs_batched.cpp:343），B 指针覆盖 A 指针；另传 `batchCount` 而非 `batch` | 正确分解后 4 个批次的解**全是 NaN**，返回 0 |
+| 2 | `zheevdx_2stage(_m)`、`zhegvdx_2stage(_m)` Upper：he2hb 返回 NOT_IMPLEMENTED 但返回值被丢弃（zheevdx_2stage.cpp:445） | 打印未实现，**info = 0、m = 512、特征值误差 12.9**；Lower 1e-13 |
+| 3 | `zhetrf_nopiv_cpu`/`zsytrf_nopiv_cpu`：最后一个主元不检查，info 下标倒数且不加块偏移，绝对阈值 eps | [[1,1],[1,1]]、[[0]] ⇒ **info = 0、x = NaN** |
+| 4 | `zpotf2`（zpotf2.cu:316）：写入 0 起的 `step`，第 0 列失败 ⇒ info = 0；0 与 NaN 不查 | A(0,0) = −1：**potrf_native(Upper) 与 potf2_gpu 都报 0**（LAPACK 1）；Lower native 报 1 |
+| 5 | `ztrtri_gpu`：奇异性检查被注释掉；块 info 被后一块覆盖、不加偏移（影响 potri_gpu、getri_gpu） | A(0,0) = 0 ⇒ **info = 0**；A(300,300) = 0 ⇒ **45**（应 301）；A(511,511) = 0 ⇒ **256**（应 512） |
+| 6 | `zpotrf_vbatched` Upper：只打印“unavailable”，仍按 Lower 分解并返回 0 | 未测 （见 §29.2–29.3） |
+| 7 | `xhsgetrf`/`xshgetrf`：尾部 GEMM 用补齐宽度 maxn，ldda < roundup(n,32) 时越界并破坏 L | 未测（dxgesv_gmres 用对齐 ld，安全） （见 §29.2–29.3） |
+| 8 | 所有混合精度精化：接受 Inf/NaN（已有） | 已确认（见上） |
+| 9 | FP16 转换无范围检查，只有注释掉的 `CHECKFOR_NAN_INF` | 间接确认（dhgesv k ≥ 20 全 NaN） |
+| 10 | `zgesvj_batched` 分块路径：不收敛不报告 | 未测 （见 §29.2–29.3） |
+| 11 | `zgetrf_m`：info 偏移多乘 NB，且后面的奇异面板覆盖前面的 | 未测（需超显存矩阵） （见 §29.2–29.3） |
+| 12 | `zpotrf_vbatched`：不清零 info_array，已有非零 info 的矩阵被跳过 | 未测 （见 §29.2–29.3） |
+| 13 | `zgetri_outofplace_batched`：文档承诺的 info_array 从不写 | 未测 （见 §29.2–29.3） |
+| 14 | `zgegqr_gpu`：秩作为 info 返回，秩 0 等于成功；绝对 eps 阈值 | 未测 （见 §29.2–29.3） |
+| 15 | `xshgetrf`/`xhsgetrf` 奇异面板：跳过反转置，dA 留在转置状态 | 未测 （见 §29.2–29.3） |
+
+其余（子代理，未核对）：slag2h 溢出标志用主机影子地址；shpotrf 的 goto 越过 queue 声明；gbtrf/gbsv_native 不清零 info；batched 的 `CHECK_INFO` 死代码引用不存在的变量；zhegvx/zhegvr 不收敛时不做回代；多处公开例程不检查显存分配。子代理检查为干净的例程清单见其报告（LU/Cholesky/LDLᵀ 驱动、大部分 batched、单阶段特征值与 SVD 驱动、17 个带区间参数的驱动）。
+
+### 29.2 第二轮 GPU（同日，重新编译同一 tarball；`experiments/magma_gpu/audit2_*`）与 Lean `MagmaAudit.lean`
+
+**Lean**：`lean/OptimiKahan/MagmaAudit.lean`（11 条定理，退出码 0，无 sorry；日志 `check_log_magmaaudit.txt`）建模审计第 1–9 条（gbtrs 指针别名与越读、he2hb 返回值丢弃、nopiv 最后主元不查与 info 倒序、potf2 的 0 起下标、trtri 块 info 覆盖、getrf_m 偏移、vbatched 旧 info、gegqr 秩 0、vbatched Upper）。**`trtri_gpu_instances` 用 nb = 256（`magma_get_zpotrf_nb`，arch ≥ 300）精确复现 GPU 上的 0 / 45 / 256。**
+
+**GPU 0**：
+- 第 6 条 potrf_vbatched Upper：分解的是下三角（下三角放“不引用”的垃圾时，对合法的 Upper 输入报 info = 2）。
+- 第 12 条：旧 info = 7 的矩阵不被分解，info 保持 7。
+- 第 13 条：getri_outofplace_batched 不写 info_array（哨兵值不变）。
+- 第 14 条：gegqr ikind 1、3 在 A·1e-20 时 info = 0 而 Q 不正交（误差 1）。
+- 第 7 条：hgetrf 在 n = 1000、ldda = 1000 时因子有 20,903 个元素与对齐版本不同（最大差 14.8），info 均为 0。
+- LOBPCG 参数检查失效：n_ev = 8 > m = 6 照常执行，内部 gegqr 报非法参数，特征值全 NaN，返回 −201；并在工作目录写 `residualNorms` 文件。
+- **未复现**：ICC 对 IC(0) 失败矩阵（CPU 上第 6 个主元 −0.042）：setup = 0、PCG 4 步收敛到 1e-15，无可见后果。
+- 未测：第 10、11、15 条，FGMRES 粘住的成功。节点目录（1.3 GB）已删除，GPU 0 空闲。（第三轮已运行，见 §29.3）
+
+### 29.3 第三轮 GPU（同日；`experiments/magma_gpu/audit3_*`）
+
+- 第 10 条 `gesvj_batched`：含一个 NaN 时 n = 16/64/256 都返回 info = 0、奇异值全 NaN（比预测严重：小矩阵融合路径也不报）。Lean `gesvj_nan_converged`（`off > tol` 对 NaN 为假即“收敛”）。
+- 第 11 条 `getrf_m`：恰为零的列（100/300/600/900）一律 info = 0（LAPACK 101/301/601/901），设不设 `MAGMA_NGR_NB` 都一样。**根因**（主会话核对）：函数末尾 `if (*info >= 0) magma_zgetrf_piv(…, info)`，而 `magma_zgetrf_piv` 开头 `*info = 0`（zgetrf_m.cpp l.28、l.400–401）；大面板循环也不记录 iinfo。CPU 接口 `magma_zgetrf`/`zgesv` 在矩阵放不下显存时走这里。Lean `getrf_m_never_singular`（原 `getrf_m_offset` 描述的偏移错误在这条路径下被后续清零掩盖）。
+- 第 15 条 `hgetrf` 奇异面板：info = 1 报告了，但尾部 589,824 个元素全等于 Aᵀ（原地转置未还原）。Lean `hgetrf_left_transposed`。
+- FGMRES 粘住的成功：1152 次参数扫描中 252 次 info = 0 而 x 非有限（226）或真实残差 > 1e-6‖b‖。
+- `MagmaAudit.lean` 现 14 条定理，退出码 0，无 sorry。节点目录已删除，GPU 0 空闲。
+
+### 29.4 稀疏求解器全量 GPU 扫描（同日；`experiments/magma_gpu/sweep_*`；节点目录已删除，GPU 0 空闲）
+
+32 个线性求解器 × 6 组输入（实 SPD 对照、复 HPD、复非 Hermitian、微小 b 加随机 x0、b[0] = NaN、x0 恰为解）：
+- **b 含 NaN 时静默报成功的恰好是 BICG、PBICG、PTFQMR、PTFQMR_MERGE**，与 §28.8 由源码收尾逻辑归类得出的 4 个文件完全一致，其余 28 个都报失败。
+- **微小 b：32 个中 21 个静默失败**（info = 0 而结果错误；其中 5 个 numiter = 0、直接返回 x0，16 个迭代但未收敛）。原记“23 个、x = x0”有误，经独立复核更正。
+- x0 恰为解：BICGSTAB 把正确的 x0 变成 NaN；BICGSTABMERGE、PBICGSTABMERGE、JACOBI 报 −202，CG 报 −203（答案正确却报失败）。
+- 复数：CG_MERGE、PCG_MERGE 失败（不取共轭）；其他 MERGE 变体正常；QMR 答案正确却报 −201。
+- **新发现：IDRMERGE、PIDRMERGE 对所有输入都失败，包括实 SPD 对照**（restart 30/4 时 NaN、−202；restart 50 即 s = 1 时停滞在 0.297、128 = 2n 步），同参数下 IDR/PIDR 1–10 步收敛。maxiter 截断只在两个 MERGE 变体上由 GPU 运行看到（IDR/PIDR 在达到上限前就收敛了，对它们只有读码证据）。
+
+### 29.5 第五轮 GPU（同日；`experiments/magma_gpu/round5_*`；节点目录已删除）
+
+- **bpcg 多右端**：经包装层 b 为 64×2 时第 1 列根本不解（误差 1）、info = 0。原因：`num_vecs = b.num_rows / A.num_rows`（zbpcg.cpp l.74）= 1，而包装层正是在 `b.num_cols > 1` 时转到 zbpcg。
+- **zgesv_rbt_batched**：精确奇异矩阵返回 0、info_array 0、误差 0.85（蝴蝶变换混开零列）。**泄漏确认**：200 次调用显存少 25.17 MB、主机内存多 52.7 MB，与 dv、hu + hv 的大小吻合。
+- bombard：未复现（这组输入里 TFQMR 没有胜出）。
+- **单精度**（c/s）：gbtrs 别名、trtri info 45、potf2 info 0、CG_MERGE 复数假收敛，全部与 d/z 一致。
+- **ILU 崩溃定位**：栈溢出（需备用信号栈才打得出调用栈），`magma_zmtransposeconjugate` 无限递归。因果链：ILU setup 检测到存储的零主元并失败（外层 PCG 时 setup 返回 −3009，L 的 memory_location = 0、nnz = 0）；外层 PBiCG 时该失败被转置 setup 的返回值覆盖，转置在未构建的 L 上进行，位置 0 两个分支都不匹配，于是不断转换为 CSR 并递归调用自身。Lean `transpose_unbuilt_diverges`、`transpose_cpu_terminates`。之前“数值零主元不检查”的定理针对的是数值分解过程中出现的零主元，不是本次输入（显式存储的零在分析阶段已被检测出来）。
+
+### 29.6 修复补丁的开销：OpenBLAS 构建与补丁 v3（同日；`experiments/magma_gpu/perf_*`；节点目录已删除）
+
+- 之前的计时链接参考 LAPACK，不能用来评估开销。这次从源码编译 OpenBLAS 0.3.28（`NO_FORTRAN=1 C_LAPACK=1`，32 线程），重新编译三份 MAGMA：原版、v2（主机认证）、v3（GPU 认证）。
+- **v3**（`experiments/magma_fgmres/fix/gmstrs_fix_v3.patch`）：新文件 `magmablas/dgmstrs_certify.cu`，每行一个线程，Dot2 与行和的运算顺序与主机版相同（fma 做 TwoProduct，`__dadd_rn` 等避免收缩）；只拷回 n 维向量，外向舍入比较与“非有限 ⇒ 失败”仍在主机上，未改。发布版 tarball 用 `Makefile.gen.cuda`，需在 `libmagma_templates := \` 后插入该文件，否则链接时符号未定义。
+- **正确性**：OpenBLAS 构建下原版 24/24 报成功、**23** 次违约（参考 LAPACK 构建为 20，FP32 舍入不同）；v2、v3 均为 15 次成功、**0** 次违约；v3 的 trans、nrhs 均正确。
+- **开销**（n = 8192，最好的 3 次）：原版 0.21–0.26 / 0.17–0.18 s（FP32 LU / FP16 LU）；v2 3.34 / 3.27 s；**v3 0.23–0.30 / 0.20–0.35 s**；FP64 dgesv_gpu 0.29–0.43 s。n = 16384：原版 0.85 / 0.73 s，v3 0.90 / 0.91 s，FP64 1.09 s。n ≤ 4096 时 v3 多 0.03–0.17 s（1.3–3 倍），来自多一次迭代和认证的启动与拷贝。
+- 节点有其他用户的 CPU 负载（load average 10–16），同一构建重复测量相差可达 ±30%，所以只报区间。
+- 结论：GPU 认证消除了 v2 的 11–16 倍减速；n ≥ 8192 时 v3 与原版相差在 25% 以内，仍快于 FP64。V100 的 FP64 很强，混合精度本身在这里收益就不大；这一轮回答的只是“带证明的认证是否比分解还贵”，答案是否。
+- GPU 内核本身不是 Lean 证明的对象；证明的 `Faithful` 假设针对的是运算序列，内核执行的是同一序列。
+
+### 29.7 第二轮审计：此前未审的算子族（同日；`experiments/magma_gpu/round6_*`、`round7_*`；节点目录已删除）
+
+- 范围：稀疏 control/blas/precond（格式转换、SpMV、缩放、预条件 setup 与 apply）；稠密 QR/最小二乘、广义与三对角特征值、逆、转换核。两个子代理读码各报 13 条与 8 条，主会话逐条核对源码后上 GPU 0。完整表见 `operators/magma/COVERAGE_zh.md` §3b。
+- **GPU 确认**（返回成功但结果错误或缺失）：slag2h 溢出 ⇒ 非法内存访问且 info 0（主机影子地址）；dlag2s/slag2h 的 NaN 不报；dstedx info 0 带 10 个 NaN；dgels_gpu 秩亏 info 0、残差 95；dgeqp3_gpu 固定列不分解（交换时段错误；文档 LWORK 被拒）；dsygvdx n ≤ 128 忽略 range；sync-free ILU 的 CSC 数组顺序反（L.drow 写入 127 个行号，分配 65）；spmv 维度不符返回 0、DENSE 算 Aᵀx、CSC 结果错、SELL-P 漏 44 行；zmscale 全 NaN 返回 0。
+- **报告了失败但根因在库**：复数 ICC 用 Lᵀ（PCG+ICC 1000 步失败，CG 17 步）；shpotrf 对 ×2^40 的 SPD 矩阵报不正定（FAST_16F 溢出）。
+- **与预测不符（如实记录）**：ILU(k) 存储不足被报告（−3009）；shpotrf 分配失败的崩溃路径只在 HIP 编译；gbtrf 不清零 info 是假警报；dshposv_gpu 自带缩放，×2^40 不触发 slag2h。
+- 一处探针标签写错（L(n,n) 的极限应为 √(2+√3) = 1.93185），结果文件已注明。guard 分配器会改变 sync-free 的损坏位置，以不加 guard 时读回的数组内容为准。
+- Lean：`MagmaAudit.lean` 25 条、`MagmaSparse.lean` 31 条定理，均退出码 0、无 sorry、无警告（日志已更新）。论文 Appendix A 总计更新为 2,973 行、217 条定理。
+
+### 29.8 第八轮：把剩下的读码发现全部建模并上 GPU（同日；`experiments/magma_gpu/round8_*`；节点目录已删除）
+
+- Lean：`MagmaSparse.lean` §14 新增 11 条（42 条），`MagmaAudit.lean` §19 新增 4 条（29 条），均无 sorry、无警告。论文 Appendix A 总计 3,101 行、232 条。
+- GPU 0（CPU 侧堆错误用 `MALLOC_CHECK_=3` 暴露）：
+  - CPU 上的 spmv 返回 0，结果丢失，调用者的数组已被释放；
+  - CSRD 缺对角元越界写，之后 glibc 中止；ELLD 列号 −1；
+  - zmdiff 对无共同元素、只差虚部都给 0；zmfrobenius 把入口值加进去，行数不等时什么也不算；zmdiagadd 跳过无对角元的行；CPU 转置不交换维度；
+  - mtx 读入越界下标段错误；
+  - ILU/ICC 的 applyprecond 和 ConjTrans 的 applyprecond_right 返回 0、x 不写；
+  - zhegvx 每次泄漏 21.2 MB；
+  - CPU dgels 在 nrhs = 16384 时 DORMQR 拒绝参数 12，xerbla 结束进程（nrhs = 4096 时 LWORK 8192 够用，与按 nb = 32 写的预测不同）；
+  - geqrs3_gpu 参数编号错；`magma_zgels_batched` 只有声明。
+- 未测：zhegvd 系负 info 映射（需要分配失败）、zmscale_generate UNITCOL 双重释放（驱动的 side 处理未追）。（见 §29.9、§29.10：zmscale_generate 双重释放已确认；zhegvd 负 info 映射在 2.10.0 不可达）
+- 至此两轮审计的发现都有 Lean 模型；除上面两条外都有 GPU 证据。剩下未覆盖的只有多 GPU 例程（只允许 GPU 0）和 HIP 后端（没有 AMD 卡）。
+
+### 29.9 第九轮：多 GPU / 核外驱动（ngpu = 1）与全部 202 个稠密源文件的清点（同日；`experiments/magma_gpu/round9_*`；节点目录已删除）
+
+- 清点：`operators/magma/INVENTORY.md`（子代理逐文件分类）：此前已审 127、本轮 31、新读 3（zcgeqrsv_gpu、zgglse、zggrqf）、无状态判断的辅助例程 41。
+- GPU 0 确认：
+  - range V 在内部缩放后与未缩放的界比较：4 个 zheevdx 变体 m = 10（应 100）；
+  - 输入含 NaN 时 4 个变体都在 stedx 的 dlascl 处由 xerbla 结束进程；
+  - zunmtr_m 吞掉 NOT_IMPLEMENTED、C 不变；
+  - he2hb 小 lwork：带状结果差 2.5e119（info 0），或堆损坏；
+  - zgeqrf_m ngpu = 0：SIGFPE；
+  - zcgeqrsv、zgglse 秩亏：info 0、x 非有限；
+  - zggrqf 改完 A、B 才报 −7；
+  - zmscale_generate 双重释放；
+  - zpotrf_mgpu_right 只有声明。
+- 未复现或未测：2-stage 中 stedx 失败被清零（NaN 在更早处结束进程）；分配失败路径（zhegvd_m、zgeev_m 等）；zgeqrf_ooc。zhegvd 的负 info 映射在 2.10.0 不可达。（见 §29.10：故障注入确认了 stedx 失败被清零，并跑了分配失败路径与 zgeqrf_ooc）
+- Lean：`MagmaAudit.lean` 38 条、`MagmaSparse.lean` 43 条，无 sorry、无警告。论文 Appendix A：3,199 行、242 条。
+
+### 29.10 第十轮：分配失败的故障注入、核外 QR、ngpu = 2（同日；`experiments/magma_gpu/shims/fail_malloc.c`、`round10_*`；节点目录已删除）
+
+- 方法：LD_PRELOAD 垫片让第 k 次 `cudaMalloc`/`cudaHostAlloc` 失败，k 取遍；每次与 LAPACK 结果比较；backtrace 定位失败的分配。11 个驱动、55 次失败注入。
+- **info 0、结果错误（6 次；原记 7 次，经独立复核更正）**：zhegvd、zhegvd_m（zhegst 工作区 ⇒ 得到 A 的特征值，误差 599）；zheevdx_2stage（he2hb）；zheevdx_2stage_m（stedx_m 内 dlaex0_m，确认了第九轮未能复现的“stedx 失败被清零”）；zgeev、zgeev_m（gehrd）。
+- **进程被结束（8 次）**：zhetrd 的 iinfo 不读 ⇒ 未初始化的三对角 ⇒ NaN ⇒ dlascl/xerbla。**段错误（3 次）**：zgetrf_gpu、zpotrf_gpu 不检查锁页分配。
+- zgeqrf_ooc：占显存使其走核外路径，lwork = n ⇒ 段错误；NB = 0 时返回 −113，不死循环（预测不符）。
+- ngpu = 2 而只有 1 个可见设备：magma 退回 1 个 GPU，结果正确，留下粘滞的 CUDA 错误。
+- Lean：`MagmaAudit.lean` §21，共 42 条；论文 Appendix A 3,245 行、246 条。
+- 仍不能做的：真正的多卡（≥ 2 个 GPU）行为、HIP 后端。
+
+### 29.11 第十一轮：丢弃 iinfo 的辅助例程（同日；`round11_*`；节点目录已删除）
+
+- 故障注入：zunmtr、zunmbr、zunghr 各只有 1 次设备分配（在 zunmqr / zungqr 内），失败时都 info 0：zunmtr、zunmbr 返回原样的 C，zunghr 返回错误的 Q。zungtr 有同样的代码，但不在公开头文件中。Lean `helper_iinfo_dropped`。
+
+### 29.12 第十二轮：magmablas 中写状态的 39 个内核（同日；`round12_*`；节点目录已删除）
+
+- 子代理逐文件读码，主会话核对关键行；10 条上 GPU 0，**全部确认**：
+  - vbatched LU 第一面板外的零主元被清零；
+  - 通用带状 LU 只看最后一列；
+  - zgetf2_gpu 不报奇异；
+  - zpotf2/zpotrf_native 不报 0 和 NaN；
+  - zpotrf_batched n 不是 8 的倍数时不报 NaN；
+  - zgetrf_native 长列（>15360）不报零主元；
+  - 非方带状 LU 假 info 或 ipiv > m；
+  - heevj 把 NaN 当收敛；
+  - nopiv vbatched 的 `*info++`；
+  - 批量 gesv 奇异时仍写 B。
+- 未测：native 递归 LU 的偏移（需 expert 接口）、两处疑似竞争、两条轻微问题。（见 §29.13、§29.14：偏移已确认，竞争未复现）
+- Lean：`MagmaAudit.lean` §22–23，共 53 条；论文 Appendix A 3,330 行、257 条。
+- 完整性说明见 `operators/magma/COVERAGE_zh.md` §3f。
+
+### 29.13 第十三轮：剩余的内核条目与两条稀疏条目（同日；`round13_*`；节点目录已删除）
+
+- 确认：
+  - F7 native 递归 LU 偏移：recnb = 64 ⇒ info 18（LAPACK 50），与 Lean 模型给出的值相同；
+  - F13 m < n 融合 getf2 ⇒ 假 info 5；
+  - F14 NaN 使树形 argmax 选 0 ⇒ zgetrf_batched（m ≥ 16）假 info 1；
+  - F15 zlascl 参数编号；
+  - zmscale_matrix_rhs 报错时 b 已被缩放成 (inf, 0.5)、A 未变；
+  - zmtransfer 对未处理的存储格式返回 0、结果为空。
+- 未复现：F12 原子写 info 的竞争（300 次全对）。
+- Lean：`MagmaAudit.lean` 56 条、`MagmaSparse.lean` 45 条；论文 Appendix A 3,373 行、262 条。
+- `operators/magma/COVERAGE_zh.md` §3f 改为逐项可查的完整性说明，并列出全部未在 GPU 上运行的条目。
+
+### 29.14 第十四轮：此前只有读码证据的单 GPU 条目全部运行（同日；`round14_*`；节点目录已删除）
+
+- ✔ zlag2c 全局标志竞争：两线程各 2000 次，溢出矩阵 1889 次报 0、干净矩阵 7 次报 1。
+- ✔ heevj max_sweeps = 0 报成功、结果全错。
+- ✔ zmtranspose_cpu 宽矩阵段错误。
+- ✔ 截断 .mtx 返回 0 并复制出一个元素。
+- ✖ zlascl2 越界读：用 CUDA VMM 把 D 放在未映射页前，不出错。
+- ✖ zpotf2 warp 归约：1000 次结果一致。
+- ✖ heevj noconv 竞争：12800 次求解全对。
+- 辅助例程 zunmqr、zunmql、zunmlq、zungqr2 在分配失败时都正确报告；ztrevc3 系列不做设备分配。
+- Lean：`MagmaAudit.lean` 58 条、`MagmaSparse.lean` 47 条；论文 Appendix A 3,420 行、266 条。
+- 至此只剩：zhegvd 负 info 映射（不可达）、ngpu ≥ 2 的真实多卡行为（需要用户允许使用 GPU 0 以外的卡）、HIP 后端（无 AMD 卡）。
+
+### 29.15 第十五轮：sparse control/blas 66 个 z 文件逐文件判定（同日；`operators/magma/SPARSE_INVENTORY.md`、`round15_*`；节点目录已删除）
+
+- 判定：已知 14、新发现 31、干净 13、无状态逻辑 8。
+- 13 条上 GPU 0，11 条确认：
+  - SpMV 不读 transA；
+  - zmdot_shfl 归约空操作（64 个 1 得 1，很可能是 IDR_MERGE 全部失败的原因）；
+  - zmgecsrmv 多向量步长；
+  - SELL-P 多向量只算一半；
+  - zvread 读不了自己的输出格式并堆溢出；
+  - zcsrget 悬空指针；
+  - zcompact 把 NaN 当收敛；
+  - zmcsrcompressor_gpu 清空 CPU 矩阵；
+  - zfrobenius 只比实部；
+  - zmdiagdom 空行 NaN；
+  - zsort 遇 NaN 不终止。
+- 未确认：ELLPACKT 填充（NaN 来自复数 Inf 乘法，先前的判断有误，已撤回）；zmdotc 共轭（结果未写回，不确定）。（zmdotc 第十六轮已确认，见 §29.16）
+- Lean：`MagmaSparse.lean` 57 条；论文 Appendix A 3,497 行、276 条。
+
+### 29.16 第十六轮：sparse control/blas 其余新发现（同日；`round16_*`；节点目录已删除）
+
+- zmdotc 改用设备输出缓冲区重测：不取共轭确认（−1）。
+- 另 12 条中 10 条确认：
+  - zcsr_sort 不排 val；
+  - zcsrcoo_transpose 维度；
+  - zbitonic_sort 丢错；
+  - zvget_dev 悬空指针；
+  - zcuspmm CPU 输入段错误；
+  - zcsr_sort_gpu 混合位置；
+  - zge3pt 读 dx[−1]；
+  - ELLRT 启动失败不查；
+  - jaccard 权重错；
+  - lobpcg_shift 只移位第 0 行。
+- 未复现：zmbdiagdom、zcuspaxpy（buf 大小为 0）。
+- 按编号：31 个中 27 个已上 GPU（25 个确认）；未运行的 #3、#5、#14 不在公开头文件中，#17 被已确认的 CSC 交换掩盖。（第十七轮已运行，见 §29.17）
+- Lean：`MagmaSparse.lean` 67 条；论文 Appendix A 3,559 行、286 条。
+
+### 29.17 第十七轮：不在公开头文件中的 4 个编号、sync-free 等待、其余辅助例程（同日；`round17_*`；节点目录已删除）
+
+- 通过导出符号直接调用，全部确认：
+  - sync-free 求解即使 CSC 数组正确也错（n = 4096 时 4095 个分量错、返回 0）；
+  - zcsrget_gpu 悬空指针；
+  - zorderstatistics 不查最后一个元素的 NaN；
+  - zrowentries 漏掉纯虚元素；
+  - ztrisolve 对奇异因子返回有限“解”和 0。
+- sparse control/blas 的 31 个编号全部上 GPU（29 个确认）。
+- 辅助例程故障注入：zungqr、zungqr_gpu、zunmrq、zunmqr2_gpu、zunmql2_gpu、zgerbt_gpu 都正确报告 −113。41 个辅助例程的逐文件判定写入 `operators/magma/INVENTORY.md` 末节。
+- Lean：`MagmaSparse.lean` 72 条；论文 Appendix A 3,597 行、291 条。
+- 至此剩下：zunglq 的单独故障注入（dT 格式未确认）、ngpu ≥ 2 的真实多卡行为（需用户允许 GPU 0 以外的卡）、HIP 后端（无 AMD 卡）。（zunglq 见 §29.18）
+
+### 29.18 第十八轮：zunglq 与第 41 个辅助例程（同日；`round18_*`；节点目录已删除）
+
+- zunglq：`magma_z.h` 声明第 7、8 个参数为 (dT, nb)，定义为 (work, lwork)；按头文件调用（传设备缓冲区与 nb）⇒ 段错误；按定义调用，分配失败正确报告 −113。Lean `unglq_header_mismatch`。
+- 先前清点时漏掉的第 41 个辅助例程是 zbulge_applyQ_v2.cpp（提取用的正则不匹配大写字母），内部例程，经 2-stage 驱动覆盖；41 个辅助例程现全部逐文件判定。
+- Lean：`MagmaAudit.lean` 59 条；论文 Appendix A 3,609 行、292 条。
+- 剩下：ngpu ≥ 2 的真实多卡行为（需用户允许 GPU 0 以外的卡）、HIP 后端（无 AMD 卡）。
+
+### 29.19 多 GPU 状态簿记的一般性证明（同日；`lean/OptimiKahan/MagmaMultiGpu.lean`，日志 `check_log_magmamultigpu.txt`）
+
+- 不能用第二块 GPU，所以对 ngpu ≥ 2 路径的状态逻辑做一般性证明（对所有 ngpu、nb、n，不是实例检查）：
+  - `distribution_covers`：zgetrf2_mgpu 的 n_local 之和等于 n；
+  - `getrf_mgpu_first_global`：多卡 LU 的 info 等于第一个失败列的全局下标；
+  - `potrf_mgpu_global`：多卡 Cholesky 报告 j + 局部 info。
+- 三条都是正面结论：这些路径上没有预测到缺陷。退出码 0，无 sorry，无警告。
+- 仍需另一种环境才能做的：多卡通信与并发的实际运行（需用户允许 GPU 0 以外的卡）、HIP 后端（无 AMD 卡）。
+
+### 29.20 独立复核（同日；`operators/magma/reviews/1_INDEPENDENT_REVIEW.md`）与第十九轮（`round19_*`；节点目录已删除）
+
+- 新子代理独立核对清点与判定：清点与文件系统一致；补入 zgetf2_nopiv_devicefunc.cuh（干净）；两处计数错误已更正（21/32、6 次）；四条判定不同。
+- 第十九轮：
+  - zungbr 丢弃 zungqr2/zunglq 的 iinfo（故障注入 ⇒ info 0、误差 52 / 8.6）✔；
+  - zlascl_2x2 参数编号与 lddw ✔；
+  - zresidual 多右端只算第一个 ✔；
+  - zresidual 0×0 除零 ✖；zcsrsplit 未排序行 ✖。（两个测试都没有走到目标代码；第二十三轮重测均确认，见 §29.25）
+
+### 29.21 非 z 文件审计（同日；`operators/magma/NONZ_INVENTORY.md`）
+
+- 18 个写状态但不由 z 生成的文件（15 个在 z 调用链上，另 dlaln2、dlaqtrsd、dsidi）逐文件判定；dlaex*、dlaln2、dlaqtrsd 干净；新发现 10 条（见覆盖表 §3h）。
+- 第二十轮探针已写好并修正编译错误，但 **GPU 0 此时被用户的 ParaCOSM 作业占用（pid 3920111，23 GB、100%）**，按“只用空闲的 GPU 0”的规定没有运行；节点目录已删除。等 GPU 0 空闲后执行 `run_round20.sh`。（后已运行，见 §29.22）
+
+### 29.22 第二十轮（GPU 0 空闲后自动运行；`round20_*`；节点目录已删除）
+
+- 在 GPU 0 连续 3 分钟无进程、显存 < 500 MiB 后运行（`wait_and_run20.sh`），未影响用户的 ParaCOSM 作业。
+- ✔ #1 range V 特征向量错（残差 13.5、正交性 296，m 正确，info 0；1-stage 与 2-stage 都有）。
+- ✔ #3 adjust_ipiv 不做事（nb = 600：1200 个无效主元、残差 52.7）。
+- ✔ #4 分块 gesvj 零列 ⇒ U 非有限。
+- ✔ #7 区间闭合（11 vs 10）。
+- ✔ #9 范数未缩放（1e160 ⇒ S = Inf，1e-170 ⇒ U 非有限）。
+- #5 不确定（需要 LINPACK 格式的分解）。（第二十一轮已确认，见 §29.23；该判断有误）
+- Lean：`MagmaAudit.lean` 66 条；论文 Appendix A 3,772 行、304 条。
+
+### 29.23 第二十一轮：非 z 文件剩余的四条（同日；`fail_dsteqr.c`、`round21_*`；节点目录已删除）
+
+- #2 用 LD_PRELOAD 替换 LAPACK dsteqr_，令某一次调用报失败：块 1 与块 2 的第一个叶子失败都返回 info = 226，块偏移丢失 ✔。
+- #5 dsidi 按文档输入（LAPACK dsytrf 结果）逆矩阵错，连 SPD、无 2×2 主元也错（‖AX − I‖ = 0.131 / 1.16）✔；第二十轮“不确定”的判断有误。
+- #8 70000 个 64×64 的批量 gesvj：第 65534 个之后抽查的 47 个全错、info 0 ✔。
+- #10 dsort 遇 NaN 下标不是置换（一重复一缺失）✔。
+- #6 有害形式需 n > 53,500（45 GB），超出 V100 显存，无法触发。（判断有误：第二十四轮已触发，见 §29.26）
+- Lean：`MagmaAudit.lean` 70 条；论文 Appendix A 3,807 行、308 条。
+
+### 29.24 第二十二轮：独立复核余下的条目（同日；`fail_malloc_cpu.c`、`round22_*`；节点目录已删除）
+
+- zdiinertia 把 NaN 计为零特征值 ✔。
+- zmcsrcompressor 对不拥有数组的矩阵不做事、返回 0 ✔。
+- zmlumerge 第 4 次主机分配失败 ⇒ double free ✔（k = 4 的输出行因进程中止而丢失，由中止位置推断）。
+- nm：magma_zdiagcheck_cpu 有声明无定义；magmablas_zdiinertia、magma_zmlumerge 有定义无声明（第一次编译即因 zmlumerge 无声明而失败）。
+
+### 29.25 第二次复核（`operators/magma/reviews/2_SECOND_REVIEW.md`）与第二十三轮（`round23_*`）
+
+- 第二次复核：
+  - Lean 总数与论文一致；
+  - 第十五至二十一轮抽查数字全部一致；
+  - 约 18 处过时或矛盾的文字大部分已改，余下的由第三次复核找出并改正。
+- 第十九轮两条“未复现”的测试没有走到目标代码，第二十三轮重测：
+  - zresidual（A 0 行、b 4 行）⇒ SIGFPE ✔；
+  - zcsrsplit（bsize = 2、未排序行）⇒ 垃圾列号、`free(): invalid pointer` ✔。
+- zheinertia：第一次把主机 ipiv 传给内核，输出未写；改用设备 ipiv 重跑 ⇒ diag (1, −1, NaN, 2) 得 2/1/1，NaN 计为零 ✔。
+- Lean：`MagmaSparse.lean` 78 条、`MagmaAudit.lean` 71 条；论文 Appendix A 3,859 行、314 条。
+
+### 29.26 第二十四轮：#6 的 32 位尺寸溢出（同日；`round24_*`；节点目录已删除）与第三次复核（`operators/magma/reviews/3_THIRD_REVIEW.md`）
+
+- 直接调 `magma_zstedx_m(ngpu = 1)`：Z 放主机内存（节点 596 GB 可用），GPU 上只放分治工作区 3n(n/2+1)。
+  - n = 4000 对照正确。
+  - n = 38,000 ⇒ −12：zstedx_m 的 `lrwmin = 1 + 4n + 2n²` 在 32 位下为负，自己的检查因此通过；拒绝来自 dstedx_m（收到 lrwork − n² = 703,483,647，正确最小值 1,444,152,001）。真实需求 2.89e9 > INT_MAX，任何 32 位 lrwork 都不合法；这是正确报告的错误，GPU 工作区分配没有执行到。
+  - n = 53,600 ⇒ 段错误；路径上 dlaex0_m 工作区（回绕为 1.46e7 个 double）、rwork + n²、lrwork − n²、拷贝循环的 ldz·j 下标都溢出，崩溃原因未确定。
+  - （以上两条原因经第四次复核按源码更正）
+  - 先前“本机无法触发”的判断有误。Lean `dc_sizes_wrap`。
+- 第三次复核：第二次复核的更正大部分落实；指出的 17 处剩余问题（论文中一处插入位置错误、几处计数与前向指针缺失等）中 12 处改好；其余由第四次复核（`operators/magma/reviews/4_FOURTH_REVIEW.md`）找出后改正；round 22/23 数字与 Lean 总数一致。
+- Lean：`MagmaAudit.lean` 72 条、`MagmaSparse.lean` 78 条；论文 Appendix A 3,882 行、315 条（第四次复核后的 docstring 更正使行数增加）。
+
+### 29.27 仓库结构整理与形式化补充（2026-11-26）
+
+- **Lean 改为 Lake 包**：`lean/lakefile.lean`，`cd lean && lake build` 一次构建并检查全部 22 个模块（46 个任务，无警告）。各定理的公理输出合并为 `lean/logs/axioms.txt`，原先每个文件一份的 `check_log_*.txt` 和散落的 `.olean` 已删除，`.lake/` 加入 `.gitignore`。
+- **MAGMA 模块按主题拆分**（原来按审计轮次堆在两个大文件里）：`lean/OptimiKahan/Magma/` 下 `Fgmres`、`Fixed`、`DenseIR`、`MultiGpu`、`Kernels`、`Dense/{StatusAudit, QrEigen, FaultInjection, NonZ}`、`Sparse/{Solvers, Control, Blas}`。命名空间与定理名不变（`MagmaAudit.*`、`MagmaSparse.*`），拆分前后的定理集合逐一比对相同（150 条）。旧文件与小节到新模块的对照表在 `lean/OptimiKahan/README.md`。
+- **实验目录**：`experiments/magma_gpu/` 的 114 个文件分到 `probes/`、`scripts/`、`shims/`、`inputs/`、`results/`；`operators/` 的 MAGMA 文档移到 `operators/magma/`（复核报告在 `operators/magma/reviews/`，加了“路径为整理前布局”的说明）。当前文档中的路径已更新并逐个检查存在；本文件 §29.26 之前的记录保留原路径。
+- **形式化补充**：
+  - 先前没有 Lean 模型的 10 条 GPU 已确认发现全部补上：rbt_batched、hgetrf 补齐 GEMM、FP16 转换、getri_outofplace、两个缺失符号、zmdiagdom、zcsrcoo_transpose、gesvj 列范数；
+  - 对 38 条只证明了具体实例的定理补了对所有触发输入成立的一般形式（各模块末尾的 General forms，名字以 `_all` 等结尾），例如：
+    - vbatched 中所有面板偏移 ≥ my_minmn 的零主元都被清零；
+    - 通用带状 LU 的 info 只取决于最后一列；
+    - 任意前缀之后最后一个大块都会把 stedx 的 info 清零；
+    - 任意早期失败都被最后一个成功阶段覆盖；
+    - FGMRES 的粘住成功对任意多个普通循环成立。
+  - 覆盖表中所有 ✔ 行现在都有 Lean 定理。
+- 论文 Appendix A 重新按实际文件生成：4,261 行、355 条定理。
+
+
+### 29.28 第25轮：多GPU（ngpu=2，GPU 0+1）——结果未定，节点驱动挂死（2026-11-26）
+
+结果文件：`experiments/magma_gpu/results/round25_results.txt`（只跑完 potrf_m 和 getrf_m 两个模式）。
+
+| 例程 | ngpu=1 | ngpu=2 |
+|---|---|---|
+| zpotrf_m，HPD n=4000 | info=0，误差 3e-15 | **info=526，误差 63.2** |
+| zpotrf_m，A(101,101)=-1e6 | 101 | 101 |
+| zpotrf_m，A(3001,3001)=-1e6 | 3001 | **684** |
+| zgetrf_m，一般矩阵 | info=0，误差 1.6e-12 | **info=0，误差 inf，3543 个主元不同，用时 126 s** |
+| zgetrf_m，第 2501 列为 0 | **info=0**（LAPACK 2501） | **info=0** |
+
+- getrf_m ngpu=2 之后出现 `cudaGetLastError = unspecified launch failure`。随后 probe 进程（pid 10470）卡在 D 状态，kill -9 无效。节点上所有用户的 nvidia-smi 都挂住（驱动 580.178.04）。
+- **双卡结果的结论未定：**两个 ngpu=2 模式都出错，而且之后驱动挂死。这更像 GPU 1 或 GPU0↔GPU1 的 P2P 通路有硬件或驱动问题（GPU 2 已知有故障），而不一定是 MAGMA 的代码错误。没有建 Lean 模型，也没有写进 COVERAGE。
+- zgetrf_m 零列返回 info=0（单卡和双卡都是）**是已知的第 11 条**（`getrf_m_never_singular`）：函数末尾的 `magma_zgetrf_piv` 一开头就执行 `*info = 0`，跟 ngpu 无关，也跟 CUDA 上下文是否损坏无关，读码就能定。不是新发现。
+- 读码核对（zpotrf_m.cpp l.296–301、l.418–422；zpotrf3_mgpu.cpp l.553–556）：双卡 Cholesky 的 info 是 `J + j + 局部 info`，偏移正确，出错后也会 break。所以 684 和 526 都不是下标算错，而是在双卡计算中数据已经损坏，与 GPU 1 硬件故障或竞争条件的解释一致。zpotrf_m 的两卡之间经主机内存中转，不走 P2P，所以硬件方面首先怀疑 GPU 1 本身。
+- 要确认，至少需要：（a）驱动恢复后，只用 GPU 1 跑 ngpu=1，检查 GPU 1 本身；（b）用 `p2pBandwidthLatencyTest` 或 `cudaDeviceCanAccessPeer` 检查 P2P；（c）最好换一台干净的双卡机器重跑。
+- 节点上的 /ssd/haibin/magma_gpu 已删除，进程 10470 仍在 D 状态（需要管理员处理或重启）。
+
+### 29.29 HIP 专用分支读码（2026-11-26，GPU 不可用期间）
+
+- 范围：src、magmablas、sparse、control 中所有带 `MAGMA_HAVE_HIP` 的文件（126 个）。逐个看了 z 版本中与状态有关的分支：zpotrf_gpu、zgetf2_native、zgesv_rbt、xshgetrf/xhsgetrf、dxgesv_gmres、zgetf2_kernels（izamax 长路径）、zgbsv/zgbtrf 系列、zgesvj_batched_small_sm、zgetrf_batched_smallsq_noshfl、zgeqrf_batched_smallsq、zlaqps2_gpu、slag2h/hlag2s、zlanhe、稀疏库的 zilu、zcuspmm、zcuspaxpy 和 zfree。
+- 结论：除下面一条外，HIP 分支只是换成同名的 hipBLAS/hipSPARSE 调用或改线程数，状态逻辑和 CUDA 相同。izamax 长路径不写 info、ILU 只能查出结构零、cuspmm/cuspaxpy 不查状态，这些已登记的问题在 HIP 下同样成立。
+- **新发现：**`[sdcz]gesv_rbt.cpp` l.113–118，HIP 编译下参数检查之后执行 `refine = MagmaFalse`（作者注释 “TODO: investigate failures on AMD GPUs”）。调用者传 `refine = MagmaTrue` 不会报错，但 `zgerfs_nopiv_gpu` 不会运行，info 也不提示。不选主元的 RBT 解不精化时，CUDA 上测到相对误差 1.6e13（`dense_results.txt`）。
+- Lean：`Magma/Dense/QrEigen.lean` 的 `rbt_hip_refine_dropped`、`rbt_hip_refine_irrelevant_all`（HIP 下输出与 refine 无关，等于不精化的解）和 `rbt_cuda_refine_kept`。lake build 通过，没有 sorry，`logs/axioms.txt` 现为 320 行。论文 Appendix A 现为 4,280 行、358 条定理。
+- 证据：只有读码（没有 AMD 卡）。
+
+### 29.30 工作区大小（lwork）系统核对（2026-11-26，GPU 不可用期间；只有读码证据）
+
+- 范围：src/ 中所有带 lwork、lrwork 或 liwork 参数的 z 驱动，共 83 个。每个都比三样：查询返回值（Q）、检查接受的最小值（C）、代码和子调用实际需要的大小（U）。由一个子代理（内部又分 6 路）完成，最重要的几条主会话逐行核对过。
+- 已核对的新缺陷（Lean 定理都在 `Magma/Dense/Workspace.lean`，§32a–h）：
+  1. **zhegvdx_2stage(_m)**（l.308–319 → 内层 zheevdx_2stage l.283–297）：无向量时，自己的 Q = C = 5n + n·nb，内层要求 5n + 2·nb·n。对所有 n > 128，用自己查询得到的大小调用都会失败：potrf 和 hegst 已经改写了 A、B，然后返回内层的参数号 −14（外层 lwork 是第 17 个参数）。有向量时，恰在 n < 2·nb 时不足（nb = 128 时即 n ∈ [129, 255]）。MAGMA 自带的 testing_zhegvdx_2stage 用 `magma_zheevdx_getworksize` 的大小，所以测不出来。定理：`hegvdx_2stage_query_rejected(_all)`、`hegvdx_2stage_vec_short_iff`。
+  2. **zgesdd 路径 6to-slow**（l.2132–2145、2193）：chunk = (lwork − wrkbl)/m，留给 zungbr(P) 的只有 wrkbl − 2m + 余数，而 wrkbl 按 gebrd 的 nb = 32 算，zungbr(P) 需要 m·zgelqf_nb（min(m,n) ≥ 1024 时为 128m）。结果 zungbr 返回 −9，ierr 不读，右奇异向量错误而 info = 0。最小例子：m = 1024、n = 1087、jobz = O、lwork = 1,181,696（即最小值）。用查询值调用不会触发。定理：`gesdd_slow_ungbr_short_all`、`gesdd_6to_slow_instance`。
+  3. **zhetrd_he2hb_mgpu**：单卡版已知问题的多卡孪生，只查 lwork ≥ 1。lwork < nb² 时主机下溢；lwork = nb² − 1 时传给 zgeqrf 的是 −1，面板 QR 变成查询，静默不做。定理：`he2hb_mgpu_underrun_all`、`he2hb_mgpu_silent_query`。
+  4. **zgbtrf_native、zgbsv_native(_work)**：入口不把 `*info` 清零。调用者的 info 变量里残留上一次的非零值时，会直接返回这个旧值，不做分解。另外 zgbsv_native_work 用 −10 报 lwork 错误，但 lwork 是第 12 个参数。定理：`gbtrf_native_stale_info_all`、`gbsv_native_work_argnum`。
+  5. **查询问题**：zgeqlf 在 min(m,n) = 0 时查询返回 1，但检查要求 max(1, n, 2nb²)；zgbtrf_batched 的快速返回在查询之前，lwork = −1 原样返回；zhegvr 只把 lwork = −1 当作查询（文档说 lrwork、liwork 为 −1 也算）。定理：`geqlf_query_rejected_all`、`gbtrf_batched_query_unanswered`、`hegvr_lrwork_query_ignored`。
+  6. **文档最小值被拒**：10 个例程（zgesvd、zgesdd、zgehrd_m、zungbr(P)、zheevx、zheevr、zhegvx、zhegvr、zstedx、zhegvdx_2stage）按文档给的最小值分配会得到负 info。定理：`doc_minimum_rejected_all`。
+- 疑似、未建模：zgbtrf_native_work 在 ILP64 编译下，info 槽位于 device_work + 4 字节，8 字节写不对齐；zungtr 的反射向量移位循环与 LAPACK 相比差一（但没有调用者）。
+- 已知 5 条（geqp3、gels、he2hb、ggrqf、geqrf_ooc）重新核对仍然成立。其余文件都是干净的，Q ≥ C ≥ U。
+- 已登记的 info 丢失问题在这次核对中再次出现：zunmtr_m 的 NOT_IMPLEMENTED、heevdx_2stage 的 stedx info、gesvd 和 gesdd 从不读 ierr。
+- Lean：`lake build` 通过（48 个任务），`logs/axioms.txt` 336 行，没有 sorryAx。论文 Appendix A 现为 4,490 行、374 条定理。`lean/OptimiKahan/README.md` 模块表已加入 Workspace。
+- **GPU 待办**（驱动恢复后，只用 GPU 0）：第 1、2 条最值得实测。第 1 条：n = 129，jobz = N，lwork 取查询值，预期 info = −14，A、B 已改。第 2 条：m = 1024，n = 1087，jobz = O，lwork 取最小值，预期 info = 0、VT 错误。
+
+### 29.31 两条疑似项的核实（2026-11-26，同日；CPU 与读码）
+
+- **zungtr 移位循环（已确认）**：`[sdcz]ungtr.cpp` l.140–151（上三角）、l.160–170（下三角），与 LAPACK ZUNGTR 对比如下：
+  - 上三角：内层 `i < j-1`，LAPACK 换成 0 起下标是 `i < j`，所以每列漏移 A(j−1, j)。
+  - 下三角：内层从 `i = j` 到 `n−2`，LAPACK 是 `j+1` 到 `n−1`，所以对角被改写、末行不移。
+  - 第一列：只清零到 `n−2`，A(n−1, 0) 留着旧值。
+  - 该函数导出，但不在公开头文件中，库内没有调用者（zheevx 等调用的是 `lapackf77_zungtr`）。
+  - CPU 核对：`experiments/magma_dense/orgtr_shift.c` 照抄 d 版循环，再接参考 LAPACK 的 dorgql/dorgqr。下三角路径在 MAGMA 里用 GPU 的 magma_dorgqr，这里用 LAPACK dorgqr 代替，在精确算术下得到同一个 Q。结果见 `orgtr_shift_results.txt`：
+    - n = 3、4、8、50，上下三角得到的 Q 都不正交。n = 50 时上三角 ‖QᵀQ − I‖ = 9.2e19、下三角 1.8；LAPACK 为 1e-15。
+    - 对照组（同一代码改成 LAPACK 的边界）与 LAPACK 的差恰为 0，说明测试本身没写错。
+  - Lean：`ungtr_upper_shift_short`、`ungtr_lower_shift_wrong`、`ungtr_first_col_stale`（`Magma/Dense/QrEigen.lean`）。
+  - 上三角路径不经过 GPU，以后可以在节点上通过 extern 声明直接调用库本身来确认。
+- **ILP64 info 不对齐（读码确认）**：
+  - zgbtrf_batched.cpp l.157–158 的通用工作区是 `batchCount·sizeof(int)` 字节；zgbtrf_gpu.cpp l.66 的 device_info 紧随其后。native 版 batchCount = 1，所以 device_info 位于 4 字节处。
+  - ILP64 下内核对 `info_array[0]` 做 8 字节写，地址不对齐；LP64（默认，也是节点上的编译）不受影响。
+  - Lean：`gbtrf_native_info_misaligned_ilp64`、`gbtrf_info_alignment_all`。
+- Lean 总计：`logs/axioms.txt` 341 行，没有 sorryAx；论文 Appendix A 现为 4,539 行、379 条定理。
+
+### 29.32 全库扫描：先读后写 `*info` 的函数（2026-11-26，读码）
+
+- 脚本：`experiments/magma_gpu/scripts/info_init_scan.py`。扫描 src 和 magmablas 中所有带 `magma_int_t *info` 参数的函数：去掉注释后，找出读 `*info`（`!=`、`==`、`<`、`if (*info)`、`return *info`）早于任何 `*info = 0` 的函数。共命中 52 个（含 s/c/d 生成的副本）。
+- 逐个核对后：
+  - **真问题，已知：**zgbtrf_native(_work)、zgbsv_native(_work)，即 §29.30 第 4 条，`gbtrf_native_stale_info_all`。
+  - **新的小问题：**magma_zhtodpo、zdtohpo（zpotrf3_mgpu.cpp）和 zhtodhe（zhetrd_mgpu.cpp）在公开头文件 magmablas_z.h 中声明，但从不写 `*info`，却以 `return *info` 结尾。库内调用者都传一个临时 iinfo 并忽略它，所以 MAGMA 自己的驱动不受影响，外部调用者会拿回旧值。Lean：`MagmaMultiGpu.htod_returns_caller_value_all`。
+  - **误报：**其余都是包装函数，info 由被调用的 expert 或底层函数先清零：zgetrf_gpu(_expert)、zgetrf_native、zpotrf、shpotrf_gpu/native、hgetrf/htgetrf、ds/dhgesv_iteref、dlaex3_m 的单卡分支。
+- 结论：“入口不清零 info”这一类在整个库里只有 gb*_native 四个函数是真问题。
+- Lean：`logs/axioms.txt` 342 行，没有 sorryAx。
+
+### 29.33 全库扫描：参数号报错（2026-11-26，读码）
+
+- 脚本：`experiments/magma_gpu/scripts/argnum_scan.py`。它对 src、magmablas、sparse 中的 z 文件做两件事：
+  - 只保留 `#ifdef COMPLEX` 的复数分支，再取出每个 `if (cond) info = -k;` 中条件里第一个出现的参数名。
+  - 以每个函数自己最常见的偏移量（k − 位置）作为它的编号惯例，例如 _m 版本统一跳过开头的 ngpu；只报告与惯例不一致的检查。
+- 扫描结果去掉 `vu <= vl` 这类条件主体误判后剩 65 处。逐个函数对照签名核对（对照表由 `scripts/argnum_review.py` 生成），确认了 **58 处检查、33 个例程**真有错（Lean 表 `argnumTable`）：
+  - 广义特征值 zhegvx、zhegvr、zhegvdx、zhegvdx_2stage（及 _m）：JOBZ 和 RANGE 的错误码对调。LAPACK 是 JOBZ −2、RANGE −3。
+  - zcposv_gpu、zchesv_gpu、zgerfs_nopiv_gpu：前几个参数按少一个参数的签名编号，后几个又是对的，同一函数内不一致。
+  - 批量与面板例程（zgesv_batched、zgetrs_nopiv_batched、zgeqrf_expert_batched、zgetrf_recpanel_batched、6 个 zgeqr2*_batched、zgesvj/zheevj 批量、zpotrf_lpout/lpin_batched、zpotrf_expert_batched）：插入 Ai/Aj、nb、批量数组之后没有重新编号。
+  - zhetrd_he2hb(_mgpu)、zlahr2、zlatrd、zpotrf3_mgpu、zgetrf2_mgpu、zgetrf_piv、zpotrf_rectile_native、zunmqr_2stage_gpu、zlarft_internal_batched、gbtrf_batched_work、sliding_window_loopout、gbsv_native_work。
+  - 误报：zlarfb_gpu 全部正确；zgeqrs3_gpu 已登记（`geqrs3_argnums_wrong`）。
+- **另一个新发现：**zcposv_gpu 和 zchesv_gpu 完全不检查 uplo。非法 uplo 传下去后，zlanhe 先报一次错，zlat2c 返回 −1，驱动把它当作精度转换失败，设 iter = −2，再由 FP64 回退的 zpotrf_gpu 返回 −1。所以 info 恰好正确，但 iter 报错了原因。Lean：`cposv_bad_uplo_reported_as_conversion`。
+- 影响：只影响错误信息和负 info 值，调用者按编号查参数会被指错。不影响数值结果。
+- Lean：新模块 `Magma/Dense/ArgChecks.lean`（4 条定理）；`lake build` 通过（50 个任务），`logs/axioms.txt` 346 行，没有 sorryAx；论文 Appendix A 现为 4,636 行、384 条定理。
+
+### 29.34 全库扫描：子调用状态从不读取（2026-11-26，读码；结论为无新问题）
+
+- 脚本：`experiments/magma_gpu/scripts/dropped_status_scan.py`。找出把局部状态变量（iinfo、ierr、linfo 等）的地址传给子调用、自己却从不读它的函数。
+- src 的 z 文件命中 40 个函数；magmablas、sparse、混合精度文件（zc*、ds*、x*、sh*、dx*）没有命中（src 里另有 d 版副本）。逐类归入已有条目：
+  - gesvd、gesdd、geev(_m) 不读 ierr：§29.30 第 19 条，以及 `gesdd_slow_ungbr_short_all`（唯一能在正常输入下触发的一处）。
+  - heevd/heevdx/heevr/heevx 系列丢弃 zhetrd、zunmtr 的 iinfo：属于 §3d 和 `hetrd_failure_reaches_dlascl`、`helper_iinfo_dropped`。按 §29.30 的核对，传入的 lwork 都够，所以只可能是分配失败。
+  - unm*/ung*（unmqr、unmlq、unmql、unmrq、unmtr、unmbr、ungbr、unghr、ungqr_gpu、ungtr）丢弃 iinfo：`helper_iinfo_dropped` 一类。unmtr_m 的 NOT_IMPLEMENTED 已单独登记为 `unmtr_m_not_implemented_lost`。
+  - gebrd、gehrd(2/_m)、hetrd(2_gpu/_gpu/_mgpu)、geqlf 丢弃小矩阵 LAPACK 回退的 iinfo：这些 LAPACK 调用只会报参数错误，而参数已由 MAGMA 先检查过，所以不可触发。
+  - hetrf_nopiv(_gpu)、sytrf_nopiv_gpu 丢弃 zlascl_diag 的 iinfo：它只报参数错误；这些例程的零主元问题已登记为 `last_pivot_untested`、`nopiv_info_wrong`。
+  - zlahef_gpu（l.320、l.608）：丢弃 `magmablas_zlascl_2x2` 的 iinfo。该函数只报参数错误，已登记为 `lascl2x2_args`（ldda 报 −4、lddw 不检查）。
+- 结论：这一类没有新缺陷，已有条目覆盖了全部可触发的情况。没有新增 Lean。
+
+### 29.35 独立复核 §29.29–§29.33 的读码结论（2026-11-26）
+
+- 交给一个新的子代理反驳式复核：给它源码路径和 11 条结论，要求它尽量推翻；它没有编译或运行 MAGMA，也没有改文件。**11 条全部确认，没有被推翻的**：HIP 下 rbt 关闭精化、zhegvdx_2stage、zgesdd 6to-slow、he2hb_mgpu、gb*_native 不清零 info、zgeqlf 查询、zungtr、ILP64 不对齐、jobz/range 对调、zcposv_gpu 不检查 uplo，以及抽查的 8 条参数号。
+- 它独立重算的数字与我们一致：zgesdd 的 wrkbl = 69,600、minwrk = 1,181,696、chunk = 1086、lnwork = 67,584、zungbr(P) 需要 131,072；zhegvdx_2stage 在 n = 129 时 8,901 对 17,157。
+- 复核补充的细节，已写进 Lean 或文档：
+  - **he2hb 的查询值本身也不安全**：单卡和多卡都只在 n = 0 时提前返回，查询返回 n·nb，而 hT 的 memset 需要 nb²。所以 0 < n < nb 时，用自己报告的大小调用也会写到缓冲区之前。Lean：`he2hb_query_underrun_all`。
+  - **zhegvdx_2stage 的实数版更差**：dsygvdx_2stage 无向量时最小值是 2n + n·nb，没有第二阶段那一项（文档却写 LQ2 + 2N + N·NB），内层要求 6n + 2·nb·n，缺 4n + nb·n。Lean：`sygvdx_2stage_real_short_all`。有向量时的缺口只在 nb = 128（arch ≥ 300 且线程数 > 14）、n ∈ [129, 255] 时出现。
+  - zcposv_gpu 遇到非法 uplo 时，zlanhe 返回 −2.0 作为范数，不会崩溃；zlag2c 在 zlat2c 之前运行且没有 uplo 参数。
+  - 参数号：zheevj 批量版和 zgeqr2 批量版的错误号与文档注释的参数表一致（文档漏列了 batch_mask/num_sweeps/max_sweeps、Ai/Aj/taui），与 C 签名不一致；zpotrf3_mgpu 的编号既不符合签名也不符合文档。
+  - magma_zungtr 编译进库并导出（Makefile.gen.cuda），只在 docs/html 里出现，没有声明，也没有测试。
+- Lean：`lake build` 通过，`logs/axioms.txt` 348 行，没有 sorryAx；论文 Appendix A 现为 4,657 行、386 条定理。
+
+### 29.36 全库扫描：工作区公式的 32 位溢出（2026-11-26，读码）
+
+- 脚本：`experiments/magma_gpu/scripts/wrap32_scan.py`。提取 src 的 z 文件中所有含两个尺寸变量乘积的工作区表达式（lwmin、lrwmin、lwkopt、minwrk 等），按 m = n、nb = 64 求出它首次超过 INT_MAX 的 n。共 30 处，全部集中在分治特征值驱动：
+  - heevd、heevdx、heevdx_2stage、hegvd、hegvdx、hegvdx_2stage 及其 _gpu、_m 版本，共 14 个驱动（另有 zstedx、zstedx_m 两处）。
+  - `lrwmin = 1 + 5n + 2n²` 从 n = 32767 起溢出；`lwmin = max(n + n·nb, 2n + n²)` 从 n = 46340 起溢出。zstedx(_m) 的 `1 + 4n + 2n²` 从 n = 32768 起溢出。
+- 溢出后的链路（以 zheevd 为例，zheevd.cpp l.211–226、293、331；zstedx.cpp l.181–218；dstedx.cpp l.191–199）：
+  - n ∈ [32767, 46339] 时 lrwmin 为负，`lrwork < lrwmin` 永不成立，任何 lrwork 都被接受。查询写入 rwork[0] 的也是负数。
+  - 真实需求 1 + 5n + 2n² > INT_MAX，所以 32 位下没有任何合法的 lrwork。
+  - 往下 zhetrd 先改写 A；zstedx 的 lrwmin 在 n ≥ 32768 时同样为负并放行（n = 32767 时恰为 INT_MAX，则由它自己拒绝）；最后 magma_dstedx 的 `1 + 4n + n²` 未溢出，以 −12 拒绝。zheevd 直接返回这个 −12，而在 zheevd 的编号里 −12 是 liwork。
+  - 另外 `3n(n/2 + 1)` 的设备工作区在 n ≥ 37838 时溢出（已有 `dcWork`）。
+- 这推广了第 24 轮在 zstedx_m、n = 38,000 上实测的结果（§29.26）。单卡路径同样适用：n = 32767 的复数矩阵约 17 GB，可以放进 32 GB 的 V100，驱动恢复后可在 GPU 0 上实测。
+- Lean：`heevd_lrwmin_wraps_all`（对整个区间：最小值为负、任何 lrwork ≥ 0 都被接受、真实需求 > INT_MAX）和 `heevd_lrwmin_instance`，在 `Magma/Dense/NonZ.lean` §31b。`lake build` 通过，`logs/axioms.txt` 350 行，没有 sorryAx；论文 Appendix A 现为 4,687 行、388 条定理。
+
+### 29.37 编译宏包住的状态检查：CHECK_INFO 编译不了（2026-11-26，CPU 预处理确认）
+
+- 在 src、magmablas、sparse 的 z 文件里搜索被 `#ifdef CHECK*/DEBUG*/VERIFY*` 包住的状态检查。除计时和调试打印外，只有 4 个批量求解器的 CHECK_INFO：zposv_batched、zgesv_batched、zgesv_nopiv_batched、zgesv_rbt_batched。
+- 这个选项打开后，会把每个矩阵的失败码作为返回值报出；默认编译下返回值只反映参数错误，逐矩阵 info 留在设备数组里。已核对后续 getrs（包括 getrs_nopiv_batched）不覆盖这个数组，所以默认行为符合批量接口的约定。
+- **新发现：**这个选项在 4 个里有 3 个编译不了：
+  - zposv_batched.cpp l.129、zgesv_batched.cpp l.139、zgesv_nopiv_batched.cpp l.125 调用 7 参数宏 `magma_getvector`（include/magma_copy.h l.29）时只给了 6 个参数，漏了 queue；
+  - zgesv_nopiv_batched 还引用了未声明的 `dinfo_array`（它的参数名叫 `info_array`）。
+  - 只有 zgesv_rbt_batched 传了 queue。
+- CPU 确认：`experiments/magma_dense/check_info_pp.c` 把宏定义和 4 行调用原样复制出来，运行 `cc -E`，恰好这 3 行报 “too few arguments provided to function-like macro invocation”（`check_info_pp_results.txt`）。
+- Lean：`check_info_build_broken`（`Magma/Dense/QrEigen.lean`，放在 `rbt_batched_default_build_silent` 之后）。`lake build` 通过，`logs/axioms.txt` 351 行，没有 sorryAx；论文 Appendix A 现为 4,703 行、389 条定理。
+
+### 29.38 全库扫描：网格 y/z 维由批量数决定的内核启动（2026-11-26，读码）
+
+- 在 magmablas 的 z 文件里搜索 `dim3 grid(…, batchCount/ibatch …)`。共 23 处，其中 22 处用的是分块后的 ibatch（不超过 max_batchCount = 65534）或 x 维，只有一处直接使用 batchCount：**zgbtf2_kernels.cu l.59–71 的 `magma_zgbtrf_set_fillin`，`dim3 grid(nblocks, 1, batchCount)`**。
+- 调用路径：zgbtrf_batched.cpp l.215，即 `magma_zgbtrf_batched_work` 的通用（非分块）实现。
+  - strided 接口按 65534 分块，所以不受影响。
+  - 指针数组接口 `magma_zgbtrf_batched`（l.405–455）把完整的 batchCount 直接传进 `_work`。
+- 进入通用路径的条件：fused（只在 minmn ≤ 64 时尝试，共享内存 sldab·n·16）和 sliding-window（sldab·(nb+kv+1)·16，sldab = 2kl+ku+2）两种实现都超出共享内存上限。例如 V100 上 kl = ku = 32、m = n = 100：98·66·16 = 103,488 > 98,304，nb = 1 时就已超出。
+- 后果：batchCount ≥ 65536 时 gridDim.z 超过 CUDA 上限 65535，启动失败，但没有人检查。ju_array（未初始化的设备工作区）从未写入，填充元也没有清零，后续的交换和更新就用未初始化的 ju 继续进行。
+- 实测可行：每个矩阵 97·100·16 B ≈ 155 KB，65,536 个约 10 GB，能放进 V100。驱动恢复后可在 GPU 0 上测。
+- Lean：`set_fillin_launch_invalid_all`、`gbtrf_generic_path_reached`（`Magma/Kernels.lean` §30b）。`lake build` 通过，`logs/axioms.txt` 353 行，没有 sorryAx；论文 Appendix A 现为 4,729 行、391 条定理。
+
+### 29.39 内核中的 32 位偏移：magmablas_zlacpy（2026-11-26，读码；可能是一大类）
+
+- zlacpy.cu l.36–62 的内核参数是 `int m, int n, int ldda`，`dA += ind + iby*ldda` 按 int 计算，其中 iby = blockIdx.y·64。
+- 宿主端（l.350–402）按 super_NB = max_blocks·64 = 65535·64 = 4,194,240 列分块，再在宿主端算好每块的起始指针。这个分块限制的是网格大小，不限制 `iby·ldda`：对任何实际的 n，块内 iby 都能达到 n − 64。所以一旦（列下标 × ldda）超过 INT_MAX，偏移量就会回绕。也就是说，元素数超过 2³¹ 的矩阵会在矩阵之前的位置读写。
+  - 例子：m = n = ldda = 50,000，最后一个块列 iby = 49,984，真实偏移 2,499,200,000，32 位下为负。单精度每份矩阵 10 GB，两份 20 GB，可以放进 V100。
+- ILP64 编译（`magma_int_t` 为 64 位，本来就是为大矩阵准备的）同样有这个问题，因为内核参数仍是 int。make.inc 示例和 README 都没有说明这一限制。
+- 范围：z 内核共有 203 处 `int lda/ldda` 参数，很可能多数有同样的写法，但**只逐行核对了 lacpy**，其余未逐个核实。这一类不属于状态逻辑，而是大矩阵下的静默数据错误或非法访问。
+- Lean：`lacpy_offset_wraps`、`lacpy_offset_negative_all`（`Magma/Dense/NonZ.lean` §31c）。`lake build` 通过，`logs/axioms.txt` 355 行，没有 sorryAx；论文 Appendix A 现为 4,754 行、393 条定理。
+- GPU 待办：在 GPU 0 上对 50000×50000 的 float 矩阵调用 magmablas_slacpy（需要约 20 GB 空闲显存），与主机拷贝比较。
+
+### 29.40 magmablas 全部 z 内核的 32 位偏移核对（2026-11-26，子代理读码 + 主会话抽查）
+
+- 子代理逐个读了全部 123 个 magmablas/z*.cu 及其包含的 .cuh 模板，分类如下：
+  - **WRAPS 89 个**：48 个非批量，34 个只在批量下（单个矩阵须超过 2³¹ 个元素），7 个用 magma_int_t 相乘（只在 LP64 下回绕）。
+  - **SAFE-64 4 个**：ztranspose、ztranspose_inplace、zhemv_mgpu、zgemv_conj；另外 zlaswp.cu 里的主 zlaswp_kernel 也是安全的。
+  - **BOUNDED 6 个**，**NOT-APPLICABLE 24 个**。
+  - 阈值：方阵在 n ≈ 46,341 附近首次溢出；zgerbt 因为把列下标分成两半，约为 65,536；zswapblk 的 unsigned 偏移在 65,536 时回绕。
+- 主会话抽查：lacpy（§29.39）、laset（`A += ind + iby*lda`）、gemm 模板（`LDB*(N-1) + K`、`by*BLK_N*LDB` 按 int 算后才赋给 ptrdiff_t）、laswp_columnserial（`dA[i1*lda + tid]`），都与报告一致。
+- 对大型稠密分解的影响：
+  - `magma_[sdcz]getrf_gpu`（默认 hybrid）只经过 64 位安全的 transpose 和 laswp 内核，其余是 cuBLAS，宿主端宏用 size_t，所以不受影响。
+  - `magma_*getrf_native`（未定义 SWP_CHUNK）经过 laswp_columnserial，lda = 50,000 时 i1 ≥ 42,950 回绕。Lean：`getrf_native_laswp_wraps`。
+  - **`magma_*potrf_gpu`**：不调用 magmablas 内核，但宿主端宏 `dA(i,j) = dA + i + j*ldda`（zpotrf_gpu.cpp l.145、zpotrf_panel_native.cpp l.105）在 LP64 下按 32 位相乘，而 zgetrf_gpu.cpp l.191 用了 `(size_t)`。n = ldda = 50,000 时，j ≥ 42,950 的列指针回绕后才交给 cuBLAS。Lean：`potrf_gpu_host_offset_wraps`。
+- 顺带发现的两个与偏移无关的缺陷（都已读码核实；两个都是公开函数，库内没有调用者）：
+  - `magmablas_ztranspose_batched_stride`（ztranspose.cu l.318–328）：按 65,534 分块时传的是 `dA_array + i`，应为 `+ i*stride`，所以批量超过 65,534 时第二块起全部错位。内核里 `blockIdx.z*stride` 也是 int。Lean：`transpose_stride_chunk_wrong_all`。
+  - `magmablas_zswapblk`（zswapblk.cu l.19、l.105）：主元目标存为 `short ipiv[]`，距块起点超过 32,767 行就截断。Lean：`swapblk_short_truncates`。
+- Lean：`Magma/Dense/NonZ.lean` §31d（5 条）；`lake build` 通过，`logs/axioms.txt` 360 行，没有 sorryAx；论文 Appendix A 现为 4,800 行、398 条定理。
+- GPU 待办：potrf_gpu 与 getrf_native 在 n = 50,000 单精度时的实测（每份约 10 GB，只能在 eightsocket 上做）。
+
+### 29.41 roxy 上的 MAGMA 环境与第 26 轮（2026-11-26，用户授权“在roxy上装环境”）
+
+- **环境**（除 MSVC 外都在 `D:\lean4hpc` 下；原有 venv 未动；显卡驱动未动）：
+  - 系统级只装了 MSVC Build Tools 2022（14.44，VC 工具集 + Windows 11 SDK），通过 winget 安装在 C:。
+  - `D:\lean4hpc\magma_env`：新建的 venv，内含 PyPI 的 NVIDIA wheel（nvcc/cicc/ptxas 13.5.37、cudart 13.5、cublas 13.10、cusparse 12.9、cccl、profiler-api）以及 cmake 4.4、ninja 1.13。wheel 里没有 cublas/cublasLt/cusparse 的 .lib，用 dumpbin + lib 从 DLL 生成（`D:\lean4hpc\magma\mkimplib.bat`）。
+  - OpenBLAS 0.3.34 x64（LP64，GitHub release，SHA256 E9CB6134…）解压在 `D:\lean4hpc\openblas`。
+  - MAGMA 2.10.0（SHA256 与 `inputs/tarball.sha256` 一致）用 CMake + Ninja 编译：静态库，USE_FORTRAN=OFF，-DADD_，GPU_TARGET=sm_120，`-j 8`（`build_magma_roxy.bat`）。稠密库 magma.lib 402 MB；稀疏库第一次因缺 `cuda_profiler_api.h` 失败，装上 profiler-api wheel 后重编。
+  - 测试程序用 `build_probe.bat <name>` 编译（cl /openmp，链接 magma.lib、cudart、cublas、cublasLt、cusparse、libopenblas），用 `run_probe.bat` 运行（把 DLL 目录加入 PATH）。
+  - 长任务用 WMI（`Invoke-CimMethod Win32_Process Create`）启动，不受 ssh 会话影响。
+- **限制**：RTX 5070 Ti 有 16 GB 显存，但用户的桌面程序占用 7–12 GB，实际空闲 4–9 GB；FP64 吞吐低；只有一张卡。所以 n ≥ 32767 的 zheevd 溢出、50000² 的 lacpy/potrf 偏移、多卡问题仍要在 eightsocket 上测。
+- **第 26 轮结果**（`probes/round26_probe.cpp`、`results/round26_results.txt`），全部与读码预测一致：
+  1. zhegvdx_2stage：nb = 128（16 线程）。n = 129、200 按自身查询值调用返回 −14，A、B 已改写；按 5n + 2·nb·n 调用正常；n = 128 走 LAPACK，正常。
+  2. zgesdd 6to-slow：二分得到最小可接受 lwork = 1,181,696（与读码一致）；按它调用时 zungbr 报 −9，info = 0，‖VT·VTᴴ − I‖ = 400；快路径 5.5e-15。
+  3. magma_zungtr 上三角（通过 extern 声明调用库本身）：n = 8 时 ‖Q − Q_LAPACK‖ = 2.71，n = 50 时 1.65e15，正交误差 6.1e30。
+  4. zgbtrf_native：info 残留 7 时返回 7，带状矩阵未改。
+  5. 参数号：zhegvx 非法 jobz 报 −3、非法 range 报 −2（对调）；zgesv_batched 的 lddb 报 −6、zgetrs_nopiv_batched 报 −8（实为第 7 个参数）。另外，lwork 不足（64n < 65n）时 zhegvx 报 −20，覆盖了 jobz/range 的错误码。
+  6. zcposv_gpu 非法 uplo：iter = −2、info = −1，依次打印 zlanhe −2、zlat2c −1、zpotrf_gpu −1。
+  7. zhetrd_he2hb（单卡）n = 16、nb = 32：查询值 512，work 之前恰好被写 512 个元素。
+  8. zgeqlf：m = 0、n = 5 和 m = 7、n = 0 时查询返回 1，按它调用得 −7。
+  9. zgbtrf_batched（指针数组接口，kl = ku = 32，m = n = 65）：空闲显存不够放 65536 个独立矩阵，改用 65536 个指针别名到 1024 个矩阵。batchCount = 65536 时内核启动报 “invalid argument”，函数返回 0；65535 时无错。数值结果因为别名而没有比对。
+- COVERAGE 中这 9 行的证据已改为 “✔ roxy 第 26 轮”。
+
+### 29.42 第 27 轮：稠密算子的差分扫描、追查与缺陷分布分析（2026-11-26，roxy；用户要求“多测库里大部分算子、多找 bug、研究 bug 主要出现在哪”）
+
+- **扫描**：`probes/round27_sweep.cpp`，11 个算子组，每组一个进程。用 `scripts/roxy/run_sweep.bat` 运行，结果在 `results/round27_sweep/*.csv`，共 **17,327 个用例**。
+  - 每个用例都与 OpenBLAS 0.3.34 的 LAPACK 比较 info，并计算 LAPACK 测试程序式的归一化残差。
+  - 尺寸：0–3、7，块边界 31/32/33、63/64/65、127/128/129、255/256/257，513，以及长方形。
+  - 输入：随机；零列分别在第一列、中间、最后一列；零矩阵；×2^±500 缩放；重复列；NaN；Inf。Hermitian 和正定矩阵另有不定、单位阵等类型。
+  - 覆盖：getrf（4 种）、potrf（3 种）、geqrf（3 种）、gelqf（2 种）、geqlf、geqp3、gesv、posv（各 2 种）、hesv、gels（2 种）、getri_gpu、potri（2 种）、trtri（2 种）、heevd（CPU 和 GPU）、heevdx、heevdx_2stage、heevr、heevx、hegvd、geev、gesvd、gesdd、gebrd、hetrd、magmablas 的 gemm/gemv/hemv/lange/lanhe/lacpy/laset/lascl/geadd/transpose，以及批量的 getrf、getri、potrf、geqrf。
+- **分诊**：逐类核对，结论见 `results/round27_sweep/TRIAGE.md`。汇总脚本是 `scripts/sweep_summary.py`。
+  - 测试程序误报：info > 0 之后去比较残留内容；zgeqrf_gpu 把 R 的对角块存在 dT 里；geqlf 和 heevdx_2stage 给的 lwork 不够；QR 组把 LAPACK 输出的有限性硬写成 true。
+  - 不是缺陷：nopiv 不稳定；输入含 NaN 时的状态和内容；舍入导致的精确零主元差异；gebrd 在秩亏时双对角形式不唯一。
+- **追查与新缺陷**（`probes/round27_focus.cpp`，结果见 `results/round27_focus_results.txt`；Lean 在 `Magma/Dense/Differential.lean`）：
+  1. **zgeqp3（重大，读码一直没发现）**：秩亏矩阵上 A·P ≠ Q·R，残差 1–6，info = 0，而且秩没被揭示（|R(n−1,n−1)| = 0.1–0.27，LAPACK 为 1e−16）。重复列在 n = 63/65/128/255/256 出错；随机秩 n/2 矩阵在 78 例中有 18 例出错。
+     - 根因 1：zlaqps.cpp 第 171–201 行，主元列在面板外时，交换完只把第 pvt 列 offset+nb 以下的行送回 GPU；面板内交换时 GPU 副本完全不动。面板因为需要重算范数而提前结束时（kb < nb），offset+kb..offset+nb−1 这几行仍留在设备的尾部矩阵里，下一个面板会读到过时数据。
+     - 根因 2：第 363–384 行重算范数时，用的是没有经过尾部 GEMM 更新的主机数据；而且主机和设备两部分的行区间各差一行（第 376 行被注释掉的设备 dznrm2 才是正确写法）。
+     - 验证方法：复制并修改 zlaqps.cpp（`probes/zlaqps_patched.cpp` 只修根因 1，`zlaqps_patched2.cpp` 两个都修），和测试程序一起链接，以覆盖库里的 magma_zlaqps，库本身不改。只修根因 1 时 AP = QR 恢复，但秩仍没被揭示；两个都修后 78 例中 0 例出错，|R(n−1,n−1)| 也恢复到 1e−16。
+  2. **magmablas_zgemm 在 k = 0 时**（zgemm.cu l.249）直接返回，不执行 C := beta·C：beta = 0.5 时 C 不变，beta = 0 时 NaN 留在 C 里。
+  3. **magmablas_zgemv / zhemv**：beta = 0 时仍然计算 beta·y（gemv_template_device.cuh l.81/107/209、zhemv.cu l.468），y 里的 NaN 会传播，这违反了它们自己文档写的 “Y need not be set”。
+  4. **magma_zgels / zgels_gpu**：遇到零列或零矩阵时返回 NaN 解，info = 0；LAPACK 报 info = i，零矩阵则给零解。MAGMA 文档只承诺 info ≤ 0，所以这是一处与 LAPACK 语义的偏离。
+  5. **zheevdx / zheevdx_2stage**：n = 1 的快速返回不设置 mout（第 300–306 行）。
+  6. **GPU 接口的小矩阵路径以 lda = n 调用 LAPACK**，所以 n = 0 被拒绝：zheevd_gpu 报 −5，zheevdx_gpu/zheevr_gpu/zheevx_gpu 报 −6，ztrtri_gpu 报 −5，zpotrf_mgpu 报 −4。zpotrf_gpu 有提前返回，所以正常，可作对照。
+  7. **zgetrf_native**：遇到 NaN/Inf 时报 info > 0，而 hybrid 版和 LAPACK 报 0。严重度低。
+  - 已知缺陷在新硬件上复现：ztrtri_gpu 的分块 info（n = 257、513）。
+  - 未能复现：zheevd_gpu(N) 在 herm_big、n = 129 上出过一次错（比值 3.8e16），用相同输入和工作区重复 30 次都正确，不登记。
+  - 不属于 MAGMA 的问题：OpenBLAS 0.3.34 自带的 LAPACK 中，zgesvd/zgesdd 在要求向量时会在 3×3、含 Inf 的矩阵上卡死；MAGMA 的小矩阵路径会继承这个问题（`results/round27_sweep/svd_inf_hang.txt`）。因此 SVD 组去掉 Inf 输入后重跑。
+- **缺陷分布分析**：`operators/magma/FINDINGS.csv`（238 条；子代理整理，主会话抽查 8 行并补了第 27 轮的 8 行）、`operators/magma/findings_stats.py`、`operators/magma/BUG_DISTRIBUTION_zh.md`。要点：
+  - 状态管道占 48%，数值结果错误占 27%，内存与尺寸算术占 22%；静默错误结果占 52%。
+  - 62% 的缺陷需要离开主路径才会触发。
+  - 缺陷密度：magmablas 内核 0.48/千行，稠密驱动 1.7，稀疏库 2.2–2.8，混合精度与迭代精化 8.4（存在关注度偏差）。
+  - 反复出现的 7 种机制见报告第 5 节。
+- Lean：`lake build` 通过（52 个任务），`logs/axioms.txt` 368 行，没有 sorryAx；论文 Appendix A 现为 4,923 行、406 条定理。
+
+### 29.43 第 28 轮：结构化病态输入的差分扫描（2026-11-26，roxy）
+
+- 程序：`probes/round28_sweep.cpp`，共 6 组，**5,125 个用例**，结果在 `results/round28_sweep/`，分诊见同目录的 `TRIAGE.md`。
+  - 输入都规定了谱：A = U·diag(σ)·Vᴴ（U、V 为 Haar 酉矩阵），或 Q·diag(λ)·Qᴴ。
+  - 谱的类型：秩 n/2、秩 1、σ 从 1 到 1e−12、单个 σ = 1e−8、n/2 处有间隙、Kahan 矩阵、按行分级 1e±100，以及聚集、病态、双簇、低秩的 Hermitian 谱。
+  - QRCP 组还检查秩揭示：比较 |R(r,r)|/|R(0,0)| 与 LAPACK。
+- **zgeqp3（CPU 接口）是系统性出错**：238 例中 92 例错误。
+  - n ≥ 63 时，秩 1、条件数 1e12、分级矩阵全部出错（各 22/22），Kahan 矩阵 10 例；其中 90 例 AP ≠ QR，误差比值 1e10–1e14，2 例只是秩没被揭示。
+  - 把同一扫描程序与 `zlaqps_patched2.cpp` 链接成 `round28_fixed.exe`（`scripts/roxy/build_fix28.bat`），结果是 714/714 正确（`qrcp_patched.csv`）。所以第 29.42 节的两个根因能解释全部失败，触发条件也扩大为：任何会触发范数重算的病态输入。
+- **新发现：zgeqp3_gpu 的 tau 必须是设备数组**。MAGMA 自带的 testing_zgeqp3_gpu.cpp 用的是 dtau，但 magma_z.h 把它声明为 `magmaDoubleComplex *`，文档只写 “COMPLEX_16 array”。
+  - 按头文件传主机数组时，每次调用都非法访问内存（n = 1 也一样），info = 0，CUDA 上下文报废，后续调用全部失败。第一次跑 qrcp 组时 18×1 用例失败的 “cusparseCreate: context cannot be initialized” 和 −113 就是这样来的。
+  - 改用设备 tau 后全部正确。GPU 面板 zlaqps2_gpu（整列交换、在 GEMM 之后从设备数据重算范数）没有 zlaqps 的那两个缺陷。
+  - Lean：`geqp3_gpu_tau_space_mismatch`；FINDINGS 中为 M239。
+- 其余各组：LU（357 例）、Cholesky（204 例）、SVD（460 例）全部正确。批量版在秩亏输入上的 info 差异来自舍入顺序。zheevr 在条件数 1e12 的谱上，正交性是 31–553·n·eps，与 LAPACK zheevr 完全相同（`heevr_vs_lapack.txt`），属于 MRRR 算法本身。zheevdx_2stage 有一例 47·n·eps，属于轻微超标。
+- Lean：`logs/axioms.txt` 369 行，没有 sorryAx；论文 Appendix A 现为 4,936 行、407 条定理。
+
+### 29.44 第 29 轮：稀疏迭代求解器的差分扫描（2026-11-26，roxy；没有新缺陷）
+
+- 程序：`probes/round29_sparse.cpp`，运行脚本 `scripts/roxy/run_sparse29.ps1`。21 个求解器名，每个求解器一个进程，每个限时 600 s。
+  - 每个求解器跑 8 个 1024 阶矩阵 × CSR/ELL/SELLP 三种格式；带预条件的求解器另外分别配 NONE、JACOBI、ILU。共 942 次求解。
+  - 选项都通过伪造的 argv 交给 `magma_zparse_opts`，所以用的全是库自带的默认值。
+  - 每次求解都用主机算出的真实残差，去核对求解器报告的 info 和 final_res。
+- 结论：**没有新缺陷**，每一类非 OK 结果都对应已知条目或预期行为（`results/round29_sparse/TRIAGE.md`、`summary.txt`）：
+  - 已知问题：‖b‖ 很小时绝对 atol 直接放行；BA 和 ITERREF 走到包装函数的 default 分支，直接返回 0（M089）；JACOBI 求解器“残差有下降就算成功”；PBICG 和 PTFQMR 的 breakdown 被成功覆盖（M083）；IDRMERGE 在所有输入上失败（M103）；CGMERGE 的复数内积没有取共轭（M084）。M084 在 n = 16 就会出错，所以主扫描改用实数据。
+  - 预期行为：如实报告的失败（CG 用在非 Hermitian 或不定矩阵上；零对角线配 Jacobi 或 ILU）；BOMBARDMENT 只支持 CSR，对另外两种格式报 −103。
+- 阴性结果：ELL、SELLP 两种格式的判定与 CSR 完全一致。
+- 第 25 轮之前的 V100 稀疏扫描（`sweep_results.txt`）只用了 64 阶矩阵和 6 种输入。这一轮在 sm_120 上，用更大、更有结构的问题和三种格式复现了同样的结论。
+
+### 29.45 第 30 轮：批量 Jacobi 特征值与 SVD（2026-11-26，roxy；两个新缺陷，其中一个只在 Windows 上出现）
+
+- 程序：`probes/round30_batched_eig.cpp`。测 `magma_zheevj_batched_small_sm`（n = 1–32）和 `magma_zgesvj_batched`（方阵和长方形，最大 131×64）。每批 56 个矩阵：8 种谱 × 7 个随机种子，与 LAPACK 的 zheev / zgesvd 比较。结果和分诊在 `results/round30_batched_eig/`，分诊见其中的 `TRIAGE.md`。
+- **新缺陷 1（Windows/LLP64）：swap_scalar.cuh 用 `long` 交换 64 位值。**
+  - `magmablas_dswap_scalar_device(double&, double&)` 的实现是 `swap_internal<long>((long*)&a, (long*)&b)`。z 和 c 版本同样有问题：双精度复数的实部、虚部各只交换一半，单精度复数整体只交换了实部。
+  - Windows 上 `long` 只有 32 位（probe 实测 `sizeof(long) = 4`），所以排序时只交换了 double 的低 32 位，而 int 下标数组被正确交换。结果是排序后的特征值/奇异值有扰动（相对误差约 2⁻²⁰），并且与向量错位，info 却是 0。
+  - 定位过程：
+    - 2×2 的实验显示，只要 Jacobi 收敛后对角元是降序（ajj ≥ akk），结果就错，与矩阵是否正定无关；
+    - 结果与 batchCount 无关；
+    - 用 Python 逐行模拟内核（`scripts/heevj_emu.py`），结果是对的，说明问题不在算法；
+    - 用 expert 接口确认：sort_flag = 0 时 0/64 错，sort_flag = 1（默认值）时几乎全错。
+  - 受影响的代码：[zcd]heevj/syevj_batched_small_sm、[zcd]gesvj_batched_small_sm，以及分块 gesvj 用的 sort.cu。s 精度不受影响；Linux 构建也不受影响，这和以前在 V100 上测 heevj 正常的结果一致。
+  - 测试结果：heevj 784 例中 313 例错，gesvj 1568 例中 1016 例错。
+  - Lean：`swap_long_llp64_wrong`。
+- **新缺陷 2：分块 zgesvj（n ≥ 15）用 1/σ 缩放 U 时，没有判断 σ 是否为 0**（gesvj_kernels.cuh 的 finalize 部分：`rsigma[j] = 1. / ssigma[j]`）。零矩阵在 n ≥ 15 的每个尺寸上都是 7/7 输出 NaN，info = 0。这个问题与平台无关。Lean：`gesvj_zero_sigma_nan`。
+- 小问题：heevj 的文档说排序后 S(i) ≥ S(i+1)（降序），代码实际按升序排序。
+- FINDINGS 中新增 M240、M241，现为 241 条。分布报告新增 6d 节和第 8 种机制“平台假设”。Lean：`logs/axioms.txt` 371 行，没有 sorryAx；论文 Appendix A 见总数行。
+- **平台假设的全库扫描（读码，没有新缺陷）**：
+  - 在 src、magmablas、control、interface_cuda、sparse、include 中搜索 `(long*)`、`<long>`、`(long)`、`long x =`。除 swap_scalar.cuh 外只有两处：magma_timer.cpp 的 gettimeofday 模拟（转换为 `long` 秒和微秒，没有问题）和 thread_queue.cpp 里的注释。
+  - Windows 专用分支（`_WIN32`/`_MSC_VER`）共有 10 个文件：计时、线程（winthread）、yield、线程数和主机分配器。
+  - 主机分配器在 Windows 上是 `_aligned_malloc`/`_aligned_free`，所以混用 `free()` 会损坏堆。但全库直接调用 `malloc`/`free` 的只有 alloc.cpp 这一个文件本身，所以不存在混用。
+  - 结论：`long` 宽度问题只在 swap_scalar.cuh 一处。
+
+### 29.46 第 31 轮：混合精度 IR 求解器的差分扫描（2026-11-26，roxy；3 个新缺陷，都与 GPU 并发顺序有关）
+
+- 程序：`probes/round31_mixed.cpp`。分 ge、po、z、ls 四组，共 1,944 次求解；cond 为 1e1–1e15，缩放为 2⁻³⁰、2²⁰、2¹⁰⁰，另有 b 含 NaN 的用例；n ∈ {64, 200, 513}，nrhs ∈ {1, 2}。
+  - 新增二分开关：`R31_N=<n>` 只跑一个尺寸；`R31_RUN=sihx` 选择求解器，s = dsgesv，i = dsgesv_iteref，h = dhgesv_iteref，x = dxgesv_gmres。
+  - 追查用 `probes/round31_race.cpp`，有 rep、fb、lu、ld 四种模式。
+  - 结果和分诊在 `results/round31_mixed/`，分诊见其中的 `TRIAGE.md`。
+- 413 个 WRONG 中，大多数是已登记的问题：M001、M002、M006、M007、M020、M022、M024；NAN-ACCEPTED 对应 M004、M008、M017、M023。
+- **新缺陷 M242：`?getf2_native_kernel` 跨线程块读取时命中过时的 L1 数据。**
+  - 内核先自旋等待 volatile 的 `update_flag[i]`，然后用普通指针 `da` 读第 i 列（第 249–262 行），这些加载会进 L1。
+  - 当 `ldda·sizeof(T) % 32 ≠ 0` 时，第 i 列的列首和第 i−1 列共享一个扇区，读到的是更新前的值。
+  - 结果：sgetrf_native 误差 300–14,000，dgetrf_native 误差 1e10–1e12，info = 0；问题取决于 ldda，与 n 无关。
+  - 验证：4 处读改成 `__ldcg` 后重新编译 s/d 内核（`probes/[sd]getf2_native_kernel_ldcg.cu`，`scripts/roxy/build_fix31b.bat`），16 个出错的配置全部恢复正常。
+  - dsgesv/zcgesv 内部用 `lddsa = n`，所以 n % 8 ≠ 0 时总会出错。round31 中 dsgesv n = 513 回退 18/22 次，换成补丁内核后只回退 6/22 次（都是 cond ≥ 1e8）。
+  - MAGMA 自带的测试总把 ldda 取为 `roundup(n, 32)`，所以测不到。
+- **新缺陷 M243：FP64 回退中，lacpy 与 getrs 运行在不同的 queue 上，中间没有同步。**
+  - 涉及 zcgesv/dsgesv 第 357–360 行和 dxgesv_gmres 第 806–809 行；zcposv 是同样的写法，但回退 36 次都没有出错。
+  - dsgesv n = 513：正常运行每次 2–8 例 WRONG；`CUDA_LAUNCH_BLOCKING=1` 时 0 例；带开关的副本（`probes/dsgesv_patched.cpp`，`R31_SYNC`）中只打开 bit 2（复制后加 `magma_queue_sync`）就是 0 例。
+  - dxgesv_gmres n = 200：回退后 WRONG 的，正常运行 21 例，串行后 0 例。
+- （曾记为 M244 的反方向交接，已在第 32 轮撤回，见 §29.47。）
+- Lean（`Magma/Dense/Differential.lean` §35a–c）：`getf2_native_aligned_no_share_all`、`getf2_native_unaligned_shares`、`getf2_native_stale_read`、`getf2_native_ldcg_fix`、`sgesv_fallback_race`、`sgesv_fallback_synced`、`dsgesv_lddsa_n_unaligned`。`logs/axioms.txt` 378 行，没有 sorryAx；论文 Appendix A 总计 5,033 行、416 个 theorem。
+- FINDINGS 新增 M242–M243（M244 已撤回），现为 243 条，新增缺陷类别 `concurrency-race`。分布报告新增 6e 节和第 9 种机制“并发与内存模型”。
+- 局限：只在 sm_120 / Windows 上测过。L1 机制在 Volta 及以后的架构上是通用的，但没有在 Linux 或其他 GPU 上复现；s82 现在不可用（见下）。
+- s82（eightsocket）：用户转来的状态显示，GPU 1 自 11-21 起就有故障，GPU 2 时好时坏，GPU 3–7 被别人卡死的进程占用。我从来没有用过 GPU 2–7。在管理员重置之前，s82 上什么都不跑，包括 GPU 0。
+
+### 29.47 第 32 轮：全库跨 queue 交接扫描与 GPU 检验（2026-11-26，roxy；没有新缺陷，撤回 M244）
+
+- 先测量 queue 的同步语义（`round31_race qd`）：在 Q 上放 4 个 4096 阶的 dgemm，然后 `magma_queue_create` 另一个 queue，此时 Q 仍在忙；再 `magma_queue_destroy` 它，此时 Q 已经空闲，3/3 次都是这样。也就是说，destroy 会通过 cublasDestroy 同步整个设备，而 create 不会。
+  - 所以“被调用者写完、destroy 之后调用者再读”这一方向是有序的。原先读码登记的 M244 不成立，已从 FINDINGS 删除，现为 243 条。
+  - 只有“调用者的异步操作还没完成，被调用者就在新 queue 上开始工作”这一方向会竞争，也就是 M243。
+- 机械扫描 `scripts/xqueue_scan.py`：
+  - 在 src 中找出 407 个自己新建 queue 的例程；
+  - 再找调用点：调用者在自己 queue 上的异步操作之后，中间没有同步（sync、同步的 get/set、返回标量的 BLAS、lag2/lat2 的标志读取），就调用了这类例程。
+  - 结果：33 处（`results/round32_xqueue/scan_output.txt`）。
+- 逐个判定：
+  - zcgesv/dsgesv、dxgesv_gmres、zcposv/dsposv、dshposv 的回退：都属于 M243（getrs/potrs 第一步就在 dX 上启动内核）；
+  - lat2c/lat2s 之后的调用：lat2c 通过 cudaMemcpyFromSymbol 隐式同步，没有问题；
+  - hegvd/hegvdx/hegvr/hegvx 中，异步 D2H 拷贝和 hegst 都只读 dB，没有问题；
+  - zgetrf 在 getrf_m 回退分支用的是主机矩阵，没有问题；
+  - zgegqr（laset dT → geqr2x3）和 zgeqrf_ooc（larfb → geqrf2_gpu）：被调用者第一步都是同步的主机拷贝，或者只写，风险低，没有在 GPU 上测；
+  - heevd 系列的 lascl → hetrd（‖A‖ < 1.5e-146 或 > 7e145 时触发）和 gesv_rbt 的 copy → nopiv：在 GPU 上测过（`probes/round32_xqueue.cpp`）。heev 系列 27 组 × 5 次全部正确，rbt 15/15 正确，与 `CUDA_LAUNCH_BLOCKING=1` 的结果逐位相同。原因是这两处的被调用者第一步都是到可分页主机内存的同步拷贝。
+- 自旋标志内核的扫描：
+  - magmablas 和 sparse/blas 中只有 getf2_native（M242）和 sync-free trsm（M123，等待被注释掉，已登记）用到块间通信；
+  - zpotf2、zmdotc、zgemvmdot、zmergecg 中有老式的 warp 同步归约（volatile 共享内存，没有 `__syncwarp`）。在 Volta 及以后的架构上这属于未定义行为，但这里 warp 是收敛的，以往各轮的 potf2 和 merged CG 测试也都正确，所以不登记。
+- 第 31–32 轮的结论：MAGMA 的跨 queue 交接只在“新 queue 上的第一步就是内核”时会出问题。这类调用点全部集中在混合精度回退路径上，已全部归入 M243。
+
+### 29.48 第 33 轮：未对齐 ldda 下的分解（2026-11-26，roxy；没有新缺陷，确认 M242 是唯一受影响的）
+
+- 程序：`probes/round33_ldda.cpp`。s/d 精度，ldda ∈ {n, n+1, n+3, n+5, roundup(n,32)}；批量调用中各矩阵起点也不对齐。结果和分诊在 `results/round33_ldda/`。
+- 批量的 getrf、getrf_nopiv、potrf、geqrf、getrs 共 330 例，全部正确。getrf_gpu、potrf_gpu、potrf_native、geqrf2_gpu 共 162 例，全部正确。只有 getrf_native 有 19/38 例错（M242）。
+
+### 29.49 第 34 轮：批量与 vbatched BLAS 的差分测试（2026-11-26，roxy；3 个新缺陷）
+
+- 程序：`probes/round34_bblas.cpp`。gemm、gemv、syrk、syr2k、trsm、trmm 的 batched 和 vbatched 版，d 精度。参照遵循参考 BLAS 的契约：beta = 0 不读 C、alpha = 0 不读 A/B、k = 0 时 C := beta·C、只改 uplo 所指的三角、trsm 在 alpha = 0 时置零；并逐位检查“不应改动”的区域。另有 contract 模式和 potrf 模式。结果和分诊在 `results/round34_bblas/`，分诊见其中的 `TRIAGE.md`。修正了两处测试程序问题（batched 调用的 ld 必须统一；gemv 在 m 或 n 为 0 时不缩放 y）。
+- **M245**：gemm_batched_core.cu:202 和 herk_batched_core.cu:272 在 `k <= 0` 时提前返回，C 没有乘 beta。syr2k/her2k_batched 经 herk_batched_core 继承了这个问题。vbatched 版正确。
+- **M246**：herk_template_kernel_(v)batched.cuh 只跳过完全在三角之外的 tile，跨对角线的 tile 整块写回，所以另一侧三角被改写。
+  - 后果：potrf_batched 在 n ≥ 257 时（递归面板调用 herk_batched_core）改写严格上三角，n = 257 时改了 19,632/98,688 个元素；potrf_vbatched 在 n = 500/511/520/600 时改写（逐矩阵走 cuBLAS herk 的尺寸不改写）。
+  - 分解本身正确，info = 0。两个例程的文档都写着 strictly upper “not referenced”。
+- **M247**：trsm/trmm 的 batched 和 vbatched 在 alpha = 0 时计算 alpha·B（trsm_template_device.cuh 的 init_data、trmm 的 `rb *= alpha`），B 中的 NaN 被保留；非批量的 magmablas_dtrsm 正确。
+- gemv_batched/vbatched 在 beta = 0 时读 y：属于已知的 M234（同一个模板），已扩充其证据。potrf_vbatched 不清零 info：复现了 M078（预填 5 时完全不做分解）。
+- Lean（Differential.lean §36a–c）：`batched_k0_beta_ignored_all`、`herk_batched_diag_tile_breaks_contract_all`、`trsm_batched_alpha0_nan`、`trsm_batched_alpha0_finite`。`logs/axioms.txt` 382 行，没有 sorryAx；论文 Appendix A 总计 5,087 行、420 个 theorem。FINDINGS 现为 246 条（M001–M247，其中 M244 已撤回）。
+
+### 29.50 第 35 轮：其余批量 BLAS（2026-11-26，roxy；新缺陷 M248：hemm/symm 对任何输入都算错）
+
+- trsv_batched 112/112 正确，potrs_batched 16/16 正确（A 不被改动）。symv_batched/vbatched 在 beta = 0 时保留 NaN，hemm 也一样，都归入 M234（已扩充）。
+- **M248**：hemm_template_device.cuh 的 32 处 `fetch(A, …)` 传的是基指针，而 `fetch` 宏期望的是 `offs_dA`。所以 magmablas_[zcsd]hemm/symm 的非批量、batched、vbatched 版本对任何输入都算错（A = I 时误差 1.5–13.7；cuBLAS 和 magmablas_dgemm 正确）。局部改为读 `offs_d##A` 后，全部 40 个 beta ≠ 0 的用例都正确（`probes/hemmfix/`、`scripts/roxy/build_fix35.bat`）。结果和分诊在 `results/round35_bblas2/`，分诊见其中的 `TRIAGE.md`。
+- Lean（§36d）：`hemm_fetch_base_wrong_all`、`hemm_fetch_threads_collide`。`logs/axioms.txt` 384 行，没有 sorryAx；论文 Appendix A 总计 5,106 行、422 个 theorem。FINDINGS 现为 247 条（M001–M248，其中 M244 已撤回）。
+
+### 29.51 第 36 轮：41 个辅助例程直接与 LAPACK 对比（2026-11-26，roxy；新缺陷 M249）
+
+- 程序：`probes/round36_helpers.cpp`（d 精度），Householder 数据都来自主机端的 LAPACK 分解。orm 系列（ormqr/lq/ql/rq、ormqr2/ql2_gpu）168 例、ormtr/ormtr_gpu/ormbr 136 例、orgqr2/orgbr 21 例、larfb_gpu 80 例，全部正确。larfb 第一版是测试程序问题：MAGMA 要求显式存储 V 的 0 和 1。结果和分诊在 `results/round36_helpers/`，分诊见其中的 `TRIAGE.md`。
+- **M249**：trevc3 和 trevc3_mt 选择分块版本 2 的条件漏掉了 LAPACK 的 `OVER`。所以在 howmany = A/S 且 lwork 取文档推荐的最优值时，循环末尾的“回代变换”GEMM 用调用者的 VR 去乘，改写了已算好的特征向量：36 个特征对中有 26 个残差为 1e13–1e15。lwork = 3n 时正确；加上 `over &&` 后全部正确（`probes/dtrevc3_patched.cpp`、`scripts/roxy/build_fix36.bat`）。geev 用的是回代变换模式，不受影响。
+- Lean（§36e）：`trevc3_blocked_without_backtransform`、`trevc3_lapack_selection_correct`。`logs/axioms.txt` 386 行，没有 sorryAx；论文 Appendix A 总计 5,129 行、424 个 theorem。FINDINGS 现为 248 条（M001–M249，其中 M244 已撤回）。
+- 覆盖：INVENTORY 中的 (c) 类，除 bulge chasing 的 5 个文件、hetrd_hb2st、gerbt 和 lahr2/lahru/labrd/latrd 这些面板辅助函数外，都已直接测试。面板辅助函数通过驱动间接覆盖：gebrd 和 hetrd 在第 27 轮与 LAPACK 比较过，结果正确；gehrd 和 gehrd2（用到 lahr2、lahru）在本轮补测，n = 1–513，含部分 ilo/ihi，28/28 个用例的 ‖QHQᵀ − A₀‖ 和正交性都正确（`gehrd.csv`）。
+
+### 29.52 第 37 轮：两阶段三对角化链路与 RBT（2026-11-26，roxy；新缺陷 M250）
+
+- 程序：`probes/round37_2stage.cpp`。dsyevdx_2stage 共 450 例，覆盖 bulge chasing、hb2st 和回代变换，其中 356 例正确；94 个 BAD 全部有归属：M236（n = 1，mout 未设置）、M065（Upper 走两阶段路径）、测试程序问题（range V 的区间端点落在重复特征值上），以及 M216（range V 未缩放的端点；本轮确认 1 阶段的 dsyevdx 同样受影响，tridiag 乘 0.5 后正确）。结果和分诊在 `results/round37_2stage/`，分诊见其中的 `TRIAGE.md`。
+- **M250**：gerbt 的 Uᵀb 内核对 n < 2 提前返回，大小为 1 的子蝶形因此跳过了 u 缩放，与矩阵变换、V·y 变换不一致。所以 gesv_rbt 在 n ≤ 3 时结果错误（后向误差 1e12–1e14），info = 0。改为 `n < 1` 后 56/56 正确（`probes/dgerbt_kernels_fixed.cu`、`scripts/roxy/build_fix37.bat`）。
+- Lean（§36f）：`rbt_size1_inconsistent`。`logs/axioms.txt` 387 行，没有 sorryAx；论文 Appendix A 总计 5,151 行、425 个 theorem。FINDINGS 现为 249 条（M001–M250，其中 M244 已撤回）。
+- 至此，INVENTORY 的 (c) 类中，bulge chasing（经两阶段驱动）和 gerbt 也已直接测试。仍未覆盖的只有多 GPU（需要第二块卡）和 HIP 后端（需要 AMD 硬件）。
+
+### 29.53 第 38 轮：多 GPU / 核外驱动在 ngpu = 1 下的数值差分（2026-11-26，roxy；没有新缺陷）
+
+- 程序：`probes/round38_mgpu.cpp`。potrf/getrf/geqrf 的 `_m` 和 `_mgpu` 版共 44 例，全部正确。syevd_m、syevdx_m、syevdx_2stage_m、sygvd_m、sygvdx_m、geev_m 共 52 例，其中 46 例正确，6 例是 n = 1 时 mout 未设置，已把 zheevdx_m、zheevdx_2stage_m 补进 M236。sytrd_mgpu 8/8 正确。gehrd_m 按文档的 LWORK = N·NB 调用时被拒绝（M049，补充了证据），改用查询值后 4/4 正确。dpotrf_mgpu_right 链接失败，是 M156 在 roxy 上的确认。结果和分诊在 `results/round38_mgpu/`，分诊见其中的 `TRIAGE.md`。
+- FINDINGS 仍为 249 条，没有新条目。
+
+### 29.54 第 39 轮：新发现在复数精度下的复核（2026-11-26，roxy）
+
+- 程序：`probes/round39_zprec.cpp`。在 z 精度下复现了 M242（zgetrf_native）、M245、M246、M247、M250。
+- 两条范围需要收窄：
+  - **M242 在 c 精度下未复现**（cgetrf_native 在 ldda = 513 和 516 时都正确），范围改为 [sdz]；
+  - **M249 只影响实数版**：ztrevc3 也会在没有 over 时选用版本 2，但它的回代 GEMM 写在 over 分支里面；dtrevc3 和 dtrevc3_mt 则把这段 GEMM 放在分支链之外。范围改为 [ds]，Lean §36e 的注释也已同步更正。
+- 结果和分诊在 `results/round39_zprec/`，分诊见其中的 `TRIAGE.md`。FINDINGS 仍为 249 条。
+
+### 29.55 第 40 轮：按已知缺陷的写法扫描全库（2026-11-26，roxy）
+
+- 扫描了 magmablas 中所有 BLAS 驱动的快速返回条件，并与参考 BLAS 的语义比对（`results/round40_scan/TRIAGE.md`）。GPU 上证实了 3 处已知缺陷在非批量版本中的延伸（`probes/round40_nb.cpp`）：
+  - 非批量的 magmablas_zherk/zsyrk 在 k = 0 时不乘 beta（补入 M245）；
+  - 非批量的 magmablas_zherk/zsyrk 把另一侧三角整块改写（zherk_internal 的块列 gemm，nb = 512；补入 M246）；
+  - 非批量的 magmablas_ztrmm 在 alpha = 0 时保留 NaN（同一个 trmm 模板；补入 M247）。
+- 这三个例程在库内部都没有调用者。FINDINGS 仍为 249 条。
+
+### 29.56 第 41 轮：alpha = 0 且 A/B 含 NaN（2026-11-26，roxy；观察，不登记）
+
+- magmablas 的 gemm（含 batched、vbatched）、gemv（含 batched）、symv、syrk_batched、syr2k_batched 在 alpha = 0 时仍然读 A 和 B，A/B 中的 NaN 使整个输出变成 NaN；非批量的 dsyrk 经 cuBLAS，结果正确。
+- MAGMA 和参考 BLAS 的文档都只对 trmm/trsm 承诺 alpha = 0 时不引用 A（违反情况已登记为 M247），所以这一条只记为“与参考实现、cuBLAS 行为不同”的观察，不登记（`results/round41_alpha0/TRIAGE.md`）。
+
+### 29.57 第 42 轮：多 GPU 一维块循环分布的索引核对（2026-11-26，只读码，没有新缺陷）
+
+- 分布规则（magmablas/zbcyclic.cpp）：全局第 j 列所在的块存放在 `dev = (j/nb) % ngpu`，本地列号为 `j/(nb*ngpu)*nb`。
+- 各 `_mgpu`/`_m` 例程计算本地列数的公式分 4 种写法：
+  - 标准式：getrf_mgpu、geqrf_mgpu、getrf2_mgpu、potrf3_mgpu、geqrf_m、getrf_m、potrf_mgpu_right；
+  - gehrd_m、ungqr_m 的 min_lblocks/last_dev 式；
+  - potrf_m 非对角部分的“相对 J 起算，再减去 J2”式。JB 一定是 nb 的倍数：NB 被取整到 nb 的倍数（第 154 行），否则 NB = n，此时没有非对角部分。
+- 用 Python 对这些公式做了暴力枚举（ngpu 取 1–8，nb 取 {1, 2, 3, 7, 32, 64}，n 取 0–299；potrf_m 另枚举 JB 和余量），与块循环规则逐一比对，不一致的情况为 0。
+- 结论：多卡分布的索引算术没有问题。第 25 轮双卡结果错误的原因仍然指向 s82 的 GPU 1 故障；要确认多卡行为，仍需第二块可用的 GPU。
+
+### 29.58 第 43 轮：按已知缺陷写法的只读扫描；两个待跑的 probe（2026-11-27；roxy 离线）
+
+- roxy 从 2026-11-26 晚起在 Tailscale 上显示 offline（ssh 超时），GPU 实验暂停。下面两个 probe 已经写好，但**还没有编译和运行**：
+  - `probes/round43_cs.cpp`：M245、M246、M247、M250 在 s、c 精度下的复核（d 已在第 34–37 轮测过，z 已在第 39 轮测过）；
+  - `probes/round44_svdpaths.cpp`：magma_dgesvd、dgesdd 的每一条由 lwork 选择的路径。工作区从“被接受的最小 lwork”（对“lwork 参数错误”做二分得到）到最优值，取 8 档；覆盖 5 种形状、全部 jobu/jobvt（或 jobz）组合；检查奇异值、重构误差和正交性。以前各轮只用了查询得到的最优 lwork，而 M249 正是只在大工作区路径上才出现的缺陷。
+- 只读扫描（没有新缺陷）：
+  - “偏移指针被计算、也被推进，但从不读取”（M248 的写法）：在 magmablas 和 sparse/blas 中只找到 hemm_template_device.cuh 的 offs_dA/offs_dB，即已知的 M248。zsymmetrize 的 dAT 是误报，它是通过解引用写入的。
+  - “同一文件中配套内核的提前返回阈值不一致”（M250 的写法）：只找到 zgerbt_kernels.cu，即已知的 M250。zpotf2（n == 0 与 n < 1）和 zsytrf_nopiv_cpu（n == 1 与 n < 2）是等价写法。
+  - 两种扫描都能重新找到已知缺陷，说明扫描方法本身有效。
+  - “按 lwork 选择算法”的写法（M249）：列出了 dgesvd 和 dgesdd 中几十处 `if (lwork >= …)` 分支，待 round44 在 GPU 上逐条覆盖。
+
+### 29.59 第 43 轮（续）：与参考 LAPACK 源码逐块对照（2026-11-27，只读码，没有新缺陷）
+
+- 方法：从 Reference-LAPACK 的 GitHub 仓库（公开源码）下载对应的 .f 文件，与 MAGMA 的移植逐块对照。
+  - (a) 按 lwork 选择路径的完整 IF 条件，包括 `.AND.` 合取项；
+  - (b) `n == 1` 快速分支中赋值的输出参数。
+- 两种对照都先用已知缺陷验证过：(a) 在 dtrevc3、dtrevc3_mt 上都标出 LAPACK 的 `OVER` 合取项缺失，即 M249；(b) 在 dsyevdx、dsyevdx_m、dsyevdx_2stage、dsyevdx_2stage_m 上都标出 n = 1 时漏设 M，即 M236，全部已登记。
+- 新的比对结果：
+  - dgesvd：40 个分支的顺序一致，但 MAGMA 的阈值用的是 `wrkbl`（最优块大小下的工作区），LAPACK 用的是最小需求 `max(4n, bdspac)`。MAGMA 只在工作区更大时才走快路径，更保守，没有删掉任何保护条件。
+  - dgesdd：MAGMA 有 4 个分支、LAPACK 有 6 个，看起来移植的是更早版本的 LAPACK 结构。是否正确，仍需 round44 在 GPU 上测。
+  - dgetri_gpu 的结构与 LAPACK 不同，没有可比的条件。
+  - dstedx、dsyevd 的 n = 1 分支赋值的变量比 LAPACK 还多（多出特征向量 A/Z），没有问题。
+- 下载的 LAPACK 源码放在 scratchpad/lapack_ref/（会被清理，需要时重新下载）。
+
+### 29.60 第 43–44 轮的 GPU 部分（2026-11-27，roxy 恢复后）
+
+- round43（`results/round43_cs/`）：M245、M246、M247、M250 在 s、c 精度下 16/16 全部复现，这 4 条在四种精度下都已实测证实，FINDINGS 已补充证据。
+- round44（`results/round44_svdpaths/`）：dgesvd 304 例、dgesdd 54 例全部正确。gesvd 有 22 种组合真正覆盖了多档 lwork，所以按 lwork 选择的各条路径都正确；gesdd 被接受的最小 lwork 几乎等于最优值（M049），它的替代路径从公开接口走不到。没有新缺陷。
+- FINDINGS 仍为 249 条。
+
+### 29.61 第 45 轮：sparse 求解器在边界输入上的测试（2026-11-27，roxy；新缺陷 M251）
+
+- 程序：`probes/round45_sparse_edge.cpp`（由第 29 轮派生）。7 种边界系统：n = 1、单位阵、对角阵、2×2、b = 0、一整行为空、一行为满行。illegal memory access 会使整个 CUDA 上下文失效，所以每个用例单独一个进程（`run_sparse45_iso.ps1`、`run_emptyrow45.ps1`）。结果和分诊在 `results/round45_sparse_edge/`，分诊见其中的 `TRIAGE.md`。
+- **M251**：SELL-P 的 blocksize/alignment 在两处临时结构中丢失：
+  - magma_zmconvert 的设备→CPU 回退路径（局部的 hB）；
+  - magma_zmtranspose/transposeconjugate（B 在开头被释放）。
+
+  于是 CSR→SELL-P 的转换中出现 `256 % 0`，整数除零，进程崩溃。所有需要 Aᵀ 的求解器（QMR、BICG、LSQR、BOMBARDMENT、PQMR、PBICG）用 SELLP 必崩；直接调用公开接口 zmconvert 把设备上的 CSR 转成 SELLP 也会崩。两处一起补上后全部正常（`probes/magma_zmconvert_fixed.cpp`、`magma_zmtranspose_fixed.cpp`、`scripts/roxy/build_fix45.bat`）。
+- **更正第 29 轮**：当时这 6 个求解器的进程崩溃没有被注意到（CSV 中缺少 SELLP 行，PQMR/PBICG 还缺少 ELL 行），TRIAGE 中“ELL/SELLP 的判定与 CSR 相同”的结论不成立，已在该文件中加注更正。
+- 其余异常：emptyrow + JACOBI 的越界访问是调用方误用（setup 返回 −204 之后，测试程序仍调用了求解器；MAGMA 的 tester 遇到这种情况会中止），记为观察。其余分别是已知的 M098、M103、M104（补充了 identity8 和 n = 1 的证据）、M105，以及测试程序问题（b = 0 时 0/0）。
+- Lean（§36g）：`sellp_params_lost`、`sellp_params_forwarded`。另外删掉了 §36f `rbt_size1_inconsistent` 中多余的参数 `a`。FINDINGS 现为 250 条（M001–M251，其中 M244 已撤回）。
+
+### 29.62 第 46 轮：sparse 全部存储格式的往返与 SpMV（2026-11-27，roxy；新缺陷 M252–M254）
+
+- 程序：`probes/round46_formats.cpp`。16 种格式 × 8 个边界矩阵，每个组合单独一个进程，记录退出码和最后一步（`run_formats46.ps1`）。结果和分诊在 `results/round46_formats/`，分诊见其中的 `TRIAGE.md`。
+- **M252**：CSR→COO（主机和设备）把行下标写进 row/drow，COO 的使用方读的却是 rowidx/drowidx，所以往返后所有元素都进了第 0 行。两处补丁后 28/28 正确。
+- **M253**：ELLRT 的 SpMV 内核按 warp 内隐式同步写归约（没有 volatile，也没有 syncwarp），在 sm_120 上 T = 8 时丢掉第 6、7 号线程的贡献，所以一行超过 6 个非零元就会出错。加 `__syncwarp` 后正确。zmergecg 中有同样的代码。这是 BUG_DISTRIBUTION 第 9 种机制（并发与内存模型）的又一个实例。之前按“warp 收敛、未观察到”没有登记 zmdotc 等文件中的 volatile 归约；这一处连 volatile 都没有，在实际运行中出了错。
+- **M254**：CSR↔CSRLIST 对空行的处理有两处越界写（`list[-1]`，以及每个空行多复制一个元素），导致堆损坏。补丁后正确。
+- M251 的范围补充了 ELLRT。其余异常归入已知的 M125、M132、M210；BCSR 在 n = 1 时报 −113，记为观察。
+- Lean（§36h–j）：`coo_rows_lost`、`ellrt_reduction_loses_lanes`、`csrlist_empty_row_overflows`。FINDINGS 现为 253 条（M001–M254，其中 M244 已撤回）。
+
+### 29.63 第 46 轮补充与第 47 轮（2026-11-27，roxy）
+
+- 在 round45 的 probe 中直接设置 `output_format = Magma_ELLRT`（magma_zparse_opts 只认 CSR/ELL/SELLP/CUSPARSECSR/CSR5，遇到 ELLRT 会明确提示并退回 CSR，这不是缺陷）。结果：CG、PCG（走 CGMERGE，因而用到 zmergecg 中的 ELLRT 内核）、BICGSTAB、PBICGSTAB、GMRES 在 denserow 上都报告成功（自报残差 1e−14），真实残差却是 4.95e−3。M253 一直影响到求解器层面，已补充进 FINDINGS。
+- 第 47 轮（`results/round47_dsparse/`）：M251–M254 在 d 精度下全部复现。
+- FINDINGS 仍为 253 条。
+
+### 29.64 第 48 轮：带 volatile 的 warp 内归约实测（2026-11-27，roxy；没有新缺陷）
+
+- dmdotc、dgemvmdot（k = 1–8，n 为 1–100000）、dmdotc1–4，以及 d/zpotf2_gpu，共 176 例，在 sm_120 上全部正确（`results/round48_volatile/`）。带 volatile 的 warp 同步归约实测正确；出错的只有完全不带 volatile 的 ELLRT（M253）。这些 volatile 写法按 CUDA 编程模型仍是未定义行为，但没有观察到错误，所以不登记。
+
+### 29.65 第 49 轮：M251–M254 在 s、c 精度下的复核（2026-11-27，roxy）
+
+- 在 s、c 精度下全部复现（`results/round49_scsparse/`），所以这 4 条在四种精度下都已实测证实。setup 失败之后的状态没有新发现（见该轮 TRIAGE）。FINDINGS 仍为 253 条。
+
+### 29.66 多卡分布索引的 Lean 证明（2026-11-27，只用 Lean）
+
+- 第 42 轮只用暴力枚举验证了各卡的本地列数公式。现在在 `Magma/MultiGpu.lean` 中证明了 `nlocal_eq_cols_on_all`：对所有 n、nb > 0、ngpu > 0 和 d < ngpu，getrf_mgpu、geqrf_mgpu、getrf2_mgpu、potrf3_mgpu、geqrf_m、getrf_m、potrf_mgpu_right 使用的公式都恰好等于全局列中属于第 d 块卡的列数（zbcyclic 的规则是 `(j/nb) % ngpu`）。另证了 `lblocks_eq_cols_on_all`，覆盖 gehrd_m、ungqr_m 的 min_lblocks/last_dev 写法。此前的 `distribution_covers` 只证明了各卡之和等于 n。
+- 证明对 n 归纳：先证 `succ_div_cases`，即 n → n+1 时商和余数的两种情况；再证 `nlocal_succ`，即每加一列，只有拥有这一列的那块卡加 1。只用 core Lean，axioms 为 propext 和 Quot.sound。
+- （同日补充）zhemm_mgpu 中带偏移的块归属计算（l.235–276：myblkoffset、myblk/devperm、最后不完整块的归属、行 GEMM 的块计数）逐行读码，没有发现错误。其中两条计数规则已在 Lean 中对所有参数证明：`owned_before_formula`（设备 dev 在块号 B 之前拥有的块数）和 `owned_from_formula`（从设备 s 开始的 K 个块中设备 dev 拥有的块数，含 devperm 平移）。辅助引理 `shift_mod`、`mod_lt_two`。
+- （同日补充）zgetrf2_mgpu 的面板广播和尾部更新（l.240–445：j_local2、nb0、最后一个面板的大小和发送条件）逐行读码，没有发现错误；`getrf_mgpu_next_local_all` 证明了 j_local2 的取法等于设备在块 0…j 中拥有的块数。
+
+### 29.67 第 50 轮：多卡 Cholesky 的两条缓冲区复用竞争 M255、M256（2026-11-27，roxy，单卡模拟多卡）
+
+- 起点：读 `zpotrf3_mgpu` 的下标（j_local2、nb0、nb2 都对，j_local2 = 设备在块 0…k 中拥有的块数），但 `zpotrf_mgpu.cpp` l.142–145 写着 "setting h = 1 produces failures for ngpus >= 4 / set h = 2 as a temp. fix / TODO"。为此写了 happens-before 模型 `scripts/potrf_mgpu_hb.py`，逐块重放主机程序，检查所有冲突的缓冲区访问是否有序。
+- **M255**（z/c，ngpu ≥ 2，任意 h）：设备上的对角块缓冲 `dlP(d,0,0,buf)` 每 ngpu 步轮换一次。第 k 步 stream 2 上更新剩余列的 trsm 读它，第 k+ngpu 步 stream 1 上的对角块拷贝改写它，两者之间没有事件或主机同步。d/s 用 `dtrsm_work`，flag 0 调用只用预先求好的逆，不受影响。
+- **M256**（四种精度，h < ngpu；`potrf_mgpu` 写死 h = 2，所以 ngpu ≥ 3）：主机 pinned 工作区有 h 个块槽，第 k+h−1 步发往主机的块行会盖住块 k 的已分解对角块，而各设备 stream 1 上从这里读它的拷贝可能还没执行。模型给出的分界线恰好是 h ≥ ngpu（Lean：`potrf_mgpu_host_slot_covered_iff`），被注释掉的 `h = ngpu` 正是最小安全值。`potrf_m` 取 h = 面板块数，不受影响。
+- 验证：`gen_emu.py` 原样复制 2.10.0 的 `[zcds]potrf3_mgpu.cpp`，只把 `magma_setdevice` 改成空操作，每个虚拟设备在 GPU 0 上有自己的缓冲区和 3 个队列；在一个操作前让该流睡 100 ms（合法时序）。426 个进程全部 exit 0：
+  - 不加延迟：0/20 出错；
+  - M255：z 16/60、c 14/20 出错（info = 0，静默），加一个事件等待后 0/80；时间戳显示改写在 trsm 开始前约 103 ms 完成，误差落在该 trsm 的块行；
+  - M256：z/c 在 h < ngpu 时 37/60 出错，全部报 info > 0（SPD 矩阵被判为不正定），h ≥ ngpu 时 0/48。
+- d/s 的 M256 在模拟中测不出（0/96）：`magmablas_[ds]trtri_diag` l.104 的 `cudaMemset` 不带流，走 legacy 默认流，单卡上把所有虚拟设备排了序。模型复现了这一点（`--real --one-gpu` 0 个危险对）；真实多卡上它只排序本设备的流，危险仍在（`--real`）。另外核对了平台：pinned H2D 拷贝在执行时读主机数据（`round50_stage.cpp`）。
+- 与第 25 轮（§29.28）的关系：当时 zpotrf_m 的双卡结果误差为 63，归因于 GPU 1 故障。zpotrf_m 在 z 精度、ngpu = 2 时会经过 M255，所以 M255 可能是一个原因；但同轮 zgetrf_m 的 inf 不能用它解释，硬件故障仍是更可能的主因。真实多卡复测时应同时检查两者。
+- 附带发现（未登记，待查）：`[zcds]trtri_diag`、`[zc]lag2c`、`zlat2c`、`*gecscsyncfreetrsm`、`getrf_batched` 等处有不带流的 `cudaMemset`/`cudaMemcpy`。函数接收 queue，却在 legacy 默认流上做事；若 queue 来自非阻塞流（`magma_queue_create_from_cuda`）或用 per-thread 默认流编译，这些操作就与 queue 上的工作无序。
+- 详见 `experiments/magma_gpu/results/round50_potrf_mgpu/TRIAGE.md`。
+
+### 29.68 第 51 轮：接收 queue、却在 legacy 默认流上做事的例程（2026-11-27，roxy）
+
+- 全库扫描不带流的 `cudaMemset/cudaMemcpy/…Symbol` 和不带流的内核启动，命中 trtri_diag、gecscsyncfreetrsm、slag2h、lag2c/lat2c/lag2s/lat2s 几组（四种精度各一份）。其中 sync-free 三角求解（M123）、slag2h（M108、M110）、lag2c 的全局标志（M115）早已登记。**教训：写探针前先在 FINDINGS、SPARSE_INVENTORY、NONZ_INVENTORY 里按文件名搜。**
+- **M257（新）**：`[zcds]trtri_diag` l.104 的 `cudaMemset` 走 legacy 默认流。另一条阻塞流忙 150 ms 时，`magmablas_dtrtri_diag` 要 156–164 ms 才返回主机（空闲时 0.4–0.6 ms），三种 queue 都一样，结果正确。dtrsm.cu 的文档说 `trsm_work`、`trsm_outofplace` 是异步的，这一点不成立。在本平台上，非阻塞 queue 时的无序危险不会出现（主机被阻塞），没有验证。Lean：`trtri_diag_waits_unrelated`、`trtri_diag_not_async`。
+- 已有条目的新证据（都是用补丁确认的）：
+  - M123：d、z 共 24/24 出错（如 19999/20000 个分量）；恢复等待（volatile 读入度 + `__ldcg` 读部分和）后 24/24 精确。
+  - M108：roxy 上任何超过 65504 的输入都会触发非法内存访问；用 `cudaGetSymbolAddress` 修正后 info 正确。
+  - M110：地址修正、并拷入拷出整块标志后，info_array 能正确标出溢出所在的矩阵。
+- 观察：lag2c 等在非阻塞 queue、延迟 100 ms 时仍返回正确的 info。WDDM 上的同步 `cudaMemcpyFromSymbol` 实际等待了整个设备；Linux 上没有测。
+- 详见 `experiments/magma_gpu/results/round51_stream/TRIAGE.md`。§29.67 末尾的"附带发现"即由本节处理。
+
+### 29.69 第 52 轮：多卡例程的通用调度模糊测试；新缺陷 M258（2026-11-27，roxy，单卡模拟多卡）
+
+- 工具 `probes/mgpu_fuzz/gen_fuzz.py`：原样复制 MAGMA 源文件，`setdevice` 改为空操作，`queue_create` 改在 GPU 0 上建队列，并在每个提交到 queue 的语句前后各插一个点。运行时只在第 target 个点让该 queue 睡 100 ms。不需要先写 happens-before 模型。
+- **必须同时有前置点**：只用后置点时，延迟落在紧随其后的 `magma_event_record` 之前，等这个事件的操作全都跟着推迟，窗口反而关上。第一遍 2,044 次全部正确，连阳性对照都没找到。加上前置点后，阳性对照（potrf U、n = 4096、ngpu 2）8/322 出错，全部在 M255 的那个 trsm 之前，工具得到标定。
+- 第二遍共 5,445 次，覆盖 getrf_mgpu、geqrf2_mgpu、potrf_mgpu（U/L）、hegst_m、trsm_m、getrf_m（核内 / 核外）、potrf_m，ngpu 1–4。11 个出错全部是 M255：阳性对照 8 个，potrf_m（L）3 个。potrf_m 原先是推断在 M255 的影响范围内，现在是实测。其余例程全部正确，即正面结果。
+- **M258（新）zgetrf_m**：ngpu 在分配前（l.187–192）和循环中（l.248–252）各算一次，用的 NB 不同（前者受 `MAGMA_NGR_NB` 限制，或因矩阵很高而偏小）。分配时减少了卡数之后，循环仍用满 ngpu0 张卡，对应的 queue 为 NULL、缓冲区未分配，进程访问违例；清理也跑到 ngpu0。
+  - 实测：恰在 ngpu0 > ceildiv(MAGMA_NGR_NB, nb) 时崩溃。
+  - 补丁（循环中 ngpu 取 min(·, 已分配数)，清理也按已分配数）后 12/12 正确。
+  - Lean：`getrf_m_loop_exceeds_alloc`、`getrf_m_ngr64_instance`、`getrf_m_fix_within_alloc`。
+  - potrf_m 的同类写法两处都向上取整，循环用的卡数不会超过分配数，没有问题。
+- 局限：只做单点延迟；只测 z 精度和所列的规模、参数组合。详见 `experiments/magma_gpu/results/round52_mgpu_fuzz/TRIAGE.md`。
+- 第三、四批（`c_`、`d_` 前缀）全部正确：unmqr_m 144、geqrf_m 724、ungqr_m 492、hetrd_mgpu n = 3072 抽样 595、heevdx_2stage_m n = 1024 全部前置点 2,267。后者覆盖 he2hb_mgpu、hemm/her2k_mgpu、bulge_back_m、bulge_applyQ_v2_m、unmqr_m 和 stedx_m。
+- 生成器修正：匹配括号前先剥掉注释和字符串，并跳过预处理行；queue 表达式允许带结构体前缀；为 `zbcyclic` 辅助函数生成了副本。重新生成之前的 29 个副本，与旧版逐字节相同。
+- **方法盲点**：前四批里，CPU 接口的 `_m` 例程收到的主机数组都是可分页的 `std::vector`。可分页内存上的 D2H 异步拷贝实际是同步完成的，所以"返回时拷贝还没完成"或"主机过早读缓冲区"这类竞争测不到，而 MAGMA 自己的测试程序用的是锁页内存。
+  - 已给探针加上 `R52_PIN` 模式：主机数组换成锁页副本，调用一返回、在任何设备同步之前就拷回来检查。
+  - 结果见 §29.72。
+
+### 29.70 第 53 轮：gehrd_m + unghr_m 在 ilo > 1 时交错 T；新缺陷 M259（2026-11-27，roxy，库版本，1 张 GPU）
+
+- 来源：第 52 轮给 gehrd_m 做模糊测试时读源码发现。
+  - `zgehrd_m` 把 ilo − 1 向下取整到块边界，并把起点在全局列 i 的块的 T 存到 `T + i*nb`。
+  - `zunghr_m` 把从 ilo − 1 开始的子矩阵交给 `ungqr_m`，T 没有平移。`ungqr_m` 按子问题里的列号读 T，于是每个子块拿到的都是别的块的 T，或者是从未写过的 0。
+  - 单卡 `zgehrd` 存在 `dT(0, i−ilo)`，与 unghr 的读法一致。
+  - MAGMA 的测试程序只测 ilo = 1。
+- 实测（`results/round53_hessenberg/`）：
+  - `gehrd_m` 自己的 H 和 tau 在 49 个用例里都正确。
+  - `gehrd_m + unghr_m` 恰好在"ilo > 1 且 ihi − ilo + 1 > nb"的 36 个用例里出错：‖QHQᴴ − A‖/‖A‖ 为 4–21，info 0。其余 13 个正确。
+  - 单卡这一对和补丁版都是 49/49 正确。
+- 端到端：`zgeev_m`（Version5）先做 `zgebal("B")`，只要它做了置换就会走到这里。
+  - n = 100、256，ilo = 2、4：`zgeev_m` 的特征向量残差为 10–15，`dgeev_m` 为 8.6–15，info 都是 0。
+  - 单卡 `geev` 约 1e-13。
+- 补丁：子问题从取整后的 ilo_r 开始，T 平移 ilo_r·nb。多出来的反射的 tau 在 zgehrd 的前提下为 0。
+- Lean（`Magma/MultiGpu.lean`）：`unghr_m_reads_wrong_T`、`unghr_m_inconsistent`、`unghr_m_ilo1_consistent`、`unghr_single_consistent`、`unghr_m_fix_consistent`、`unghr_m_fix_extra`。
+- 另外确认：`zpotrf_mgpu_right.cpp` 整个文件在 `#if 0` 里（"needs updating to MAGMA v2 interfaces"），不参与编译，不需要测。
+
+### 29.71 第 54 轮：CPU 接口多卡驱动的参数维度（2026-11-27，roxy，库版本，ngpu = 1；没有新缺陷）
+
+- 补测第 38 轮没有覆盖的参数维度：lda = n + 7 并用哨兵检查填充行、z 精度、Upper、itype 2/3、jobz N、range V、geev_m 左向量、m ≠ n。共 492 个用例，全部 exit 0。
+- 出错的全部能归入已登记的缺陷：
+  - M121：n ≤ 128 时忽略 range，96 例；
+  - M040：hegvdx_2stage_m 在 jobz N 时返回 −14，36 例；
+  - M065：2-stage 的 Upper，30 例；
+  - M216：dstedx_m 用未缩放的 (vl, vu] 挑选缩放后问题的特征向量，6 例。这是新路径：经 hegvdx_m、hegvdx_2stage_m（itype 1，range V）到达，特征值正确，但 75 个特征向量里 74 个是错的。
+  - 已补进上述各条的证据。
+- 填充行全部没有被改写。详见 `experiments/magma_gpu/results/round54_mgpu_param/TRIAGE.md`。
+
+### 29.72 锁页主机数组复测；新缺陷 M260（2026-11-28，roxy，单卡模拟多卡）
+
+- 第 52 轮的模糊测试改用锁页主机数组（`R52_PIN=1`），重测 CPU 接口的 10 个例程，约 4,100 次。除 potrf_m 的 M255（与可分页时相同）外，只有 gehrd_m 出现新的错误。
+- **M260 gehrd_m**：
+  - 最后一次 zlahr2_m 在每张卡上排了 `setmatrix_async(Y = work → dY)`。循环后只同步持有剩余块（R ≤ 2）的卡，随即 zgehd2 覆写 work。
+  - R < ngpu 时，面板卡的拷贝读到草稿，zlahru_m 用错误的 Y 更新面板的上半部分，info 0。
+  - MAGMA 的 testing_zgehrd 就是用锁页的 h_work 调用 zgehrd_m。
+  - 实测 ngpu 2、n = 96 出错（相对误差 2.35e3，延迟 1–500 ms 都出错）；补丁（zgehd2 之前同步所有 queue）后，2,534/2,534 正确。
+- **单卡模拟的新盲点**：所有虚拟设备共用一个 H2D 拷贝引擎，按提交顺序串行。排在被延迟拷贝之后的卡会跟着等，把竞争掩盖掉：其他组合中 zgehd2 都是在延迟结束后才开始。
+- Lean：`gehrd_remainder_le_two`、`gehrd_m_unsynced_device`、`gehrd_m_panel_unsynced`、`gehrd_m_panel_synced_when_full`、`gehrd_m_n96_instance`、`gehrd_m_fix_syncs_all`。
+- 详见 `experiments/magma_gpu/results/round52_mgpu_fuzz/TRIAGE.md` 中"锁页主机数组复测"一节。
+
+### 29.73 第 55 轮：geqrf_gpu 的 dT 的消费者；新缺陷 M261–M263（2026-11-28，roxy，库版本，1 张 GPU）
+
+- 沿着 M259 的思路，检查中间结果 dT 的生产方与消费方是否用同一约定，共 236 个用例，外加 unmqr_2stage_gpu 的 4 种输入形式各 96 例。
+- ungqr_gpu、ungqr、geqrs(3)_gpu、gels(3)_gpu 全部正确。
+- **M261 unmqr_gpu**：
+  - 文档只说 dT 是 geqrf_gpu 的输出，并且一部分被当作工作区。但 larfb 工作区放在 dT + 2k·nb，需要 nw·nb；按 geqrf_gpu 的文档，那里只剩 roundup(k, 32)·nb。
+  - nw > roundup(k, 32) 时写出界 (nw − roundup(k, 32))·nb 个元素，保护区实测与预测完全相等（72/72）。
+  - 不加保护区时，越界写改写了相邻的 dC，64/72 例结果出错，info 0。
+  - MAGMA 自己的测试程序把 dT 分配得更大，所以测不出来。
+- **M262 unmqr_2stage_gpu（公开接口）**：side = Right 时对每一块都用 MagmaLeft 调 larfb，工作区只有 n·nb 却按 ldwork = m 使用。Right 48/48 错，info 0。
+- **M263 unmqr_2stage_gpu**：文档要求的输入只是 zgeqrf 的输出，但它实际需要显式存储的 V 和每一块的 T（zgeqrf_gpu 不写最后一块的 T）。按文档调用 96/96 全错；两者都补齐后 Left 全对。
+- Lean：`Magma/Dense/QrEigen.lean` §55，6 个定理。
+- 详见 `experiments/magma_gpu/results/round55_qr_dt/TRIAGE.md`。
+
+### 29.74 第 56 轮：Hermitian / 对称不定分解与其求解器（2026-11-28，roxy）
+
+- nopiv 的 GPU 与 CPU 接口、Bunch–Kaufman 的 hetrf/hetrf_gpu/hesv（用 LAPACK zhetrs 检查 ipiv 兼容性）、Aasen，覆盖 U/L、nrhs、ld 填充，共 528 例。
+- 求解类 512 例全部正确。
+- **M264（轻微）**：hetrf_aasen 的文档描述了 Upper，实际对 Upper 返回 NOT_IMPLEMENTED（−117）。
+- 详见 `experiments/magma_gpu/results/round56_ldl/TRIAGE.md`。
+
+### 29.75 第 57 轮：hetrd_gpu → unmtr_gpu，geqrf_batched → unmqr_batched（2026-11-28，roxy）
+
+- hetrd_gpu / hetrd2_gpu 的 dA、wA、tau 原样交给 unmtr_gpu：192/192 正确，wA 与 dA 逐位相同。
+- geqrf_batched → unmqr_batched：Left 60/60 正确。
+- **M265（轻微）**：unmqr_batched 的文档列出了 Right，实际返回 −1，即 "only side = MagmaLeft is supported"。
+- 详见 `experiments/magma_gpu/results/round57_trd_batched/TRIAGE.md`。
+
+### 29.76 第 58 轮：CPU 接口的生产方 → 消费方组合（2026-11-28，roxy；没有新缺陷）
+
+- 用 MAGMA 自己的 gebrd、geqrf、gelqf(_gpu)、geqlf、hetrd 的输出，喂给 unmbr/ungbr、unmqr/ungqr2、unmlq、unmql、unmtr，并与 LAPACK 消费方在同一输入上比较，共 264 例，全部正确。
+- 结论：问题集中在 MAGMA 自定义的中间格式（T、dT 及其工作区），与 LAPACK 兼容的格式（反射向量与 tau）的交接没有问题。
+- 详见 `experiments/magma_gpu/results/round58_cpu_pairs/TRIAGE.md`。
+
+### 29.77 第 59 轮：设备工作区按文档大小分配并加保护区（2026-11-28，roxy；没有新缺陷）
+
+- 对 13 个带文档化设备工作区的公开例程（geqrf/geqrf3/geqrs/geqrs3_gpu、he2hb、hetrd2_gpu、getri_gpu、zstedx、gegqr_gpu 四种 ikind、ztrsm_work、zhemv_work、zlarfb_gpu、geqp3_gpu）统一检查：工作区取文档大小，其后放 64K 个元素的哨兵。共 89 例，保护区都没有被写。
+- 除 M261 外，设备工作区没有写出界。geqp3_gpu 的 z 精度同样拒绝文档给的 LWORK，已补进 M120。
+- 详见 `experiments/magma_gpu/results/round59_guard/TRIAGE.md`。
+
+### 29.78 第 60 轮：工作区查询接口按查询值分配并加保护区（2026-11-28，roxy；没有新缺陷）
+
+- 对 expert_gpu_work 系列（geqrf、getrf、potrf、getri、getrs、potrs、trtri、gegqr）、geqrf_batched_work 和 gb*_native_work，按包装函数的写法先查询、再按查询值分配，主机和设备工作区后各放 256 KB 哨兵，共 95 例。保护区都没有被写，结果正确。
+- Native 模式被拒（geqrf、getrs）与文档一致，不登记。gb*_native_work 查询时也要传有效的 info，这与 M044 是同一处。
+- 测试程序问题：run_list.ps1 原先只认 `^r5` 开头的行，已改为 `^r[0-9]`。
+- 详见 `experiments/magma_gpu/results/round60_query_guard/TRIAGE.md`。
+
+### 29.79 第 61 轮：可变尺寸批量分解；新缺陷 M266、M267（2026-11-28，roxy）
+
+- getrf_vbatched、getrf_vbatched_max_nocheck_work、getrf_nopiv_vbatched、potrf_vbatched 与 LAPACK 逐矩阵比较，共 64 例加 85 个针对性用例。非奇异矩阵全部正确；奇异矩阵上重现了已知的 M164、M173。
+- **M266**：potrf_vbatched 大路径（max_n 超过交叉点）调用面板时 gbstep 传 0，所以 info 报成 (c mod 128) + 1，整批都如此。
+- **M267（仅 Z）**：360 ≤ max_n ≤ 448 时，lpout 的共享内存检查失败，返回 −33，整批都没有分解，info_array 仍为 0。
+- Lean：`Magma/Dense/QrEigen.lean` §61，6 个定理。
+- 详见 `experiments/magma_gpu/results/round61_vbatched/TRIAGE.md`。
+
+### 29.80 第 62 轮：分派路径的资源上限与回退（2026-11-28，roxy；没有新缺陷）
+
+- 列出所有在资源不足时返回负值的批量和原生内核，逐个检查调用者是否回退：getf2_fused（batched/vbatched）、gesv_batched_small、geqr2_fused_sm、unm2r_sm、gbtrf_fused_sm 都会回退；getf2_native_fused 虽然返回值被忽略，但调用前已按 m 改走 blocked 路径。只有 vbatched 的 lpout 没有回退（M267）。
+- 实测 zgetrf_native 在 m 跨过 7168（Z 的 fused 上限）时，22/22 正确。
+- 详见 `experiments/magma_gpu/results/round62_native/TRIAGE.md`。
+
+### 29.81 第 63 轮：从未覆盖的 magmablas 辅助内核；新缺陷 M268、M269（2026-11-28，roxy）
+
+- 16 个辅助内核与按其文档写的 CPU 参考实现比较，共 466 例。geadd2、gemv_conj、laset_band、laswpx/laswp2、三种转置、trmv、symmetrize、symv_work、larfg、swapdblk、lacpy_conj 全部正确。
+- **M268**：magmablas_[zc]geam 的 ConjTrans 没有取共轭，按 Trans 计算，50/50 出错。MAGMA 自己的测试程序也不取共轭，所以测不出来。
+- **M269**：magmablas_[zc]gemm_reduce 的文档写 AᵀB，实际计算 AᴴB。
+- Lean：`Magma/Kernels.lean` §63，4 个定理。
+- 详见 `experiments/magma_gpu/results/round63_mblas_aux/TRIAGE.md`。
+
+### 29.82 第 64 轮：magmablas BLAS 的 ConjTrans（2026-11-28，roxy；没有新缺陷）
+
+- 沿着 M268 的思路，对 gemm/gemv/trsm/trmm 的非批量、batched、vbatched 版本和 trsv，用复数数据、trans 取 N/T/C，与参考 BLAS 比较，共 312 例，全部正确。M268 只出在 geam 一处。
+- 详见 `experiments/magma_gpu/results/round64_conj/TRIAGE.md`。
+
+### 29.83 第 65 轮：稀疏求解器在真正复数数据上的表现；新缺陷 M270（2026-11-28，roxy）
+
+- 21 个求解器在复 Hermitian 正定、Hermitian 不定和非 Hermitian 三类 1024 维复系统上，以真实残差判定。出错的大多可以归入已知缺陷（M084 CG/PCG、M103 IDR、M089 BA/ITERREF），或者属于如实报告的失败。
+- **M270**：TFQMR 的四个变体都把影子内积写成 zdotc(r, r̃)（xᴴy 的顺序反了），得到的是共轭值。Hermitian 上不受影响，非 Hermitian 复系统不收敛。改正顺序后 39/39/14 步收敛。
+- 补丁要打在 ztfqmr_merge / zptfqmr_merge 上：`--solver TFQMR` 映射到 merge 版本。
+- 详见 `experiments/magma_gpu/results/round65_sparse_complex/TRIAGE.md`。
+
+### 29.84 第 66 轮：稀疏 LOBPCG；新缺陷 M271（2026-11-28，roxy）
+
+- 二维磁 Laplacian（n = 256/1024，实与复），k = 4/8/16，与 LAPACK zheevd 比较。24/24 都报成功，但最大残差 6e-6 到 6e-4，要求的是 1e-8。
+- **M271**：主循环在第 0 个 Ritz 对的残差达标时就跳出（l.496–508），不等其余 k − 1 对收敛。去掉这个跳出后 24/24 收敛到 1e-8。
+- 详见 `experiments/magma_gpu/results/round66_lobpcg/TRIAGE.md`。
+
+### 29.85 第 67 轮：sparse 格式与转置在复数数据上的表现；新缺陷 M272、M273（2026-11-28，roxy）
+
+- 第 46 轮的格式测试只用了实数。本轮改用真正的复数（136 个进程）。各格式的结论与第 46 轮一致（M125、M132、M137、M138、M251–M254），没有复数特有的新问题，已为这几条补了证据。
+- **M272**：magma_zprint_csr_mtx 的 RowMajor 分支把尺寸行打印成 "列 行"。
+- **M273**（读码）：ColMajor 分支经由 z_transpose_csr，它会释放自己刚交出去的数组，调用者读的是已释放的内存。
+- 详见 `experiments/magma_gpu/results/round67_formats_complex/TRIAGE.md`。
+
+### 29.86 第 68 轮：geqr2x{,2,3,4}_gpu 的工作区；新缺陷 M274（2026-11-28，roxy）
+
+- 四个公开的面板 QR 版本，dwork 按文档大小（2N 或 3N 个 double）分配并加保护区。凡是 n ≥ 16 的用例保护区都被写（共 47/56）。实际用量为 4n、5n、6n，到 n = 128 时 v3/v4 达到 50n。
+- MAGMA 自己的测试程序分配了 130·min_mn 个 double，所以测不出来。这与 M261 是同一种模式。
+- 详见 `experiments/magma_gpu/results/round68_geqr2x/TRIAGE.md`。
+
+### 29.87 第 69 轮：范数与 geqr2 的工作区（2026-11-28，roxy；没有新缺陷）
+
+- 逐个核对测试程序中的设备工作区，补测第 59 轮没覆盖的 zlange、zlanhe、zgeqr2_gpu（文档大小加保护区）。117 例全部正确；zlanhe 的 F 范数被拒绝，与文档的 "not yet supported" 一致；对角元虚部按文档被忽略。
+- 设备工作区"文档写小了"的问题目前只有 M261、M274。
+- 详见 `experiments/magma_gpu/results/round69_norms/TRIAGE.md`。
+
+### 29.88 第 70 轮：剩余的 magmablas 辅助内核；新缺陷 M275、M276（2026-11-28，roxy）
+
+- herk_small_reduce 160 例、hemv/symv 的 Upper 与 incx 2 共 40 例、symmetrize_tiles 8 例，全部正确。
+- **M275**：laswp_sym 每 32 个主元分一块，块内用相对下标填 ipiv，内核却按绝对下标读，第二块起越界；超过 32 个主元时结果全错。
+- **M276**：laswp_sym 同一次启动里，各线程依次处理多个主元而没有同步，负责同一元素的线程会随主元变化，形成竞争，结果错且每次不同。只有一个主元时正确（复对称语义）。
+- 库内没有调用者。详见 `experiments/magma_gpu/results/round70_mblas_aux2/TRIAGE.md`。
+
+### 29.89 第 71 轮：未覆盖的面向用户的 batched 例程（2026-11-28，roxy；没有新缺陷）
+
+- gemm/gemv_batched_strided（N/T/C）、geadd/lacpy/laset/transpose_conj/hemv_batched、gbsv_batched(_strided)，共 102 例，与 CPU 参考或 LAPACK 一致。
+- 详见 `experiments/magma_gpu/results/round71_batched_misc/TRIAGE.md`。
+
+### 29.90 第 72 轮：batched Jacobi 的 strided 接口（2026-11-28，roxy；没有新缺陷）
+
+- gesvj_expert_batched_strided、heevj_batched_strided_small_sm 与对应的指针数组接口输出逐位相同。与 LAPACK 的偏差都来自已知的 M240（Windows 上的 long 交换），已补证据。
+- 详见 `experiments/magma_gpu/results/round72_jacobi_strided/TRIAGE.md`。
+
+### 29.91 第 73 轮：复数稀疏工具函数（2026-11-28，roxy；新缺陷 M277、M278）
+
+- M277：magma_z_spmm（稀疏 × 稀疏）在 CUDA ≥ 12 分支把 beta = NULL 传给 cusparseSpGEMM_workEstimation，CUDA 13 上每次返回 −3003；文档里的 alpha 在两个分支都没有用到（读码）。
+- M278：magma_zm_27stencil 只清除 x 方向的边界耦合；y 方向回绕的耦合被保留，n = 3 时多 84 个、n = 5 时多 312 个，与按代码推出的数字完全一致；n = 2 时丢失 30 个。5 点模板正确。
+- M137/M138 扩充：transposeconj/abs/struct_cpu 共用同一个模板，方阵正确，宽矩阵堆越界写（崩溃，10 × 11 时时有时无），高矩阵返回的维度没有交换。
+- tril/triu、diagadd、indexsort(val) 全部正确。Lean：Kernels.lean §73 两个定理；Kernels.lean 394 行 43 个 theorem，总计 5,855 行 494 个。
+- 详见 `experiments/magma_gpu/results/round73_sparse_utils/TRIAGE.md`。
+
+### 29.92 第 74 轮：更多稀疏工具函数（2026-11-28，roxy；新缺陷 M279、M280、M281）
+
+- M279：spmv_shift 的三个内核算 αAx − λx + βy，文档是 α(A − λI)x + βy；α ≠ 1 时差 5–9%。
+- M280：zmslice 按 ceil(n / num_slices) 切分，末尾几片起点越过 n，片大小为负，读 A.row 越界：返回 −112，或者不确定地返回 0 且 start > end；出错后输出里留着已释放的指针，magma_zmfree 导致堆损坏（0xC0000374）。MAGMA 测试程序的用法（9 片取第 8 片）在 28 个 n ≤ 55 的尺寸上触发。
+- M281：zmconjugate 不检查格式，ELL 矩阵触发非法内存访问仍返回 0。
+- mcsrcompressor_gpu、mshrink、vtranspose、mconjugate（CSR）、mslice（正常片）全部正确。Lean：Kernels.lean §74 四个定理；共 5,885 行 498 个 theorem，axioms.txt 456 行，无 sorryAx。
+- 注意：`build_probe.bat` 从 `D:\lean4hpc\magma\probes\` 读源码，scp 时要放到这个子目录。
+- 详见 `experiments/magma_gpu/results/round74_sparse_utils2/TRIAGE.md`。
+
+### 29.93 第 75 轮：直接调用 IDR(s) 与 magma_zqr（2026-11-28，roxy；新缺陷 M282、M283，扩充 M103）
+
+- M282：6 个复数 IDR(s) 变体的角度保护用 |Re(tᴴr)|（注释和原算法都是 |tᴴr|），所以结果不具有相位不变性。A = iS（S Hermitian 正定）时 idr/pidr 在 s = 1/2/4/8 下全部 −201 不收敛，A = S 时 40/27/15/9 步收敛。只改这一行的补丁版 20/20 收敛，所有相位的步数和残差与 A = S 完全相同。
+- M103 扩充：idr_strms、pidr_strms 与 MERGE 变体结果逐位相同，所有输入都失败。
+- M283：magma_zqr 对设备矩阵原地分解，文档为 [in] 的 A 被改写成 Q；Q、R 正确。
+- MAGMA 2.10 的 sparse 里已经没有 ISAI / ParILU，第 74 轮交接里那句已改正。
+- Lean：Kernels.lean §75 两个定理；共 5,904 行 500 个 theorem，axioms.txt 458 行，无 sorryAx。
+- 详见 `experiments/magma_gpu/results/round75_idr/TRIAGE.md`。
+
+### 29.94 第 76 轮：PBiCG / PQMR 用到的转置预条件（2026-11-28，roxy；新缺陷 M284，扩充 M106）
+
+- M284：magma_z_applyprecond_left/right 的 MagmaTrans 分支对 ICC 仍按左 L⁻¹、右 L⁻ᵀ 求解，影子向量得到 L⁻¹L⁻ᵀu 而不是 M⁻ᵀu。四种精度相同。
+  - 恒等式 uᵀ(M⁻¹v) = (M⁻ᵀu)ᵀv：ILU 误差 1e-16，ICC 误差 0.03–0.22；把顺序对调后为 1e-16。
+  - PBiCG + ICC 在 n = 100 时 −201；PQMR + ICC 在 n = 900 时要 370 步，ILU 只要 28 步。
+  - 补丁后与 ILU 完全相同。
+- M106 补充：不加预条件的 QMR 在实 SPD 拉普拉斯矩阵上跑满 maxiter 后报 −201，真实残差已经是 3e-9 和 4e-10。
+- custom spmv / precond 是模板，不算缺陷。
+- Lean：Kernels.lean §76 两个定理；共 5,925 行 502 个 theorem，axioms.txt 460 行，无 sorryAx。
+- 详见 `experiments/magma_gpu/results/round76_precond_trans/TRIAGE.md`。
+
+### 29.95 第 77 轮：LSQR 与复数矩阵上的转置预条件（2026-11-28，roxy；新缺陷 M285）
+
+- 在这个 wrapper 里，MagmaTrans 的意思是共轭转置：ILU 的转置用 transposeconjugate 构造，LSQR、PBiCG 乘的是 Aᴴ，复数矩阵上 ILU 的转置分支满足 Hermitian 恒等式。
+- M285：Jacobi 的转置分支乘 D⁻¹ 而不是 conj(D⁻¹)。复数矩阵（对角 4.05 + 0.8i）上 Hermitian 恒等式误差 0.388；LSQR + Jacobi 为 −201，PBiCG + Jacobi 为 −202，残差最大 13.2，而无预条件时分别 64/91、33/47 步收敛。补丁后与无预条件相同。只影响 z/c 版本。
+- 实矩阵上的 LSQR 四种预条件都收敛，ICC（M284）只是多用一些步数。
+- Lean：Kernels.lean §77 两个定理；共 5,943 行 504 个 theorem，axioms.txt 462 行，无 sorryAx。
+- 详见 `experiments/magma_gpu/results/round77_lsqr_precond/TRIAGE.md`。
+
+### 29.96 第 78 轮：可变尺寸批量 BLAS（2026-11-28，roxy；没有新缺陷，扩充 M246、M248）
+
+- 174 例，复数数据，尺寸含 0，ld 余量和另一侧三角填哨兵。gemm / gemv / hemv / trmm / trsm_vbatched 全部正确。
+- herk / syrk / her2k / syr2k_vbatched：计算的那一侧正确，另一侧三角每次都被改写，即 M246。
+- hemm_vbatched：每批 12 个矩阵中 10 个出错，即 M248。用第 35 轮的 fetch 补丁重新编译 zhemm_vbatched_core.cu 后 8/8 正确。
+- mconvert：主机上只支持 CSR ↔ X，两端都不是 CSR 时明确返回 NOT_SUPPORTED，设备路径第 46 轮已测过，所以没有再测。
+- 教训：按文件名扫描记录会漏掉按例程名登记的条目（M245/M246/M248 已经包含 vbatched），写探针前要同时按例程名搜。
+- 详见 `experiments/magma_gpu/results/round78_vbatched_blas/TRIAGE.md`。
+
+### 29.97 第 79 轮：trtri_diag_batched / vbatched 与 get/setmatrix_transpose（2026-11-28，roxy；没有新缺陷）
+
+- trtri_diag_batched / vbatched：44 种组合，有效对角块的逆误差 ≤ 7.2e-16，填了 NaN 的另一侧三角没有被引用。
+  - 观察：upper 的 triple_zgemm16_part1 在条件装载失败时没有清零 rA，旧值写进了超出 n 的补齐列（例如 n = 17 时第 20、24、28 列）。库内唯一的使用者 trsm_batched 只取有效部分，没有可观察的影响，不计入缺陷。
+- get/setmatrix_transpose（单卡）：18 例同步后全部正确。
+  - 观察：对锁页主机内存，getmatrix_transpose 返回时最多 100% 的元素还没到；文档没写明需要调用者同步，但库内调用者 getrf_m 会自己同步，不计入缺陷。
+- lacpy_sym_in/out 的 rows 约定（文档写 rows[i] / rows[n+i]，代码用交错布局）只记在交接文档里，留待核对。
+- 详见 `experiments/magma_gpu/results/round79_trtri_transpose/TRIAGE.md`。
+
+### 29.98 第 80 轮：其他精度上的复核与 lacpy_sym 的约定（2026-11-28，roxy；新条目 M286）
+
+- d 精度：M279（差 5–8%）、M280（−112 和不确定的结果）、M284（dpbicg + ICC −202，残差 3.33）全部复现。
+- c 精度：M282（A = iS 时 −202，残差 NaN）、M285（clsqr + Jacobi −201）全部复现。
+- M286：lacpy_sym_in/out 的文档描述 rows[i] / rows[n+i] 交换，代码按交错二元组做赋值。库内唯一的调用者 Aasen 与代码一致，按文档调用的外部用户会出错。读码确认。
+- FINDINGS 共 285 条（M001–M286）。
+- 详见 `experiments/magma_gpu/results/round80_prec/TRIAGE.md`。
+
+### 29.99 第 81 轮：geqr2x 的辅助函数与 n > 128（2026-11-28，roxy；新缺陷 M287、M288）
+
+- M287：magma_ztrmv_tkernel / ztrmv_kernel2 把部分和放在 `__shared__ sum[128]`，却以 k 个线程启动。geqr2x2/3/4（文档 N ≥ 0）在 n ≥ 130 时触发非法内存访问，info = 0，R 全错。z、d 精度都在 129/130 之间出错，与预测一致。larfbx 在 k ≥ 129 时同样出错。gegqr 自己检查了 n ≤ 128，所以只影响直接调用者。第 68 轮最大只测到 n = 128，所以当时没有发现。
+- M288：larfbx 计算 HᴴC（文档写 HC），并且会读 T 的下三角（GPU 确认）；larfx 的 tau 约定与文档相反，也不更新 xnorm；larfgx 把 beta 存到 dA 而不是 dx0（读码）。
+- Lean：Kernels.lean §81 三个定理；共 5,966 行 507 个 theorem，axioms.txt 465 行，无 sorryAx。FINDINGS 287 条（M001–M288）。
+- 详见 `experiments/magma_gpu/results/round81_geqr2x_large/TRIAGE.md`。
+
+### 29.100 第 82 轮：按运行时线程数扫描，magma_zhetrs_gpu（2026-11-28，roxy；新缺陷 M289、M290）
+
+- 扫描所有以运行时变量作为线程数的内核启动，找到了从没测过的公开函数 magma_zhetrs_gpu。
+- M289：Lower 的前代走融合内核（逐列版本被 `if (0)` 关掉了），这些内核访问 B 时不带列下标，只解第 0 列。nrhs ≥ 2 时恰好 nrhs − 1 列出错，info = 0。补丁（`if (1)`）后 11/11 正确。
+- M290：对角块内核以 <<<1, nrhs>>> 启动，nrhs > 1024 时启动失败且不检查，所有列都错，info = 0。
+- 四种精度的代码相同。Lean：Kernels.lean §82 两个定理；共 5,982 行 509 个 theorem，axioms.txt 467 行，无 sorryAx。FINDINGS 289 条（M001–M290）。
+- 详见 `experiments/magma_gpu/results/round82_hetrs/TRIAGE.md`。

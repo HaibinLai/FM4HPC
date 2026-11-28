@@ -1,0 +1,30 @@
+GPU 0 used before: 0 MiB
+######## dsteqr calls in zstedx (no failure)
+[dsteqr] call 1 n=75
+[dsteqr] call 2 n=75
+[dsteqr] call 3 n=75
+[dsteqr] call 4 n=75
+zstedx n=300 (blocks rows 1-150, 151-300): info=0
+######## forced dsteqr failure at call 1 of 4
+[dsteqr] call 1 n=75  <- forced failure
+zstedx n=300 (blocks rows 1-150, 151-300): info=226  decoded with base n+1=301: rows 0..226 | decoded with block base m+1=151: rows 1..75 (block-relative)
+######## forced dsteqr failure at call 3 of 4
+[dsteqr] call 3 n=75  <- forced failure
+zstedx n=300 (blocks rows 1-150, 151-300): info=226  decoded with base n+1=301: rows 0..226 | decoded with block base m+1=151: rows 1..75 (block-relative)
+######## forced dsteqr failure at call 4 of 4
+[dsteqr] call 4 n=75  <- forced failure
+zstedx n=300 (blocks rows 1-150, 151-300): info=11626  decoded with base n+1=301: rows 38..188 | decoded with block base m+1=151: rows 76..150 (block-relative)
+######## dsidi
+dsidi(job=111) indefinite, uplo=U, 2x2 pivots=0: info=0  max|A X - I| = 0.367  inertia +/-/0 = 4/4/0 (true positive count 4)
+dsidi(job=111) indefinite, uplo=L, 2x2 pivots=0: info=0  max|A X - I| = 1.06  inertia +/-/0 = 4/4/0 (true positive count 4)
+dsidi(job=111) SPD, uplo=U, 2x2 pivots=0: info=0  max|A X - I| = 0.131  inertia +/-/0 = 8/0/0 (true positive count 8)
+dsidi(job=111) SPD, uplo=L, 2x2 pivots=0: info=0  max|A X - I| = 1.16  inertia +/-/0 = 8/0/0 (true positive count 8)
+######## dsort
+dsort_batched descending, n=4096 with one NaN: index array: out-of-range 0, duplicated 1, missing 1 (a permutation has 0/0/0)
+######## gesvj chunks
+gesvj batch 70000 of 64x64: free 33.7 GB
+  ret=0 sync=no error info != 0: 0; sampled matrices beyond index 65534: 47 checked, 47 with wrong singular values (worst rel. err 0.491)
+exit=0
+ROUND21_DONE
+
+[exited with code 0]

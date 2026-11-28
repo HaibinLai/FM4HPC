@@ -1,0 +1,443 @@
+group,routine,kind,m,n,info_magma,info_lapack,ratio,verdict,note
+blas,magmablas_zgemm,k=0,0,0,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,0,0,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,0,0,0,0,0,OK,
+blas,magmablas_zgemm,k=1,0,0,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,0,0,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,0,0,0,0,0,OK,
+blas,magmablas_zgemm,k=17,0,0,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,0,0,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,0,0,0,0,0,OK,
+blas,magmablas_zgemm,k=64,0,0,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,0,0,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,0,0,0,0,0,OK,
+blas,magmablas_zgemm,k=0,1,1,0,0,1.62e+15,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,1,1,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,1,1,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,1,1,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,1,1,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,1,1,0,0,0,OK,
+blas,magmablas_zgemm,k=17,1,1,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,1,1,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,1,1,0,0,0,OK,
+blas,magmablas_zgemm,k=64,1,1,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,1,1,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,1,1,0,0,0,OK,
+blas,magmablas_zgemm,k=0,2,2,0,0,4.34e+15,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,2,2,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,2,2,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,2,2,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,2,2,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,2,2,0,0,0,OK,
+blas,magmablas_zgemm,k=17,2,2,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,2,2,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,2,2,0,0,0,OK,
+blas,magmablas_zgemm,k=64,2,2,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,2,2,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,2,2,0,0,0,OK,
+blas,magmablas_zgemm,k=0,31,31,0,0,6.99e+16,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,31,31,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,31,31,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,31,31,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,31,31,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,31,31,0,0,0,OK,
+blas,magmablas_zgemm,k=17,31,31,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,31,31,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,31,31,0,0,0,OK,
+blas,magmablas_zgemm,k=64,31,31,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,31,31,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,31,31,0,0,0,OK,
+blas,magmablas_zgemm,k=0,32,32,0,0,6.99e+16,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,32,32,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,32,32,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,32,32,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,32,32,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,32,32,0,0,0,OK,
+blas,magmablas_zgemm,k=17,32,32,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,32,32,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,32,32,0,0,0,OK,
+blas,magmablas_zgemm,k=64,32,32,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,32,32,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,32,32,0,0,0,OK,
+blas,magmablas_zgemm,k=0,33,33,0,0,7.14e+16,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,33,33,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,33,33,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,33,33,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,33,33,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,33,33,0,0,0,OK,
+blas,magmablas_zgemm,k=17,33,33,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,33,33,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,33,33,0,0,0,OK,
+blas,magmablas_zgemm,k=64,33,33,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,33,33,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,33,33,0,0,0,OK,
+blas,magmablas_zgemm,k=0,63,63,0,0,1.39e+17,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,63,63,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,63,63,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,63,63,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,63,63,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,63,63,0,0,0,OK,
+blas,magmablas_zgemm,k=17,63,63,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,63,63,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,63,63,0,0,0,OK,
+blas,magmablas_zgemm,k=64,63,63,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,63,63,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,63,63,0,0,0,OK,
+blas,magmablas_zgemm,k=0,64,64,0,0,1.35e+17,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,64,64,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,64,64,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,64,64,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,64,64,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,64,64,0,0,0,OK,
+blas,magmablas_zgemm,k=17,64,64,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,64,64,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,64,64,0,0,0,OK,
+blas,magmablas_zgemm,k=64,64,64,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,64,64,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,64,64,0,0,0,OK,
+blas,magmablas_zgemm,k=0,65,65,0,0,1.43e+17,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,65,65,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,65,65,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,65,65,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,65,65,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,65,65,0,0,0,OK,
+blas,magmablas_zgemm,k=17,65,65,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,65,65,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,65,65,0,0,0,OK,
+blas,magmablas_zgemm,k=64,65,65,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,65,65,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,65,65,0,0,0,OK,
+blas,magmablas_zgemm,k=0,127,127,0,0,2.69e+17,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,127,127,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,127,127,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,127,127,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,127,127,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,127,127,0,0,0,OK,
+blas,magmablas_zgemm,k=17,127,127,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,127,127,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,127,127,0,0,0,OK,
+blas,magmablas_zgemm,k=64,127,127,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,127,127,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,127,127,0,0,0,OK,
+blas,magmablas_zgemm,k=0,128,128,0,0,2.66e+17,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,128,128,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,128,128,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,128,128,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,128,128,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,128,128,0,0,0,OK,
+blas,magmablas_zgemm,k=17,128,128,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,128,128,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,128,128,0,0,0,OK,
+blas,magmablas_zgemm,k=64,128,128,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,128,128,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,128,128,0,0,0,OK,
+blas,magmablas_zgemm,k=0,129,129,0,0,2.69e+17,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,129,129,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,129,129,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,129,129,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,129,129,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,129,129,0,0,0,OK,
+blas,magmablas_zgemm,k=17,129,129,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,129,129,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,129,129,0,0,0,OK,
+blas,magmablas_zgemm,k=64,129,129,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,129,129,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,129,129,0,0,0,OK,
+blas,magmablas_zgemm,k=0,257,257,0,0,5.24e+17,WRONG,
+blas,magmablas_zgemm beta=0,C=NaN,k=0,257,257,0,0,0,WRONG,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=0,257,257,0,0,0,WRONG,
+blas,magmablas_zgemm,k=1,257,257,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=1,257,257,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=1,257,257,0,0,0,OK,
+blas,magmablas_zgemm,k=17,257,257,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=17,257,257,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=17,257,257,0,0,0,OK,
+blas,magmablas_zgemm,k=64,257,257,0,0,0,OK,
+blas,magmablas_zgemm beta=0,C=NaN,k=64,257,257,0,0,0,OK,
+blas,magmablas_zgemm alpha=0,beta=0,C=NaN,k=64,257,257,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,0,0,0,0,0,OK,
+blas,magmablas_zhemv beta=0,y=NaN,rand,0,0,0,0,0,OK,
+blas,magmablas_zlange(1),rand,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlange(I),rand,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlange(M),rand,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlanhe(1),rand,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlanhe(I),rand,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlanhe(M),rand,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlange(1),nan,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlange(I),nan,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlange(M),nan,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlanhe(1),nan,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlanhe(I),nan,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_zlanhe(M),nan,0,0,0,0,0,OK,got=0.000000 ref=0.000000
+blas,magmablas_ztranspose,rand,0,0,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,0,0,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,0,0,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,0,0,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,0,0,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,0,0,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,0,0,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,0,0,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,0,0,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,0,0,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,0,0,0,0,0,OK,
+blas,magmablas_zgeadd,rand,0,0,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,1,1,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,1,1,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,1,1,0,0,0,OK,got=0.619672 ref=0.619672
+blas,magmablas_zlange(I),rand,1,1,0,0,0,OK,got=0.619672 ref=0.619672
+blas,magmablas_zlange(M),rand,1,1,0,0,0,OK,got=0.619672 ref=0.619672
+blas,magmablas_zlanhe(1),rand,1,1,0,0,0,OK,got=0.450258 ref=0.450258
+blas,magmablas_zlanhe(I),rand,1,1,0,0,0,OK,got=0.450258 ref=0.450258
+blas,magmablas_zlanhe(M),rand,1,1,0,0,0,OK,got=0.450258 ref=0.450258
+blas,magmablas_zlange(1),nan,1,1,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,1,1,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,1,1,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,1,1,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,1,1,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,1,1,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,1,1,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,1,1,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,1,1,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,1,1,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,1,1,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,1,1,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,1,1,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,1,1,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,1,1,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,1,1,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,1,1,0,0,0,OK,
+blas,magmablas_zgeadd,rand,1,1,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,2,2,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,2,2,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,2,2,0,0,0,OK,got=1.239713 ref=1.239713
+blas,magmablas_zlange(I),rand,2,2,0,0,0,OK,got=1.011171 ref=1.011171
+blas,magmablas_zlange(M),rand,2,2,0,0,0,OK,got=0.660456 ref=0.660456
+blas,magmablas_zlanhe(1),rand,2,2,0,0,0,OK,got=1.029127 ref=1.029127
+blas,magmablas_zlanhe(I),rand,2,2,0,0,0,OK,got=1.029127 ref=1.029127
+blas,magmablas_zlanhe(M),rand,2,2,0,0,0,OK,got=0.579257 ref=0.579257
+blas,magmablas_zlange(1),nan,2,2,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,2,2,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,2,2,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,2,2,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,2,2,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,2,2,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,2,2,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,2,2,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,2,2,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,2,2,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,2,2,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,2,2,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,2,2,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,2,2,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,2,2,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,2,2,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,2,2,0,0,0,OK,
+blas,magmablas_zgeadd,rand,2,2,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,31,31,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,31,31,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,31,31,0,0,0,OK,got=13.487182 ref=13.487182
+blas,magmablas_zlange(I),rand,31,31,0,0,0,OK,got=13.029644 ref=13.029644
+blas,magmablas_zlange(M),rand,31,31,0,0,0,OK,got=0.694762 ref=0.694762
+blas,magmablas_zlanhe(1),rand,31,31,0,0,0,OK,got=13.509154 ref=13.509154
+blas,magmablas_zlanhe(I),rand,31,31,0,0,0,OK,got=13.509154 ref=13.509154
+blas,magmablas_zlanhe(M),rand,31,31,0,0,0,OK,got=0.694762 ref=0.694762
+blas,magmablas_zlange(1),nan,31,31,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,31,31,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,31,31,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,31,31,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,31,31,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,31,31,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,31,31,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,31,31,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,31,31,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,31,31,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,31,31,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,31,31,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,31,31,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,31,31,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,31,31,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,31,31,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,31,31,0,0,0,OK,
+blas,magmablas_zgeadd,rand,31,31,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,32,32,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,32,32,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,32,32,0,0,0,OK,got=14.013651 ref=14.013651
+blas,magmablas_zlange(I),rand,32,32,0,0,0,OK,got=13.666155 ref=13.666155
+blas,magmablas_zlange(M),rand,32,32,0,0,0,OK,got=0.693820 ref=0.693820
+blas,magmablas_zlanhe(1),rand,32,32,0,0,0,OK,got=13.795200 ref=13.795200
+blas,magmablas_zlanhe(I),rand,32,32,0,0,0,OK,got=13.795200 ref=13.795200
+blas,magmablas_zlanhe(M),rand,32,32,0,0,0,OK,got=0.693820 ref=0.693820
+blas,magmablas_zlange(1),nan,32,32,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,32,32,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,32,32,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,32,32,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,32,32,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,32,32,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,32,32,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,32,32,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,32,32,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,32,32,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,32,32,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,32,32,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,32,32,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,32,32,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,32,32,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,32,32,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,32,32,0,0,0,OK,
+blas,magmablas_zgeadd,rand,32,32,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,33,33,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,33,33,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,33,33,0,0,0,OK,got=14.126309 ref=14.126309
+blas,magmablas_zlange(I),rand,33,33,0,0,0,OK,got=14.031492 ref=14.031492
+blas,magmablas_zlange(M),rand,33,33,0,0,0,OK,got=0.699842 ref=0.699842
+blas,magmablas_zlanhe(1),rand,33,33,0,0,0,OK,got=13.789590 ref=13.789590
+blas,magmablas_zlanhe(I),rand,33,33,0,0,0,OK,got=13.789590 ref=13.789590
+blas,magmablas_zlanhe(M),rand,33,33,0,0,0,OK,got=0.699842 ref=0.699842
+blas,magmablas_zlange(1),nan,33,33,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,33,33,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,33,33,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,33,33,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,33,33,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,33,33,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,33,33,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,33,33,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,33,33,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,33,33,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,33,33,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,33,33,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,33,33,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,33,33,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,33,33,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,33,33,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,33,33,0,0,0,OK,
+blas,magmablas_zgeadd,rand,33,33,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,64,64,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,64,64,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,64,64,0,0,0,OK,got=26.853067 ref=26.853067
+blas,magmablas_zlange(I),rand,64,64,0,0,0,OK,got=27.029581 ref=27.029581
+blas,magmablas_zlange(M),rand,64,64,0,0,0,OK,got=0.702528 ref=0.702528
+blas,magmablas_zlanhe(1),rand,64,64,0,0,0,OK,got=26.426196 ref=26.426196
+blas,magmablas_zlanhe(I),rand,64,64,0,0,0,OK,got=26.426196 ref=26.426196
+blas,magmablas_zlanhe(M),rand,64,64,0,0,0,OK,got=0.702528 ref=0.702528
+blas,magmablas_zlange(1),nan,64,64,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,64,64,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,64,64,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,64,64,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,64,64,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,64,64,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,64,64,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,64,64,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,64,64,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,64,64,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,64,64,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,64,64,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,64,64,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,64,64,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,64,64,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,64,64,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,64,64,0,0,0,OK,
+blas,magmablas_zgeadd,rand,64,64,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,65,65,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,65,65,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,65,65,0,0,0,OK,got=27.238899 ref=27.238899
+blas,magmablas_zlange(I),rand,65,65,0,0,0,OK,got=27.025608 ref=27.025608
+blas,magmablas_zlange(M),rand,65,65,0,0,0,OK,got=0.694359 ref=0.694359
+blas,magmablas_zlanhe(1),rand,65,65,0,0,0,OK,got=27.812199 ref=27.812199
+blas,magmablas_zlanhe(I),rand,65,65,0,0,0,OK,got=27.812199 ref=27.812199
+blas,magmablas_zlanhe(M),rand,65,65,0,0,0,OK,got=0.694047 ref=0.694047
+blas,magmablas_zlange(1),nan,65,65,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,65,65,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,65,65,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,65,65,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,65,65,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,65,65,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,65,65,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,65,65,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,65,65,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,65,65,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,65,65,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,65,65,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,65,65,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,65,65,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,65,65,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,65,65,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,65,65,0,0,0,OK,
+blas,magmablas_zgeadd,rand,65,65,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,129,129,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,129,129,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,129,129,0,0,0,OK,got=55.100866 ref=55.100866
+blas,magmablas_zlange(I),rand,129,129,0,0,0,OK,got=55.022470 ref=55.022470
+blas,magmablas_zlange(M),rand,129,129,0,0,0,OK,got=0.704315 ref=0.704315
+blas,magmablas_zlanhe(1),rand,129,129,0,0,0,OK,got=52.639086 ref=52.639086
+blas,magmablas_zlanhe(I),rand,129,129,0,0,0,OK,got=52.639086 ref=52.639086
+blas,magmablas_zlanhe(M),rand,129,129,0,0,0,OK,got=0.703818 ref=0.703818
+blas,magmablas_zlange(1),nan,129,129,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,129,129,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,129,129,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,129,129,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,129,129,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,129,129,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,129,129,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,129,129,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,129,129,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,129,129,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,129,129,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,129,129,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,129,129,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,129,129,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,129,129,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,129,129,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,129,129,0,0,0,OK,
+blas,magmablas_zgeadd,rand,129,129,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,257,257,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,257,257,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,257,257,0,0,0,OK,got=104.566550 ref=104.566550
+blas,magmablas_zlange(I),rand,257,257,0,0,0,OK,got=104.973182 ref=104.973182
+blas,magmablas_zlange(M),rand,257,257,0,0,0,OK,got=0.706542 ref=0.706542
+blas,magmablas_zlanhe(1),rand,257,257,0,0,0,OK,got=103.945467 ref=103.945467
+blas,magmablas_zlanhe(I),rand,257,257,0,0,0,OK,got=103.945467 ref=103.945467
+blas,magmablas_zlanhe(M),rand,257,257,0,0,0,OK,got=0.705278 ref=0.705278
+blas,magmablas_zlange(1),nan,257,257,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,257,257,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,257,257,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,257,257,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,257,257,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,257,257,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,257,257,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,257,257,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,257,257,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,257,257,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,257,257,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,257,257,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,257,257,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,257,257,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,257,257,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,257,257,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,257,257,0,0,0,OK,
+blas,magmablas_zgeadd,rand,257,257,0,0,0,OK,
+blas,magmablas_zgemv beta=0,y=NaN,rand,513,513,0,0,0,WRONG,
+blas,magmablas_zhemv beta=0,y=NaN,rand,513,513,0,0,0,WRONG,
+blas,magmablas_zlange(1),rand,513,513,0,0,0,OK,got=204.818364 ref=204.818364
+blas,magmablas_zlange(I),rand,513,513,0,0,0,OK,got=209.520955 ref=209.520955
+blas,magmablas_zlange(M),rand,513,513,0,0,0,OK,got=0.705737 ref=0.705737
+blas,magmablas_zlanhe(1),rand,513,513,0,0,0,OK,got=211.183375 ref=211.183375
+blas,magmablas_zlanhe(I),rand,513,513,0,0,0,OK,got=211.183375 ref=211.183375
+blas,magmablas_zlanhe(M),rand,513,513,0,0,0,OK,got=0.705122 ref=0.705122
+blas,magmablas_zlange(1),nan,513,513,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(I),nan,513,513,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlange(M),nan,513,513,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(1),nan,513,513,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(I),nan,513,513,0,0,0,OK,got=nan ref=nan
+blas,magmablas_zlanhe(M),nan,513,513,0,0,0,OK,got=nan ref=nan
+blas,magmablas_ztranspose,rand,513,513,0,0,0,OK,
+blas,magmablas_zlacpy(F),rand,513,513,0,0,0,OK,
+blas,magmablas_zlacpy(L),rand,513,513,0,0,0,OK,
+blas,magmablas_zlacpy(U),rand,513,513,0,0,0,OK,
+blas,magmablas_zlaset(F),rand,513,513,0,0,0,OK,
+blas,magmablas_zlaset(L),rand,513,513,0,0,0,OK,
+blas,magmablas_zlaset(U),rand,513,513,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=2.000000,513,513,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,cto=1.000000,513,513,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=1.000000,cto=4149515568880992958512407863691161151012446232242436899995657329690652811412908146399707048947103794288197886611300789182395151075411775307886874834113963687061181803401509523685376.000000,513,513,0,0,0,OK,
+blas,magmablas_zlascl,cfrom=0.000000,cto=1.000000,513,513,0,0,0,OK,
+blas,magmablas_zgeadd,rand,513,513,0,0,0,OK,

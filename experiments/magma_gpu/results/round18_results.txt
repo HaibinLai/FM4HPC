@@ -1,0 +1,10 @@
+######## header-style call
+timeout: the monitored command dumped core
+exit=139
+unglq      k=  0 nalloc=  1 info=0      diff_to_lapack=2.01e-15   ok
+unglq      k=  1 nalloc=  1 info=-113   diff_to_lapack=47.6       reported  [failing site: magma_zunglq<]
+ROUND18_DONE
+0
+0 MiB, 0 %
+
+[exited with code 0]

@@ -1,0 +1,68 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,poisson2d,1024,0,0,109,3.11e-09,3.11e-09,7.55e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,aniso1e-4,1024,0,0,99,6.33e-10,6.33e-10,2.83e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,convdiff,1024,0,0,102,3.63e-09,3.63e-09,7.21e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,shifted_indef,1024,-201,-201,1000,4.49e-09,4.49e-09,2.38e-10,FALSEFAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,complexsym,1024,0,0,58,5.55e-09,5.55e-09,9.38e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,neumann_singular,1024,0,0,135,3.09e-09,3.09e-09,8.07e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,zerodiag,1024,0,0,132,3.63e-09,3.63e-09,8.94e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,poisson2d,1024,0,0,109,3.11e-09,3.11e-09,7.55e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,aniso1e-4,1024,0,0,99,6.33e-10,6.33e-10,2.83e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,convdiff,1024,0,0,102,3.63e-09,3.63e-09,7.21e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,shifted_indef,1024,-201,-201,1000,8.21e-09,8.21e-09,4.36e-10,FALSEFAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,complexsym,1024,0,0,58,5.55e-09,5.55e-09,9.38e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,neumann_singular,1024,0,0,135,3.09e-09,3.09e-09,8.07e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,zerodiag,1024,0,0,132,3.63e-09,3.63e-09,8.94e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.

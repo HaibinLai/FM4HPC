@@ -1,0 +1,13 @@
+== coo
+RESULT M252 dmconvert CSR->COO->CSR ret=0,0 rowptr=[0 5 5 5] maxerr=5 REPRODUCED
+EXIT=0
+== csrlist
+converted to CSRLIST ret=0
+RESULT M254 CSRLIST round trip with empty row 0: ret=0 nnz_out=38 (in 37) maxerr=2 REPRODUCED
+EXIT=-1073741819
+== ellrt
+RESULT M253 dgeellrtmv row 5: got 62.495 expected 87.34 ret=0 REPRODUCED
+EXIT=0
+== sellp
+converting device CSR -> SELLP ...
+EXIT=-1073741676

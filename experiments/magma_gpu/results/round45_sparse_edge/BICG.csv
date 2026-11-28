@@ -1,0 +1,60 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,diag64,64,0,0,47,6.13e-09,6.13e-09,7.2e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,tridiag2,2,0,0,2,2.22e-16,2.22e-16,1.11e-16,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,emptyrow,256,0,0,65,1.86e-09,1.86e-09,8.88e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+BICG,NONE,CSR,denserow,64,0,0,2,3.55e-15,3.55e-15,2.4e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,n1,1,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,identity8,8,0,0,1,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,diag64,64,0,0,47,6.13e-09,6.13e-09,7.2e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,tridiag2,2,0,0,2,2.22e-16,2.22e-16,1.11e-16,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,emptyrow,256,0,0,65,1.86e-09,1.86e-09,8.88e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+BICG,NONE,ELL,denserow,64,0,0,2,3.55e-15,3.55e-15,2.4e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.

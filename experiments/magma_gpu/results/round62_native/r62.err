@@ -1,0 +1,45 @@
+
+== native 1000 32
+DONE cuda=no error
+== gpu 1000 32
+DONE cuda=no error
+== native 1000 100
+DONE cuda=no error
+== gpu 1000 100
+DONE cuda=no error
+== native 7168 32
+DONE cuda=no error
+== gpu 7168 32
+DONE cuda=no error
+== native 7168 100
+DONE cuda=no error
+== gpu 7168 100
+DONE cuda=no error
+== native 7169 32
+DONE cuda=no error
+== gpu 7169 32
+DONE cuda=no error
+== native 7169 100
+DONE cuda=no error
+== gpu 7169 100
+DONE cuda=no error
+== native 8000 32
+DONE cuda=no error
+== gpu 8000 32
+DONE cuda=no error
+== native 8000 100
+DONE cuda=no error
+== gpu 8000 100
+DONE cuda=no error
+== native 12000 32
+DONE cuda=no error
+== gpu 12000 32
+DONE cuda=no error
+== native 12000 100
+DONE cuda=no error
+== gpu 12000 100
+DONE cuda=no error
+== native 8000 300
+DONE cuda=no error
+== gpu 8000 300
+DONE cuda=no error

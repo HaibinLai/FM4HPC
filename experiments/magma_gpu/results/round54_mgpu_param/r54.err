@@ -1,0 +1,1021 @@
+
+== heevd 33 0 L 1 N A
+DONE cuda=no error
+== hegvd 33 0 L 1 N A
+DONE cuda=no error
+== hegvd 33 0 L 2 N A
+DONE cuda=no error
+== hegvd 33 0 L 3 N A
+DONE cuda=no error
+== heevdx 33 0 L 1 N A
+DONE cuda=no error
+== heevdx2s 33 0 L 1 N A
+DONE cuda=no error
+== hegvdx 33 0 L 1 N A
+DONE cuda=no error
+== hegvdx2s 33 0 L 1 N A
+DONE cuda=no error
+== hegvdx 33 0 L 2 N A
+DONE cuda=no error
+== hegvdx2s 33 0 L 2 N A
+DONE cuda=no error
+== hegvdx 33 0 L 3 N A
+DONE cuda=no error
+== hegvdx2s 33 0 L 3 N A
+DONE cuda=no error
+== heevdx 33 0 L 1 N I
+DONE cuda=no error
+== heevdx2s 33 0 L 1 N I
+DONE cuda=no error
+== hegvdx 33 0 L 1 N I
+DONE cuda=no error
+== hegvdx2s 33 0 L 1 N I
+DONE cuda=no error
+== hegvdx 33 0 L 2 N I
+DONE cuda=no error
+== hegvdx2s 33 0 L 2 N I
+DONE cuda=no error
+== hegvdx 33 0 L 3 N I
+DONE cuda=no error
+== hegvdx2s 33 0 L 3 N I
+DONE cuda=no error
+== heevdx 33 0 L 1 N V
+DONE cuda=no error
+== heevdx2s 33 0 L 1 N V
+DONE cuda=no error
+== hegvdx 33 0 L 1 N V
+DONE cuda=no error
+== hegvdx2s 33 0 L 1 N V
+DONE cuda=no error
+== hegvdx 33 0 L 2 N V
+DONE cuda=no error
+== hegvdx2s 33 0 L 2 N V
+DONE cuda=no error
+== hegvdx 33 0 L 3 N V
+DONE cuda=no error
+== hegvdx2s 33 0 L 3 N V
+DONE cuda=no error
+== heevd 33 0 L 1 V A
+DONE cuda=no error
+== hegvd 33 0 L 1 V A
+DONE cuda=no error
+== hegvd 33 0 L 2 V A
+DONE cuda=no error
+== hegvd 33 0 L 3 V A
+DONE cuda=no error
+== heevdx 33 0 L 1 V A
+DONE cuda=no error
+== heevdx2s 33 0 L 1 V A
+DONE cuda=no error
+== hegvdx 33 0 L 1 V A
+DONE cuda=no error
+== hegvdx2s 33 0 L 1 V A
+DONE cuda=no error
+== hegvdx 33 0 L 2 V A
+DONE cuda=no error
+== hegvdx2s 33 0 L 2 V A
+DONE cuda=no error
+== hegvdx 33 0 L 3 V A
+DONE cuda=no error
+== hegvdx2s 33 0 L 3 V A
+DONE cuda=no error
+== heevdx 33 0 L 1 V I
+DONE cuda=no error
+== heevdx2s 33 0 L 1 V I
+DONE cuda=no error
+== hegvdx 33 0 L 1 V I
+DONE cuda=no error
+== hegvdx2s 33 0 L 1 V I
+DONE cuda=no error
+== hegvdx 33 0 L 2 V I
+DONE cuda=no error
+== hegvdx2s 33 0 L 2 V I
+DONE cuda=no error
+== hegvdx 33 0 L 3 V I
+DONE cuda=no error
+== hegvdx2s 33 0 L 3 V I
+DONE cuda=no error
+== heevdx 33 0 L 1 V V
+DONE cuda=no error
+== heevdx2s 33 0 L 1 V V
+DONE cuda=no error
+== hegvdx 33 0 L 1 V V
+DONE cuda=no error
+== hegvdx2s 33 0 L 1 V V
+DONE cuda=no error
+== hegvdx 33 0 L 2 V V
+DONE cuda=no error
+== hegvdx2s 33 0 L 2 V V
+DONE cuda=no error
+== hegvdx 33 0 L 3 V V
+DONE cuda=no error
+== hegvdx2s 33 0 L 3 V V
+DONE cuda=no error
+== heevd 33 0 U 1 N A
+DONE cuda=no error
+== hegvd 33 0 U 1 N A
+DONE cuda=no error
+== hegvd 33 0 U 2 N A
+DONE cuda=no error
+== hegvd 33 0 U 3 N A
+DONE cuda=no error
+== heevdx 33 0 U 1 N A
+DONE cuda=no error
+== heevdx2s 33 0 U 1 N A
+DONE cuda=no error
+== hegvdx 33 0 U 1 N A
+DONE cuda=no error
+== hegvdx2s 33 0 U 1 N A
+DONE cuda=no error
+== hegvdx 33 0 U 2 N A
+DONE cuda=no error
+== hegvdx2s 33 0 U 2 N A
+DONE cuda=no error
+== hegvdx 33 0 U 3 N A
+DONE cuda=no error
+== hegvdx2s 33 0 U 3 N A
+DONE cuda=no error
+== heevdx 33 0 U 1 N I
+DONE cuda=no error
+== heevdx2s 33 0 U 1 N I
+DONE cuda=no error
+== hegvdx 33 0 U 1 N I
+DONE cuda=no error
+== hegvdx2s 33 0 U 1 N I
+DONE cuda=no error
+== hegvdx 33 0 U 2 N I
+DONE cuda=no error
+== hegvdx2s 33 0 U 2 N I
+DONE cuda=no error
+== hegvdx 33 0 U 3 N I
+DONE cuda=no error
+== hegvdx2s 33 0 U 3 N I
+DONE cuda=no error
+== heevdx 33 0 U 1 N V
+DONE cuda=no error
+== heevdx2s 33 0 U 1 N V
+DONE cuda=no error
+== hegvdx 33 0 U 1 N V
+DONE cuda=no error
+== hegvdx2s 33 0 U 1 N V
+DONE cuda=no error
+== hegvdx 33 0 U 2 N V
+DONE cuda=no error
+== hegvdx2s 33 0 U 2 N V
+DONE cuda=no error
+== hegvdx 33 0 U 3 N V
+DONE cuda=no error
+== hegvdx2s 33 0 U 3 N V
+DONE cuda=no error
+== heevd 33 0 U 1 V A
+DONE cuda=no error
+== hegvd 33 0 U 1 V A
+DONE cuda=no error
+== hegvd 33 0 U 2 V A
+DONE cuda=no error
+== hegvd 33 0 U 3 V A
+DONE cuda=no error
+== heevdx 33 0 U 1 V A
+DONE cuda=no error
+== heevdx2s 33 0 U 1 V A
+DONE cuda=no error
+== hegvdx 33 0 U 1 V A
+DONE cuda=no error
+== hegvdx2s 33 0 U 1 V A
+DONE cuda=no error
+== hegvdx 33 0 U 2 V A
+DONE cuda=no error
+== hegvdx2s 33 0 U 2 V A
+DONE cuda=no error
+== hegvdx 33 0 U 3 V A
+DONE cuda=no error
+== hegvdx2s 33 0 U 3 V A
+DONE cuda=no error
+== heevdx 33 0 U 1 V I
+DONE cuda=no error
+== heevdx2s 33 0 U 1 V I
+DONE cuda=no error
+== hegvdx 33 0 U 1 V I
+DONE cuda=no error
+== hegvdx2s 33 0 U 1 V I
+DONE cuda=no error
+== hegvdx 33 0 U 2 V I
+DONE cuda=no error
+== hegvdx2s 33 0 U 2 V I
+DONE cuda=no error
+== hegvdx 33 0 U 3 V I
+DONE cuda=no error
+== hegvdx2s 33 0 U 3 V I
+DONE cuda=no error
+== heevdx 33 0 U 1 V V
+DONE cuda=no error
+== heevdx2s 33 0 U 1 V V
+DONE cuda=no error
+== hegvdx 33 0 U 1 V V
+DONE cuda=no error
+== hegvdx2s 33 0 U 1 V V
+DONE cuda=no error
+== hegvdx 33 0 U 2 V V
+DONE cuda=no error
+== hegvdx2s 33 0 U 2 V V
+DONE cuda=no error
+== hegvdx 33 0 U 3 V V
+DONE cuda=no error
+== hegvdx2s 33 0 U 3 V V
+DONE cuda=no error
+== geev 33 0 L 1 N A
+DONE cuda=no error
+== geev 33 0 L 1 V A
+DONE cuda=no error
+== getrf 33 0 L 1 N A 33
+DONE cuda=no error
+== geqrf 33 0 L 1 N A 33
+DONE cuda=no error
+== getrf 33 0 L 1 N A 73
+DONE cuda=no error
+== geqrf 33 0 L 1 N A 73
+DONE cuda=no error
+== getrf 33 0 L 1 N A 13
+DONE cuda=no error
+== geqrf 33 0 L 1 N A 13
+DONE cuda=no error
+== potrf 33 0 L 1 N A
+DONE cuda=no error
+== potrf 33 0 U 1 N A
+DONE cuda=no error
+== gehrd 33 0 L 1 N A
+DONE cuda=no error
+== heevd 33 7 L 1 N A
+DONE cuda=no error
+== hegvd 33 7 L 1 N A
+DONE cuda=no error
+== hegvd 33 7 L 2 N A
+DONE cuda=no error
+== hegvd 33 7 L 3 N A
+DONE cuda=no error
+== heevdx 33 7 L 1 N A
+DONE cuda=no error
+== heevdx2s 33 7 L 1 N A
+DONE cuda=no error
+== hegvdx 33 7 L 1 N A
+DONE cuda=no error
+== hegvdx2s 33 7 L 1 N A
+DONE cuda=no error
+== hegvdx 33 7 L 2 N A
+DONE cuda=no error
+== hegvdx2s 33 7 L 2 N A
+DONE cuda=no error
+== hegvdx 33 7 L 3 N A
+DONE cuda=no error
+== hegvdx2s 33 7 L 3 N A
+DONE cuda=no error
+== heevdx 33 7 L 1 N I
+DONE cuda=no error
+== heevdx2s 33 7 L 1 N I
+DONE cuda=no error
+== hegvdx 33 7 L 1 N I
+DONE cuda=no error
+== hegvdx2s 33 7 L 1 N I
+DONE cuda=no error
+== hegvdx 33 7 L 2 N I
+DONE cuda=no error
+== hegvdx2s 33 7 L 2 N I
+DONE cuda=no error
+== hegvdx 33 7 L 3 N I
+DONE cuda=no error
+== hegvdx2s 33 7 L 3 N I
+DONE cuda=no error
+== heevdx 33 7 L 1 N V
+DONE cuda=no error
+== heevdx2s 33 7 L 1 N V
+DONE cuda=no error
+== hegvdx 33 7 L 1 N V
+DONE cuda=no error
+== hegvdx2s 33 7 L 1 N V
+DONE cuda=no error
+== hegvdx 33 7 L 2 N V
+DONE cuda=no error
+== hegvdx2s 33 7 L 2 N V
+DONE cuda=no error
+== hegvdx 33 7 L 3 N V
+DONE cuda=no error
+== hegvdx2s 33 7 L 3 N V
+DONE cuda=no error
+== heevd 33 7 L 1 V A
+DONE cuda=no error
+== hegvd 33 7 L 1 V A
+DONE cuda=no error
+== hegvd 33 7 L 2 V A
+DONE cuda=no error
+== hegvd 33 7 L 3 V A
+DONE cuda=no error
+== heevdx 33 7 L 1 V A
+DONE cuda=no error
+== heevdx2s 33 7 L 1 V A
+DONE cuda=no error
+== hegvdx 33 7 L 1 V A
+DONE cuda=no error
+== hegvdx2s 33 7 L 1 V A
+DONE cuda=no error
+== hegvdx 33 7 L 2 V A
+DONE cuda=no error
+== hegvdx2s 33 7 L 2 V A
+DONE cuda=no error
+== hegvdx 33 7 L 3 V A
+DONE cuda=no error
+== hegvdx2s 33 7 L 3 V A
+DONE cuda=no error
+== heevdx 33 7 L 1 V I
+DONE cuda=no error
+== heevdx2s 33 7 L 1 V I
+DONE cuda=no error
+== hegvdx 33 7 L 1 V I
+DONE cuda=no error
+== hegvdx2s 33 7 L 1 V I
+DONE cuda=no error
+== hegvdx 33 7 L 2 V I
+DONE cuda=no error
+== hegvdx2s 33 7 L 2 V I
+DONE cuda=no error
+== hegvdx 33 7 L 3 V I
+DONE cuda=no error
+== hegvdx2s 33 7 L 3 V I
+DONE cuda=no error
+== heevdx 33 7 L 1 V V
+DONE cuda=no error
+== heevdx2s 33 7 L 1 V V
+DONE cuda=no error
+== hegvdx 33 7 L 1 V V
+DONE cuda=no error
+== hegvdx2s 33 7 L 1 V V
+DONE cuda=no error
+== hegvdx 33 7 L 2 V V
+DONE cuda=no error
+== hegvdx2s 33 7 L 2 V V
+DONE cuda=no error
+== hegvdx 33 7 L 3 V V
+DONE cuda=no error
+== hegvdx2s 33 7 L 3 V V
+DONE cuda=no error
+== heevd 33 7 U 1 N A
+DONE cuda=no error
+== hegvd 33 7 U 1 N A
+DONE cuda=no error
+== hegvd 33 7 U 2 N A
+DONE cuda=no error
+== hegvd 33 7 U 3 N A
+DONE cuda=no error
+== heevdx 33 7 U 1 N A
+DONE cuda=no error
+== heevdx2s 33 7 U 1 N A
+DONE cuda=no error
+== hegvdx 33 7 U 1 N A
+DONE cuda=no error
+== hegvdx2s 33 7 U 1 N A
+DONE cuda=no error
+== hegvdx 33 7 U 2 N A
+DONE cuda=no error
+== hegvdx2s 33 7 U 2 N A
+DONE cuda=no error
+== hegvdx 33 7 U 3 N A
+DONE cuda=no error
+== hegvdx2s 33 7 U 3 N A
+DONE cuda=no error
+== heevdx 33 7 U 1 N I
+DONE cuda=no error
+== heevdx2s 33 7 U 1 N I
+DONE cuda=no error
+== hegvdx 33 7 U 1 N I
+DONE cuda=no error
+== hegvdx2s 33 7 U 1 N I
+DONE cuda=no error
+== hegvdx 33 7 U 2 N I
+DONE cuda=no error
+== hegvdx2s 33 7 U 2 N I
+DONE cuda=no error
+== hegvdx 33 7 U 3 N I
+DONE cuda=no error
+== hegvdx2s 33 7 U 3 N I
+DONE cuda=no error
+== heevdx 33 7 U 1 N V
+DONE cuda=no error
+== heevdx2s 33 7 U 1 N V
+DONE cuda=no error
+== hegvdx 33 7 U 1 N V
+DONE cuda=no error
+== hegvdx2s 33 7 U 1 N V
+DONE cuda=no error
+== hegvdx 33 7 U 2 N V
+DONE cuda=no error
+== hegvdx2s 33 7 U 2 N V
+DONE cuda=no error
+== hegvdx 33 7 U 3 N V
+DONE cuda=no error
+== hegvdx2s 33 7 U 3 N V
+DONE cuda=no error
+== heevd 33 7 U 1 V A
+DONE cuda=no error
+== hegvd 33 7 U 1 V A
+DONE cuda=no error
+== hegvd 33 7 U 2 V A
+DONE cuda=no error
+== hegvd 33 7 U 3 V A
+DONE cuda=no error
+== heevdx 33 7 U 1 V A
+DONE cuda=no error
+== heevdx2s 33 7 U 1 V A
+DONE cuda=no error
+== hegvdx 33 7 U 1 V A
+DONE cuda=no error
+== hegvdx2s 33 7 U 1 V A
+DONE cuda=no error
+== hegvdx 33 7 U 2 V A
+DONE cuda=no error
+== hegvdx2s 33 7 U 2 V A
+DONE cuda=no error
+== hegvdx 33 7 U 3 V A
+DONE cuda=no error
+== hegvdx2s 33 7 U 3 V A
+DONE cuda=no error
+== heevdx 33 7 U 1 V I
+DONE cuda=no error
+== heevdx2s 33 7 U 1 V I
+DONE cuda=no error
+== hegvdx 33 7 U 1 V I
+DONE cuda=no error
+== hegvdx2s 33 7 U 1 V I
+DONE cuda=no error
+== hegvdx 33 7 U 2 V I
+DONE cuda=no error
+== hegvdx2s 33 7 U 2 V I
+DONE cuda=no error
+== hegvdx 33 7 U 3 V I
+DONE cuda=no error
+== hegvdx2s 33 7 U 3 V I
+DONE cuda=no error
+== heevdx 33 7 U 1 V V
+DONE cuda=no error
+== heevdx2s 33 7 U 1 V V
+DONE cuda=no error
+== hegvdx 33 7 U 1 V V
+DONE cuda=no error
+== hegvdx2s 33 7 U 1 V V
+DONE cuda=no error
+== hegvdx 33 7 U 2 V V
+DONE cuda=no error
+== hegvdx2s 33 7 U 2 V V
+DONE cuda=no error
+== hegvdx 33 7 U 3 V V
+DONE cuda=no error
+== hegvdx2s 33 7 U 3 V V
+DONE cuda=no error
+== geev 33 7 L 1 N A
+DONE cuda=no error
+== geev 33 7 L 1 V A
+DONE cuda=no error
+== getrf 33 7 L 1 N A 33
+DONE cuda=no error
+== geqrf 33 7 L 1 N A 33
+DONE cuda=no error
+== getrf 33 7 L 1 N A 73
+DONE cuda=no error
+== geqrf 33 7 L 1 N A 73
+DONE cuda=no error
+== getrf 33 7 L 1 N A 13
+DONE cuda=no error
+== geqrf 33 7 L 1 N A 13
+DONE cuda=no error
+== potrf 33 7 L 1 N A
+DONE cuda=no error
+== potrf 33 7 U 1 N A
+DONE cuda=no error
+== gehrd 33 7 L 1 N A
+DONE cuda=no error
+== heevd 300 0 L 1 N A
+DONE cuda=no error
+== hegvd 300 0 L 1 N A
+DONE cuda=no error
+== hegvd 300 0 L 2 N A
+DONE cuda=no error
+== hegvd 300 0 L 3 N A
+DONE cuda=no error
+== heevdx 300 0 L 1 N A
+DONE cuda=no error
+== heevdx2s 300 0 L 1 N A
+DONE cuda=no error
+== hegvdx 300 0 L 1 N A
+DONE cuda=no error
+== hegvdx2s 300 0 L 1 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 L 2 N A
+DONE cuda=no error
+== hegvdx2s 300 0 L 2 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 L 3 N A
+DONE cuda=no error
+== hegvdx2s 300 0 L 3 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevdx 300 0 L 1 N I
+DONE cuda=no error
+== heevdx2s 300 0 L 1 N I
+DONE cuda=no error
+== hegvdx 300 0 L 1 N I
+DONE cuda=no error
+== hegvdx2s 300 0 L 1 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 L 2 N I
+DONE cuda=no error
+== hegvdx2s 300 0 L 2 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 L 3 N I
+DONE cuda=no error
+== hegvdx2s 300 0 L 3 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevdx 300 0 L 1 N V
+DONE cuda=no error
+== heevdx2s 300 0 L 1 N V
+DONE cuda=no error
+== hegvdx 300 0 L 1 N V
+DONE cuda=no error
+== hegvdx2s 300 0 L 1 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 L 2 N V
+DONE cuda=no error
+== hegvdx2s 300 0 L 2 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 L 3 N V
+DONE cuda=no error
+== hegvdx2s 300 0 L 3 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevd 300 0 L 1 V A
+DONE cuda=no error
+== hegvd 300 0 L 1 V A
+DONE cuda=no error
+== hegvd 300 0 L 2 V A
+DONE cuda=no error
+== hegvd 300 0 L 3 V A
+DONE cuda=no error
+== heevdx 300 0 L 1 V A
+DONE cuda=no error
+== heevdx2s 300 0 L 1 V A
+DONE cuda=no error
+== hegvdx 300 0 L 1 V A
+DONE cuda=no error
+== hegvdx2s 300 0 L 1 V A
+DONE cuda=no error
+== hegvdx 300 0 L 2 V A
+DONE cuda=no error
+== hegvdx2s 300 0 L 2 V A
+DONE cuda=no error
+== hegvdx 300 0 L 3 V A
+DONE cuda=no error
+== hegvdx2s 300 0 L 3 V A
+DONE cuda=no error
+== heevdx 300 0 L 1 V I
+DONE cuda=no error
+== heevdx2s 300 0 L 1 V I
+DONE cuda=no error
+== hegvdx 300 0 L 1 V I
+DONE cuda=no error
+== hegvdx2s 300 0 L 1 V I
+DONE cuda=no error
+== hegvdx 300 0 L 2 V I
+DONE cuda=no error
+== hegvdx2s 300 0 L 2 V I
+DONE cuda=no error
+== hegvdx 300 0 L 3 V I
+DONE cuda=no error
+== hegvdx2s 300 0 L 3 V I
+DONE cuda=no error
+== heevdx 300 0 L 1 V V
+DONE cuda=no error
+== heevdx2s 300 0 L 1 V V
+DONE cuda=no error
+== hegvdx 300 0 L 1 V V
+DONE cuda=no error
+== hegvdx2s 300 0 L 1 V V
+DONE cuda=no error
+== hegvdx 300 0 L 2 V V
+DONE cuda=no error
+== hegvdx2s 300 0 L 2 V V
+DONE cuda=no error
+== hegvdx 300 0 L 3 V V
+DONE cuda=no error
+== hegvdx2s 300 0 L 3 V V
+DONE cuda=no error
+== heevd 300 0 U 1 N A
+DONE cuda=no error
+== hegvd 300 0 U 1 N A
+DONE cuda=no error
+== hegvd 300 0 U 2 N A
+DONE cuda=no error
+== hegvd 300 0 U 3 N A
+DONE cuda=no error
+== heevdx 300 0 U 1 N A
+DONE cuda=no error
+== heevdx2s 300 0 U 1 N A
+DONE cuda=no error
+== hegvdx 300 0 U 1 N A
+DONE cuda=no error
+== hegvdx2s 300 0 U 1 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 U 2 N A
+DONE cuda=no error
+== hegvdx2s 300 0 U 2 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 U 3 N A
+DONE cuda=no error
+== hegvdx2s 300 0 U 3 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevdx 300 0 U 1 N I
+DONE cuda=no error
+== heevdx2s 300 0 U 1 N I
+DONE cuda=no error
+== hegvdx 300 0 U 1 N I
+DONE cuda=no error
+== hegvdx2s 300 0 U 1 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 U 2 N I
+DONE cuda=no error
+== hegvdx2s 300 0 U 2 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 U 3 N I
+DONE cuda=no error
+== hegvdx2s 300 0 U 3 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevdx 300 0 U 1 N V
+DONE cuda=no error
+== heevdx2s 300 0 U 1 N V
+DONE cuda=no error
+== hegvdx 300 0 U 1 N V
+DONE cuda=no error
+== hegvdx2s 300 0 U 1 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 U 2 N V
+DONE cuda=no error
+== hegvdx2s 300 0 U 2 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 0 U 3 N V
+DONE cuda=no error
+== hegvdx2s 300 0 U 3 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevd 300 0 U 1 V A
+DONE cuda=no error
+== hegvd 300 0 U 1 V A
+DONE cuda=no error
+== hegvd 300 0 U 2 V A
+DONE cuda=no error
+== hegvd 300 0 U 3 V A
+DONE cuda=no error
+== heevdx 300 0 U 1 V A
+DONE cuda=no error
+== heevdx2s 300 0 U 1 V A
+DONE cuda=no error
+== hegvdx 300 0 U 1 V A
+DONE cuda=no error
+== hegvdx2s 300 0 U 1 V A
+DONE cuda=no error
+== hegvdx 300 0 U 2 V A
+DONE cuda=no error
+== hegvdx2s 300 0 U 2 V A
+DONE cuda=no error
+== hegvdx 300 0 U 3 V A
+DONE cuda=no error
+== hegvdx2s 300 0 U 3 V A
+DONE cuda=no error
+== heevdx 300 0 U 1 V I
+DONE cuda=no error
+== heevdx2s 300 0 U 1 V I
+DONE cuda=no error
+== hegvdx 300 0 U 1 V I
+DONE cuda=no error
+== hegvdx2s 300 0 U 1 V I
+DONE cuda=no error
+== hegvdx 300 0 U 2 V I
+DONE cuda=no error
+== hegvdx2s 300 0 U 2 V I
+DONE cuda=no error
+== hegvdx 300 0 U 3 V I
+DONE cuda=no error
+== hegvdx2s 300 0 U 3 V I
+DONE cuda=no error
+== heevdx 300 0 U 1 V V
+DONE cuda=no error
+== heevdx2s 300 0 U 1 V V
+DONE cuda=no error
+== hegvdx 300 0 U 1 V V
+DONE cuda=no error
+== hegvdx2s 300 0 U 1 V V
+DONE cuda=no error
+== hegvdx 300 0 U 2 V V
+DONE cuda=no error
+== hegvdx2s 300 0 U 2 V V
+DONE cuda=no error
+== hegvdx 300 0 U 3 V V
+DONE cuda=no error
+== hegvdx2s 300 0 U 3 V V
+DONE cuda=no error
+== geev 300 0 L 1 N A
+DONE cuda=no error
+== geev 300 0 L 1 V A
+DONE cuda=no error
+== getrf 300 0 L 1 N A 300
+DONE cuda=no error
+== geqrf 300 0 L 1 N A 300
+DONE cuda=no error
+== getrf 300 0 L 1 N A 340
+DONE cuda=no error
+== geqrf 300 0 L 1 N A 340
+DONE cuda=no error
+== getrf 300 0 L 1 N A 280
+DONE cuda=no error
+== geqrf 300 0 L 1 N A 280
+DONE cuda=no error
+== potrf 300 0 L 1 N A
+DONE cuda=no error
+== potrf 300 0 U 1 N A
+DONE cuda=no error
+== gehrd 300 0 L 1 N A
+DONE cuda=no error
+== heevd 300 7 L 1 N A
+DONE cuda=no error
+== hegvd 300 7 L 1 N A
+DONE cuda=no error
+== hegvd 300 7 L 2 N A
+DONE cuda=no error
+== hegvd 300 7 L 3 N A
+DONE cuda=no error
+== heevdx 300 7 L 1 N A
+DONE cuda=no error
+== heevdx2s 300 7 L 1 N A
+DONE cuda=no error
+== hegvdx 300 7 L 1 N A
+DONE cuda=no error
+== hegvdx2s 300 7 L 1 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 L 2 N A
+DONE cuda=no error
+== hegvdx2s 300 7 L 2 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 L 3 N A
+DONE cuda=no error
+== hegvdx2s 300 7 L 3 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevdx 300 7 L 1 N I
+DONE cuda=no error
+== heevdx2s 300 7 L 1 N I
+DONE cuda=no error
+== hegvdx 300 7 L 1 N I
+DONE cuda=no error
+== hegvdx2s 300 7 L 1 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 L 2 N I
+DONE cuda=no error
+== hegvdx2s 300 7 L 2 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 L 3 N I
+DONE cuda=no error
+== hegvdx2s 300 7 L 3 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevdx 300 7 L 1 N V
+DONE cuda=no error
+== heevdx2s 300 7 L 1 N V
+DONE cuda=no error
+== hegvdx 300 7 L 1 N V
+DONE cuda=no error
+== hegvdx2s 300 7 L 1 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 L 2 N V
+DONE cuda=no error
+== hegvdx2s 300 7 L 2 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 L 3 N V
+DONE cuda=no error
+== hegvdx2s 300 7 L 3 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevd 300 7 L 1 V A
+DONE cuda=no error
+== hegvd 300 7 L 1 V A
+DONE cuda=no error
+== hegvd 300 7 L 2 V A
+DONE cuda=no error
+== hegvd 300 7 L 3 V A
+DONE cuda=no error
+== heevdx 300 7 L 1 V A
+DONE cuda=no error
+== heevdx2s 300 7 L 1 V A
+DONE cuda=no error
+== hegvdx 300 7 L 1 V A
+DONE cuda=no error
+== hegvdx2s 300 7 L 1 V A
+DONE cuda=no error
+== hegvdx 300 7 L 2 V A
+DONE cuda=no error
+== hegvdx2s 300 7 L 2 V A
+DONE cuda=no error
+== hegvdx 300 7 L 3 V A
+DONE cuda=no error
+== hegvdx2s 300 7 L 3 V A
+DONE cuda=no error
+== heevdx 300 7 L 1 V I
+DONE cuda=no error
+== heevdx2s 300 7 L 1 V I
+DONE cuda=no error
+== hegvdx 300 7 L 1 V I
+DONE cuda=no error
+== hegvdx2s 300 7 L 1 V I
+DONE cuda=no error
+== hegvdx 300 7 L 2 V I
+DONE cuda=no error
+== hegvdx2s 300 7 L 2 V I
+DONE cuda=no error
+== hegvdx 300 7 L 3 V I
+DONE cuda=no error
+== hegvdx2s 300 7 L 3 V I
+DONE cuda=no error
+== heevdx 300 7 L 1 V V
+DONE cuda=no error
+== heevdx2s 300 7 L 1 V V
+DONE cuda=no error
+== hegvdx 300 7 L 1 V V
+DONE cuda=no error
+== hegvdx2s 300 7 L 1 V V
+DONE cuda=no error
+== hegvdx 300 7 L 2 V V
+DONE cuda=no error
+== hegvdx2s 300 7 L 2 V V
+DONE cuda=no error
+== hegvdx 300 7 L 3 V V
+DONE cuda=no error
+== hegvdx2s 300 7 L 3 V V
+DONE cuda=no error
+== heevd 300 7 U 1 N A
+DONE cuda=no error
+== hegvd 300 7 U 1 N A
+DONE cuda=no error
+== hegvd 300 7 U 2 N A
+DONE cuda=no error
+== hegvd 300 7 U 3 N A
+DONE cuda=no error
+== heevdx 300 7 U 1 N A
+DONE cuda=no error
+== heevdx2s 300 7 U 1 N A
+DONE cuda=no error
+== hegvdx 300 7 U 1 N A
+DONE cuda=no error
+== hegvdx2s 300 7 U 1 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 U 2 N A
+DONE cuda=no error
+== hegvdx2s 300 7 U 2 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 U 3 N A
+DONE cuda=no error
+== hegvdx2s 300 7 U 3 N A
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevdx 300 7 U 1 N I
+DONE cuda=no error
+== heevdx2s 300 7 U 1 N I
+DONE cuda=no error
+== hegvdx 300 7 U 1 N I
+DONE cuda=no error
+== hegvdx2s 300 7 U 1 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 U 2 N I
+DONE cuda=no error
+== hegvdx2s 300 7 U 2 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 U 3 N I
+DONE cuda=no error
+== hegvdx2s 300 7 U 3 N I
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevdx 300 7 U 1 N V
+DONE cuda=no error
+== heevdx2s 300 7 U 1 N V
+DONE cuda=no error
+== hegvdx 300 7 U 1 N V
+DONE cuda=no error
+== hegvdx2s 300 7 U 1 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 U 2 N V
+DONE cuda=no error
+== hegvdx2s 300 7 U 2 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== hegvdx 300 7 U 3 N V
+DONE cuda=no error
+== hegvdx2s 300 7 U 3 N V
+On entry to magma_zheevdx_2stage_m, parameter 14 had an illegal value (info = -14)
+DONE cuda=no error
+== heevd 300 7 U 1 V A
+DONE cuda=no error
+== hegvd 300 7 U 1 V A
+DONE cuda=no error
+== hegvd 300 7 U 2 V A
+DONE cuda=no error
+== hegvd 300 7 U 3 V A
+DONE cuda=no error
+== heevdx 300 7 U 1 V A
+DONE cuda=no error
+== heevdx2s 300 7 U 1 V A
+DONE cuda=no error
+== hegvdx 300 7 U 1 V A
+DONE cuda=no error
+== hegvdx2s 300 7 U 1 V A
+DONE cuda=no error
+== hegvdx 300 7 U 2 V A
+DONE cuda=no error
+== hegvdx2s 300 7 U 2 V A
+DONE cuda=no error
+== hegvdx 300 7 U 3 V A
+DONE cuda=no error
+== hegvdx2s 300 7 U 3 V A
+DONE cuda=no error
+== heevdx 300 7 U 1 V I
+DONE cuda=no error
+== heevdx2s 300 7 U 1 V I
+DONE cuda=no error
+== hegvdx 300 7 U 1 V I
+DONE cuda=no error
+== hegvdx2s 300 7 U 1 V I
+DONE cuda=no error
+== hegvdx 300 7 U 2 V I
+DONE cuda=no error
+== hegvdx2s 300 7 U 2 V I
+DONE cuda=no error
+== hegvdx 300 7 U 3 V I
+DONE cuda=no error
+== hegvdx2s 300 7 U 3 V I
+DONE cuda=no error
+== heevdx 300 7 U 1 V V
+DONE cuda=no error
+== heevdx2s 300 7 U 1 V V
+DONE cuda=no error
+== hegvdx 300 7 U 1 V V
+DONE cuda=no error
+== hegvdx2s 300 7 U 1 V V
+DONE cuda=no error
+== hegvdx 300 7 U 2 V V
+DONE cuda=no error
+== hegvdx2s 300 7 U 2 V V
+DONE cuda=no error
+== hegvdx 300 7 U 3 V V
+DONE cuda=no error
+== hegvdx2s 300 7 U 3 V V
+DONE cuda=no error
+== geev 300 7 L 1 N A
+DONE cuda=no error
+== geev 300 7 L 1 V A
+DONE cuda=no error
+== getrf 300 7 L 1 N A 300
+DONE cuda=no error
+== geqrf 300 7 L 1 N A 300
+DONE cuda=no error
+== getrf 300 7 L 1 N A 340
+DONE cuda=no error
+== geqrf 300 7 L 1 N A 340
+DONE cuda=no error
+== getrf 300 7 L 1 N A 280
+DONE cuda=no error
+== geqrf 300 7 L 1 N A 280
+DONE cuda=no error
+== potrf 300 7 L 1 N A
+DONE cuda=no error
+== potrf 300 7 U 1 N A
+DONE cuda=no error
+== gehrd 300 7 L 1 N A
+DONE cuda=no error

@@ -1,0 +1,27 @@
+
+== qr 100 4 cpu 0
+DONE cuda=no error
+== qr 100 4 cpu 3
+DONE cuda=no error
+== qr 50 8 cpu 0
+DONE cuda=no error
+== qr 300 16 cpu 7
+DONE cuda=no error
+== qr 8 8 cpu 0
+DONE cuda=no error
+== qr 4 8 cpu 0
+On entry to magma_zungqr_gpu, parameter 2 had an illegal value (info = -2)
+DONE cuda=no error
+== qr 100 4 dev 0
+DONE cuda=no error
+== qr 100 4 dev 3
+DONE cuda=no error
+== qr 50 8 dev 0
+DONE cuda=no error
+== qr 300 16 dev 7
+DONE cuda=no error
+== qr 8 8 dev 0
+DONE cuda=no error
+== qr 4 8 dev 0
+On entry to magma_zungqr_gpu, parameter 2 had an illegal value (info = -2)
+DONE cuda=no error

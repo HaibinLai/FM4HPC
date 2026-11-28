@@ -1,0 +1,7 @@
+r37,rbtiso,n=1,0,gesv_nopiv_ferr=0,rbt_roundtrip_ferr=0.0264,0,BAD
+r37,rbtiso,n=2,0,gesv_nopiv_ferr=2.78e-17,rbt_roundtrip_ferr=0.00941,0,BAD
+r37,rbtiso,n=3,0,gesv_nopiv_ferr=0,rbt_roundtrip_ferr=0.0192,0,BAD
+r37,rbtiso,n=4,0,gesv_nopiv_ferr=2.78e-17,rbt_roundtrip_ferr=2.78e-17,0,OK
+r37,rbtiso,n=5,0,gesv_nopiv_ferr=1.11e-16,rbt_roundtrip_ferr=8.33e-17,0,OK
+r37,rbtiso,n=8,0,gesv_nopiv_ferr=5.55e-17,rbt_roundtrip_ferr=1.11e-16,0,OK
+DONE rbtiso cuda=no error

@@ -1,0 +1,8 @@
+uplo=U n= 3  max|Q_magma-Q_lapack|=7.11e-01 (fixed bounds: 0.0e+00)  LAPACK: orth 2.3e-17 recon 1.7e-16   MAGMA loops: orth 6.1e-01 recon 1.2e+00
+uplo=U n= 4  max|Q_magma-Q_lapack|=7.84e-01 (fixed bounds: 0.0e+00)  LAPACK: orth 2.2e-16 recon 9.6e-16   MAGMA loops: orth 9.5e-01 recon 7.5e-01
+uplo=U n= 8  max|Q_magma-Q_lapack|=1.26e+00 (fixed bounds: 0.0e+00)  LAPACK: orth 3.3e-16 recon 8.7e-16   MAGMA loops: orth 9.8e-01 recon 1.7e+00
+uplo=U n=50  max|Q_magma-Q_lapack|=6.98e+09 (fixed bounds: 0.0e+00)  LAPACK: orth 1.1e-15 recon 1.7e-15   MAGMA loops: orth 9.2e+19 recon 4.7e+19
+uplo=L n= 3  max|Q_magma-Q_lapack|=3.84e-01 (fixed bounds: 0.0e+00)  LAPACK: orth 2.2e-16 recon 4.5e-16   MAGMA loops: orth 3.5e-01 recon 7.6e-01
+uplo=L n= 4  max|Q_magma-Q_lapack|=1.81e+00 (fixed bounds: 0.0e+00)  LAPACK: orth 1.9e-16 recon 5.8e-16   MAGMA loops: orth 8.2e-01 recon 1.7e+00
+uplo=L n= 8  max|Q_magma-Q_lapack|=1.25e+00 (fixed bounds: 0.0e+00)  LAPACK: orth 3.3e-16 recon 5.8e-16   MAGMA loops: orth 8.6e-01 recon 2.0e+00
+uplo=L n=50  max|Q_magma-Q_lapack|=6.56e-01 (fixed bounds: 0.0e+00)  LAPACK: orth 8.9e-16 recon 5.6e-15   MAGMA loops: orth 1.8e+00 recon 2.0e+00

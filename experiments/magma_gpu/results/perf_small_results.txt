@@ -1,0 +1,38 @@
+0, 0 MiB, 0 %
+ 18:24:24 up 20 days, 23:56,  8 users,  load average: 10.58, 12.44, 16.43
+## rep=1 n=1024 orig
+dsgesv_iteref  n= 1024  time=  0.0558 s  iter=   2 info=0  relerr=6.52e-13
+dhgesv_iteref  n= 1024  time=  0.0570 s  iter=   2 info=0  relerr=9.53e-13
+## rep=1 n=1024 fix3
+dsgesv_iteref  n= 1024  time=  0.0919 s  iter=   3 info=0  relerr=2.89e-15
+dhgesv_iteref  n= 1024  time=  0.1205 s  iter=   3 info=0  relerr=2.44e-15
+## rep=1 n=2048 orig
+dsgesv_iteref  n= 2048  time=  0.0748 s  iter=   2 info=0  relerr=1.84e-12
+dhgesv_iteref  n= 2048  time=  0.0865 s  iter=   2 info=0  relerr=1.99e-12
+## rep=1 n=2048 fix3
+dsgesv_iteref  n= 2048  time=  0.1098 s  iter=   3 info=0  relerr=4.89e-15
+dhgesv_iteref  n= 2048  time=  0.1043 s  iter=   3 info=0  relerr=5.34e-15
+## rep=1 n=4096 orig
+dsgesv_iteref  n= 4096  time=  0.0810 s  iter=   2 info=0  relerr=2.98e-12
+dhgesv_iteref  n= 4096  time=  0.2383 s  iter=   2 info=0  relerr=3.19e-12
+## rep=1 n=4096 fix3
+dsgesv_iteref  n= 4096  time=  0.2243 s  iter=   3 info=0  relerr=6.89e-15
+dhgesv_iteref  n= 4096  time=  0.1153 s  iter=   3 info=0  relerr=6.44e-15
+## rep=2 n=1024 orig
+dsgesv_iteref  n= 1024  time=  0.0558 s  iter=   2 info=0  relerr=6.52e-13
+dhgesv_iteref  n= 1024  time=  0.0421 s  iter=   2 info=0  relerr=9.53e-13
+## rep=2 n=1024 fix3
+dsgesv_iteref  n= 1024  time=  0.1357 s  iter=   3 info=0  relerr=2.89e-15
+dhgesv_iteref  n= 1024  time=  0.1507 s  iter=   3 info=0  relerr=2.44e-15
+## rep=2 n=2048 orig
+dsgesv_iteref  n= 2048  time=  0.0794 s  iter=   2 info=0  relerr=1.84e-12
+dhgesv_iteref  n= 2048  time=  0.1306 s  iter=   2 info=0  relerr=1.99e-12
+## rep=2 n=2048 fix3
+dsgesv_iteref  n= 2048  time=  0.1168 s  iter=   3 info=0  relerr=4.89e-15
+dhgesv_iteref  n= 2048  time=  0.1692 s  iter=   3 info=0  relerr=5.34e-15
+## rep=2 n=4096 orig
+dsgesv_iteref  n= 4096  time=  0.0716 s  iter=   2 info=0  relerr=2.98e-12
+dhgesv_iteref  n= 4096  time=  0.0773 s  iter=   2 info=0  relerr=3.19e-12
+## rep=2 n=4096 fix3
+dsgesv_iteref  n= 4096  time=  0.2486 s  iter=   3 info=0  relerr=6.89e-15
+dhgesv_iteref  n= 4096  time=  0.0940 s  iter=   3 info=0  relerr=6.44e-15

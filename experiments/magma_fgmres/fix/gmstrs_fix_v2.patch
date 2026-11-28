@@ -1,0 +1,170 @@
+--- a/src/dgmres_plu_gpu.cpp	2026-11-25 11:13:23
++++ b/src/dgmres_plu_gpu.cpp	2026-11-25 11:13:23
+@@ -148,10 +148,11 @@
+ 
+ 	    magma_daxpy(n, 1.0, dB, 1, d_VV, 1, queue);
+ 
+-	    ro = magma_ddot(n, d_VV, 1, d_VV, 1, queue);
+-	    ro = sqrt(ro);
++	    // FIX (MagmaFixed.fgmresFixed): overflow/underflow-safe norm, and break only on an exactly zero
++	    // residual; the absolute threshold EPSILON = 1e-18 returned x = 0 for every ||b||_2 <= 1e-18.
++	    ro = magma_dnrm2(n, d_VV, 1, queue);
+ 
+-	    if (fabs(ro-ZERO) <= EPSILON) {
++	    if (ro == ZERO) {
+ 		out_flag = FALSE;
+ 		break;
+ 	    }   
+--- a/src/dxgesv_gmres_gpu.cpp	2026-11-25 11:13:23
++++ b/src/dxgesv_gmres_gpu.cpp	2026-11-25 11:13:23
+@@ -12,6 +12,8 @@
+ #include <cuda.h>    // for CUDA_VERSION
+ #endif
+ 
++#include <cmath>     // before magma_internal.h, whose min/max macros break <algorithm>
++#include <vector>
+ #include "magma_internal.h"
+ //#define MAGMA_PRINTF printf
+ #define MAGMA_PRINTF(...)
+@@ -123,6 +125,72 @@
+ 
+ /***************************************************************************/
+ /***************************************************************************/
++// FIX: certified acceptance test for the GMSTRS result (lean/OptimiKahan/MagmaFixed.lean, fixed_post).
++// Returns true only if, for every column, ||b - op(A) x||_inf < sqrt(n)*eps*BWDMAX*||x||_inf*||op(A)||_inf holds
++// for the EXACT residual: the residual is computed with Dot2 (Ogita-Rump-Oishi 2005), and the test uses the
++// over-approximation of IrsContract.wrapper_sound.  An FP64 residual cannot certify this threshold
++// (IrsContract.fp64_cannot_certify: its error bound (n+1)u exceeds sqrt(n)u).  Non-finite x, or NaN anywhere,
++// makes the test false.  Cost: one O(n^2) host pass (a GPU Dot2 kernel would avoid the transfer).
++static inline void gmstrs_two_sum(double a, double b, double &s, double &e)
++{ s = a + b; double z = s - a; e = (a - (s - z)) + (b - z); }
++
++static bool magma_dgmstrs_certify(
++    magma_trans_t trans, magma_int_t n, magma_int_t nrhs,
++    magmaDouble_const_ptr dA, magma_int_t ldda,
++    magmaDouble_const_ptr dB, magma_int_t lddb,
++    magmaDouble_const_ptr dX, magma_int_t lddx,
++    double bwdmax, magma_queue_t queue )
++{
++    const double u = lapackf77_dlamch("Epsilon");   // 2^-53, unit roundoff
++    const double dn = (double) n;
++    if ( !(dn * u < 0.005) ) return false;
++    // error-bound constants, rounded up: eps >= u/(1-u), gA >= gamma_n, gR >= gamma_{n+1}^2/(1-u)
++    const double eps_ = 2.0*u;
++    const double gA   = 1.01*dn*u;
++    const double gR   = 1.01*(1.01*(dn + 1.0)*u)*(1.01*(dn + 1.0)*u);
++    const double c    = std::sqrt(dn) * u * bwdmax;  // documented constant
++    std::vector<double> A( (size_t)n*n ), B( (size_t)n*nrhs ), X( (size_t)n*nrhs );
++    magma_dgetmatrix( n, n,    dA, ldda, A.data(), n, queue );
++    magma_dgetmatrix( n, nrhs, dB, lddb, B.data(), n, queue );
++    magma_dgetmatrix( n, nrhs, dX, lddx, X.data(), n, queue );
++    auto opA = [&]( magma_int_t i, magma_int_t j ) {
++        return trans == MagmaNoTrans ? A[ i + (size_t)j*n ] : A[ j + (size_t)i*n ]; };
++    double Ah = 0;                                   // computed ||op(A)||_inf
++    for ( magma_int_t i = 0; i < n; i++ ) {
++        double rs = 0;
++        for ( magma_int_t j = 0; j < n; j++ ) rs += std::fabs( opA(i,j) );
++        if ( !std::isfinite(rs) ) return false;
++        if ( rs > Ah ) Ah = rs;
++    }
++    for ( magma_int_t k = 0; k < nrhs; k++ ) {
++        const double *x = &X[ (size_t)k*n ], *b = &B[ (size_t)k*n ];
++        double Xn = 0, Bn = 0, Rh = 0;               // ||x||_inf, ||b||_inf are exact
++        for ( magma_int_t i = 0; i < n; i++ ) {
++            if ( !std::isfinite(x[i]) || !std::isfinite(b[i]) ) return false;
++            Xn = std::fmax( Xn, std::fabs(x[i]) );
++            Bn = std::fmax( Bn, std::fabs(b[i]) );
++        }
++        for ( magma_int_t i = 0; i < n; i++ ) {      // Dot2 of (b_i, -op(A)(i,:)) with (1, x)
++            double s = b[i], cc = 0, p, ep, es;
++            for ( magma_int_t j = 0; j < n; j++ ) {
++                p  = -opA(i,j) * x[j];
++                ep = std::fma( -opA(i,j), x[j], -p );   // TwoProduct
++                gmstrs_two_sum( s, p, s, es );
++                cc += es + ep;
++            }
++            const double r = std::fabs( s + cc );
++            if ( !std::isfinite(r) ) return false;
++            if ( r > Rh ) Rh = r;
++        }
++        // L >= exact left side, R <= exact right side of wrapper_sound's test (outward rounding 1 +- 16u)
++        const double L = ( (1.0 + eps_)*Rh + gR*( Bn + Xn*( Ah/(1.0 - gA) ) ) ) * (1.0 + 16.0*u);
++        const double R = ( c*Xn*( Ah/(1.0 + gA) ) ) * (1.0 - 16.0*u);
++        if ( !(L < R) ) return false;
++    }
++    return true;
++}
++
++
+ /***************************************************************************//**
+     Purpose
+     -------
+@@ -407,6 +475,15 @@
+         if (*info != 0) {
+             *iter = -2;
+             goto fallback;
++        }
++        // FIX: the half-precision factorizations convert A to FP16; dlag2s only checks the FP32 range.
++        // An entry above 65504 overflows to Inf and the LU to NaN, which was reported as success (iter = 500).
++        if ( facto_base == Magma_MP_BASE_XHS || facto_base == Magma_MP_BASE_XSH ) {
++            double Amax = magmablas_dlange( MagmaMaxNorm, n, n, dA, ldda, (double*)dworkd, n*nrhs, queue );
++            if ( !(Amax <= 65504.0) ) {
++                *iter = -2;
++                goto fallback;
++            }
+         }
+ 
+ /*
+@@ -490,7 +567,9 @@
+         eps  = lapackf77_dlamch("Epsilon");
+         Anrm = magmablas_dlange( MagmaInfNorm, n, n, dA, ldda, (double*)dworkd, n*nrhs, queue );
+         cte  = Anrm * eps * magma_dsqrt( (double) n ) * BWDMAX;
+-        gmtol = cte;
++        // FIX: FGMRES stops on ||r||_2 <= gmtol*||b||_2, so gmtol must be dimensionless; gmtol = cte made the
++        // threshold scale like ||A||*||b|| (s^2 under (A,b) -> s(A,b)) and gave iter = 1 once cte >= 1.
++        gmtol = eps * magma_dsqrt( (double) n ) * BWDMAX;
+ #else
+         fp32_eps  = lapackf77_slamch("Epsilon");
+         fp32_Anrm = magmablas_slange( MagmaInfNorm, n, n, dA_sprec, lddasp, (float*)dworkd, n*nrhs, queue );
+@@ -566,15 +645,34 @@
+        || solver_type == Magma_REFINE_GMGMSTRS || solver_type == Magma_REFINE_GMGMDTRS )
+     {
+         #if defined (USE_GMRES_GPU)
++            // FIX: magma_dfgmres_plu_gpu ignores trans, nrhs, lddb and lddx (it always solves A x = b for the
++            // first column).  Transposed systems go to the FP64 path; columns are solved one at a time.
++            if ( trans != MagmaNoTrans ) {
++                *iter = -1;
++                goto fallback;
++            }
+             // FGMRES  GPU need that X is initialized to "0"
+             magmablas_dlaset(MagmaFull, n, nrhs, 0.0, 0.0, dX, lddx, queue);
+-            magma_dfgmres_plu_gpu(trans, n, nrhs, dA, ldda,
+-                    dA_sprec, lddasp, dA_dprec, lddadp,
+-                    ipiv, dipiv, dB, lddb, dX, lddx, dSX,
+-                    solver_outer_itermax, solver_outer_itermax,
+-                    inner_itermax, inner_itermax,
+-                    0, gmtol, innertol, &rnorm0, iter,
+-                    solver_type, algoname, 0, queue);
++            {
++                magma_int_t it_j = 0, it_max = 0;
++                for ( j = 0; j < nrhs; j++ ) {
++                    magma_dfgmres_plu_gpu(trans, n, 1, dA, ldda,
++                            dA_sprec, lddasp, dA_dprec, lddadp,
++                            ipiv, dipiv, dB(0,j), lddb, dX(0,j), lddx, dSX,
++                            solver_outer_itermax, solver_outer_itermax,
++                            inner_itermax, inner_itermax,
++                            0, gmtol, innertol, &rnorm0, &it_j,
++                            solver_type, algoname, 0, queue);
++                    it_max = max( it_max, it_j );
++                }
++                *iter = it_max;
++            }
++            // FIX: the result was returned unchecked (goto cleanup).  Return it only if the documented
++            // stopping criterion provably holds; otherwise fall back to FP64 with iter < 0, as documented.
++            if ( ! magma_dgmstrs_certify( trans, n, nrhs, dA, ldda, dB, lddb, dX, lddx, BWDMAX, queue ) ) {
++                *iter = -(*iter + 1);
++                goto fallback;
++            }
+         #elif defined (USE_GMRES_CPU)
+             #if 0
+             magma_dgmres_cpu_init(n, &gmdwork, &gmhwork, &lwork,

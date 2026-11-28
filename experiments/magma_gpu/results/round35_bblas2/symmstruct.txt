@@ -1,0 +1,9 @@
+symmstruct A=I                    nonbatched C = [ 0 0 ] [ 0 0 ] [ 0 0 ] [ 0 0 ]
+symmstruct A=I                    batched    C = [ 0 0 ] [ 0 0 ] [ 0 0 ] [ 0 0 ]
+symmstruct A=diag(1,2,3,4)        nonbatched C = [ 0 0 ] [ 0 0 ] [ 0 0 ] [ 0 0 ]
+symmstruct A=diag(1,2,3,4)        batched    C = [ 0 0 ] [ 0 0 ] [ 0 0 ] [ 0 0 ]
+symmstruct A(2,0)=A(0,2)=1 only   nonbatched C = [ 0 0 ] [ 0 0 ] [ 0 0 ] [ 0 0 ]
+symmstruct A(2,0)=A(0,2)=1 only   batched    C = [ 0 0 ] [ 0 0 ] [ 0 0 ] [ 0 0 ]
+symmstruct A(3,1)=1 only          nonbatched C = [ 0 0 ] [ 0 0 ] [ 0 0 ] [ 0 0 ]
+symmstruct A(3,1)=1 only          batched    C = [ 0 0 ] [ 0 0 ] [ 0 0 ] [ 0 0 ]
+DONE symmstruct cuda=no error

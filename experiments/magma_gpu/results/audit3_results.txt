@@ -1,0 +1,45 @@
+0 MiB, 0 %
+## gesvj
+== gesvj_batched: one NaN entry, batch of 2 (matrix 0 has the NaN, matrix 1 is clean) ==
+n= 16 matrix 0 (NaN): ret=0 info=0  nonfinite singular values=16  s[0]=nan
+n= 16 matrix 1 (clean): ret=0 info=0  nonfinite singular values=0  s[0]=2.1557
+n= 64 matrix 0 (NaN): ret=0 info=0  nonfinite singular values=64  s[0]=nan
+n= 64 matrix 1 (clean): ret=0 info=0  nonfinite singular values=0  s[0]=4.51334
+n=256 matrix 0 (NaN): ret=0 info=0  nonfinite singular values=256  s[0]=nan
+n=256 matrix 1 (clean): ret=0 info=0  nonfinite singular values=0  s[0]=9.08531
+exit 0
+## hgetrf
+== hgetrf_gpu with an exactly singular first panel (column 0 = 0), n = 1024 aligned ==
+error sgetrf inside xhsgetrf voici info 1
+info=1 | in the trailing block (rows/cols >= 256): 768 of 589824 entries equal A, 589824 equal A^T
+exit 0
+## getrfm unset
+== getrf_m (out-of-core LU, CPU interface), MAGMA_NGR_NB=(unset): exactly zero column(s) ==
+zero column(s) at 100: LAPACK dgetrf info=101 | magma_dgetrf_m info=0
+zero column(s) at 300: LAPACK dgetrf info=301 | magma_dgetrf_m info=0
+zero column(s) at 600: LAPACK dgetrf info=601 | magma_dgetrf_m info=0
+zero column(s) at 900: LAPACK dgetrf info=901 | magma_dgetrf_m info=0
+zero column(s) at 300 900: LAPACK dgetrf info=301 | magma_dgetrf_m info=0
+## getrfm NB=256
+== getrf_m (out-of-core LU, CPU interface), MAGMA_NGR_NB=256: exactly zero column(s) ==
+zero column(s) at 100: LAPACK dgetrf info=101 | magma_dgetrf_m info=0
+zero column(s) at 300: LAPACK dgetrf info=301 | magma_dgetrf_m info=0
+zero column(s) at 600: LAPACK dgetrf info=601 | magma_dgetrf_m info=0
+zero column(s) at 900: LAPACK dgetrf info=901 | magma_dgetrf_m info=0
+zero column(s) at 300 900: LAPACK dgetrf info=301 | magma_dgetrf_m info=0
+## fgmres
+== sparse FGMRES scan for 'info = 0 with a non-finite x or a large true residual' ==
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=2 kind=0 seed=0: numiter=40 finite(x)=0 true_res/||b||=nan final_res=nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=2 kind=0 seed=1: numiter=33 finite(x)=0 true_res/||b||=nan final_res=nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=2 kind=1 seed=0: numiter=156 finite(x)=0 true_res/||b||=nan final_res=nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=3 kind=0 seed=0: numiter=33 finite(x)=0 true_res/||b||=nan final_res=nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=3 kind=0 seed=1: numiter=32 finite(x)=0 true_res/||b||=nan final_res=nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=3 kind=1 seed=0: numiter=138 finite(x)=0 true_res/||b||=nan final_res=nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=5 kind=0 seed=0: numiter=15 finite(x)=0 true_res/||b||=-nan final_res=-nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=5 kind=0 seed=1: numiter=13 finite(x)=0 true_res/||b||=-nan final_res=-nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=10 kind=0 seed=0: numiter=20 finite(x)=0 true_res/||b||=nan final_res=nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-20 restart=10 kind=0 seed=1: numiter=18 finite(x)=0 true_res/||b||=nan final_res=nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-30 restart=2 kind=0 seed=0: numiter=40 finite(x)=0 true_res/||b||=nan final_res=nan
+  info=0 n=4 ||b||=1e-08 rtol=1e-30 restart=2 kind=0 seed=1: numiter=33 finite(x)=0 true_res/||b||=nan final_res=nan
+scanned 1152 solves: 252 report info = 0 with a non-finite x or true residual > 1e-6 ||b|| (226 non-finite)
+exit 0

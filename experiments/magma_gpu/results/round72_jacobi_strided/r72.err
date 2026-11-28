@@ -1,0 +1,35 @@
+
+== gesvj 8 8 4
+DONE cuda=no error
+== gesvj 16 16 4
+DONE cuda=no error
+== gesvj 32 16 4
+DONE cuda=no error
+== gesvj 64 32 4
+DONE cuda=no error
+== gesvj 100 20 4
+DONE cuda=no error
+== gesvj 15 15 4
+DONE cuda=no error
+== gesvj 40 40 4
+DONE cuda=no error
+== heevj 2 U 4
+DONE cuda=no error
+== heevj 2 L 4
+DONE cuda=no error
+== heevj 7 U 4
+DONE cuda=no error
+== heevj 7 L 4
+DONE cuda=no error
+== heevj 16 U 4
+DONE cuda=no error
+== heevj 16 L 4
+DONE cuda=no error
+== heevj 31 U 4
+DONE cuda=no error
+== heevj 31 L 4
+DONE cuda=no error
+== heevj 32 U 4
+DONE cuda=no error
+== heevj 32 L 4
+DONE cuda=no error

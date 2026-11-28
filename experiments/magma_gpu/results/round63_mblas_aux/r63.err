@@ -1,0 +1,933 @@
+
+== geadd2 1 1 0 N N 0
+DONE cuda=no error
+== geam 1 1 0 N N 0
+DONE cuda=no error
+== geam 1 1 0 N T 0
+DONE cuda=no error
+== geam 1 1 0 N C 0
+DONE cuda=no error
+== geam 1 1 0 T N 0
+DONE cuda=no error
+== geam 1 1 0 T T 0
+DONE cuda=no error
+== geam 1 1 0 T C 0
+DONE cuda=no error
+== geam 1 1 0 C N 0
+DONE cuda=no error
+== geam 1 1 0 C T 0
+DONE cuda=no error
+== geam 1 1 0 C C 0
+DONE cuda=no error
+== transpose_conj 1 1 0 N N 0
+DONE cuda=no error
+== gemv_conj 1 1 1 N N 0
+DONE cuda=no error
+== gemv_conj 1 1 2 N N 0
+DONE cuda=no error
+== laset_band 1 1 1 U N 0
+DONE cuda=no error
+== laset_band 1 1 2 U N 0
+DONE cuda=no error
+== laset_band 1 1 5 U N 0
+DONE cuda=no error
+== laset_band 1 1 1 L N 0
+DONE cuda=no error
+== laset_band 1 1 2 L N 0
+DONE cuda=no error
+== laset_band 1 1 5 L N 0
+DONE cuda=no error
+== laswpx 1 1 0 N N 0
+DONE cuda=no error
+== laswp2 1 1 0 N N 0
+DONE cuda=no error
+== geadd2 1 1 0 N N 3
+DONE cuda=no error
+== geam 1 1 0 N N 3
+DONE cuda=no error
+== geam 1 1 0 N T 3
+DONE cuda=no error
+== geam 1 1 0 N C 3
+DONE cuda=no error
+== geam 1 1 0 T N 3
+DONE cuda=no error
+== geam 1 1 0 T T 3
+DONE cuda=no error
+== geam 1 1 0 T C 3
+DONE cuda=no error
+== geam 1 1 0 C N 3
+DONE cuda=no error
+== geam 1 1 0 C T 3
+DONE cuda=no error
+== geam 1 1 0 C C 3
+DONE cuda=no error
+== transpose_conj 1 1 0 N N 3
+DONE cuda=no error
+== gemv_conj 1 1 1 N N 3
+DONE cuda=no error
+== gemv_conj 1 1 2 N N 3
+DONE cuda=no error
+== laset_band 1 1 1 U N 3
+DONE cuda=no error
+== laset_band 1 1 2 U N 3
+DONE cuda=no error
+== laset_band 1 1 5 U N 3
+DONE cuda=no error
+== laset_band 1 1 1 L N 3
+DONE cuda=no error
+== laset_band 1 1 2 L N 3
+DONE cuda=no error
+== laset_band 1 1 5 L N 3
+DONE cuda=no error
+== laswpx 1 1 0 N N 3
+DONE cuda=no error
+== laswp2 1 1 0 N N 3
+DONE cuda=no error
+== geadd2 33 17 0 N N 0
+DONE cuda=no error
+== geam 33 17 0 N N 0
+DONE cuda=no error
+== geam 33 17 0 N T 0
+DONE cuda=no error
+== geam 33 17 0 N C 0
+DONE cuda=no error
+== geam 33 17 0 T N 0
+DONE cuda=no error
+== geam 33 17 0 T T 0
+DONE cuda=no error
+== geam 33 17 0 T C 0
+DONE cuda=no error
+== geam 33 17 0 C N 0
+DONE cuda=no error
+== geam 33 17 0 C T 0
+DONE cuda=no error
+== geam 33 17 0 C C 0
+DONE cuda=no error
+== transpose_conj 33 17 0 N N 0
+DONE cuda=no error
+== gemv_conj 33 17 1 N N 0
+DONE cuda=no error
+== gemv_conj 33 17 2 N N 0
+DONE cuda=no error
+== laset_band 33 17 1 U N 0
+DONE cuda=no error
+== laset_band 33 17 2 U N 0
+DONE cuda=no error
+== laset_band 33 17 5 U N 0
+DONE cuda=no error
+== laset_band 33 17 1 L N 0
+DONE cuda=no error
+== laset_band 33 17 2 L N 0
+DONE cuda=no error
+== laset_band 33 17 5 L N 0
+DONE cuda=no error
+== laswpx 33 17 0 N N 0
+DONE cuda=no error
+== laswp2 33 17 0 N N 0
+DONE cuda=no error
+== geadd2 33 17 0 N N 3
+DONE cuda=no error
+== geam 33 17 0 N N 3
+DONE cuda=no error
+== geam 33 17 0 N T 3
+DONE cuda=no error
+== geam 33 17 0 N C 3
+DONE cuda=no error
+== geam 33 17 0 T N 3
+DONE cuda=no error
+== geam 33 17 0 T T 3
+DONE cuda=no error
+== geam 33 17 0 T C 3
+DONE cuda=no error
+== geam 33 17 0 C N 3
+DONE cuda=no error
+== geam 33 17 0 C T 3
+DONE cuda=no error
+== geam 33 17 0 C C 3
+DONE cuda=no error
+== transpose_conj 33 17 0 N N 3
+DONE cuda=no error
+== gemv_conj 33 17 1 N N 3
+DONE cuda=no error
+== gemv_conj 33 17 2 N N 3
+DONE cuda=no error
+== laset_band 33 17 1 U N 3
+DONE cuda=no error
+== laset_band 33 17 2 U N 3
+DONE cuda=no error
+== laset_band 33 17 5 U N 3
+DONE cuda=no error
+== laset_band 33 17 1 L N 3
+DONE cuda=no error
+== laset_band 33 17 2 L N 3
+DONE cuda=no error
+== laset_band 33 17 5 L N 3
+DONE cuda=no error
+== laswpx 33 17 0 N N 3
+DONE cuda=no error
+== laswp2 33 17 0 N N 3
+DONE cuda=no error
+== geadd2 100 100 0 N N 0
+DONE cuda=no error
+== geam 100 100 0 N N 0
+DONE cuda=no error
+== geam 100 100 0 N T 0
+DONE cuda=no error
+== geam 100 100 0 N C 0
+DONE cuda=no error
+== geam 100 100 0 T N 0
+DONE cuda=no error
+== geam 100 100 0 T T 0
+DONE cuda=no error
+== geam 100 100 0 T C 0
+DONE cuda=no error
+== geam 100 100 0 C N 0
+DONE cuda=no error
+== geam 100 100 0 C T 0
+DONE cuda=no error
+== geam 100 100 0 C C 0
+DONE cuda=no error
+== transpose_conj 100 100 0 N N 0
+DONE cuda=no error
+== gemv_conj 100 100 1 N N 0
+DONE cuda=no error
+== gemv_conj 100 100 2 N N 0
+DONE cuda=no error
+== laset_band 100 100 1 U N 0
+DONE cuda=no error
+== laset_band 100 100 2 U N 0
+DONE cuda=no error
+== laset_band 100 100 5 U N 0
+DONE cuda=no error
+== laset_band 100 100 1 L N 0
+DONE cuda=no error
+== laset_band 100 100 2 L N 0
+DONE cuda=no error
+== laset_band 100 100 5 L N 0
+DONE cuda=no error
+== laswpx 100 100 0 N N 0
+DONE cuda=no error
+== laswp2 100 100 0 N N 0
+DONE cuda=no error
+== geadd2 100 100 0 N N 3
+DONE cuda=no error
+== geam 100 100 0 N N 3
+DONE cuda=no error
+== geam 100 100 0 N T 3
+DONE cuda=no error
+== geam 100 100 0 N C 3
+DONE cuda=no error
+== geam 100 100 0 T N 3
+DONE cuda=no error
+== geam 100 100 0 T T 3
+DONE cuda=no error
+== geam 100 100 0 T C 3
+DONE cuda=no error
+== geam 100 100 0 C N 3
+DONE cuda=no error
+== geam 100 100 0 C T 3
+DONE cuda=no error
+== geam 100 100 0 C C 3
+DONE cuda=no error
+== transpose_conj 100 100 0 N N 3
+DONE cuda=no error
+== gemv_conj 100 100 1 N N 3
+DONE cuda=no error
+== gemv_conj 100 100 2 N N 3
+DONE cuda=no error
+== laset_band 100 100 1 U N 3
+DONE cuda=no error
+== laset_band 100 100 2 U N 3
+DONE cuda=no error
+== laset_band 100 100 5 U N 3
+DONE cuda=no error
+== laset_band 100 100 1 L N 3
+DONE cuda=no error
+== laset_band 100 100 2 L N 3
+DONE cuda=no error
+== laset_band 100 100 5 L N 3
+DONE cuda=no error
+== laswpx 100 100 0 N N 3
+DONE cuda=no error
+== laswp2 100 100 0 N N 3
+DONE cuda=no error
+== geadd2 257 129 0 N N 0
+DONE cuda=no error
+== geam 257 129 0 N N 0
+DONE cuda=no error
+== geam 257 129 0 N T 0
+DONE cuda=no error
+== geam 257 129 0 N C 0
+DONE cuda=no error
+== geam 257 129 0 T N 0
+DONE cuda=no error
+== geam 257 129 0 T T 0
+DONE cuda=no error
+== geam 257 129 0 T C 0
+DONE cuda=no error
+== geam 257 129 0 C N 0
+DONE cuda=no error
+== geam 257 129 0 C T 0
+DONE cuda=no error
+== geam 257 129 0 C C 0
+DONE cuda=no error
+== transpose_conj 257 129 0 N N 0
+DONE cuda=no error
+== gemv_conj 257 129 1 N N 0
+DONE cuda=no error
+== gemv_conj 257 129 2 N N 0
+DONE cuda=no error
+== laset_band 257 129 1 U N 0
+DONE cuda=no error
+== laset_band 257 129 2 U N 0
+DONE cuda=no error
+== laset_band 257 129 5 U N 0
+DONE cuda=no error
+== laset_band 257 129 1 L N 0
+DONE cuda=no error
+== laset_band 257 129 2 L N 0
+DONE cuda=no error
+== laset_band 257 129 5 L N 0
+DONE cuda=no error
+== laswpx 257 129 0 N N 0
+DONE cuda=no error
+== laswp2 257 129 0 N N 0
+DONE cuda=no error
+== geadd2 257 129 0 N N 3
+DONE cuda=no error
+== geam 257 129 0 N N 3
+DONE cuda=no error
+== geam 257 129 0 N T 3
+DONE cuda=no error
+== geam 257 129 0 N C 3
+DONE cuda=no error
+== geam 257 129 0 T N 3
+DONE cuda=no error
+== geam 257 129 0 T T 3
+DONE cuda=no error
+== geam 257 129 0 T C 3
+DONE cuda=no error
+== geam 257 129 0 C N 3
+DONE cuda=no error
+== geam 257 129 0 C T 3
+DONE cuda=no error
+== geam 257 129 0 C C 3
+DONE cuda=no error
+== transpose_conj 257 129 0 N N 3
+DONE cuda=no error
+== gemv_conj 257 129 1 N N 3
+DONE cuda=no error
+== gemv_conj 257 129 2 N N 3
+DONE cuda=no error
+== laset_band 257 129 1 U N 3
+DONE cuda=no error
+== laset_band 257 129 2 U N 3
+DONE cuda=no error
+== laset_band 257 129 5 U N 3
+DONE cuda=no error
+== laset_band 257 129 1 L N 3
+DONE cuda=no error
+== laset_band 257 129 2 L N 3
+DONE cuda=no error
+== laset_band 257 129 5 L N 3
+DONE cuda=no error
+== laswpx 257 129 0 N N 3
+DONE cuda=no error
+== laswp2 257 129 0 N N 3
+DONE cuda=no error
+== geadd2 64 300 0 N N 0
+DONE cuda=no error
+== geam 64 300 0 N N 0
+DONE cuda=no error
+== geam 64 300 0 N T 0
+DONE cuda=no error
+== geam 64 300 0 N C 0
+DONE cuda=no error
+== geam 64 300 0 T N 0
+DONE cuda=no error
+== geam 64 300 0 T T 0
+DONE cuda=no error
+== geam 64 300 0 T C 0
+DONE cuda=no error
+== geam 64 300 0 C N 0
+DONE cuda=no error
+== geam 64 300 0 C T 0
+DONE cuda=no error
+== geam 64 300 0 C C 0
+DONE cuda=no error
+== transpose_conj 64 300 0 N N 0
+DONE cuda=no error
+== gemv_conj 64 300 1 N N 0
+DONE cuda=no error
+== gemv_conj 64 300 2 N N 0
+DONE cuda=no error
+== laset_band 64 300 1 U N 0
+DONE cuda=no error
+== laset_band 64 300 2 U N 0
+DONE cuda=no error
+== laset_band 64 300 5 U N 0
+DONE cuda=no error
+== laset_band 64 300 1 L N 0
+DONE cuda=no error
+== laset_band 64 300 2 L N 0
+DONE cuda=no error
+== laset_band 64 300 5 L N 0
+DONE cuda=no error
+== laswpx 64 300 0 N N 0
+DONE cuda=no error
+== laswp2 64 300 0 N N 0
+DONE cuda=no error
+== geadd2 64 300 0 N N 3
+DONE cuda=no error
+== geam 64 300 0 N N 3
+DONE cuda=no error
+== geam 64 300 0 N T 3
+DONE cuda=no error
+== geam 64 300 0 N C 3
+DONE cuda=no error
+== geam 64 300 0 T N 3
+DONE cuda=no error
+== geam 64 300 0 T T 3
+DONE cuda=no error
+== geam 64 300 0 T C 3
+DONE cuda=no error
+== geam 64 300 0 C N 3
+DONE cuda=no error
+== geam 64 300 0 C T 3
+DONE cuda=no error
+== geam 64 300 0 C C 3
+DONE cuda=no error
+== transpose_conj 64 300 0 N N 3
+DONE cuda=no error
+== gemv_conj 64 300 1 N N 3
+DONE cuda=no error
+== gemv_conj 64 300 2 N N 3
+DONE cuda=no error
+== laset_band 64 300 1 U N 3
+DONE cuda=no error
+== laset_band 64 300 2 U N 3
+DONE cuda=no error
+== laset_band 64 300 5 U N 3
+DONE cuda=no error
+== laset_band 64 300 1 L N 3
+DONE cuda=no error
+== laset_band 64 300 2 L N 3
+DONE cuda=no error
+== laset_band 64 300 5 L N 3
+DONE cuda=no error
+== laswpx 64 300 0 N N 3
+DONE cuda=no error
+== laswp2 64 300 0 N N 3
+DONE cuda=no error
+== gemm_reduce 4 3 1000 N N 0
+DONE cuda=no error
+== gemm_reduce 32 32 5000 N N 0
+DONE cuda=no error
+== gemm_reduce 100 64 2048 N N 0
+DONE cuda=no error
+== gemm_reduce 1 1 7 N N 0
+DONE cuda=no error
+== symmetrize 0 1 0 U N 0
+DONE cuda=no error
+== trmv 0 1 1 U N 0
+DONE cuda=no error
+== trmv 0 1 2 U N 0
+DONE cuda=no error
+== trmv 0 1 1 U T 0
+DONE cuda=no error
+== trmv 0 1 2 U T 0
+DONE cuda=no error
+== trmv 0 1 1 U C 0
+DONE cuda=no error
+== trmv 0 1 2 U C 0
+DONE cuda=no error
+== symmetrize 0 1 0 L N 0
+DONE cuda=no error
+== trmv 0 1 1 L N 0
+DONE cuda=no error
+== trmv 0 1 2 L N 0
+DONE cuda=no error
+== trmv 0 1 1 L T 0
+DONE cuda=no error
+== trmv 0 1 2 L T 0
+DONE cuda=no error
+== trmv 0 1 1 L C 0
+DONE cuda=no error
+== trmv 0 1 2 L C 0
+DONE cuda=no error
+== transpose_inplace 0 1 0 N N 0
+DONE cuda=no error
+== transpose_conj_inplace 0 1 0 N N 0
+DONE cuda=no error
+== symmetrize 0 1 0 U N 3
+DONE cuda=no error
+== trmv 0 1 1 U N 3
+DONE cuda=no error
+== trmv 0 1 2 U N 3
+DONE cuda=no error
+== trmv 0 1 1 U T 3
+DONE cuda=no error
+== trmv 0 1 2 U T 3
+DONE cuda=no error
+== trmv 0 1 1 U C 3
+DONE cuda=no error
+== trmv 0 1 2 U C 3
+DONE cuda=no error
+== symmetrize 0 1 0 L N 3
+DONE cuda=no error
+== trmv 0 1 1 L N 3
+DONE cuda=no error
+== trmv 0 1 2 L N 3
+DONE cuda=no error
+== trmv 0 1 1 L T 3
+DONE cuda=no error
+== trmv 0 1 2 L T 3
+DONE cuda=no error
+== trmv 0 1 1 L C 3
+DONE cuda=no error
+== trmv 0 1 2 L C 3
+DONE cuda=no error
+== transpose_inplace 0 1 0 N N 3
+DONE cuda=no error
+== transpose_conj_inplace 0 1 0 N N 3
+DONE cuda=no error
+== symv 0 1 0 U N 0
+DONE cuda=no error
+== symv 0 1 0 L N 0
+DONE cuda=no error
+== larfg 0 1 0 N N 0
+DONE cuda=no error
+== symmetrize 0 31 0 U N 0
+DONE cuda=no error
+== trmv 0 31 1 U N 0
+DONE cuda=no error
+== trmv 0 31 2 U N 0
+DONE cuda=no error
+== trmv 0 31 1 U T 0
+DONE cuda=no error
+== trmv 0 31 2 U T 0
+DONE cuda=no error
+== trmv 0 31 1 U C 0
+DONE cuda=no error
+== trmv 0 31 2 U C 0
+DONE cuda=no error
+== symmetrize 0 31 0 L N 0
+DONE cuda=no error
+== trmv 0 31 1 L N 0
+DONE cuda=no error
+== trmv 0 31 2 L N 0
+DONE cuda=no error
+== trmv 0 31 1 L T 0
+DONE cuda=no error
+== trmv 0 31 2 L T 0
+DONE cuda=no error
+== trmv 0 31 1 L C 0
+DONE cuda=no error
+== trmv 0 31 2 L C 0
+DONE cuda=no error
+== transpose_inplace 0 31 0 N N 0
+DONE cuda=no error
+== transpose_conj_inplace 0 31 0 N N 0
+DONE cuda=no error
+== symmetrize 0 31 0 U N 3
+DONE cuda=no error
+== trmv 0 31 1 U N 3
+DONE cuda=no error
+== trmv 0 31 2 U N 3
+DONE cuda=no error
+== trmv 0 31 1 U T 3
+DONE cuda=no error
+== trmv 0 31 2 U T 3
+DONE cuda=no error
+== trmv 0 31 1 U C 3
+DONE cuda=no error
+== trmv 0 31 2 U C 3
+DONE cuda=no error
+== symmetrize 0 31 0 L N 3
+DONE cuda=no error
+== trmv 0 31 1 L N 3
+DONE cuda=no error
+== trmv 0 31 2 L N 3
+DONE cuda=no error
+== trmv 0 31 1 L T 3
+DONE cuda=no error
+== trmv 0 31 2 L T 3
+DONE cuda=no error
+== trmv 0 31 1 L C 3
+DONE cuda=no error
+== trmv 0 31 2 L C 3
+DONE cuda=no error
+== transpose_inplace 0 31 0 N N 3
+DONE cuda=no error
+== transpose_conj_inplace 0 31 0 N N 3
+DONE cuda=no error
+== symv 0 31 0 U N 0
+DONE cuda=no error
+== symv 0 31 0 L N 0
+DONE cuda=no error
+== larfg 0 31 0 N N 0
+DONE cuda=no error
+== symmetrize 0 32 0 U N 0
+DONE cuda=no error
+== trmv 0 32 1 U N 0
+DONE cuda=no error
+== trmv 0 32 2 U N 0
+DONE cuda=no error
+== trmv 0 32 1 U T 0
+DONE cuda=no error
+== trmv 0 32 2 U T 0
+DONE cuda=no error
+== trmv 0 32 1 U C 0
+DONE cuda=no error
+== trmv 0 32 2 U C 0
+DONE cuda=no error
+== symmetrize 0 32 0 L N 0
+DONE cuda=no error
+== trmv 0 32 1 L N 0
+DONE cuda=no error
+== trmv 0 32 2 L N 0
+DONE cuda=no error
+== trmv 0 32 1 L T 0
+DONE cuda=no error
+== trmv 0 32 2 L T 0
+DONE cuda=no error
+== trmv 0 32 1 L C 0
+DONE cuda=no error
+== trmv 0 32 2 L C 0
+DONE cuda=no error
+== transpose_inplace 0 32 0 N N 0
+DONE cuda=no error
+== transpose_conj_inplace 0 32 0 N N 0
+DONE cuda=no error
+== symmetrize 0 32 0 U N 3
+DONE cuda=no error
+== trmv 0 32 1 U N 3
+DONE cuda=no error
+== trmv 0 32 2 U N 3
+DONE cuda=no error
+== trmv 0 32 1 U T 3
+DONE cuda=no error
+== trmv 0 32 2 U T 3
+DONE cuda=no error
+== trmv 0 32 1 U C 3
+DONE cuda=no error
+== trmv 0 32 2 U C 3
+DONE cuda=no error
+== symmetrize 0 32 0 L N 3
+DONE cuda=no error
+== trmv 0 32 1 L N 3
+DONE cuda=no error
+== trmv 0 32 2 L N 3
+DONE cuda=no error
+== trmv 0 32 1 L T 3
+DONE cuda=no error
+== trmv 0 32 2 L T 3
+DONE cuda=no error
+== trmv 0 32 1 L C 3
+DONE cuda=no error
+== trmv 0 32 2 L C 3
+DONE cuda=no error
+== transpose_inplace 0 32 0 N N 3
+DONE cuda=no error
+== transpose_conj_inplace 0 32 0 N N 3
+DONE cuda=no error
+== symv 0 32 0 U N 0
+DONE cuda=no error
+== symv 0 32 0 L N 0
+DONE cuda=no error
+== larfg 0 32 0 N N 0
+DONE cuda=no error
+== symmetrize 0 33 0 U N 0
+DONE cuda=no error
+== trmv 0 33 1 U N 0
+DONE cuda=no error
+== trmv 0 33 2 U N 0
+DONE cuda=no error
+== trmv 0 33 1 U T 0
+DONE cuda=no error
+== trmv 0 33 2 U T 0
+DONE cuda=no error
+== trmv 0 33 1 U C 0
+DONE cuda=no error
+== trmv 0 33 2 U C 0
+DONE cuda=no error
+== symmetrize 0 33 0 L N 0
+DONE cuda=no error
+== trmv 0 33 1 L N 0
+DONE cuda=no error
+== trmv 0 33 2 L N 0
+DONE cuda=no error
+== trmv 0 33 1 L T 0
+DONE cuda=no error
+== trmv 0 33 2 L T 0
+DONE cuda=no error
+== trmv 0 33 1 L C 0
+DONE cuda=no error
+== trmv 0 33 2 L C 0
+DONE cuda=no error
+== transpose_inplace 0 33 0 N N 0
+DONE cuda=no error
+== transpose_conj_inplace 0 33 0 N N 0
+DONE cuda=no error
+== symmetrize 0 33 0 U N 3
+DONE cuda=no error
+== trmv 0 33 1 U N 3
+DONE cuda=no error
+== trmv 0 33 2 U N 3
+DONE cuda=no error
+== trmv 0 33 1 U T 3
+DONE cuda=no error
+== trmv 0 33 2 U T 3
+DONE cuda=no error
+== trmv 0 33 1 U C 3
+DONE cuda=no error
+== trmv 0 33 2 U C 3
+DONE cuda=no error
+== symmetrize 0 33 0 L N 3
+DONE cuda=no error
+== trmv 0 33 1 L N 3
+DONE cuda=no error
+== trmv 0 33 2 L N 3
+DONE cuda=no error
+== trmv 0 33 1 L T 3
+DONE cuda=no error
+== trmv 0 33 2 L T 3
+DONE cuda=no error
+== trmv 0 33 1 L C 3
+DONE cuda=no error
+== trmv 0 33 2 L C 3
+DONE cuda=no error
+== transpose_inplace 0 33 0 N N 3
+DONE cuda=no error
+== transpose_conj_inplace 0 33 0 N N 3
+DONE cuda=no error
+== symv 0 33 0 U N 0
+DONE cuda=no error
+== symv 0 33 0 L N 0
+DONE cuda=no error
+== larfg 0 33 0 N N 0
+DONE cuda=no error
+== symmetrize 0 100 0 U N 0
+DONE cuda=no error
+== trmv 0 100 1 U N 0
+DONE cuda=no error
+== trmv 0 100 2 U N 0
+DONE cuda=no error
+== trmv 0 100 1 U T 0
+DONE cuda=no error
+== trmv 0 100 2 U T 0
+DONE cuda=no error
+== trmv 0 100 1 U C 0
+DONE cuda=no error
+== trmv 0 100 2 U C 0
+DONE cuda=no error
+== symmetrize 0 100 0 L N 0
+DONE cuda=no error
+== trmv 0 100 1 L N 0
+DONE cuda=no error
+== trmv 0 100 2 L N 0
+DONE cuda=no error
+== trmv 0 100 1 L T 0
+DONE cuda=no error
+== trmv 0 100 2 L T 0
+DONE cuda=no error
+== trmv 0 100 1 L C 0
+DONE cuda=no error
+== trmv 0 100 2 L C 0
+DONE cuda=no error
+== transpose_inplace 0 100 0 N N 0
+DONE cuda=no error
+== transpose_conj_inplace 0 100 0 N N 0
+DONE cuda=no error
+== symmetrize 0 100 0 U N 3
+DONE cuda=no error
+== trmv 0 100 1 U N 3
+DONE cuda=no error
+== trmv 0 100 2 U N 3
+DONE cuda=no error
+== trmv 0 100 1 U T 3
+DONE cuda=no error
+== trmv 0 100 2 U T 3
+DONE cuda=no error
+== trmv 0 100 1 U C 3
+DONE cuda=no error
+== trmv 0 100 2 U C 3
+DONE cuda=no error
+== symmetrize 0 100 0 L N 3
+DONE cuda=no error
+== trmv 0 100 1 L N 3
+DONE cuda=no error
+== trmv 0 100 2 L N 3
+DONE cuda=no error
+== trmv 0 100 1 L T 3
+DONE cuda=no error
+== trmv 0 100 2 L T 3
+DONE cuda=no error
+== trmv 0 100 1 L C 3
+DONE cuda=no error
+== trmv 0 100 2 L C 3
+DONE cuda=no error
+== transpose_inplace 0 100 0 N N 3
+DONE cuda=no error
+== transpose_conj_inplace 0 100 0 N N 3
+DONE cuda=no error
+== symv 0 100 0 U N 0
+DONE cuda=no error
+== symv 0 100 0 L N 0
+DONE cuda=no error
+== larfg 0 100 0 N N 0
+DONE cuda=no error
+== symmetrize 0 257 0 U N 0
+DONE cuda=no error
+== trmv 0 257 1 U N 0
+DONE cuda=no error
+== trmv 0 257 2 U N 0
+DONE cuda=no error
+== trmv 0 257 1 U T 0
+DONE cuda=no error
+== trmv 0 257 2 U T 0
+DONE cuda=no error
+== trmv 0 257 1 U C 0
+DONE cuda=no error
+== trmv 0 257 2 U C 0
+DONE cuda=no error
+== symmetrize 0 257 0 L N 0
+DONE cuda=no error
+== trmv 0 257 1 L N 0
+DONE cuda=no error
+== trmv 0 257 2 L N 0
+DONE cuda=no error
+== trmv 0 257 1 L T 0
+DONE cuda=no error
+== trmv 0 257 2 L T 0
+DONE cuda=no error
+== trmv 0 257 1 L C 0
+DONE cuda=no error
+== trmv 0 257 2 L C 0
+DONE cuda=no error
+== transpose_inplace 0 257 0 N N 0
+DONE cuda=no error
+== transpose_conj_inplace 0 257 0 N N 0
+DONE cuda=no error
+== symmetrize 0 257 0 U N 3
+DONE cuda=no error
+== trmv 0 257 1 U N 3
+DONE cuda=no error
+== trmv 0 257 2 U N 3
+DONE cuda=no error
+== trmv 0 257 1 U T 3
+DONE cuda=no error
+== trmv 0 257 2 U T 3
+DONE cuda=no error
+== trmv 0 257 1 U C 3
+DONE cuda=no error
+== trmv 0 257 2 U C 3
+DONE cuda=no error
+== symmetrize 0 257 0 L N 3
+DONE cuda=no error
+== trmv 0 257 1 L N 3
+DONE cuda=no error
+== trmv 0 257 2 L N 3
+DONE cuda=no error
+== trmv 0 257 1 L T 3
+DONE cuda=no error
+== trmv 0 257 2 L T 3
+DONE cuda=no error
+== trmv 0 257 1 L C 3
+DONE cuda=no error
+== trmv 0 257 2 L C 3
+DONE cuda=no error
+== transpose_inplace 0 257 0 N N 3
+DONE cuda=no error
+== transpose_conj_inplace 0 257 0 N N 3
+DONE cuda=no error
+== symv 0 257 0 U N 0
+DONE cuda=no error
+== symv 0 257 0 L N 0
+DONE cuda=no error
+== larfg 0 257 0 N N 0
+DONE cuda=no error
+== symmetrize 0 512 0 U N 0
+DONE cuda=no error
+== trmv 0 512 1 U N 0
+DONE cuda=no error
+== trmv 0 512 2 U N 0
+DONE cuda=no error
+== trmv 0 512 1 U T 0
+DONE cuda=no error
+== trmv 0 512 2 U T 0
+DONE cuda=no error
+== trmv 0 512 1 U C 0
+DONE cuda=no error
+== trmv 0 512 2 U C 0
+DONE cuda=no error
+== symmetrize 0 512 0 L N 0
+DONE cuda=no error
+== trmv 0 512 1 L N 0
+DONE cuda=no error
+== trmv 0 512 2 L N 0
+DONE cuda=no error
+== trmv 0 512 1 L T 0
+DONE cuda=no error
+== trmv 0 512 2 L T 0
+DONE cuda=no error
+== trmv 0 512 1 L C 0
+DONE cuda=no error
+== trmv 0 512 2 L C 0
+DONE cuda=no error
+== transpose_inplace 0 512 0 N N 0
+DONE cuda=no error
+== transpose_conj_inplace 0 512 0 N N 0
+DONE cuda=no error
+== symmetrize 0 512 0 U N 3
+DONE cuda=no error
+== trmv 0 512 1 U N 3
+DONE cuda=no error
+== trmv 0 512 2 U N 3
+DONE cuda=no error
+== trmv 0 512 1 U T 3
+DONE cuda=no error
+== trmv 0 512 2 U T 3
+DONE cuda=no error
+== trmv 0 512 1 U C 3
+DONE cuda=no error
+== trmv 0 512 2 U C 3
+DONE cuda=no error
+== symmetrize 0 512 0 L N 3
+DONE cuda=no error
+== trmv 0 512 1 L N 3
+DONE cuda=no error
+== trmv 0 512 2 L N 3
+DONE cuda=no error
+== trmv 0 512 1 L T 3
+DONE cuda=no error
+== trmv 0 512 2 L T 3
+DONE cuda=no error
+== trmv 0 512 1 L C 3
+DONE cuda=no error
+== trmv 0 512 2 L C 3
+DONE cuda=no error
+== transpose_inplace 0 512 0 N N 3
+DONE cuda=no error
+== transpose_conj_inplace 0 512 0 N N 3
+DONE cuda=no error
+== symv 0 512 0 U N 0
+DONE cuda=no error
+== symv 0 512 0 L N 0
+DONE cuda=no error
+== larfg 0 512 0 N N 0
+DONE cuda=no error
+== swapdblk 0 64 32 N N 2
+DONE cuda=no error
+== swapdblk 0 100 32 N N 2
+DONE cuda=no error
+== swapdblk 0 256 64 N N 2
+DONE cuda=no error
+== swapdblk 0 30 32 N N 2
+DONE cuda=no error
+== lacpy_conj 0 100 1 N N 1
+DONE cuda=no error
+== lacpy_conj 0 100 3 N N 2
+DONE cuda=no error
+== lacpy_conj 0 1000 7 N N 5
+DONE cuda=no error

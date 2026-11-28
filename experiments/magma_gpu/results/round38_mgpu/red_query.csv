@@ -1,0 +1,14 @@
+r38,routine,case,info,err,verdict
+r38,dgehrd_m,n=1,0,0,OK
+r38,dgehrd_m,n=33,0,0.0472,OK
+r38,dgehrd_m,n=257,0,0.0156,OK
+r38,dgehrd_m,n=600,0,0.0107,OK
+r38,dsytrd_mgpu,n=1 L,0,0,OK
+r38,dsytrd_mgpu,n=1 U,0,0,OK
+r38,dsytrd_mgpu,n=33 L,0,0,OK
+r38,dsytrd_mgpu,n=33 U,0,0.219,OK
+r38,dsytrd_mgpu,n=257 L,0,0,OK
+r38,dsytrd_mgpu,n=257 U,0,0.392,OK
+r38,dsytrd_mgpu,n=600 L,0,0,OK
+r38,dsytrd_mgpu,n=600 U,0,0.437,OK
+DONE red cuda=no error

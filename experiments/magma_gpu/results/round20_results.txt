@@ -1,0 +1,37 @@
+23:32:47 used=0MiB procs=0 ok=2
+23:33:48 used=0MiB procs=0 ok=3
+GPU 0 idle at Wed Nov 25 23:34:48 UTC 2026
+######## f1
+F1 zheevdx n=300 random, jobz=V, range V (0.5, 30]: info=0 m=145 (LAPACK count in (vl,vu] = 145)  max|AV - V Lambda|/max|A| = 13.5  max|V^H V - I| = 296
+   zheevdx_2stage, same: info=0 m=145 (LAPACK count in (vl,vu] = 145)  max|AV - V Lambda|/max|A| = 13.5  max|V^H V - I| = 296
+exit=0
+######## f7
+F7 zheevdx diag(1..300), range V (10, 20] (10 eigenvalues; 10 itself excluded): info=0 m=11 (LAPACK count in (vl,vu] = 10)  max|AV - V Lambda|/max|A| = 0  max|V^H V - I| = 0
+exit=0
+######## f3
+F3 zgetrf native n=2400, default nb (control): info=0  invalid ipiv entries (ipiv[i] < i+1 or > n): 0  max|PA - LU|/max|A| = 1.25e-13
+magma_zlaswp_rowparallel_native: height=1200 > 1024, magma_zlaswp_rowparallel_q not supported
+adjust_ipiv: m=1200 > 1024, not supported
+magma_zlaswp_rowparallel_native: height=1200 > 1024, magma_zlaswp_rowparallel_q not supported
+F3 zgetrf native n=2400, expert nb=600 recnb=32 (panel split with n2 = 1200 > 1024): info=0  invalid ipiv entries (ipiv[i] < i+1 or > n): 1200  max|PA - LU|/max|A| = 52.7
+exit=0
+######## f4
+F4 gesvj_batched, column 0 = 0 (n=32, blocked path): info=0  non-finite U entries=32, V entries=0; S: NaN 0, Inf 0, S[0]=4.2806
+F4 gesvj_batched, column 0 = 0 (n=64, blocked path): info=0  non-finite U entries=64, V entries=0; S: NaN 0, Inf 0, S[0]=6.22271
+F4 gesvj_batched, column 0 = 0 (n=128, blocked path): info=0  non-finite U entries=128, V entries=0; S: NaN 0, Inf 0, S[0]=8.95464
+F4 gesvj_batched, column 0 = 0 (n=256, blocked path): info=0  non-finite U entries=256, V entries=0; S: NaN 0, Inf 0, S[0]=12.9191
+   gesvj_batched, A = 0 (n=128, blocked path): info=0  non-finite U entries=16384, V entries=0; S: NaN 0, Inf 0, S[0]=0
+exit=0
+######## f9
+F9 gesvj_batched, entries ~1e160 (n=64, blocked path): info=0  non-finite U entries=0, V entries=0; S: NaN 0, Inf 64, S[0]=inf
+   gesvj_batched, entries ~1e-170 (n=64, blocked path): info=0  non-finite U entries=4096, V entries=0; S: NaN 0, Inf 0, S[0]=0
+F9 gesvj_batched, entries ~1e160 (n=128, blocked path): info=0  non-finite U entries=0, V entries=0; S: NaN 0, Inf 128, S[0]=inf
+   gesvj_batched, entries ~1e-170 (n=128, blocked path): info=0  non-finite U entries=16384, V entries=0; S: NaN 0, Inf 0, S[0]=0
+exit=0
+######## f5
+F5 dsidi(job=1, inverse) uplo=U after LAPACK dsytrf: info=0  max|inv - dsytri inv| / max = 0.318 (on the U triangle)
+F5 dsidi(job=1, inverse) uplo=L after LAPACK dsytrf: info=0  max|inv - dsytri inv| / max = 0.576 (on the L triangle)
+exit=0
+ROUND20_DONE
+
+[exited with code 0]

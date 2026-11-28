@@ -1,0 +1,5 @@
+ ** On entry to cusparseSpMV() parameter number 11 (externalBuffer) had an illegal value: NULL pointer
+
+ ** On entry to cusparseSpMV() parameter number 11 (externalBuffer) had an illegal value: NULL pointer
+
+DONE IDR cuda=an illegal memory access was encountered

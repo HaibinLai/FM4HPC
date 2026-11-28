@@ -1,0 +1,49 @@
+
+== 16 4 0 NONE
+DONE cuda=no error
+== 16 4 0 JACOBI
+DONE cuda=no error
+== 16 4 1 NONE
+DONE cuda=no error
+== 16 4 1 JACOBI
+DONE cuda=no error
+== 16 8 0 NONE
+DONE cuda=no error
+== 16 8 0 JACOBI
+DONE cuda=no error
+== 16 8 1 NONE
+DONE cuda=no error
+== 16 8 1 JACOBI
+DONE cuda=no error
+== 16 16 0 NONE
+DONE cuda=no error
+== 16 16 0 JACOBI
+DONE cuda=no error
+== 16 16 1 NONE
+DONE cuda=no error
+== 16 16 1 JACOBI
+DONE cuda=no error
+== 32 4 0 NONE
+DONE cuda=no error
+== 32 4 0 JACOBI
+DONE cuda=no error
+== 32 4 1 NONE
+DONE cuda=no error
+== 32 4 1 JACOBI
+DONE cuda=no error
+== 32 8 0 NONE
+DONE cuda=no error
+== 32 8 0 JACOBI
+DONE cuda=no error
+== 32 8 1 NONE
+DONE cuda=no error
+== 32 8 1 JACOBI
+DONE cuda=no error
+== 32 16 0 NONE
+DONE cuda=no error
+== 32 16 0 JACOBI
+DONE cuda=no error
+== 32 16 1 NONE
+DONE cuda=no error
+== 32 16 1 JACOBI
+DONE cuda=no error

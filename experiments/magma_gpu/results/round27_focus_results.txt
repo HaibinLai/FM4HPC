@@ -1,0 +1,124 @@
+# Round 27 follow-ups on roxy (probes/round27_focus.cpp; patched builds link probes/zlaqps_patched*.cpp, which override the library's magma_zlaqps)
+######## geqp3
+LAPACK zgeqp3 n= 31 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=7.48e-16 (worst column 26)  |R(n-1,n-1)|=3.04e-18  last pivots: 22 10 1 31
+MAGMA  zgeqp3 n= 31 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=7.48e-16 (worst column 26)  |R(n-1,n-1)|=3.04e-18  last pivots: 22 10 1 31
+LAPACK zgeqp3 n= 32 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.01e-15 (worst column 26)  |R(n-1,n-1)|=1.52e-16  last pivots: 20 2 26 32
+MAGMA  zgeqp3 n= 32 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.01e-15 (worst column 26)  |R(n-1,n-1)|=1.52e-16  last pivots: 20 2 26 32
+LAPACK zgeqp3 n= 63 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.36e-15 (worst column 61)  |R(n-1,n-1)|=1.31e-17  last pivots: 34 22 24 63
+MAGMA  zgeqp3 n= 63 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.04 (worst column 41)  |R(n-1,n-1)|=0.106  last pivots: 23 49 24 22
+LAPACK zgeqp3 n= 64 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.55e-15 (worst column 47)  |R(n-1,n-1)|=1.53e-16  last pivots: 59 42 8 64
+MAGMA  zgeqp3 n= 64 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.53e-15 (worst column 40)  |R(n-1,n-1)|=2.31e-17  last pivots: 59 42 8 64
+LAPACK zgeqp3 n= 65 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.72e-15 (worst column 64)  |R(n-1,n-1)|=1.34e-16  last pivots: 39 58 61 65
+MAGMA  zgeqp3 n= 65 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=5.01 (worst column 43)  |R(n-1,n-1)|=0.21  last pivots: 4 27 58 29
+LAPACK zgeqp3 n=127 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.1e-15 (worst column 86)  |R(n-1,n-1)|=1.2e-16  last pivots: 85 45 71 127
+MAGMA  zgeqp3 n=127 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.08e-15 (worst column 117)  |R(n-1,n-1)|=5.4e-17  last pivots: 85 45 71 127
+LAPACK zgeqp3 n=128 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.99e-15 (worst column 113)  |R(n-1,n-1)|=4.42e-17  last pivots: 99 15 42 128
+MAGMA  zgeqp3 n=128 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=6.16 (worst column 117)  |R(n-1,n-1)|=0.2  last pivots: 74 63 42 77
+LAPACK zgeqp3 n=255 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=6.21e-15 (worst column 254)  |R(n-1,n-1)|=4.38e-16  last pivots: 228 171 86 255
+MAGMA  zgeqp3 n=255 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.27 (worst column 165)  |R(n-1,n-1)|=0.191  last pivots: 66 217 166 67
+LAPACK zgeqp3 n=256 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=3.45e-15 (worst column 213)  |R(n-1,n-1)|=2.13e-16  last pivots: 219 30 226 256
+MAGMA  zgeqp3 n=256 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1 (worst column 117)  |R(n-1,n-1)|=0.157  last pivots: 11 165 36 235
+######## blas
+magmablas_zgemm m=n=1 k=0 beta=0.5: C[0] before -0.2620+0.2321i, after -0.2620+0.2321i (expected -0.1310+0.1160i)
+magmablas_zgemm m=n=1 k=0 beta=0, C = NaN: C[0] after nan+nani (expected 0)
+magmablas_zgemm m=n=32 k=0 beta=0.5: C[0] before -0.2620+0.2321i, after -0.2620+0.2321i (expected -0.1310+0.1160i)
+magmablas_zgemm m=n=32 k=0 beta=0, C = NaN: C[0] after nan+nani (expected 0)
+magmablas_zgemm m=n=65 k=0 beta=0.5: C[0] before -0.2620+0.2321i, after -0.2620+0.2321i (expected -0.1310+0.1160i)
+magmablas_zgemm m=n=65 k=0 beta=0, C = NaN: C[0] after nan+nani (expected 0)
+magmablas_zgemv n=1 A=2I x=1 beta=0 y=NaN: y[0] = nan+nani (expected 2)
+magmablas_zhemv n=1 A=2I x=1 beta=0 y=NaN: y[0] = nan+nani (expected 2)
+magmablas_zgemv n=64 A=2I x=1 beta=0 y=NaN: y[0] = nan+nani (expected 2)
+magmablas_zhemv n=64 A=2I x=1 beta=0 y=NaN: y[0] = nan+nani (expected 2)
+######## gels
+zgels n=1 zero matrix LAPACK info=0 x finite=1 | MAGMA info=0 x finite=0 x[0]=-nan(ind)-nan(ind)i
+zgels n=1 zero col 1 LAPACK info=0 x finite=1 | MAGMA info=0 x finite=0 x[0]=-nan(ind)-nan(ind)i
+zgels n=8 zero matrix LAPACK info=0 x finite=1 | MAGMA info=0 x finite=0 x[0]=-nan(ind)-nan(ind)i
+zgels n=8 zero col 1 LAPACK info=1 x finite=1 | MAGMA info=0 x finite=0 x[0]=-nan(ind)-nan(ind)i
+zgels n=64 zero matrix LAPACK info=0 x finite=1 | MAGMA info=0 x finite=0 x[0]=-nan(ind)-nan(ind)i
+zgels n=64 zero col 1 LAPACK info=1 x finite=1 | MAGMA info=0 x finite=0 x[0]=-nan(ind)-nan(ind)i
+######## trtri0
+magma_ztrtri_gpu n=0 ldda=1: info=-5
+magma_ztrtri     n=0 lda=1:  info=0
+LAPACK ztrtri    n=0 lda=1:  info=0
+######## geqp3 with patch 1 only (zlaqps_patched.cpp: keep the device copy of swapped columns consistent)
+MAGMA  zgeqp3 n= 31 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=7.48e-16 (worst column 26)  |R(n-1,n-1)|=3.04e-18  last pivots: 22 10 1 31
+MAGMA  zgeqp3 n= 32 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.01e-15 (worst column 26)  |R(n-1,n-1)|=1.52e-16  last pivots: 20 2 26 32
+MAGMA  zgeqp3 n= 63 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.76e-15 (worst column 62)  |R(n-1,n-1)|=0.274  last pivots: 40 34 22 24
+MAGMA  zgeqp3 n= 64 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.53e-15 (worst column 40)  |R(n-1,n-1)|=2.31e-17  last pivots: 59 42 8 64
+MAGMA  zgeqp3 n= 65 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.33e-15 (worst column 37)  |R(n-1,n-1)|=0.117  last pivots: 41 55 39 57
+MAGMA  zgeqp3 n=127 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.08e-15 (worst column 117)  |R(n-1,n-1)|=5.4e-17  last pivots: 85 45 71 127
+MAGMA  zgeqp3 n=128 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.81e-15 (worst column 119)  |R(n-1,n-1)|=0.0982  last pivots: 92 42 117 96
+MAGMA  zgeqp3 n=255 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=3.27e-15 (worst column 218)  |R(n-1,n-1)|=0.201  last pivots: 228 171 86 61
+MAGMA  zgeqp3 n=256 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.38e-15 (worst column 230)  |R(n-1,n-1)|=0.0812  last pivots: 219 30 195 226
+######## geqp3 with patches 1 and 2 (zlaqps_patched2.cpp: also recompute flagged norms from the updated device data)
+MAGMA  zgeqp3 n= 31 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=7.48e-16 (worst column 26)  |R(n-1,n-1)|=3.04e-18  last pivots: 22 10 1 31
+MAGMA  zgeqp3 n= 32 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.01e-15 (worst column 26)  |R(n-1,n-1)|=1.52e-16  last pivots: 20 2 26 32
+MAGMA  zgeqp3 n= 63 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.66e-15 (worst column 61)  |R(n-1,n-1)|=1.19e-16  last pivots: 34 22 24 63
+MAGMA  zgeqp3 n= 64 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.53e-15 (worst column 40)  |R(n-1,n-1)|=2.31e-17  last pivots: 59 42 8 64
+MAGMA  zgeqp3 n= 65 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.07e-15 (worst column 64)  |R(n-1,n-1)|=1.48e-16  last pivots: 39 58 61 65
+MAGMA  zgeqp3 n=127 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.08e-15 (worst column 117)  |R(n-1,n-1)|=5.4e-17  last pivots: 85 45 71 127
+MAGMA  zgeqp3 n=128 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=1.77e-15 (worst column 108)  |R(n-1,n-1)|=5.4e-17  last pivots: 99 15 42 128
+MAGMA  zgeqp3 n=255 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=3.19e-15 (worst column 254)  |R(n-1,n-1)|=2.2e-16  last pivots: 228 171 86 255
+MAGMA  zgeqp3 n=256 info=0  jpvt: out-of-range=0 duplicates=0  max|AP-QR|/max|A|=2.38e-15 (worst column 230)  |R(n-1,n-1)|=1.05e-16  last pivots: 219 30 226 256
+######## geqp3rank: original library, then patches 1 and 2
+######## round27_focus
+zgeqp3 n=100 rank= 50 seed=3: max|AP-QR|/max|A|=0.6  |R(r,r)|/|R(0,0)|=6.05e-16
+zgeqp3 n=127 rank= 63 seed=1: max|AP-QR|/max|A|=0.866  |R(r,r)|/|R(0,0)|=7.05e-16
+zgeqp3 n=127 rank= 63 seed=2: max|AP-QR|/max|A|=0.493  |R(r,r)|/|R(0,0)|=0.564
+zgeqp3 n=127 rank= 63 seed=3: max|AP-QR|/max|A|=0.285  |R(r,r)|/|R(0,0)|=6.61e-16
+zgeqp3 n=200 rank=100 seed=1: max|AP-QR|/max|A|=0.598  |R(r,r)|/|R(0,0)|=8.59e-16
+zgeqp3 n=200 rank=100 seed=2: max|AP-QR|/max|A|=0.415  |R(r,r)|/|R(0,0)|=8.54e-16
+zgeqp3 n=200 rank=100 seed=3: max|AP-QR|/max|A|=0.425  |R(r,r)|/|R(0,0)|=7.62e-16
+zgeqp3 n=255 rank=127 seed=1: max|AP-QR|/max|A|=0.736  |R(r,r)|/|R(0,0)|=9.61e-16
+zgeqp3 n=255 rank=127 seed=2: max|AP-QR|/max|A|=0.199  |R(r,r)|/|R(0,0)|=6.89e-16
+zgeqp3 n=255 rank=127 seed=3: max|AP-QR|/max|A|=0.196  |R(r,r)|/|R(0,0)|=1.11e-15
+zgeqp3 n=300 rank=150 seed=1: max|AP-QR|/max|A|=0.482  |R(r,r)|/|R(0,0)|=8.93e-16
+zgeqp3 n=300 rank=150 seed=2: max|AP-QR|/max|A|=0.169  |R(r,r)|/|R(0,0)|=8.3e-16
+zgeqp3 n=300 rank=150 seed=3: max|AP-QR|/max|A|=0.485  |R(r,r)|/|R(0,0)|=9.52e-16
+zgeqp3 low-rank: 18 of 78 cases wrong (residual > 1e-10 or rank not revealed)
+######## round27_geqp3fix2
+zgeqp3 low-rank: 0 of 78 cases wrong (residual > 1e-10 or rank not revealed)
+######## small (n = 1 mout; zheevd_gpu n = 0)
+######## small
+zheevdx         n=1 range=All: info=0  mout=-77 (caller set -77; LAPACK sets 1)  w[0]=3
+zheevdx_2stage  n=1 range=All: info=0  mout=-77 (caller set -77; LAPACK sets 1)  w[0]=3
+zheevr          n=1 range=All: info=0  mout=1 (caller set -77; LAPACK sets 1)  w[0]=3
+zheevx          n=1 range=All: info=0  mout=1 (caller set -77; LAPACK sets 1)  w[0]=3
+zheevd_gpu n=0 ldda=1 ldwa=1: info=-5
+zheevd_gpu n=0 ldda=32 ldwa=1: info=-5
+######## heevdgpu (zheevd_gpu jobz=N, scaled inputs)
+zheevd_gpu(N) n=129 scale=2^0   info=0  max|w-w_LAPACK|/max|w| = 4.23e-15   w[0]=-8.828 (LAPACK -8.828)
+zheevd_gpu(N) n=129 scale=2^300 info=0  max|w-w_LAPACK|/max|w| = 4.23e-15   w[0]=-1.798e+91 (LAPACK -1.798e+91)
+zheevd_gpu(N) n=129 scale=2^500 info=0  max|w-w_LAPACK|/max|w| = 3.62e-15   w[0]=-2.89e+151 (LAPACK -2.89e+151)
+zheevd_gpu(N) n=129 scale=2^510 info=0  max|w-w_LAPACK|/max|w| = 3.62e-15   w[0]=-2.959e+154 (LAPACK -2.959e+154)
+zheevd_gpu(N) n=130 scale=2^0   info=0  max|w-w_LAPACK|/max|w| = 3.14e-15   w[0]=-9.045 (LAPACK -9.045)
+zheevd_gpu(N) n=130 scale=2^300 info=0  max|w-w_LAPACK|/max|w| = 3.14e-15   w[0]=-1.843e+91 (LAPACK -1.843e+91)
+zheevd_gpu(N) n=130 scale=2^500 info=0  max|w-w_LAPACK|/max|w| = 2.36e-15   w[0]=-2.961e+151 (LAPACK -2.961e+151)
+zheevd_gpu(N) n=130 scale=2^510 info=0  max|w-w_LAPACK|/max|w| = 2.36e-15   w[0]=-3.032e+154 (LAPACK -3.032e+154)
+zheevd_gpu(N) n=160 scale=2^0   info=0  max|w-w_LAPACK|/max|w| = 5.91e-15   w[0]=-9.778 (LAPACK -9.778)
+zheevd_gpu(N) n=160 scale=2^300 info=0  max|w-w_LAPACK|/max|w| = 5.91e-15   w[0]=-1.992e+91 (LAPACK -1.992e+91)
+zheevd_gpu(N) n=160 scale=2^500 info=0  max|w-w_LAPACK|/max|w| = 4.65e-15   w[0]=-3.201e+151 (LAPACK -3.201e+151)
+zheevd_gpu(N) n=160 scale=2^510 info=0  max|w-w_LAPACK|/max|w| = 4.65e-15   w[0]=-3.278e+154 (LAPACK -3.278e+154)
+zheevd_gpu(N) n=200 scale=2^0   info=0  max|w-w_LAPACK|/max|w| = 5.4e-15   w[0]=-11.37 (LAPACK -11.37)
+zheevd_gpu(N) n=200 scale=2^300 info=0  max|w-w_LAPACK|/max|w| = 5.4e-15   w[0]=-2.315e+91 (LAPACK -2.315e+91)
+zheevd_gpu(N) n=200 scale=2^500 info=0  max|w-w_LAPACK|/max|w| = 7.87e-15   w[0]=-3.721e+151 (LAPACK -3.721e+151)
+zheevd_gpu(N) n=200 scale=2^510 info=0  max|w-w_LAPACK|/max|w| = 7.87e-15   w[0]=-3.81e+154 (LAPACK -3.81e+154)
+zheevd_gpu(N) n=256 scale=2^0   info=0  max|w-w_LAPACK|/max|w| = 6.12e-15   w[0]=-12.76 (LAPACK -12.76)
+zheevd_gpu(N) n=256 scale=2^300 info=0  max|w-w_LAPACK|/max|w| = 6.12e-15   w[0]=-2.6e+91 (LAPACK -2.6e+91)
+zheevd_gpu(N) n=256 scale=2^500 info=0  max|w-w_LAPACK|/max|w| = 5.71e-15   w[0]=-4.178e+151 (LAPACK -4.178e+151)
+zheevd_gpu(N) n=256 scale=2^510 info=0  max|w-w_LAPACK|/max|w| = 5.71e-15   w[0]=-4.278e+154 (LAPACK -4.278e+154)
+zheevd_gpu(N) n=257 scale=2^0   info=0  max|w-w_LAPACK|/max|w| = 3.14e-15   w[0]=-13.02 (LAPACK -13.02)
+zheevd_gpu(N) n=257 scale=2^300 info=0  max|w-w_LAPACK|/max|w| = 3.14e-15   w[0]=-2.652e+91 (LAPACK -2.652e+91)
+zheevd_gpu(N) n=257 scale=2^500 info=0  max|w-w_LAPACK|/max|w| = 2.86e-15   w[0]=-4.262e+151 (LAPACK -4.262e+151)
+zheevd_gpu(N) n=257 scale=2^510 info=0  max|w-w_LAPACK|/max|w| = 2.86e-15   w[0]=-4.364e+154 (LAPACK -4.364e+154)
+######## heevdrep (the sweep's single zheevd_gpu(N) failure, n = 129 herm_big, repeated with the sweep's workspace sizes)
+zheevd_gpu(N) n=129 scale=2^0, sweep workspace sizes, 30 runs: 0 wrong, worst max|w-w_LAPACK|/max|w| = 4.23e-15
+zheevd_gpu(N) n=129 scale=2^500, sweep workspace sizes, 30 runs: 0 wrong, worst max|w-w_LAPACK|/max|w| = 3.62e-15
+zheevd_gpu(N) n=200 scale=2^0, sweep workspace sizes, 30 runs: 0 wrong, worst max|w-w_LAPACK|/max|w| = 5.4e-15
+zheevd_gpu(N) n=200 scale=2^500, sweep workspace sizes, 30 runs: 0 wrong, worst max|w-w_LAPACK|/max|w| = 7.87e-15
+######## nzero (n = 0 on GPU-interface routines)
+zheevdx_gpu n=0: info=-6 mout=-77
+zheevr_gpu  n=0: info=-6 mout=0
+zheevx_gpu  n=0: info=-6 mout=0
+zpotrf_mgpu ngpu=1 n=0: info=-4
+zpotrf_gpu  n=0: info=0

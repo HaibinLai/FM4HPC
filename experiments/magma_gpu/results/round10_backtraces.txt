@@ -1,0 +1,59 @@
+fail_malloc.c: In function ‘fail_now’:
+fail_malloc.c:18:65: warning: ignoring return value of ‘write’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   18 |   if (getenv("FI_BT")) { void* b[12]; int n = backtrace(b, 12); write(2, "[fi] failing allocation from:\n", 30); backtrace_symbols_fd(b + 1, n - 1, 2); }
+      |                                                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+######## zhegvd k=4
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaHostAlloc+0x1f)
+libmagma.so(magma_malloc_pinned+0x1e)
+libmagma.so(magma_zhegst_gpu+0x14d)
+libmagma.so(magma_zhegvd+0x55a)
+zhegvd             k=  4 nalloc=  7 info=0      err=599        SILENT-WRONG
+######## zhegvd_m k=2
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaMalloc+0x1f)
+libmagma.so(magma_zhegst_m+0x2ae)
+libmagma.so(magma_zhegvd_m+0x3d3)
+zhegvd_m           k=  2 nalloc=  9 info=0      err=599        SILENT-WRONG
+######## zheevdx_2stage k=2
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaMalloc+0x1f)
+libmagma.so(magma_zhetrd_he2hb+0x166)
+libmagma.so(magma_zheevdx_2stage+0x615)
+zheevdx_2stage     k=  2 nalloc=  7 info=0      err=0.498      SILENT-WRONG
+######## zheevdx_2stage_m k=4
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaMalloc+0x1f)
+libmagma.so(magma_dlaex0_m+0x197)
+libmagma.so(magma_dstedx_m+0x541)
+libmagma.so(magma_zstedx_m+0x2b4)
+libmagma.so(magma_zheevdx_2stage_m+0xfd8)
+zheevdx_2stage_m   k=  4 nalloc=  8 info=0      err=1          SILENT-WRONG
+######## zgeev k=2
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaMalloc+0x1f)
+libmagma.so(magma_zgehrd+0x214)
+libmagma.so(magma_zgeev+0x3b6)
+zgeev              k=  2 nalloc=  3 info=0      err=0.0672     SILENT-WRONG
+######## zgeev_m k=1
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaMalloc+0x1f)
+libmagma.so(magma_zgehrd_m+0x3fd)
+libmagma.so(magma_zgeev_m+0x3d3)
+zgeev_m            k=  1 nalloc=  2 info=0      err=0.0672     SILENT-WRONG
+######## zgesv k=3
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaHostAlloc+0x1f)
+libmagma.so(magma_malloc_pinned+0x1e)
+libmagma.so(magma_zgetrf_gpu+0x133)
+libmagma.so(magma_zgesv+0x243)
+######## zposv k=3
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaHostAlloc+0x1f)
+libmagma.so(magma_malloc_pinned+0x1e)
+libmagma.so(magma_zpotrf_expert_gpu+0x1cf)
+libmagma.so(magma_zpotrf_gpu+0x99)
+libmagma.so(magma_zposv+0x23b)
+######## zhegvd k=3
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaHostAlloc+0x1f)
+libmagma.so(magma_malloc_pinned+0x1e)
+libmagma.so(magma_zpotrf_expert_gpu+0x1cf)
+libmagma.so(magma_zpotrf_gpu+0x99)
+libmagma.so(magma_zhegvd+0x40c)
+######## zheevd k=1
+/ssd/haibin/magma_gpu/fail_malloc.so(cudaMalloc+0x1f)
+libmagma.so(magma_zhetrd+0x20b)
+libmagma.so(magma_zheevd+0x427)
+ ** On entry to DLASCL parameter number  4 had an illegal value

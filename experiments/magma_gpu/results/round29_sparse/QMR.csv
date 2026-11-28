@@ -1,0 +1,68 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+QMR,NONE,CSR,poisson2d,1024,0,0,107,3.3e-09,3.3e-09,8e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+QMR,NONE,CSR,aniso1e-4,1024,0,0,99,6.24e-10,6.24e-10,2.79e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+QMR,NONE,CSR,convdiff,1024,0,0,99,4.85e-09,4.85e-09,9.62e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+QMR,NONE,CSR,shifted_indef,1024,-201,-201,1000,2.52e-09,2.52e-09,1.34e-10,FALSEFAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+QMR,NONE,CSR,complexsym,1024,0,0,58,4.09e-09,4.09e-09,6.92e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+QMR,NONE,CSR,neumann_singular,1024,0,0,134,3.36e-09,3.36e-09,8.79e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+QMR,NONE,CSR,zerodiag,1024,0,0,130,3.64e-09,3.64e-09,8.97e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+QMR,NONE,CSR,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+QMR,NONE,ELL,poisson2d,1024,0,0,107,3.3e-09,3.3e-09,8e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+QMR,NONE,ELL,aniso1e-4,1024,0,0,99,6.24e-10,6.24e-10,2.79e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+QMR,NONE,ELL,convdiff,1024,0,0,99,4.85e-09,4.85e-09,9.62e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+QMR,NONE,ELL,shifted_indef,1024,-201,-201,1000,3.25e-08,3.25e-08,1.73e-09,FALSEFAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+QMR,NONE,ELL,complexsym,1024,0,0,58,4.09e-09,4.09e-09,6.92e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+QMR,NONE,ELL,neumann_singular,1024,0,0,134,3.36e-09,3.36e-09,8.79e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+QMR,NONE,ELL,zerodiag,1024,0,0,130,3.64e-09,3.64e-09,8.96e-11,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.
+QMR,NONE,ELL,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+% warning: format not supported on GPU. Conversion handled by CPU.

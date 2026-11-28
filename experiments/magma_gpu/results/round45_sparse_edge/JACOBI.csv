@@ -1,0 +1,87 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,n1,1,0,0,1000,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,identity8,8,0,0,1000,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,diag64,64,0,0,1000,3.58e-15,3.58e-15,4.2e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,tridiag2,2,0,0,1000,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,zero_rhs,256,-202,-202,1000,8.11e-09,8.11e-09,inf,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+ error: zero diagonal element in row 37!
+JACOBI,NONE,CSR,emptyrow,256,-204,-204,0,0,20.9,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,denserow,64,0,0,1000,7.11e-15,7.11e-15,4.79e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,n1,1,0,0,1000,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,identity8,8,0,0,1000,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,diag64,64,0,0,1000,3.58e-15,3.58e-15,4.2e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,tridiag2,2,0,0,1000,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,zero_rhs,256,-202,-202,1000,8.12e-09,8.12e-09,inf,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+ error: zero diagonal element in row 37!
+JACOBI,NONE,ELL,emptyrow,256,-204,-204,0,0,20.9,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,denserow,64,0,0,1000,7.11e-15,7.11e-15,4.79e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,n1,1,0,0,1000,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,identity8,8,0,0,1000,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,diag64,64,0,0,1000,3.58e-15,3.58e-15,4.2e-17,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,tridiag2,2,0,0,1000,0,0,0,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,zero_rhs,256,-202,-202,1000,8.11e-09,8.11e-09,inf,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+ error: zero diagonal element in row 37!
+JACOBI,NONE,SELLP,emptyrow,256,-204,-204,0,0,20.9,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,denserow,64,0,0,1000,7.11e-15,7.11e-15,4.79e-17,OK,parse=0 setup=0 convert=0

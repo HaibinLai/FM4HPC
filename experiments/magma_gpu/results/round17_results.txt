@@ -1,0 +1,35 @@
+######## syncfree2
+#17 sync-free forward solve with correct CSC arrays, lower bidiagonal n=2, b=1 (exact x = 1,0,1,0,...): analysis=0 solve=0 sync=no error; wrong entries: 1; x[0..3] = 1 2 0 0
+exit=0
+######## syncfree4096
+#17 sync-free forward solve with correct CSC arrays, lower bidiagonal n=4096, b=1 (exact x = 1,0,1,0,...): analysis=0 solve=0 sync=no error; wrong entries: 4095; x[0..3] = 1 2 2 2
+exit=0
+######## csrget_gpu
+#5 zcsrget_gpu of a CPU CSR [[3,0],[0,4]]: ret=0 m=2 n=2; cudaMemcpy from the returned val: invalid argument (3, 4)
+exit=0
+######## orderstat
+#7 zorderstatistics({1, NaN}, k=1, r=0): ret=0 element=nan (MAGMA_ERR_NAN = -118)
+#7 zorderstatistics({NaN, 1}, k=1, r=0): ret=-118 element=-99 (MAGMA_ERR_NAN = -118)
+exit=0
+######## rowentries
+#3 zrowentries on the DENSE row (i, 1): ret=0 max_nnz_row=1 (expected 2)
+exit=0
+######## trisolve
+#14 ztrisolve, L = [[0,0],[1,1]] (zero diagonal), b = (1,1): analysis=0 solve=0 x = (1, 0)
+exit=0
+ungqr       k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+ungqr       k=  1 nalloc=  1 info=-113   diff_to_unfailed=10.6       reported  [failing site: magma_zungqr<]
+ungqr_gpu   k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+ungqr_gpu   k=  1 nalloc=  1 info=-113   diff_to_unfailed=10.6       reported  [failing site: magma_zungqr_gpu<]
+unmrq       k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+unmrq       k=  1 nalloc=  1 info=-113   diff_to_unfailed=1.23       reported  [failing site: magma_zunmrq<]
+unmqr2_gpu  k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+unmqr2_gpu  k=  1 nalloc=  1 info=-113   diff_to_unfailed=1.22       reported  [failing site: magma_zunmqr2_gpu<]
+unmql2_gpu  k=  0 nalloc=  1 info=0      diff_to_unfailed=0          ok
+unmql2_gpu  k=  1 nalloc=  1 info=-113   diff_to_unfailed=1.23       reported  [failing site: magma_zunmql2_gpu<]
+gerbt_gpu   k=  0 nalloc=  2 info=0      diff_to_unfailed=0          ok
+gerbt_gpu   k=  1 nalloc=  1 info=-113   diff_to_unfailed=1.09       reported  [failing site: magma_zgerbt_gpu<]
+gerbt_gpu   k=  2 nalloc=  2 info=-113   diff_to_unfailed=1.09       reported  [failing site: magma_zgerbt_gpu<]
+ROUND17_DONE
+
+[exited with code 0]

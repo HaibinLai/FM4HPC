@@ -1,0 +1,727 @@
+
+== ELLPACKT n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLPACKT poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLPACKT random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLPACKT emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLPACKT denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLPACKT rect (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLPACKT zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLPACKT emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELL n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELL poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELL random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELL emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELL denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELL rect (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELL zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELL emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== DENSE n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== DENSE poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== DENSE random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== DENSE emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== DENSE denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== DENSE rect (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== DENSE zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== DENSE emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== BCSR n1 (exit 0)
+STEP 1
+STEP 4
+END
+== BCSR poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== BCSR random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== BCSR emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== BCSR denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== BCSR rect (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== BCSR zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== BCSR emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSC n1 (exit 0)
+STEP 1
+STEP 4
+END
+== CSC poisson (exit 0)
+STEP 1
+STEP 4
+END
+== CSC random (exit 0)
+STEP 1
+STEP 4
+END
+== CSC emptyrow (exit 0)
+STEP 1
+STEP 4
+END
+== CSC denserow (exit 0)
+STEP 1
+STEP 4
+END
+== CSC rect (exit 0)
+STEP 1
+STEP 4
+END
+== CSC zero (exit 0)
+STEP 1
+STEP 4
+END
+== CSC emptyrow0 (exit 0)
+STEP 1
+STEP 4
+END
+== COO n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== COO poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== COO random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== COO emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== COO denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== COO rect (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== COO zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== COO emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLRT n1 (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== ELLRT poisson (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== ELLRT random (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== ELLRT emptyrow (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== ELLRT denserow (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== ELLRT rect (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== ELLRT zero (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== ELLRT emptyrow0 (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== SELLP n1 (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== SELLP poisson (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== SELLP random (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== SELLP emptyrow (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== SELLP denserow (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== SELLP rect (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== SELLP zero (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== SELLP emptyrow0 (exit -1073741676)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== ELLD n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLD poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLD random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLD emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLD denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLD rect (exit -1073740940)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== ELLD zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== ELLD emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRLIST n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRLIST poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRLIST random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRLIST emptyrow (exit -1073740940)
+STEP 1
+STEP 2
+== CSRLIST denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRLIST rect (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRLIST zero (exit -1073740940)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== CSRLIST emptyrow0 (exit -1073741819)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== CSRD n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRD poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRD random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRD emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRD denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRD rect (exit -1073740940)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+== CSRD zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRD emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRL n1 (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRL poisson (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRL random (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRL emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRL denserow (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRL rect (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRL zero (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRL emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRU n1 (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRU poisson (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRU random (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRU emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRU denserow (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRU rect (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRU zero (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRU emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 4
+END
+== CSRCOO n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRCOO poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRCOO random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRCOO emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRCOO denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRCOO rect (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRCOO zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSRCOO emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CUCSR n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CUCSR poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CUCSR random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CUCSR emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CUCSR denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CUCSR rect (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CUCSR zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CUCSR emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSR5 n1 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSR5 poisson (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSR5 random (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSR5 emptyrow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSR5 denserow (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSR5 rect (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSR5 zero (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== CSR5 emptyrow0 (exit 0)
+STEP 1
+STEP 2
+STEP 3
+STEP 4
+END
+== TRANS n1 (exit 0)
+END
+== TRANS poisson (exit 0)
+END
+== TRANS random (exit 0)
+END
+== TRANS emptyrow (exit 0)
+END
+== TRANS denserow (exit 0)
+END
+== TRANS rect (exit -1073741819)
+== TRANS zero (exit 0)
+END
+== TRANS emptyrow0 (exit 0)
+END

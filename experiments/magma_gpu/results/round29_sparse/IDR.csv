@@ -1,0 +1,216 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,poisson2d,1024,-202,-202,14,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,aniso1e-4,1024,-202,-202,14,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,convdiff,1024,-202,-202,14,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,shifted_indef,1024,-202,-202,14,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,complexsym,1024,-202,-202,12,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,neumann_singular,1024,-202,-202,15,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,zerodiag,1024,-202,-202,14,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,CSR,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,poisson2d,1024,-202,-202,14,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,aniso1e-4,1024,-202,-202,14,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,convdiff,1024,-202,-202,17,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,shifted_indef,1024,-202,-202,1,18.8,18.8,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,complexsym,1024,-202,-202,12,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,neumann_singular,1024,-202,-202,17,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,zerodiag,1024,-202,-202,1,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,CSR,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,CSR,poisson2d,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,CSR,aniso1e-4,1024,-202,-202,2,0.00116,0.00116,5.19e-05,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,CSR,convdiff,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,CSR,shifted_indef,1024,-3003,-3003,1,18.8,18.8,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,CSR,complexsym,1024,-202,-202,2,5.2,5.2,0.088,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,CSR,neumann_singular,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,CSR,zerodiag,1024,-3003,-3003,1,40.6,40.6,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,CSR,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,ELL,poisson2d,1024,-202,-202,15,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,ELL,aniso1e-4,1024,-202,-202,15,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,ELL,convdiff,1024,-202,-202,14,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,ELL,shifted_indef,1024,-202,-202,19,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,ELL,complexsym,1024,-202,-202,12,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,ELL,neumann_singular,1024,-202,-202,16,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,ELL,zerodiag,1024,-202,-202,23,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,ELL,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,ELL,poisson2d,1024,-202,-202,15,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,ELL,aniso1e-4,1024,-202,-202,14,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,ELL,convdiff,1024,-202,-202,13,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,ELL,shifted_indef,1024,-202,-202,1,18.8,18.8,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,ELL,complexsym,1024,-202,-202,11,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,ELL,neumann_singular,1024,-202,-202,18,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,ELL,zerodiag,1024,-202,-202,1,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,ELL,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,ELL,poisson2d,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,ELL,aniso1e-4,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,ELL,convdiff,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,ELL,shifted_indef,1024,-3003,-3003,1,18.8,18.8,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,ELL,complexsym,1024,-202,-202,2,5.2,5.2,0.088,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,ELL,neumann_singular,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,ELL,zerodiag,1024,-3003,-3003,1,40.6,40.6,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,ELL,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,SELLP,poisson2d,1024,-202,-202,16,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,SELLP,aniso1e-4,1024,-202,-202,16,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,SELLP,convdiff,1024,-202,-202,15,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,SELLP,shifted_indef,1024,-202,-202,14,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,SELLP,complexsym,1024,-202,-202,12,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,SELLP,neumann_singular,1024,-202,-202,14,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,SELLP,zerodiag,1024,-202,-202,14,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,NONE,SELLP,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,SELLP,poisson2d,1024,-202,-202,15,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,SELLP,aniso1e-4,1024,-202,-202,14,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,SELLP,convdiff,1024,-202,-202,20,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,SELLP,shifted_indef,1024,-202,-202,1,18.8,18.8,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,SELLP,complexsym,1024,-202,-202,12,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,SELLP,neumann_singular,1024,-202,-202,15,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,SELLP,zerodiag,1024,-202,-202,1,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,JACOBI,SELLP,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,SELLP,poisson2d,1024,-202,-202,1,nan,nan,nan,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,SELLP,aniso1e-4,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,SELLP,convdiff,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,SELLP,shifted_indef,1024,-3003,-3003,1,18.8,18.8,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,SELLP,complexsym,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,SELLP,neumann_singular,1024,-202,-202,2,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,SELLP,zerodiag,1024,-3003,-3003,1,40.6,40.6,1,FAIL,parse=0 setup=-3009 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+IDR,ILU,SELLP,tiny_rhs1e-30,1024,0,0,0,3.99e-29,3.99e-29,1,LIE,parse=0 setup=0 convert=0

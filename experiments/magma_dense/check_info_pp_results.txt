@@ -1,0 +1,19 @@
+check_info_pp.c:7:102: error: too few arguments provided to function-like macro invocation
+    7 | /* zposv_batched */     magma_getvector( batchCount, sizeof(magma_int_t), dinfo_array, 1, cpu_info, 1);
+      |                                                                                                      ^
+check_info_pp.c:5:9: note: macro 'magma_getvector' defined here
+    5 | #define magma_getvector(                 n, elemSize, dx_src, incx, hy_dst, incy, queue ) \
+      |         ^
+check_info_pp.c:8:102: error: too few arguments provided to function-like macro invocation
+    8 | /* zgesv_batched */     magma_getvector( batchCount, sizeof(magma_int_t), dinfo_array, 1, cpu_info, 1);
+      |                                                                                                      ^
+check_info_pp.c:5:9: note: macro 'magma_getvector' defined here
+    5 | #define magma_getvector(                 n, elemSize, dx_src, incx, hy_dst, incy, queue ) \
+      |         ^
+check_info_pp.c:9:108: error: too few arguments provided to function-like macro invocation
+    9 | /* zgesv_nopiv_batched */     magma_getvector( batchCount, sizeof(magma_int_t), dinfo_array, 1, cpu_info, 1);
+      |                                                                                                            ^
+check_info_pp.c:5:9: note: macro 'magma_getvector' defined here
+    5 | #define magma_getvector(                 n, elemSize, dx_src, incx, hy_dst, incy, queue ) \
+      |         ^
+3 errors generated.

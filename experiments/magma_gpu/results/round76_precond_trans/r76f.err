@@ -1,0 +1,41 @@
+
+== ident ilu 4 pbicg
+DONE cuda=no error
+== ident ilu 4 pqmr
+DONE cuda=no error
+== ident ilu 10 pbicg
+DONE cuda=no error
+== ident ilu 10 pqmr
+DONE cuda=no error
+== ident ilu 30 pbicg
+DONE cuda=no error
+== ident ilu 30 pqmr
+DONE cuda=no error
+== ident icc 4 pbicg
+DONE cuda=no error
+== ident icc 4 pqmr
+DONE cuda=no error
+== ident icc 10 pbicg
+DONE cuda=no error
+== ident icc 10 pqmr
+DONE cuda=no error
+== ident icc 30 pbicg
+DONE cuda=no error
+== ident icc 30 pqmr
+DONE cuda=no error
+== solve pbicg ilu 10
+DONE cuda=no error
+== solve pbicg ilu 30
+DONE cuda=no error
+== solve pbicg icc 10
+DONE cuda=no error
+== solve pbicg icc 30
+DONE cuda=no error
+== solve pqmr ilu 10
+DONE cuda=no error
+== solve pqmr ilu 30
+DONE cuda=no error
+== solve pqmr icc 10
+DONE cuda=no error
+== solve pqmr icc 30
+DONE cuda=no error

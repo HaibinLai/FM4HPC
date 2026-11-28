@@ -1,0 +1,57 @@
+BUILD_DONE
+0 MiB, 0 %
+## zgels_batched symbol: header declarations 1, exported symbols 0
+######## spmv_cpu
+magma_z_spmv with A, x, y on the CPU: ret=0; caller's y.val pointer unchanged=1, y.val[0..1] (expected 3 3) = 1 1
+now freeing the caller's x (its array was already freed inside magma_z_spmv) ...
+returned from magma_zmfree(&x)
+exit=0
+######## csrd
+CSR -> CSRD, row 1 without a diagonal: ret=0 nnz=2  B.col[0..1] = 0 0  (B.col[2] was written: past the nnz = 2 array)
+CSR -> ELLD, same matrix: ret=0  max_nnz_row=1  E.col = 0 -1
+freeing B and E ...
+freed
+malloc(): invalid size (unsorted)
+timeout: the monitored command dumped core
+exit=134
+######## aux
+zmdiff(I2, {(0,1)=1}): ret=0 res=0 (Frobenius distance sqrt(3) = 1.732)
+zmdiff([1+5i], [1-5i]): ret=0 res=0 (distance 10)
+zmfrobenius(A, A) with *norm = 5 on entry: ret=0 norm=2.23607 (expected 0)
+zmfrobenius(2x2, 3x3): ret=0 norm=-1 (nothing computed)
+  zmdiagadd(+100) on [[5,0],[6,0]] (row 1 has no stored diagonal): values = 105 6 0 6.56486e-310
+  ret=0 (A + 100 I has (1,1) = 100)
+zmtranspose of a 1x3 CPU CSR ...
+  ret=0  result dims 1 x 3 (expected 3 x 1)
+exit=0
+######## mtx
+reading a 3x3 .mtx whose third entry has row index 9 ...
+exit=139
+######## applyprec
+magma_z_applyprecond with ILU (setup=0): ret=0
+  x (initialised to 7; M^-1 b has entries ~0.36) = 7 7 7 7 7 7 7 7
+magma_z_applyprecond_right(MagmaConjTrans) with ILU: ret=0
+  x = 7 7 7 7 7 7 7 7
+magma_z_applyprecond with ICC (setup=0): ret=0
+  x (initialised to 7; M^-1 b has entries ~0.36) = 7 7 7 7 7 7 7 7
+magma_z_applyprecond_right(MagmaConjTrans) with ICC: ret=0
+  x = 7 7 7 7 7 7 7 7
+exit=0
+######## dense_args
+On entry to magma_dgeqrs3_gpu, parameter 8 had an illegal value (info = -8)
+dgeqrs3_gpu with lddb = 2 < m = 4 (argument 9): info=-8
+On entry to magma_dgeqrs_gpu, parameter 9 had an illegal value (info = -9)
+dgeqrs_gpu  with lddb = 2 < m = 4 (argument 9): info=-9
+exit=0
+######## hegvx_leak
+zhegvx n=512, B = -I (not positive definite), 20 calls: info=513 (n+1 = 513); device free memory dropped 423.62 MB (3 n^2 complex = 12.58 MB per call)
+exit=0
+######## gels_cpu
+magma_dgels workspace query (m = n = 10, nrhs = 4096): lwork=8192, nb=64
+magma_dgels returned info=0; x[0] of column 0 = 0.16374
+exit=0
+0 MiB, 8 %
+######## gels_cpu NRHS=16384
+magma_dgels workspace query (m = n = 10, nrhs = 16384): lwork=8192, nb=64
+ ** On entry to DORMQR parameter number 12 had an illegal value
+exit=0

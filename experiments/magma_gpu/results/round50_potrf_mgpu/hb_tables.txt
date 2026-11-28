@@ -1,0 +1,27 @@
+# z/c path (plain trsm), real multi-GPU = emulation | rows ngpu 1..8, cols h 1..8 | A = host workspace Aup/Alo, P = device diagonal buffer dlP, . = none
+1   .   .   .   .   .   .   .   .
+2  AP   P   P   P   P   P   P   P
+3  AP  AP   P   P   P   P   P   P
+4  AP  AP  AP   P   P   P   P   P
+5  AP  AP  AP  AP   P   P   P   P
+6  AP  AP  AP  AP  AP   P   P   P
+7  AP  AP  AP  AP  AP  AP   P   P
+8  AP  AP  AP  AP  AP  AP  AP   P
+# d/s path (dtrsm_work + per-device legacy-stream memset), real multi-GPU | rows ngpu 1..8, cols h 1..8 | A = host workspace Aup/Alo, P = device diagonal buffer dlP, . = none
+1   .   .   .   .   .   .   .   .
+2   A   .   .   .   .   .   .   .
+3   A   A   .   .   .   .   .   .
+4   A   A   A   .   .   .   .   .
+5   A   A   A   A   .   .   .   .
+6   A   A   A   A   A   .   .   .
+7   A   A   A   A   A   A   .   .
+8   A   A   A   A   A   A   A   .
+# d/s path, single-GPU emulation (memset orders all virtual devices) | rows ngpu 1..8, cols h 1..8 | A = host workspace Aup/Alo, P = device diagonal buffer dlP, . = none
+1   .   .   .   .   .   .   .   .
+2   .   .   .   .   .   .   .   .
+3   .   .   .   .   .   .   .   .
+4   .   .   .   .   .   .   .   .
+5   .   .   .   .   .   .   .   .
+6   .   .   .   .   .   .   .   .
+7   .   .   .   .   .   .   .   .
+8   .   .   .   .   .   .   .   .

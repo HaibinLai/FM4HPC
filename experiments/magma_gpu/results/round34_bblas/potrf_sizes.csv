@@ -1,0 +1,26 @@
+bblas,routine,case,status,maxerr,detail
+contract,dpotrf_batched,n=300,TOUCHED,info=0 upper_changed=22470 of 134550; factor_err=2.37e-05
+contract,dpotrf_batched,n=384,TOUCHED,info=0 upper_changed=31728 of 220608; factor_err=9.04e-06
+contract,dpotrf_batched,n=400,TOUCHED,info=0 upper_changed=32088 of 239400; factor_err=8e-06
+contract,dpotrf_batched,n=448,TOUCHED,info=0 upper_changed=37776 of 300384; factor_err=5.69e-06
+contract,dpotrf_batched,n=480,TOUCHED,info=0 upper_changed=39264 of 344880; factor_err=6.94e-06
+contract,dpotrf_batched,n=500,TOUCHED,info=0 upper_changed=41754 of 374250; factor_err=6.14e-06
+contract,dpotrf_batched,n=511,TOUCHED,info=0 upper_changed=43635 of 390915; factor_err=5.76e-06
+contract,dpotrf_batched,n=512,TOUCHED,info=0 upper_changed=43824 of 392448; factor_err=5.72e-06
+contract,dpotrf_batched,n=513,TOUCHED,info=0 upper_changed=43824 of 393984; factor_err=5.69e-06
+contract,dpotrf_batched,n=520,TOUCHED,info=0 upper_changed=43908 of 404820; factor_err=7.28e-06
+contract,dpotrf_batched,n=600,TOUCHED,info=0 upper_changed=50700 of 539100; factor_err=3.56e-06
+contract,dpotrf_batched,n=1024,TOUCHED,info=0 upper_changed=92208 of 1571328; factor_err=1.91e-06
+contract,dpotrf_vbatched,n=300,WRONG,info=1075576832 upper_changed=0 of 134550; factor_err=8.98e+12
+contract,dpotrf_vbatched,n=384,OK,info=0 upper_changed=0 of 220608; factor_err=9.04e-06
+contract,dpotrf_vbatched,n=400,OK,info=0 upper_changed=0 of 239400; factor_err=8e-06
+contract,dpotrf_vbatched,n=448,WRONG,info=1075576832 upper_changed=0 of 300384; factor_err=6.04e+12
+contract,dpotrf_vbatched,n=480,OK,info=0 upper_changed=0 of 344880; factor_err=6.94e-06
+contract,dpotrf_vbatched,n=500,TOUCHED,info=0 upper_changed=13098 of 374250; factor_err=8.19e-06
+contract,dpotrf_vbatched,n=511,TOUCHED,info=0 upper_changed=14979 of 390915; factor_err=5.76e-06
+contract,dpotrf_vbatched,n=512,OK,info=0 upper_changed=0 of 392448; factor_err=5.72e-06
+contract,dpotrf_vbatched,n=513,OK,info=0 upper_changed=0 of 393984; factor_err=5.69e-06
+contract,dpotrf_vbatched,n=520,TOUCHED,info=0 upper_changed=84 of 404820; factor_err=7.28e-06
+contract,dpotrf_vbatched,n=600,TOUCHED,info=0 upper_changed=9180 of 539100; factor_err=4.74e-06
+contract,dpotrf_vbatched,n=1024,OK,info=0 upper_changed=0 of 1571328; factor_err=2.38e-06
+DONE potrf cuda=no error

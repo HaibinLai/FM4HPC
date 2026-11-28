@@ -1,0 +1,100 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,poisson2d,1024,0,0,1000,0.0304,0.0304,0.000736,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,aniso1e-4,1024,0,0,1000,0.0505,0.0505,0.00226,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,convdiff,1024,0,0,1000,7.51e-13,7.52e-13,1.49e-14,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,shifted_indef,1024,-202,-202,1000,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,complexsym,1024,0,0,1000,1.97e-05,1.97e-05,3.34e-07,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,neumann_singular,1024,0,0,1000,1.37,1.37,0.0358,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,zerodiag,1024,-202,-202,1000,-nan(ind),-nan(ind),-nan(ind),FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,CSR,tiny_rhs1e-30,1024,-202,-202,1000,0.00129,0.00129,3.24e+25,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,poisson2d,1024,0,0,1000,0.0304,0.0304,0.000736,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,aniso1e-4,1024,0,0,1000,0.0505,0.0505,0.00226,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,convdiff,1024,0,0,1000,7.52e-13,7.52e-13,1.49e-14,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+ error: zero diagonal element in row 0!
+JACOBI,NONE,ELL,shifted_indef,1024,-204,-204,0,0,18.8,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,complexsym,1024,0,0,1000,1.97e-05,1.97e-05,3.34e-07,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,neumann_singular,1024,0,0,1000,1.37,1.37,0.0358,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+ error: zero diagonal element in row 100!
+JACOBI,NONE,ELL,zerodiag,1024,-204,-204,0,0,40.6,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,ELL,tiny_rhs1e-30,1024,-202,-202,1000,0.00129,0.00129,3.24e+25,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,poisson2d,1024,0,0,1000,0.0304,0.0304,0.000736,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,aniso1e-4,1024,0,0,1000,0.0505,0.0505,0.00226,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,convdiff,1024,0,0,1000,7.51e-13,7.52e-13,1.49e-14,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+ error: zero diagonal element in row 0!
+JACOBI,NONE,SELLP,shifted_indef,1024,-204,-204,0,0,18.8,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,complexsym,1024,0,0,1000,1.97e-05,1.97e-05,3.34e-07,OK,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,neumann_singular,1024,0,0,1000,1.37,1.37,0.0358,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+ error: zero diagonal element in row 100!
+JACOBI,NONE,SELLP,zerodiag,1024,-204,-204,0,0,40.6,1,FAIL,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+% warning: format not supported on GPU. Conversion handled by CPU.
+JACOBI,NONE,SELLP,tiny_rhs1e-30,1024,-202,-202,1000,0.00129,0.00129,3.24e+25,FAIL,parse=0 setup=0 convert=0

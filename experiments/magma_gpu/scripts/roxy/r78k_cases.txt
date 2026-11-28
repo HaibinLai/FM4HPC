@@ -1,0 +1,16 @@
+her2k U N 32 12
+her2k U C 32 12
+syr2k U N 32 12
+syr2k U T 32 12
+her2k L N 32 12
+her2k L C 32 12
+syr2k L N 32 12
+syr2k L T 32 12
+her2k U N 100 12
+her2k U C 100 12
+syr2k U N 100 12
+syr2k U T 100 12
+her2k L N 100 12
+her2k L C 100 12
+syr2k L N 100 12
+syr2k L T 100 12

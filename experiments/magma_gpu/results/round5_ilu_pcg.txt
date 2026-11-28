@@ -1,0 +1,3 @@
+== R5: ILU(0) setup on [[0,1],[1,0]] with the zero diagonal stored (expect a crash; backtrace from segv_bt.so) ==
+outer solver PCG: setup returned -3009; precond->L.memory_location=0 (Magma_CPU=571, Magma_DEV=572), L.nnz=0
+exit 0

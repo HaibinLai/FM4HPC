@@ -1,0 +1,4 @@
+exact zero pivot   cond(A)=    3.09  transformed A[0,0]= 7.10e-18  dgesv_rbt: info=0 finite(x)=True #nan= 0 relerr=3.58e+35  | pivoted FP64 solve relerr=1.4e-15
+pivot 1e-14        cond(A)=    3.12  transformed A[0,0]= 9.90e-15  dgesv_rbt: info=0 finite(x)=True #nan= 0 relerr=3.77e-16  | pivoted FP64 solve relerr=1.3e-15
+pivot 1e-8         cond(A)=    3.05  transformed A[0,0]= 1.00e-08  dgesv_rbt: info=0 finite(x)=True #nan= 0 relerr=3.70e-16  | pivoted FP64 solve relerr=9.6e-16
+control: pivot 1   cond(A)=    3.17  transformed A[0,0]= 1.25e-01  dgesv_rbt: info=0 finite(x)=True #nan= 0 relerr=2.94e-16  | pivoted FP64 solve relerr=1.7e-15

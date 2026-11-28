@@ -1,0 +1,18 @@
+r38,routine,case,info,err,verdict
+r38,dgehrd_m,n=1,-8,0,BAD
+r38,dgehrd_m,n=33,-8,2.73e+13,BAD
+On entry to magma_dgehrd_m, parameter 8 had an illegal value (info = -8)
+On entry to magma_dgehrd_m, parameter 8 had an illegal value (info = -8)
+On entry to magma_dgehrd_m, parameter 8 had an illegal value (info = -8)
+r38,dgehrd_m,n=257,-8,3.5e+12,BAD
+On entry to magma_dgehrd_m, parameter 8 had an illegal value (info = -8)
+r38,dgehrd_m,n=600,-8,1.5e+12,BAD
+r38,dsytrd_mgpu,n=1 L,0,0,OK
+r38,dsytrd_mgpu,n=1 U,0,0,OK
+r38,dsytrd_mgpu,n=33 L,0,0,OK
+r38,dsytrd_mgpu,n=33 U,0,0.219,OK
+r38,dsytrd_mgpu,n=257 L,0,0,OK
+r38,dsytrd_mgpu,n=257 U,0,0.392,OK
+r38,dsytrd_mgpu,n=600 L,0,0,OK
+r38,dsytrd_mgpu,n=600 U,0,0.437,OK
+DONE red cuda=no error

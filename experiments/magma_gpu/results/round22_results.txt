@@ -1,0 +1,31 @@
+GPU 0 used before: 0 MiB
+######## symbols
+magma_zdiagcheck_cpu: libmagma 0, libmagma_sparse 0
+magma_zdiagcheck: libmagma 0, libmagma_sparse 1
+magmablas_zdiinertia: libmagma 1, libmagma_sparse 0
+magma_zmlumerge: libmagma 0, libmagma_sparse 1
+######## diinertia
+magmablas_zdiinertia (symbol present, not declared in magmablas_z.h), diag (1, -1, NaN, 2): ret=0  +/-/0 = 2/1/1
+######## compressor
+zmcsrcompressor on a matrix from magma_zcsrset (ownership=0) with one stored zero: ret=0 nnz 3 -> 3 (the zero is removed if nnz drops to 2)
+######## lumerge host-allocation fault injection
+host allocations: 5
+zmlumerge k=1 (host allocations inside: 1): ret=-112 nnz=0; freeing the result ...
+  freed
+  exit=0
+zmlumerge k=2 (host allocations inside: 2): ret=-112 nnz=0; freeing the result ...
+  freed
+  exit=0
+zmlumerge k=3 (host allocations inside: 3): ret=-112 nnz=0; freeing the result ...
+  freed
+  exit=0
+free(): double free detected in tcache 2
+  exit=134
+zmlumerge k=5 (host allocations inside: 5): ret=-112 nnz=0; freeing the result ...
+  freed
+  exit=0
+ROUND22_DONE
+0
+0 MiB, 0 %
+
+[exited with code 0]

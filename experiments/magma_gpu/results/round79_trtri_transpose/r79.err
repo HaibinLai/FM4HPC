@@ -1,0 +1,125 @@
+
+== trtri b U N 1 6
+DONE cuda=no error
+== trtri b U N 15 6
+DONE cuda=no error
+== trtri b U N 16 6
+DONE cuda=no error
+== trtri b U N 17 6
+DONE cuda=no error
+== trtri b U N 100 6
+DONE cuda=no error
+== trtri b U N 128 6
+DONE cuda=no error
+== trtri b U N 129 6
+DONE cuda=no error
+== trtri b U N 300 6
+DONE cuda=no error
+== trtri b U U 1 6
+DONE cuda=no error
+== trtri b U U 15 6
+DONE cuda=no error
+== trtri b U U 16 6
+DONE cuda=no error
+== trtri b U U 17 6
+DONE cuda=no error
+== trtri b U U 100 6
+DONE cuda=no error
+== trtri b U U 128 6
+DONE cuda=no error
+== trtri b U U 129 6
+DONE cuda=no error
+== trtri b U U 300 6
+DONE cuda=no error
+== trtri b L N 1 6
+DONE cuda=no error
+== trtri b L N 15 6
+DONE cuda=no error
+== trtri b L N 16 6
+DONE cuda=no error
+== trtri b L N 17 6
+DONE cuda=no error
+== trtri b L N 100 6
+DONE cuda=no error
+== trtri b L N 128 6
+DONE cuda=no error
+== trtri b L N 129 6
+DONE cuda=no error
+== trtri b L N 300 6
+DONE cuda=no error
+== trtri b L U 1 6
+DONE cuda=no error
+== trtri b L U 15 6
+DONE cuda=no error
+== trtri b L U 16 6
+DONE cuda=no error
+== trtri b L U 17 6
+DONE cuda=no error
+== trtri b L U 100 6
+DONE cuda=no error
+== trtri b L U 128 6
+DONE cuda=no error
+== trtri b L U 129 6
+DONE cuda=no error
+== trtri b L U 300 6
+DONE cuda=no error
+== trtri v U N 17 10
+DONE cuda=no error
+== trtri v U N 130 10
+DONE cuda=no error
+== trtri v U N 300 10
+DONE cuda=no error
+== trtri v U U 17 10
+DONE cuda=no error
+== trtri v U U 130 10
+DONE cuda=no error
+== trtri v U U 300 10
+DONE cuda=no error
+== trtri v L N 17 10
+DONE cuda=no error
+== trtri v L N 130 10
+DONE cuda=no error
+== trtri v L N 300 10
+DONE cuda=no error
+== trtri v L U 17 10
+DONE cuda=no error
+== trtri v L U 130 10
+DONE cuda=no error
+== trtri v L U 300 10
+DONE cuda=no error
+== getT 10 10 4 0
+DONE cuda=no error
+== getT 10 10 4 1
+DONE cuda=no error
+== setT 10 10 4
+DONE cuda=no error
+== getT 37 50 16 0
+DONE cuda=no error
+== getT 37 50 16 1
+DONE cuda=no error
+== setT 37 50 16
+DONE cuda=no error
+== getT 64 1 32 0
+DONE cuda=no error
+== getT 64 1 32 1
+DONE cuda=no error
+== setT 64 1 32
+DONE cuda=no error
+== getT 5 100 7 0
+DONE cuda=no error
+== getT 5 100 7 1
+DONE cuda=no error
+== setT 5 100 7
+DONE cuda=no error
+== getT 200 130 64 0
+DONE cuda=no error
+== getT 200 130 64 1
+DONE cuda=no error
+== setT 200 130 64
+DONE cuda=no error
+== getT 1000 700 128 0
+DONE cuda=no error
+== getT 1000 700 128 1
+DONE cuda=no error
+== setT 1000 700 128
+DONE cuda=no error

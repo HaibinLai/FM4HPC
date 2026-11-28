@@ -1,0 +1,84 @@
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,CSR,n1,1,0,0,0,0,0.753,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,CSR,identity8,8,0,0,0,0,0.836,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,CSR,diag64,64,0,0,0,0,85.2,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,CSR,tridiag2,2,0,0,0,0,2,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,CSR,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,CSR,emptyrow,256,0,0,0,0,20.9,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,CSR,denserow,64,0,0,0,0,148,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,ELL,n1,1,0,0,0,0,0.753,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,ELL,identity8,8,0,0,0,0,0.836,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,ELL,diag64,64,0,0,0,0,85.2,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,ELL,tridiag2,2,0,0,0,0,2,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,ELL,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,ELL,emptyrow,256,0,0,0,0,20.9,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,ELL,denserow,64,0,0,0,0,148,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,SELLP,n1,1,0,0,0,0,0.753,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,SELLP,identity8,8,0,0,0,0,0.836,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,SELLP,diag64,64,0,0,0,0,85.2,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,SELLP,tridiag2,2,0,0,0,0,2,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,SELLP,zero_rhs,256,0,0,0,0,0,-nan(ind),LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,SELLP,emptyrow,256,0,0,0,0,20.9,1,LIE,parse=0 setup=0 convert=0
+% Usage: probe [options] [-h|--help]  matrices
+
+error: solver class not supported.
+BA,NONE,SELLP,denserow,64,0,0,0,0,148,1,LIE,parse=0 setup=0 convert=0
